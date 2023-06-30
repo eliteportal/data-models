@@ -1,0 +1,53 @@
+# ------------------------------------------------------------------------------
+# When the main branch is updated, trigger a workflow in sage-bionetworks/data_curator_config
+# to generate templates from the data modell in this repo.
+#
+# You need to generate a secret in your github repo "PAT_GITHUB" containing
+# a personal access token with repo scope. The default secrets.GITHUB_TOKEN
+# will not work.
+# ------------------------------------------------------------------------------
+
+name: dcc_config_repo_dispatch
+# Can specify other branches or triggers for this workflow
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - closed # requires if_merged job below to run only during a merged PR
+  workflow_dispatch:
+
+# Edit these variables for your data model
+env:
+  DATA_MODEL: https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld
+  # Can be NULL to generate templates for all schemas. Or a space-delimited string of schemas
+  DATA_TYPES: "Biospecimen BulkRNA-seqAssay Patient"
+  COMMUNITY_DIR: demo
+
+concurrency:
+# cancel the current running workflow from the same branch, PR when a new workflow is triggered 
+# when the trigger is not a PR but a push, it will use the commit sha to generate the concurrency group
+# {{ github.workflow }}: the workflow name is used to generate the concurrency group. This allows you to have more than one workflows
+# {{ github.ref_type }}: the type of Git ref object created in the repository. Can be either branch or tag 
+# {{ github.sha }}: full commit sha 
+# credit: https://github.com/Sage-Bionetworks-Workflows/sagetasks/blob/main/.github/workflows/ci.yml
+  group: >-
+    ${{ github.workflow }}-${{ github.ref_type }}-
+    ${{ github.sha }}
+  cancel-in-progress: true
+  
+jobs:
+  repo_dispatch:
+    # Extra logic to check PR is merged, see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-your-pull_request-workflow-when-a-pull-request-merges
+    if: github.event.pull_request.merged == true || github.event != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo dispatch to data_curator_config event generate-templates
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.PAT_GITHUB }}" \
+          -H "Accept: application/vnd.github+json" \
+          https://api.github.com/repos/Sage-Bionetworks/data_curator_config/dispatches \
+          -d '{"event_type": "generate_templates", "client_payload": { "data_model": "${{ env.DATA_MODEL }}",  "data_types": "${{ env.DATA_TYPES }}", "community_dir": "${{ env.COMMUNITY_DIR }}"}}'
