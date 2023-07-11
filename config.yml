@@ -14,11 +14,12 @@ synapse:
 
 manifest:
   # if making many manifests, just include name prefix
-  title: 'example'
+  title: 'EL_'
   # to make all manifests enter only 'all manifests'
   data_type: 
-    - 'Biospecimen'
-    - 'Patient'
+    - 'all manifests'
+    # - 'Biospecimen'
+    # - 'Patient'
 
 model:
   input:
