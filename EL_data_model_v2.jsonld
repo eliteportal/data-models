@@ -322,7 +322,7 @@
         {
             "@id": "bts:LifeStage",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The life stage of the individual. \r\nnote: Other values are possible depending on life stage terminology for individual species. Please let the data curation team know.",
+            "rdfs:comment": "The life stage of the individual. \rnote: Other values are possible depending on life stage terminology for individual species. Please let the data curation team know.",
             "rdfs:label": "LifeStage",
             "rdfs:subClassOf": [
                 {
@@ -2904,7 +2904,7 @@
         {
             "@id": "bts:Assay",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The analysis or technology used to generate the data in this file\r\n\r\n",
+            "rdfs:comment": "The analysis or technology used to generate the data in this file\r\r",
             "rdfs:label": "Assay",
             "rdfs:subClassOf": [
                 {
@@ -3584,7 +3584,7 @@
         {
             "@id": "bts:Assay",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The analysis or technology used to generate the data in this file\r\n\r\n",
+            "rdfs:comment": "The analysis or technology used to generate the data in this file\r\r",
             "rdfs:label": "Assay",
             "rdfs:subClassOf": [
                 {
@@ -5600,7 +5600,7 @@
         {
             "@id": "bts:CaptivityDuration",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The duration of captivity in months for the individuals in captivity (formatted in months, ex. 72 months). \r\nnote: Applicable only to animals with captivity status captive.",
+            "rdfs:comment": "The duration of captivity in months for the individuals in captivity (formatted in months, ex. 72 months). \rnote: Applicable only to animals with captivity status captive.",
             "rdfs:label": "CaptivityDuration",
             "rdfs:subClassOf": [
                 {
@@ -5636,7 +5636,7 @@
         {
             "@id": "bts:CaptivityStatus",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The status of the individual with regard to captivity. \r\nnote: Wild, captive, and stranded values are applicable, especially for marine mammals. Depending on life stage terminology for individual species, other values are possible. Please let the data curation team know.",
+            "rdfs:comment": "The status of the individual with regard to captivity. \rnote: Wild, captive, and stranded values are applicable, especially for marine mammals. Depending on life stage terminology for individual species, other values are possible. Please let the data curation team know.",
             "rdfs:label": "CaptivityStatus",
             "rdfs:subClassOf": [
                 {
@@ -5695,7 +5695,7 @@
         {
             "@id": "bts:CommonName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The biological species common name the individual belongs to (ex. \"Horned Lark\").\r\nnote: As a default, the valid scientific name for the species should be indicated. ",
+            "rdfs:comment": "The biological species common name the individual belongs to (ex. \"Horned Lark\").\rnote: As a default, the valid scientific name for the species should be indicated. ",
             "rdfs:label": "CommonName",
             "rdfs:subClassOf": [
                 {
@@ -5745,7 +5745,7 @@
         {
             "@id": "bts:LifeStage",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The life stage of the individual. \r\nnote: Other values are possible depending on life stage terminology for individual species. Please let the data curation team know.",
+            "rdfs:comment": "The life stage of the individual. \rnote: Other values are possible depending on life stage terminology for individual species. Please let the data curation team know.",
             "rdfs:label": "LifeStage",
             "rdfs:subClassOf": [
                 {
@@ -5779,7 +5779,7 @@
         {
             "@id": "bts:SpeciesAge",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Age of individual (formatted in months, ex. \"72 months\"). \r\nnote: Uncertainty about the age might require recording age by specifying a lower and upper estimate in months for the age of the animal.",
+            "rdfs:comment": "Age of individual (formatted in months, ex. \"72 months\"). \rnote: Uncertainty about the age might require recording age by specifying a lower and upper estimate in months for the age of the animal.",
             "rdfs:label": "SpeciesAge",
             "rdfs:subClassOf": [
                 {
@@ -5829,7 +5829,7 @@
         {
             "@id": "bts:SpeciesName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The scientific name of the species (typically a taxonomic group, ex. \"Eremophila alpestris\") the individual belongs to.\r\n\r\n",
+            "rdfs:comment": "The scientific name of the species (typically a taxonomic group, ex. \"Eremophila alpestris\") the individual belongs to.\r\r",
             "rdfs:label": "SpeciesName",
             "rdfs:subClassOf": [
                 {
@@ -18610,7 +18610,7 @@
         {
             "@id": "bts:TotalReads",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Total number of sequencing reads from a library.\r\n",
+            "rdfs:comment": "Total number of sequencing reads from a library.\r",
             "rdfs:label": "TotalReads",
             "rdfs:subClassOf": [
                 {
@@ -19434,7 +19434,7 @@
         {
             "@id": "bts:TotalReads",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Total number of sequencing reads from a library.\r\n",
+            "rdfs:comment": "Total number of sequencing reads from a library.\r",
             "rdfs:label": "TotalReads",
             "rdfs:subClassOf": [
                 {
@@ -20252,7 +20252,7 @@
         {
             "@id": "bts:TotalReads",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Total number of sequencing reads from a library.\r\n",
+            "rdfs:comment": "Total number of sequencing reads from a library.\r",
             "rdfs:label": "TotalReads",
             "rdfs:subClassOf": [
                 {
@@ -21319,7 +21319,7 @@
         {
             "@id": "bts:TechnologyPlatformVersion",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment.\r\n\r\n",
+            "rdfs:comment": "The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment.\r\r",
             "rdfs:label": "TechnologyPlatformVersion",
             "rdfs:subClassOf": [
                 {
@@ -21336,7 +21336,7 @@
         {
             "@id": "bts:TotalReads",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Total number of sequencing reads from a library.\r\n",
+            "rdfs:comment": "Total number of sequencing reads from a library.\r",
             "rdfs:label": "TotalReads",
             "rdfs:subClassOf": [
                 {
@@ -22136,7 +22136,7 @@
         {
             "@id": "bts:TotalReads",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Total number of sequencing reads from a library.\r\n",
+            "rdfs:comment": "Total number of sequencing reads from a library.\r",
             "rdfs:label": "TotalReads",
             "rdfs:subClassOf": [
                 {
@@ -25844,6 +25844,2484 @@
                     "@id": "bts:DataFile"
                 }
             ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AcquisitionBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list units of measure",
+            "rdfs:label": "AcquisitionBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "acquisitionBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:AcquisitionBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyAcquisitionBatchSizeUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the unit of measure",
+            "rdfs:label": "BatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "batchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:BatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyBatchSizeUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ControlTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" specify the control type",
+            "rdfs:label": "ControlTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "controlTypeOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:ControlTypeOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyControlType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DatabaseNameOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the search database",
+            "rdfs:label": "DatabaseNameOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "databaseNameOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:DatabaseNameOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:DatabaseNameOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyDatabaseName"
+                },
+                {
+                    "@id": "bts:SpecifyDatabaseName"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DatabaseSourceOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the database source",
+            "rdfs:label": "DatabaseSourceOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "databaseSourceOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetablomics"
+                },
+                {
+                    "@id": "bts:DatabaseSourceOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:DatabaseSourceOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyDatabaseSource"
+                },
+                {
+                    "@id": "bts:SpecifyDatabaseSource"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ExperimentalBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list units of measure",
+            "rdfs:label": "ExperimentalBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "experimentalBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:ExperimentalBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyExperimentalBatchSizeUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LensVoltageUnitsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" provide the unit of measure",
+            "rdfs:label": "LensVoltageUnitsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "lensVoltageUnitsOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:LensVoltageUnitsOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyLensVoltageUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAnalyteTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the type of analyte ",
+            "rdfs:label": "MsAnalyteTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAnalyteTypeOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:MsAnalyteTypeOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:MsAnalyteTypeOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMSAnalyteType"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyteType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAnalyzerTypeMS1Other",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the mass spectrometer analyzer used",
+            "rdfs:label": "MsAnalyzerTypeMS1Other",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAnalyzerTypeMS1Other",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS1Other"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS1Other"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS1"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS1"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAnalyzerTypeMS2Other",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the mass spectrometer analyzer used",
+            "rdfs:label": "MsAnalyzerTypeMS2Other",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAnalyzerTypeMS2Other",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS2Other"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS2Other"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS2"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS2"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAssayTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the mass spectrometer technique used or the name of the proteomics assay used",
+            "rdfs:label": "MsAssayTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAssayTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:MsAssayTechniqueOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:MsAssayTechniqueOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMSAssayTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMSAssayTechnique"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsInstrumentModelOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the instrument model",
+            "rdfs:label": "MsInstrumentModelOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msInstrumentModelOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:MsInstrumentModelOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:MsInstrumentModelOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMSInstrumentModel"
+                },
+                {
+                    "@id": "bts:SpecifyMSInstrumentModel"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MassspecmetabolomicsmeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MassspecmetabolomicsmeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "mass spec metabolomicsmeasurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:MassspecmetabolomicsmeasurementTechniqueOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                },
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:PlatformLocationOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                },
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersionOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ProcessingBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list units of measure",
+            "rdfs:label": "ProcessingBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "ProcessingBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:ProcessingBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyProcessingBatchSizeUnit"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the unit of measure",
+            "rdfs:label": "SampleBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:SampleBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifySampleBatchSizeUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleIntdocutionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the sample introduction",
+            "rdfs:label": "SampleIntdocutionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleIntdocutionOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:SampleIntdocutionOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifySampleIntroduction"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                },
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                },
+                {
+                    "@id": "bts:Genotyping"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:SampleTypeOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:VaccumPressureUnitsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" provide the unit of measure",
+            "rdfs:label": "VaccumPressureUnitsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MetabolomicsHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "vaccumPressureUnitsOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecmetabolomics"
+                },
+                {
+                    "@id": "bts:VaccumPressureUnitsOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyVacuumPressueUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DnaBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list unit of measure",
+            "rdfs:label": "DnaBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "dnaBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:DnaBatchSizeUnitOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:DnaBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyDNABatchSizeUnit"
+                },
+                {
+                    "@id": "bts:SpecifyDNABatchSizeUnit"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ExtractionMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the extraction method",
+            "rdfs:label": "ExtractionMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Microbiome"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "extractionMethodOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:ExtractionMethodOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyExtractionMethod"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPrepOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the general strategy used to prepare the library",
+            "rdfs:label": "LibraryPrepOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPrepOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:LibraryPrepOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:LibraryPrepOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:LibraryPrepOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:LibraryPrepOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyLibraryPrep"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPrep"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPrep"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPrep"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPreparationMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library preparation methods",
+            "rdfs:label": "LibraryPreparationMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPreparationMethodOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethodOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethodOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethodOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethodOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethodOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethodOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyLibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryPreparationMethod"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "LibraryVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryVersionOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:LibraryVersionOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:LibraryVersionOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:LibraryVersionOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:LibraryVersionOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:LibraryVersionOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:LibraryVersionOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                },
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                },
+                {
+                    "@id": "bts:Genotyping"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                },
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:MeasurementTechniqueOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Microbiome"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Microbiome"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ReadLengthUnitsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" provide the unit of measure",
+            "rdfs:label": "ReadLengthUnitsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "readLengthUnitsOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:ReadLengthUnitsOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:ReadLengthUnitsOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:ReadLengthUnitsOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:ReadLengthUnitsOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyReadLengthUnits"
+                },
+                {
+                    "@id": "bts:SpecifyReadLengthUnits"
+                },
+                {
+                    "@id": "bts:SpecifyReadLengthUnits"
+                },
+                {
+                    "@id": "bts:SpecifyReadLengthUnits"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Microbiome"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SequencingBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list unit of measure",
+            "rdfs:label": "SequencingBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sequencingBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:SequencingBatchSizeUnitOther"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:SequencingBatchSizeUnitOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:SequencingBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifySequencingBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:SpecifySequencingBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:SpecifySequencingBatchSizeUnit"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPreparationMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library preparation methods",
+            "rdfs:label": "LibraryPreparationMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:NAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPreparationMethodOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "LibraryVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:NAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:NAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:NAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:NAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RepositoryNameOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the repository",
+            "rdfs:label": "RepositoryNameOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "repositoryNameOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:RepositoryNameOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:RepositoryNameOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:RepositoryNameOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyRepositoryName"
+                },
+                {
+                    "@id": "bts:SpecifyRepositoryName"
+                },
+                {
+                    "@id": "bts:SpecifyRepositoryName"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:NAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TranscriptTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the transcript type",
+            "rdfs:label": "TranscriptTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "transcriptTypeOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:TranscriptTypeOther"
+                },
+                {
+                    "@id": "bts:WGS"
+                },
+                {
+                    "@id": "bts:TranscriptTypeOther"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:TranscriptTypeOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyTranscriptType"
+                },
+                {
+                    "@id": "bts:SpecifyTranscriptType"
+                },
+                {
+                    "@id": "bts:SpecifyTranscriptType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPrepOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the general strategy used to prepare the library",
+            "rdfs:label": "LibraryPrepOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPrepOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPreparationMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library preparation methods",
+            "rdfs:label": "LibraryPreparationMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPreparationMethodOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "LibraryVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ReadLengthUnitsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" provide the unit of measure",
+            "rdfs:label": "ReadLengthUnitsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "readLengthUnitsOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RepositoryNameOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the repository",
+            "rdfs:label": "RepositoryNameOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "repositoryNameOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TranscriptTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the transcript type",
+            "rdfs:label": "TranscriptTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "transcriptTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DnaBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list unit of measure",
+            "rdfs:label": "DnaBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "dnaBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPrepOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the general strategy used to prepare the library",
+            "rdfs:label": "LibraryPrepOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPrepOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPreparationMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library preparation methods",
+            "rdfs:label": "LibraryPreparationMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPreparationMethodOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPreparationMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library preparation methods",
+            "rdfs:label": "LibraryPreparationMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPreparationMethodOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "LibraryVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "LibraryVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ReadLengthUnitsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" provide the unit of measure",
+            "rdfs:label": "ReadLengthUnitsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "readLengthUnitsOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BsSeqsampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "BsSeqsampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "bsSeqsampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:BsSeqsampleTypeOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifySampleType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SequencingBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list unit of measure",
+            "rdfs:label": "SequencingBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BsSeq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sequencingBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPrepOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the general strategy used to prepare the library",
+            "rdfs:label": "LibraryPrepOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPrepOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryPreparationMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library preparation methods",
+            "rdfs:label": "LibraryPreparationMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryPreparationMethodOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:LibraryVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "LibraryVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "libraryVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RnaBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list unit of measure",
+            "rdfs:label": "RnaBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "rnaBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:ScRNAseq"
+                },
+                {
+                    "@id": "bts:RnaBatchSizeUnitOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyRNABatchSizeUnit"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ReadLengthUnitsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" provide the unit of measure",
+            "rdfs:label": "ReadLengthUnitsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "readLengthUnitsOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:RepositoryNameOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the repository",
+            "rdfs:label": "RepositoryNameOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "repositoryNameOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SequencingBatchSizeUnitOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list unit of measure",
+            "rdfs:label": "SequencingBatchSizeUnitOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sequencingBatchSizeUnitOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TranscriptTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the transcript type",
+            "rdfs:label": "TranscriptTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:CRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "transcriptTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Genotypingassay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Genotypingassay"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DatabaseNameOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the search database",
+            "rdfs:label": "DatabaseNameOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "databaseNameOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DatabaseSourceOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the database source",
+            "rdfs:label": "DatabaseSourceOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "databaseSourceOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DigestionMethodOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the type of digestion",
+            "rdfs:label": "DigestionMethodOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "digestionMethodOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:DigestionMethodOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyDigestionMethod"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAnalyteTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the type of analyte ",
+            "rdfs:label": "MsAnalyteTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAnalyteTypeOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAnalyzerTypeMS1Other",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the mass spectrometer analyzer used",
+            "rdfs:label": "MsAnalyzerTypeMS1Other",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAnalyzerTypeMS1Other",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAnalyzerTypeMS2Other",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the mass spectrometer analyzer used",
+            "rdfs:label": "MsAnalyzerTypeMS2Other",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAnalyzerTypeMS2Other",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsAssayTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the mass spectrometer technique used or the name of the proteomics assay used",
+            "rdfs:label": "MsAssayTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msAssayTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MsInstrumentModelOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the instrument model",
+            "rdfs:label": "MsInstrumentModelOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "msInstrumentModelOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MeasurementTechniqueOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
+            "rdfs:label": "MeasurementTechniqueOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "measurementTechniqueOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CleavageAgentsOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected, list the enzyme name. ",
+            "rdfs:label": "CleavageAgentsOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "cleavageAgentsOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:CleavageAgentsOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyOtherCleavageAgent"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ModificationParametersOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected, list the custom modification name. We recommend using an intuitive name",
+            "rdfs:label": "ModificationParametersOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "modificationParametersOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:ModificationParametersOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyOtherModificationParameters"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PlatformLocationOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform location",
+            "rdfs:label": "PlatformLocationOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "platformLocationOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TechnologyPlatformVersionOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the platform version",
+            "rdfs:label": "TechnologyPlatformVersionOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "technologyPlatformVersionOther",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ProteomicsAssayTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the name of the type of peptide quantification used",
+            "rdfs:label": "ProteomicsAssayTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "proteomicsAssayTypeOther",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Massspecproteomics"
+                },
+                {
+                    "@id": "bts:ProteomicsAssayTypeOther"
+                }
+            ],
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyProteomicsAssayType"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SampleTypeOther",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" is selected list the type of sample",
+            "rdfs:label": "SampleTypeOther",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "sampleTypeOther",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
