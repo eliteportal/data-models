@@ -1,0 +1,9 @@
+Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules
+testOne,,,"sample, cell, Component",dataType,TRUE,,,,
+sample,,"cell, other",,dataProperty,FALSE,,,,
+cell,,,,dataProperty,FALSE,,,,
+testTwo,,,"tissue, Component",dataType,TRUE,,,,
+tissue,,brain,,dataProperty,FALSE,,,,
+other,if other value is selected,,specify,dataProperty,FALSE,,,,
+brain,,"hippocampus, other",,dataProperty,FALSE,,,,
+specify,,,,dataProperty,FALSE,,,,
