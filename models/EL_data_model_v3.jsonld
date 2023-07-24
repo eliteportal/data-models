@@ -356,7 +356,7 @@
                 }
             ],
             "sms:displayName": "lifeStage",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2014,7 +2014,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "specimenID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2297,7 +2297,7 @@
                 }
             ],
             "sms:displayName": "sampleType",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2510,7 +2510,7 @@
                 }
             ],
             "sms:displayName": "measurementTechnique",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2735,7 +2735,7 @@
                 }
             ],
             "sms:displayName": "technologyPlatformVersion",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2786,7 +2786,7 @@
                 }
             ],
             "sms:displayName": "platformLocation",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2834,7 +2834,7 @@
                 }
             ],
             "sms:displayName": "referenceTranscriptID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2865,7 +2865,7 @@
                 }
             ],
             "sms:displayName": "dnaBatchID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -2882,7 +2882,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "dnaBatchSize",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3066,7 +3066,7 @@
                 }
             ],
             "sms:displayName": "dnaBatchSizeUnit",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3100,7 +3100,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "libraryBatchID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3191,7 +3191,7 @@
                 }
             ],
             "sms:displayName": "libraryPrep",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3287,7 +3287,7 @@
                 }
             ],
             "sms:displayName": "libraryPreparationMethod",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3338,7 +3338,7 @@
                 }
             ],
             "sms:displayName": "libraryVersion",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3386,7 +3386,7 @@
                 }
             ],
             "sms:displayName": "sequencingBatchID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3403,7 +3403,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "sequencingBatchSize",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3587,7 +3587,7 @@
                 }
             ],
             "sms:displayName": "sequencingBatchSizeUnit",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3629,7 +3629,7 @@
                 }
             ],
             "sms:displayName": "isStranded",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3651,7 +3651,7 @@
                 }
             ],
             "sms:displayName": "readStrandOrigin",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3668,7 +3668,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "readLength",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3852,7 +3852,7 @@
                 }
             ],
             "sms:displayName": "readLengthUnits",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3891,7 +3891,7 @@
                 }
             ],
             "sms:displayName": "runType",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3908,7 +3908,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "totalReads",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3942,7 +3942,7 @@
                 }
             ],
             "sms:displayName": "directionalBSseqLibrary",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3959,7 +3959,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "gDNAconc",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3976,7 +3976,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "lambdaDNAconc",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -3993,7 +3993,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "pcrCycles",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4010,7 +4010,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "meanCoverage",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4027,7 +4027,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "conversionRatio",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4211,7 +4211,7 @@
                 }
             ],
             "sms:displayName": "conversionRatioUnits",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4259,7 +4259,7 @@
                 }
             ],
             "sms:displayName": "enrichmentMethod",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4367,7 +4367,7 @@
                 }
             ],
             "sms:displayName": "repositoryName",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4427,7 +4427,7 @@
                 }
             ],
             "sms:displayName": "transcriptType",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4475,7 +4475,7 @@
                 }
             ],
             "sms:displayName": "resultUnit",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4492,7 +4492,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "valueReported",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4523,7 +4523,7 @@
                 }
             ],
             "sms:displayName": "rnaBatchID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4724,7 +4724,7 @@
                 }
             ],
             "sms:displayName": "rnaBatchSizeUnit",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4766,7 +4766,7 @@
                 }
             ],
             "sms:displayName": "useReagent",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -4910,7 +4910,7 @@
                 }
             ],
             "sms:displayName": "useTreatment",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5290,7 +5290,7 @@
                 }
             ],
             "sms:displayName": "msTarget",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5360,7 +5360,7 @@
                 }
             ],
             "sms:displayName": "msAnalyzerTypeMS1",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5447,7 +5447,7 @@
                 }
             ],
             "sms:displayName": "msAnalyzerTypeMS2",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5528,7 +5528,7 @@
                 }
             ],
             "sms:displayName": "msAssayTechnique",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5639,7 +5639,7 @@
                 }
             ],
             "sms:displayName": "msInstrumentModel",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5690,7 +5690,7 @@
                 }
             ],
             "sms:displayName": "sampleIntroduction",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5738,7 +5738,7 @@
                 }
             ],
             "sms:displayName": "extractionMethod",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5769,7 +5769,7 @@
                 }
             ],
             "sms:displayName": "acquisitionMode",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5800,7 +5800,7 @@
                 }
             ],
             "sms:displayName": "acquisitionSoftware",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5817,7 +5817,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "acquistionSoftwareVersion",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5880,7 +5880,7 @@
                 }
             ],
             "sms:displayName": "databaseName",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -5982,7 +5982,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "spectrometerFrequency",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -6007,7 +6007,7 @@
                 }
             ],
             "sms:displayName": "hasIonizationSource",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -6541,7 +6541,7 @@
                 }
             ],
             "sms:displayName": "hasAssayControl",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -7822,7 +7822,7 @@
                 }
             ],
             "sms:displayName": "dataFile",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -7885,7 +7885,7 @@
                 }
             ],
             "sms:displayName": "protoemicsAssayType",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -7942,7 +7942,7 @@
                 }
             ],
             "sms:displayName": "digestionMethod",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -7976,7 +7976,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "fractionIdentifier",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8013,7 +8013,7 @@
                 }
             ],
             "sms:displayName": "modificationParameters",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8064,7 +8064,7 @@
                 }
             ],
             "sms:displayName": "cleavageAgents",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8098,7 +8098,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "fragmentMassTolerance",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8115,7 +8115,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "precursorMassTolerance",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8132,7 +8132,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "individualID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8196,7 +8196,7 @@
                 }
             ],
             "sms:displayName": "specimenType",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8218,7 +8218,7 @@
                 }
             ],
             "sms:displayName": "assay",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8249,7 +8249,7 @@
                 }
             ],
             "sms:displayName": "specimenAge",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8280,7 +8280,7 @@
                 }
             ],
             "sms:displayName": "samplingAge",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8314,7 +8314,7 @@
                 }
             ],
             "sms:displayName": "organ",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8348,7 +8348,7 @@
                 }
             ],
             "sms:displayName": "tissue",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8376,7 +8376,7 @@
                 }
             ],
             "sms:displayName": "tissueVolume",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8404,7 +8404,7 @@
                 }
             ],
             "sms:displayName": "tissueWeight",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8438,7 +8438,7 @@
                 }
             ],
             "sms:displayName": "specimenSource",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8490,7 +8490,7 @@
                 }
             ],
             "sms:displayName": "nucleicAcidSource",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8524,7 +8524,7 @@
                 }
             ],
             "sms:displayName": "cellType",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8561,7 +8561,7 @@
                 }
             ],
             "sms:displayName": "fastingState",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8598,7 +8598,7 @@
                 }
             ],
             "sms:displayName": "isPostMortem",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8741,7 +8741,7 @@
                 }
             ],
             "sms:displayName": "cohort",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8772,7 +8772,7 @@
                 }
             ],
             "sms:displayName": "studyCode",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8815,7 +8815,7 @@
                 }
             ],
             "sms:displayName": "fieldCenterCode",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8849,7 +8849,7 @@
                 }
             ],
             "sms:displayName": "visitCode",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8883,7 +8883,7 @@
                 }
             ],
             "sms:displayName": "countryCode",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8917,7 +8917,7 @@
                 }
             ],
             "sms:displayName": "consentGroupID",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8960,7 +8960,7 @@
                 }
             ],
             "sms:displayName": "speciesGroup",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -8997,7 +8997,7 @@
                 }
             ],
             "sms:displayName": "sex",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9049,7 +9049,7 @@
                 }
             ],
             "sms:displayName": "race",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9089,7 +9089,7 @@
                 }
             ],
             "sms:displayName": "ethnicity",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9134,7 +9134,7 @@
                 }
             ],
             "sms:displayName": "age",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9168,7 +9168,7 @@
                 }
             ],
             "sms:displayName": "diagnosisStatus",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9239,7 +9239,7 @@
                 }
             ],
             "sms:displayName": "taxon",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9270,7 +9270,7 @@
                 }
             ],
             "sms:displayName": "speciesName",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9298,7 +9298,7 @@
                 }
             ],
             "sms:displayName": "commonName",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9315,7 +9315,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "lifeStage",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9343,7 +9343,7 @@
                 }
             ],
             "sms:displayName": "speciesAge",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -9383,7 +9383,7 @@
                 }
             ],
             "sms:displayName": "captivityStatus",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
