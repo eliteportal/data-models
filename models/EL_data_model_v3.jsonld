@@ -357,7 +357,9 @@
             ],
             "sms:displayName": "lifeStage",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:PlanetaryEntity",
@@ -2015,7 +2017,9 @@
             },
             "sms:displayName": "specimenID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SampleType",
@@ -2298,7 +2302,9 @@
             ],
             "sms:displayName": "sampleType",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifySampleType",
@@ -2315,7 +2321,9 @@
             },
             "sms:displayName": "specifySampleType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MeasurementTechnique",
@@ -2508,7 +2516,9 @@
             ],
             "sms:displayName": "measurementTechnique",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyMeasurementTechnique",
@@ -2525,7 +2535,9 @@
             },
             "sms:displayName": "specifyMeasurementTechnique",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TechnologyPlatformVersion",
@@ -2733,7 +2745,9 @@
             ],
             "sms:displayName": "technologyPlatformVersion",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyPlatformVersion",
@@ -2750,7 +2764,9 @@
             },
             "sms:displayName": "specifyPlatformVersion",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:PlatformLocation",
@@ -2784,7 +2800,9 @@
             ],
             "sms:displayName": "platformLocation",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyPlatformLocation",
@@ -2801,7 +2819,9 @@
             },
             "sms:displayName": "specifyPlatformLocation",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReferenceTranscriptID",
@@ -2832,7 +2852,9 @@
             ],
             "sms:displayName": "referenceTranscriptID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DnaBatchID",
@@ -2863,7 +2885,9 @@
             ],
             "sms:displayName": "dnaBatchID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DnaBatchSize",
@@ -2880,7 +2904,9 @@
             },
             "sms:displayName": "dnaBatchSize",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:DnaBatchSizeUnit",
@@ -3064,7 +3090,9 @@
             ],
             "sms:displayName": "dnaBatchSizeUnit",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyDNABatchSizeUnit",
@@ -3081,7 +3109,9 @@
             },
             "sms:displayName": "specifyDNABatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LibraryBatchID",
@@ -3098,7 +3128,9 @@
             },
             "sms:displayName": "libraryBatchID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LibraryPrep",
@@ -3189,7 +3221,9 @@
             ],
             "sms:displayName": "libraryPrep",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyLibraryPrep",
@@ -3206,7 +3240,9 @@
             },
             "sms:displayName": "specifyLibraryPrep",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LibraryPreparationMethod",
@@ -3285,7 +3321,9 @@
             ],
             "sms:displayName": "libraryPreparationMethod",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyLibraryPreparationMethod",
@@ -3302,7 +3340,9 @@
             },
             "sms:displayName": "specifyLibraryPreparationMethod",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LibraryVersion",
@@ -3336,7 +3376,9 @@
             ],
             "sms:displayName": "libraryVersion",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyLibraryVersion",
@@ -3353,7 +3395,9 @@
             },
             "sms:displayName": "specifyLibraryVersion",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SequencingBatchID",
@@ -3384,7 +3428,9 @@
             ],
             "sms:displayName": "sequencingBatchID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SequencingBatchSize",
@@ -3401,7 +3447,9 @@
             },
             "sms:displayName": "sequencingBatchSize",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:SequencingBatchSizeUnit",
@@ -3585,7 +3633,9 @@
             ],
             "sms:displayName": "sequencingBatchSizeUnit",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifySequencingBatchSizeUnit",
@@ -3602,7 +3652,9 @@
             },
             "sms:displayName": "specifySequencingBatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:IsStranded",
@@ -3644,12 +3696,17 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:Forwardreverse"
+                    "@id": "bts:Forward"
+                },
+                {
+                    "@id": "bts:Reverse"
                 }
             ],
             "sms:displayName": "readStrandOrigin",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReadLength",
@@ -3666,7 +3723,9 @@
             },
             "sms:displayName": "readLength",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:ReadLengthUnits",
@@ -3850,7 +3909,9 @@
             ],
             "sms:displayName": "readLengthUnits",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyReadLengthUnits",
@@ -3867,7 +3928,9 @@
             },
             "sms:displayName": "specifyReadLengthUnits",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:RunType",
@@ -3884,12 +3947,17 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:SingleEndpairedEnd"
+                    "@id": "bts:SingleEnd"
+                },
+                {
+                    "@id": "bts:PairedEnd"
                 }
             ],
             "sms:displayName": "runType",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TotalReads",
@@ -3906,7 +3974,9 @@
             },
             "sms:displayName": "totalReads",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:DirectionalBSseqLibrary",
@@ -3940,7 +4010,9 @@
             ],
             "sms:displayName": "directionalBSseqLibrary",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:GDNAconc",
@@ -3957,7 +4029,9 @@
             },
             "sms:displayName": "gDNAconc",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:LambdaDNAconc",
@@ -3974,7 +4048,9 @@
             },
             "sms:displayName": "lambdaDNAconc",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:PcrCycles",
@@ -3991,7 +4067,9 @@
             },
             "sms:displayName": "pcrCycles",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:MeanCoverage",
@@ -4008,7 +4086,9 @@
             },
             "sms:displayName": "meanCoverage",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:ConversionRatio",
@@ -4025,7 +4105,9 @@
             },
             "sms:displayName": "conversionRatio",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ConversionRatioUnits",
@@ -4209,7 +4291,9 @@
             ],
             "sms:displayName": "conversionRatioUnits",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyConversionRatioUnit",
@@ -4226,7 +4310,9 @@
             },
             "sms:displayName": "specifyConversionRatioUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:EnrichmentMethod",
@@ -4257,7 +4343,9 @@
             ],
             "sms:displayName": "enrichmentMethod",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyEnrichmentMethod",
@@ -4274,7 +4362,9 @@
             },
             "sms:displayName": "specifyEnrichmentMethod",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:RepositoryName",
@@ -4365,7 +4455,9 @@
             ],
             "sms:displayName": "repositoryName",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyRepositoryName",
@@ -4382,7 +4474,9 @@
             },
             "sms:displayName": "specifyRepositoryName",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TranscriptType",
@@ -4425,7 +4519,9 @@
             ],
             "sms:displayName": "transcriptType",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyTranscriptType",
@@ -4442,7 +4538,9 @@
             },
             "sms:displayName": "specifyTranscriptType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ResultUnit",
@@ -4473,7 +4571,9 @@
             ],
             "sms:displayName": "resultUnit",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ValueReported",
@@ -4490,7 +4590,9 @@
             },
             "sms:displayName": "valueReported",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:RnaBatchID",
@@ -4521,7 +4623,9 @@
             ],
             "sms:displayName": "rnaBatchID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:RnaBatchSize",
@@ -4538,7 +4642,9 @@
             },
             "sms:displayName": "rnaBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:RnaBatchSizeUnit",
@@ -4722,7 +4828,9 @@
             ],
             "sms:displayName": "rnaBatchSizeUnit",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyRNABatchSizeUnit",
@@ -4739,7 +4847,9 @@
             },
             "sms:displayName": "specifyRNABatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:UseReagent",
@@ -4781,7 +4891,9 @@
             },
             "sms:displayName": "reagentID(s)",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReagentName",
@@ -4798,7 +4910,9 @@
             },
             "sms:displayName": "reagentName",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReagentManufacturer",
@@ -4815,7 +4929,9 @@
             },
             "sms:displayName": "reagentManufacturer",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReagentCatalogNumber",
@@ -4832,7 +4948,9 @@
             },
             "sms:displayName": "reagentCatalogNumber",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReagentLotNumber",
@@ -4849,7 +4967,9 @@
             },
             "sms:displayName": "reagentLotNumber",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReagentWeblink",
@@ -4866,7 +4986,9 @@
             },
             "sms:displayName": "reagentWeblink",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ReagentContact",
@@ -4883,7 +5005,9 @@
             },
             "sms:displayName": "reagentContact",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:UseTreatment",
@@ -4925,7 +5049,9 @@
             },
             "sms:displayName": "treatmentID(s)",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TreatmentName",
@@ -4942,7 +5068,9 @@
             },
             "sms:displayName": "treatmentName",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TreatmentAmountValue",
@@ -4959,7 +5087,9 @@
             },
             "sms:displayName": "treatmentAmountValue",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TreatmentAmountUnit",
@@ -5140,7 +5270,9 @@
             ],
             "sms:displayName": "treatmentAmountUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:TreatmentDurationValue",
@@ -5157,7 +5289,9 @@
             },
             "sms:displayName": "treatmentDurationValue",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:TreatmentDurationUnit",
@@ -5203,7 +5337,9 @@
             ],
             "sms:displayName": "treatmentDurationUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TreatmentTemperatureValue",
@@ -5220,7 +5356,9 @@
             },
             "sms:displayName": "treatmentTemperatureValue",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:TreatmentTemperatureUnit",
@@ -5251,7 +5389,9 @@
             ],
             "sms:displayName": "treatmentTemperatureUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MsTarget",
@@ -5288,7 +5428,9 @@
             ],
             "sms:displayName": "msTarget",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MsAnalyzerTypeMS1",
@@ -5358,7 +5500,9 @@
             ],
             "sms:displayName": "msAnalyzerTypeMS1",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyMSAnalyzerTypeMS1",
@@ -5375,7 +5519,9 @@
             },
             "sms:displayName": "specifyMSAnalyzerTypeMS1",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MsAnalyzerTypeMS2",
@@ -5445,7 +5591,9 @@
             ],
             "sms:displayName": "msAnalyzerTypeMS2",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyMSAnalyzerTypeMS2",
@@ -5462,7 +5610,9 @@
             },
             "sms:displayName": "specifyMSAnalyzerTypeMS2",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MsAssayTechnique",
@@ -5526,7 +5676,9 @@
             ],
             "sms:displayName": "msAssayTechnique",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyMSAssayTechnique",
@@ -5543,7 +5695,9 @@
             },
             "sms:displayName": "specifyMSAssayTechnique",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MsAnalyteType",
@@ -5586,7 +5740,9 @@
             ],
             "sms:displayName": "msAnalyteType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyMSAnalyteType",
@@ -5603,7 +5759,9 @@
             },
             "sms:displayName": "specifyMSAnalyteType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:MsInstrumentModel",
@@ -5637,7 +5795,9 @@
             ],
             "sms:displayName": "msInstrumentModel",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyMSInstrumentModel",
@@ -5654,7 +5814,9 @@
             },
             "sms:displayName": "specifyMSInstrumentModel",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SampleIntroduction",
@@ -5688,7 +5850,9 @@
             ],
             "sms:displayName": "sampleIntroduction",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifySampleIntroduction",
@@ -5705,7 +5869,9 @@
             },
             "sms:displayName": "specifySampleIntroduction",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ExtractionMethod",
@@ -5736,7 +5902,9 @@
             ],
             "sms:displayName": "extractionMethod",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:AcquisitionMode",
@@ -5767,7 +5935,9 @@
             ],
             "sms:displayName": "acquisitionMode",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:AcquisitionSoftware",
@@ -5798,7 +5968,9 @@
             ],
             "sms:displayName": "acquisitionSoftware",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:AcquistionSoftwareVersion",
@@ -5815,7 +5987,9 @@
             },
             "sms:displayName": "acquistionSoftwareVersion",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:SamplePrepProtocol",
@@ -5832,7 +6006,9 @@
             },
             "sms:displayName": "samplePrepProtocol",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DatabaseName",
@@ -5878,7 +6054,9 @@
             ],
             "sms:displayName": "databaseName",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyDatabaseName",
@@ -5895,7 +6073,9 @@
             },
             "sms:displayName": "specifyDatabaseName",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DatabaseSource",
@@ -5929,7 +6109,9 @@
             ],
             "sms:displayName": "databaseSource",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyDatabaseSource",
@@ -5946,7 +6128,9 @@
             },
             "sms:displayName": "specifyDatabaseSource",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DatabaseWeblink",
@@ -5963,7 +6147,9 @@
             },
             "sms:displayName": "databaseWeblink",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpectrometerFrequency",
@@ -5980,7 +6166,9 @@
             },
             "sms:displayName": "spectrometerFrequency",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:HasIonizationSource",
@@ -6030,7 +6218,9 @@
             ],
             "sms:displayName": "ionProperty",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:VacuumPressure",
@@ -6047,7 +6237,9 @@
             },
             "sms:displayName": "vacuumPressure",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:VacuumPressureUnit",
@@ -6231,7 +6423,9 @@
             ],
             "sms:displayName": "vacuumPressureUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyVacuumPressueUnits",
@@ -6248,7 +6442,9 @@
             },
             "sms:displayName": "specifyVacuumPressueUnits",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LensVoltages",
@@ -6265,7 +6461,9 @@
             },
             "sms:displayName": "lensVoltages",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:LensVoltagesUnit",
@@ -6449,7 +6647,9 @@
             ],
             "sms:displayName": "lensVoltagesUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyLensVoltageUnits",
@@ -6466,7 +6666,9 @@
             },
             "sms:displayName": "specifyLensVoltageUnits",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:GasFlowTemperature",
@@ -6483,7 +6685,9 @@
             },
             "sms:displayName": "gasFlowTemperature",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:GasFlowTemperatureUnit",
@@ -6514,7 +6718,9 @@
             ],
             "sms:displayName": "gasFlowTemperatureUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:HasAssayControl",
@@ -6597,7 +6803,9 @@
             ],
             "sms:displayName": "controlType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyControlType",
@@ -6614,7 +6822,9 @@
             },
             "sms:displayName": "specifyControlType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ExperiementalBatchSize",
@@ -6631,7 +6841,9 @@
             },
             "sms:displayName": "experiementalBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:ExperiementalBatchSizeUnit",
@@ -6815,7 +7027,9 @@
             ],
             "sms:displayName": "experiementalBatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyExperimentalBatchSizeUnits",
@@ -6849,7 +7063,9 @@
             },
             "sms:displayName": "batchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:BatchSizeUnit",
@@ -7033,7 +7249,9 @@
             ],
             "sms:displayName": "batchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyBatchSizeUnits",
@@ -7050,7 +7268,9 @@
             },
             "sms:displayName": "specifyBatchSizeUnits",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:BatchID",
@@ -7067,7 +7287,9 @@
             },
             "sms:displayName": "batchID",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:BatchLabel",
@@ -7084,7 +7306,9 @@
             },
             "sms:displayName": "batchLabel",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SampleBatchID",
@@ -7101,7 +7325,9 @@
             },
             "sms:displayName": "sampleBatchID",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SampleBatchSize",
@@ -7118,7 +7344,9 @@
             },
             "sms:displayName": "sampleBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SampleBatchSizeUnit",
@@ -7302,7 +7530,9 @@
             ],
             "sms:displayName": "sampleBatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifySampleBatchSizeUnits",
@@ -7319,7 +7549,9 @@
             },
             "sms:displayName": "specifySampleBatchSizeUnits",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:AcquisitionBatchID",
@@ -7336,7 +7568,9 @@
             },
             "sms:displayName": "acquisitionBatchID",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:AcquisitionBatchSize",
@@ -7353,7 +7587,9 @@
             },
             "sms:displayName": "acquisitionBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:AcquisitionBatchSizeUnit",
@@ -7537,7 +7773,9 @@
             ],
             "sms:displayName": "acquisitionBatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyAcquisitionBatchSizeUnits",
@@ -7571,7 +7809,9 @@
             },
             "sms:displayName": "processingBatchID",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ProcessingBatchSize",
@@ -7588,7 +7828,9 @@
             },
             "sms:displayName": "processingBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ProcessingBatchSizeUnit",
@@ -7772,7 +8014,9 @@
             ],
             "sms:displayName": "processingBatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyProcessingBatchSizeUnit",
@@ -7789,13 +8033,15 @@
             },
             "sms:displayName": "specifyProcessingBatchSizeUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
-            "@id": "bts:DataFile",
+            "@id": "bts:F",
             "@type": "rdfs:Class",
             "rdfs:comment": "The data file provides the name of the raw file generated by the instrument. The data files can be instrument raw files but also converted peak lists such as mzML, MGF or result files like mzIdentML.",
-            "rdfs:label": "DataFile",
+            "rdfs:label": "F",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:MetabolomicsHuman"
@@ -7818,9 +8064,11 @@
                     "@id": "bts:NotSpecified"
                 }
             ],
-            "sms:displayName": "dataFile",
-            "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:displayName": "f",
+            "sms:required": "sms:false",
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyExtractionMethod",
@@ -7837,7 +8085,9 @@
             },
             "sms:displayName": "specifyExtractionMethod",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ProtoemicsAssayType",
@@ -7883,7 +8133,9 @@
             ],
             "sms:displayName": "protoemicsAssayType",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyProteomicsAssayType",
@@ -7900,7 +8152,9 @@
             },
             "sms:displayName": "specifyProteomicsAssayType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DigestionMethod",
@@ -7940,7 +8194,9 @@
             ],
             "sms:displayName": "digestionMethod",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyDigestionMethod",
@@ -7957,7 +8213,9 @@
             },
             "sms:displayName": "specifyDigestionMethod",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:FractionIdentifier",
@@ -7974,7 +8232,9 @@
             },
             "sms:displayName": "fractionIdentifier",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:ModificationParameters",
@@ -8011,7 +8271,9 @@
             ],
             "sms:displayName": "modificationParameters",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyOtherModificationParameters",
@@ -8028,7 +8290,9 @@
             },
             "sms:displayName": "specifyOtherModificationParameters",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:CleavageAgents",
@@ -8062,7 +8326,9 @@
             ],
             "sms:displayName": "cleavageAgents",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecifyOtherCleavageAgent",
@@ -8079,7 +8345,9 @@
             },
             "sms:displayName": "specifyOtherCleavageAgent",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:FragmentMassTolerance",
@@ -8096,7 +8364,9 @@
             },
             "sms:displayName": "fragmentMassTolerance",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:PrecursorMassTolerance",
@@ -8113,7 +8383,42 @@
             },
             "sms:displayName": "precursorMassTolerance",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
+        },
+        {
+            "@id": "bts:DataFile",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The data file provides the name of the raw file generated by the instrument. The data files can be instrument raw files but also converted peak lists such as mzML, MGF or result files like mzIdentML.",
+            "rdfs:label": "DataFile",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Proteomics"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:NotSpecified"
+                }
+            ],
+            "sms:displayName": "dataFile",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:IndividualID",
@@ -8130,7 +8435,9 @@
             },
             "sms:displayName": "individualID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecimenType",
@@ -8194,29 +8501,9 @@
             ],
             "sms:displayName": "specimenType",
             "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Assay",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The analysis or technology used to generate the data in this file",
-            "rdfs:label": "Assay",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Biospecimenhuman"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:TBD"
-                }
-            ],
-            "sms:displayName": "assay",
-            "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecimenAge",
@@ -8247,7 +8534,9 @@
             ],
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SamplingAge",
@@ -8278,7 +8567,9 @@
             ],
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Organ",
@@ -8312,7 +8603,9 @@
             ],
             "sms:displayName": "organ",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Tissue",
@@ -8346,7 +8639,9 @@
             ],
             "sms:displayName": "tissue",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TissueVolume",
@@ -8374,7 +8669,9 @@
             ],
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TissueWeight",
@@ -8402,7 +8699,9 @@
             ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecimenSource",
@@ -8436,7 +8735,9 @@
             ],
             "sms:displayName": "specimenSource",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:NucleicAcidSource",
@@ -8488,7 +8789,9 @@
             ],
             "sms:displayName": "nucleicAcidSource",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:CellType",
@@ -8522,7 +8825,9 @@
             ],
             "sms:displayName": "cellType",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:FastingState",
@@ -8559,7 +8864,9 @@
             ],
             "sms:displayName": "fastingState",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:IsPostMortem",
@@ -8596,7 +8903,9 @@
             ],
             "sms:displayName": "isPostMortem",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpecimenIdSource",
@@ -8613,7 +8922,9 @@
             },
             "sms:displayName": "specimenIdSource",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DataGenerationSite",
@@ -8630,7 +8941,33 @@
             },
             "sms:displayName": "dataGenerationSite",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
+        },
+        {
+            "@id": "bts:Assay",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The analysis or technology used to generate the data in this file",
+            "rdfs:label": "Assay",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:TBD"
+                }
+            ],
+            "sms:displayName": "assay",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ParentSpecimenID",
@@ -8647,7 +8984,9 @@
             },
             "sms:displayName": "parentSpecimenID",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:ParentSpecimenType",
@@ -8664,7 +9003,9 @@
             },
             "sms:displayName": "parentSpecimenType",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LaboratoryProcedure",
@@ -8681,7 +9022,9 @@
             },
             "sms:displayName": "laboratoryProcedure",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Cohort",
@@ -8739,7 +9082,9 @@
             ],
             "sms:displayName": "cohort",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:StudyCode",
@@ -8770,7 +9115,9 @@
             ],
             "sms:displayName": "studyCode",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:FieldCenterCode",
@@ -8813,7 +9160,9 @@
             ],
             "sms:displayName": "fieldCenterCode",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:VisitCode",
@@ -8847,7 +9196,9 @@
             ],
             "sms:displayName": "visitCode",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
+            ]
         },
         {
             "@id": "bts:CountryCode",
@@ -8881,7 +9232,9 @@
             ],
             "sms:displayName": "countryCode",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search ([0-9]+)"
+            ]
         },
         {
             "@id": "bts:ConsentGroupID",
@@ -8915,7 +9268,9 @@
             ],
             "sms:displayName": "consentGroupID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpeciesGroup",
@@ -8958,7 +9313,9 @@
             ],
             "sms:displayName": "speciesGroup",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Sex",
@@ -8995,7 +9352,9 @@
             ],
             "sms:displayName": "sex",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Race",
@@ -9047,7 +9406,9 @@
             ],
             "sms:displayName": "race",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Ethnicity",
@@ -9087,7 +9448,9 @@
             ],
             "sms:displayName": "ethnicity",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:EthnicGroupCode",
@@ -9104,7 +9467,9 @@
             },
             "sms:displayName": "ethnicGroupCode",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Age",
@@ -9132,7 +9497,9 @@
             ],
             "sms:displayName": "age",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:DiagnosisStatus",
@@ -9166,7 +9533,9 @@
             ],
             "sms:displayName": "diagnosisStatus",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Diagnosis",
@@ -9206,7 +9575,9 @@
             ],
             "sms:displayName": "diagnosis",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Taxon",
@@ -9237,7 +9608,9 @@
             ],
             "sms:displayName": "taxon",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:SpeciesName",
@@ -9268,7 +9641,9 @@
             ],
             "sms:displayName": "speciesName",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:CommonName",
@@ -9296,7 +9671,9 @@
             ],
             "sms:displayName": "commonName",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:LifeStage",
@@ -9341,7 +9718,9 @@
             ],
             "sms:displayName": "speciesAge",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:CaptivityStatus",
@@ -9381,7 +9760,9 @@
             ],
             "sms:displayName": "captivityStatus",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:CaptivityDuration",
@@ -9409,7 +9790,9 @@
             ],
             "sms:displayName": "captivityDuration",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherSampleType",
@@ -9431,7 +9814,9 @@
                     "@id": "bts:SpecifySampleType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMeasurementTechnique",
@@ -9453,7 +9838,9 @@
                     "@id": "bts:SpecifyMeasurementTechnique"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherTechnologyPlatformVersion",
@@ -9475,7 +9862,9 @@
                     "@id": "bts:SpecifyPlatformVersion"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherPlatformLocation",
@@ -9497,7 +9886,9 @@
                     "@id": "bts:SpecifyPlatformLocation"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherDnaBatchSizeUnit",
@@ -9519,7 +9910,9 @@
                     "@id": "bts:SpecifyDNABatchSizeUnit"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherLibraryPrep",
@@ -9541,7 +9934,9 @@
                     "@id": "bts:SpecifyLibraryPrep"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherLibraryPreparationMethod",
@@ -9563,7 +9958,9 @@
                     "@id": "bts:SpecifyLibraryPreparationMethod"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherLibraryVersion",
@@ -9585,7 +9982,9 @@
                     "@id": "bts:SpecifyLibraryVersion"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherSequencingBatchSizeUnit",
@@ -9607,7 +10006,9 @@
                     "@id": "bts:SpecifySequencingBatchSizeUnit"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherReadLengthUnits",
@@ -9629,7 +10030,9 @@
                     "@id": "bts:SpecifyReadLengthUnits"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherRepositoryName",
@@ -9651,7 +10054,9 @@
                     "@id": "bts:SpecifyRepositoryName"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherTranscriptType",
@@ -9673,7 +10078,9 @@
                     "@id": "bts:SpecifyTranscriptType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherRnaBatchSizeUnit",
@@ -9695,7 +10102,9 @@
                     "@id": "bts:SpecifyRNABatchSizeUnit"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:YesUseReagent",
@@ -9717,7 +10126,9 @@
                     "@id": "bts:ReagentID(s)"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:YesUseTreatment",
@@ -9739,7 +10150,9 @@
                     "@id": "bts:TreatmentID(s)"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMetabolomicsHumanmeasurementTechnique",
@@ -9761,7 +10174,9 @@
                     "@id": "bts:SpecifyMeasurementTechnique"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMsAnalyzerTypeMS1",
@@ -9783,7 +10198,9 @@
                     "@id": "bts:SpecifyMSAnalyzerTypeMS1"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMsAnalyzerTypeMS2",
@@ -9805,7 +10222,9 @@
                     "@id": "bts:SpecifyMSAnalyzerTypeMS2"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMsAssayTechnique",
@@ -9827,7 +10246,9 @@
                     "@id": "bts:SpecifyMSAssayTechnique"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TargetedMsTarget",
@@ -9875,7 +10296,9 @@
                     "@id": "bts:MsAnalyteType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMsAnalyteType",
@@ -9897,7 +10320,9 @@
                     "@id": "bts:SpecifyMSAnalyteType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherMsInstrumentModel",
@@ -9919,7 +10344,9 @@
                     "@id": "bts:SpecifyMSInstrumentModel"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherSampleIntdocution",
@@ -9941,7 +10368,9 @@
                     "@id": "bts:SpecifySampleIntroduction"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherDatabaseName",
@@ -9963,7 +10392,9 @@
                     "@id": "bts:SpecifyDatabaseName"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherDatabaseSource",
@@ -9985,7 +10416,9 @@
                     "@id": "bts:SpecifyDatabaseSource"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:YesHasIonizationSource",
@@ -10015,7 +10448,9 @@
                     "@id": "bts:IonProperty"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherVaccumPressureUnits",
@@ -10037,7 +10472,9 @@
                     "@id": "bts:SpecifyVacuumPressueUnits"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherLensVoltageUnits",
@@ -10059,7 +10496,9 @@
                     "@id": "bts:SpecifyLensVoltageUnits"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:YesHasAssayControl",
@@ -10122,7 +10561,9 @@
                     "@id": "bts:ControlType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherControlType",
@@ -10144,7 +10585,9 @@
                     "@id": "bts:SpecifyControlType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherExperimentalBatchSizeUnit",
@@ -10188,7 +10631,9 @@
                     "@id": "bts:SpecifyBatchSizeUnits"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherSampleBatchSizeUnit",
@@ -10210,7 +10655,9 @@
                     "@id": "bts:SpecifySampleBatchSizeUnits"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherAcquisitionBatchSizeUnit",
@@ -10254,7 +10701,9 @@
                     "@id": "bts:SpecifyProcessingBatchSizeUnit"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherExtractionMethod",
@@ -10276,7 +10725,9 @@
                     "@id": "bts:SpecifyExtractionMethod"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherProteomicsAssayType",
@@ -10298,7 +10749,9 @@
                     "@id": "bts:SpecifyProteomicsAssayType"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherDigestionMethod",
@@ -10320,7 +10773,9 @@
                     "@id": "bts:SpecifyDigestionMethod"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherModificationParameters",
@@ -10342,7 +10797,9 @@
                     "@id": "bts:SpecifyOtherModificationParameters"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:OtherCleavageAgents",
@@ -10364,7 +10821,9 @@
                     "@id": "bts:SpecifyOtherCleavageAgent"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:HispanicorlatinoEthnicity",
@@ -10386,7 +10845,9 @@
                     "@id": "bts:EthnicGroupCode"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:TrueDiagnosisStatus",
@@ -10431,7 +10892,9 @@
                     "@id": "bts:Diagnosis"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:CaptiveCaptivityStatus",
@@ -10464,7 +10927,9 @@
                     "@id": "bts:CaptivityDuration"
                 }
             ],
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search str"
+            ]
         },
         {
             "@id": "bts:Aging",
@@ -10701,6 +11166,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "and Body Composition Study (HealthABC)",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PairedEnd",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PairedEnd",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "pairedEnd",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -12316,23 +12798,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Fluorescent Antibody Procedure",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ForwardReverse",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ForwardReverse",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "ForwardReverse",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -17012,10 +17477,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Forwardreverse",
+            "@id": "bts:Forward",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Forwardreverse",
+            "rdfs:label": "Forward",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -17024,7 +17489,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "forwardreverse",
+            "sms:displayName": "forward",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -17658,23 +18123,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:PairedEnd",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PairedEnd",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "pairedEnd",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:Pg",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -17879,6 +18327,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Reverse",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Reverse",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "reverse",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Sac-seq",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -17994,23 +18459,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "singleEnd",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SingleEndpairedEnd",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SingleEndpairedEnd",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "singleEndpairedEnd",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -18414,7 +18862,7 @@
                     "@id": "bts:SpecimenType"
                 },
                 {
-                    "@id": "bts:Assay"
+                    "@id": "bts:MeasurementTechnique"
                 },
                 {
                     "@id": "bts:SpecimenAge"
@@ -18877,7 +19325,7 @@
                     "@id": "bts:SpecifyProcessingBatchSizeUnit"
                 },
                 {
-                    "@id": "bts:DataFile"
+                    "@id": "bts:F"
                 },
                 {
                     "@id": "bts:Component"
@@ -18999,154 +19447,6 @@
                 },
                 {
                     "@id": "bts:TotalReads"
-                },
-                {
-                    "@id": "bts:Component"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Proteomics",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Proteomics",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Proteomics",
-            "sms:required": "sms:true",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:SpecimenID"
-                },
-                {
-                    "@id": "bts:SampleType"
-                },
-                {
-                    "@id": "bts:SpecifySampleType"
-                },
-                {
-                    "@id": "bts:MeasurementTechnique"
-                },
-                {
-                    "@id": "bts:SpecifyMeasurementTechnique"
-                },
-                {
-                    "@id": "bts:TechnologyPlatformVersion"
-                },
-                {
-                    "@id": "bts:SpecifyPlatformVersion"
-                },
-                {
-                    "@id": "bts:PlatformLocation"
-                },
-                {
-                    "@id": "bts:SpecifyPlatformLocation"
-                },
-                {
-                    "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:MsAnalyzerTypeMS1"
-                },
-                {
-                    "@id": "bts:SpecifyMSAnalyzerTypeMS1"
-                },
-                {
-                    "@id": "bts:MsAnalyzerTypeMS2"
-                },
-                {
-                    "@id": "bts:SpecifyMSAnalyzerTypeMS2"
-                },
-                {
-                    "@id": "bts:MsAssayTechnique"
-                },
-                {
-                    "@id": "bts:SpecifyMSAssayTechnique"
-                },
-                {
-                    "@id": "bts:MsAnalyteType"
-                },
-                {
-                    "@id": "bts:SpecifyMSAnalyteType"
-                },
-                {
-                    "@id": "bts:ProtoemicsAssayType"
-                },
-                {
-                    "@id": "bts:SpecifyProteomicsAssayType"
-                },
-                {
-                    "@id": "bts:MsInstrumentModel"
-                },
-                {
-                    "@id": "bts:SpecifyMSInstrumentModel"
-                },
-                {
-                    "@id": "bts:DigestionMethod"
-                },
-                {
-                    "@id": "bts:SpecifyDigestionMethod"
-                },
-                {
-                    "@id": "bts:FractionIdentifier"
-                },
-                {
-                    "@id": "bts:AcquisitionMode"
-                },
-                {
-                    "@id": "bts:AcquisitionSoftware"
-                },
-                {
-                    "@id": "bts:AcquistionSoftwareVersion"
-                },
-                {
-                    "@id": "bts:SamplePrepProtocol"
-                },
-                {
-                    "@id": "bts:DatabaseName"
-                },
-                {
-                    "@id": "bts:SpecifyDatabaseName"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
-                },
-                {
-                    "@id": "bts:SpecifyDatabaseSource"
-                },
-                {
-                    "@id": "bts:DatabaseWeblink"
-                },
-                {
-                    "@id": "bts:SpectrometerFrequency"
-                },
-                {
-                    "@id": "bts:ModificationParameters"
-                },
-                {
-                    "@id": "bts:SpecifyOtherModificationParameters"
-                },
-                {
-                    "@id": "bts:CleavageAgents"
-                },
-                {
-                    "@id": "bts:SpecifyOtherCleavageAgent"
-                },
-                {
-                    "@id": "bts:FragmentMassTolerance"
-                },
-                {
-                    "@id": "bts:PrecursorMassTolerance"
-                },
-                {
-                    "@id": "bts:DataFile"
                 },
                 {
                     "@id": "bts:Component"
@@ -19619,6 +19919,154 @@
                 },
                 {
                     "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Proteomics",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Proteomics",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "proteomics",
+            "sms:required": "sms:true",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecimenID"
+                },
+                {
+                    "@id": "bts:SampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS1"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS1"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS2"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS2"
+                },
+                {
+                    "@id": "bts:MsAssayTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMSAssayTechnique"
+                },
+                {
+                    "@id": "bts:MsAnalyteType"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyteType"
+                },
+                {
+                    "@id": "bts:ProtoemicsAssayType"
+                },
+                {
+                    "@id": "bts:SpecifyProteomicsAssayType"
+                },
+                {
+                    "@id": "bts:MsInstrumentModel"
+                },
+                {
+                    "@id": "bts:SpecifyMSInstrumentModel"
+                },
+                {
+                    "@id": "bts:DigestionMethod"
+                },
+                {
+                    "@id": "bts:SpecifyDigestionMethod"
+                },
+                {
+                    "@id": "bts:FractionIdentifier"
+                },
+                {
+                    "@id": "bts:AcquisitionMode"
+                },
+                {
+                    "@id": "bts:AcquisitionSoftware"
+                },
+                {
+                    "@id": "bts:AcquistionSoftwareVersion"
+                },
+                {
+                    "@id": "bts:SamplePrepProtocol"
+                },
+                {
+                    "@id": "bts:DatabaseName"
+                },
+                {
+                    "@id": "bts:SpecifyDatabaseName"
+                },
+                {
+                    "@id": "bts:DatabaseSource"
+                },
+                {
+                    "@id": "bts:SpecifyDatabaseSource"
+                },
+                {
+                    "@id": "bts:DatabaseWeblink"
+                },
+                {
+                    "@id": "bts:SpectrometerFrequency"
+                },
+                {
+                    "@id": "bts:ModificationParameters"
+                },
+                {
+                    "@id": "bts:SpecifyOtherModificationParameters"
+                },
+                {
+                    "@id": "bts:CleavageAgents"
+                },
+                {
+                    "@id": "bts:SpecifyOtherCleavageAgent"
+                },
+                {
+                    "@id": "bts:FragmentMassTolerance"
+                },
+                {
+                    "@id": "bts:PrecursorMassTolerance"
+                },
+                {
+                    "@id": "bts:DataFile"
                 },
                 {
                     "@id": "bts:Component"
@@ -21658,7 +22106,7 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "dataProperty",
             "schema:domainIncludes": {
-                "@id": "bts:DataFile"
+                "@id": "bts:F"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -21853,6 +22301,21 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "dataProperty",
             "schema:domainIncludes": {
+                "@id": "bts:DataFile"
+            },
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "dataProperty",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:dataProperty",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "dataProperty",
+            "schema:domainIncludes": {
                 "@id": "bts:IndividualID"
             },
             "schema:isPartOf": {
@@ -21869,21 +22332,6 @@
             "rdfs:label": "dataProperty",
             "schema:domainIncludes": {
                 "@id": "bts:SpecimenType"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "dataProperty",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:dataProperty",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "dataProperty",
-            "schema:domainIncludes": {
-                "@id": "bts:Assay"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -22079,6 +22527,21 @@
             "rdfs:label": "dataProperty",
             "schema:domainIncludes": {
                 "@id": "bts:DataGenerationSite"
+            },
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "dataProperty",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:dataProperty",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "dataProperty",
+            "schema:domainIncludes": {
+                "@id": "bts:Assay"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -23294,6 +23757,21 @@
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
                 "@id": "bts:AndBodyCompositionStudy(HealthABC)"
+            },
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "validValue",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:validValue",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "validValue",
+            "schema:domainIncludes": {
+                "@id": "bts:PairedEnd"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -24719,21 +25197,6 @@
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
                 "@id": "bts:FluorescentAntibodyProcedure"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "validValue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:validValue",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "validValue",
-            "schema:domainIncludes": {
-                "@id": "bts:ForwardReverse"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -28873,7 +29336,7 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:Forwardreverse"
+                "@id": "bts:Forward"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -29443,21 +29906,6 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:PairedEnd"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "validValue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:validValue",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "validValue",
-            "schema:domainIncludes": {
                 "@id": "bts:Pg"
             },
             "schema:isPartOf": {
@@ -29638,6 +30086,21 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
+                "@id": "bts:Reverse"
+            },
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "validValue",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:validValue",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "validValue",
+            "schema:domainIncludes": {
                 "@id": "bts:Sac-seq"
             },
             "schema:isPartOf": {
@@ -29729,21 +30192,6 @@
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
                 "@id": "bts:SingleEnd"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "validValue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:validValue",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "validValue",
-            "schema:domainIncludes": {
-                "@id": "bts:SingleEndpairedEnd"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -30178,21 +30626,6 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "dataType",
             "schema:domainIncludes": {
-                "@id": "bts:Proteomics"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "dataType",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:dataType",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "dataType",
-            "schema:domainIncludes": {
                 "@id": "bts:RNAseq"
             },
             "schema:isPartOf": {
@@ -30239,6 +30672,21 @@
             "rdfs:label": "dataType",
             "schema:domainIncludes": {
                 "@id": "bts:Genotyping"
+            },
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "dataType",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:dataType",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "dataType",
+            "schema:domainIncludes": {
+                "@id": "bts:Proteomics"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
