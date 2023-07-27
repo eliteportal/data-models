@@ -4172,7 +4172,7 @@
             "rdfs:label": "MeasurementTechnique",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Biospecimenhuman"
+                    "@id": "bts:Proteomics"
                 }
             ],
             "schema:isPartOf": {
@@ -4349,183 +4349,6 @@
                 },
                 {
                     "@id": "bts:WesternBlot"
-                },
-                {
-                    "@id": "bts:YeastTwoHybrid"
-                },
-                {
-                    "@id": "bts:16SrRNAgenesequencing"
-                },
-                {
-                    "@id": "bts:1DGel"
-                },
-                {
-                    "@id": "bts:2DGel"
-                },
-                {
-                    "@id": "bts:Array"
-                },
-                {
-                    "@id": "bts:Bcellreceptorrepertoiresequencingassay"
-                },
-                {
-                    "@id": "bts:CellCulture"
-                },
-                {
-                    "@id": "bts:CircularDichroism"
-                },
-                {
-                    "@id": "bts:CyTOF"
-                },
-                {
-                    "@id": "bts:CytometricBeadArrayAssay"
-                },
-                {
-                    "@id": "bts:DNAmethylationprofilingassay"
-                },
-                {
-                    "@id": "bts:DNAmicroarray"
-                },
-                {
-                    "@id": "bts:ELISA"
-                },
-                {
-                    "@id": "bts:ELISPOT"
-                },
-                {
-                    "@id": "bts:EMSA"
-                },
-                {
-                    "@id": "bts:ExomeSequencing"
-                },
-                {
-                    "@id": "bts:FlowCytometry"
-                },
-                {
-                    "@id": "bts:FluorescentAntibodyProcedure"
-                },
-                {
-                    "@id": "bts:HemagglutinationInhibition"
-                },
-                {
-                    "@id": "bts:HLATyping"
-                },
-                {
-                    "@id": "bts:HPLC"
-                },
-                {
-                    "@id": "bts:Immunoblot"
-                },
-                {
-                    "@id": "bts:Immunoprecipitation"
-                },
-                {
-                    "@id": "bts:InsituHybridization"
-                },
-                {
-                    "@id": "bts:KIRTyping"
-                },
-                {
-                    "@id": "bts:LineProbeAssay"
-                },
-                {
-                    "@id": "bts:LiquidChromatography"
-                },
-                {
-                    "@id": "bts:LuminexxMAP"
-                },
-                {
-                    "@id": "bts:MassSpectrometry"
-                },
-                {
-                    "@id": "bts:MesoScaleDiscoveryECL"
-                },
-                {
-                    "@id": "bts:MicroRNAprofilingassay"
-                },
-                {
-                    "@id": "bts:Microscopy"
-                },
-                {
-                    "@id": "bts:MixedLymphocyteReaction"
-                },
-                {
-                    "@id": "bts:MolecularCloning"
-                },
-                {
-                    "@id": "bts:Nanostring"
-                },
-                {
-                    "@id": "bts:NeutralizingAntibodyTiterAssay"
-                },
-                {
-                    "@id": "bts:NMR"
-                },
-                {
-                    "@id": "bts:NorthernBlot"
-                },
-                {
-                    "@id": "bts:Olink"
-                },
-                {
-                    "@id": "bts:OtherMeasurementTechnique"
-                },
-                {
-                    "@id": "bts:PCR"
-                },
-                {
-                    "@id": "bts:Phagedisplaybindingassay"
-                },
-                {
-                    "@id": "bts:Proteinmicroarray"
-                },
-                {
-                    "@id": "bts:Q-PCR"
-                },
-                {
-                    "@id": "bts:Realtimepolymerasechainreactionassay"
-                },
-                {
-                    "@id": "bts:RNAsequencing"
-                },
-                {
-                    "@id": "bts:RnaseProtectionAssay"
-                },
-                {
-                    "@id": "bts:Sequencing"
-                },
-                {
-                    "@id": "bts:SNPmicroarray"
-                },
-                {
-                    "@id": "bts:SOMAscan"
-                },
-                {
-                    "@id": "bts:SouthernBlot"
-                },
-                {
-                    "@id": "bts:SurfacePlasmonResonance"
-                },
-                {
-                    "@id": "bts:Tcellreceptorrepertoiresequencingassay"
-                },
-                {
-                    "@id": "bts:TCID50"
-                },
-                {
-                    "@id": "bts:Transcriptionprofilingassay"
-                },
-                {
-                    "@id": "bts:Transcriptionprofilingbyarray"
-                },
-                {
-                    "@id": "bts:VirusNeutralization"
-                },
-                {
-                    "@id": "bts:WesternBlot"
-                },
-                {
-                    "@id": "bts:WholeGenomeSequencing"
                 },
                 {
                     "@id": "bts:YeastTwoHybrid"
@@ -10275,10 +10098,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:True"
+                    "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:FALSE"
                 },
                 {
                     "@id": "bts:Unknown"
@@ -17954,23 +17777,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:MeasurementTechnique",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The measurement technique describing the assay method",
-            "rdfs:label": "MeasurementTechnique",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Biospecimenhuman"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "measurementTechnique",
-            "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:SpecimenAge",
             "@type": "rdfs:Class",
             "rdfs:comment": "The subject's age at the time of specimen extraction is the individual's age (since birth) at the time a given specimen was extracted. Measured as age in years.",
@@ -18426,10 +18232,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:True"
+                    "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:FALSE"
                 },
                 {
                     "@id": "bts:Other"
@@ -18444,10 +18250,10 @@
                     "@id": "bts:Notapplicable"
                 },
                 {
-                    "@id": "bts:True"
+                    "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:FALSE"
                 },
                 {
                     "@id": "bts:Other"
@@ -18481,10 +18287,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:True"
+                    "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:FALSE"
                 },
                 {
                     "@id": "bts:Other"
@@ -18499,10 +18305,10 @@
                     "@id": "bts:Notapplicable"
                 },
                 {
-                    "@id": "bts:True"
+                    "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:FALSE"
                 },
                 {
                     "@id": "bts:Other"
@@ -19419,10 +19225,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:TrueDiagnosisStatus"
+                    "@id": "bts:TRUEDiagnosisStatus"
                 },
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:FALSE"
                 },
                 {
                     "@id": "bts:Unknown"
@@ -29873,9 +29679,6 @@
                     "@id": "bts:SpecimenType"
                 },
                 {
-                    "@id": "bts:MeasurementTechnique"
-                },
-                {
                     "@id": "bts:SpecimenAge"
                 },
                 {
@@ -35803,21 +35606,6 @@
             "rdfs:label": "dataProperty",
             "schema:domainIncludes": {
                 "@id": "bts:SpecimenType"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "dataProperty",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:dataProperty",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "dataProperty",
-            "schema:domainIncludes": {
-                "@id": "bts:MeasurementTechnique"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -45352,6 +45140,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TRUEDiagnosisStatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TRUEDiagnosisStatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DiagnosisStatus"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "TRUEDiagnosisStatus",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
