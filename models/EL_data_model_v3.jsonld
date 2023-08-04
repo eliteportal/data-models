@@ -2015,7 +2015,9 @@
             },
             "sms:displayName": "specimenID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "matchAtLeastOne Biospecimenhuman.specimenID value"
+            ]
         },
         {
             "@id": "bts:SampleType",
@@ -8016,7 +8018,9 @@
             },
             "sms:displayName": "individualID",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "matchExactlyOne IndividualHuman.individualID set"
+            ]
         },
         {
             "@id": "bts:SpecimenType",
@@ -8112,7 +8116,7 @@
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "regex match [0-9]+|Other|Unknown|Not\\scollected|Not\\sapplicable"
+                "regex search^\\d*?\\.?\\d$|Other|Unknown|Not collected|Not applicable"
             ]
         },
         {
@@ -8145,7 +8149,7 @@
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "regex match [0-9]+|Other|Unknown|Not\\scollected|Not\\sapplicable"
+                "regex search^\\d*?\\.?\\d$|Other|Unknown|Not collected|Not applicable"
             ]
         },
         {
@@ -8243,7 +8247,7 @@
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "regex search [0-9]+|Unknown|Not\\scollected|Not\\sapplicable"
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
             ]
         },
         {
@@ -8259,10 +8263,21 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                }
+            ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "regex search ^\\d*?\\.?\\d$|Not\\sapplicable|Unknown|Other"
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
             ]
         },
         {
@@ -9316,28 +9331,6 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:SpecifySampleType"
-                }
-            ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OtherMeasurementTechnique",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "If \"other\" is selected list the name of the measurement technique used",
-            "rdfs:label": "OtherMeasurementTechnique",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:BsSeq(bisulfite-seqWGBSmethylseqmethylomics)"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "OtherMeasurementTechnique",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:SpecifyMeasurementTechnique"
                 }
             ],
             "sms:validationRules": []
@@ -21175,21 +21168,6 @@
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
                 "@id": "bts:OtherSampleType"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "validValue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:validValue",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "validValue",
-            "schema:domainIncludes": {
-                "@id": "bts:OtherMeasurementTechnique"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
