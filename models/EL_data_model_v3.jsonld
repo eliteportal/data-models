@@ -8748,9 +8748,7 @@
             ],
             "sms:displayName": "visitCode",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:CountryCode",
