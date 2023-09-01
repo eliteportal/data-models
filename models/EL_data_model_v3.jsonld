@@ -8728,7 +8728,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:"
+                    "@id": "bts:1"
+                },
+                {
+                    "@id": "bts:2"
                 },
                 {
                     "@id": "bts:Other"
@@ -27970,6 +27973,40 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:1",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "1",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:VisitCode"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "1",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:2",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "2",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:VisitCode"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "2",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
