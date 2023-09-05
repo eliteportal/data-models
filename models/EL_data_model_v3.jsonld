@@ -8099,24 +8099,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Other|Unknown|Not collected|Not applicable"
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
             ]
         },
         {
@@ -8132,24 +8118,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
             "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Other|Unknown|Not collected|Not applicable"
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
             ]
         },
         {
@@ -8801,19 +8773,13 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:"
+                    "@id": "bts:1"
                 },
                 {
-                    "@id": "bts:Other"
+                    "@id": "bts:2"
                 },
                 {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
+                    "@id": "bts:3"
                 }
             ],
             "sms:displayName": "consentGroupID",
@@ -8853,7 +8819,10 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:UnknownNotcollected"
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
                 },
                 {
                     "@id": "bts:Notapplicable"
@@ -8967,10 +8936,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:NotHispanicorlatinoEthnicity"
+                    "@id": "bts:NotHispanicorlatino"
                 },
                 {
-                    "@id": "bts:HispanicorlatinoEthnicity"
+                    "@id": "bts:Hispanicorlatino"
                 },
                 {
                     "@id": "bts:Prefernottoanswer"
@@ -9022,20 +8991,11 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
             "sms:displayName": "age",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
+            ]
         },
         {
             "@id": "bts:DiagnosisStatus",
@@ -9052,7 +9012,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:TRUEDiagnosisStatus"
+                    "@id": "bts:TRUE"
                 },
                 {
                     "@id": "bts:FALSE"
@@ -10248,10 +10208,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:HispanicorlatinoEthnicity",
+            "@id": "bts:Hispanicorlatino",
             "@type": "rdfs:Class",
             "rdfs:comment": "A coded value specifying the self-declared ethnic origination independent of racial origination, provided by the data contributor's data dictionary",
-            "rdfs:label": "HispanicorlatinoEthnicity",
+            "rdfs:label": "Hispanicorlatino",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:IndividualHuman"
@@ -10260,7 +10220,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Hispanic or latinoEthnicity",
+            "sms:displayName": "Hispanic or latino",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -10270,10 +10230,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:TRUEDiagnosisStatus",
+            "@id": "bts:TRUE",
             "@type": "rdfs:Class",
             "rdfs:comment": "Indicate the disease or condition.",
-            "rdfs:label": "TRUEDiagnosisStatus",
+            "rdfs:label": "TRUE",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:IndividualHuman"
@@ -10305,7 +10265,7 @@
                     "@id": "bts:Notapplicable"
                 }
             ],
-            "sms:displayName": "TRUEDiagnosisStatus",
+            "sms:displayName": "TRUE",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -13833,10 +13793,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NotHispanicorlatinoEthnicity",
+            "@id": "bts:NotHispanicorlatino",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "NotHispanicorlatinoEthnicity",
+            "rdfs:label": "NotHispanicorlatino",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -13845,7 +13805,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Not Hispanic or latinoEthnicity",
+            "sms:displayName": "Not Hispanic or latino",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -15244,23 +15204,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:TRUE",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "TRUE",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "TRUE",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:TargetedAbsoluteQuantitation",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -15516,10 +15459,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UnknownNotcollected",
+            "@id": "bts:Unknown,Notcollected",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "UnknownNotcollected",
+            "rdfs:label": "Unknown,Notcollected",
             "rdfs:subClassOf": [
                 {
                     "@id": "schema:Thing"
@@ -15528,7 +15471,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "UnknownNot collected",
+            "sms:displayName": "Unknown, Not collected",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -21753,7 +21696,7 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:HispanicorlatinoEthnicity"
+                "@id": "bts:Hispanicorlatino"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -21768,7 +21711,7 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:TRUEDiagnosisStatus"
+                "@id": "bts:TRUE"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -24873,7 +24816,7 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:NotHispanicorlatinoEthnicity"
+                "@id": "bts:NotHispanicorlatino"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -26118,21 +26061,6 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:TRUE"
-            },
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "validValue",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:validValue",
-            "@type": "rdf:Property",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "validValue",
-            "schema:domainIncludes": {
                 "@id": "bts:TargetedAbsoluteQuantitation"
             },
             "schema:isPartOf": {
@@ -26358,7 +26286,7 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "validValue",
             "schema:domainIncludes": {
-                "@id": "bts:UnknownNotcollected"
+                "@id": "bts:Unknown,Notcollected"
             },
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
@@ -28005,6 +27933,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "2",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:3",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "3",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ConsentGroupID"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "3",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
