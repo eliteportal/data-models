@@ -1,29 +1,24 @@
 # Do not change the 'definitions' section unless you know what you're doing
 definitions:
   synapse_config: ".synapseConfig"
-  creds_path: "credentials.json"
-  token_pickle: "token.pickle"
   service_acct_creds: "schematic_service_account_creds.json"
 
 synapse:
-  master_fileview: 'syn23643253'
-  manifest_folder: 'manifests'
-  manifest_filename: 'synapse_storage_manifest.csv'
-  token_creds: 'syn23643259'
+  master_fileview: 'syn52168036'
+  manifest_folder: './manifests'
+  manifest_basename: 'EL_manifest_' 
   service_acct_creds: 'syn25171627'
 
 manifest:
   # if making many manifests, just include name prefix
-  title: 'EL_'
+  title: 'EL_manifests_'
   # to make all manifests enter only 'all manifests'
   data_type: 
     - 'all manifests'
-    # - 'Biospecimen'
-    # - 'Patient'
 
 model:
   input:
-    location: 'tests/data/example.model.jsonld'
+    location: './EL_data_model_v3.jsonld'
     file_type: 'local'
 
 style:

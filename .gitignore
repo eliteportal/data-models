@@ -7,3 +7,5 @@
 # Allowed
 !**/old_models/*.csv
 !**/models/*.csv
+!**/EL_data_model_v3.csv
+!**/EL.data.model.csv
