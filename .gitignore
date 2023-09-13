@@ -2,6 +2,7 @@
 **/*.jsonld
 **/*.csv
 **/*.xlsx
+**/*.code-workspace
 
 # Allowed
 !**/old_models/*.csv
