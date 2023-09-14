@@ -4,16 +4,16 @@ set -e
 
 MANIFEST='Biospecimenhuman'
 
-schematic schema convert C:/Users/nlee/Documents/Projects/ELITE-DCC/ELITE-data-models/models/EL_data_model_v3.csv \
-  --output_jsonld C:/Users/nlee/Documents/Projects/ELITE-DCC/ELITE-data-models/models/EL_data_model_v3.jsonld;
+schematic schema convert ./EL.data.model.csv \
+  --output_jsonld ./EL.data.model.jsonld
 
 # !echo $MANIFEST":" >> manifest_generation_results.txt
-RESULTS=$(schematic manifest --config C:/Users/nlee/Documents/Projects/schematic/schematic/config.yml \
+RESULTS=$(schematic manifest --config ./config.yml \
   get -dt $MANIFEST \
-  --output_csv C:/Users/nlee/Documents/Projects/ELITE-DCC/ELITE-data-models/manifests/$MANIFEST.csv \
+  --output_csv ./manifests/$MANIFEST.csv \
   --title EL_Manifest_$MANIFEST \
   --sheet_url)
 
 echo $RESULTS
 
-echo $MANIFEST ": " $RESULTS >> C:/Users/nlee/Documents/Projects/ELITE-DCC/notebooks/manifest_generation_results.txt
+echo $MANIFEST ": " $RESULTS >>./_data/manifest_generation_results.txt

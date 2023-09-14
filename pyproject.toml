@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "elite-data-models"
+version = "0.1.0"
+description = ""
+authors = ["Nicholas Lee <nicholas.lee@sagebase.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9.0,<3.11"
+pyyaml = "^6.0.1"
+pandas = ">=1.3.1,<2.0.0"
+numpy = "^1.25.2"
+schematicpy = "^23.9.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.2"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

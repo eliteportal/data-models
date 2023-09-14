@@ -1,0 +1,6 @@
+file_names:
+  csv_model: EL.data.model.csv
+  json_model: EL.data.model.jsonld
+paths:
+  root: .
+  schematic: ./config.yml
