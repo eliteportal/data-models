@@ -19,3 +19,6 @@ Software packages installed
 
 After cloning the repository, run the following command:
 ```poetry install```
+
+# Create a new data model
+Run `scripts/convert_csv_to_json.py`
