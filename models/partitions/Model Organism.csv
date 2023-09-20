@@ -1,0 +1,4 @@
+Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type,Ontology
+Bird,,,,,False,ValidValue,,,,Model Organism,,
+Human,,,,,False,ValidValue,,,,Model Organism,,
+Rodent,,,,,False,ValidValue,,,,Model Organism,,
