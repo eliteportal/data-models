@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # When the main branch is updated, trigger a workflow in sage-bionetworks/data_curator_config
-# to generate templates from the data modell in this repo.
+# to generate templates from the data model in this repo.
 #
 # You need to generate a secret in your github repo "PAT_GITHUB" containing
 # a personal access token with repo scope. The default secrets.GITHUB_TOKEN
@@ -21,9 +21,9 @@ on:
 
 # Edit these variables for your data model
 env:
-  DATA_MODEL: https://raw.githubusercontent.com/Sage-Bionetworks/data-models/main/example.model.jsonld
+  DATA_MODEL: https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld
   # Can be NULL to generate templates for all schemas. Or a space-delimited string of schemas
-  DATA_TYPES: "Biospecimen BulkRNA-seqAssay Patient"
+  DATA_TYPES: 
   COMMUNITY_DIR: demo
 
 concurrency:
