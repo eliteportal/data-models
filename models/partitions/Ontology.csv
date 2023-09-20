@@ -1,0 +1,3 @@
+Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type,Ontology
+HPO,,,,,False,ValidValue,,,,Ontology,,
+Human Reference Atlas values (not listed for purposes of this RFC),,,,,False,ValidValue,,,,Ontology,,
