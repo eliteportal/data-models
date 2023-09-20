@@ -12,12 +12,15 @@ __description__ = "Script for turning the csv model into a jsonld model. WARNING
 
 import yaml
 import os
+import pathlib
 
 
 def main():
     """Main entry point of the app"""
 
-    with open("./local_configs/notebook_config.yaml", "r") as f:
+    with open(
+        pathlib.Path("dev/local_configs/notebook_config.yaml").resolve(), "r"
+    ) as f:
         config = yaml.safe_load(f)
 
     # paths to import files
