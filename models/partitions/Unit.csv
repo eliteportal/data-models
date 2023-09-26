@@ -1,47 +1,47 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type,Ontology
-AU/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-DK units/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-Days,,,,,False,ValidValue,,,,Unit,NUMERIC,
-Hours,,,,,False,ValidValue,,,,Unit,NUMERIC,
-IU,,,,,False,ValidValue,,,,Unit,NUMERIC,
-IU/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-M,Molar,,,,False,ValidValue,,,,Unit,NUMERIC,
-Months,,,,,False,ValidValue,,,,Unit,NUMERIC,
-bpg/dl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-g/dl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-g/l,,,,,False,ValidValue,,,,Unit,NUMERIC,
-gm,,,,,False,ValidValue,,,,Unit,NUMERIC,
-iu/l,,,,,False,ValidValue,,,,Unit,NUMERIC,
-kg,,,,,False,ValidValue,,,,Unit,NUMERIC,
-l,,,,,False,ValidValue,,,,Unit,NUMERIC,
-mM,,,,,False,ValidValue,,,,Unit,NUMERIC,
-mg,,,,,False,ValidValue,,,,Unit,NUMERIC,
-mg/dl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-mg/l,,,,,False,ValidValue,,,,Unit,NUMERIC,
-mg/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-miu/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-nM,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ng,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ng/dl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ng/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ng/nl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ng/ul,,,,,False,ValidValue,,,,Unit,NUMERIC,
-nl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pM,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pg,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pg/mg creatinine,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pg/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pg/nl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pg/ul,,,,,False,ValidValue,,,,Unit,NUMERIC,
-pl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-uM,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ug,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ug/dl,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ug/l,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ug/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ug/ul,,,,,False,ValidValue,,,,Unit,NUMERIC,
-uiu/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
-ul,,,,,False,ValidValue,,,,Unit,NUMERIC,
-umol/l,,,,,False,ValidValue,,,,Unit,NUMERIC,
-units/ml,,,,,False,ValidValue,,,,Unit,NUMERIC,
+Attribute,Description,Valid Values,Required,DependsOn,DependsOn Component,Properties,Validation Rules,UsedIn,Parent,Source,Type,Ontology,multivalue,Module
+AU/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+DK units/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+Days,,,False,,,ValidValue,,,ValidValue,Unspecified,NUMERIC,Unspecified,,Unit
+Hours,,,False,,,ValidValue,,,ValidValue,Unspecified,NUMERIC,Unspecified,,Unit
+IU,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+IU/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+M,"Measurement unit,Molar",,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+Months,,,False,,,ValidValue,,,ValidValue,Unspecified,NUMERIC,Unspecified,,Unit
+bpg/dl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+g/dl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+g/l,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+gm,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+iu/l,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+kg,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+l,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+mM,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+mg,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+mg/dl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+mg/l,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+mg/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+miu/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+nM,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ng,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ng/dl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ng/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ng/nl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ng/ul,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+nl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pM,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pg,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pg/mg creatinine,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pg/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pg/nl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pg/ul,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+pl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+uM,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ug,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ug/dl,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ug/l,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ug/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ug/ul,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+uiu/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+ul,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+umol/l,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit
+units/ml,Measurement unit,,False,,,ValidValue,,,MeasurementUnit,Unspecified,"STRING,NUMERIC",Unspecified,False,Unit

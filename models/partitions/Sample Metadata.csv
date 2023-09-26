@@ -1,23 +1,23 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type,Ontology
-Amniotic Fluid,,,,,False,ValidValue,,,,Sample Metadata,,
-B cell,,,,,False,ValidValue,,,,Sample Metadata,,
-Basophils,,,,,False,ValidValue,,,,Sample Metadata,,
-Epithelium,,,,,False,ValidValue,,,,Sample Metadata,,
-Feces,,,,,False,ValidValue,,,,Sample Metadata,,
-Fibroblast,,,,,False,ValidValue,,,,Sample Metadata,,
-Ileum,,,,,False,ValidValue,,,,Sample Metadata,,
-Red Blood Cell,,,,,False,ValidValue,,,,Sample Metadata,,
-Salivary Glands,,,,,False,ValidValue,,,,Sample Metadata,,
-Skin of body,,,,,False,ValidValue,,,,Sample Metadata,,
-Small intestine,,,,,False,ValidValue,,,,Sample Metadata,,
-Spleen,,,,,False,ValidValue,,,,Sample Metadata,,
-Stomach,,,,,False,ValidValue,,,,Sample Metadata,,
-Thymus,,,,,False,ValidValue,,,,Sample Metadata,,
-Trachea,,,,,False,ValidValue,,,,Sample Metadata,,
-Tumor Tissue,,,,,False,ValidValue,,,,Sample Metadata,,
-Urinary bladder,,,,,False,ValidValue,,,,Sample Metadata,,
-Urine,,,,,False,ValidValue,,,,Sample Metadata,,
-Vagina,,,,,False,ValidValue,,,,Sample Metadata,,
-Whole blood,,,,,False,ValidValue,,,,Sample Metadata,,
-blood,,,,,False,ValidValue,,,,Sample Metadata,,
-brain,,,,,False,ValidValue,,,,Sample Metadata,,
+Attribute,Description,Valid Values,Required,DependsOn,DependsOn Component,Properties,Validation Rules,UsedIn,Parent,Source,Type,Ontology,multivalue,Module
+Amniotic Fluid,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+B cell,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Basophils,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Epithelium,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Feces,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Fibroblast,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Ileum,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Red Blood Cell,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Salivary Glands,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Skin of body,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Small intestine,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Spleen,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Stomach,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Thymus,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Trachea,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Tumor Tissue,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Urinary bladder,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Urine,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Vagina,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+Whole blood,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+blood,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
+brain,,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Sample Metadata
