@@ -41,8 +41,7 @@ def load_and_backup_dm(file_path: str, output_dir: str):
     """Create backup of data model with time stamp.
 
     Args:
-        file_path (FILE): _description_
-
+        file_path (string):  path to CSV
     Returns:
         object: Data frame object
     """
@@ -50,7 +49,7 @@ def load_and_backup_dm(file_path: str, output_dir: str):
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
 
-    dm = pd.read_csv(file_path, index_col=False)
+    dm = pd.read_csv(file_path, index_col=False).iloc[:, 1:]
 
     # write out old data model before changes
     file_path = pathlib.Path(file_path).stem + "-" + get_time() + ".csv"

@@ -5161,6 +5161,23 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:U19AG063893"
+                },
+                {
+                    "@id": "bts:U24AG051129"
+                },
+                {
+                    "@id": "bts:U19AG023122"
+                },
+                {
+                    "@id": "bts:UH2AG064704"
+                },
+                {
+                    "@id": "bts:UH2AG064706"
+                }
+            ],
             "sms:displayName": "grant",
             "sms:required": "sms:false",
             "sms:validationRules": [
@@ -30320,6 +30337,91 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "zip",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:U19AG063893",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "U19AG063893",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Grant"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "U19AG063893",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:U24AG051129",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "U24AG051129",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Grant"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "U24AG051129",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:U19AG023122",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "U19AG023122",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Grant"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "U19AG023122",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:UH2AG064704",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "UH2AG064704",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Grant"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "UH2AG064704",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:UH2AG064706",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "UH2AG064706",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Grant"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "UH2AG064706",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
