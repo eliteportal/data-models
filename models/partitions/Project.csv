@@ -1,5 +1,5 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type,Ontology
-ILO,Project name,,,,False,ValidValue,,,,Project,,
-LC,Project name,,,,False,ValidValue,,,,Project,,
-LG,Project name,,,,False,ValidValue,,,,Project,,
-LLFS,Project name,,,,False,ValidValue,,,,Project,,
+Attribute,Description,Valid Values,Required,DependsOn,DependsOn Component,Properties,Validation Rules,UsedIn,Parent,Source,Type,Ontology,multivalue,Module
+ILO,Project name,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Project
+LC,Project name,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Project
+LG,Project name,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Project
+LLFS,Project name,,False,,,ValidValue,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Project
