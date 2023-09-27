@@ -1,9 +1,0 @@
-Attribute,Description,Valid Values,Required,DependsOn,DependsOn Component,Properties,Validation Rules,UsedIn,Parent,Source,Type,Ontology,multivalue,Module
-CCF-BSO values,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
-Genbank common names,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
-HPO,,,False,,,Unspecified,,,ValidValue,Unspecified,UNSPECIFIED,Unspecified,,Ontology
-Human Reference Atlas values,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
-MAXO codes or labels,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
-NCBI taxonomy values,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
-NCI values,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
-World Bank country codes,External ontology used for populating values,,False,,,Unspecified,,,Ontology,Unspecified,UNSPECIFIED,Self,,Ontology
