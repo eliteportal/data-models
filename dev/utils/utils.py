@@ -59,3 +59,18 @@ def load_and_backup_dm(file_path: str, output_dir: str):
     dm.to_csv(output_path, index=False)
 
     return dm
+
+def clean_list(string):
+    """Takes a list represented as a string and returns only unique values found
+
+    Args:
+        string (str): list represented as string
+
+    Returns:
+        string: list as string of unique values
+    """
+
+    new_list = string.split(",")
+    new_list = [n.strip() for n in new_list if n != "nan"]
+    new_list = ",".join(sorted(list(np.unique(new_list)))).strip(",")
+    return new_list
