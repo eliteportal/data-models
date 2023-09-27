@@ -1,5 +1,3 @@
-
-
 # RFC to data model
 
 

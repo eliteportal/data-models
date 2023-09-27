@@ -16,15 +16,15 @@ def join_strings(string):
     # Clean list columns into single string
     try:
         return ",".join(string)
-    except:
+    except Exception:
         return ""
 
 
-def sort_lists(l):
+def sort_lists(list):
     try:
-        return ",".join(sorted(np.unique(l)))
-    except:
-        return l
+        return ",".join(sorted(np.unique(list)))
+    except Exception:
+        return list
 
 
 # parse url into api call
@@ -75,80 +75,6 @@ def get_response(u, params=None):
         return response
 
 
-validation_coder = {
-    "number": "regex search ([0-9]+\.[0-9]*.?)|([0-9]+)",
-    "integer": "regex search ([0-9]+)",
-    "string": "",
-}
-
-# # Pull in current data model
-dm = utils.load_and_backup_dm("../EL.data.model.csv", output_dir="../backups")
-
-# these ontologies are too large
-indexes = dm[
-    dm["Source"].str.contains(
-        "https://www.ebi.ac.uk/ols4/ontologies/mondo|https://www.ebi.ac.uk/ols4/ontologies/maxo|https://www.ebi.ac.uk/ols4/ontologies/hp",
-        regex=True,
-        na=False,
-    )
-].index.tolist()
-
-dm.loc[indexes, "Valid Values"] = np.nan
-dm.loc[indexes, "Description"] = (
-    dm.loc[indexes, "Description"] + " Please see the source ontology."
-)
-dm.loc[indexes, "Validation Rules"] = "str"
-
-dm.loc[dm["Properties"] == "Valid Value", "Validation Rules"] = np.nan
-
-dm["Required"] = dm["Required"].replace("False,True", "True")
-
-dm["Source"] = dm["Source"].replace(
-    "https://ontobee.org/ontology/NCITiri=http://purl.obolibrary.org/obo/NCIT_C62690https://www.ebi.ac.uk/ols4/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1045",
-    "https://ontobee.org/ontology/NCITiri=http://purl.obolibrary.org/obo/NCIT_C62690, https://www.ebi.ac.uk/ols4/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1045",
-)
-
-dm = dm.replace("-The%20life%20stage", "", regex=True)
-
-# Attributes with ontologies
-dm_test = dm[
-    (
-        dm["Source"]
-        .fillna("")
-        .str.contains("http", regex=True, flags=re.IGNORECASE, na=False)
-    )
-    & (dm["Source"].str.contains("purl|ebi", regex=True, na=False))
-    & (
-        dm["Valid Values"].str.contains(
-            "not", flags=re.IGNORECASE, regex=True, na=False
-        )
-    )
-].reset_index(drop=True)
-
-dm_test["Source"] = dm_test["Source"].str.replace("ols", "ols4", regex=True)
-dm_test["Source"] = dm_test["Source"].str.replace("terms", "terms?", regex=True)
-
-dm_test["Valid Values"] = dm_test["Valid Values"].str.split(",")
-
-with pd.option_context("display.max_colwidth", None):
-    display(dm_test)
-
-# # OLS
-#
-# https://www.ebi.ac.uk/ols4/help
-# replace ols with ols4
-#
-
-# to use for searching ols4 for terms
-base_url = "http://www.ebi.ac.uk/ols4/api/terms"
-
-# ## Functions
-#
-
-# purl case
-#
-
-
 def simplify_response(response):
     """Get the terms from the response. Helps to simplify parsing the json"""
 
@@ -183,7 +109,7 @@ def find_defining_ontology(terms):
     """look for defining ontology"""
     if len(terms) > 1:
         for t in terms:
-            if t["is_defining_ontology"] == True:
+            if t["is_defining_ontology"]:
                 return t
             else:
                 pass
@@ -256,32 +182,90 @@ def purl_main(iri):
     return valid_values
 
 
-# # Start extraction
-#
+# to use for searching ols4 for terms
+base_url = "http://www.ebi.ac.uk/ols4/api/terms"
 
-with pd.option_context("display.max_colwidth", 0):
-    display(dm_test.iloc[4, :])
+validation_coder = {
+    "number": "regex search ([0-9]+\.[0-9]*.?)|([0-9]+)",
+    "integer": "regex search ([0-9]+)",
+    "string": "",
+}
+
+other_vvs = ["Other", "Unknown", "Not Available", "Not Given"]
+
+# # Pull in current data model
+dm = utils.load_and_backup_dm("../EL.data.model.csv", output_dir="../backups")
+
+# these ontologies are too large
+indexes = dm[
+    dm["Source"].str.contains(
+        "https://www.ebi.ac.uk/ols4/ontologies/mondo|https://www.ebi.ac.uk/ols4/ontologies/maxo|https://www.ebi.ac.uk/ols4/ontologies/hp",
+        regex=True,
+        na=False,
+    )
+].index.tolist()
+
+dm.loc[indexes, "Valid Values"] = np.nan
+dm.loc[indexes, "Description"] = (
+    dm.loc[indexes, "Description"] + " Please see the source ontology."
+)
+dm.loc[indexes, "Validation Rules"] = "str"
+
+dm.loc[dm["Properties"] == "Valid Value", "Validation Rules"] = np.nan
+
+dm["Required"] = dm["Required"].replace("False,True", "True")
+
+dm["Source"] = dm["Source"].replace(
+    "https://ontobee.org/ontology/NCITiri=http://purl.obolibrary.org/obo/NCIT_C62690https://www.ebi.ac.uk/ols4/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1045",
+    "https://ontobee.org/ontology/NCITiri=http://purl.obolibrary.org/obo/NCIT_C62690, https://www.ebi.ac.uk/ols4/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1045",
+)
+
+dm = dm.replace("-The%20life%20stage", "", regex=True)
+
+# Attributes with ontologies
+dm_test = dm[
+    (
+        dm["Source"]
+        .fillna("")
+        .str.contains("http", regex=True, flags=re.IGNORECASE, na=False)
+    )
+    & (dm["Source"].str.contains("purl|ebi", regex=True, na=False))
+    & (
+        dm["Valid Values"].str.contains(
+            "not", flags=re.IGNORECASE, regex=True, na=False
+        )
+    )
+].reset_index(drop=True)
+
+dm_test["Source"] = dm_test["Source"].str.replace("ols", "ols4", regex=True)
+dm_test["Source"] = dm_test["Source"].str.replace(
+    "terms", "terms?", regex=True)
+
+dm_test["Valid Values"] = dm_test["Valid Values"].str.split(",")
+
+with pd.option_context("display.max_colwidth", None):
+    display(dm_test)
+
+# # OLS
+#
+# https://www.ebi.ac.uk/ols4/help
+# replace ols with ols4
+# Start extraction
 
 # {
 #     # could replace with this link to get higher level terms
 #     "https://www.ebi.ac.uk/ols4/ontologies/maxo": "http://purl.obolibrary.org/obo/MONDO_0700096"
 # }
 
-# dm_test["Source"] = dm_test["Source"].str.replace(
-#     "https://www.ebi.ac.uk/ols4/ontologies/mondo|https://www.ebi.ac.uk/ols4/ontologies/maxo|https://www.ebi.ac.uk/ols4/ontologies/hp",
-#     "LLFS data dictionary",
-#     regex=True,
-# )
-
 dm_test["purl"] = (
     dm_test["Source"]
     .str.split(",")
     .apply(
-        lambda x: sorted(np.unique([y for y in x if bool(re.search("ebi|purl", y))]))
+        lambda x: sorted(
+            np.unique([y for y in x if bool(re.search("ebi|purl", y))]))
     )
 )
 
-other_vvs = ["Other", "Unknown", "Not Available", "Not Given"]
 
 dm.query('Attribute.str.contains("diagnosis")', engine="python")
 
@@ -360,23 +344,18 @@ for i, v in dm_test.iterrows():
         print("-" * 20)
 
 dm_test["Valid Values"] = (
-    dm_test["Valid Values"].apply(lambda x: ",".join(x)).apply(utils.clean_list)
+    dm_test["Valid Values"].apply(
+        lambda x: ",".join(x)).apply(utils.clean_list)
 )
 
-errors
-
+# Update attributes
 no_vvs = ["diagnosis", "extractionMethod", "taxon", "commonName"]
 dm_test.loc[dm_test["Attribute"].isin(no_vvs), "Valid Values"] = np.nan
-
-# dm_test['Required'] = dm_test['Required'].replace('False,True', 'True')
 
 # drop extra columns
 dm_test = dm_test.drop(columns=["purl", "extraction_status"])
 
 # join new valid values df with current dm
-dm_test
-
-# dm.loc[dm["Attribute"] == dm_test.loc[0, "Attribute"],] =
 replacements = dm_test.set_index("Attribute").to_dict()
 
 for k, v in replacements.items():
@@ -387,16 +366,16 @@ dm.loc[dm["Attribute"].isin(dm_test["Attribute"])]
 
 dm = dm.replace("-The%20life%20stage", "", regex=True)
 
-dm[["Source", "Ontology"]] = (
-    dm[["Source", "Ontology"]].fillna("").applymap(utils.clean_list).replace("", np.nan)
+dm[["Valid Values", "Source", "Ontology"]] = (
+    dm[["Valid Values", "Source", "Ontology"]]
+    .fillna("")
+    .applymap(utils.clean_list)
+    .replace("", np.nan)
 )
 
 # # Update data model
-#
 
-sum(dm.duplicated(subset="Attribute"))
-
-dm.reset_index(drop=True, inplace=True)
+print("Duplicates: {}".format(sum(dm.duplicated(subset="Attribute"))))
 
 # write out new data model
 dm.to_csv("../EL.data.model.csv")

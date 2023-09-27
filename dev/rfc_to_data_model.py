@@ -1122,7 +1122,7 @@ dm_new = pd.concat([dm2, df_new_attrs])
 
 dm_new.drop(columns="columnType", inplace=True)
 
-print(f"Duplicates: {sum(dm_new.duplicated(subset="Attribute"))}")
+print("Duplicates: {}".format(sum(dm_new.duplicated(subset="Attribute"))))
 # dm_new[dm_new.duplicated(subset="Attribute", keep=False)]
 
 dm_new.sample(5)

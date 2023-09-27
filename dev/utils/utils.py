@@ -1,11 +1,10 @@
 """
 Name: utils.py
 definition: Useful functions
-parameters: 
 Contributors: Nicholas Lee
 
-Notes: 
-- 
+Notes:
+- Using for general work
 """
 
 import datetime
@@ -23,7 +22,7 @@ def display_full_table(df: object):
         df (dataFrame): _description_
     """
     with pd.option_context("display.max_colwidth", None):
-        display(df)
+        print(df)
 
 
 def get_time():
@@ -59,6 +58,7 @@ def load_and_backup_dm(file_path: str, output_dir: str):
     dm.to_csv(output_path, index=False)
 
     return dm
+
 
 def clean_list(string):
     """Takes a list represented as a string and returns only unique values found
