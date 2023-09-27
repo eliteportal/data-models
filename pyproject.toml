@@ -18,6 +18,8 @@ thefuzz = "^0.20.0"
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
 mypy = "^1.5.1"
+pylint = "^2.17.6"
+flake8 = "^6.1.0"
 
 [build-system]
 requires = ["poetry-core"]

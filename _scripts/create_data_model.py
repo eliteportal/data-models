@@ -1,7 +1,7 @@
 import pandas as pd
 import yaml
 
-with open(r"C:/Users/nlee/Documents/Projects/ELITE-DCC/ELITE-data-models/config.yaml", 'r') as f:
+with open(r"../config.yaml", 'r') as f:
     config = yaml.safe_load(f)
 
 # paths to import files
@@ -25,13 +25,9 @@ os.system(f"schematic init --config {config['paths']['schematic']}")
 os.system(f"schematic schema convert {config['names']['csv_model']} --output_json {config['names']['json_model']}")
 
 # Get an empty manifest as a CSV using model
-# 
-
 schematic manifest --config config['paths']['schematic'] get
 
 # Validate Manifest
-# 
-
 manifest_path = "C:/Users/nlee/Documents/Projects/schematic/schematic/tests/data/mock_manifests/example_biospecimen_test.csv"
 schematic model --config config['paths']['schematic'] /
     validate --manifest_path  manifest_path/
