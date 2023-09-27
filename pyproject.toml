@@ -13,6 +13,7 @@ numpy = "^1.25.2"
 schematicpy = "^23.9.1"
 types-pyyaml = "^6.0.12.11"
 thefuzz = "^0.20.0"
+requests = "^2.31.0"
 
 
 [tool.poetry.group.dev.dependencies]
