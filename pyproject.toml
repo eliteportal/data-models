@@ -14,6 +14,7 @@ schematicpy = "^23.9.1"
 types-pyyaml = "^6.0.12.11"
 thefuzz = "^0.20.0"
 requests = "^2.31.0"
+toolbox = {git = "git@github.com:nlee-sage/toolbox.git"}
 
 
 [tool.poetry.group.dev.dependencies]

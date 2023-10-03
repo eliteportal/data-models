@@ -238,8 +238,7 @@ dm_test = dm[
 ].reset_index(drop=True)
 
 dm_test["Source"] = dm_test["Source"].str.replace("ols", "ols4", regex=True)
-dm_test["Source"] = dm_test["Source"].str.replace(
-    "terms", "terms?", regex=True)
+dm_test["Source"] = dm_test["Source"].str.replace("terms", "terms?", regex=True)
 
 dm_test["Valid Values"] = dm_test["Valid Values"].str.split(",")
 
@@ -261,8 +260,7 @@ dm_test["purl"] = (
     dm_test["Source"]
     .str.split(",")
     .apply(
-        lambda x: sorted(
-            np.unique([y for y in x if bool(re.search("ebi|purl", y))]))
+        lambda x: sorted(np.unique([y for y in x if bool(re.search("ebi|purl", y))]))
     )
 )
 
@@ -344,8 +342,7 @@ for i, v in dm_test.iterrows():
         print("-" * 20)
 
 dm_test["Valid Values"] = (
-    dm_test["Valid Values"].apply(
-        lambda x: ",".join(x)).apply(utils.clean_list)
+    dm_test["Valid Values"].apply(lambda x: ",".join(x)).apply(utils.clean_list)
 )
 
 # Update attributes
