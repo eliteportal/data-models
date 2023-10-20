@@ -23,3 +23,22 @@ After cloning the repository, run the following command:
 # Create a New JSONLD data model
 
 Run `scripts/convert_csv_to_json.py`
+
+# Updates
+
+## Oct 20th, 2023
+Attribute renaming to harmonize with current backend and ADKP
+- consortium -> program
+- studyCode -> project
+- study -> studyKey
+
+New Terms
+- 'studyFocs'
+    - valid values are 'Longevity' currently. 
+
+Attribute Changes: 
+- Remove valid values from speciesName
+
+File Annotation Updates
+- change "species" to "speciesGroup"
+
