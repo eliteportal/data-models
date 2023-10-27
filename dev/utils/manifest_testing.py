@@ -1,4 +1,7 @@
 import lorem
+import random
+import string
+import numpy as np
 
 
 def valid_values_to_list(df, attribute):

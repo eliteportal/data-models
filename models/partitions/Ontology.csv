@@ -1,3 +1,0 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type,Ontology
-HPO,,,,,False,ValidValue,,,,Ontology,,
-Human Reference Atlas,,,,,False,ValidValue,,,,Ontology,,
