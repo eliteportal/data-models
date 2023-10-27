@@ -8,18 +8,28 @@ This repository contains 3 major files:
 
 3. `config.yml`: The schematic-compatible configuration file, which allows users to specify values for application-specific keys (e.g., path to Synapse configuration file) and project-specific keys (e.g., Synapse fileview for community project). A description of what the various keys in this file represent can be found in the [Fill in Configuration File(s)](https://sage-schematic.readthedocs.io/en/develop/README.html#fill-in-configuration-file-s) section of the schematic [docs](https://sage-schematic.readthedocs.io/en/develop/index.html).
 
-# Requirements
+## Requirements
 
 Software packages installed
 
 - Poetry - [See installation guide here](https://python-poetry.org/docs/)
 - pyenv - [See guide here](https://github.com/pyenv/pyenv)
 
-## To setup environment
+### To setup environment
 
 After cloning the repository, run the following command:
 ```poetry install```
 
-# Create a New JSONLD data model
+## Processes
+
+### Create a New JSONLD data model
 
 Run `scripts/convert_csv_to_json.py`
+
+### Contribute to Data Model
+
+Generally, checkout a new branch for the repository. Create new terms/annotations and create a pull request to merge new changes.
+
+#### Adding new terms
+
+- Find the appropriate `model/partition/*.csv` that would fit the new term.
