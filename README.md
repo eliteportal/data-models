@@ -26,10 +26,21 @@ After cloning the repository, run the following command:
 
 Run `scripts/convert_csv_to_json.py`
 
-### Contribute to Data Model
+# Updates
 
-Generally, checkout a new branch for the repository. Create new terms/annotations and create a pull request to merge new changes.
+## Oct 20th, 2023
+Attribute renaming to harmonize with current backend and ADKP
+- consortium -> program
+- studyCode -> project
+- study -> studyKey
 
-#### Adding new terms
+New Terms
+- 'studyFocs'
+    - valid values are 'Longevity' currently. 
 
-- Find the appropriate `model/partition/*.csv` that would fit the new term.
+Attribute Changes: 
+- Remove valid values from speciesName
+
+File Annotation Updates
+- change "species" to "speciesGroup"
+
