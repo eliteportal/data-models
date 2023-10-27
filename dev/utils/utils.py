@@ -22,7 +22,7 @@ def display_full_table(df: object):
         df (dataFrame): _description_
     """
     with pd.option_context("display.max_colwidth", None):
-        print(df)
+        display(df)
 
 
 def get_time():
