@@ -2001,6 +2001,23 @@
             }
         },
         {
+            "@id": "bts:Component",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Used to generate manifests",
+            "rdfs:label": "Component",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Component",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:10x",
             "@type": "rdfs:Class",
             "rdfs:comment": "Method by which library was prepared",
@@ -23223,6 +23240,9 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
+                    "@id": "bts:Component"
+                },
+                {
                     "@id": "bts:CellType"
                 },
                 {
@@ -23283,6 +23303,9 @@
             "sms:displayName": "BiospecimennonHuman",
             "sms:required": "sms:true",
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:Assay"
                 },
@@ -23363,6 +23386,9 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
+                    "@id": "bts:Component"
+                },
+                {
                     "@id": "bts:Age"
                 },
                 {
@@ -23427,6 +23453,9 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
+                    "@id": "bts:Component"
+                },
+                {
                     "@id": "bts:CaptivityDuration"
                 },
                 {
@@ -23481,6 +23510,9 @@
             "sms:displayName": "MetabolomicsHuman",
             "sms:required": "sms:true",
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:AcquisitionBatchID"
                 },
@@ -23699,8 +23731,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Microbiome",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:DnaBatchID"
                 },
@@ -23817,8 +23860,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "RNAseq",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:IsStranded"
                 },
@@ -23950,8 +24004,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "WholeGenomeSequencing",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:IsStranded"
                 },
@@ -24065,8 +24130,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "bsSeq",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:ConversionRatio"
                 },
@@ -24210,8 +24286,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "genotyping",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:MeasurementTechnique"
                 },
@@ -24295,8 +24382,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "proteomics",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:AcquisitionMode"
                 },
@@ -24440,8 +24538,19 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "scRNAseq",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
+                }
+            ],
             "sms:requiresDependency": [
+                {
+                    "@id": "bts:Component"
+                },
                 {
                     "@id": "bts:IsStranded"
                 },
