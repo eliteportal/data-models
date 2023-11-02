@@ -2,7 +2,7 @@
 
 set -e
 
-MANIFEST='Biospecimenhuman'
+MANIFEST='IndividualHuman'
 
 schematic schema convert ./EL.data.model.csv \
   --output_jsonld ./EL.data.model.jsonld
