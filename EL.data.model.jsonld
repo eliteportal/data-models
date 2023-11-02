@@ -18237,7 +18237,7 @@
                     "@id": "bts:Multiracial"
                 },
                 {
-                    "@id": "bts:NativeHawaiianorOtherRacePacificIslander"
+                    "@id": "bts:NativeHawaiianorOtherPacificIslander"
                 },
                 {
                     "@id": "bts:Notapplicable"
@@ -18246,7 +18246,7 @@
                     "@id": "bts:Notcollected"
                 },
                 {
-                    "@id": "bts:OtherRacerace"
+                    "@id": "bts:Otherrace"
                 },
                 {
                     "@id": "bts:Prefernottoanswer"
@@ -18260,7 +18260,9 @@
             ],
             "sms:displayName": "race",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "list like"
+            ]
         },
         {
             "@id": "bts:ReadLength",
@@ -23240,16 +23242,16 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:IndividualID"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:CellType"
                 },
                 {
                     "@id": "bts:FastingState"
-                },
-                {
-                    "@id": "bts:IndividualID"
                 },
                 {
                     "@id": "bts:IsPostMortem"
@@ -23267,9 +23269,6 @@
                     "@id": "bts:SpecimenAge"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:SpecimenSource"
                 },
                 {
@@ -23283,6 +23282,9 @@
                 },
                 {
                     "@id": "bts:TissueWeight"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -23304,7 +23306,7 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:Assay"
@@ -23346,9 +23348,6 @@
                     "@id": "bts:SpecimenAge"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:SpecimenIdSource"
                 },
                 {
@@ -23365,6 +23364,9 @@
                 },
                 {
                     "@id": "bts:TissueWeight"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -23382,11 +23384,11 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "IndividualHuman",
+            "sms:displayName": "Individual Human",
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:IndividualID"
                 },
                 {
                     "@id": "bts:Age"
@@ -23432,6 +23434,9 @@
                 },
                 {
                     "@id": "bts:VisitCode"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -23449,12 +23454,9 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "IndividualnonHuman",
+            "sms:displayName": "Individual nonHuman",
             "sms:required": "sms:true",
             "sms:requiresDependency": [
-                {
-                    "@id": "bts:Component"
-                },
                 {
                     "@id": "bts:CaptivityDuration"
                 },
@@ -23490,6 +23492,9 @@
                 },
                 {
                     "@id": "bts:Taxon"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -23511,7 +23516,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:AcquisitionBatchID"
@@ -23563,9 +23571,6 @@
                 },
                 {
                     "@id": "bts:ExtractionMethod"
-                },
-                {
-                    "@id": "bts:F"
                 },
                 {
                     "@id": "bts:GasFlowTemperature"
@@ -23700,9 +23705,6 @@
                     "@id": "bts:SpecifyVacuumPressueUnits"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:SpectrometerFrequency"
                 },
                 {
@@ -23713,6 +23715,9 @@
                 },
                 {
                     "@id": "bts:VacuumPressureUnit"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -23742,7 +23747,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:DnaBatchID"
@@ -23835,13 +23843,13 @@
                     "@id": "bts:SpecifySequencingBatchSizeUnit"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
                     "@id": "bts:TotalReads"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -23871,7 +23879,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:IsStranded"
@@ -23973,9 +23984,6 @@
                     "@id": "bts:SpecifyTranscriptType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
@@ -23986,6 +23994,9 @@
                 },
                 {
                     "@id": "bts:ValueReported"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -24015,7 +24026,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:IsStranded"
@@ -24099,9 +24113,6 @@
                     "@id": "bts:SpecifyTranscriptType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
@@ -24112,6 +24123,9 @@
                 },
                 {
                     "@id": "bts:ValueReported"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -24141,7 +24155,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:ConversionRatio"
@@ -24268,6 +24285,9 @@
                 },
                 {
                     "@id": "bts:TotalReads"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -24297,7 +24317,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:MeasurementTechnique"
@@ -24333,9 +24356,6 @@
                     "@id": "bts:SpecifySampleType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TreatmentAmountUnit"
                 },
                 {
@@ -24360,10 +24380,13 @@
                     "@id": "bts:TreatmentTemperatureValue"
                 },
                 {
-                    "@id": "bts:UseReagent?"
+                    "@id": "bts:UseReagent"
                 },
                 {
-                    "@id": "bts:UseTreatment?"
+                    "@id": "bts:UseTreatment"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -24393,7 +24416,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:AcquisitionMode"
@@ -24520,6 +24546,9 @@
                 },
                 {
                     "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -24549,7 +24578,10 @@
             ],
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:IsStranded"
@@ -24651,9 +24683,6 @@
                     "@id": "bts:SpecifyTranscriptType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
@@ -24664,6 +24693,9 @@
                 },
                 {
                     "@id": "bts:ValueReported"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -26112,6 +26144,23 @@
                 }
             ],
             "sms:displayName": "resourceType",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Filename",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Name of the file",
+            "rdfs:label": "Filename",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Filename",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -63251,6 +63300,44 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:dataProperty",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "dataProperty",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bts:F"
+                },
+                {
+                    "@id": "bts:I"
+                },
+                {
+                    "@id": "bts:L"
+                },
+                {
+                    "@id": "bts:E"
+                },
+                {
+                    "@id": "bts:N"
+                },
+                {
+                    "@id": "bts:A"
+                },
+                {
+                    "@id": "bts:M"
+                },
+                {
+                    "@id": "bts:E"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "DataProperty",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AFU",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -94735,6 +94822,40 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:NativeHawaiianorOtherPacificIslander",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NativeHawaiianorOtherPacificIslander",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Race"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Native Hawaiian or Other Pacific Islander",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Otherrace",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Otherrace",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Race"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Other race",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:SexatBirth",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -103588,40 +103709,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "measurementTechnique",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UseReagent?",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UseReagent?",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Genotyping"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "useReagent?",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UseTreatment?",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UseTreatment?",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Genotyping"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "useTreatment?",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
