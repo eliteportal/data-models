@@ -1,2 +1,10 @@
-'IndividualHuman:' 
-https://docs.google.com/spreadsheets/d/1cqHaFhwWhCzn0_vX7i_r1FIqq-W_gNpuGabKD_Vibec
+BiospecimenHuman :  https://docs.google.com/spreadsheets/d/1dLeSW-KY6pX-NBiknqBKEsqkwtu4V2EkXmL0ciu5SEk
+BiospecimenHuman :  https://docs.google.com/spreadsheets/d/1WwNb58u7KDmxOUH_OfanngEPvk8IEU5N7u9OmDawVgA
+BiospecimenNonHuman :  https://docs.google.com/spreadsheets/d/1n9hZnZGW5XXqb7jmIhl0ruqiWNN7EkvUljD27tOgGv8
+IndividualnonHuman :  https://docs.google.com/spreadsheets/d/1UqkwLBCGot7AQziOjWuOD7sI1zgnOhUhnrKlLsXrKNg
+WholeGenomeSequencing :  https://docs.google.com/spreadsheets/d/1L0LbXTECGLDEVcrD5X88d5cowX2OgkNHucB7MoGvDoU
+BiospecimenHuman :  https://docs.google.com/spreadsheets/d/1PoIy3YLdPeBF0kiFGBgmYP74sx34sFHDWICl2C3QG6s
+BiospecimenHuman :  https://docs.google.com/spreadsheets/d/1eI7pS7ZlGuiMGXuNMK--dJGlrriNqizBMF1uxCKaQ_E
+IndividualnonHuman :  https://docs.google.com/spreadsheets/d/1GHlCrqKhlyhFTUPl01NjTPLOoBP4-FrTNXKCG6P65tk
+IndividualHuman :  https://docs.google.com/spreadsheets/d/1r0cU9OeZxRPxmVVyzFAxZPCQbnfJBNUASSIJ2QS5Z20
+BiospecimenHuman :  https://docs.google.com/spreadsheets/d/1zWo8nModq1JF53zrtQSL6zqIPLYGGYDRCYwckUpuxsk

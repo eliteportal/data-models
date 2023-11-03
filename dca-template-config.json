@@ -1,0 +1,66 @@
+{
+  "manifest_schemas": [
+    {
+      "display_name": "BiospecimenHuman",
+      "schema_name": "BiospecimenHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "BiospecimenNonHuman",
+      "schema_name": "BiospecimenNonHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "IndividualHuman",
+      "schema_name": "IndividualHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "IndividualnonHuman",
+      "schema_name": "IndividualnonHuman",
+      "type": "record"
+    },
+    {
+      "display_name": "MetabolomicsHuman",
+      "schema_name": "MetabolomicsHuman",
+      "type": "file"
+    },
+    {
+      "display_name": "Microbiome",
+      "schema_name": "Microbiome",
+      "type": "file"
+    },
+    {
+      "display_name": "RNAseq",
+      "schema_name": "RNAseq",
+      "type": "file"
+    },
+    {
+      "display_name": "WholeGenomeSequencing",
+      "schema_name": "WholeGenomeSequencing",
+      "type": "file"
+    },
+    {
+      "display_name": "bsSeq",
+      "schema_name": "bsSeq",
+      "type": "file"
+    },
+    {
+      "display_name": "Genotyping",
+      "schema_name": "genotyping",
+      "type": "file"
+    },
+    {
+      "display_name": "Proteomics",
+      "schema_name": "proteomics",
+      "type": "file"
+    },
+    {
+      "display_name": "scRNAseq",
+      "schema_name": "ScRNAseq",
+      "type": "file"
+    }
+  ],
+  "service_version": "v23.1.1",
+  "schema_version": "v1.3"
+}
