@@ -2,18 +2,15 @@
 
 set -e
 
-MANIFEST='IndividualHuman'
+MANIFEST='BiospecimenHuman'
 
-schematic schema convert ./EL.data.model.csv \
-  --output_jsonld ./EL.data.model.jsonld
+# schematic schema convert ./EL.data.model.csv \
+#   --output_jsonld ./EL.data.model.jsonld
 
-# !echo $MANIFEST":" >> manifest_generation_results.txt
 RESULTS=$(schematic manifest --config ./config.yml \
   get -dt $MANIFEST \
-  --output_csv ./manifests/$MANIFEST.csv \
-  --title EL_Manifest_$MANIFEST \
+  --output_csv ./manifest-templates/EL.Manifest.$MANIFEST.csv \
+  --title EL.Manifest.$MANIFEST \
   --sheet_url)
-
-echo $RESULTS
 
 echo $MANIFEST ": " $RESULTS >>./_data/manifest_generation_results.txt
