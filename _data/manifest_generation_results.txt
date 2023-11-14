@@ -57,3 +57,15 @@ BsSeq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
 Genotyping :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
 Proteomics :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
 ScRNAseq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+Biospecimenhuman :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+BiospecimennonHuman :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+IndividualHuman :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+IndividualnonHuman :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+MetabolomicsHuman :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+Microbiome :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+RNAseq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+WholeGenomeSequencing :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+BsSeq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+Genotyping :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+Proteomics :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+ScRNAseq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx

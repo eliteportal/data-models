@@ -1,0 +1,75 @@
+# --------------------------------------------------------------------------------------------------
+# GitHub Action to create a DCA template config json file for a data model
+# 
+# This action creates a json file named with the `file` input argument using 
+# the data model supplied to the `data_model` argument. It will validate the 
+# json file against DCA's template config schema. Finally, it will create a PR
+# in the repo for the new file.
+#
+# Copy this into your data model repo .github/workflow directory.
+# Your repo settings must have Actions enabled and must allow GitHub Actions to
+# create and approve pull requests.
+# 
+# By default, this action runs by workflow dispatch. But it can be configured
+# to run on other triggers. Consult the github doc below for more information.
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+#
+# The resulting file with contain one entry for each attribute in the data model that `dependsOn`
+# "Component". To include a subset of these attributes, use either `include_schemas` or
+# `exclude_schemas` in the call to `datacurator::write_dca_template_config()`
+#
+# --------------------------------------------------------------------------------------------------
+
+name: DCA Template Config File
+on:
+  workflow_dispatch:
+    inputs:
+      data_model:
+        description: URL to a jsonld data model file
+        required: true
+      file:
+        description: Directory to save the template config
+        required: true
+      include_schemas:
+        description: Space-separated string of schemas to include in output. Must be empty if using exclude_schemas.
+        required: false
+      exclude_schemas:
+        description: Space-separated string of schemas to exclude from output. Must be empty if using include_schemas.
+        required: false
+
+jobs:
+  create-template-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout DCA Config Repo for Schema
+        uses: actions/checkout@v4
+        with:
+          repository: 'Sage-Bionetworks/data_curator_config'
+          ref: 'dev'
+          path: 'data_curator_config'
+
+      - name: Create config file
+        uses: sage-bionetworks/dca-template-config-action@main
+        env:
+          data_model: ${{ inputs.data_model }}
+          file: ${{ inputs.file }}
+          include_schemas: ${{ inputs.include_schemas }}
+          exclude_schemas: ${{ inputs.exclude_schemas }}
+        
+      - name: Validate Config File
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: 'data_curator_config/schemas/dca_template_config.schema.json'
+          INPUT_JSONS: ${{ inputs.file }}
+      
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: Update DCA Template Config File
+          body: Recreate the json file that populates the DCA template dropdown menu.
+          delete-branch: true
+          branch-suffix: timestamp
+          add-paths: |
+            ${{ inputs.file }}
