@@ -20,12 +20,12 @@ asset_store:
 # This describes information about manifests as it relates to generation and validation
 manifest:
   # Location where manifests will saved to
-  manifest_folder: "./manifest-templates/"
+  manifest_folder: "manifest-templates"
   # Title or title prefix given to generated manifest(s)
   title: "EL.manifests"
   # Data types of manifests to be generated or data type (singular) to validate manifest against
   data_type:
-    - "DataType"
+    - "all manifests"
 
 # Describes the location of your schema
 model:
