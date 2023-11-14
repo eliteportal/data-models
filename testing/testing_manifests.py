@@ -113,7 +113,7 @@ gen_mixed_string_with_length()
 def partition(list_in, n):
     random.shuffle(list_in)
     return [list_in[i::n] for i in range(n)]
-Create individual and biospecimen ids from random text
+# Create individual and biospecimen ids from random text
 
 # for individaul IDs and specimenIDs
 individaulIds = [gen_mixed_string_with_length(N=5) for _ in range(1, 100)]

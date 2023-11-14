@@ -2,18 +2,24 @@
 
 set -e
 
-MANIFEST='Biospecimenhuman'
+# MANIFEST='BiospecimenNonHuman'
 
-schematic schema convert ./EL.data.model.csv \
-  --output_jsonld ./EL.data.model.jsonld
+# date "+%H:%M:%S   %d/%m/%y"
+# schematic schema convert ./EL.data.model.csv \
+#   --output_jsonld ./EL.data.model.jsonld
+# date "+%H:%M:%S   %d/%m/%y"
 
-# !echo $MANIFEST":" >> manifest_generation_results.txt
-RESULTS=$(schematic manifest --config ./config.yml \
-  get -dt $MANIFEST \
-  --output_csv ./manifests/$MANIFEST.csv \
-  --title EL_Manifest_$MANIFEST \
-  --sheet_url)
+for MANIFEST in 'Biospecimenhuman' 'BiospecimennonHuman' 'IndividualHuman' 'IndividualnonHuman' 'MetabolomicsHuman' 'Microbiome' 'RNAseq' 'WholeGenomeSequencing' 'BsSeq' 'Genotyping' 'Proteomics' 'ScRNAseq'; do
+  echo -- $MANIFEST
 
-echo $RESULTS
+  RESULTS=$(schematic manifest --config ./config.yml \
+    get -dt $MANIFEST \
+    --output_xlsx EL.Manifest.$MANIFEST.xlsx \
+    --title EL.Manifest.$MANIFEST \
+    --sheet_url)
 
-echo $MANIFEST ": " $RESULTS >>./_data/manifest_generation_results.txt
+  echo $RESULTS
+  # NOW=$(date -f "%d/%m/%y +%H:%M:%S")
+  echo $NOW $MANIFEST ": " $RESULTS >>./_data/manifest_generation_results.txt
+  echo -----------------------------
+done

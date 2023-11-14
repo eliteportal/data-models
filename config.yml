@@ -13,16 +13,16 @@ asset_store:
     # Synapse ID of the file view listing all project data assets.
     master_fileview_id: "syn52168036"
     # Path to the synapse config file, either absolute or relative to this file
-    config: ".synapseConfig"
+    config: "/Users/nlee/Library/Caches/pypoetry/virtualenvs/elite-data-models-LjmgyG4K-py3.10/lib/python3.10/site-packages/synapseclient/.synapseConfig"
     # Base name that manifest files will be saved as
     manifest_basename: "ELITE.manifest"
 
 # This describes information about manifests as it relates to generation and validation
 manifest:
   # Location where manifests will saved to
-  manifest_folder: "manifests"
+  manifest_folder: "manifest-templates"
   # Title or title prefix given to generated manifest(s)
-  title: "ELITE.manifests"
+  title: "EL.manifests"
   # Data types of manifests to be generated or data type (singular) to validate manifest against
   data_type:
     - "all manifests"
