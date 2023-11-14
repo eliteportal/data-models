@@ -17,3 +17,4 @@
 !**/EL.data.model.csv
 !**/EL.data.model.jsonld
 !**/partitions/*
+!**/dca-template-config.json
