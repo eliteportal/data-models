@@ -26,21 +26,34 @@ After cloning the repository, run the following command:
 
 Run `scripts/convert_csv_to_json.py`
 
+### Create Data Model Visualization Tree
+
+[Schematic API](https://schematic.api.sagebionetworks.org/v1/ui/)
+[Visualization Repository](https://github.com/Sage-Bionetworks/schema_visualization)
+
 # Updates
 
 ## Oct 20th, 2023
+
 Attribute renaming to harmonize with current backend and ADKP
+
 - consortium -> program
 - studyCode -> project
 - study -> studyKey
 
 New Terms
-- 'studyFocs'
-    - valid values are 'Longevity' currently. 
 
-Attribute Changes: 
+- 'studyFocs'
+  - valid values are 'Longevity' currently.
+
+Attribute Changes:
+
 - Remove valid values from speciesName
 
 File Annotation Updates
+
 - change "species" to "speciesGroup"
 
+## To Do
+
+- [ ] Organize directories/files
