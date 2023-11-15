@@ -1,6 +1,3 @@
-[submodule "schema_visualization"]
-	path = schema_visualization
-	url = https://github.com/Sage-Bionetworks/schema_visualization.git
 [submodule "schema_visualization_elite"]
-	path = schema_visualization_elite
-	url = https://github.com/eliteportal/schema_visualization_elite.git
+path = schema_visualization_elite
+url = https://github.com/eliteportal/schema_visualization_elite.git
