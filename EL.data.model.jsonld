@@ -13296,7 +13296,7 @@
             "rdfs:label": "Biospecimenhuman",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:IndividualHuman"
                 }
             ],
             "schema:isPartOf": {
@@ -13365,7 +13365,7 @@
             "rdfs:label": "BiospecimennonHuman",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:IndividualnonHuman"
                 }
             ],
             "schema:isPartOf": {
@@ -13577,7 +13577,7 @@
             "rdfs:label": "MetabolomicsHuman",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -13802,7 +13802,7 @@
             "rdfs:label": "Microbiome",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -13928,7 +13928,7 @@
             "rdfs:label": "RNAseq",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14036,7 +14036,7 @@
             "rdfs:label": "WholeGenomeSequencing",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14159,7 +14159,7 @@
             "rdfs:label": "BsSeq",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14327,7 +14327,7 @@
             "rdfs:label": "Genotyping",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14420,7 +14420,7 @@
             "rdfs:label": "Proteomics",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14573,7 +14573,7 @@
             "rdfs:label": "ScRNAseq",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
