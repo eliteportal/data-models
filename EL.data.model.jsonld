@@ -2418,20 +2418,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
             "sms:displayName": "dnaBatchID",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -4741,6 +4727,9 @@
                 },
                 {
                     "@id": "bts:Residualized"
+                },
+                {
+                    "@id": "bts:Analysis"
                 }
             ],
             "sms:displayName": "dataSubtype",
@@ -12912,7 +12901,7 @@
         {
             "@id": "bts:LLFS",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Project name",
+            "rdfs:comment": "Project and study name",
             "rdfs:label": "LLFS",
             "rdfs:subClassOf": [
                 {
@@ -13595,7 +13584,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Metabolomics Human",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -13796,9 +13790,6 @@
                     "@id": "bts:SpecifyProcessingBatchSizeUnit"
                 },
                 {
-                    "@id": "bts:F"
-                },
-                {
                     "@id": "bts:Component"
                 }
             ],
@@ -13818,7 +13809,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Microbiome",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -13939,7 +13935,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "RNAseq",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -14042,7 +14043,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Whole Genome Sequencing",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -14160,7 +14166,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "bsSeq",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -14323,7 +14334,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "genotyping",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -14411,7 +14427,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "proteomics",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -14559,7 +14580,12 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "scRNAseq",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
+            "sms:requiresComponent": [
+                {
+                    "@id": "bts:Biospecimenhuman"
+                }
+            ],
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
@@ -26610,6 +26636,9 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:LLFS"
+                },
+                {
                     "@id": "bts:MRGWAS"
                 },
                 {
@@ -27455,7 +27484,7 @@
         {
             "@id": "bts:Filename",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Name of the file",
+            "rdfs:comment": "Name of the file. This helps to link annotations from metadata files.",
             "rdfs:label": "Filename",
             "rdfs:subClassOf": [
                 {
@@ -28384,6 +28413,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "residualized",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Analysis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Analysis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataSubtype"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "analysis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -32481,23 +32527,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Simoa HD-1 Analyzer",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Analysis",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Analysis",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ResourceType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "analysis",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -53340,23 +53369,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Component",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:F",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "F",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:MetabolomicsHuman"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "f",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -75100,6 +75112,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "C",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:F",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "F",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:GasFlowTemperatureUnit"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "F",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
