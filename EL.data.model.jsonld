@@ -6505,9 +6505,7 @@
             },
             "sms:displayName": "age",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Assay",
@@ -6974,13 +6972,7 @@
                     "@id": "bts:StudyofOsteoporoticFractures(SOF)"
                 },
                 {
-                    "@id": "bts:TheHealth"
-                },
-                {
-                    "@id": "bts:Aging"
-                },
-                {
-                    "@id": "bts:AndBodyCompositionStudy(HealthABC)"
+                    "@id": "bts:TheHealthandAgingandBodyCompositionStudy(HealthABC)"
                 },
                 {
                     "@id": "bts:CardiovascularHealthStudy(CHS)"
@@ -7032,17 +7024,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:1"
-                },
-                {
-                    "@id": "bts:2"
-                },
-                {
-                    "@id": "bts:3"
-                }
-            ],
+            "schema:rangeIncludes": [],
             "sms:displayName": "consentGroupID",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -8037,32 +8019,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:BU"
-                },
-                {
-                    "@id": "bts:PT"
-                },
-                {
-                    "@id": "bts:NY"
-                },
-                {
-                    "@id": "bts:DK"
-                },
-                {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
+            "schema:rangeIncludes": [],
             "sms:displayName": "fieldCenterCode",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -9245,46 +9202,10 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:White"
-                },
-                {
-                    "@id": "bts:BlackorAfricanAmerican"
-                },
-                {
-                    "@id": "bts:Asian"
-                },
-                {
-                    "@id": "bts:AmericanIndianorAlaskaNative"
-                },
-                {
-                    "@id": "bts:NativeHawaiianorOtherPacificIslander"
-                },
-                {
-                    "@id": "bts:Multiracial"
-                },
-                {
-                    "@id": "bts:Otherrace"
-                },
-                {
-                    "@id": "bts:Prefernottoanswer"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
+            "schema:rangeIncludes": [],
             "sms:displayName": "race",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "list"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SamplingAge",
@@ -9301,9 +9222,7 @@
             },
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Sex",
@@ -9448,9 +9367,7 @@
             },
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SpecimenID",
@@ -18823,10 +18740,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:TheHealth",
+            "@id": "bts:TheHealthandAgingandBodyCompositionStudy(HealthABC)",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "TheHealth",
+            "rdfs:label": "TheHealthandAgingandBodyCompositionStudy(HealthABC)",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ValidValue"
@@ -18835,7 +18752,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "The Health",
+            "sms:displayName": "The Health and Aging and Body Composition Study(HealthABC)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -26715,9 +26632,7 @@
             ],
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TissueWeight",
@@ -26745,9 +26660,7 @@
             ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TotalRNA",

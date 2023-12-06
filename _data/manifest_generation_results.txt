@@ -81,3 +81,5 @@ BsSeq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
 Genotyping :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
 Proteomics :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
 ScRNAseq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+ScRNAseq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
+ScRNAseq :  /Users/nlee/Documents/Projects/ELITE/ELITE-data-models/EL.xlsx
