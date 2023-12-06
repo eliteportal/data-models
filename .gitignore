@@ -18,3 +18,4 @@
 !**/EL.data.model.jsonld
 !**/partitions/*
 !**/dca-template-config.json
+_data/manifest_generation_results.txt

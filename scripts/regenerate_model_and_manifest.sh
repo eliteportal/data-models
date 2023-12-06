@@ -9,7 +9,7 @@ schematic schema convert ./EL.data.model.csv \
   --output_jsonld ./EL.data.model.jsonld
 date "+%H:%M:%S   %d/%m/%y"
 
-for MANIFEST in 'Biospecimenhuman' 'BiospecimennonHuman' 'IndividualHuman' 'IndividualnonHuman' 'MetabolomicsHuman' 'Microbiome' 'RNAseq' 'WholeGenomeSequencing' 'BsSeq' 'Genotyping' 'Proteomics' 'ScRNAseq'; do
+for MANIFEST in 'ScRNAseq'; do
   echo -- $MANIFEST
 
   RESULTS=$(schematic manifest --config ./config.yml \
