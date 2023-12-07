@@ -9267,9 +9267,7 @@
             ],
             "sms:displayName": "race",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "list"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SamplingAge",
@@ -9286,9 +9284,7 @@
             },
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Sex",
@@ -9433,9 +9429,7 @@
             },
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SpecimenID",
@@ -11075,9 +11069,7 @@
             },
             "sms:displayName": "visitCode",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Bird",
@@ -26719,9 +26711,7 @@
             ],
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TissueWeight",
@@ -26749,9 +26739,7 @@
             ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TotalRNA",
