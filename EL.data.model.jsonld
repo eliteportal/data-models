@@ -8069,9 +8069,7 @@
             },
             "sms:displayName": "individualID",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "matchExactlyOne IndividualHuman.individualID set"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:LifeStage",
@@ -9454,9 +9452,7 @@
             },
             "sms:displayName": "specimenID",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "matchAtLeastOne Biospecimenhuman.specimenID value"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:StudyCode",
