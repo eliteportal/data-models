@@ -5,7 +5,6 @@
 # If you remove all fields from a section, the entire section should be removed including the header.
 # Change the values of any fields you do want to change
 
-
 # This describes where assets such as manifests are stored
 asset_store:
   # This is when assets are stored in a synapse project
@@ -15,14 +14,14 @@ asset_store:
     # Path to the synapse config file, either absolute or relative to this file
     config: "/Users/nlee/Library/Caches/pypoetry/virtualenvs/elite-data-models-LjmgyG4K-py3.10/lib/python3.10/site-packages/synapseclient/.synapseConfig"
     # Base name that manifest files will be saved as
-    manifest_basename: "ELITE.manifest"
+    manifest_basename: "./manifest-templates/ELITE.manifest"
 
 # This describes information about manifests as it relates to generation and validation
 manifest:
   # Location where manifests will saved to
-  manifest_folder: "manifest-templates"
+  manifest_folder: "./manifest-templates"
   # Title or title prefix given to generated manifest(s)
-  title: "EL.manifests"
+  title: "./manifest-templates/EL.manifest."
   # Data types of manifests to be generated or data type (singular) to validate manifest against
   data_type:
     - "all manifests"
