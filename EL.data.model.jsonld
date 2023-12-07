@@ -8024,32 +8024,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:BU"
-                },
-                {
-                    "@id": "bts:PT"
-                },
-                {
-                    "@id": "bts:NY"
-                },
-                {
-                    "@id": "bts:DK"
-                },
-                {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                }
-            ],
+            "schema:rangeIncludes": [],
             "sms:displayName": "fieldCenterCode",
             "sms:required": "sms:true",
             "sms:validationRules": []
