@@ -3483,20 +3483,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:NotSpecified"
-                }
-            ],
             "sms:displayName": "referenceTranscriptID",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -7024,7 +7010,26 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:1"
+                },
+                {
+                    "@id": "bts:2"
+                },
+                {
+                    "@id": "bts:3"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:OtherAcquisitionBatchSizeUnit"
+                }
+            ],
             "sms:displayName": "consentGroupID",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -8019,7 +8024,32 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:BU"
+                },
+                {
+                    "@id": "bts:PT"
+                },
+                {
+                    "@id": "bts:NY"
+                },
+                {
+                    "@id": "bts:DK"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                }
+            ],
             "sms:displayName": "fieldCenterCode",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -9202,10 +9232,46 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:White"
+                },
+                {
+                    "@id": "bts:BlackorAfricanAmerican"
+                },
+                {
+                    "@id": "bts:Asian"
+                },
+                {
+                    "@id": "bts:AmericanIndianorAlaskaNative"
+                },
+                {
+                    "@id": "bts:NativeHawaiianorOtherPacificIslander"
+                },
+                {
+                    "@id": "bts:Multiracial"
+                },
+                {
+                    "@id": "bts:Otherrace"
+                },
+                {
+                    "@id": "bts:Prefernottoanswer"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                }
+            ],
             "sms:displayName": "race",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "list"
+            ]
         },
         {
             "@id": "bts:SamplingAge",
@@ -9222,7 +9288,9 @@
             },
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
+            ]
         },
         {
             "@id": "bts:Sex",
@@ -9367,7 +9435,9 @@
             },
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
+            ]
         },
         {
             "@id": "bts:SpecimenID",
@@ -13213,7 +13283,7 @@
             "rdfs:label": "Biospecimenhuman",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:IndividualHuman"
                 }
             ],
             "schema:isPartOf": {
@@ -13282,7 +13352,7 @@
             "rdfs:label": "BiospecimennonHuman",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:IndividualnonHuman"
                 }
             ],
             "schema:isPartOf": {
@@ -13494,7 +13564,7 @@
             "rdfs:label": "MetabolomicsHuman",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -13505,6 +13575,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -13719,7 +13792,7 @@
             "rdfs:label": "Microbiome",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -13730,6 +13803,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -13845,7 +13921,7 @@
             "rdfs:label": "RNAseq",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -13856,6 +13932,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -13953,7 +14032,7 @@
             "rdfs:label": "WholeGenomeSequencing",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -13964,6 +14043,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -14076,7 +14158,7 @@
             "rdfs:label": "BsSeq",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14087,6 +14169,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -14244,7 +14329,7 @@
             "rdfs:label": "Genotyping",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14255,6 +14340,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -14337,7 +14425,7 @@
             "rdfs:label": "Proteomics",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14348,6 +14436,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -14490,7 +14581,7 @@
             "rdfs:label": "ScRNAseq",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Template"
+                    "@id": "bts:Assay"
                 }
             ],
             "schema:isPartOf": {
@@ -14501,6 +14592,9 @@
             "sms:requiresComponent": [
                 {
                     "@id": "bts:Biospecimenhuman"
+                },
+                {
+                    "@id": "bts:BiospecimennonHuman"
                 }
             ],
             "sms:requiresDependency": [
@@ -18740,10 +18834,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:TheHealthandAgingandBodyCompositionStudy(HealthABC)",
+            "@id": "bts:TheHealth",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "TheHealthandAgingandBodyCompositionStudy(HealthABC)",
+            "rdfs:label": "TheHealth",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ValidValue"
@@ -18752,7 +18846,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "The Health and Aging and Body Composition Study(HealthABC)",
+            "sms:displayName": "The Health",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -24116,9 +24210,6 @@
                 },
                 {
                     "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:"
                 }
             ],
             "sms:displayName": "digestionMethod",
@@ -26632,7 +26723,9 @@
             ],
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
+            ]
         },
         {
             "@id": "bts:TissueWeight",
@@ -26660,7 +26753,9 @@
             ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
+            ]
         },
         {
             "@id": "bts:TotalRNA",
@@ -34293,6 +34388,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Zeno Electronic Walkway",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TheHealthandAgingandBodyCompositionStudy(HealthABC)",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TheHealthandAgingandBodyCompositionStudy(HealthABC)",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Cohort"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "The Health and Aging and Body Composition Study (HealthABC)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -74991,23 +75103,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "vascular endothelial cell",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DigestionMethod"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
