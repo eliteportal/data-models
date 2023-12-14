@@ -1,5 +1,9 @@
 # Change Log
 
+## 2023-12-15
+
+- Removed cross validation
+
 ## 2023-12-13
 
 ### Value Changes
