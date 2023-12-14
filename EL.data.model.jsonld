@@ -3660,12 +3660,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Biospecimen human",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:IndividualHuman"
-                }
-            ],
+            "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
                     "@id": "bts:IndividualID"
@@ -3729,12 +3724,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Biospecimen nonHuman",
-            "sms:required": "sms:false",
-            "sms:requiresComponent": [
-                {
-                    "@id": "bts:IndividualnonHuman"
-                }
-            ],
+            "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
                     "@id": "bts:IndividualID"
