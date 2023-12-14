@@ -4062,9 +4062,7 @@
             },
             "sms:displayName": "acquistionSoftwareVersion",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Adult",
@@ -8047,9 +8045,7 @@
             },
             "sms:displayName": "batchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:BatchSizeUnit",
@@ -8405,9 +8401,7 @@
             },
             "sms:displayName": "individualID",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "matchExactlyOne IndividualHuman.individualID set"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SpecimenID",
@@ -8424,9 +8418,7 @@
             },
             "sms:displayName": "specimenID",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "matchAtLeastOne Biospecimenhuman.specimenID value"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SpecimenType",
@@ -8507,9 +8499,7 @@
             },
             "sms:displayName": "specimenAge",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SamplingAge",
@@ -8526,9 +8516,7 @@
             },
             "sms:displayName": "samplingAge",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Organ",
@@ -11219,9 +11207,7 @@
             ],
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TissueWeight",
@@ -11249,9 +11235,7 @@
             ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search^\\d*?\\.?\\d$|Unknown|Not collected|Not applicable"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SpecimenSource",
@@ -16602,9 +16586,7 @@
             },
             "sms:displayName": "dnaBatchSize",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:DnaBatchSizeUnit",
@@ -17125,9 +17107,7 @@
             },
             "sms:displayName": "sequencingBatchSize",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:SequencingBatchSizeUnit",
@@ -17395,9 +17375,7 @@
             },
             "sms:displayName": "readLength",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ReadLengthUnits",
@@ -17640,9 +17618,7 @@
             },
             "sms:displayName": "totalReads",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:DirectionalBSseqLibrary",
@@ -17693,9 +17669,7 @@
             },
             "sms:displayName": "gDNAconc",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:LambdaDNAconc",
@@ -17712,9 +17686,7 @@
             },
             "sms:displayName": "lambdaDNAconc",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:PcrCycles",
@@ -17731,9 +17703,7 @@
             },
             "sms:displayName": "pcrCycles",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:MeanCoverage",
@@ -17750,9 +17720,7 @@
             },
             "sms:displayName": "meanCoverage",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ConversionRatio",
@@ -48307,9 +48275,7 @@
             },
             "sms:displayName": "experiementalBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:ExperiementalBatchSizeUnit",
@@ -50968,9 +50934,7 @@
             },
             "sms:displayName": "fractionIdentifier",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:FragmentMassTolerance",
@@ -51024,9 +50988,7 @@
             },
             "sms:displayName": "gasFlowTemperature",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:GasFlowTemperatureUnit",
@@ -51578,9 +51540,7 @@
             ],
             "sms:displayName": "treatmentAmountUnit",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TreatmentDurationValue",
@@ -51597,9 +51557,7 @@
             },
             "sms:displayName": "treatmentDurationValue",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TreatmentDurationUnit",
@@ -51662,9 +51620,7 @@
             },
             "sms:displayName": "treatmentTemperatureValue",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:TreatmentTemperatureUnit",
@@ -55370,9 +55326,7 @@
             },
             "sms:displayName": "spectrometerFrequency",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:VacuumPressure",
@@ -55389,9 +55343,7 @@
             },
             "sms:displayName": "vacuumPressure",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:VacuumPressureUnit",
@@ -67508,9 +67460,7 @@
             },
             "sms:displayName": "rnaBatchSize",
             "sms:required": "sms:false",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:RnaBatchSizeUnit",
@@ -67857,9 +67807,7 @@
             },
             "sms:displayName": "valueReported",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "regex search ([0-9]+\\.[0-9]*.)|([0-9]+)"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:Rodent",
