@@ -8323,10 +8323,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:BiospecimenHuman",
+            "@id": "bts:Biospecimenhuman",
             "@type": "rdfs:Class",
             "rdfs:comment": "Template used for contributing metadata to the ELITE portal",
-            "rdfs:label": "BiospecimenHuman",
+            "rdfs:label": "Biospecimenhuman",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Component"
@@ -8335,7 +8335,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Biospecimen Human",
+            "sms:displayName": "Biospecimen human",
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
@@ -15367,10 +15367,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:BiospecimenNonHuman",
+            "@id": "bts:BiospecimennonHuman",
             "@type": "rdfs:Class",
             "rdfs:comment": "Template used for contributing metadata to the ELITE portal",
-            "rdfs:label": "BiospecimenNonHuman",
+            "rdfs:label": "BiospecimennonHuman",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Component"
@@ -15379,7 +15379,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Biospecimen NonHuman",
+            "sms:displayName": "Biospecimen nonHuman",
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
