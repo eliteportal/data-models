@@ -52819,9 +52819,7 @@
             ],
             "sms:displayName": "race",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "list"
-            ]
+            "sms:validationRules": []
         },
         {
             "@id": "bts:IndividualnonHuman",
