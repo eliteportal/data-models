@@ -9743,6 +9743,9 @@
                     "@id": "bts:BladderUrothelium"
                 },
                 {
+                    "@id": "bts:Blood"
+                },
+                {
                     "@id": "bts:BloodVesselEndothelium"
                 },
                 {
@@ -11417,6 +11420,9 @@
                 },
                 {
                     "@id": "bts:CD19-positive"
+                },
+                {
+                    "@id": "bts:PBMC"
                 },
                 {
                     "@id": "bts:Bergmannglialcell"
@@ -15584,6 +15590,9 @@
                 },
                 {
                     "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:Tissue"
                 }
             ],
             "schema:isPartOf": {
@@ -18534,6 +18543,29 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "CD19-positive",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:PBMC",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "PBMC",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ValidValue"
+                },
+                {
+                    "@id": "bts:CellType"
+                },
+                {
+                    "@id": "bts:SampleType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "PBMC",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -65568,26 +65600,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "PBL",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PBMC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PBMC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ValidValue"
-                },
-                {
-                    "@id": "bts:SampleType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "PBMC",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
