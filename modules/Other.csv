@@ -1,0 +1,80 @@
+Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType
+Not applicable,,,,,False,ValidValue,,,,Other,,,
+Not collected,,,,,False,ValidValue,,,,Other,,,
+Not Specified,,,,,False,ValidValue,,,,Other,,,
+Other,,,,,False,ValidValue,,,,Other,,,
+OtherAcquisitionBatchSizeUnit,"If ""other"" list units of measure",,specifyAcquisitionBatchSizeUnits,,False,ValidValue,,,,Other,,,
+OtherBatchSizeUnit,"If ""other"" list the unit of measure",,specifyBatchSizeUnits,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherCleavageAgents,"If ""other"" is selected, list the enzyme name. ",,specifyOtherCleavageAgent,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherControlType,"If ""other"" specify the control type",,specifyControlType,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherConversionRatioUnits,,,,,False,ValidValue,,,,Other,,,
+OtherDatabaseName,"If ""other"" list the name of the search database",,specifyDatabaseName,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherDatabaseSource,"If ""other"" list the name of the database source",,specifyDatabaseSource,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherDigestionMethod,"If ""other"" list the type of digestion",,specifyDigestionMethod,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherDnaBatchSizeUnit,"If ""other"" list unit of measure",,specifyDNABatchSizeUnit,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherExperiementalBatchSizeUnit,,,,,False,ValidValue,,,,Other,,,
+OtherExperimentalBatchSizeUnit,"If ""other"" list units of measure",,specifyExperimentalBatchSizeUnits,,False,ValidValue,,,,Other,,,
+OtherExtractionMethod,"If ""other"" list the name of the extraction method",,specifyExtractionMethod,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherLensVoltagesUnit,,,,,False,ValidValue,,,,Other,,,
+OtherLensVoltageUnits,"If ""other"" provide the unit of measure",,specifyLensVoltageUnits,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherLibraryPrep,"If ""other"" list the name of the general strategy used to prepare the library",,specifyLibraryPrep,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherLibraryPreparationMethod,"If ""other"" list the name of the library preparation methods",,specifyLibraryPreparationMethod,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherLibraryVersion,"If ""other"" list the name of the library version",,specifyLibraryVersion,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherMetabolomics HumanmeasurementTechnique,"If ""other"" is selected list the name of the measurement technique used",,specifyMeasurementTechnique,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherModificationParameters,"If ""other"" is selected, list the custom modification name. We recommend using an intuitive name",,specifyOtherModificationParameters,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherMsAnalyteType,"If ""other"" list the type of analyte ",,specifyMSAnalyteType,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherMsAnalyzerTypeMS1,"If ""other"" is selected list the name of the mass spectrometer analyzer used",,specifyMSAnalyzerTypeMS1,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherMsAnalyzerTypeMS2,"If ""other"" is selected list the name of the mass spectrometer analyzer used",,specifyMSAnalyzerTypeMS2,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherMsAssayTechnique,"If ""other"" is selected list the name of the mass spectrometer technique used or the name of the proteomics assay used",,specifyMSAssayTechnique,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherMsInstrumentModel,"If ""other"" is selected list the name of the instrument model",,specifyMSInstrumentModel,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherPlatformLocation,"If ""other"" list the name of the platform location",,specifyPlatformLocation,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherProcessingBatchSizeUnit,"If ""other"" list units of measure",,specifyProcessingBatchSizeUnit,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherProteomicsAssayType,"If ""other"" is selected list the name of the type of peptide quantification used",,specifyProteomicsAssayType,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherReadLengthUnits,"If ""other"" provide the unit of measure",,specifyReadLengthUnits,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherRepositoryName,"If ""other"" list the name of the repository",,specifyRepositoryName,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherRnaBatchSizeUnit,"If ""other"" list unit of measure",,specifyRNABatchSizeUnit,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherSampleBatchSizeUnit,"If ""other"" list the unit of measure",,specifySampleBatchSizeUnits,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherSampleIntdocution,"If ""other"" list the name of the sample introduction",,specifySampleIntroduction,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherSequencingBatchSizeUnit,"If ""other"" list unit of measure",,specifySequencingBatchSizeUnit,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherTechnologyPlatformVersion,"If ""other"" list the name of the platform version",,specifyPlatformVersion,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherTranscriptType,"If ""other"" list the transcript type",,specifyTranscriptType,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherVaccumPressureUnits,"If ""other"" provide the unit of measure",,specifyVacuumPressueUnits,,False,ValidValue,,Sage Bionetworks,,Other,,,
+OtherVacuumPressureUnit,,,,,False,ValidValue,,,,Other,,,
+OtherYesHasIonizationSource,,,,,False,ValidValue,,,,Other,,,
+specifyAcquisitionBatchSizeUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifyBatchSizeUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifyControlType,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifyConversionRatioUnit,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,bsSeq,String
+specifyDatabaseName,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyDatabaseSource,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyDigestionMethod,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,proteomics,String
+specifyDNABatchSizeUnit,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Microbiome,bsSeq",String
+specifyEnrichmentMethod,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,bsSeq,String
+specifyExperimentalBatchSizeUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifyExtractionMethod,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Microbiome,String
+specifyLensVoltageUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifyLibraryPrep,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Microbiome,Whole Genome Sequencing,bsSeq,scRNAseq",String
+specifyLibraryPreparationMethod,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,scRNAseq",String
+specifyLibraryVersion,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,scRNAseq",String
+specifyMeasurementTechnique,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,genotyping,proteomics,scRNAseq",String
+specifyMSAnalyteType,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyMSAnalyzerTypeMS1,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyMSAnalyzerTypeMS2,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyMSAssayTechnique,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyMSInstrumentModel,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,proteomics",String
+specifyOtherCleavageAgent,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,proteomics,String
+specifyOtherModificationParameters,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,proteomics,String
+specifyPlatformLocation,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,proteomics,scRNAseq",String
+specifyPlatformVersion,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,proteomics,scRNAseq",String
+specifyProcessingBatchSizeUnit,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifyProteomicsAssayType,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,proteomics,String
+specifyReadLengthUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,scRNAseq",String
+specifyRepositoryName,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"RNAseq,Whole Genome Sequencing,scRNAseq",String
+specifyRNABatchSizeUnit,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,scRNAseq,String
+specifySampleBatchSizeUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifySampleIntroduction,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+specifySampleType,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Metabolomics Human,Microbiome,RNAseq,Whole Genome Sequencing,bsSeq,genotyping,proteomics,scRNAseq",String
+specifySequencingBatchSizeUnit,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"Microbiome,bsSeq,scRNAseq",String
+specifyTranscriptType,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,"RNAseq,Whole Genome Sequencing,scRNAseq",String
+specifyVacuumPressueUnits,Value is determined by the data contributor,,,,False,ManifestColumn,,Sage Bionetworks,,Other,,Metabolomics Human,String
+Unknown,,,,,False,ValidValue,,,,Other,,,

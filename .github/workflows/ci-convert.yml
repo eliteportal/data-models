@@ -6,7 +6,7 @@ name: CI
 on:
   pull_request:
     branches: main
-    paths: 'EL.data.model.csv'
+    paths: "EL.data.model.csv"
 
 jobs:
   CI:
@@ -17,9 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4 
+      - uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: "3.9"
 
       - name: Install Schematic
         shell: bash
@@ -29,7 +29,11 @@ jobs:
           cd schematic
           poetry build
           pip3 install dist/schematicpy-*-py3-none-any.whl
-          
+
+      - name: Join data model
+        shell: bash
+        run: python scripts/join_data_model.py
+
       - name: Convert .csv to .jsonld
         shell: bash
         run: |

@@ -1,33 +1,20 @@
-import pandas as pd
-import yaml
-
-with open(r"../config.yaml", 'r') as f:
-    config = yaml.safe_load(f)
+import os
+from pathlib import Path
+from dotenv import dotenv_values
 
 # paths to import files
-root_path = config['paths']['root']
-schematic_config = config['paths']['schematic']
-csv_model = config['names']['csv_model']
-json_model = config['names']['json_model']
-# manifest_path = "C:/Users/nlee/Documents/Projects/schematic/schematic/tests/data/mock_manifests/example_biospecimen_test.csv"
+root_dir = Path(__file__).parent.parent
 
-# connect to synapse
-os.system(f"run C:/Users/nlee/Documents/Projects/utils/syanpse_login.py")
-
-# get data model
-# test_model = pd.read_csv(syn.get("syn51401647").path)
+config = dotenv_values(Path(root_dir, ".env"))
+schematic_config = Path(root_dir, config["schematic_config_path"])
+csv_model = Path(root_dir, config["csv_path"])
+json_model = Path(root_dir, csv_model.stem + ".jsonld")
 
 # Initialize schematic
-
 os.system(f"schematic init --config {config['paths']['schematic']}")
 
 # Convert Schema
-os.system(f"schematic schema convert {config['names']['csv_model']} --output_json {config['names']['json_model']}")
+os.system(f"schematic schema convert {csv_model} --output_json {json_model}")
 
 # Get an empty manifest as a CSV using model
-os.system(f"schematic manifest --config config['paths']['schematic'] get")
-
-# Validate Manifest
-os.system(f"schematic model --config config['paths']['schematic'] /
-    validate --manifest_path  manifest_path/
-    --data_type Biospecimen")
+os.system(f"schematic manifest --config {schematic_config} get")

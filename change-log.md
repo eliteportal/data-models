@@ -23,3 +23,24 @@
 
 1. `file_annotation_template`
    - Adding dataRepository as column type for file annotations
+
+## Oct 20th, 2023
+
+Attribute renaming to harmonize with current backend and ADKP
+
+- consortium -> program
+- studyCode -> project
+- study -> studyKey
+
+New Terms
+
+- 'studyFocs'
+  - valid values are 'Longevity' currently.
+
+Attribute Changes:
+
+- Remove valid values from speciesName
+
+File Annotation Updates
+
+- change "species" to "speciesGroup"
