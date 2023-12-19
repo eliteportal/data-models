@@ -1895,6 +1895,17 @@ files = [
 ]
 
 [[package]]
+name = "lorem"
+version = "0.1.1"
+description = "Generator for random text that looks like Latin."
+optional = false
+python-versions = "*"
+files = [
+    {file = "lorem-0.1.1-py3-none-any.whl", hash = "sha256:c9c2914b5a772022417c398bd74b7bbd712e73ff029ba82720855e458f13ae42"},
+    {file = "lorem-0.1.1.tar.gz", hash = "sha256:785f4109a241fc2891e59705e85d065f6e6d3ed6ad91750a8cb54d4f3e59d934"},
+]
+
+[[package]]
 name = "makefun"
 version = "1.15.1"
 description = "Small library to dynamically create python functions."
@@ -4694,4 +4705,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9.0,<3.11"
-content-hash = "209a2cc869767c277f924cf702e3af8a533f2c22d4aa2586f7be3eccbd5535ef"
+content-hash = "150978e6b4f0655376c572eaac0458d2ac9a4ff8b8b89dd959a51b7c864ced02"

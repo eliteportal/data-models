@@ -1,11 +1,8 @@
+""" Join the data model modules """
+
 import glob
 import pandas as pd
-
-
-def write_out_data_model(data_model, file_path):
-    data_model.drop_duplicates(subset=["Attribute"], inplace=True)
-    data_model.reset_index(drop=True, inplace=True)
-    data_model.to_csv(file_path, index=False)
+import pathlib
 
 
 def join_data_model_partitions(partition_path):
@@ -18,6 +15,7 @@ def join_data_model_partitions(partition_path):
         object: pandas dataframe
     """
     modules = glob.glob(partition_path)
+
     data_model = (
         pd.concat([pd.read_csv(m) for m in modules])
         .sort_values(by=["Module", "Attribute"])
@@ -25,21 +23,19 @@ def join_data_model_partitions(partition_path):
         .fillna("")
     )
 
-    data_model.info()
+    data_model.drop_duplicates(subset=["Attribute"], inplace=True)
+    data_model.reset_index(drop=True, inplace=True)
 
     return data_model
 
 
-def main():
-    partition_path = "../models/partitions/*.csv"
-    file_path = "../EL.data.model.csv"
-
-    # backup data model?
-
-    dm = join_data_model_partitions(partition_path)
-
-    write_out_data_model(dm, file_path)
-
-
 if __name__ == "main":
-    main()
+    root_dir = pathlib.Path(__file__).parent.parent
+
+    module_pattern = root_dir.resolve()._str + "/modules/*.csv"
+
+    file_path = pathlib.Path(root_dir, "EL.data.model.csv")
+
+    dm = join_data_model_partitions(module_pattern)
+
+    dm.to_csv(file_path, index=False)
