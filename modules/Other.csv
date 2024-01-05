@@ -1,5 +1,6 @@
 Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType
-Not applicable,,,,,False,ValidValue,,,,Other,,,
+Not applicable,When the attribute does not apply to the observation,,,,False,ValidValue,,,,Other,,,
+Not available,,,,,False,ValidValue,,,,Other,,,
 Not collected,,,,,False,ValidValue,,,,Other,,,
 Not Specified,,,,,False,ValidValue,,,,Other,,,
 Other,,,,,False,ValidValue,,,,Other,,,

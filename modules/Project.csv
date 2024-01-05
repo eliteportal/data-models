@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType
-ILO,Project name,,,,False,ValidValue,,,,Project,,,
-LC,Project name,,,,False,ValidValue,,,,Project,,,
-LG,Project name,,,,False,ValidValue,,,,Project,,,
-LLFS,Project and study name,,,,False,ValidValue,,,,Project,,,
+ILO,Integrative Longevity Omics,,,,False,ValidValue,,,,Project,,,
+LC,Longevity Consortium,,,,False,ValidValue,,,,Project,,,
+LG,Longevity Genomics,,,,False,ValidValue,,,,Project,,,
+LLFS,Long Life Family Study,,,,False,ValidValue,,,,Project,,,
