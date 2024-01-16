@@ -9,24 +9,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this new attribute request!
-  - type: textarea
-    id: new-attribute
+        Thanks for taking the time to fill out this new attribute request! | 
+        Please fill in a google sheet with the new attributes to add 
+  - type: input
+    id: newAttributeLink
     attributes:
-      label: What new attribute(s) is needed?
-      description: Is there a missing attribute you want to add or update is needed?
-      placeholder: Tell us what you see!
-      value: "A new attribute is needed"
+      label: attributes-sheet-link
+      description: Link to the google sheet for the new attributes to add. See template here: https://docs.google.com/spreadsheets/d/1QCfRMQbiRGcPu7sraURODUCAe86ux6HcDK8LSRixlbc/edit?usp=sharing
+      placeholder: ex. https://docs.google.com/spreadsheets/
     validations:
       required: true
-  - type: dropdown
-      id: change-type
-      attributes:
-        label: Version
-        description: What type of change is needed?
-        options:
-          - New
-          - Update
-        default: 0
-      validations:
-        required: true
