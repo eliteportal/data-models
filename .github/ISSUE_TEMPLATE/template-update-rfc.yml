@@ -1,5 +1,3 @@
-
-
 name: Request to add or update template in the data model
 description: Changes to the data model to be incorporated
 title: "[dataModelUpdate]: "
@@ -31,7 +29,7 @@ body:
       description: Name of the template
       placeholder: ex. proteomics
     validations:
-      required: false
+      required: true
   - type: input
     id: rfcLink
     attributes:
@@ -39,7 +37,7 @@ body:
       description: Link to the RFC to add / update for the data model
       placeholder: ex. https://docs.google.com/spreadsheets/
     validations:
-      required: false
+      required: true
   - type: textarea
     id: comments
     attributes:
@@ -49,5 +47,3 @@ body:
       value: "A bug happened!"
     validations:
       required: false
-
-Comments: 
