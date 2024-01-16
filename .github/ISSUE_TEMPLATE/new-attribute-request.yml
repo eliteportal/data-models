@@ -15,7 +15,7 @@ body:
     id: newAttributeLink
     attributes:
       label: attributes-sheet-link
-      description: Link to the google sheet for the new attributes to add. See template here: https://docs.google.com/spreadsheets/d/1QCfRMQbiRGcPu7sraURODUCAe86ux6HcDK8LSRixlbc/edit?usp=sharing
+      description: "Link to the google sheet for the new attributes to add. See template here: https://docs.google.com/spreadsheets/d/1QCfRMQbiRGcPu7sraURODUCAe86ux6HcDK8LSRixlbc/edit?usp=sharing"
       placeholder: ex. https://docs.google.com/spreadsheets/
     validations:
       required: true
