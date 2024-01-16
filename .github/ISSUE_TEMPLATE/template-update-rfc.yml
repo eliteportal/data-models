@@ -1,10 +1,10 @@
-name: Request to add or update template in the data model
+name: Template update or addition
 description: Changes to the data model to be incorporated
 title: "[dataModelUpdate]: "
 labels: ["template"]
 projects: ["ELITE", "dataModel"]
 assignees:
-  - nicholas.lee
+  - nlee-sage
 
 body:
   - type: markdown
