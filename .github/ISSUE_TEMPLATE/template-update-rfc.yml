@@ -19,7 +19,7 @@ body:
       options: 
         - Update
         - Addition
-      default: Update
+      default: 0
     validations:
       required: true
   - type: input
