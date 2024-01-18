@@ -1,0 +1,21 @@
+name: New Attribute Request
+description: Request to add a new attribute to a template or data model
+title: "[NewAttribute]: "
+labels: ["newAttribute"]
+projects: ["ELITE", "dataModel"]
+assignees:
+  - nicholas.lee
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this new attribute request! | 
+        Please fill in a google sheet with the new attributes to add 
+  - type: input
+    id: newAttributeLink
+    attributes:
+      label: attributes-sheet-link
+      description: "Link to the google sheet for the new attributes to add. See template here: https://docs.google.com/spreadsheets/d/1QCfRMQbiRGcPu7sraURODUCAe86ux6HcDK8LSRixlbc/edit?usp=sharing"
+      placeholder: ex. https://docs.google.com/spreadsheets/
+    validations:
+      required: true
