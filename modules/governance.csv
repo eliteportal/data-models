@@ -1,0 +1,17 @@
+Limitation: string
+If Disease Specific Research: MONDO
+Ethics Approval Required: boolean
+Non Commercial Use Only: boolean
+Not-for-Profit Use Only: boolean
+Project Specific Restriction: boolean
+If True, list
+Research Specific Restriction: boolean
+If True, description
+Time Limit on Use: boolean
+If True, UO time unit
+User Specific Restriction: boolean
+If True, list
+Source Geography: ISO3166⍺2
+Data Tier: string
+Attribution: string
+Is IRB Required: boolean

@@ -1,13 +1,3 @@
-# Allowed
-!**/old_models/*.csv
-!**/models/*.csv
-!**/EL_data_model_v3.csv
-!**/EL_data_model_v3.jsonld
-!**/EL.data.model.csv
-!**/EL.data.model.jsonld
-!**/modules/*
-!**/dca-template-config.json
-
 # Ignored
 **/*.json
 **/*.jsonld
@@ -20,3 +10,15 @@
 .python-version
 testing/test_files/*
 _data/manifest_generation_results.txt
+
+# Allowed
+!**/old_models/*.csv
+!**/models/*.csv
+!**/modules/*.csv
+!**/EL_data_model_v3.csv
+!**/EL_data_model_v3.jsonld
+!**/EL.data.model.csv
+!**/EL.data.model.jsonld
+!**/modules/*
+!**/dca-template-config.json
+!**/dca_config.json

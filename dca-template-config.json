@@ -59,8 +59,13 @@
       "display_name": "scRNAseq",
       "schema_name": "ScRNAseq",
       "type": "file"
+    },
+    {
+      "display_name": "Computational Tools",
+      "schema_name": "computationalTools",
+      "type": "file"
     }
   ],
   "service_version": "v23.1.1",
-  "schema_version": "v1.3"
+  "schema_version": "v1.4"
 }
