@@ -62,7 +62,7 @@
     },
     {
       "display_name": "Computational Tools",
-      "schema_name": "computationalTools",
+      "schema_name": "ComputationalTools",
       "type": "file"
     }
   ],
