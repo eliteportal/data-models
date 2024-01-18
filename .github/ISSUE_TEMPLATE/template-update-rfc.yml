@@ -1,0 +1,49 @@
+name: Template update or addition
+description: Changes to the data model to be incorporated
+title: "[dataModelUpdate]: "
+labels: ["template"]
+projects: ["ELITE", "dataModel"]
+assignees:
+  - nlee-sage
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this request!
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change Type
+      description: Name of the template
+      options: 
+        - Update
+        - Addition
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: dataType
+    attributes:
+      label: Template to add or update
+      description: Name of the template
+      placeholder: ex. proteomics
+    validations:
+      required: true
+  - type: input
+    id: rfcLink
+    attributes:
+      label: RFC Link
+      description: Link to the RFC to add / update for the data model
+      placeholder: ex. https://docs.google.com/spreadsheets/
+    validations:
+      required: true
+  - type: textarea
+    id: comments
+    attributes:
+      label: Additional Comments
+      description: Anything else to add? 
+      placeholder: Tell us what we should know about this addtion
+      value: "A bug happened!"
+    validations:
+      required: false
