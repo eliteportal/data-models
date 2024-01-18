@@ -1,0 +1,34 @@
+{
+    "dcc": {
+        "name": "ELITE",
+        "synapse_asset_view": "syn51753858",
+        "data_model_url": "https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld",
+        "data_model_info": "https://github.com/eliteportal/data-models",
+        "template_menu_config_file": "https://raw.githubusercontent.com/eliteportal/data-models/main/dca-template-config.json",
+        "logo_location": "https://github.com/eliteportal/data-models/blob/main/assets/ELITE_logo.png",
+        "logo_link": "https://eliteportal.github.io/data-dictionary/",
+        "dcc_help_link": "https://help.eliteportal.org/help/",
+        "portal_help_link": "https://help.eliteportal.org/help/"
+    },
+    "dca": {
+        "use_compliance_dashboard": false,
+        "primary_col": "#2a668d",
+        "secondary_col": "#184e71",
+        "sidebar_col": "#191919"
+    },
+    "schematic": {
+        "manifest_generate": {
+            "output_format": "excel",
+            "use_annotations": false
+        },
+        "model_validate": {
+            "restrict_rules": false
+        },
+        "model_submit": {
+            "use_schema_labels": true,
+            "table_manipulation": "replace",
+            "manifest_record_type": "table_and_file",
+            "hide_blanks": false
+        }
+    }
+}

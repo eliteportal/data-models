@@ -1,5 +1,12 @@
 # Change Log
 
+## 2024-01-17
+
+Adding additional templates
+
+1. proteomics
+2. ComputationalTools
+
 ## 2023-12-15
 
 - Removed cross validation
