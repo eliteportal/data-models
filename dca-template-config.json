@@ -21,8 +21,8 @@
       "type": "record"
     },
     {
-      "display_name": "MetabolomicsHuman",
-      "schema_name": "MetabolomicsHuman",
+      "display_name": "Metabolomics",
+      "schema_name": "Metabolomics",
       "type": "file"
     },
     {

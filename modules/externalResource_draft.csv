@@ -1,4 +1,0 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType
-dataSource, Source of the data,,,,TRUE,ManifestColumn,,,str,interoperability,"sage.bionetworks",,string
-dataRepository, Name of the repository the data is hosted in,,,,TRUE,ManifestColumn,,,str,interoperability,"sage.bionetworks",,string
-dataRepositoryLink

@@ -1,5 +1,12 @@
 # Change Log
 
+## 2024-01-19
+
+Changes:
+
+- Added `dataCoordinationCenter` to denote which center hosts the data in Synapse. This could be inferred by the portal that the data is surfaced in.
+- Updated `consortium` to denote which contributing center (LLFS / ILO / LC / LG) the data is coming from. This way so that multiple studies can exist under one `consortium`
+
 ## 2024-01-17
 
 Adding additional templates
