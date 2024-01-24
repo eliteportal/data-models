@@ -18,7 +18,7 @@ python-dotenv = "^1.0.0"
 duckdb = "^0.9.2"
 itables = "^1.6.3"
 lorem = "^0.1.1"
-schematicpy = "^23.12.1"
+schematicpy = "^24.1.1"
 
 
 [tool.poetry.group.dev.dependencies]

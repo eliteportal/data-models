@@ -9,7 +9,7 @@ schematic schema convert ./EL.data.model.csv \
   --output_jsonld ./EL.data.model.jsonld
 date "+%H:%M:%S   %d/%m/%y"
 
-for MANIFEST in 'ScRNAseq'; do
+for MANIFEST in 'Metabolomics'; do
   echo -- $MANIFEST
 
   RESULTS=$(schematic manifest --config ./config.yml \
@@ -19,7 +19,7 @@ for MANIFEST in 'ScRNAseq'; do
     --sheet_url)
 
   echo $RESULTS
-  # NOW=$(date -f "%d/%m/%y +%H:%M:%S")
+  NOW=$(date -f "%d/%m/%y +%H:%M:%S")
   echo $NOW $MANIFEST ": " $RESULTS >>./_data/manifest_generation_results.txt
   echo -----------------------------
 done
