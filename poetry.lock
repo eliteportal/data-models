@@ -614,6 +614,21 @@ test = ["pretend", "pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest
 test-randomorder = ["pytest-randomly"]
 
 [[package]]
+name = "dataclasses-json"
+version = "0.6.3"
+description = "Easily serialize dataclasses to and from JSON."
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "dataclasses_json-0.6.3-py3-none-any.whl", hash = "sha256:4aeb343357997396f6bca1acae64e486c3a723d8f5c76301888abeccf0c45176"},
+    {file = "dataclasses_json-0.6.3.tar.gz", hash = "sha256:35cb40aae824736fdf959801356641836365219cfe14caeb115c39136f775d2a"},
+]
+
+[package.dependencies]
+marshmallow = ">=3.18.0,<4.0.0"
+typing-inspect = ">=0.4.0,<1"
+
+[[package]]
 name = "dateparser"
 version = "1.2.0"
 description = "Date parsing library designed to parse dates from HTML pages"
@@ -3684,19 +3699,20 @@ synapse = ["synapseclient (>=3.0.0,<4.0.0)"]
 
 [[package]]
 name = "schematicpy"
-version = "23.12.1"
+version = "24.1.1"
 description = "Package for biomedical data model and metadata ingress management"
 optional = false
 python-versions = ">=3.9.0,<3.11"
 files = [
-    {file = "schematicpy-23.12.1-py3-none-any.whl", hash = "sha256:3d0d2a03ff5d67689c2762209ea824e9c4d26dfa5a609f4e67ec21b24447657e"},
-    {file = "schematicpy-23.12.1.tar.gz", hash = "sha256:278551c9184cf8916d5972c699ca4ee5e6292ab76dbcb5d7fd232d052a72bc7d"},
+    {file = "schematicpy-24.1.1-py3-none-any.whl", hash = "sha256:ff49057ed030aa699fabdf5e072172e67a1bc0cf2461c0448afe14a596e68203"},
+    {file = "schematicpy-24.1.1.tar.gz", hash = "sha256:22b7eedb279930fae364b029ce9a8e156db4e775da05a030d7b172e63e22b838"},
 ]
 
 [package.dependencies]
 click = ">=8.0.0,<9.0.0"
 click-log = ">=0.4.0,<0.5.0"
 connexion = {version = ">=2.8.0,<3.0.0", extras = ["swagger-ui"]}
+dataclasses-json = ">=0.6.1,<0.7.0"
 dateparser = ">=1.1.4,<2.0.0"
 Flask = ">=2.0.0,<3.0.0"
 Flask-Cors = ">=3.0.10,<4.0.0"
@@ -4419,6 +4435,21 @@ files = [
 ]
 
 [[package]]
+name = "typing-inspect"
+version = "0.9.0"
+description = "Runtime inspection utilities for typing module."
+optional = false
+python-versions = "*"
+files = [
+    {file = "typing_inspect-0.9.0-py3-none-any.whl", hash = "sha256:9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f"},
+    {file = "typing_inspect-0.9.0.tar.gz", hash = "sha256:b23fc42ff6f6ef6954e4852c1fb512cdd18dbea03134f91f856a95ccc9461f78"},
+]
+
+[package.dependencies]
+mypy-extensions = ">=0.3.0"
+typing-extensions = ">=3.7.4"
+
+[[package]]
 name = "tzdata"
 version = "2023.4"
 description = "Provider of IANA time zone data"
@@ -4683,4 +4714,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9.0,<3.11"
-content-hash = "13791906f0798010c67f034892208092e9efe4246046a21c4739aac4e64358a0"
+content-hash = "bc267667d3d078959b27ebe18de12db0a181b0dc0b505bfc9935c8b3b74c1228"
