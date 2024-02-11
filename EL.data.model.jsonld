@@ -12120,6 +12120,9 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:TRUE"
+                },
+                {
                     "@id": "bts:FALSE"
                 },
                 {
@@ -12133,9 +12136,6 @@
                 },
                 {
                     "@id": "bts:Uknown"
-                },
-                {
-                    "@id": "bts:TRUE"
                 }
             ],
             "sms:displayName": "isPostMortem",
@@ -16225,7 +16225,22 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:False"
+                    "@id": "bts:TRUE"
+                },
+                {
+                    "@id": "bts:FALSE"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Uknown"
                 }
             ],
             "sms:displayName": "isStranded",
@@ -17901,9 +17916,6 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:IsPostMortem"
-                },
-                {
                     "@id": "bts:LibraryVersion"
                 },
                 {
@@ -17938,6 +17950,12 @@
                 },
                 {
                     "@id": "bts:FieldCenterCode"
+                },
+                {
+                    "@id": "bts:IsPostMortem"
+                },
+                {
+                    "@id": "bts:IsStranded"
                 },
                 {
                     "@id": "bts:MsAnalyteType"
@@ -18074,9 +18092,6 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:IsPostMortem"
-                },
-                {
                     "@id": "bts:LibraryVersion"
                 },
                 {
@@ -18111,6 +18126,12 @@
                 },
                 {
                     "@id": "bts:FieldCenterCode"
+                },
+                {
+                    "@id": "bts:IsPostMortem"
+                },
+                {
+                    "@id": "bts:IsStranded"
                 },
                 {
                     "@id": "bts:MsAnalyteType"
@@ -18428,9 +18449,6 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:IsPostMortem"
-                },
-                {
                     "@id": "bts:LifeStage"
                 },
                 {
@@ -18447,6 +18465,12 @@
                 },
                 {
                     "@id": "bts:FieldCenterCode"
+                },
+                {
+                    "@id": "bts:IsPostMortem"
+                },
+                {
+                    "@id": "bts:IsStranded"
                 },
                 {
                     "@id": "bts:MsAnalyteType"
@@ -48776,6 +48800,9 @@
                 },
                 {
                     "@id": "bts:IsPostMortem"
+                },
+                {
+                    "@id": "bts:IsStranded"
                 }
             ],
             "schema:isPartOf": {
@@ -48795,6 +48822,12 @@
                     "@id": "bts:validValue"
                 },
                 {
+                    "@id": "bts:IsPostMortem"
+                },
+                {
+                    "@id": "bts:IsStranded"
+                },
+                {
                     "@id": "bts:DiagnosisStatus"
                 },
                 {
@@ -48802,9 +48835,6 @@
                 },
                 {
                     "@id": "bts:FastingState"
-                },
-                {
-                    "@id": "bts:IsPostMortem"
                 }
             ],
             "schema:isPartOf": {
@@ -49671,9 +49701,6 @@
                 },
                 {
                     "@id": "bts:IsMultiSpecimen"
-                },
-                {
-                    "@id": "bts:IsStranded"
                 }
             ],
             "schema:isPartOf": {
@@ -49694,6 +49721,9 @@
                 },
                 {
                     "@id": "bts:IsPostMortem"
+                },
+                {
+                    "@id": "bts:IsStranded"
                 }
             ],
             "schema:isPartOf": {
@@ -53016,7 +53046,7 @@
         {
             "@id": "bts:YesHasIonizationSource",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Ion charge state (positive or negative-ion analysis)",
+            "rdfs:comment": "When ionProperty = `other`, add your custom value to the cell,Ion charge state (positive or negative-ion analysis)",
             "rdfs:label": "YesHasIonizationSource",
             "rdfs:subClassOf": [
                 {
@@ -53077,7 +53107,7 @@
         {
             "@id": "bts:YesHasIonizationSource?",
             "@type": "rdfs:Class",
-            "rdfs:comment": "When ionProperty = `other`, add your custom value to the cell,When vacuumPressure = `other`, add your custom value to the cell,When vacuumPressureUnit = `other`, add your custom value to the cell,When lensVoltages  = `other`, add your custom value to the cell,When lensVoltagesUnit  = `other`, add your custom value to the cell,When gasFlowTemperature = `other`, add your custom value to the cell,When gasFlowTemperatureUnit = `other`, add your custom value to the cell",
+            "rdfs:comment": "When ionProperty = `other`, add your custom value to the cell,",
             "rdfs:label": "YesHasIonizationSource?",
             "rdfs:subClassOf": [
                 {

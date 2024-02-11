@@ -20,7 +20,6 @@ itables = "^1.6.3"
 lorem = "^0.1.1"
 schematicpy = "^24.1.1"
 
-
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
 mypy = "^1.5.1"
