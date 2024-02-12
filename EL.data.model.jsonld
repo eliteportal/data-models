@@ -1209,9 +1209,6 @@
                     "@id": "bts:ResultUnit"
                 },
                 {
-                    "@id": "bts:RnaBatchID"
-                },
-                {
                     "@id": "bts:SampleIntroduction"
                 },
                 {
@@ -17928,9 +17925,6 @@
                     "@id": "bts:ProtoemicsAssayType"
                 },
                 {
-                    "@id": "bts:RnaBatchID"
-                },
-                {
                     "@id": "bts:SampleIntroduction"
                 },
                 {
@@ -18104,9 +18098,6 @@
                     "@id": "bts:ProtoemicsAssayType"
                 },
                 {
-                    "@id": "bts:RnaBatchID"
-                },
-                {
                     "@id": "bts:SampleIntroduction"
                 },
                 {
@@ -18245,9 +18236,6 @@
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
-                },
-                {
-                    "@id": "bts:RnaBatchID"
                 },
                 {
                     "@id": "bts:SampleIntroduction"
@@ -69025,20 +69013,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:NotSpecified"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "rnaBatchID",
             "sms:required": "sms:true",
             "sms:validationRules": []
