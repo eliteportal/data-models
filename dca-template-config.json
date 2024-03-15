@@ -1,22 +1,22 @@
 {
   "manifest_schemas": [
     {
-      "display_name": "BiospecimenHuman",
-      "schema_name": "BiospecimenHuman",
+      "display_name": "Biospecimen Human",
+      "schema_name": "Biospecimenhuman",
       "type": "record"
     },
     {
-      "display_name": "BiospecimenNonHuman",
+      "display_name": "Biospecimen NonHuman",
       "schema_name": "BiospecimenNonHuman",
       "type": "record"
     },
     {
-      "display_name": "IndividualHuman",
+      "display_name": "Individual Human",
       "schema_name": "IndividualHuman",
       "type": "record"
     },
     {
-      "display_name": "IndividualnonHuman",
+      "display_name": "Individual NonHuman",
       "schema_name": "IndividualnonHuman",
       "type": "record"
     },
@@ -36,7 +36,7 @@
       "type": "file"
     },
     {
-      "display_name": "WholeGenomeSequencing",
+      "display_name": "Whole Genome Sequencing",
       "schema_name": "WholeGenomeSequencing",
       "type": "file"
     },
