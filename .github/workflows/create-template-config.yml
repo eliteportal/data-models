@@ -27,9 +27,9 @@ on:
       data_model:
         description: URL to a jsonld data model file
         required: true
-      file:
-        description: Directory to save the template config
-        required: true
+      # file:
+      #   description: File name path to save the template config
+      #   required: true
       include_schemas:
         description: Space-separated string of schemas to include in output. Must be empty if using exclude_schemas.
         required: false
@@ -40,6 +40,8 @@ on:
 jobs:
   create-template-config:
     runs-on: ubuntu-latest
+    env: 
+      FILE: dca-template-config.json
     steps:
       - uses: actions/checkout@v4
 
@@ -54,7 +56,7 @@ jobs:
         uses: sage-bionetworks/dca-template-config-action@main
         env:
           data_model: ${{ inputs.data_model }}
-          file: ${{ inputs.file }}
+          file: $FILE
           include_schemas: ${{ inputs.include_schemas }}
           exclude_schemas: ${{ inputs.exclude_schemas }}
         

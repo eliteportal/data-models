@@ -22,3 +22,6 @@ _data/manifest_generation_results.txt
 !**/modules/*
 !**/dca-template-config.json
 !**/dca_config.json
+legacy-data-models/old_models
+data/manifest_generation_links.txt
+data/manifest_generation_results.txt
