@@ -26,9 +26,7 @@ This repository includes three submodules
 
 1. data-dictionary
    - For creating a site that displays the data model
-2. data-model-toolbox
-   - Utility functions to create data models
-3. schema_visualization_elite
+2. schema_visualization_elite
    - For visualization of the data model to explore connections
 
 ## Processes
