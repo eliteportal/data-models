@@ -8,7 +8,7 @@ __version__ = "0.1.0"
 __license__ = "MIT"
 __description__ = "Script for turning the csv model into a jsonld model. WARNING: this can take a while to run."
 
-*needs work: needs to generate manifests in `manifest-templates` folder, but it puts the filesl in the main folder.
+*needs work: needs to generate manifests in `manifest-templates` folder, but it puts the files in the main folder.
 
 """
 
@@ -18,9 +18,6 @@ import os
 import synapseclient
 from dotenv import dotenv_values
 from glob import glob
-
-
-# def main():
 
 
 # if __name__ == "main":
@@ -67,7 +64,9 @@ if CREATE_MANIFESTS:
     # generate templates
     for k in manifest_name_relationships.keys():
         os.system(
-            f"schematic manifest --config {config['schematic_config_path']} get -dt {k} --output_xlsx ./manifest-templates/EL.manifest.{k}.xlsx &> manifest-templates/manifest-generation.txt "
+            f"""schematic manifest \
+                --config {config['schematic_config_path']} \
+                get -dt {k} --output_xlsx ./manifest-templates/EL.manifest.{k}.xlsx &> ../tests/manifest-templates/manifest-generation.txt """
         )
 
 # Upload templates
