@@ -1,0 +1,13 @@
+Starting schematic...
+The path_to_data_model argument is being taken from configuration file, i.e., ./EL.data.model.jsonld.
+The title argument is being taken from configuration file, i.e., ./tests/manifest-templates/EL.manifest.
+Parsing data model.
+warning: JSONLD parsing is in Beta Mode. Please inspect outputs carefully and report any errors.
+Generating data model graph.
+file_cache is only supported with oauth2client<4.0.0
+file_cache is only supported with oauth2client<4.0.0
+JSON schema successfully generated from schema.org schema!
+Permission Id: anyoneWithLink
+file_cache is only supported with oauth2client<4.0.0
+file_cache is only supported with oauth2client<4.0.0
+Find the manifest template using this CSV file path: ./EL.data.Biospecimenhuman.manifest.csv
