@@ -10,6 +10,7 @@
 .python-version
 testing/test_files/*
 _data/manifest_generation_results.txt
+**/*.log
 
 # Allowed
 !**/old_models/*.csv
