@@ -42,7 +42,7 @@
     },
     {
       "display_name": "bsSeq",
-      "schema_name": "bsSeq",
+      "schema_name": "BsSeq",
       "type": "file"
     },
     {
@@ -63,6 +63,11 @@
     {
       "display_name": "Computational Tools",
       "schema_name": "ComputationalTools",
+      "type": "file"
+    },
+    {
+      "display_name": "File Annotation Template",
+      "schema_name": "FileAnnotationTemplate",
       "type": "file"
     }
   ],

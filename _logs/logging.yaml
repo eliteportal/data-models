@@ -9,10 +9,9 @@ handlers:
     formatter: simple
     stream: ext://sys.stdout
 loggers:
-  simpleExample:
+  default:
     level: DEBUG
     handlers: [console]
-    propagate: no
 root:
   level: DEBUG
   handlers: [console]
