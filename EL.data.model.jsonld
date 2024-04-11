@@ -16816,6 +16816,9 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:AmnioticFluid"
+                },
+                {
                     "@id": "bts:Appendix"
                 },
                 {
@@ -17075,9 +17078,6 @@
                 },
                 {
                     "@id": "bts:Cellline"
-                },
-                {
-                    "@id": "bts:AmnioticFluid"
                 }
             ],
             "sms:displayName": "sampleType",
@@ -41063,7 +41063,7 @@
             "rdfs:label": "ComputationalTools",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:template"
+                    "@id": "bts:Component"
                 }
             ],
             "schema:isPartOf": {

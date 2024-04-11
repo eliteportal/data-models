@@ -10,7 +10,7 @@ Notes:
 import datetime
 import os
 import pathlib
-
+import re
 import pandas as pd
 import numpy as np
 
@@ -74,3 +74,13 @@ def clean_list(string):
     new_list = [n.strip() for n in new_list if n != "nan"]
     new_list = ",".join(sorted(list(np.unique(new_list)))).strip(",")
     return new_list
+
+
+def get_root_dir(root_dir_name: str):
+    cwd = Path(__file__)
+
+    for p in cwd.parents:
+        if bool(re.search(root_dir_name + "$", str(p))):
+            print(p)
+            root_dir = p
+            return root_dir

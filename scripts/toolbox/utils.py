@@ -135,3 +135,24 @@ def clean_list(string):
     new_list = [n.strip() for n in new_list if n != "nan"]
     new_list = ",".join(sorted(list(np.unique(new_list)))).strip(",")
     return new_list
+
+def compare_dfs(df1, df2, index_keys:list, keys: list) -> pd.DataFrame: 
+
+    # index_keys = ['Attribute']
+    # keys = ['dm', 'new_term']
+
+    # df1 = dm[dm["Attribute"].isin(new_term_df["Attribute"])].dropna(how="all", axis=1)
+    # df2 = new_term_df[new_term_df["Attribute"].isin(dm["Attribute"])].dropna(how = 'all', axis = 1)
+
+    df1 = df1..dropna(how="all", axis=1)
+    df2 = .dropna(how="all", axis=1)
+    
+    df = pd.concat(
+        [df1.set_index(index_keys), df2.set_index(index_keys)],
+        keys=keys,
+        axis=1,
+    ).sort_index(level=1, axis=1)
+    
+    print(df.stack())
+    
+    return df.stack()
