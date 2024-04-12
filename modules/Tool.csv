@@ -1,0 +1,10 @@
+Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType,Notes,multivalue
+contributor,"Name of the contributor(s) associated with the software tool. If there are multiple people, separate them with a comma. ",,,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,"separate values by comma,if multiple",PERM
+DCC,Name of the Data Coordination Center,"ADKP,ELITE",,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,,false
+displayName,Name to be displayed on the portal,,,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,,false
+documentation,Supporting documents related to the tool,,,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,,false
+name,Name of the tool,,,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,,false
+softwareType,Type of application ,"Algorithm, Python package, R object, R package,AnalysisFile,Bioconductor package,Genomics Workflow,OtherSoftwareType,R script,Resource,Web Application",,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,,false
+specifySoftwareType,"If ""OtherSoftwareType"" is selected under software type. Freeform text that can be added by the contributor",,,,False,,,,,Tool,Sage bionetworks,ComputationalTools,STR,If softwareType = other,false
+summary,Description of the tool. ,,,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,"description needs to be ,Needs to be less than 500 characters. Otherwise",false
+url,hyperlink to the tool,,,,True,,,,,Tool,Sage bionetworks,ComputationalTools,STR,,false

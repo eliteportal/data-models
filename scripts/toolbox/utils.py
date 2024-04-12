@@ -10,7 +10,11 @@ Notes:
 import datetime
 import os
 import pathlib
-
+import logging.config
+from pathlib import Path
+from datetime import datetime
+import re
+import yaml
 import pandas as pd
 import numpy as np
 
@@ -97,62 +101,69 @@ def get_time():
     return time_stamp
 
 
-def load_and_backup_dm(file_path: str, output_dir: str):
-    """Create backup of data model with time stamp.
+def add_logger(logger_file_path: str):
+    """Create a logger object to store information to a file"""
+    cwd = Path(__file__).resolve()
 
-    Args:
-        file_path (string):  path to CSV
-    Returns:
-        object: Data frame object
-    """
+    ROOT_DIR_NAME = "ELITE-data-models"
 
-    if not os.path.exists(output_dir):
-        os.mkdir(output_dir)
+    for p in cwd.parents:
+        if bool(re.search(ROOT_DIR_NAME + "$", str(p))):
+            print(p)
+            ROOT_DIR = p
 
-    dm = pd.read_csv(file_path, index_col=False)
+    timestamp = datetime.now().strftime("%Y-%m-%d")
 
-    # write out old data model before changes
-    file_path = pathlib.Path(file_path).stem + "-" + get_time() + ".csv"
+    # Create logger for reports
+    with open(Path(ROOT_DIR, "_logs", "logging.yaml"), "r", encoding="UTF-8") as f:
+        yaml_config = yaml.safe_load(f)
+        logging.config.dictConfig(yaml_config)
 
-    output_path = pathlib.Path(output_dir, file_path)
+    logger = logging.getLogger("default")
 
-    dm.to_csv(output_path, index=False)
+    fh = logging.FileHandler(
+        filename=Path(ROOT_DIR, "_logs", "_".join([timestamp, logger_file_path]))
+    )
+    fh.setFormatter(logger.handlers[0].__dict__["formatter"])
 
-    return dm
+    logger.addHandler(fh)
+
+    return logger
 
 
-def clean_list(string):
-    """Takes a list represented as a string and returns only unique values found
+def get_root_dir(root_dir_name: str):
+    """Find the root directory for a file to get the base of the repo"""
+    cwd = Path(__file__).resolve()
 
-    Args:
-        string (str): list represented as string
+    ROOT_DIR = None
 
-    Returns:
-        string: list as string of unique values
-    """
+    for p in cwd.parents:
+        if bool(re.search(root_dir_name + "$", str(p))):
+            print(p)
+            ROOT_DIR = p
+            return ROOT_DIR
 
-    new_list = string.split(",")
-    new_list = [n.strip() for n in new_list if n != "nan"]
-    new_list = ",".join(sorted(list(np.unique(new_list)))).strip(",")
-    return new_list
+    if ROOT_DIR is None:
+        raise ValueError("No root directory found")
 
-def compare_dfs(df1, df2, index_keys:list, keys: list) -> pd.DataFrame: 
 
-    # index_keys = ['Attribute']
-    # keys = ['dm', 'new_term']
+# def compare_dfs(df1, df2, index_keys:list, keys: list) -> pd.DataFrame:
 
-    # df1 = dm[dm["Attribute"].isin(new_term_df["Attribute"])].dropna(how="all", axis=1)
-    # df2 = new_term_df[new_term_df["Attribute"].isin(dm["Attribute"])].dropna(how = 'all', axis = 1)
+#     # index_keys = ['Attribute']
+#     # keys = ['dm', 'new_term']
 
-    df1 = df1..dropna(how="all", axis=1)
-    df2 = .dropna(how="all", axis=1)
-    
-    df = pd.concat(
-        [df1.set_index(index_keys), df2.set_index(index_keys)],
-        keys=keys,
-        axis=1,
-    ).sort_index(level=1, axis=1)
-    
-    print(df.stack())
-    
-    return df.stack()
+#     # df1 = dm[dm["Attribute"].isin(new_term_df["Attribute"])].dropna(how="all", axis=1)
+#     # df2 = new_term_df[new_term_df["Attribute"].isin(dm["Attribute"])].dropna(how = 'all', axis = 1)
+
+#     df1 = df1..dropna(how="all", axis=1)
+#     df2 = .dropna(how="all", axis=1)
+
+#     df = pd.concat(
+#         [df1.set_index(index_keys), df2.set_index(index_keys)],
+#         keys=keys,
+#         axis=1,
+#     ).sort_index(level=1, axis=1)
+
+#     print(df.stack())
+
+#     return df.stack()
