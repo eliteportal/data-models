@@ -19,15 +19,14 @@ import re
 import argparse
 import numpy as np
 import pandas as pd
+from toolbox import utils
 
-cwd = Path(__file__)
+pd.set_option("future.no_silent_downcasting", True)
 
 ROOT_DIR_NAME = "ELITE-data-models"
+ROOT_DIR = utils.get_root_dir(ROOT_DIR_NAME)
 
-for p in cwd.parents:
-    if bool(re.search(ROOT_DIR_NAME + "$", str(p))):
-        print(p)
-        ROOT_DIR = p
+logger = utils.add_logger("add_new_term.log")
 
 
 def combine_str_cols(df, combo_col):
@@ -85,6 +84,9 @@ def combine_dataframes(
 
     df.index = df.index.set_names(["Attribute", "column"])
 
+    print("--- Differences between data model and new term ---")
+    print(df)
+
     df = combine_str_cols(df, "Valid Values")
     df = combine_str_cols(df, "Ontology")
     df = combine_str_cols(df, "UsedIn")
@@ -98,17 +100,23 @@ def combine_dataframes(
 
     dm_unstacked = dm_stacked.unstack()
 
+    dm_unstacked = dm_unstacked.reset_index()
+
+    logger.info("Combined data model with new term")
+
     return dm_unstacked
 
 
 def update_data_model(new_dm: pd.DataFrame, output_path: str) -> None:
     """
-    Writes out the new data model
+    Writes out the new data model if users wants, otherwise it writes a staging data model
     """
     update_dm = str(input("Update data model? y/[n]: ") or "n")
 
     if update_dm == "y":
-        new_dm.to_csv(Path(ROOT_DIR, output_path))
+        csv_path = Path(ROOT_DIR, output_path)
+        logger.info("Updating data model. New data model at: %s", csv_path)
+        new_dm.to_csv(csv_path)
 
         # create the updated data model
         proc = subprocess.Popen(
@@ -121,6 +129,12 @@ def update_data_model(new_dm: pd.DataFrame, output_path: str) -> None:
             print("Success!")
         else:
             print("FAIL")
+
+    else:
+        # create temp data model
+        staging_path = Path(ROOT_DIR, "staging." + output_path)
+        logger.info("Creating staging data model at: %s", staging_path)
+        new_dm.to_csv(staging_path, index=False)
 
 
 def main(arguments):

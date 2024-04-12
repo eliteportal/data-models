@@ -1,8 +1,9 @@
 """ Join the data model modules """
 
-import glob
+from glob import glob
 import pandas as pd
-import pathlib
+from pathlib import Path
+from toolbox import utils
 
 
 def join_data_model_partitions(partition_path):
@@ -14,7 +15,7 @@ def join_data_model_partitions(partition_path):
     Returns:
         object: pandas dataframe
     """
-    modules = glob.glob(partition_path)
+    modules = glob(partition_path)
 
     data_model = (
         pd.concat([pd.read_csv(m) for m in modules])
@@ -23,18 +24,22 @@ def join_data_model_partitions(partition_path):
         .fillna("")
     )
 
+    print("Data model shape BEFORE cleaning: ", data_model.shape)
     data_model.drop_duplicates(subset=["Attribute"], inplace=True)
     data_model.reset_index(drop=True, inplace=True)
+    print("Data model shape AFTER cleaning: ", data_model.shape)
 
     return data_model
 
 
-if __name__ == "main":
-    root_dir = pathlib.Path(__file__).parent.parent
+if __name__ == "__main__":
+
+    root_dir_name = "ELITE-data-models"
+    root_dir = utils.get_root_dir(root_dir_name)
 
     module_pattern = root_dir.resolve()._str + "/modules/*.csv"
 
-    file_path = pathlib.Path(root_dir, "EL.data.model.csv")
+    file_path = Path(root_dir, "staging.EL.data.model.csv")
 
     dm = join_data_model_partitions(module_pattern)
 
