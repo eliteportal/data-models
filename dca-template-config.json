@@ -33,7 +33,7 @@
         {
             "display_name": "genotyping_assay",
             "schema_name": "GenotypingAssay",
-            "type": NaN
+            "type": "file"
         },
         {
             "display_name": "Individual Human",
