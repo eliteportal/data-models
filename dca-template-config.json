@@ -26,11 +26,6 @@
             "type": "file"
         },
         {
-            "display_name": "genotyping",
-            "schema_name": "Genotyping",
-            "type": "file"
-        },
-        {
             "display_name": "genotyping_assay",
             "schema_name": "GenotypingAssay",
             "type": "file"
