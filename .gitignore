@@ -11,6 +11,7 @@
 testing/test_files/*
 _data/manifest_generation_results.txt
 **/*.log
+**/legacy-data-models
 
 # Allowed
 !**/old_models/*.csv
@@ -26,3 +27,4 @@ _data/manifest_generation_results.txt
 legacy-data-models/old_models
 data/manifest_generation_links.txt
 data/manifest_generation_results.txt
+.synapseConfig

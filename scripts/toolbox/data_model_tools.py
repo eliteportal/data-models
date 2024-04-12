@@ -1,8 +1,59 @@
-import os
-from thefuzz import fuzz
+import subprocess
 import re
-import yaml
-import pathlib
+from thefuzz import fuzz
+
+
+def fuzzy_matching(value_list: list):
+    # Fuzzy matching to find misspellings
+    scores = {}
+    for v in value_list:
+        scores[v] = {}
+        for v2 in value_list:
+            if v == v2:
+                next
+            else:
+                score = fuzz.ratio(v.lower(), v2.lower())
+                if score == 100:
+                    scores[v][v2] = score
+        if len(scores[v]) == 0:
+            scores.pop(v)
+
+    return scores
+
+
+def convert_dm_to_json(csv_model_path, json_model_path, ROOT_DIR):
+    proc = subprocess.Popen(
+        f"schematic schema convert {csv_model_path} --output_jsonld {json_model_path}",
+        shell=True,
+        cwd=ROOT_DIR,
+    )
+
+    print(proc.communicate())
+
+
+def clean_list(string):
+    """Takes a list represented as a string and returns only unique values found
+
+    Args:
+        string (str): list represented as string
+
+    Returns:
+        list: list of unique values
+    """
+
+    new_list = string.split(",")
+    new_list = [n.strip() for n in new_list]
+    new_list = list(np.unique(new_list))
+    return new_list
+
+
+def check_special_chars(dm):
+    pattern = "\(|\)|\?|/|-"
+    results = dm[["Attribute", "Valid Values"]].apply(
+        lambda x: sum(x.str.contains(pattern))
+    )
+    print(results)
+
 
 # used to fix values in data model
 recoder = {
@@ -69,58 +120,3 @@ keep_cols = [
     "Type",
     "Ontology",
 ]
-
-with open("./local_configs/notebook_config.yaml", "r") as f:
-    config = yaml.safe_load(f)
-
-csv_model = pathlib.Path("../" + config["file_names"]["csv_model"]).resolve()
-json_model = pathlib.Path("../" + config["file_names"]["json_model"]).resolve()
-
-# fuzzy matching
-# Fuzzy matching to find misspellings
-# Fuzzy matching
-
-
-def fuzzy_matching(value_list: list):
-    scores = {}
-    for v in value_list:
-        scores[v] = {}
-        for v2 in value_list:
-            if v == v2:
-                next
-            else:
-                score = fuzz.ratio(v.lower(), v2.lower())
-                if score == 100:
-                    scores[v][v2] = score
-        if len(scores[v]) == 0:
-            scores.pop(v)
-
-    return scores
-
-
-def convert_dm_to_json(csv_model, json_model):
-    os.system(f"schematic schema convert {csv_model} --output_jsonld {json_model}")
-
-
-# Clean list columns into single string
-def join_strings(string):
-    try:
-        return ",".join(string)
-    except:
-        return ""
-
-
-def clean_list(string):
-    """Takes a list represented as a string and returns only unique values found
-
-    Args:
-        string (str): list represented as string
-
-    Returns:
-        list: list of unique values
-    """
-
-    new_list = string.split(",")
-    new_list = [n.strip() for n in new_list]
-    new_list = list(np.unique(new_list))
-    return new_list
