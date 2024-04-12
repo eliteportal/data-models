@@ -17,6 +17,8 @@ def join_data_model_partitions(partition_path):
     """
     modules = glob(partition_path)
 
+    print(modules)
+
     data_model = (
         pd.concat([pd.read_csv(m) for m in modules])
         .sort_values(by=["Module", "Attribute"])
@@ -35,11 +37,12 @@ def join_data_model_partitions(partition_path):
 if __name__ == "__main__":
 
     root_dir_name = "ELITE-data-models"
+
     root_dir = utils.get_root_dir(root_dir_name)
 
     module_pattern = root_dir.resolve()._str + "/modules/*.csv"
 
-    file_path = Path(root_dir, "staging.EL.data.model.csv")
+    file_path = Path(root_dir, "EL.data.model.csv")
 
     dm = join_data_model_partitions(module_pattern)
 
