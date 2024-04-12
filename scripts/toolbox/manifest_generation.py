@@ -1,10 +1,15 @@
-import lorem
-import random
+""" 
+Functions used to help generate manifests to test against the data model
+"""
+
 import string
+import random
+import lorem
 import numpy as np
 
 
 def valid_values_to_list(df, attribute):
+    """ """
     valid_values = (
         df.query(f'Attribute == "{attribute}"')["Valid Values"].str.split(",").values[0]
     )
@@ -13,18 +18,22 @@ def valid_values_to_list(df, attribute):
 
 
 def get_random_value(list_of_vv):
+    """ """
     return random.choice(list_of_vv)
 
 
 def get_rand_integer(min=0, max=100):
+    """ """
     return random.randint(min, max)
 
 
 def get_rand_float(min=0, max=100):
+    """ """
     return round(random.uniform(0.0, 100.0), 2)
 
 
 def get_random_string():
+    """ """
     t = lorem.sentence().split(" ")[0]
     return t
 
@@ -50,22 +59,23 @@ def introduce_random_NAs(df, N=5):
 
 # find attribute column, fill in with value
 def fill_in_attribute(df, index, attribute, value):
+    """ """
     df.loc[index, attribute] = value
     return df
 
 
 def gen_mixed_string_with_length(N=12):
+    """ """
     # initializing size of string
-
-    # using random.choices()
     # generating random strings
+
     res = "".join(random.choices(string.ascii_uppercase + string.digits, k=N))
 
-    # print result
     return res
 
 
 def random_change():
+    """ """
     # list of functions to choose from
     choices = [
         introduce_random_NAs,
@@ -83,5 +93,8 @@ def random_change():
 
 
 def partition(list_in, n):
+    """..."""
+
     random.shuffle(list_in)
+
     return [list_in[i::n] for i in range(n)]
