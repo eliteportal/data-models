@@ -54543,6 +54543,9 @@
                     "@id": "bts:Component"
                 },
                 {
+                    "@id": "bts:Filename"
+                },
+                {
                     "@id": "bts:ConversionRatio"
                 },
                 {
@@ -54664,9 +54667,6 @@
                 },
                 {
                     "@id": "bts:TotalReads"
-                },
-                {
-                    "@id": "bts:Filename"
                 }
             ],
             "sms:validationRules": []
