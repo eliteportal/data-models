@@ -13,12 +13,12 @@
         {
             "display_name": "bsSeq",
             "schema_name": "BsSeq",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "ComputationalTools",
             "schema_name": "ComputationalTools",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "file_annotation_template",
@@ -28,7 +28,7 @@
         {
             "display_name": "genotyping_assay",
             "schema_name": "GenotypingAssay",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "Individual Human",
@@ -43,32 +43,32 @@
         {
             "display_name": "Metabolomics",
             "schema_name": "Metabolomics",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "Microbiome",
             "schema_name": "Microbiome",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "proteomics",
             "schema_name": "Proteomics",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "RNAseq",
             "schema_name": "RNAseq",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "scRNAseq",
             "schema_name": "ScRNAseq",
-            "type": "file"
+            "type": "record"
         },
         {
             "display_name": "Whole Genome Sequencing",
             "schema_name": "WholeGenomeSequencing",
-            "type": "file"
+            "type": "record"
         }
     ],
     "service_version": "v23.1.1",
