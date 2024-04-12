@@ -22,7 +22,7 @@ manifest:
   # Location where manifests will saved to
   manifest_folder: "./tests/manifest-templates/"
   # Title or title prefix given to generated manifest(s)
-  title: "./EL.manifest"
+  title: "EL.manifest"
   # Data types of manifests to be generated or data type (singular) to validate manifest against
   data_type:
     - "Biospecimenhuman"
@@ -30,7 +30,7 @@ manifest:
 # Describes the location of your schema
 model:
   # Location of your schema jsonld, it must be a path relative to this file or absolute
-  location: "./EL.data.model.jsonld"
+  location: "EL.data.model.jsonld"
 
 # This section is for using google sheets with Schematic
 google_sheets:
