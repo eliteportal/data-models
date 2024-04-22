@@ -27,4 +27,4 @@ _data/manifest_generation_results.txt
 legacy-data-models/old_models
 data/manifest_generation_links.txt
 data/manifest_generation_results.txt
-.synapseConfig
+!**/manifest-templates/*
