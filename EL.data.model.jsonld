@@ -10349,10 +10349,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:AcquisitionBatchID"
@@ -10535,9 +10535,6 @@
                     "@id": "bts:SpecifyVacuumPressueUnits"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:SpectrometerFrequency"
                 },
                 {
@@ -10548,6 +10545,9 @@
                 },
                 {
                     "@id": "bts:VacuumPressureUnit"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -10623,10 +10623,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:AcquisitionMode"
@@ -10779,13 +10779,13 @@
                     "@id": "bts:SpecifySampleType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:SpectrometerFrequency"
                 },
                 {
                     "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -49042,7 +49042,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:IndividualID"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:CellType"
@@ -49066,9 +49069,6 @@
                     "@id": "bts:SpecimenAge"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:SpecimenSource"
                 },
                 {
@@ -49084,26 +49084,9 @@
                     "@id": "bts:TissueWeight"
                 },
                 {
-                    "@id": "bts:IndividualID"
+                    "@id": "bts:Component"
                 }
             ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Component",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Component",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Component",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -53342,6 +53325,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Component",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Component",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Component",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:BiospecimennonHuman",
             "@type": "rdfs:Class",
             "rdfs:comment": "Metadata template used for contributing metadata to the ELITE portal",
@@ -53358,7 +53358,7 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:IndividualID"
                 },
                 {
                     "@id": "bts:Assay"
@@ -53418,7 +53418,7 @@
                     "@id": "bts:TissueWeight"
                 },
                 {
-                    "@id": "bts:IndividualID"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -53525,9 +53525,6 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
-                },
-                {
                     "@id": "bts:DCC"
                 },
                 {
@@ -53556,6 +53553,9 @@
                 },
                 {
                     "@id": "bts:Url"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -53790,7 +53790,7 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:IndividualID"
                 },
                 {
                     "@id": "bts:Age"
@@ -53835,7 +53835,7 @@
                     "@id": "bts:VisitCode"
                 },
                 {
-                    "@id": "bts:IndividualID"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -53897,7 +53897,7 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:IndividualID"
                 },
                 {
                     "@id": "bts:CaptivityDuration"
@@ -53933,7 +53933,7 @@
                     "@id": "bts:Taxon"
                 },
                 {
-                    "@id": "bts:IndividualID"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -54016,7 +54016,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:DnaBatchID"
@@ -54106,16 +54109,13 @@
                     "@id": "bts:SpecifySequencingBatchSizeUnit"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
                     "@id": "bts:TotalReads"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -54137,7 +54137,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:IsStranded"
@@ -54203,9 +54206,6 @@
                     "@id": "bts:SpecifyTranscriptType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
@@ -54218,7 +54218,7 @@
                     "@id": "bts:ValueReported"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -54422,7 +54422,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:IsStranded"
@@ -54503,9 +54506,6 @@
                     "@id": "bts:SpecifyTranscriptType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
@@ -54518,7 +54518,7 @@
                     "@id": "bts:ValueReported"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -54540,10 +54540,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:ConversionRatio"
@@ -54660,13 +54660,13 @@
                     "@id": "bts:SpecifySequencingBatchSizeUnit"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
                     "@id": "bts:TotalReads"
+                },
+                {
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []
@@ -54997,9 +54997,6 @@
                     "@id": "bts:Assay"
                 },
                 {
-                    "@id": "bts:Chromosome"
-                },
-                {
                     "@id": "bts:Consortium"
                 },
                 {
@@ -55039,23 +55036,6 @@
                     "@id": "bts:Component"
                 }
             ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Chromosome",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Chromosome",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "chromosome",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -55682,7 +55662,10 @@
             "sms:required": "sms:true",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:Component"
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
                 },
                 {
                     "@id": "bts:IsStranded"
@@ -55781,9 +55764,6 @@
                     "@id": "bts:SpecifyTranscriptType"
                 },
                 {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:TechnologyPlatformVersion"
                 },
                 {
@@ -55796,7 +55776,7 @@
                     "@id": "bts:ValueReported"
                 },
                 {
-                    "@id": "bts:Filename"
+                    "@id": "bts:Component"
                 }
             ],
             "sms:validationRules": []

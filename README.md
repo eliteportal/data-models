@@ -31,19 +31,20 @@ This repository includes three submodules
 
 ## Processes
 
-### Create a New JSONLD data model
+### Updating data model
 
-Run `scripts/convert_csv_to_json.py`
+- Make changes to the CSV files in the `./modules/` directory
+- Run `sh ./scripts/update_data_model.sh` to join the CSV modules together, update the data model CSV and JSON-LD
 
 ### Create Data Model Visualization Tree
 
 [Schematic API](https://schematic.api.sagebionetworks.org/v1/ui/)
 [Visualization Repository](https://github.com/Sage-Bionetworks/schema_visualization)
 
+- Creates a network graph of the data model. Aim is to help see connections between components.
+
 # Updates
 
 `./change-log.md`
 
 ## To Do
-
-- [ ] Organize directories/files
