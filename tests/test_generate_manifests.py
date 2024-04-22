@@ -137,7 +137,7 @@ if __name__ == "__main__":
 
     # if everything passes then remake DCA config
     if manifest_generation_results["generation_test"].all():
-        proc = subprocess.Popen("python update_dca_config.py", shell=True, cwd=ROOT_DIR)
+        proc = subprocess.Popen("python ./tests/update_dca_config.py", shell=True, cwd=ROOT_DIR)
 
         print(proc.communicate())
         if proc.returncode == 0:
