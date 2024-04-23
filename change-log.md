@@ -1,5 +1,9 @@
 # Change Log
 
+## 2024-04-23
+
+Updated all template names to be lowercase and have the suffix "_template".
+
 ## 2024-01-19
 
 Changes:

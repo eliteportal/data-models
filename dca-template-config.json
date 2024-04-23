@@ -1,23 +1,23 @@
 {
     "manifest_schemas": [
         {
-            "display_name": "Biospecimen human",
-            "schema_name": "Biospecimenhuman",
+            "display_name": "biospecimen_human_template",
+            "schema_name": "BiospecimenHumanTemplate",
             "type": "record"
         },
         {
-            "display_name": "Biospecimen nonHuman",
-            "schema_name": "BiospecimennonHuman",
+            "display_name": "biospecimen_non_human_template",
+            "schema_name": "BiospecimenNonHumanTemplate",
             "type": "record"
         },
         {
-            "display_name": "bsSeq",
-            "schema_name": "BsSeq",
+            "display_name": "bsSeq_assay_template",
+            "schema_name": "BsSeqAssayTemplate",
             "type": "file"
         },
         {
-            "display_name": "ComputationalTools",
-            "schema_name": "ComputationalTools",
+            "display_name": "computational_tools_template",
+            "schema_name": "ComputationalToolsTemplate",
             "type": "file"
         },
         {
@@ -31,46 +31,41 @@
             "type": "file"
         },
         {
-            "display_name": "Individual Human",
-            "schema_name": "IndividualHuman",
+            "display_name": "individual_human_template",
+            "schema_name": "IndividualHumanTemplate",
             "type": "record"
         },
         {
-            "display_name": "Individual nonHuman",
-            "schema_name": "IndividualnonHuman",
-            "type": "record"
+            "display_name": "individual_non_human_template",
+            "schema_name": "IndividualNonHumanTemplate",
+            "type": "recod"
         },
         {
-            "display_name": "Metabolomics",
-            "schema_name": "Metabolomics",
+            "display_name": "metabolomics_assay_template",
+            "schema_name": "MetabolomicsAssayTemplate",
             "type": "file"
         },
         {
-            "display_name": "Microbiome",
-            "schema_name": "Microbiome",
+            "display_name": "microbiome_assay_template",
+            "schema_name": "MicrobiomeAssayTemplate",
             "type": "file"
         },
         {
-            "display_name": "proteomics",
-            "schema_name": "Proteomics",
+            "display_name": "proteomics_assay_template",
+            "schema_name": "ProteomicsAssayTemplate",
             "type": "file"
         },
         {
-            "display_name": "RNAseq",
-            "schema_name": "RNAseq",
+            "display_name": "scRNAseq_assay_template",
+            "schema_name": "ScRNAseqAssayTemplate",
             "type": "file"
         },
         {
-            "display_name": "scRNAseq",
-            "schema_name": "ScRNAseq",
-            "type": "file"
-        },
-        {
-            "display_name": "Whole Genome Sequencing",
-            "schema_name": "WholeGenomeSequencing",
+            "display_name": "whole_genome_sequencing_assay_template",
+            "schema_name": "WholeGenomeSequencingAssayTemplate",
             "type": "file"
         }
     ],
     "service_version": "v23.1.1",
-    "schema_version": "v1.6"
+    "schema_version": "v1.72"
 }
