@@ -1,5 +1,5 @@
 Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType,Notes,multivalue
 Days,,,,,False,MeasurementUnit,,,,Unit,,,NUMERIC,,
-g/dl,,,,,False,ValidValue,,,,Unit,,,NUMERIC,,
 Hours,,,,,False,MeasurementUnit,,,,Unit,,,NUMERIC,,
 Months,,,,,False,ValidValue,,,,Unit,,,NUMERIC,,
+g/dl,,,,,False,ValidValue,,,,Unit,,,NUMERIC,,

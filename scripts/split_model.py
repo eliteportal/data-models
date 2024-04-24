@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     root_dir = utils.get_root_dir(ROOT_DIR_NAME)
 
-    dm_name = Path(root_dir, "staging.EL.data.model.csv")
+    dm_name = Path(root_dir, "EL.data.model.csv")
 
     data_model = pd.read_csv(Path(root_dir, "EL.data.model.csv"))
 

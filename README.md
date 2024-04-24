@@ -8,7 +8,21 @@ This repository contains 3 major files:
 
 3. `config.yml`: The schematic-compatible configuration file, which allows users to specify values for application-specific keys (e.g., path to Synapse configuration file) and project-specific keys (e.g., Synapse fileview for community project). A description of what the various keys in this file represent can be found in the [Fill in Configuration File(s)](https://sage-schematic.readthedocs.io/en/develop/README.html#fill-in-configuration-file-s) section of the schematic [docs](https://sage-schematic.readthedocs.io/en/develop/index.html).
 
-## Requirements
+## Processes
+
+### Updating data model
+
+- Make changes to the CSV files in the `./modules/` directory
+- Run `sh ./scripts/update_data_model.sh` to join the CSV modules together, update the data model CSV and JSON-LD
+
+### Create Data Model Visualization Tree
+
+[Schematic API](https://schematic.api.sagebionetworks.org/v1/ui/)
+[Visualization Repository](https://github.com/Sage-Bionetworks/schema_visualization)
+
+- Creates a network graph of the data model. Aim is to help see connections between components.
+
+## Developers
 
 Software packages installed
 
@@ -29,22 +43,10 @@ This repository includes three submodules
 2. schema_visualization_elite
    - For visualization of the data model to explore connections
 
-## Processes
-
-### Updating data model
-
-- Make changes to the CSV files in the `./modules/` directory
-- Run `sh ./scripts/update_data_model.sh` to join the CSV modules together, update the data model CSV and JSON-LD
-
-### Create Data Model Visualization Tree
-
-[Schematic API](https://schematic.api.sagebionetworks.org/v1/ui/)
-[Visualization Repository](https://github.com/Sage-Bionetworks/schema_visualization)
-
-- Creates a network graph of the data model. Aim is to help see connections between components.
-
 # Updates
 
 `./change-log.md`
 
 ## To Do
+
+- [ ] 
