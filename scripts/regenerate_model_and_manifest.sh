@@ -4,10 +4,10 @@ set -e
 
 # MANIFEST='BiospecimenNonHuman'
 
-# date "+%H:%M:%S   %d/%m/%y"
-# schematic schema convert ./EL.data.model.csv \
-#   --output_jsonld ./EL.data.model.jsonld
-# date "+%H:%M:%S   %d/%m/%y"
+date "+%H:%M:%S   %d/%m/%y"
+schematic schema convert ./EL.data.model.csv \
+  --output_jsonld ./EL.data.model.jsonld
+date "+%H:%M:%S   %d/%m/%y"
 
 for MANIFEST in 'Biospecimenhuman'; do
   echo -- $MANIFEST

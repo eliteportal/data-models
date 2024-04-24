@@ -1222,13 +1222,7 @@
                     "@id": "bts:validValue"
                 },
                 {
-                    "@id": "bts:CaptivityDuration"
-                },
-                {
                     "@id": "bts:CaptivityStatus"
-                },
-                {
-                    "@id": "bts:SpeciesAge"
                 },
                 {
                     "@id": "bts:DigestionMethod"
@@ -1240,25 +1234,10 @@
                     "@id": "bts:NucleicAcidSource"
                 },
                 {
-                    "@id": "bts:TissueVolume"
-                },
-                {
-                    "@id": "bts:TissueWeight"
-                },
-                {
-                    "@id": "bts:CaptiveCaptivityStatus"
-                },
-                {
                     "@id": "bts:DirectionalBSseqLibrary"
                 },
                 {
-                    "@id": "bts:LibraryVersion"
-                },
-                {
                     "@id": "bts:SequencingBatchID"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
                 },
                 {
                     "@id": "bts:DiagnosisStatus"
@@ -1274,9 +1253,6 @@
                 },
                 {
                     "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:SampleIntroduction"
                 },
                 {
                     "@id": "bts:Sex"
@@ -1395,13 +1371,7 @@
                     "@id": "bts:SpecimenSource"
                 },
                 {
-                    "@id": "bts:CaptivityDuration"
-                },
-                {
                     "@id": "bts:CaptivityStatus"
-                },
-                {
-                    "@id": "bts:SpeciesAge"
                 },
                 {
                     "@id": "bts:DigestionMethod"
@@ -1413,25 +1383,10 @@
                     "@id": "bts:NucleicAcidSource"
                 },
                 {
-                    "@id": "bts:TissueVolume"
-                },
-                {
-                    "@id": "bts:TissueWeight"
-                },
-                {
-                    "@id": "bts:CaptiveCaptivityStatus"
-                },
-                {
                     "@id": "bts:DirectionalBSseqLibrary"
                 },
                 {
-                    "@id": "bts:LibraryVersion"
-                },
-                {
                     "@id": "bts:SequencingBatchID"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
                 },
                 {
                     "@id": "bts:DiagnosisStatus"
@@ -1447,9 +1402,6 @@
                 },
                 {
                     "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:SampleIntroduction"
                 },
                 {
                     "@id": "bts:Sex"
@@ -1550,46 +1502,22 @@
                     "@id": "bts:validValue"
                 },
                 {
-                    "@id": "bts:CaptivityDuration"
-                },
-                {
-                    "@id": "bts:SpeciesAge"
-                },
-                {
                     "@id": "bts:EnrichmentMethod"
                 },
                 {
                     "@id": "bts:SpecimenSource"
                 },
                 {
-                    "@id": "bts:TissueVolume"
-                },
-                {
-                    "@id": "bts:TissueWeight"
-                },
-                {
-                    "@id": "bts:CaptiveCaptivityStatus"
-                },
-                {
                     "@id": "bts:DirectionalBSseqLibrary"
                 },
                 {
-                    "@id": "bts:LibraryVersion"
-                },
-                {
                     "@id": "bts:SequencingBatchID"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
                 },
                 {
                     "@id": "bts:DiagnosisStatus"
                 },
                 {
                     "@id": "bts:ExtractionMethod"
-                },
-                {
-                    "@id": "bts:SampleIntroduction"
                 },
                 {
                     "@id": "bts:DigestionMethod"
@@ -2790,22 +2718,13 @@
                     "@id": "bts:validValue"
                 },
                 {
-                    "@id": "bts:LibraryVersion"
-                },
-                {
                     "@id": "bts:SequencingBatchID"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
                 },
                 {
                     "@id": "bts:ExtractionMethod"
                 },
                 {
                     "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:SampleIntroduction"
                 },
                 {
                     "@id": "bts:ResultUnit"
@@ -5433,9 +5352,6 @@
                     "@id": "bts:MsAnalyteType"
                 },
                 {
-                    "@id": "bts:SampleIntroduction"
-                },
-                {
                     "@id": "bts:SpeciesGroup"
                 },
                 {
@@ -6389,50 +6305,8 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:NotSpecified"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:OtherLibraryVersion"
-                }
-            ],
             "sms:displayName": "libraryVersion",
             "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OtherLibraryVersion",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "If \"other\" list the name of the library version",
-            "rdfs:label": "OtherLibraryVersion",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:validValue"
-                },
-                {
-                    "@id": "bts:LibraryVersion"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "OtherLibraryVersion",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:SpecifyLibraryVersion"
-                }
-            ],
             "sms:validationRules": []
         },
         {
@@ -18977,17 +18851,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "captivityDuration",
             "sms:required": "sms:false",
             "sms:validationRules": []
@@ -19088,17 +18951,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "CaptiveCaptivityStatus",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
@@ -25319,50 +25171,8 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:NotSpecified"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:OtherDatabaseSource"
-                }
-            ],
             "sms:displayName": "databaseSource",
             "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OtherDatabaseSource",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "If \"other\" list the name of the database source",
-            "rdfs:label": "OtherDatabaseSource",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:validValue"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "OtherDatabaseSource",
-            "sms:required": "sms:false",
-            "sms:requiresDependency": [
-                {
-                    "@id": "bts:SpecifyDatabaseSource"
-                }
-            ],
             "sms:validationRules": []
         },
         {
@@ -35056,23 +34866,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:NotSpecified"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                },
-                {
-                    "@id": "bts:Other"
-                }
-            ],
             "sms:displayName": "sampleIntroduction",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -36997,17 +36790,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "speciesAge",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -47980,6 +47762,28 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:OtherDatabaseSource",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the database source",
+            "rdfs:label": "OtherDatabaseSource",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:validValue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "OtherDatabaseSource",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyDatabaseSource"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:SpecifyDatabaseSource",
             "@type": "rdfs:Class",
             "rdfs:comment": "If \"other\" list the name of the database source",
@@ -48221,6 +48025,28 @@
             },
             "sms:displayName": "specifyLibraryPreparationMethod",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:OtherLibraryVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "If \"other\" list the name of the library version",
+            "rdfs:label": "OtherLibraryVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:validValue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "OtherLibraryVersion",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:SpecifyLibraryVersion"
+                }
+            ],
             "sms:validationRules": []
         },
         {
@@ -53281,17 +53107,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "tissueVolume",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -53309,17 +53124,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "tissueWeight",
             "sms:required": "sms:true",
             "sms:validationRules": []
