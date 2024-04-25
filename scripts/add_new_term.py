@@ -58,6 +58,7 @@ def combine_dataframes(
         .set_index(index_keys)
         .sort_index()
     )
+    
     df2 = (
         new_term_df[new_term_df["Attribute"].isin(data_model_df["Attribute"])]
         .set_index(index_keys)

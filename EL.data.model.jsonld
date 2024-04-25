@@ -10503,6 +10503,126 @@
                     "@id": "bts:SpecimenID"
                 },
                 {
+                    "@id": "bts:SampleType"
+                },
+                {
+                    "@id": "bts:SpecifySampleType"
+                },
+                {
+                    "@id": "bts:ExperimentType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:SpecifyPlatformLocation"
+                },
+                {
+                    "@id": "bts:InstrumentModel"
+                },
+                {
+                    "@id": "bts:SamplePrepProtocol"
+                },
+                {
+                    "@id": "bts:DataFile"
+                },
+                {
+                    "@id": "bts:DatabaseSource"
+                },
+                {
+                    "@id": "bts:DatabaseWeblink"
+                },
+                {
+                    "@id": "bts:DatabaseName"
+                },
+                {
+                    "@id": "bts:ModificationParameters"
+                },
+                {
+                    "@id": "bts:QuantationStrategy"
+                },
+                {
+                    "@id": "bts:LabelQuantitation"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:SpecifyLabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:IsobaricLabelingReagent"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS1"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS1"
+                },
+                {
+                    "@id": "bts:MsAnalyzerTypeMS2"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyzerTypeMS2"
+                },
+                {
+                    "@id": "bts:MsAssayTechnique"
+                },
+                {
+                    "@id": "bts:SpecifyMSAssayTechnique"
+                },
+                {
+                    "@id": "bts:MsAnalyteType"
+                },
+                {
+                    "@id": "bts:SpecifyMSAnalyteType"
+                },
+                {
+                    "@id": "bts:SpecifyProteomicsAssayType"
+                },
+                {
+                    "@id": "bts:SpecifyMSInstrumentModel"
+                },
+                {
+                    "@id": "bts:DigestionMethod"
+                },
+                {
+                    "@id": "bts:SpecifyDigestionMethod"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
+                },
+                {
+                    "@id": "bts:SpecifyDigestionReagent"
+                },
+                {
+                    "@id": "bts:FractionIdentifier"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:SpecifyEnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:Enrichment"
+                },
+                {
                     "@id": "bts:AcquisitionMode"
                 },
                 {
@@ -10512,127 +10632,13 @@
                     "@id": "bts:AcquistionSoftwareVersion"
                 },
                 {
-                    "@id": "bts:CleavageAgents"
-                },
-                {
-                    "@id": "bts:DataFile"
-                },
-                {
-                    "@id": "bts:DatabaseName"
-                },
-                {
-                    "@id": "bts:DatabaseSource"
-                },
-                {
-                    "@id": "bts:DatabaseWeblink"
-                },
-                {
-                    "@id": "bts:DigestionMethod"
-                },
-                {
-                    "@id": "bts:DigestionReagent"
-                },
-                {
-                    "@id": "bts:Enrichment"
-                },
-                {
-                    "@id": "bts:EnrichmentStrategy"
-                },
-                {
-                    "@id": "bts:ExperimentType"
-                },
-                {
-                    "@id": "bts:FractionIdentifier"
-                },
-                {
-                    "@id": "bts:FragmentMassTolerance"
-                },
-                {
-                    "@id": "bts:InstrumentModel"
-                },
-                {
-                    "@id": "bts:IsobaricLabelingReagent"
-                },
-                {
-                    "@id": "bts:LabelFreeQuantitation"
-                },
-                {
-                    "@id": "bts:LabelQuantitation"
-                },
-                {
-                    "@id": "bts:MeasurementTechnique"
-                },
-                {
-                    "@id": "bts:ModificationParameters"
-                },
-                {
-                    "@id": "bts:MsAnalyteType"
-                },
-                {
-                    "@id": "bts:MsAnalyzerTypeMS1"
-                },
-                {
-                    "@id": "bts:MsAnalyzerTypeMS2"
-                },
-                {
-                    "@id": "bts:MsAssayTechnique"
-                },
-                {
-                    "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:PlatformLocation"
-                },
-                {
-                    "@id": "bts:PrecursorMassTolerance"
-                },
-                {
-                    "@id": "bts:QuantationStrategy"
-                },
-                {
-                    "@id": "bts:SamplePrepProtocol"
-                },
-                {
-                    "@id": "bts:SampleType"
-                },
-                {
                     "@id": "bts:SpecifyDatabaseName"
                 },
                 {
                     "@id": "bts:SpecifyDatabaseSource"
                 },
                 {
-                    "@id": "bts:SpecifyDigestionMethod"
-                },
-                {
-                    "@id": "bts:SpecifyDigestionReagent"
-                },
-                {
-                    "@id": "bts:SpecifyEnrichmentStrategy"
-                },
-                {
-                    "@id": "bts:SpecifyLabelFreeQuantitation"
-                },
-                {
-                    "@id": "bts:SpecifyMSAnalyteType"
-                },
-                {
-                    "@id": "bts:SpecifyMSAnalyzerTypeMS1"
-                },
-                {
-                    "@id": "bts:SpecifyMSAnalyzerTypeMS2"
-                },
-                {
-                    "@id": "bts:SpecifyMSAssayTechnique"
-                },
-                {
-                    "@id": "bts:SpecifyMSInstrumentModel"
-                },
-                {
-                    "@id": "bts:SpecifyMeasurementTechnique"
-                },
-                {
-                    "@id": "bts:SpecifyOtherCleavageAgent"
+                    "@id": "bts:SpectrometerFrequency"
                 },
                 {
                     "@id": "bts:SpecifyOtherDataFile"
@@ -10641,22 +10647,16 @@
                     "@id": "bts:SpecifyOtherModificationParameters"
                 },
                 {
-                    "@id": "bts:SpecifyPlatformLocation"
+                    "@id": "bts:CleavageAgents"
                 },
                 {
-                    "@id": "bts:SpecifyPlatformVersion"
+                    "@id": "bts:SpecifyOtherCleavageAgent"
                 },
                 {
-                    "@id": "bts:SpecifyProteomicsAssayType"
+                    "@id": "bts:FragmentMassTolerance"
                 },
                 {
-                    "@id": "bts:SpecifySampleType"
-                },
-                {
-                    "@id": "bts:SpectrometerFrequency"
-                },
-                {
-                    "@id": "bts:TechnologyPlatformVersion"
+                    "@id": "bts:PrecursorMassTolerance"
                 },
                 {
                     "@id": "bts:Component"
@@ -55324,10 +55324,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CleavageAgents",
+            "@id": "bts:ModificationParameters",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Name(s) of the enzyme used",
-            "rdfs:label": "CleavageAgents",
+            "rdfs:comment": "Modification parameters for the search engine run. [ PSI: PI http://www.w3.org/2002/07/owl#Axiom ]",
+            "rdfs:label": "ModificationParameters",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
@@ -55336,7 +55336,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "cleavageAgents",
+            "sms:displayName": "modificationParameters",
             "sms:required": "sms:true",
             "sms:validationRules": [
                 "str"
@@ -55397,6 +55397,25 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:CleavageAgents",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Name(s) of the enzyme used",
+            "rdfs:label": "CleavageAgents",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "cleavageAgents",
+            "sms:required": "sms:true",
+            "sms:validationRules": [
+                "str"
+            ]
+        },
+        {
             "@id": "bts:FragmentMassTolerance",
             "@type": "rdfs:Class",
             "rdfs:comment": "Units of measure are Da or ppm (ex. \"0.6 Da\" or \"20 ppm\")",
@@ -55412,25 +55431,6 @@
             "sms:displayName": "fragmentMassTolerance",
             "sms:required": "sms:true",
             "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ModificationParameters",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Modification parameters for the search engine run. [ PSI: PI http://www.w3.org/2002/07/owl#Axiom ]",
-            "rdfs:label": "ModificationParameters",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:manifestColumn"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "modificationParameters",
-            "sms:required": "sms:true",
-            "sms:validationRules": [
-                "str"
-            ]
         },
         {
             "@id": "bts:PrecursorMassTolerance",
