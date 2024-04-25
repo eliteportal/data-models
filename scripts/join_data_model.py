@@ -5,8 +5,8 @@ from pathlib import Path
 import subprocess
 import logging.config
 from datetime import datetime
-import yaml
 import re
+import yaml
 import pandas as pd
 from toolbox import utils
 

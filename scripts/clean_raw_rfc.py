@@ -305,7 +305,10 @@ def add_other_attrs(
     new_temp_attr = {
         "Attribute": template_name,
         "Description": f"Template for {template_name}",
-        "DependsOn": ",".join(["Component", "Filename"] + list(rfc_df_final.index)),
+        "DependsOn": ",".join(
+            ["Component", "Filename"]
+            + list(rfc_df_final[rfc_df_final["Properties"] == "ManifestColumn"].index)
+        ),
         "Valid Values": "",
         "Required": False,
         "Module": "Template",
@@ -315,6 +318,14 @@ def add_other_attrs(
         "Properties": "",
         "Parent": "Component",
     }
+
+    print(
+        "Number of columns in new template: ",
+        len(
+            ["Component", "Filename"]
+            + list(rfc_df_final[rfc_df_final["Properties"] == "ManifestColumn"].index)
+        ),
+    )
 
     # Add "UsedIn" and template attribute row
     rfc_df_final["UsedIn"] = template_name
