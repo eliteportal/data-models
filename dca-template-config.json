@@ -46,11 +46,6 @@
             "type": "file"
         },
         {
-            "display_name": "Phenotype_human",
-            "schema_name": "PhenotypeHuman",
-            "type": "file"
-        },
-        {
             "display_name": "Proteomics",
             "schema_name": "Proteomics",
             "type": "file"
