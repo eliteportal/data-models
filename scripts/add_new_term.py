@@ -53,17 +53,9 @@ def combine_dataframes(
     index_keys = ["Attribute"]
     keys = ["dm", "new_term"]
 
-    df1 = (
-        data_model_df[data_model_df["Attribute"].isin(new_term_df["Attribute"])]
-        .set_index(index_keys)
-        .sort_index()
-    )
-    
-    df2 = (
-        new_term_df[new_term_df["Attribute"].isin(data_model_df["Attribute"])]
-        .set_index(index_keys)
-        .sort_index()
-    )
+    df1 = data_model_df[data_model_df.index.isin(new_term_df.index)].sort_index()
+
+    df2 = new_term_df[new_term_df.index.isin(data_model_df.index)].sort_index()
 
     df = pd.concat(
         [df1, df2],
@@ -94,7 +86,7 @@ def combine_dataframes(
 
     df = df.drop(columns=["new_term"])
 
-    dm_stacked = data_model_df.set_index("Attribute").stack(future_stack=True)
+    dm_stacked = data_model_df.stack(future_stack=True)
 
     # add dynamic way to update changes to data model
     dm_stacked.update(df["dm"])
@@ -102,6 +94,10 @@ def combine_dataframes(
     dm_unstacked = dm_stacked.unstack()
 
     dm_unstacked = dm_unstacked.reset_index()
+
+    dm_unstacked = dm_unstacked.set_index("Attribute").sort_index(
+        key=lambda x: x.str.lower()
+    )
 
     logger.info("Combined data model with new term")
 
@@ -112,9 +108,10 @@ def update_data_model(new_dm: pd.DataFrame, output_path: str) -> None:
     """
     Writes out the new data model if users wants, otherwise it writes a staging data model
     """
-    update_dm = str(input("Update data model? y/[n]: ") or "n")
+    # update_dm = str(input("Update data model? y/[n]: ") or "n")
+    update_dm = "y"
 
-    if update_dm == "y":
+    if update_dm.lower() == "y":
         csv_path = Path(ROOT_DIR, output_path)
         logger.info("Updating data model. New data model at: %s", csv_path)
         new_dm.to_csv(csv_path)
@@ -135,7 +132,7 @@ def update_data_model(new_dm: pd.DataFrame, output_path: str) -> None:
         # create temp data model
         staging_path = Path(ROOT_DIR, "staging." + output_path)
         logger.info("Creating staging data model at: %s", staging_path)
-        new_dm.to_csv(staging_path, index=False)
+        new_dm.to_csv(staging_path)
 
 
 def main(arguments):
@@ -144,23 +141,51 @@ def main(arguments):
     2. Create updated data model
     3. Write out data model if checks pass
     """
-    new_term_df = pd.read_csv(arguments.new_term_path)
+    schematic_cols = [
+        "Attribute",
+        "Description",
+        "Valid Values",
+        "DependsOn",
+        "DependsOn Component",
+        "Required",
+        "Parent",
+        "Validation Rules",
+        "Properties",
+        "Source",
+    ]
+    new_term_df = pd.read_csv(arguments.new_term_path, index_col="Attribute")
 
     print("--- New Term ---")
     print(new_term_df.head())
 
-    dm = pd.read_csv(Path(ROOT_DIR, arguments.data_model_path))
+    dm = pd.read_csv(Path(ROOT_DIR, arguments.data_model_path), index_col="Attribute")
 
     print("--- Exisiting Data Model ---")
     print(dm.head())
 
-    new_term_df["exists"] = new_term_df["Attribute"].isin(dm["Attribute"])
+    new_term_df["exists"] = new_term_df.index.isin(dm.index)
 
     new_terms_to_add = new_term_df[~new_term_df["exists"]]
 
     dm_updated = combine_dataframes(dm, new_term_df)
 
     dm_updated = pd.concat([dm_updated, new_terms_to_add])
+
+    missing_cols = set(schematic_cols) - set(dm_updated.columns)
+
+    for m in missing_cols:
+        dm_updated[m] = ""
+
+    extra_cols = [l for l in list(dm_updated.columns) if l not in schematic_cols]
+
+    dm_updated = dm_updated[schematic_cols + extra_cols]
+
+    rm_cols = []
+    for c in dm_updated.columns.tolist():
+        if bool(re.search(r"\.|Unnamed", c)):
+            rm_cols.append(c)
+
+    dm_updated = dm_updated.drop(columns=rm_cols)
 
     update_data_model(dm_updated, arguments.data_model_path)
 
