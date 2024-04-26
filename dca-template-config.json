@@ -1,13 +1,13 @@
 {
     "manifest_schemas": [
         {
-            "display_name": "Biospecimen human",
-            "schema_name": "Biospecimenhuman",
+            "display_name": "Biospecimen_human",
+            "schema_name": "BiospecimenHuman",
             "type": "record"
         },
         {
-            "display_name": "Biospecimen nonHuman",
-            "schema_name": "BiospecimennonHuman",
+            "display_name": "Biospecimen_non_Human",
+            "schema_name": "BiospecimenNonHuman",
             "type": "record"
         },
         {
@@ -16,28 +16,18 @@
             "type": "file"
         },
         {
-            "display_name": "ComputationalTools",
-            "schema_name": "ComputationalTools",
+            "display_name": "Genotyping_Human",
+            "schema_name": "GenotypingHuman",
             "type": "file"
         },
         {
-            "display_name": "file_annotation_template",
-            "schema_name": "FileAnnotationTemplate",
-            "type": "file"
-        },
-        {
-            "display_name": "genotyping_assay",
-            "schema_name": "GenotypingAssay",
-            "type": "file"
-        },
-        {
-            "display_name": "Individual Human",
+            "display_name": "Individual_Human",
             "schema_name": "IndividualHuman",
             "type": "record"
         },
         {
-            "display_name": "Individual nonHuman",
-            "schema_name": "IndividualnonHuman",
+            "display_name": "Individual_non_Human",
+            "schema_name": "IndividualNonHuman",
             "type": "record"
         },
         {
@@ -46,12 +36,22 @@
             "type": "file"
         },
         {
+            "display_name": "Metagenomics",
+            "schema_name": "Metagenomics",
+            "type": "file"
+        },
+        {
             "display_name": "Microbiome",
             "schema_name": "Microbiome",
             "type": "file"
         },
         {
-            "display_name": "proteomics",
+            "display_name": "Phenotype_human",
+            "schema_name": "PhenotypeHuman",
+            "type": "file"
+        },
+        {
+            "display_name": "Proteomics",
             "schema_name": "Proteomics",
             "type": "file"
         },
@@ -66,11 +66,11 @@
             "type": "file"
         },
         {
-            "display_name": "Whole Genome Sequencing",
+            "display_name": "Whole_Genome_Sequencing",
             "schema_name": "WholeGenomeSequencing",
             "type": "file"
         }
     ],
     "service_version": "v23.1.1",
-    "schema_version": "v1.6"
+    "schema_version": "v1.72"
 }

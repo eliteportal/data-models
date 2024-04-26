@@ -1,7 +1,7 @@
 """
 Transform raw rfc into a csv to add to the data model
 
-USAGE: clean_raw_rfc.py -d EL.data.model.csv -n "data/rfc_tables_raw/EL Assay_ bsSeq (bisulfite-seq_WGBS_methylseq_methylomics) data model.xlsx"
+USAGE: clean_raw_rfc.py -n "data/rfc_tables_raw/EL Assay_ bsSeq (bisulfite-seq_WGBS_methylseq_methylomics) data model.xlsx"
 """
 
 from pathlib import Path
@@ -38,9 +38,6 @@ fh = logging.FileHandler(
 fh.setFormatter(logger.handlers[0].__dict__["formatter"])
 logger.addHandler(fh)
 
-# glob("data/RFC Tables/*.xlsx", root_dir=ROOT_DIR) # could use as options later
-# new_template_path = "data/rfc_tables_raw/EL RFC genotyping_assay.xlsx"
-
 
 def remove_illegal_chars(x: str) -> str:
     """Removes illegal characters (parentheses and question marks) from a string.
@@ -65,16 +62,20 @@ def load_raw_rfc(rfc_path: Path) -> tuple[pd.DataFrame, str]:
     """
 
     template_name = re.sub(
-        r"EL|RFC|assay|data model|_|\(.*?\)",
+        r"EL|RFC|DRAFT|assay|data model|attribute[s]|\(.*?\)",
         "",
         Path(rfc_path).stem,
         flags=re.IGNORECASE,
     ).strip()
 
+    template_name = re.sub(r"\s+|_+", " ", template_name).strip()
+    template_name = re.sub(r"\s", "_", template_name).strip()
+    # template_name = re.sub(r"_+", "_", template_name)
+
     logging.info(f"Extracted template name: {template_name}")
 
     try:
-        rfc_df = pd.read_excel(rfc_path)
+        rfc_df = pd.read_csv(rfc_path)
     except FileNotFoundError:
         logging.error(f"RFC file not found: {rfc_path}")
         return None, None
@@ -85,7 +86,7 @@ def load_raw_rfc(rfc_path: Path) -> tuple[pd.DataFrame, str]:
     return rfc_df, template_name
 
 
-def cleanup_rfc(rfc_df: pd.DataFrame) -> pd.DataFrame:
+def cleanup_rfc(rfc_df: pd.DataFrame, template_name: str) -> pd.DataFrame:
     """
     Cleans and preprocesses data in an RFC DataFrame.
 
@@ -108,6 +109,7 @@ def cleanup_rfc(rfc_df: pd.DataFrame) -> pd.DataFrame:
     }
     rfc_df = rfc_df.rename(columns=column_map, errors="ignore")
     rfc_df.fillna("", inplace=True)
+    original_order = rfc_df["Attribute"].tolist()
 
     # Clean "Valid Values"
     def clean_func(x):
@@ -142,173 +144,37 @@ def cleanup_rfc(rfc_df: pd.DataFrame) -> pd.DataFrame:
         False
     )
 
-    return rfc_df
-
-
-def create_other_attrs(rfc_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Extracts and creates new attributes ("specify" attributes) from existing attributes
-    with a specific module format (containing "=" signs).
-
-    Args:
-        rfc_df: A pandas DataFrame containing RFC data (pd.DataFrame).
-
-    Returns:
-        A DataFrame containing the newly created "specify" attributes (pd.DataFrame).
-    """
-
-    # Filter DataFrame for modules containing "=" signs
-    rfc_df_others = rfc_df.loc[rfc_df["Module"].str.contains("=", na=False)].copy(
-        deep=True
-    )
-
-    # Extract "specify" attribute names and parent attributes
-    rfc_df_others["others"] = (
-        rfc_df_others["Module"]
-        .str.split(",")
-        .apply(lambda x: "".join([y.strip() for y in x if bool(re.search("=", y))]))
-    )
-
-    # if there are no others then break out of function
-    if sum(~rfc_df_others["others"].isna()) == 0:
-        raise ValueError("No others to create")
-
-    # remove illegal characters from others
-    rfc_df_others["others"] = rfc_df_others["others"].apply(remove_illegal_chars)
-
-    # if there are mulitple in the data frame
-    rfc_df_others = rfc_df_others.explode("others")
-
-    # assign new parent values. So if the value is selected in the parent attr, then specify will be required
-    rfc_df_others[["Parent", "OtherValue"]] = rfc_df_others["others"].str.split(
-        "=", expand=True
-    )
-
-    # Create new "specify" attribute names with proper capitalization
-    rfc_df_others["others"] = (
-        rfc_df_others["others"]
-        .str.split("=")
-        .apply(lambda x: x[1].strip().capitalize() + x[0][0].upper() + x[0][1:])
-    )
-
-    # Swap others -> Attribute and Attribute -> DependsOn. Links others to specify column so they can enter a value
-    rfc_df_others = rfc_df_others.rename(
-        columns={"Attribute": "DependsOn", "others": "Attribute"}
-    )
-
-    # Define remaining attributes for the new DataFrame
-    specify_attrs = {
-        "DependsOn": rfc_df_others["Parent"],
-        "Required": False,
-        "Module": "Other",
-        "Valid Values": "",
-        "columnType": "string",
-        "Ontology": "Sage Bionetworks",
-        "Properties": "ValidValue",
-    }
-
-    rfc_df_others = rfc_df_others.assign(**specify_attrs)
-
-    # Generate descriptions for "specify" attributes
-    for i in rfc_df_others.index:
-        rfc_df_others.loc[i, "Description"] = (
-            f"""When column = `{rfc_df_others.loc[i, "OtherValue"]}`, add your custom value to the cell"""
-        )
-
-    # Remove illegal characters
-    rfc_df_others[["Attribute", "Parent"]] = rfc_df_others[["Attribute", "Parent"]].map(
-        remove_illegal_chars
-    )
-
-    return rfc_df_others
-
-
-def add_other_attrs(
-    rfc_df: pd.DataFrame, rfc_df_others: pd.DataFrame, template_name: str
-) -> pd.DataFrame:
-    """
-    Merges "specify" attributes from rfc_df_others into the valid values of relevant
-    attributes in rfc_df, and creates a final cleaned DataFrame.
-
-    Args:
-        rfc_df: A pandas DataFrame containing RFC data (pd.DataFrame).
-        rfc_df_others: A DataFrame containing newly created "specify" attributes (pd.DataFrame).
-        template_name: The name of the template being processed (str).
-
-    Returns:
-        A cleaned and finalized DataFrame (pd.DataFrame).
-    """
-
-    # Add "other" attributes to valid values (avoiding duplicates)
-    # not_na = rfc_df["Valid Values"].notna()  # Efficiently identify non-missing values
-
-    rfc_df.loc[
-        ~rfc_df.replace("", np.nan)["Valid Values"].isna(), "Valid Values"
-    ] = rfc_df.loc[~rfc_df.replace("", np.nan)["Valid Values"].isna()].apply(
-        lambda x: re.sub(
-            ",+",
-            ",",
-            ",".join(
-                [
-                    (
-                        p
-                        if p
-                        not in rfc_df_others.loc[
-                            rfc_df_others["Parent"] == x["Attribute"], "OtherValue"
-                        ].values
-                        else ""
-                    )
-                    for p in x["Valid Values"].split(",")
-                ]
-                + list(
-                    rfc_df_others.loc[
-                        rfc_df_others["Parent"] == x["Attribute"], "Attribute"
-                    ].values
-                )
-            ),
-        ),
-        axis=1,
-    )
-
-    # Clean valid values
-    rfc_df["Valid Values"] = (
-        rfc_df["Valid Values"]
-        .fillna("")
-        .str.split(",")
-        .apply(lambda x: ",".join(np.unique([s.strip() for s in x])))
-        .replace("", np.nan)
-    )
-
-    # Assign remaining attributes
-    rfc_df["Properties"] = "ManifestColumn"
-    rfc_df["Module"] = np.where(
-        rfc_df["Attribute"].str.contains("specify"), "Other", "Metadata"
-    )
-
-    # Print data frame information
-    print(f"Original data frame shape: {rfc_df.shape}")
-    print(f"Others data frame shape: {rfc_df_others.shape}")
-
-    # Concatenate and clean DataFrame
-    rfc_df_final = pd.concat([rfc_df, rfc_df_others]).reset_index(drop=True)
-
-    rfc_df_final["columnType"] = rfc_df_final["columnType"].str.upper()
-    rfc_df_final = rfc_df_final.drop(columns=["OtherValue"]).fillna("").astype(str)
+    rfc_df["columnType"] = rfc_df["columnType"].str.upper()
+    rfc_df = rfc_df.drop(columns=["OtherValue"], errors="ignore").fillna("").astype(str)
 
     # Combine duplicate rows with unique values
-    rfc_df_final = rfc_df_final.groupby("Attribute").apply(
+    rfc_df = rfc_df.groupby("Attribute").apply(
         lambda x: x.apply(lambda y: ",".join(np.unique(y)).strip(", ").strip()),
         include_groups=False,
     )
+
+    # Clean valid values
+    # rfc_df["Valid Values"] = (
+    #     rfc_df["Valid Values"]
+    #     .fillna("")
+    #     .str.split(",")
+    #     .apply(lambda x: ",".join(np.unique([s.strip() for s in x])))
+    #     .replace("", np.nan)
+    # )
+
+    # Assign remaining attributes
+    rfc_df["Properties"] = "ManifestColumn"
+
+    # Print data frame information
+    print(f"Original data frame shape: {rfc_df.shape}")
+
+    dependson = ["Filename"] + original_order + ["Component"]
 
     # Create new template attribute row
     new_temp_attr = {
         "Attribute": template_name,
         "Description": f"Template for {template_name}",
-        "DependsOn": ",".join(
-            ["Component", "Filename"]
-            + list(rfc_df_final[rfc_df_final["Properties"] == "ManifestColumn"].index)
-        ),
+        "DependsOn": ",".join(dependson),
         "Valid Values": "",
         "Required": False,
         "Module": "Template",
@@ -321,32 +187,23 @@ def add_other_attrs(
 
     print(
         "Number of columns in new template: ",
-        len(
-            ["Component", "Filename"]
-            + list(rfc_df_final[rfc_df_final["Properties"] == "ManifestColumn"].index)
-        ),
+        len(dependson),
     )
 
     # Add "UsedIn" and template attribute row
-    rfc_df_final["UsedIn"] = template_name
-    rfc_df_final = pd.concat(
-        [rfc_df_final, pd.DataFrame([new_temp_attr]).set_index("Attribute")]
+    rfc_df["UsedIn"] = template_name
+    rfc_df = pd.concat(
+        [rfc_df, pd.DataFrame([new_temp_attr]).set_index("Attribute")]
     ).replace("", np.nan)
 
-    # Ensure unique index and sort
-    rfc_df_final = rfc_df_final.sort_index(key=lambda x: x.str.lower())
+    if len(set(original_order) - set(list(rfc_df.index))) == 0:
+        # Ensure unique index and sort
+        rfc_df = rfc_df.sort_index(key=lambda x: x.str.lower())
 
-    # Print information and write to CSV
-    print(rfc_df_final.info())
+        return rfc_df
 
-    csv_path = Path(
-        ROOT_DIR, "data", "rfc_tables_cleaned", template_name + "_cleaned_rfc.csv"
-    )
-    logger.info("Creating CSV at: %s", csv_path)
-
-    rfc_df_final.to_csv(csv_path)
-
-    return rfc_df_final
+    else:
+        raise RuntimeError("not all of the original values are found in the new rfc")
 
 
 def main(arguments):
@@ -363,24 +220,29 @@ def main(arguments):
     #     return  # Handle potential errors during loading
 
     # Clean and pre-process the RFC data
-    rfc_df = cleanup_rfc(rfc_df)
+    rfc_df = cleanup_rfc(rfc_df, template_name)
 
-    # Create "specify" attributes for attributes with specific module format
-    rfc_df_others = create_other_attrs(rfc_df)
+    # Print information and write to CSV
+    print(rfc_df.info())
 
-    # Merge "specify" attributes and create the final cleaned DataFrame
-    add_other_attrs(rfc_df, rfc_df_others, template_name)
+    csv_path = Path(
+        ROOT_DIR, "data", "rfc_tables_cleaned", template_name + "_cleaned_rfc.csv"
+    )
+
+    logger.info("Creating CSV at: %s", csv_path)
+
+    rfc_df.to_csv(csv_path)
 
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Update data model with new term")
 
-    parser.add_argument(
-        "-d",
-        "--data_model_path",
-        help="path to data model relative to the root directory",
-    )
+    # parser.add_argument(
+    #     "-d",
+    #     "--data_model_path",
+    #     help="path to data model relative to the root directory",
+    # )
 
     parser.add_argument(
         "-n",

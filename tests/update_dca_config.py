@@ -63,7 +63,7 @@ def main(JSONLD_PATH):
         print("Current schema versiona: ", template_config["schema_version"])
 
         template_config["schema_version"] = "v" + str(
-            float(re.sub("v", "", template_config["schema_version"])) + increment
+            float(re.sub("v", "", template_config["schema_version"])) + float(increment)
         )
         print("New schema version: ", template_config["schema_version"])
 
