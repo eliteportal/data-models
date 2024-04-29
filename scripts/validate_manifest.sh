@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
 MANIFEST='Biospecimenhuman'
-MAINFEST_PATH = 
+MAINFEST_PATH =
 
 schematic model --config ./config.yml validate \
     --manifest_path ./test_manifests/Biospecimenhuman_test.csv \
