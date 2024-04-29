@@ -1,5 +1,0 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType,Notes,multivalue
-ILO,Integrative Longevity Omics,,,,False,ValidValue,,,,Consortium,,,,,
-LC,Longevity Consortium,,,,False,ValidValue,,,,Consortium,,,,,
-LG,Longevity Genomics,,,,False,ValidValue,,,,Consortium,,,,,
-LLFS,Long Life Family Study,,,,False,ValidValue,,,,Consortium,,,,,

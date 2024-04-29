@@ -5,9 +5,11 @@ TODO:
 - [ ] add arg parse later 
 """
 
+import os
+from glob import glob
 from pathlib import Path
-from toolbox import utils
 import pandas as pd
+from toolbox import utils
 
 
 def create_modules(root_dir, data_model) -> None:
@@ -32,6 +34,15 @@ if __name__ == "__main__":
     dm_name = Path(root_dir, "EL.data.model.csv")
 
     data_model = pd.read_csv(Path(root_dir, "EL.data.model.csv"))
+
+    # check what files are not part of the modules in the data model and delete them
+    check_files = [
+        [p, Path(p).stem] for p in glob(str(Path(root_dir, "modules")) + "/*.csv")
+    ]
+
+    for file_path, module in check_files:
+        if module not in data_model["Module"].unique():
+            os.remove(file_path)
 
     # incase any are missing
     data_model.loc[data_model["Module"].isna(), "Module"] = data_model.loc[
