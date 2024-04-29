@@ -535,16 +535,16 @@
                     "@id": "bts:TreatmentTemperatureValue"
                 },
                 {
-                    "@id": "bts:UseReadMeFile?"
+                    "@id": "bts:UseReadMeFile"
                 },
                 {
-                    "@id": "bts:UseReagent?"
+                    "@id": "bts:UseReagent"
                 },
                 {
-                    "@id": "bts:UseSummaryFile?"
+                    "@id": "bts:UseSummaryFile"
                 },
                 {
-                    "@id": "bts:UseTreatment?"
+                    "@id": "bts:UseTreatment"
                 },
                 {
                     "@id": "bts:VacuumPressure"
@@ -612,7 +612,7 @@
         {
             "@id": "bts:AcquisitionMode",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated (full scan, MSn, SIM, MRM, etc.).Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated (full scan, MSn, SIM, MRM, etc.). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AcquisitionMode",
             "rdfs:subClassOf": [
                 {
@@ -629,7 +629,7 @@
         {
             "@id": "bts:AcquisitionSoftware",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of the acquisition software used.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The name of the acquisition software used. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AcquisitionSoftware",
             "rdfs:subClassOf": [
                 {
@@ -646,7 +646,7 @@
         {
             "@id": "bts:AcquistionSoftwareVersion",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The version number of software used.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The version number of software used. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AcquistionSoftwareVersion",
             "rdfs:subClassOf": [
                 {
@@ -663,7 +663,7 @@
         {
             "@id": "bts:Adapters",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters.Example: 'AATGATACGGCGACCACCGAGATCTACACGCT; CAAGCAGAAGACGGCATACGAGAT'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters. Example - 'AATGATACGGCGACCACCGAGATCTACACGCT; CAAGCAGAAGACGGCATACGAGAT'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "Adapters",
             "rdfs:subClassOf": [
                 {
@@ -680,7 +680,7 @@
         {
             "@id": "bts:AdjustedCovariates",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Any covariates the GWAS is adjusted for. Multiple values can be listed separately by a semicolon (;).Example: age;sex",
+            "rdfs:comment": "Any covariates the GWAS is adjusted for. Multiple values can be listed separately by a semicolon (;). Example - age;sex",
             "rdfs:label": "AdjustedCovariates",
             "rdfs:subClassOf": [
                 {
@@ -714,7 +714,7 @@
         {
             "@id": "bts:ArrayInformation",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Additional information about the genotyping array. For example, for targeted arrays, please provide the specific type of array.Example: Immunochip",
+            "rdfs:comment": "Additional information about the genotyping array. For example, for targeted arrays, please provide the specific type of array. Example - Immunochip",
             "rdfs:label": "ArrayInformation",
             "rdfs:subClassOf": [
                 {
@@ -731,7 +731,7 @@
         {
             "@id": "bts:ArrayManufacturer",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Manufacturer of the genotyping array used for the discovery stage. Separate multiple manufacturers by a semicolon (;).Example: Illumina, Affymetrix, Perlegen",
+            "rdfs:comment": "Manufacturer of the genotyping array used for the discovery stage. Separate multiple manufacturers by a semicolon (;). Example - Illumina, Affymetrix, Perlegen",
             "rdfs:label": "ArrayManufacturer",
             "rdfs:subClassOf": [
                 {
@@ -765,7 +765,7 @@
         {
             "@id": "bts:AssemblyName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Name/version of the assembly provided by the submitter used in the genome browsers and the community.Example: 'HuRef, JCVI_ISG_3_1.0'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Name/version of the assembly provided by the submitter used in the genome browsers and the community. Example - 'HuRef, JCVI_ISG_3_1.0'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AssemblyName",
             "rdfs:subClassOf": [
                 {
@@ -782,7 +782,7 @@
         {
             "@id": "bts:AssemblyQual",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Assembly quality. The assembly quality category is based on sets of criteria outlined for each assembly quality category.High Quality: Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.Medium Quality: Many fragments with little to no review of assembly other than reporting of standard assembly statistics.Low Quality: Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to, total assembly size, number of contigs, contig N50/L50, and maximum contig length.Example values: high-quality genome, medium-quality genome, low-quality genome",
+            "rdfs:comment": "Assembly quality. The assembly quality category is based on sets of criteria outlined for each assembly quality category.High Quality- Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.Medium Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics.Low Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to, total assembly size, number of contigs, contig N50/L50, and maximum contig length.Example values - high-quality genome, medium-quality genome, low-quality genome",
             "rdfs:label": "AssemblyQual",
             "rdfs:subClassOf": [
                 {
@@ -799,7 +799,7 @@
         {
             "@id": "bts:AssemblySoftware",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Tool(s) used for assembly, including version number and parameters.Example: 'metaSPAdes;3.11.0; kmer set 21,33,55,77,99,121, default parameters otherwise'.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Tool(s) used for assembly, including version number and parameters.Example - 'metaSPAdes;3.11.0; kmer set 21,33,55,77,99,121, default parameters otherwise'. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AssemblySoftware",
             "rdfs:subClassOf": [
                 {
@@ -816,7 +816,7 @@
         {
             "@id": "bts:AssociatedResource",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Relevant electronic resources. A related resource that is referenced, cited, or otherwise associated to the sequence.Example: 'http://www.earthmicrobiome.org/'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Relevant electronic resources. A related resource that is referenced, cited, or otherwise associated to the sequence. Example - 'http-//www.earthmicrobiome.org/'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AssociatedResource",
             "rdfs:subClassOf": [
                 {
@@ -833,7 +833,7 @@
         {
             "@id": "bts:BackgroundTrait",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Any background trait(s) shared by all individuals in the GWAS (e.g. in both cases and controls).Example: Nicotine dependence",
+            "rdfs:comment": "Any background trait(s) shared by all individuals in the GWAS (e.g. in both cases and controls). Example - Nicotine dependence",
             "rdfs:label": "BackgroundTrait",
             "rdfs:subClassOf": [
                 {
@@ -1091,7 +1091,7 @@
         {
             "@id": "bts:MeasurementTechnique",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of the measurement technique describing the assay method.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The name of the measurement technique describing the assay method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "MeasurementTechnique",
             "rdfs:subClassOf": [
                 {
@@ -1152,11 +1152,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:NCIvalues(notlistedforpurposesofthisRFC)"
-                }
-            ],
             "sms:displayName": "organ",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -1225,11 +1220,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:HumanReferenceAtlasvalues(notlistedforpurposesofthisRFC)"
-                }
-            ],
             "sms:displayName": "specimenSource",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -1287,11 +1277,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:CCF-BSOvalues(notlistedforpurposesofthisRFC)"
-                }
-            ],
             "sms:displayName": "cellType",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -1546,7 +1531,7 @@
         {
             "@id": "bts:SampleType",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The type of sample collected or the term used to describe the source of a biospecimen used for a laboratory test.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The type of sample collected or the term used to describe the source of a biospecimen used for a laboratory test. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SampleType",
             "rdfs:subClassOf": [
                 {
@@ -1563,7 +1548,7 @@
         {
             "@id": "bts:TechnologyPlatformVersion",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "TechnologyPlatformVersion",
             "rdfs:subClassOf": [
                 {
@@ -1580,7 +1565,7 @@
         {
             "@id": "bts:PlatformLocation",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of the laboratory, facility, vendor, company, or location where the data generation platform was located, provided by the data contributor.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The name of the laboratory, facility, vendor, company, or location where the data generation platform was located, provided by the data contributor. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "PlatformLocation",
             "rdfs:subClassOf": [
                 {
@@ -1597,7 +1582,7 @@
         {
             "@id": "bts:ReferenceTranscriptID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The ID for the transcript/gene. Either the NCBI ID or the Ensembl ID must be provided.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The ID for the transcript/gene. Either the NCBI ID or the Ensembl ID must be provided. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "ReferenceTranscriptID",
             "rdfs:subClassOf": [
                 {
@@ -1614,7 +1599,7 @@
         {
             "@id": "bts:DnaBatchID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "DNA isolation batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "DNA isolation batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DnaBatchID",
             "rdfs:subClassOf": [
                 {
@@ -1832,7 +1817,7 @@
         {
             "@id": "bts:LibraryBatchID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Library batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Library batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibraryBatchID",
             "rdfs:subClassOf": [
                 {
@@ -1849,7 +1834,7 @@
         {
             "@id": "bts:LibraryPrep",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The general strategy by which the library was prepared.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The general strategy by which the library was prepared. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibraryPrep",
             "rdfs:subClassOf": [
                 {
@@ -1866,7 +1851,7 @@
         {
             "@id": "bts:LibraryPreparationMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Method by which library was prepared.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Method by which library was prepared. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibraryPreparationMethod",
             "rdfs:subClassOf": [
                 {
@@ -1883,7 +1868,7 @@
         {
             "@id": "bts:LibraryVersion",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Library Version: for example, rnaSeq 10x library version.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Library Version- for example, rnaSeq 10x library version. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibraryVersion",
             "rdfs:subClassOf": [
                 {
@@ -1900,7 +1885,7 @@
         {
             "@id": "bts:SequencingBatchID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Sequencing batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Sequencing batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SequencingBatchID",
             "rdfs:subClassOf": [
                 {
@@ -1967,9 +1952,6 @@
                 },
                 {
                     "@id": "bts:True"
-                },
-                {
-                    "@id": "bts:FalseFalseFALSEtrueTrueTRUE"
                 }
             ],
             "sms:displayName": "isStranded",
@@ -2202,7 +2184,7 @@
         {
             "@id": "bts:EnrichmentMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The method used for performing an enrichment of specific regions by a restriction enzyme digest.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The method used for performing an enrichment of specific regions by a restriction enzyme digest. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "EnrichmentMethod",
             "rdfs:subClassOf": [
                 {
@@ -2219,7 +2201,7 @@
         {
             "@id": "bts:CaptivityDuration",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The duration of captivity in months for the individuals in captivity (formatted in months, ex. 72 months).note: Applicable only to animals with captivity status captive.",
+            "rdfs:comment": "The duration of captivity in months for the individuals in captivity (formatted in months, ex. 72 months).note- Applicable only to animals with captivity status captive.",
             "rdfs:label": "CaptivityDuration",
             "rdfs:subClassOf": [
                 {
@@ -2236,7 +2218,7 @@
         {
             "@id": "bts:CaptivityStatus",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The status of the individual with regard to captivity.note: Wild, captive, and stranded values are applicable, especially for marine mammals. Depending on life stage terminology for individual species, other values are possible. Please let the data curation team know.",
+            "rdfs:comment": "The status of the individual with regard to captivity.note- Wild, captive, and stranded values are applicable, especially for marine mammals. Depending on life stage terminology for individual species, other values are possible. Please let the data curation team know.",
             "rdfs:label": "CaptivityStatus",
             "rdfs:subClassOf": [
                 {
@@ -2313,23 +2295,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CCF-BSOvalues(notlistedforpurposesofthisRFC)",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CCF-BSOvalues(notlistedforpurposesofthisRFC)",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:CellType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CCF-BSO values (not listed for purposes of this RFC)",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:Cohort",
             "@type": "rdfs:Class",
             "rdfs:comment": "Name of the cohort the individual belongs to",
@@ -2349,7 +2314,7 @@
         {
             "@id": "bts:CommonName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The biological species common name the individual belongs to (ex. \"Horned Lark\"). note: As a default, the valid scientific name for the species should be indicated.",
+            "rdfs:comment": "The biological species common name the individual belongs to (ex. \"Horned Lark\"). note- As a default, the valid scientific name for the species should be indicated.",
             "rdfs:label": "CommonName",
             "rdfs:subClassOf": [
                 {
@@ -2359,30 +2324,8 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Genbankcommonnames(notlistedforpurposesofthisRFC)"
-                }
-            ],
             "sms:displayName": "commonName",
             "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Genbankcommonnames(notlistedforpurposesofthisRFC)",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Genbankcommonnames(notlistedforpurposesofthisRFC)",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:CommonName"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Genbank common names (not listed for purposes of this RFC)",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -2405,7 +2348,7 @@
         {
             "@id": "bts:ControlType",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Control samples suitable for normalization and batch correction.Possible example values: GIS, GoldenWest, NIST SRM 1950, AIBL pool,Baker pool,water plus Baker ISTD, study pool, internal standards, Other, Unknown, Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Control samples suitable for normalization and batch correction.Possible example values - GIS, GoldenWest, NIST SRM 1950, AIBL pool,Baker pool,water plus Baker ISTD, study pool, internal standards, Other, Unknown, Not collected, Not applicable, Not specified",
             "rdfs:label": "ControlType",
             "rdfs:subClassOf": [
                 {
@@ -2432,36 +2375,14 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:WorldBankcountrycodes(notlistedforpurposesofthisRFC)"
-                }
-            ],
             "sms:displayName": "countryCode",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:WorldBankcountrycodes(notlistedforpurposesofthisRFC)",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "WorldBankcountrycodes(notlistedforpurposesofthisRFC)",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:CountryCode"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "World Bank country codes (not listed for purposes of this RFC)",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:DatabaseLibrary",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name(s) of the associated database library.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The name(s) of the associated database library. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DatabaseLibrary",
             "rdfs:subClassOf": [
                 {
@@ -2478,7 +2399,7 @@
         {
             "@id": "bts:DatabaseName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of the search database (nr, SwissProt or est_human, and/or mass spectral library).Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The name of the search database (nr, SwissProt or est_human, and/or mass spectral library). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DatabaseName",
             "rdfs:subClassOf": [
                 {
@@ -2512,7 +2433,7 @@
         {
             "@id": "bts:DatabaseVersion",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The version of the database.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The version of the database. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DatabaseVersion",
             "rdfs:subClassOf": [
                 {
@@ -2529,7 +2450,7 @@
         {
             "@id": "bts:DatabaseWeblink",
             "@type": "rdfs:Class",
-            "rdfs:comment": "An internet address that may provide details of a database or software search, as well as for labs that generate their own search method (web link).Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "An internet address that may provide details of a database or software search, as well as for labs that generate their own search method (web link). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DatabaseWeblink",
             "rdfs:subClassOf": [
                 {
@@ -2546,7 +2467,7 @@
         {
             "@id": "bts:DataFile",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Name of additional file(s) accompanying the data. The file(s) provide, for example, the name of any raw files generated by the instrument, generated reports from a vendor, an Rscript, or an instructions document. The files can be instrument raw files, converted peak lists such as mzML, MGF, or result files like mzIdentML. The files can be additional documentation submitted alongside the data needed for reuse and sharing purposes.Provide the file names of any additional files submitted alongside the data (ex., an ADAT file). Multiple file names can be separated by (;)Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Name of additional file(s) accompanying the data. The file(s) provide, for example, the name of any raw files generated by the instrument, generated reports from a vendor, an Rscript, or an instructions document. The files can be instrument raw files, converted peak lists such as mzML, MGF, or result files like mzIdentML. The files can be additional documentation submitted alongside the data needed for reuse and sharing purposes. Provide the file names of any additional files submitted alongside the data (ex., an ADAT file). Multiple file names can be separated by (;)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DataFile",
             "rdfs:subClassOf": [
                 {
@@ -2651,7 +2572,7 @@
         {
             "@id": "bts:DigestionMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The type of digestion (ex. in-solution, in-gel)Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The type of digestion (ex. in-solution, in-gel)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DigestionMethod",
             "rdfs:subClassOf": [
                 {
@@ -4521,6 +4442,9 @@
             "rdfs:label": "Other",
             "rdfs:subClassOf": [
                 {
+                    "@id": "bts:Sex"
+                },
+                {
                     "@id": "bts:TreatmentAmountUnit"
                 },
                 {
@@ -4533,14 +4457,14 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "other",
+            "sms:displayName": "Other",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
             "@id": "bts:DNAextraction",
             "@type": "rdfs:Class",
-            "rdfs:comment": "DNA extraction kit method.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "DNA extraction kit method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "DNAextraction",
             "rdfs:subClassOf": [
                 {
@@ -4557,7 +4481,7 @@
         {
             "@id": "bts:Enrichment",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Protocol or reagent used for enrichment (ex. Fe3+NTA-Agarose (Qiagen)Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Protocol or reagent used for enrichment (ex. Fe3+NTA-Agarose (Qiagen)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "Enrichment",
             "rdfs:subClassOf": [
                 {
@@ -4846,7 +4770,7 @@
         {
             "@id": "bts:ExperimentalFactor",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Variable aspects of an experiment design that can be used to describe an experiment or set of experiments in an increasingly detailed manner.This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI).Example: 'time series design [EFO:0001779]'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Variable aspects of an experiment design that can be used to describe an experiment or set of experiments in an increasingly detailed manner.This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). Example - 'time series design [EFO-0001779]'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "ExperimentalFactor",
             "rdfs:subClassOf": [
                 {
@@ -4863,7 +4787,7 @@
         {
             "@id": "bts:ExperimentType",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The type of experiment used.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The type of experiment used. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "ExperimentType",
             "rdfs:subClassOf": [
                 {
@@ -4880,7 +4804,7 @@
         {
             "@id": "bts:ExtractionMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of the process used to separate a desired component of an input material from the remainder.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The name of the process used to separate a desired component of an input material from the remainder. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "ExtractionMethod",
             "rdfs:subClassOf": [
                 {
@@ -5013,7 +4937,7 @@
         {
             "@id": "bts:FractionIdentifier",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Number of fractions in the experimental runProvide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Number of fractions in the experimental runProvide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "FractionIdentifier",
             "rdfs:subClassOf": [
                 {
@@ -5030,7 +4954,7 @@
         {
             "@id": "bts:GasFlowTemperature",
             "@type": "rdfs:Class",
-            "rdfs:comment": "e.g., nebulization gas, cone gas, etc.Unit of measure:C, F, K, Not specified",
+            "rdfs:comment": "e.g., nebulization gas, cone gas, etc.Unit of measure-C, F, K, Not specified",
             "rdfs:label": "GasFlowTemperature",
             "rdfs:subClassOf": [
                 {
@@ -5135,7 +5059,7 @@
         {
             "@id": "bts:GenotypeTechnology",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Method(s) used to genotype variants in the discovery stage. Separate multiple methods separated by a semicolon (;).Example: genome-wide genotyping array, exome-wide sequencing, targeted genotyping array",
+            "rdfs:comment": "Method(s) used to genotype variants in the discovery stage. Separate multiple methods separated by a semicolon (;). Example - genome-wide genotyping array, exome-wide sequencing, targeted genotyping array",
             "rdfs:label": "GenotypeTechnology",
             "rdfs:subClassOf": [
                 {
@@ -5181,7 +5105,7 @@
                     "@id": "bts:SampleType"
                 },
                 {
-                    "@id": "bts:UseReagent?"
+                    "@id": "bts:UseReagent"
                 },
                 {
                     "@id": "bts:ReagentID(s)"
@@ -5205,7 +5129,7 @@
                     "@id": "bts:ReagentContact"
                 },
                 {
-                    "@id": "bts:UseTreatment?"
+                    "@id": "bts:UseTreatment"
                 },
                 {
                     "@id": "bts:TreatmentID(s)"
@@ -5268,13 +5192,13 @@
                     "@id": "bts:BackgroundTrait"
                 },
                 {
-                    "@id": "bts:UseReadMeFile?"
+                    "@id": "bts:UseReadMeFile"
                 },
                 {
                     "@id": "bts:ReadmeFile"
                 },
                 {
-                    "@id": "bts:UseSummaryFile?"
+                    "@id": "bts:UseSummaryFile"
                 },
                 {
                     "@id": "bts:SummaryFile"
@@ -5316,7 +5240,7 @@
         {
             "@id": "bts:NumberIndividuals",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Number of individuals in a group.Example: 2000",
+            "rdfs:comment": "Number of individuals in a group. Example - 2000",
             "rdfs:label": "NumberIndividuals",
             "rdfs:subClassOf": [
                 {
@@ -5331,10 +5255,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UseReagent?",
+            "@id": "bts:UseReagent",
             "@type": "rdfs:Class",
             "rdfs:comment": "Was a reagent applied to the sample?",
-            "rdfs:label": "UseReagent?",
+            "rdfs:label": "UseReagent",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -5345,13 +5269,13 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:Yes"
+                    "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:No"
+                    "@id": "bts:FALSE"
                 }
             ],
-            "sms:displayName": "useReagent?",
+            "sms:displayName": "useReagent",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -5475,10 +5399,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UseTreatment?",
+            "@id": "bts:UseTreatment",
             "@type": "rdfs:Class",
             "rdfs:comment": "Was a treatment applied to the sample?",
-            "rdfs:label": "UseTreatment?",
+            "rdfs:label": "UseTreatment",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -5487,7 +5411,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "useTreatment?",
+            "sms:displayName": "useTreatment",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -5511,7 +5435,7 @@
         {
             "@id": "bts:TreatmentName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Treatments refer to in vitro modifications of samples. Three treatment types are supported: agent amount, duration, and temperature.  The treatment name is an alternate identifier to the Treatment ID.",
+            "rdfs:comment": "Treatments refer to in vitro modifications of samples. Three treatment types are supported- agent amount, duration, and temperature.  The treatment name is an alternate identifier to the Treatment ID.",
             "rdfs:label": "TreatmentName",
             "rdfs:subClassOf": [
                 {
@@ -5857,7 +5781,7 @@
         {
             "@id": "bts:ImputationPanel",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Panel used for imputation.Example: 1000 Genomes Phase 3",
+            "rdfs:comment": "Panel used for imputation. Example - 1000 Genomes Phase 3",
             "rdfs:label": "ImputationPanel",
             "rdfs:subClassOf": [
                 {
@@ -5874,7 +5798,7 @@
         {
             "@id": "bts:ImputationSoftware",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Imputation software.Example: IMPUTE",
+            "rdfs:comment": "Imputation software. Example - IMPUTE",
             "rdfs:label": "ImputationSoftware",
             "rdfs:subClassOf": [
                 {
@@ -5891,7 +5815,7 @@
         {
             "@id": "bts:VariantCount",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The number of variants analysed in the discovery stage (after QC).Example: 52500",
+            "rdfs:comment": "The number of variants analysed in the discovery stage (after QC). Example - 52500",
             "rdfs:label": "VariantCount",
             "rdfs:subClassOf": [
                 {
@@ -5908,7 +5832,7 @@
         {
             "@id": "bts:StatisticalModel",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A brief description of the statistical model used to determine association significance. It is important to distinguish studies that would otherwise appear identical (e.g., the same trait analyzed using additive, dominant, and recessive models).Example: additive model",
+            "rdfs:comment": "A brief description of the statistical model used to determine association significance. It is important to distinguish studies that would otherwise appear identical (e.g., the same trait analyzed using additive, dominant, and recessive models). Example - additive model",
             "rdfs:label": "StatisticalModel",
             "rdfs:subClassOf": [
                 {
@@ -5925,7 +5849,7 @@
         {
             "@id": "bts:ReportedTrait",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The trait under investigation. Please describe the trait concisely but with enough detail to be clear to a non-specialist. Avoid the use of abbreviations; if these are necessary, please define them or their source in the readme file.Example: Reticulocyte count",
+            "rdfs:comment": "The trait under investigation. Please describe the trait concisely but with enough detail to be clear to a non-specialist. Avoid the use of abbreviations; if these are necessary, please define them or their source in the readme file. Example - Reticulocyte count",
             "rdfs:label": "ReportedTrait",
             "rdfs:subClassOf": [
                 {
@@ -5940,10 +5864,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UseReadMeFile?",
+            "@id": "bts:UseReadMeFile",
             "@type": "rdfs:Class",
             "rdfs:comment": "Was a readme file uploaded to Synapse?",
-            "rdfs:label": "UseReadMeFile?",
+            "rdfs:label": "UseReadMeFile",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -5952,14 +5876,14 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "useReadMeFile?",
+            "sms:displayName": "useReadMeFile",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
             "@id": "bts:ReadmeFile",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of any readme file uploaded to Synapse.Example: example.tsv",
+            "rdfs:comment": "The name of any readme file uploaded to Synapse. Example - example.tsv",
             "rdfs:label": "ReadmeFile",
             "rdfs:subClassOf": [
                 {
@@ -5974,10 +5898,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:UseSummaryFile?",
+            "@id": "bts:UseSummaryFile",
             "@type": "rdfs:Class",
             "rdfs:comment": "Was a summary statitics file uploded to Synapse?",
-            "rdfs:label": "UseSummaryFile?",
+            "rdfs:label": "UseSummaryFile",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -5986,14 +5910,14 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "useSummaryFile?",
+            "sms:displayName": "useSummaryFile",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
             "@id": "bts:SummaryFile",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The name of any summary statistics file uploaded to Synapse.Example: example.tsv",
+            "rdfs:comment": "The name of any summary statistics file uploaded to Synapse. Example - example.tsv",
             "rdfs:label": "SummaryFile",
             "rdfs:subClassOf": [
                 {
@@ -6010,7 +5934,7 @@
         {
             "@id": "bts:SummaryStatisticsAssembly",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Genome assembly for the summary statistics.Example: GRCh38",
+            "rdfs:comment": "Genome assembly for the summary statistics. Example - GRCh38",
             "rdfs:label": "SummaryStatisticsAssembly",
             "rdfs:subClassOf": [
                 {
@@ -6074,9 +5998,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:HasIonizationSource?"
-                },
-                {
-                    "@id": "bts:UseReagent?"
                 }
             ],
             "schema:isPartOf": {
@@ -6094,9 +6015,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:HasIonizationSource?"
-                },
-                {
-                    "@id": "bts:UseReagent?"
                 }
             ],
             "schema:isPartOf": {
@@ -6277,6 +6195,18 @@
                 },
                 {
                     "@id": "bts:Female"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:NotAvailable"
+                },
+                {
+                    "@id": "bts:NotApplicable"
+                },
+                {
+                    "@id": "bts:Unknown"
                 }
             ],
             "sms:displayName": "sex",
@@ -6397,11 +6327,6 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:NCBItaxonomyvalues(notlistedforpurposesofthisRFC)"
-                }
-            ],
             "sms:displayName": "taxon",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -6426,7 +6351,7 @@
         {
             "@id": "bts:LifeStage",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The life stage of the individual.note: Other values are possible depending on life stage terminology for individual species. Please let the data curation team know.",
+            "rdfs:comment": "The life stage of the individual.note- Other values are possible depending on life stage terminology for individual species. Please let the data curation team know.",
             "rdfs:label": "LifeStage",
             "rdfs:subClassOf": [
                 {
@@ -6454,7 +6379,7 @@
         {
             "@id": "bts:SpeciesAge",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Age of individual (formatted in months, ex. \"72 months\").note: Uncertainty about the age might require recording age by specifying a lower and upper estimate in months for the age of the animal.",
+            "rdfs:comment": "Age of individual (formatted in months, ex. \"72 months\").note- Uncertainty about the age might require recording age by specifying a lower and upper estimate in months for the age of the animal.",
             "rdfs:label": "SpeciesAge",
             "rdfs:subClassOf": [
                 {
@@ -6471,7 +6396,7 @@
         {
             "@id": "bts:InstrumentModel",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The model of the instrument used.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The model of the instrument used. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "InstrumentModel",
             "rdfs:subClassOf": [
                 {
@@ -6547,7 +6472,7 @@
         {
             "@id": "bts:IsobaricLabelingReagent",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Reagent set used for isobaric labeling.Examples: iTRAQ113 TMT126Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Reagent set used for isobaric labeling.Examples- iTRAQ113 TMT126Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "IsobaricLabelingReagent",
             "rdfs:subClassOf": [
                 {
@@ -6562,26 +6487,9 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:FalseFalseFALSEtrueTrueTRUE",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "FalseFalseFALSEtrueTrueTRUE",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:IsStranded"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "false False FALSE true True TRUE",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:LabelFreeQuantitation",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Type of label-free data analysis strategyProvide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Type of label-free data analysis strategyProvide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LabelFreeQuantitation",
             "rdfs:subClassOf": [
                 {
@@ -6700,7 +6608,7 @@
         {
             "@id": "bts:LabelQuantitation",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Type of labeling usedProvide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Type of labeling usedProvide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LabelQuantitation",
             "rdfs:subClassOf": [
                 {
@@ -6973,7 +6881,7 @@
         {
             "@id": "bts:LibLayout",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Library layout. Specify whether to expect single, paired, or other configurations of reads.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Library layout. Specify whether to expect single, paired, or other configurations of reads. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibLayout",
             "rdfs:subClassOf": [
                 {
@@ -6990,7 +6898,7 @@
         {
             "@id": "bts:LibReadsSeqd",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Library reads sequenced. Total number of clones sequenced from the library.Example: '20'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Library reads sequenced. Total number of clones sequenced from the library. Example - '20'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibReadsSeqd",
             "rdfs:subClassOf": [
                 {
@@ -7007,7 +6915,7 @@
         {
             "@id": "bts:LibSize",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Library size. Total number of clones in the library prepared for the project.Example: '50'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Library size. Total number of clones in the library prepared for the project. Example - '50'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibSize",
             "rdfs:subClassOf": [
                 {
@@ -7024,7 +6932,7 @@
         {
             "@id": "bts:LibVector",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Library vector. Cloning vector type(s) used in the construction of libraries.Example: 'Bacteriophage P1'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Library vector. Cloning vector type(s) used in the construction of libraries. Example - 'Bacteriophage P1'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LibVector",
             "rdfs:subClassOf": [
                 {
@@ -7252,7 +7160,7 @@
         {
             "@id": "bts:SamplePrepProtocol",
             "@type": "rdfs:Class",
-            "rdfs:comment": "An internet address that may provide more details of the protocol information (web link).Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "An internet address that may provide more details of the protocol information (web link). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SamplePrepProtocol",
             "rdfs:subClassOf": [
                 {
@@ -7294,7 +7202,7 @@
         {
             "@id": "bts:MsAssayTechnique",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Specified the mass spectrometer technique used or the name of the proteomics assay used (ex. DDA)Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Specified the mass spectrometer technique used or the name of the proteomics assay used (ex. DDA)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "MsAssayTechnique",
             "rdfs:subClassOf": [
                 {
@@ -7311,7 +7219,7 @@
         {
             "@id": "bts:MsAnalyteType",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The type of biospecimen subjected to analysis (ex., peptide, protein, metabolite, lipid)Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The type of biospecimen subjected to analysis (ex., peptide, protein, metabolite, lipid)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "MsAnalyteType",
             "rdfs:subClassOf": [
                 {
@@ -7328,7 +7236,7 @@
         {
             "@id": "bts:SampleIntroduction",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The sample introduction and delivery. From GC, from LC, direct infusion without chromatography, direct infusion using dedicated autosampler flow rate.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The sample introduction and delivery. From GC, from LC, direct infusion without chromatography, direct infusion using dedicated autosampler flow rate. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SampleIntroduction",
             "rdfs:subClassOf": [
                 {
@@ -7789,7 +7697,7 @@
         {
             "@id": "bts:Mid",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Multiplex identifiers. Molecular barcodes, called Multiplex Identifiers (MIDs), are used to tag unique samples in a sequencing run specifically. Sequence should be reported in uppercase letters.Example: 'GTGAATAT'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Multiplex identifiers. Molecular barcodes, called Multiplex Identifiers (MIDs), are used to tag unique samples in a sequencing run specifically. Sequence should be reported in uppercase letters. Example - 'GTGAATAT'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "Mid",
             "rdfs:subClassOf": [
                 {
@@ -7806,7 +7714,7 @@
         {
             "@id": "bts:NucleAcidExt",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Nucleic acid extraction. A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample. (example, https://mobio.com/media/wysiwyg/pdfs/protocols/12888.pdf).Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Nucleic acid extraction. A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample. (example, https-//mobio.com/media/wysiwyg/pdfs/protocols/12888.pdf). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "NucleAcidExt",
             "rdfs:subClassOf": [
                 {
@@ -7823,7 +7731,7 @@
         {
             "@id": "bts:SourceMatID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Source material identifiers. A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing.The identifier can refer to the original material collected or any derived sub-samples.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Source material identifiers. A unique identifier assigned to a material sample (as defined by http-//rs.tdwg.org/dwc/terms/materialSampleID and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing.The identifier can refer to the original material collected or any derived sub-samples. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SourceMatID",
             "rdfs:subClassOf": [
                 {
@@ -7840,7 +7748,7 @@
         {
             "@id": "bts:NumberContig",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Number of contigs. Total number of contigs in the cleaned/submitted assembly that comprise a given genome, SAG, MAG, or UViG.Example: '40'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Number of contigs. Total number of contigs in the cleaned/submitted assembly that comprise a given genome, SAG, MAG, or UViG. Example - '40'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "NumberContig",
             "rdfs:subClassOf": [
                 {
@@ -7857,7 +7765,7 @@
         {
             "@id": "bts:Sop",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Relevant standard operating procedures. Standard operating procedures used in the assembly and/or annotation of genomes, metagenomes, or environmental sequences.Example: 'http://press.igsb.anl.gov/earthmicrobiome/protocols-and-standards/its/)'Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Relevant standard operating procedures. Standard operating procedures used in the assembly and/or annotation of genomes, metagenomes, or environmental sequences. Example - 'http-//press.igsb.anl.gov/earthmicrobiome/protocols-and-standards/its/)'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "Sop",
             "rdfs:subClassOf": [
                 {
@@ -7874,7 +7782,7 @@
         {
             "@id": "bts:TargetGene",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Targeted gene or locus name for marker gene studies.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Targeted gene or locus name for marker gene studies. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "TargetGene",
             "rdfs:subClassOf": [
                 {
@@ -7891,7 +7799,7 @@
         {
             "@id": "bts:SeqMethod",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Sequencing method. Sequencing method used;Example: 'Sanger, pyrosequencing, ABI-solid'.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Sequencing method. Sequencing method used; Example - 'Sanger, pyrosequencing, ABI-solid'. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SeqMethod",
             "rdfs:subClassOf": [
                 {
@@ -7908,7 +7816,7 @@
         {
             "@id": "bts:SeqPlatform",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Sequencing platform information.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Sequencing platform information. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "SeqPlatform",
             "rdfs:subClassOf": [
                 {
@@ -8016,7 +7924,7 @@
         {
             "@id": "bts:ModificationParameters",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Modification parameters for a search engine run. (ex. PSI: PI http://www.w3.org/2002/07/owl#Axiom) or used in the peptide identification database search.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Modification parameters for a search engine run. (ex. PSI- PI http-//www.w3.org/2002/07/owl#Axiom) or used in the peptide identification database search. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "ModificationParameters",
             "rdfs:subClassOf": [
                 {
@@ -8184,23 +8092,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NCIvalues(notlistedforpurposesofthisRFC)",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NCIvalues(notlistedforpurposesofthisRFC)",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Organ"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NCI values (not listed for purposes of this RFC)",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:PhenotypeHuman",
             "@type": "rdfs:Class",
             "rdfs:comment": "Template for Phenotype_human",
@@ -8358,7 +8249,7 @@
         {
             "@id": "bts:QuantationStrategy",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The general strategy used for differential analysisExample: Absolute quantitation analysis, Isobaric label quantitation analysis, LC-MS label-free quantitation analysis,Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "The general strategy used for differential analysis Example - Absolute quantitation analysis, Isobaric label quantitation analysis, LC-MS label-free quantitation analysis,Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "QuantationStrategy",
             "rdfs:subClassOf": [
                 {
@@ -8992,7 +8883,7 @@
         {
             "@id": "bts:RnaBatchID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Isolation batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse.Provide a value OR provide one of these values: Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Isolation batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "RnaBatchID",
             "rdfs:subClassOf": [
                 {
@@ -9216,6 +9107,57 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:NotAvailable",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NotAvailable",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Sex"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not Available",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NotApplicable",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NotApplicable",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Sex"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not Applicable",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Unknown",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Unknown",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Sex"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Unknown",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Human",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -9297,23 +9239,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Primate",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HumanReferenceAtlasvalues(notlistedforpurposesofthisRFC)",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HumanReferenceAtlasvalues(notlistedforpurposesofthisRFC)",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:SpecimenSource"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Human Reference Atlas values (not listed for purposes of this RFC)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -9590,23 +9515,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NCBItaxonomyvalues(notlistedforpurposesofthisRFC)",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NCBItaxonomyvalues(notlistedforpurposesofthisRFC)",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Taxon"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NCBI taxonomy values (not listed for purposes of this RFC)",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:LincRNA",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -9807,6 +9715,40 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Years",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TRUE",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TRUE",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:UseReagent"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "TRUE",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:FALSE",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FALSE",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:UseReagent"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "FALSE",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
