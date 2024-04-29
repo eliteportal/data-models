@@ -4,4 +4,4 @@ python ./scripts/join_data_model.py
 
 python ./tests/test_generate_manifests.py
 
-sh update_data_dictionary.sh
+sh data-dictionary/processes/main_workflow.sh

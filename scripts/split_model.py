@@ -1,3 +1,4 @@
+#!usr/bin/env python
 """ 
 Split data model by "Module"
 
