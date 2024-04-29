@@ -14,7 +14,7 @@
             "rdfs:label": "AcquisitionBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -582,7 +582,7 @@
             "rdfs:label": "AcquisitionBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -599,7 +599,7 @@
             "rdfs:label": "AcquisitionBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -616,7 +616,7 @@
             "rdfs:label": "AcquisitionMode",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -633,7 +633,7 @@
             "rdfs:label": "AcquisitionSoftware",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -650,7 +650,7 @@
             "rdfs:label": "AcquistionSoftwareVersion",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -667,7 +667,7 @@
             "rdfs:label": "Adapters",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -684,7 +684,7 @@
             "rdfs:label": "AdjustedCovariates",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -701,7 +701,7 @@
             "rdfs:label": "Age",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -718,7 +718,7 @@
             "rdfs:label": "ArrayInformation",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -735,7 +735,7 @@
             "rdfs:label": "ArrayManufacturer",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -752,7 +752,7 @@
             "rdfs:label": "Assay",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -769,7 +769,7 @@
             "rdfs:label": "AssemblyName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -782,11 +782,11 @@
         {
             "@id": "bts:AssemblyQual",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Assembly quality. The assembly quality category is based on sets of criteria outlined for each assembly quality category.High Quality- Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.Medium Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics.Low Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to, total assembly size, number of contigs, contig N50/L50, and maximum contig length.Example values - high-quality genome, medium-quality genome, low-quality genome",
+            "rdfs:comment": "Assembly quality. The assembly quality category is based on sets of criteria outlined for each assembly quality category.High Quality- Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.Medium Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics.Low Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to, total assembly size, number of contigs, contig N50/L50, and maximum contig length. Example values - high-quality genome, medium-quality genome, low-quality genome",
             "rdfs:label": "AssemblyQual",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -799,11 +799,11 @@
         {
             "@id": "bts:AssemblySoftware",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Tool(s) used for assembly, including version number and parameters.Example - 'metaSPAdes;3.11.0; kmer set 21,33,55,77,99,121, default parameters otherwise'. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Tool(s) used for assembly, including version number and parameters. Example - 'metaSPAdes;3.11.0; kmer set 21,33,55,77,99,121, default parameters otherwise'. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "AssemblySoftware",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -820,7 +820,7 @@
             "rdfs:label": "AssociatedResource",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -837,7 +837,7 @@
             "rdfs:label": "BackgroundTrait",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -854,7 +854,7 @@
             "rdfs:label": "BatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -871,7 +871,7 @@
             "rdfs:label": "BatchLabel",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -888,7 +888,7 @@
             "rdfs:label": "BatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -905,7 +905,7 @@
             "rdfs:label": "BatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1009,7 +1009,7 @@
             "rdfs:label": "IndividualID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1026,7 +1026,7 @@
             "rdfs:label": "SpecimenID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1043,7 +1043,7 @@
             "rdfs:label": "SpecimenType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1082,6 +1082,18 @@
                 },
                 {
                     "@id": "bts:Organoid"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "specimenType",
@@ -1095,7 +1107,7 @@
             "rdfs:label": "MeasurementTechnique",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1112,7 +1124,7 @@
             "rdfs:label": "SpecimenAge",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1129,7 +1141,7 @@
             "rdfs:label": "SamplingAge",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1146,7 +1158,7 @@
             "rdfs:label": "Organ",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1162,6 +1174,9 @@
             "rdfs:comment": "Indicate the tissue the specimen is from",
             "rdfs:label": "Tissue",
             "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                },
                 {
                     "@id": "bts:SpecimenType"
                 }
@@ -1180,7 +1195,7 @@
             "rdfs:label": "TissueVolume",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1197,7 +1212,7 @@
             "rdfs:label": "TissueWeight",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1214,7 +1229,7 @@
             "rdfs:label": "SpecimenSource",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1231,7 +1246,7 @@
             "rdfs:label": "NucleicAcidSource",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1258,6 +1273,18 @@
                 },
                 {
                     "@id": "bts:Sortednuclei"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "nucleicAcidSource",
@@ -1271,7 +1298,7 @@
             "rdfs:label": "CellType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1288,7 +1315,7 @@
             "rdfs:label": "FastingState",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1302,7 +1329,16 @@
                     "@id": "bts:False"
                 },
                 {
-                    "@id": "bts:Uknown"
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "fastingState",
@@ -1316,7 +1352,7 @@
             "rdfs:label": "IsPostMortem",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1340,6 +1376,62 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Component",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:template",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "template",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bts:BiospecimenHuman"
+                },
+                {
+                    "@id": "bts:BiospecimenNonHuman"
+                },
+                {
+                    "@id": "bts:BsSeq"
+                },
+                {
+                    "@id": "bts:GenotypingHuman"
+                },
+                {
+                    "@id": "bts:IndividualHuman"
+                },
+                {
+                    "@id": "bts:IndividualNonHuman"
+                },
+                {
+                    "@id": "bts:Metabolomics"
+                },
+                {
+                    "@id": "bts:Metagenomics"
+                },
+                {
+                    "@id": "bts:Microbiome"
+                },
+                {
+                    "@id": "bts:PhenotypeHuman"
+                },
+                {
+                    "@id": "bts:Proteomics"
+                },
+                {
+                    "@id": "bts:RNAseq"
+                },
+                {
+                    "@id": "bts:WholeGenomeSequencing"
+                },
+                {
+                    "@id": "bts:ScRNAseq"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Template",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -1535,7 +1627,7 @@
             "rdfs:label": "SampleType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1552,7 +1644,7 @@
             "rdfs:label": "TechnologyPlatformVersion",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1569,7 +1661,7 @@
             "rdfs:label": "PlatformLocation",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1586,7 +1678,7 @@
             "rdfs:label": "ReferenceTranscriptID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1603,7 +1695,7 @@
             "rdfs:label": "DnaBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1620,7 +1712,7 @@
             "rdfs:label": "DnaBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1637,7 +1729,7 @@
             "rdfs:label": "DnaBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1821,7 +1913,7 @@
             "rdfs:label": "LibraryBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1838,7 +1930,7 @@
             "rdfs:label": "LibraryPrep",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1855,7 +1947,7 @@
             "rdfs:label": "LibraryPreparationMethod",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1872,7 +1964,7 @@
             "rdfs:label": "LibraryVersion",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1889,7 +1981,7 @@
             "rdfs:label": "SequencingBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1906,7 +1998,7 @@
             "rdfs:label": "SequencingBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1923,7 +2015,7 @@
             "rdfs:label": "SequencingBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1940,7 +2032,7 @@
             "rdfs:label": "IsStranded",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1965,7 +2057,7 @@
             "rdfs:label": "ReadStrandOrigin",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -1990,7 +2082,7 @@
             "rdfs:label": "ReadLength",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2007,7 +2099,7 @@
             "rdfs:label": "ReadLengthUnits",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2024,7 +2116,7 @@
             "rdfs:label": "RunType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2039,6 +2131,18 @@
                 },
                 {
                     "@id": "bts:SingleEndpairedEnd"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "runType",
@@ -2052,7 +2156,7 @@
             "rdfs:label": "TotalReads",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2069,7 +2173,7 @@
             "rdfs:label": "DirectionalBSseqLibrary",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2086,7 +2190,7 @@
             "rdfs:label": "GDNAconc",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2103,7 +2207,7 @@
             "rdfs:label": "LambdaDNAconc",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2120,7 +2224,7 @@
             "rdfs:label": "PcrCycles",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2137,7 +2241,7 @@
             "rdfs:label": "MeanCoverage",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2154,7 +2258,7 @@
             "rdfs:label": "ConversionRatio",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2171,7 +2275,7 @@
             "rdfs:label": "ConversionRatioUnits",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2188,7 +2292,7 @@
             "rdfs:label": "EnrichmentMethod",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2205,7 +2309,7 @@
             "rdfs:label": "CaptivityDuration",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2222,7 +2326,7 @@
             "rdfs:label": "CaptivityStatus",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2301,7 +2405,7 @@
             "rdfs:label": "Cohort",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2318,7 +2422,7 @@
             "rdfs:label": "CommonName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2335,7 +2439,7 @@
             "rdfs:label": "ConsentGroupID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2352,7 +2456,7 @@
             "rdfs:label": "ControlType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2369,7 +2473,7 @@
             "rdfs:label": "CountryCode",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2386,7 +2490,7 @@
             "rdfs:label": "DatabaseLibrary",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2403,7 +2507,7 @@
             "rdfs:label": "DatabaseName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2420,7 +2524,7 @@
             "rdfs:label": "DatabaseSource",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2437,7 +2541,7 @@
             "rdfs:label": "DatabaseVersion",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2454,7 +2558,7 @@
             "rdfs:label": "DatabaseWeblink",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2471,7 +2575,7 @@
             "rdfs:label": "DataFile",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2488,7 +2592,7 @@
             "rdfs:label": "Diagnosis",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2505,7 +2609,7 @@
             "rdfs:label": "DiagnosisStatus",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2576,7 +2680,7 @@
             "rdfs:label": "DigestionMethod",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2593,7 +2697,7 @@
             "rdfs:label": "DigestionReagent",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -2613,10 +2717,10 @@
                     "@id": "bts:Asp-NAmbic"
                 },
                 {
-                    "@id": "bts:Chymotrypsin"
+                    "@id": "bts:CNBr"
                 },
                 {
-                    "@id": "bts:CNBr"
+                    "@id": "bts:Chymotrypsin"
                 },
                 {
                     "@id": "bts:FormicAcid"
@@ -2640,6 +2744,15 @@
                     "@id": "bts:NoEnzyme"
                 },
                 {
+                    "@id": "bts:NotAvailable"
+                },
+                {
+                    "@id": "bts:NotCollected"
+                },
+                {
+                    "@id": "bts:NotSpecified"
+                },
+                {
                     "@id": "bts:PepsinA"
                 },
                 {
@@ -2653,6 +2766,9 @@
                 },
                 {
                     "@id": "bts:Trypsin/P"
+                },
+                {
+                    "@id": "bts:Unknown"
                 },
                 {
                     "@id": "bts:Unspecificcleavage"
@@ -2737,23 +2853,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Chymotrypsin",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Chymotrypsin",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DigestionReagent"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Chymotrypsin",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:CNBr",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -2767,6 +2866,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "CNBr",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Chymotrypsin",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Chymotrypsin",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DigestionReagent"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Chymotrypsin",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -2890,6 +3006,108 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:NotAvailable",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NotAvailable",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:LabelQuantitation"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not Available",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NotCollected",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NotCollected",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:LabelQuantitation"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not Collected",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:NotSpecified",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "NotSpecified",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:TreatmentTemperatureUnit"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:LabelQuantitation"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
+                },
+                {
+                    "@id": "bts:DnaBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:TreatmentAmountUnit"
+                },
+                {
+                    "@id": "bts:VacuumPressureUnit"
+                },
+                {
+                    "@id": "bts:RnaBatchSizeUnit"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not Specified",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:PepsinA",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -2971,6 +3189,65 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Trypsin/P",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Unknown",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Unknown",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:FastingState"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:Sex"
+                },
+                {
+                    "@id": "bts:Stage"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:TreatmentDurationUnit"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:LabelQuantitation"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Unknown",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -3803,41 +4080,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NotSpecified",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NotSpecified",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ResultUnit"
-                },
-                {
-                    "@id": "bts:TreatmentTemperatureUnit"
-                },
-                {
-                    "@id": "bts:TreatmentDurationUnit"
-                },
-                {
-                    "@id": "bts:DnaBatchSizeUnit"
-                },
-                {
-                    "@id": "bts:TreatmentAmountUnit"
-                },
-                {
-                    "@id": "bts:VacuumPressureUnit"
-                },
-                {
-                    "@id": "bts:RnaBatchSizeUnit"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Not Specified",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:NPX",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -4445,6 +4687,15 @@
                     "@id": "bts:Sex"
                 },
                 {
+                    "@id": "bts:Stage"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
                     "@id": "bts:TreatmentAmountUnit"
                 },
                 {
@@ -4468,7 +4719,7 @@
             "rdfs:label": "DNAextraction",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4485,7 +4736,7 @@
             "rdfs:label": "Enrichment",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4502,7 +4753,7 @@
             "rdfs:label": "EnrichmentStrategy",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4513,19 +4764,40 @@
                     "@id": "bts:AcetylomeProteome"
                 },
                 {
-                    "@id": "bts:Phosphoproteome"
-                },
-                {
                     "@id": "bts:Glycoproteome"
                 },
                 {
-                    "@id": "bts:Ubiquitylome"
+                    "@id": "bts:Lipidome"
                 },
                 {
                     "@id": "bts:Metabolome"
                 },
                 {
-                    "@id": "bts:Lipidome"
+                    "@id": "bts:NotAvailable"
+                },
+                {
+                    "@id": "bts:NotCollected"
+                },
+                {
+                    "@id": "bts:NotSpecified"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notspecified"
+                },
+                {
+                    "@id": "bts:Phosphoproteome"
+                },
+                {
+                    "@id": "bts:Ubiquitylome"
+                },
+                {
+                    "@id": "bts:Unknown"
                 }
             ],
             "sms:displayName": "enrichmentStrategy",
@@ -4550,23 +4822,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Phosphoproteome",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Phosphoproteome",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:EnrichmentStrategy"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Phosphoproteome",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:Glycoproteome",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -4580,40 +4835,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Glycoproteome",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Ubiquitylome",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Ubiquitylome",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:EnrichmentStrategy"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Ubiquitylome",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Metabolome",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Metabolome",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:EnrichmentStrategy"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Metabolome",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -4635,13 +4856,223 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Metabolome",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Metabolome",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Metabolome",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Notapplicable",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Notapplicable",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:FastingState"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:Sex"
+                },
+                {
+                    "@id": "bts:Stage"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:TreatmentDurationUnit"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not applicable",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Notcollected",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Notcollected",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:FastingState"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:Sex"
+                },
+                {
+                    "@id": "bts:Stage"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:TreatmentDurationUnit"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not collected",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Notspecified",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Notspecified",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:FastingState"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:Sex"
+                },
+                {
+                    "@id": "bts:Stage"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:TreatmentDurationUnit"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not specified",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Phosphoproteome",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Phosphoproteome",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Phosphoproteome",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ubiquitylome",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ubiquitylome",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ubiquitylome",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:EthnicGroupCode",
             "@type": "rdfs:Class",
             "rdfs:comment": "A coded value specifying the self-declared ethnic origination independent of racial origination, provided by the data contributor's data dictionary",
             "rdfs:label": "EthnicGroupCode",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4658,7 +5089,7 @@
             "rdfs:label": "Ethnicity",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4740,7 +5171,7 @@
             "rdfs:label": "ExperiementalBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4757,7 +5188,7 @@
             "rdfs:label": "ExperiementalBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4774,7 +5205,7 @@
             "rdfs:label": "ExperimentalFactor",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4791,7 +5222,7 @@
             "rdfs:label": "ExperimentType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4808,7 +5239,7 @@
             "rdfs:label": "ExtractionMethod",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4819,119 +5250,20 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Uknown",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Uknown",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FastingState"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Uknown",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:FieldCenterCode",
             "@type": "rdfs:Class",
             "rdfs:comment": "Name of the field center",
             "rdfs:label": "FieldCenterCode",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:BU"
-                },
-                {
-                    "@id": "bts:PT"
-                },
-                {
-                    "@id": "bts:NY"
-                },
-                {
-                    "@id": "bts:DK"
-                }
-            ],
             "sms:displayName": "fieldCenterCode",
             "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:BU",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "BU",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FieldCenterCode"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "BU",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PT",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PT",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FieldCenterCode"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "PT",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NY",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NY",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FieldCenterCode"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NY",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DK",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DK",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:FieldCenterCode"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "DK",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -4941,7 +5273,7 @@
             "rdfs:label": "FractionIdentifier",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4958,7 +5290,7 @@
             "rdfs:label": "GasFlowTemperature",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -4975,7 +5307,7 @@
             "rdfs:label": "GasFlowTemperatureUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5063,7 +5395,7 @@
             "rdfs:label": "GenotypeTechnology",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5219,7 +5551,7 @@
             "rdfs:label": "Stage",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5231,6 +5563,21 @@
                 },
                 {
                     "@id": "bts:Replication"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "stage",
@@ -5244,7 +5591,7 @@
             "rdfs:label": "NumberIndividuals",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5261,7 +5608,7 @@
             "rdfs:label": "UseReagent",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5286,7 +5633,7 @@
             "rdfs:label": "ReagentID(s)",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5303,7 +5650,7 @@
             "rdfs:label": "ReagentName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5320,7 +5667,7 @@
             "rdfs:label": "ReagentManufacturer",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5337,7 +5684,7 @@
             "rdfs:label": "ReagentCatalogNumber",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5354,7 +5701,7 @@
             "rdfs:label": "ReagentLotNumber",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5371,7 +5718,7 @@
             "rdfs:label": "ReagentWeblink",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5388,7 +5735,7 @@
             "rdfs:label": "ReagentContact",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5405,7 +5752,7 @@
             "rdfs:label": "UseTreatment",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5422,7 +5769,7 @@
             "rdfs:label": "TreatmentID(s)",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5439,7 +5786,7 @@
             "rdfs:label": "TreatmentName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5456,7 +5803,7 @@
             "rdfs:label": "TreatmentAmountValue",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5473,7 +5820,7 @@
             "rdfs:label": "TreatmentAmountUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5657,7 +6004,7 @@
             "rdfs:label": "TreatmentDurationValue",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5674,7 +6021,7 @@
             "rdfs:label": "TreatmentDurationUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5697,9 +6044,6 @@
                     "@id": "bts:Months"
                 },
                 {
-                    "@id": "bts:NotSpecified"
-                },
-                {
                     "@id": "bts:Seconds"
                 },
                 {
@@ -5707,6 +6051,18 @@
                 },
                 {
                     "@id": "bts:Years"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "treatmentDurationUnit",
@@ -5720,7 +6076,7 @@
             "rdfs:label": "TreatmentTemperatureValue",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5737,7 +6093,7 @@
             "rdfs:label": "TreatmentTemperatureUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5768,7 +6124,7 @@
             "rdfs:label": "Imputation",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5785,7 +6141,7 @@
             "rdfs:label": "ImputationPanel",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5802,7 +6158,7 @@
             "rdfs:label": "ImputationSoftware",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5819,7 +6175,7 @@
             "rdfs:label": "VariantCount",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5836,7 +6192,7 @@
             "rdfs:label": "StatisticalModel",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5853,7 +6209,7 @@
             "rdfs:label": "ReportedTrait",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5870,7 +6226,7 @@
             "rdfs:label": "UseReadMeFile",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5887,7 +6243,7 @@
             "rdfs:label": "ReadmeFile",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5904,7 +6260,7 @@
             "rdfs:label": "UseSummaryFile",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5921,7 +6277,7 @@
             "rdfs:label": "SummaryFile",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5938,7 +6294,7 @@
             "rdfs:label": "SummaryStatisticsAssembly",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5955,7 +6311,7 @@
             "rdfs:label": "HasAssayControl",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -5972,7 +6328,7 @@
             "rdfs:label": "HasIonizationSource?",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6101,7 +6457,7 @@
             "rdfs:label": "StudyCode",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6132,7 +6488,7 @@
             "rdfs:label": "VisitCode",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6149,7 +6505,7 @@
             "rdfs:label": "SpeciesGroup",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6170,6 +6526,21 @@
                 },
                 {
                     "@id": "bts:Primate"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "speciesGroup",
@@ -6183,7 +6554,7 @@
             "rdfs:label": "Sex",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6200,13 +6571,16 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:NotAvailable"
-                },
-                {
-                    "@id": "bts:NotApplicable"
-                },
-                {
                     "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "sex",
@@ -6220,7 +6594,7 @@
             "rdfs:label": "Race",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6321,7 +6695,7 @@
             "rdfs:label": "Taxon",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6338,7 +6712,7 @@
             "rdfs:label": "SpeciesName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6355,7 +6729,7 @@
             "rdfs:label": "LifeStage",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6383,7 +6757,7 @@
             "rdfs:label": "SpeciesAge",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6400,7 +6774,7 @@
             "rdfs:label": "InstrumentModel",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6417,7 +6791,7 @@
             "rdfs:label": "IonProperty",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6472,11 +6846,11 @@
         {
             "@id": "bts:IsobaricLabelingReagent",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Reagent set used for isobaric labeling.Examples- iTRAQ113 TMT126Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
+            "rdfs:comment": "Reagent set used for isobaric labeling. Examples- iTRAQ113 TMT126Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "IsobaricLabelingReagent",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6493,7 +6867,7 @@
             "rdfs:label": "LabelFreeQuantitation",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6501,7 +6875,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:Label-freeproteinlevelquantitation"
+                    "@id": "bts:Label-freegenelevelquantitation"
                 },
                 {
                     "@id": "bts:Label-freepeptidelevelquantitation"
@@ -6510,10 +6884,31 @@
                     "@id": "bts:Label-freeproteingrouplevelquantitation"
                 },
                 {
+                    "@id": "bts:Label-freeproteinlevelquantitation"
+                },
+                {
                     "@id": "bts:Label-freerawfeaturequantitation"
                 },
                 {
-                    "@id": "bts:Label-freegenelevelquantitation"
+                    "@id": "bts:NotAvailable"
+                },
+                {
+                    "@id": "bts:NotCollected"
+                },
+                {
+                    "@id": "bts:NotSpecified"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notspecified"
+                },
+                {
+                    "@id": "bts:Unknown"
                 }
             ],
             "sms:displayName": "labelFreeQuantitation",
@@ -6521,10 +6916,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Label-freeproteinlevelquantitation",
+            "@id": "bts:Label-freegenelevelquantitation",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Label-freeproteinlevelquantitation",
+            "rdfs:label": "Label-freegenelevelquantitation",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:LabelFreeQuantitation"
@@ -6533,7 +6928,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Label-free protein level quantitation",
+            "sms:displayName": "Label-free gene level quantitation",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6572,6 +6967,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Label-freeproteinlevelquantitation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Label-freeproteinlevelquantitation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Label-free protein level quantitation",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Label-freerawfeaturequantitation",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -6589,30 +7001,13 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Label-freegenelevelquantitation",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Label-freegenelevelquantitation",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:LabelFreeQuantitation"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Label-free gene level quantitation",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:LabelQuantitation",
             "@type": "rdfs:Class",
             "rdfs:comment": "Type of labeling usedProvide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
             "rdfs:label": "LabelQuantitation",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6635,22 +7030,34 @@
                     "@id": "bts:HydrazideTMT"
                 },
                 {
+                    "@id": "bts:IPTL"
+                },
+                {
                     "@id": "bts:IodoTMT"
                 },
                 {
-                    "@id": "bts:IPTL"
+                    "@id": "bts:LabelFree"
+                },
+                {
+                    "@id": "bts:NotAvailable"
+                },
+                {
+                    "@id": "bts:NotCollected"
+                },
+                {
+                    "@id": "bts:NotSpecified"
+                },
+                {
+                    "@id": "bts:TMT"
+                },
+                {
+                    "@id": "bts:Unknown"
                 },
                 {
                     "@id": "bts:ITRAQ"
                 },
                 {
                     "@id": "bts:ITRAQH"
-                },
-                {
-                    "@id": "bts:LabelFree"
-                },
-                {
-                    "@id": "bts:TMT"
                 }
             ],
             "sms:displayName": "labelQuantitation",
@@ -6743,23 +7150,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:IodoTMT",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "IodoTMT",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:LabelQuantitation"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "IodoTMT",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:IPTL",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -6777,10 +7167,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ITRAQ",
+            "@id": "bts:IodoTMT",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "ITRAQ",
+            "rdfs:label": "IodoTMT",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:LabelQuantitation"
@@ -6789,24 +7179,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "iTRAQ",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ITRAQH",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ITRAQH",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:LabelQuantitation"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "iTRAQH",
+            "sms:displayName": "IodoTMT",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6845,13 +7218,47 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:ITRAQ",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ITRAQ",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:LabelQuantitation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "iTRAQ",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ITRAQH",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "ITRAQH",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:LabelQuantitation"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "iTRAQH",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:LensVoltages",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
             "rdfs:label": "LensVoltages",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6868,7 +7275,7 @@
             "rdfs:label": "LensVoltagesUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6885,7 +7292,7 @@
             "rdfs:label": "LibLayout",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6902,7 +7309,7 @@
             "rdfs:label": "LibReadsSeqd",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6919,7 +7326,7 @@
             "rdfs:label": "LibSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -6936,7 +7343,7 @@
             "rdfs:label": "LibVector",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7164,7 +7571,7 @@
             "rdfs:label": "SamplePrepProtocol",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7181,7 +7588,7 @@
             "rdfs:label": "MsTarget",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7189,7 +7596,28 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:NotAvailable"
+                },
+                {
+                    "@id": "bts:NotCollected"
+                },
+                {
+                    "@id": "bts:NotSpecified"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notspecified"
+                },
+                {
                     "@id": "bts:Targeted"
+                },
+                {
+                    "@id": "bts:Unknown"
                 },
                 {
                     "@id": "bts:Untargeted"
@@ -7206,7 +7634,7 @@
             "rdfs:label": "MsAssayTechnique",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7223,7 +7651,7 @@
             "rdfs:label": "MsAnalyteType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7240,7 +7668,7 @@
             "rdfs:label": "SampleIntroduction",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7257,7 +7685,7 @@
             "rdfs:label": "SpectrometerFrequency",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7274,7 +7702,7 @@
             "rdfs:label": "VacuumPressure",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7291,7 +7719,7 @@
             "rdfs:label": "VacuumPressureUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7472,7 +7900,7 @@
             "rdfs:label": "SampleBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7489,7 +7917,7 @@
             "rdfs:label": "SampleBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7506,7 +7934,7 @@
             "rdfs:label": "SampleBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7523,7 +7951,7 @@
             "rdfs:label": "ProcessingBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7540,7 +7968,7 @@
             "rdfs:label": "ProcessingBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7557,7 +7985,7 @@
             "rdfs:label": "ProcessingBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7701,7 +8129,7 @@
             "rdfs:label": "Mid",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7718,7 +8146,7 @@
             "rdfs:label": "NucleAcidExt",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7735,7 +8163,7 @@
             "rdfs:label": "SourceMatID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7752,7 +8180,7 @@
             "rdfs:label": "NumberContig",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7769,7 +8197,7 @@
             "rdfs:label": "Sop",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7786,7 +8214,7 @@
             "rdfs:label": "TargetGene",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7803,7 +8231,7 @@
             "rdfs:label": "SeqMethod",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7820,7 +8248,7 @@
             "rdfs:label": "SeqPlatform",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -7928,7 +8356,7 @@
             "rdfs:label": "ModificationParameters",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -8253,7 +8681,7 @@
             "rdfs:label": "QuantationStrategy",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -8344,7 +8772,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Native Hawaiian or  Pacific Islander",
+            "sms:displayName": "Native Hawaiian or Pacific Islander",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -8406,7 +8834,7 @@
             "rdfs:label": "RepositoryName",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -8805,7 +9233,7 @@
             "rdfs:label": "ResultUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -8822,7 +9250,16 @@
                     "@id": "bts:TPM"
                 },
                 {
-                    "@id": "bts:NotSpecified"
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "resultUnit",
@@ -8887,7 +9324,7 @@
             "rdfs:label": "RnaBatchID",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -8983,7 +9420,7 @@
             "rdfs:label": "TranscriptType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -8998,6 +9435,21 @@
                 },
                 {
                     "@id": "bts:SnRNA"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "transcriptType",
@@ -9011,7 +9463,7 @@
             "rdfs:label": "ValueReported",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -9103,57 +9555,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Female",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NotAvailable",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NotAvailable",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Sex"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Not Available",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NotApplicable",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NotApplicable",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Sex"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Not Applicable",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Unknown",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Unknown",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Sex"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Unknown",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -9850,7 +10251,7 @@
             "rdfs:label": "RnaBatchSize",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
@@ -9867,7 +10268,7 @@
             "rdfs:label": "RnaBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:manifestColumn"
                 }
             ],
             "schema:isPartOf": {
