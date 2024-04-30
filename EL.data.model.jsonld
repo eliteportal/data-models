@@ -46,7 +46,7 @@
                     "@id": "bts:AcquisitionSoftware"
                 },
                 {
-                    "@id": "bts:AcquistionSoftwareVersion"
+                    "@id": "bts:AcquisitionSoftwareVersion"
                 },
                 {
                     "@id": "bts:Adapters"
@@ -184,10 +184,10 @@
                     "@id": "bts:Ethnicity"
                 },
                 {
-                    "@id": "bts:ExperiementalBatchSize"
+                    "@id": "bts:ExperimentalBatchSize"
                 },
                 {
-                    "@id": "bts:ExperiementalBatchSizeUnit"
+                    "@id": "bts:ExperimentalBatchSizeUnit"
                 },
                 {
                     "@id": "bts:ExperimentalFactor"
@@ -223,7 +223,7 @@
                     "@id": "bts:HasAssayControl"
                 },
                 {
-                    "@id": "bts:HasIonizationSource?"
+                    "@id": "bts:HasIonizationSource"
                 },
                 {
                     "@id": "bts:Imputation"
@@ -370,7 +370,7 @@
                     "@id": "bts:ReagentContact"
                 },
                 {
-                    "@id": "bts:ReagentID(s)"
+                    "@id": "bts:ReagentIDs"
                 },
                 {
                     "@id": "bts:ReagentLotNumber"
@@ -644,10 +644,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:AcquistionSoftwareVersion",
+            "@id": "bts:AcquisitionSoftwareVersion",
             "@type": "rdfs:Class",
             "rdfs:comment": "The version number of software used. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
-            "rdfs:label": "AcquistionSoftwareVersion",
+            "rdfs:label": "AcquisitionSoftwareVersion",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
@@ -656,7 +656,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "acquistionSoftwareVersion",
+            "sms:displayName": "acquisitionSoftwareVersion",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -5119,10 +5119,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ExperiementalBatchSize",
+            "@id": "bts:ExperimentalBatchSize",
             "@type": "rdfs:Class",
             "rdfs:comment": "The number of samples",
-            "rdfs:label": "ExperiementalBatchSize",
+            "rdfs:label": "ExperimentalBatchSize",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
@@ -5131,15 +5131,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "experiementalBatchSize",
+            "sms:displayName": "experimentalBatchSize",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ExperiementalBatchSizeUnit",
+            "@id": "bts:ExperimentalBatchSizeUnit",
             "@type": "rdfs:Class",
             "rdfs:comment": "The unit of measurement for number of samples in a experimental batch",
-            "rdfs:label": "ExperiementalBatchSizeUnit",
+            "rdfs:label": "ExperimentalBatchSizeUnit",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
@@ -5148,7 +5148,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "experiementalBatchSizeUnit",
+            "sms:displayName": "experimentalBatchSizeUnit",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -5394,7 +5394,7 @@
                     "@id": "bts:UseReagent"
                 },
                 {
-                    "@id": "bts:ReagentID(s)"
+                    "@id": "bts:ReagentIDs"
                 },
                 {
                     "@id": "bts:ReagentName"
@@ -5581,10 +5581,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ReagentID(s)",
+            "@id": "bts:ReagentIDs",
             "@type": "rdfs:Class",
             "rdfs:comment": "One or more identifiers, separated by a semicolon (;). The reagent identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse.",
-            "rdfs:label": "ReagentID(s)",
+            "rdfs:label": "ReagentIDs",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
@@ -5593,7 +5593,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "reagentID(s)",
+            "sms:displayName": "reagentIDs",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6276,10 +6276,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:HasIonizationSource?",
+            "@id": "bts:HasIonizationSource",
             "@type": "rdfs:Class",
             "rdfs:comment": "Were the ionization conditions recorded to enable reproduction of the experiment?",
-            "rdfs:label": "HasIonizationSource?",
+            "rdfs:label": "HasIonizationSource",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
@@ -6296,7 +6296,7 @@
                     "@id": "bts:Yes"
                 }
             ],
-            "sms:displayName": "hasIonizationSource?",
+            "sms:displayName": "hasIonizationSource",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6307,7 +6307,7 @@
             "rdfs:label": "No",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:HasIonizationSource?"
+                    "@id": "bts:HasIonizationSource"
                 }
             ],
             "schema:isPartOf": {
@@ -6324,7 +6324,7 @@
             "rdfs:label": "Yes",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:HasIonizationSource?"
+                    "@id": "bts:HasIonizationSource"
                 }
             ],
             "schema:isPartOf": {
@@ -7432,7 +7432,7 @@
                     "@id": "bts:SpectrometerFrequency"
                 },
                 {
-                    "@id": "bts:HasIonizationSource?"
+                    "@id": "bts:HasIonizationSource"
                 },
                 {
                     "@id": "bts:IonProperty"
@@ -7462,10 +7462,10 @@
                     "@id": "bts:ControlType"
                 },
                 {
-                    "@id": "bts:ExperiementalBatchSize"
+                    "@id": "bts:ExperimentalBatchSize"
                 },
                 {
-                    "@id": "bts:ExperiementalBatchSizeUnit"
+                    "@id": "bts:ExperimentalBatchSizeUnit"
                 },
                 {
                     "@id": "bts:BatchSize"
@@ -7618,6 +7618,23 @@
             },
             "sms:displayName": "sampleIntroduction",
             "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AcquistionSoftwareVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AcquistionSoftwareVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "acquistionSoftwareVersion",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
