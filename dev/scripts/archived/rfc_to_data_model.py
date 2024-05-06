@@ -1,3 +1,6 @@
+""" 
+*In progress*
+"""
 # # Setup
 
 # - Fix inconsistencies in parent column
@@ -140,6 +143,27 @@ recoder_valid_values = {
     re.compile("OtherControlType", re.IGNORECASE): "OtherControlType",
     re.compile("OtherMsAnalyteType", re.IGNORECASE): "OtherMsAnalyteType",
 }
+
+recoder = {
+    "metabolmics": "metabolomics",
+    "(mass spec proteomics)": "Proteomics",
+    "(mass spec metabolomics)": "Metabolomics Human",
+    "(assay_otheruseTreatment? = Yes)": "assay_other, useTreatment? = Yes",
+    "OtherUnknown": "Other, Unknown",
+    "falseFalseFALSEtrueTrueTRUE": "TRUE, FALSE",
+    "Hispanic or latinoEthnicity": "Hispanic or Latino",
+    re.compile("Forwardreverse", flags=re.IGNORECASE): "forward,reverse",
+    re.compile("singleEndpairedEnd"): "singleEnd, pairedEnd",
+    re.compile("(WGS)"): "Whole Genome Sequencing",
+    re.compile("\?"): "",
+    "Zeiss LSM 980Other": "Zeiss LSM 980,Other",
+    "bsSeqsampleType = other": "bsSeq, sampleType = other",
+    re.compile(
+        "HPO, MONDO, MAXO codes or labels \(not listed for purposes of this RFC\)"
+    ): "HPO and MONDO and MAXO codes or labels (not listed for purposes of this RFC)",
+    "The Health, Aging, and Body Composition Study \(HealthABC\)": "The Health and Aging and Body Composition Study (HealthABC)",
+}
+
 
 # # Functions
 
@@ -445,25 +469,6 @@ dm = dm.loc[:, keep_cols]
 # ## DependsOn Component
 # 
 
-recoder = {
-    "metabolmics": "metabolomics",
-    "(mass spec proteomics)": "Proteomics",
-    "(mass spec metabolomics)": "Metabolomics Human",
-    "(assay_otheruseTreatment? = Yes)": "assay_other, useTreatment? = Yes",
-    "OtherUnknown": "Other, Unknown",
-    "falseFalseFALSEtrueTrueTRUE": "TRUE, FALSE",
-    "Hispanic or latinoEthnicity": "Hispanic or Latino",
-    re.compile("Forwardreverse", flags=re.IGNORECASE): "forward,reverse",
-    re.compile("singleEndpairedEnd"): "singleEnd, pairedEnd",
-    re.compile("(WGS)"): "Whole Genome Sequencing",
-    re.compile("\?"): "",
-    "Zeiss LSM 980Other": "Zeiss LSM 980,Other",
-    "bsSeqsampleType = other": "bsSeq, sampleType = other",
-    re.compile(
-        "HPO, MONDO, MAXO codes or labels \(not listed for purposes of this RFC\)"
-    ): "HPO and MONDO and MAXO codes or labels (not listed for purposes of this RFC)",
-    "The Health, Aging, and Body Composition Study \(HealthABC\)": "The Health and Aging and Body Composition Study (HealthABC)",
-}
 
 # 'mass spec metabolomics,measurementTechnique = other'
 # falseFalseFALSEtrueTrueTRUE
