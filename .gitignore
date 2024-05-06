@@ -21,7 +21,7 @@ _data/manifest_generation_results.txt
 !**/EL_data_model_v3.jsonld
 !**/EL.data.model.csv
 !**/EL.data.model.jsonld
-!**/modules/*
+!**/model-modules/*
 !**/dca-template-config.json
 !**/dca_config.json
 legacy-data-models/old_models
