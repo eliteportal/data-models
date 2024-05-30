@@ -1,0 +1,17 @@
+,98
+Attribute,modificationParameters
+Description,"Modification parameters for a search engine run. (ex. PSI- PI http-//www.w3.org/2002/07/owl#Axiom) or used in the peptide identification database search. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,https://www.ebi.ac.uk/ols/ontologies/ms/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMS_1001055
+Notes,"Possible values are listed under modification parameters:https://www.ebi.ac.uk/ols/ontologies/ms/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMS_1001055Other, Unknown, Not collected, Not applicable, Not specified. "
+UsedIn,Proteomics

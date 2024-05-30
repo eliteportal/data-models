@@ -1,0 +1,17 @@
+,195
+Attribute,file_annotation_template
+Description,Base annotations for files in synapse
+Valid Values,
+DependsOn,"Filename, individualID, specimenID, isMultiSpecimen, assay, fileFormat, consortium, study, grant, resourceType, dataType, dataSubtype, metadataType, analysisType, isModelSystem, chromosome,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes,
+UsedIn,

@@ -1,0 +1,17 @@
+,6
+Attribute,adapters
+Description,"Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters. Example - 'AATGATACGGCGACCACCGAGATCTACACGCT; CAAGCAGAAGACGGCATACGAGAT'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,MIMS (Minimum information about a metagenome sequence.
+Notes, https://pubmed.ncbi.nlm.nih.gov/18479204/
+UsedIn,Metagenomics

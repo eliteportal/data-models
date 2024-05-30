@@ -1,0 +1,17 @@
+,67
+Attribute,imputation
+Description,Were SNPs imputed for the discovery GWAS?
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes, 
+UsedIn,Genotyping_Human

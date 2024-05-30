@@ -1,0 +1,17 @@
+,57
+Attribute,fastingState
+Description,Was individual fasting when the sample was taken (true/false)?
+Valid Values,"FALSE,Not applicable,Not collected,Not specified,TRUE,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.fastingState-0.0.2
+module,biospecimen
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

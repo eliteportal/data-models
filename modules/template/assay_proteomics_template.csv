@@ -1,0 +1,17 @@
+,111
+Attribute,assay_proteomics_template
+Description,Template for Proteomics
+Valid Values,
+DependsOn,"Filename,specimenID,sampleType,experimentType,measurementTechnique,technologyPlatformVersion,platformLocation,instrumentModel,samplePrepProtocol,dataFile,databaseSource,databaseWeblink,databaseName,modificationParameters,quantationStrategy,labelQuantitation,labelFreeQuantitation,isobaricLabelingReagent,msTarget,msAssayTechnique,msAnalyteType,digestionMethod,digestionReagent,fractionIdentifier,enrichmentStrategy,enrichment,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

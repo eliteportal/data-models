@@ -1,0 +1,17 @@
+,189
+Attribute,dataTypeAll
+Description,
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,Sage Bionetworks
+module,ManifestColumn
+multivalue,True
+columnType,STRING_LIST
+Ontology,Sage Bionetworks
+Notes,
+UsedIn,study_folder_template

@@ -1,0 +1,17 @@
+,180
+Attribute,valueReported
+Description,The count or gene count for the transcript
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,NUMBER
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"RNAseq,Whole_Genome_Sequencing,scRNAseq"

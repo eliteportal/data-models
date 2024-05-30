@@ -1,0 +1,17 @@
+,131
+Attribute,runType
+Description,The type of run
+Valid Values,"Not applicable,Not collected,Not specified,pairedEnd,singleEnd,singleEnd pairedEnd,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-ngs.runType-0.0.2
+module,sequencing
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

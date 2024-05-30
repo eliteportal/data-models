@@ -1,0 +1,17 @@
+,129
+Attribute,rnaBatchID
+Description,"Isolation batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Whole_Genome_Sequencing,scRNAseq"

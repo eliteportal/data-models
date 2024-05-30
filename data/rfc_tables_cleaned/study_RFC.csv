@@ -1,0 +1,27 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,Module,multivalue,columnType,Ontology,Notes,UsedIn
+studyKey,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+studyName,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+projectShortName,,"LC,ILO,LLFS,LG",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+projectFullName,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+dataTypeAll,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
+species,,"Human,Mouse",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
+specimenType,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
+studyAbstract,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+studyDescription,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+studyFocus,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+program,,"ELITE,AD",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+grantNumber,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
+studyWiki,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+acknowledgment,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+methods,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+relatedStudies,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
+studyType,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+isModelSystem,,"TRUE,FALSE",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,BOOLEAN,Sage Bionetworks,,study_folder_template
+isFeatured,,"TRUE,FALSE",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,BOOLEAN,Sage Bionetworks,,study_folder_template
+ackContext,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+studyMetadata,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+accessReqs,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+isReleased,,"TRUE,FALSE",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,BOOLEAN,Sage Bionetworks,,study_folder_template
+newsRelease,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+metadataType,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+study_folder_template,Annotations for study folders,,"studyKey,studyName,projectShortName,projectFullName,dataTypeAll,Species,specimenType,studyAbstract,studyDescription,studyFocus,program,grantNumber,studyWiki,acknowledgment,methods,relatedStudies,studyType,isModelSystem,isFeatured,ackContext,studyMetadata,accessReqs,isReleased,newsRelease,metadataType,Component",,,Component,,Template,Sage Bionetworks,Template,NA,NA,Sage Bionetworks,,

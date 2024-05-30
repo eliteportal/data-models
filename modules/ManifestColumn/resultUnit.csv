@@ -1,0 +1,17 @@
+,128
+Attribute,resultUnit
+Description,The unit for the result value
+Valid Values,"FPKM,Not applicable,Not collected,Not specified,RPKM,TPM,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"RNAseq,Whole_Genome_Sequencing,scRNAseq"

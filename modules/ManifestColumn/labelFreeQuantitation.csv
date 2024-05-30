@@ -1,0 +1,17 @@
+,78
+Attribute,labelFreeQuantitation
+Description,"Type of label-free data analysis strategyProvide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,"Label-free gene level quantitation,Label-free peptide level quantitation,Label-free protein group level quantitation,Label-free protein level quantitation,Label-free raw feature quantitation,Not applicable,Not available,Not collected,Not specified,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,Proteomics Data Commons
+Notes, 
+UsedIn,Proteomics

@@ -1,0 +1,17 @@
+,27
+Attribute,commonName
+Description,"The biological species common name the individual belongs to (ex. ""Horned Lark""). note- As a default, the valid scientific name for the species should be indicated."
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1874
+Notes,example: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=135430. 
+UsedIn,Individual_non_Human

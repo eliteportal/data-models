@@ -1,0 +1,17 @@
+,61
+Attribute,gasFlowTemperatureUnit
+Description,Unit of gas flow temperature
+Valid Values,"C,F,K"
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
+Notes, 
+UsedIn,Metabolomics

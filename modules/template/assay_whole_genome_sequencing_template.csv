@@ -1,0 +1,17 @@
+,183
+Attribute,assay_whole_genome_sequencing_template
+Description,Template for Whole_Genome_Sequencing
+Valid Values,
+DependsOn,"Filename,specimenID,sampleType,measurementTechnique,technologyPlatformVersion,platformLocation,referenceTranscriptID,repositoryName,transcriptType,resultUnit,valueReported,rnaBatchID,libraryBatchID,sequencingBatchID,libraryPrep,libraryPreparationMethod,libraryVersion,isStranded,readStrandOrigin,readLength,readLengthUnits,runType,totalReads,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

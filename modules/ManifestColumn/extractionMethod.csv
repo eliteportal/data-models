@@ -1,0 +1,17 @@
+,56
+Attribute,extractionMethod
+Description,"The name of the process used to separate a desired component of an input material from the remainder. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,http://purl.obolibrary.org/obo/OBI_0302884
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,"Metabolomics,Microbiome"

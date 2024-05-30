@@ -1,0 +1,17 @@
+,114
+Attribute,readLength
+Description,The length of the read.
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-ngs.readLength-0.0.2
+module,sequencing
+multivalue,False
+columnType,NUMBER
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

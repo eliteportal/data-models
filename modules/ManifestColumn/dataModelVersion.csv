@@ -1,0 +1,17 @@
+,194
+Attribute,dataModelVersion
+Description,Version of the data model
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,
+columnType,
+Ontology,
+Notes,
+UsedIn,

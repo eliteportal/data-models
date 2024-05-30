@@ -1,0 +1,17 @@
+,178
+Attribute,vacuumPressure
+Description,The recorded vacuum pressure value
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,NUMBER
+Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
+Notes, 
+UsedIn,Metabolomics

@@ -1,0 +1,15 @@
+template_name,generation_test
+RNAseqAssayTemplate,True
+BiospecimenHumanTemplate,True
+BiospecimenNonHumanTemplate,True
+BsSeqAssayTemplate,True
+ComputationalToolsTemplate,True
+FileAnnotationTemplate,True
+GenotypingAssay,True
+IndividualHumanTemplate,True
+IndividualNonHumanTemplate,True
+MetabolomicsAssayTemplate,True
+MicrobiomeAssayTemplate,True
+ProteomicsAssayTemplate,True
+ScRNAseqAssayTemplate,True
+WholeGenomeSequencingAssayTemplate,True

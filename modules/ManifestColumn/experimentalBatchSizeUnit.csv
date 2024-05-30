@@ -1,0 +1,17 @@
+,53
+Attribute,experimentalBatchSizeUnit
+Description,The unit of measurement for number of samples in a experimental batch
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,Metabolomics

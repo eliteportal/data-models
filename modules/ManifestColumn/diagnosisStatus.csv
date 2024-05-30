@@ -1,0 +1,17 @@
+,40
+Attribute,diagnosisStatus
+Description,"Whether the individual has been diagnosed with a condition or disease (physical and/or cognitive), \True"" indicates the individual has been diagnosed"""
+Valid Values,"FALSE,TRUE"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Individual_Human,Phenotype_human"

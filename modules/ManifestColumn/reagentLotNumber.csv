@@ -1,0 +1,17 @@
+,121
+Attribute,reagentLotNumber
+Description,The lot number is often provided by a reagent source when the reagent is replenished over time.
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

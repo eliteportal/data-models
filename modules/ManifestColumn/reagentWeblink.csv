@@ -1,0 +1,17 @@
+,124
+Attribute,reagentWeblink
+Description,An internet address that may provide details of an assay reagent.
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

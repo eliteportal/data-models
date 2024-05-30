@@ -1,0 +1,17 @@
+,126
+Attribute,reportedTrait
+Description,"The trait under investigation. Please describe the trait concisely but with enough detail to be clear to a non-specialist. Avoid the use of abbreviations; if these are necessary, please define them or their source in the readme file. Example - Reticulocyte count"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,Genotyping_Human

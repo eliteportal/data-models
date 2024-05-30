@@ -1,0 +1,17 @@
+,142
+Attribute,sex
+Description,The biological sex of the individual
+Valid Values,"Female,Male,Not applicable,Not collected,Not specified,Other,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.sex-0.0.2
+module,demographics
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks,http://purl.obolibrary.org/obo/NCIT_C28421,https://www.synapse.org/#!Synapse:syn25878249"
+Notes, 
+UsedIn,"Individual_Human,Individual_non_Human,Phenotype_human"

@@ -1,7 +1,7 @@
 # Ignored
 **/*.json
 **/*.jsonld
-**/*.csv
+**/data/*.csv
 **/*.xlsx
 **/*.code-workspace
 **/.mypy_cache
@@ -18,14 +18,11 @@ _data/manifest_generation_results.txt
 !**/old_models/*.csv
 !**/models/*.csv
 !**/modules/*.csv
-!**/EL_data_model_v3.csv
-!**/EL_data_model_v3.jsonld
 !**/EL.data.model.csv
 !**/EL.data.model.jsonld
 !**/model-modules/*
 !**/dca-template-config.json
 !**/dca_config.json
-legacy-data-models/old_models
 data/manifest_generation_links.txt
 data/manifest_generation_results.txt
 !**/manifest-templates/*

@@ -1,0 +1,17 @@
+,52
+Attribute,ethnicity
+Description,Ethnicity of individual
+Valid Values,"Hispanic or Latino,Not Hispanic or Latino,Prefer not to answer"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-demographics.ethnicity-0.0.2
+module,demographics
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, https://www.synapse.org/#!Synapse:syn25878249"
+Notes, 
+UsedIn,"Individual_Human,Phenotype_human"

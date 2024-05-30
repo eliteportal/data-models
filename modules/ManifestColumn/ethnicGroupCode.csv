@@ -1,0 +1,17 @@
+,51
+Attribute,ethnicGroupCode
+Description,"A coded value specifying the self-declared ethnic origination independent of racial origination, provided by the data contributor's data dictionary"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=23.04d&code=C93563&ns=ncit&type=properties&key=1040179992&b=1&n=0&vse=null
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,"Individual_Human,Phenotype_human"

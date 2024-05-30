@@ -1,0 +1,17 @@
+,155
+Attribute,studyCode
+Description,"Unique identifier for the study, assigned by the DCC"
+Valid Values,"ILO,LC,LG,LLFS"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Individual_Human,Individual_non_Human"

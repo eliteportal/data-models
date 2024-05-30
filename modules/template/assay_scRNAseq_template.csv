@@ -1,0 +1,17 @@
+,186
+Attribute,assay_scRNAseq_template
+Description,Template for scRNAseq
+Valid Values,
+DependsOn,"Filename,specimenID,sampleType,measurementTechnique,technologyPlatformVersion,platformLocation,referenceTranscriptID,repositoryName,transcriptType,resultUnit,valueReported,rnaBatchID,rnaBatchSize,rnaBatchSizeUnit,libraryBatchID,sequencingBatchID,sequencingBatchSize,sequencingBatchSizeUnit,libraryPrep,libraryPreparationMethod,libraryVersion,isStranded,readStrandOrigin,readLength,readLengthUnits,runType,totalReads,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

@@ -1,0 +1,17 @@
+,167
+Attribute,treatmentAmountValue
+Description,"The Amount Value indicates how much (concentration, mass, volume) of a treatment agent was applied to a sample."
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

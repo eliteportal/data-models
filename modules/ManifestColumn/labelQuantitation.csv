@@ -1,0 +1,17 @@
+,79
+Attribute,labelQuantitation
+Description,"Type of labeling usedProvide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,"AminoxyTMT,DiART,DiLeu,Glyco-TMT,Hydrazide TMT,IodoTMT,IPTL,iTRAQ,iTRAQH,Label Free,Not available,Not collected,Not specified,TMT,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, DSLWG, https://www.ebi.ac.uk/ols/ontologies/pride/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FPRIDE_0000514&viewMode=All&siblings=false Proteomics Data Commons https://pdc.cancer.gov/data-dictionary/dictionary.html"
+Notes, 
+UsedIn,Proteomics

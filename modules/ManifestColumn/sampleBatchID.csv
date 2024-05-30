@@ -1,0 +1,17 @@
+,132
+Attribute,sampleBatchID
+Description,"Sample batch lot identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,http://purl.obolibrary.org/obo/MS_1000053
+Notes, 
+UsedIn,Metabolomics

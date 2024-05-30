@@ -1,0 +1,17 @@
+,145
+Attribute,speciesAge
+Description,"Age of individual (formatted in months, ex. ""72 months"").note- Uncertainty about the age might require recording age by specifying a lower and upper estimate in months for the age of the animal."
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, https://www.animalaudiograms.org/audiogram_metadata_scheme#:~:text=species%20are%20possible.-,age,-The%20age%20of"
+Notes, 
+UsedIn,Individual_non_Human

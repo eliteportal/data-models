@@ -1,0 +1,17 @@
+,35
+Attribute,databaseSource
+Description,"The name of the organization, project, or laboratory from where the database is obtained (UniProt, NCBI, EBI, other)."
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"DSLWG,Sage Bionetworks,http://purl.obolibrary.org/obo/MS_1001012"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,"Metabolomics,Metagenomics,Proteomics"

@@ -1,0 +1,17 @@
+,117
+Attribute,readStrandOrigin
+Description,The strand from which the read originates in a strand-specific protocol.
+Valid Values,"Forward Reverse,forward reverse"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-ngs.readStrandOrigin-0.0.2
+module,sequencing
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

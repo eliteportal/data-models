@@ -1,0 +1,17 @@
+,148
+Attribute,specimenAge
+Description,"The subject's age at the time of specimen extraction is the individual's age (since birth) at the time a given specimen was extracted. Measured as age in years. Other, Unknown, Not collected, Not applicable"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

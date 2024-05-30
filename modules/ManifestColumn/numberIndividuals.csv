@@ -1,0 +1,17 @@
+,105
+Attribute,numberIndividuals
+Description,Number of individuals in a group. Example - 2000
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,INTEGER
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes, 
+UsedIn,Genotyping_Human

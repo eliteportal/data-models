@@ -1,0 +1,17 @@
+,95
+Attribute,assay_metagenomics_template
+Description,Template for Metagenomics
+Valid Values,
+DependsOn,"Filename,specimenID,sampleType,experimentType,measurementTechnique,technologyPlatformVersion,platformLocation,instrumentModel,samplePrepProtocol,dataFile,databaseSource,databaseWeblink,databaseName,databaseVersion,databaseLibrary,libraryPrep,libSize,mid,assemblyName,nucleAcidExt,sourceMatID,libReadsSeqd,numberContig,libLayout,assemblyQual,libVector,adapters,assemblySoftware,experimentalFactor,associatedResource,sop,targetGene,seqMethod,seqPlatform,DNAextraction,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

@@ -1,0 +1,17 @@
+,101
+Attribute,msTarget
+Description,Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay
+Valid Values,"Not applicable,Not available,Not collected,Not specified,Targeted,Unknown,Untargeted"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"DSLWG,Sage Bionetworks"
+Notes, 
+UsedIn,"Metabolomics,Proteomics"

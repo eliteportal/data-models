@@ -1,0 +1,17 @@
+,151
+Attribute,specimenType
+Description,Type of biological material comprising the Specimen
+Valid Values,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, http://purl.obolibrary.org/obo/NCIT_C70713"
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

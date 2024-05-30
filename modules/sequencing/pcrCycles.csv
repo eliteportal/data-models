@@ -1,0 +1,17 @@
+,107
+Attribute,pcrCycles
+Description,Number of PCR cycles to amplify transposased DNA fragments
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.pcrCycles-0.0.2
+module,sequencing
+multivalue,False
+columnType,NUMBER
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,bsSeq
