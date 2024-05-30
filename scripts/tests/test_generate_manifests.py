@@ -11,79 +11,23 @@ TODO:
 """
 
 from datetime import datetime
-import json
 import subprocess
 from pathlib import Path
-import re
-import logging.config
 from tqdm import tqdm
 import pandas as pd
-import yaml
-
-cwd = Path(__file__)
-
-ROOT_DIR_NAME = "ELITE-data-models"
-JSONLD_NAME = "EL.data.model.jsonld"  # can do this in dev environment
-
-for p in cwd.parents:
-    if bool(re.search(ROOT_DIR_NAME + "$", str(p))):
-        print(p)
-        ROOT_DIR = p
-
-timestamp = datetime.now().strftime("%Y-%m-%d")
-
-# Create logger for reports
-with open(Path(ROOT_DIR, "_logs", "logging.yaml"), "r", encoding="UTF-8") as f:
-    yaml_config = yaml.safe_load(f)
-    logging.config.dictConfig(yaml_config)
-
-logger = logging.getLogger("default")
-
-fh = logging.FileHandler(
-    filename=Path(ROOT_DIR, "tests", "logs", timestamp + "_manifest_generation.log")
-)
-fh.setFormatter(logger.handlers[0].__dict__["formatter"])
-logger.addHandler(fh)
-
-
-def get_templates(jsonld_name):
-
-    # Get manifest names to generate manifests
-    with open(Path(ROOT_DIR, JSONLD_NAME), "r", encoding="UTF-8") as jf:
-        jsonld_model = json.load(jf)
-
-    # Manifest template names in data model
-
-    templates = []
-
-    for i in jsonld_model["@graph"]:
-        try:
-            for subclasses in i["rdfs:subClassOf"]:
-                if bool(
-                    re.search(
-                        "Component", ",".join(subclasses.values()), flags=re.IGNORECASE
-                    )
-                ):
-                    templates += [
-                        {"label": i["rdfs:label"], "displayName": i["sms:displayName"]}
-                    ]
-
-        except KeyError:
-            pass
-
-    templates_df = pd.DataFrame.from_records(templates)
-
-    return templates_df
+from utils.data_model_tools import get_templates
+from utils.utils import get_root_dir, add_logger
 
 
 def manifest_generation_test(templates_df):
-
+    """Make sure all templates are properly generated"""
+    
     manifest_generation_results = []
 
-    for t in tqdm(templates_df["label"], total=len(templates_df["label"]), miniters=1):
+    for t in tqdm(templates_df["schema_name"], total=len(templates_df["schema_name"]), miniters=1, desc="Creating Templates"):
         result_temp = {"template_name": t}
 
-        command = f""" schematic manifest --config config.yml get -dt {t} -s -oxlsx data/manifest-templates/EL_template_{t}.xlsx"""
+        command = f""" schematic manifest --config config.yml get -dt {t} -s -oxlsx data/manifest-templates/EL_template_{t}.xlsx"""  # could make dynamic by inputing where to store files
 
         # logger.info(f"Running command for {t}")
         # logger.info(command)
@@ -116,8 +60,23 @@ def manifest_generation_test(templates_df):
 
 
 if __name__ == "__main__":
+
+    ROOT_DIR_NAME = "ELITE-data-models"
+    JSONLD_NAME = "EL.data.model.jsonld"  # can do this in dev environment
+
+    ROOT_DIR = get_root_dir(ROOT_DIR_NAME)
+
+    timestamp = datetime.now().strftime("%Y-%m-%d")
+
+    # Create logger for reports
+    logger = add_logger(
+        ROOT_DIR_NAME,
+        logger_config_path=Path("_logs", "logging.yaml"),
+        log_file_path=Path("tests", "logs", timestamp + "_manifest_generation.log"),
+    )
+
     # Templates ------------------------------------------------------------------------------------
-    templates_df = get_templates(JSONLD_NAME)
+    manifest_schemas, templates_df = get_templates(ROOT_DIR, JSONLD_NAME)
 
     # Generate Manifests ------------------------------------------------------------------------------------
     manifest_generation_results = manifest_generation_test(templates_df)
@@ -138,10 +97,11 @@ if __name__ == "__main__":
     # if everything passes then remake DCA config
     if manifest_generation_results["generation_test"].all():
         proc = subprocess.Popen(
-            "python ./tests/update_dca_config.py", shell=True, cwd=ROOT_DIR
+            "python tests/update_dca_template_config.py", shell=True, cwd=ROOT_DIR
         )
 
         print(proc.communicate())
+        
         if proc.returncode == 0:
             logger.info("PASS: DCA configuration template updated")
         else:

@@ -1,5 +1,9 @@
 # Change Log
 
+## 2024-05-30
+
+- Changed schema version in `dca-template-config.json` to format "vYY.MM.DD" for year.month.day e.g. "v24.05.30" to track changes with day they are made
+
 ## 2024-05-29
 
 - Added new template `file_annotations_template` to the data model

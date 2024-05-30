@@ -1,69 +1,55 @@
-name: update_metadata_dictionary
+# This workflow is used to convert changed EL.data.model.csv to EL.data.model.jsonld
+# and push the updated ELITE.data.model.jsonld to feature branch
+
+name: Update Data Model
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: main
+    paths: "EL.data.model.csv"
 
 jobs:
-  changed_files:
+  CI:
+    name: schema-convert
     runs-on: ubuntu-latest
-    name: update term files and pages
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          fetch-depth: 0  
-          ref: ${{ github.event.pull_request.head.ref }}
+          python-version: "3.9"
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-          cache: 'pip'
-    
-      - name: Install and configure Poetry
-        uses: snok/install-poetry@v1
-        with:
-            version: 1.5.1
-            virtualenvs-create: true
-            virtualenvs-in-project: false
-            virtualenvs-path: ~/my-custom-path
-            installer-parallel: true
-
-      - name: Install dependencies
+      - name: Install Schematic
+        shell: bash
         run: |
-          pip install -r requirements.txt
+          pip3 install poetry
+          git clone --single-branch --branch main https://github.com/Sage-Bionetworks/schematic.git
+          cd schematic
+          poetry build
+          pip3 install dist/schematicpy-*-py3-none-any.whl
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v37
+      - name: Join data model
+        shell: bash
+        run: python scripts/join_data_model.py
 
-      - name: update term file if data model csv is changed
-        if: contains(steps.changed-files.outputs.modified_files, 'EL.data.model.csv')
+      - name: Convert .csv to .jsonld
+        shell: bash
         run: |
-          python term_file_manager.py
+          schematic schema convert EL.data.model.csv
 
-      - name: Get changed term files
-        id: changed-files-yaml
-        uses: tj-actions/changed-files@v37
+      - uses: r-lib/actions/pr-fetch@v2
         with:
-          files_yaml: |
-            data:
-              - _data/**.csv
-            page:
-              - docs/**/**.md
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: update term page if the availablity of term file changed
-        if: steps.changed-files-yaml.outputs.data_added_files_count != 0 && steps.changed-files-yaml.outputs.data_deleted_files_count != 0
+      - name: Commit the changes
         run: |
-          python term_page_manager.py
-            
-      - name: update template page if the availablity of term page changed
-        if: steps.changed-files-yaml.outputs.page_modified_files_count != 0
-        run: |
-          python update_template_page.py
-      
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
+          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add EL.data.model.jsonld
+          git commit -m "GitHub Action: convert *.model.csv to *.model.jsonld" || echo "No changes to commit"
+
+      - uses: r-lib/actions/pr-push@v2
         with:
-          message: 'Updated term files and term pages'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
