@@ -1,0 +1,17 @@
+,49
+Attribute,enrichmentMethod
+Description,"The method used for performing an enrichment of specific regions by a restriction enzyme digest. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,bsSeq

@@ -1,0 +1,17 @@
+,22
+Attribute,assay_bsSeq_template
+Description,Template for bsSeq
+Valid Values,
+DependsOn,"Filename,specimenID,sampleType,measurementTechnique,technologyPlatformVersion,platformLocation,referenceTranscriptID,dnaBatchID,dnaBatchSize,dnaBatchSizeUnit,libraryBatchID,libraryPrep,libraryPreparationMethod,libraryVersion,sequencingBatchID,sequencingBatchSize,sequencingBatchSizeUnit,isStranded,readStrandOrigin,readLength,readLengthUnits,runType,totalReads,directionalBSseqLibrary,gDNAconc,lambdaDNAconc,pcrCycles,meanCoverage,conversionRatio,conversionRatioUnits,enrichmentMethod,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

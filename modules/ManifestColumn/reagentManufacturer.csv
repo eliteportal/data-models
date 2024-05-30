@@ -1,0 +1,17 @@
+,122
+Attribute,reagentManufacturer
+Description,"The manufacturer is the source of a reagent and may include commercial vendors as well as non-commercial sources (e.g., collaborating labs)."
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

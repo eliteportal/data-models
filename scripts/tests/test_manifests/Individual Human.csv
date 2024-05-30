@@ -1,0 +1,11 @@
+﻿individualID,cohort,studyCode,fieldCenterCode,visitCode,countryCode,consentGroupID,speciesGroup,sex,race,ethnicity,ethnicGroupCode,age,diagnosisStatus,diagnosis,Component,specifyAcquisitionBatchSizeUnits
+9H0NK,Centenarian,,,1,,,,,,,,,,,IndividualHuman,
+WGAA4,Centenarian,,,2,,,,,,,,,,,IndividualHuman,
+PNNHD,Centenarian,,,3,,,,,,,,,,,IndividualHuman,
+V4E32,Centenarian,,,one,,,,,,,,,,,IndividualHuman,
+8GWM7,Centenarian,,,two,,,,,,,,,,,IndividualHuman,
+K0Q3K,Centenarian,,,three,,,,,,,,,,,IndividualHuman,
+D9E4Q,Centenarian,,,,,,,,,,,,,,IndividualHuman,
+TG05F,Centenarian,,,,,,,,,,,,,,IndividualHuman,
+6B2NC,Centenarian,,,,,,,,,,,,,,IndividualHuman,
+RH064,Centenarian,,,,,,,,,,,,,,IndividualHuman,

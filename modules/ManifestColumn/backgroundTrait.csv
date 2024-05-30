@@ -1,0 +1,17 @@
+,16
+Attribute,backgroundTrait
+Description,Any background trait(s) shared by all individuals in the GWAS (e.g. in both cases and controls). Example - Nicotine dependence
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,Genotyping_Human

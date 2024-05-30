@@ -1,0 +1,17 @@
+,174
+Attribute,useReadMeFile
+Description,Was a readme file uploaded to Synapse?
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,Genotyping_Human

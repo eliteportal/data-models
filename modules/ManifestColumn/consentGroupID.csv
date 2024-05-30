@@ -1,0 +1,17 @@
+,28
+Attribute,consentGroupID
+Description,"Indicate the consent group for the individual, provided by the data contributor's data dictionary"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,Individual_Human

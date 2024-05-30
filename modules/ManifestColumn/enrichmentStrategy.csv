@@ -1,0 +1,17 @@
+,50
+Attribute,enrichmentStrategy
+Description,Type of peptide or protein enrichment
+Valid Values,"Acetylome Proteome,Glycoproteome,Lipidome,Metabolome,Not applicable,Not available,Not collected,Not specified,Phosphoproteome,Ubiquitylome,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,Proteomic Data Commons
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,Proteomics

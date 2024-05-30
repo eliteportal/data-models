@@ -1,0 +1,17 @@
+,18
+Attribute,batchLabel
+Description,Used to supply batch label information with any string value
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,http://purl.obolibrary.org/obo/MS_4000088
+Notes, 
+UsedIn,Metabolomics

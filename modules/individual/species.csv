@@ -1,0 +1,17 @@
+,190
+Attribute,species
+Description,The name of a species (typically a taxonomic group) of organism.
+Valid Values,"Human,Mouse"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,Sage Bionetworks
+module,individual
+multivalue,True
+columnType,STRING_LIST
+Ontology,Sage Bionetworks
+Notes,
+UsedIn,study_folder_template

@@ -1,0 +1,17 @@
+,149
+Attribute,specimenID
+Description,"Identifying string linked to a particular sample or specimen, provide by the data contributor"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.specimenID-0.0.2
+module,biospecimen
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes,n/a (unique to each data contributor). 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human,Genotyping_Human,Metabolomics,Metagenomics,Microbiome,Proteomics,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

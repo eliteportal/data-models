@@ -1,0 +1,17 @@
+,193
+Attribute,study_folder_template
+Description,Annotations for study folders
+Valid Values,
+DependsOn,"studyKey,studyName,projectShortName,projectFullName,dataTypeAll,species,specimenType,studyAbstract,studyDescription,studyFocus,program,grantNumber,studyWiki,acknowledgment,methods,relatedStudies,studyType,isModelSystem,isFeatured,ackContext,studyMetadata,accessReqs,isReleased,newsRelease,metadataType,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes,
+UsedIn,

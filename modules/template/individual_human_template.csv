@@ -1,0 +1,17 @@
+,70
+Attribute,individual_human_template
+Description,Template for Individual_Human
+Valid Values,
+DependsOn,"Filename,individualID,cohort,studyCode,fieldCenterCode,visitCode,countryCode,consentGroupID,speciesGroup,sex,race,ethnicity,ethnicGroupCode,age,diagnosisStatus,diagnosis,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

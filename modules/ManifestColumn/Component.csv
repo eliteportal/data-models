@@ -1,0 +1,17 @@
+,211
+Attribute,Component
+Description,
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,
+Parent,
+Validation Rules,
+Properties,
+Source,
+module,ManifestColumn
+multivalue,
+columnType,
+Ontology,
+Notes,
+UsedIn,"assay_RNAseq_template,assay_bsSeq_template,assay_metabolomics_template,assay_metagenomics_template,assay_microbiome_template,assay_phenotype_human_template,assay_proteomics_template,assay_scRNAseq_template,assay_whole_genome_sequencing_template,biospecimen_human_template,biospecimen_non_human_template,file_annotation_template,genotyping_human_template,individual_human_template,individual_non_human_template,study_folder_template"

@@ -1,0 +1,17 @@
+,176
+Attribute,useSummaryFile
+Description,Was a summary statitics file uploded to Synapse?
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes, 
+UsedIn,Genotyping_Human

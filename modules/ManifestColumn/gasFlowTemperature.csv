@@ -1,0 +1,17 @@
+,60
+Attribute,gasFlowTemperature
+Description,"e.g., nebulization gas, cone gas, etc.Unit of measure-C, F, K, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,NUMBER
+Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
+Notes, 
+UsedIn,Metabolomics

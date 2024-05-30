@@ -1,6 +1,9 @@
 # Change Log
 
-## 2024-
+## 2024-05-29
+
+- Added new template `file_annotations_template` to the data model
+- Split out the data model into modules under `./modules/`
 
 ## 2024-01-19
 

@@ -1,0 +1,17 @@
+,72
+Attribute,individualID
+Description,"Identifying string linked to the individual or animal being studied, provided by the data contributor"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.individualID-0.0.2
+module,individual
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human,Individual_Human,Individual_non_Human,Phenotype_human"

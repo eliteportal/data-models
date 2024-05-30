@@ -1,0 +1,17 @@
+,77
+Attribute,isStranded
+Description,Whether or not the library is stranded.
+Valid Values,"FALSE,TRUE"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-ngs.isStranded-0.0.2
+module,sequencing
+multivalue,False
+columnType,BOOLEAN
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

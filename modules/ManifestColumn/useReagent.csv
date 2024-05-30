@@ -1,0 +1,17 @@
+,175
+Attribute,useReagent
+Description,Was a reagent applied to the sample?
+Valid Values,"FALSE,TRUE"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,BOOLEAN
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

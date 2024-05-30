@@ -1,0 +1,26 @@
+Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Ontology,UsedIn,columnType
+studyKey,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+studyName,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+project,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+dataTypeAll,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING_LIST
+species,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+specimenType,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+dataContributor,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING_LIST
+studyAbstract,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+studyDescription,Synapse ID,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+studyFocus,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+program,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+grant,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING_LIST
+studyWiki,Synapse ID,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+acknowledgment,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+methods,Synapse ID,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+relatedStudies,Synapse ID,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING_LIST
+studyType,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+isModelSystem,,"true,false",,ManifestColumn,True,ManifestColumn,,sage_bionetworks,,,sage_bionetworks,study_metadata_template,BOOLEAN
+isFeatured,,"true,false",,ManifestColumn,True,ManifestColumn,,sage_bionetworks,,,sage_bionetworks,study_metadata_template,BOOLEAN
+ackContext,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+studyMetadata,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+accessReqs,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+isReleased,,"true,false",,ManifestColumn,True,ManifestColumn,,sage_bionetworks,,,sage_bionetworks,study_metadata_template,BOOLEAN
+newsRelease,,,,ManifestColumn,True,ManifestColumn,,sage_bionetworks,str,,sage_bionetworks,study_metadata_template,STRING
+study_metadata_template,Template for adding study descriptions to a folder,,"studyKey,studyName,project,dataTypeAll,species,specimenType,dataContributor,studyAbstract,studyDescription,studyFocus,program,grant,studyWiki,acknowledgment,methods,relatedStudies,studyType,isModelSystem,isFeatured,ackContext,studyMetadata,accessReqs,isReleased,newsRelease",Template,,Component,,sage_bionetworks,,,sage_bionetworks,,

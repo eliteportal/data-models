@@ -1,0 +1,17 @@
+,179
+Attribute,vacuumPressureUnit
+Description,Unit of vacuum pressure value
+Valid Values,"AFU,AI,AU/ml,bp g/dl,DK units/ml,g/l,gm,HAU,IU,iu/l,IU/ml,Kallikrein Inactivator Unit per Milliliter,kg,l,M,mg,mg/dl,mg/l,mg/ml,miu/ml,ml,mM,MOI,ng,ng/dl,ng/ml,ng/nl,ng/ul,nl,nM,Not specified,NPX,optical density,PFU,PFUe,pg,pg/mg creatinine,pg/ml,pg/nl,pg/ul,pl,pM,Pound,TCID50,ug,ug/dl,ug/l,ug/ml,ug/ul,uiu/ml,ul,uM,umol/l,units/ml"
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
+Notes, 
+UsedIn,Metabolomics

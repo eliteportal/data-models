@@ -13,6 +13,7 @@ import pathlib
 import re
 import pandas as pd
 import numpy as np
+import tests
 
 
 def display_full_table(df: object):
@@ -84,3 +85,20 @@ def get_root_dir(root_dir_name: str):
             print(p)
             root_dir = p
             return root_dir
+
+def create_unique_index(df): 
+    
+    df[df.index.duplicated(keep=False)].shape
+    temp =  df[df.index.duplicated(keep=False)].fillna('').astype(str).groupby("Attribute").agg(lambda x: ','.join(np.unique(x)).strip(','))
+    temp = temp.replace("", None)
+
+    if tests.unique_index(temp): 
+        pass
+    else: 
+        raise ValueError('Index for intermediate is not unique')
+    
+    df = df[~df.index.duplicated(keep=False)]
+    df.shape
+    df = pd.concat([df, temp])
+    
+    return df

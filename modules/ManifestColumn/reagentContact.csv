@@ -1,0 +1,17 @@
+,119
+Attribute,reagentContact
+Description,The contact information is particularly helpful when the reagent is not from a commercial vendor.
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

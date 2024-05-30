@@ -1,0 +1,17 @@
+,64
+Attribute,genotyping_human_template
+Description,Template for Genotyping_Human
+Valid Values,
+DependsOn,"Filename,specimenID,stage,numberIndividuals,sampleType,useReagent,reagentIDs,reagentName,reagentManufacturer,reagentCatalogNumber,reagentLotNumber,reagentWeblink,reagentContact,useTreatment,treatmentIDs,treatmentName,treatmentAmountValue,treatmentAmountUnit,treatmentDurationValue,treatmentDurationUnit,treatmentTemperatureValue,treatmentTemperatureUnit,measurementTechnique,genotypeTechnology,arrayManufacturer,arrayInformation,imputation,imputationPanel,imputationSoftware,variantCount,statisticalModel,adjustedCovariates,reportedTrait,backgroundTrait,useReadMeFile,readmeFile,useSummaryFile,summaryFile,summaryStatisticsAssembly,Component"
+DependsOn Component,
+Required,False
+Parent,Component
+Validation Rules,
+Properties,template
+Source,Sage Bionetworks
+module,template
+multivalue,
+columnType,
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,

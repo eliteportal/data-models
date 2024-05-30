@@ -1,0 +1,17 @@
+,48
+Attribute,enrichment
+Description,"Protocol or reagent used for enrichment (ex. Fe3+NTA-Agarose (Qiagen)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,Proteomic Data Commons
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,Proteomics

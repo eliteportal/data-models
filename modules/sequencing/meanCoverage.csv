@@ -1,0 +1,17 @@
+,92
+Attribute,meanCoverage
+Description,Total number of bases covered by ATAC-seq reads/size of genome
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-qc.meanCoverage-0.0.2
+module,sequencing
+multivalue,False
+columnType,NUMBER
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,bsSeq

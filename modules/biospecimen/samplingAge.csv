@@ -1,0 +1,17 @@
+,136
+Attribute,samplingAge
+Description,"The calculated age of the sample, measurement is determined or coded by the data contributor.Other,Unknown, Not collected, Not applicable"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.samplingAge-0.0.2
+module,biospecimen
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

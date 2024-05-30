@@ -1,0 +1,17 @@
+,100
+Attribute,msAssayTechnique
+Description,"Specified the mass spectrometer technique used or the name of the proteomics assay used (ex. DDA)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, DSLWG"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,"Metabolomics,Proteomics"

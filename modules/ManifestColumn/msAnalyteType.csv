@@ -1,0 +1,17 @@
+,99
+Attribute,msAnalyteType
+Description,"The type of biospecimen subjected to analysis (ex., peptide, protein, metabolite, lipid)Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"http://purl.obolibrary.org/obo/NCIT_C156434,http://purl.obolibrary.org/obo/NCIT_C156434 Proteomic Data Commons https://pdc.cancer.gov/data-dictionary/dictionary.html"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,"Metabolomics,Proteomics"

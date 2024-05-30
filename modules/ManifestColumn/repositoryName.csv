@@ -1,0 +1,17 @@
+,127
+Attribute,repositoryName
+Description,"The public repository name for the transcript (for example, Ensembl or NCBI Gene)"
+Valid Values,"ArrayExpress,Broad Single Cell Portal,dbGAP,ENA,Ensembl,FlowRepository,GenBank,GEO,GISAID,IEDB,ImmPort,MassIVE,MetaboLights,Metabolomics Workbench,MGnify,NCBI Gene,PRIDE,SRA,UniProt"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"RNAseq,Whole_Genome_Sequencing,scRNAseq"

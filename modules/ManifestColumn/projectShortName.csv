@@ -1,0 +1,17 @@
+,188
+Attribute,projectShortName
+Description,
+Valid Values,"LC,ILO,LLFS,LG"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,Sage Bionetworks
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes,
+UsedIn,study_folder_template

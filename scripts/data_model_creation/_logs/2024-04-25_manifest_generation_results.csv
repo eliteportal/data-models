@@ -1,0 +1,15 @@
+template_name,generation_test
+BiospecimenHuman,True
+BiospecimenNonHuman,True
+BsSeq,True
+GenotypingHuman,True
+IndividualHuman,True
+IndividualNonHuman,True
+Metabolomics,True
+Metagenomics,True
+Microbiome,True
+PhenotypeHuman,True
+Proteomics,True
+RNAseq,True
+WholeGenomeSequencing,True
+ScRNAseq,True

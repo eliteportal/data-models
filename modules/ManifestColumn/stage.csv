@@ -1,0 +1,17 @@
+,153
+Attribute,stage
+Description,Stage of the experimental design.
+Valid Values,"Discovery,Not applicable,Not collected,Not specified,Other,Replication,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes, 
+UsedIn,Genotyping_Human

@@ -1,0 +1,17 @@
+,80
+Attribute,lambdaDNAconc
+Description,Lambda DNA spike-in concentration in ng
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.lambdaDNAconc-0.0.2
+module,sequencing
+multivalue,False
+columnType,NUMBER
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,bsSeq

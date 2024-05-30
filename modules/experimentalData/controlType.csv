@@ -1,0 +1,17 @@
+,29
+Attribute,controlType
+Description,"Control samples suitable for normalization and batch correction.Possible example values - GIS, GoldenWest, NIST SRM 1950, AIBL pool,Baker pool,water plus Baker ISTD, study pool, internal standards, Other, Unknown, Not collected, Not applicable, Not specified"
+Valid Values,"AIBL pool, Baker pool, blank injection, GIS, GoldenWest, NIST SRM 1950, qc mix, Replicate, study pool, water plus Baker ISTD"
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.controlType-0.0.5
+module,experimentalData
+multivalue,False
+columnType,STRING
+Ontology,https://doi.org/10.1101/2020.05.19.105197 https://doi.org/10.1038/sdata.2017.140 https://www-s.nist.gov/srmors/view_detail.cfm?srm=1950 Sage Bionetworks DSLWG
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,Metabolomics

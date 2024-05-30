@@ -1,0 +1,17 @@
+,150
+Attribute,specimenSource
+Description,Indicate the biological area of the specimen
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

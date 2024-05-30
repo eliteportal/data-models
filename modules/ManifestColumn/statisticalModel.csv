@@ -1,0 +1,17 @@
+,154
+Attribute,statisticalModel
+Description,"A brief description of the statistical model used to determine association significance. It is important to distinguish studies that would otherwise appear identical (e.g., the same trait analyzed using additive, dominant, and recessive models). Example - additive model"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, EMBL-EBI"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,Genotyping_Human

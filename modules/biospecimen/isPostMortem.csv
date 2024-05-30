@@ -1,0 +1,17 @@
+,76
+Attribute,isPostMortem
+Description,Was the sample taken after death (true/false)?
+Valid Values,"TRUE, FALSE"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.isPostMortem-0.0.2
+module,biospecimen
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

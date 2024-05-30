@@ -1,0 +1,17 @@
+,165
+Attribute,transcriptType
+Description,The type of transcript reported
+Valid Values,"lincRNA,mRNA,Not applicable,Not collected,Not specified,Other,snRNA,Unknown"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,ImmPort
+Notes, 
+UsedIn,"RNAseq,Whole_Genome_Sequencing,scRNAseq"

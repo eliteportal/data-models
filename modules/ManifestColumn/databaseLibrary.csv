@@ -1,0 +1,17 @@
+,33
+Attribute,databaseLibrary
+Description,"The name(s) of the associated database library. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,DSWG
+Notes, 
+UsedIn,Metagenomics

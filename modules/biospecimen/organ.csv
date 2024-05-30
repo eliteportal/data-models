@@ -1,0 +1,17 @@
+,106
+Attribute,organ
+Description,Indicate the organ the specimen is from
+Valid Values,"blood, bone marrow, brain, breast, Bursa Of Fabricius, cerebrospinal fluid, colon, kidney, large intestine, liver, lung, lymph node, mammary gland, nerves, nose, ovary, pancreas, prostate, skin, spleen"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.organ-0.0.4
+module,biospecimen
+multivalue,False
+columnType,STRING
+Ontology,http://purl.obolibrary.org/obo/NCIT_C13018
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

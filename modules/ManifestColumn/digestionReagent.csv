@@ -1,0 +1,17 @@
+,42
+Attribute,digestionReagent
+Description,Enzymes or reagents used for digestion.
+Valid Values,"2-iodobenzoate,Arg-C,Asp-N,Asp-N_ambic,Chymotrypsin,CNBr,Formic_acid,Glutamyl endopeptidase,Leukocyte elastase,Lys-C,Lys-C/P,No cleavage,NoEnzyme,Not available,Not collected,Not specified,PepsinA,Proline endopeptidase,TrypChymo,Trypsin,Trypsin/P,Unknown,Unspecific cleavage,V8-DE,V8-E"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,True
+columnType,STRING
+Ontology,Proteomics Data Commons
+Notes, 
+UsedIn,Proteomics

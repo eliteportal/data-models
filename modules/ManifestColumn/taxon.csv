@@ -1,0 +1,17 @@
+,159
+Attribute,taxon
+Description,"Taxonomic identifier. The National Center for Biotechnology Information taxon ID (formatted as, ex. ""txid9989"")"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"https://www.ncbi.nlm.nih.gov/taxonomy, http://edamontology.org/data_1179, http://purl.obolibrary.org/obo/TAXRANK_0000010"
+Notes, 
+UsedIn,Individual_non_Human

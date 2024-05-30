@@ -1,0 +1,17 @@
+,113
+Attribute,race
+Description,Race of individual
+Valid Values,"American Indian or Alaska Native,Asian,Black or African American,Multiracial,Native Hawaiian or Pacific Islander,Prefer not to answer,White"
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-demographics.race-0.0.2
+module,demographics
+multivalue,True
+columnType,STRING
+Ontology,"Sage Bionetworks, https://www.synapse.org/#!Synapse:syn25878249, https://jamanetwork.com/pages/inclusive-language, https://thesaurus.cancer.gov/ncitbrowser/pages/home.jsf?version=23.04d"
+Notes, 
+UsedIn,"Individual_Human,Phenotype_human"

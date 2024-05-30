@@ -1,0 +1,17 @@
+,134
+Attribute,samplePrepProtocol
+Description,"An internet address that may provide more details of the protocol information (web link). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"DSLWG,Sage Bionetworks"
+Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
+UsedIn,"Metabolomics,Metagenomics,Proteomics"

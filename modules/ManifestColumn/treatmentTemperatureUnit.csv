@@ -1,0 +1,17 @@
+,172
+Attribute,treatmentTemperatureUnit
+Description,Unit of treatment temperature.
+Valid Values,"C,F,K,Not specified"
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,
+module,ManifestColumn
+multivalue,False
+columnType,STRING
+Ontology,"Sage Bionetworks, ImmPort"
+Notes, 
+UsedIn,Genotyping_Human

@@ -1,0 +1,17 @@
+,163
+Attribute,tissueWeight
+Description,The mass of the tissue specimen. Measured in mg.
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,True
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.tissueWeight-0.0.2
+module,biospecimen
+multivalue,False
+columnType,STRING
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,"Biospecimen_human,Biospecimen_non_Human"

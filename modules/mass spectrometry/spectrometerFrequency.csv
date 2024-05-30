@@ -1,0 +1,17 @@
+,152
+Attribute,spectrometerFrequency
+Description,The frequency at which a spectrometer causes hydrogen atoms to resonate (in MHz)
+Valid Values,
+DependsOn,
+DependsOn Component,
+Required,False
+Parent,ManifestColumn
+Validation Rules,
+Properties,ManifestColumn
+Source,sage.annotations-experimentalData.spectrometerFrequency-0.0.2
+module,mass spectrometry
+multivalue,False
+columnType,NUMBER
+Ontology,Sage Bionetworks
+Notes, 
+UsedIn,Metabolomics
