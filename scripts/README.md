@@ -1,6 +1,10 @@
 # Scripts
 
-Used for the automated processes that need to be conducted
+- [Scripts](#scripts)
+  - [Adding an RFC](#adding-an-rfc)
+  - [Process](#process)
+
+Used for the automated processes. Conducts tests to ensure that the data model templates are properly generated
 
 ## Adding an RFC
 
