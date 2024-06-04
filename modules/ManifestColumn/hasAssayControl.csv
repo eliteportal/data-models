@@ -1,17 +1,2 @@
-,65
-Attribute,hasAssayControl
-Description,"Boolean flag indicating whether or not a specimen is a technical or assay control. Examples include study pools or reference pools, blanks, or internal standards."
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,BOOLEAN
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,Metabolomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+hasAssayControl,"Boolean flag indicating whether or not a specimen is a technical or assay control. Examples include study pools or reference pools, blanks, or internal standards.",,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,BOOLEAN,Sage Bionetworks, ,Metabolomics

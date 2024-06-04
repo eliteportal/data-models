@@ -1,17 +1,2 @@
-,123
-Attribute,reagentName
-Description,The reagent name is an alternative to the Reagent ID.
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,True
-columnType,STRING
-Ontology,"Sage Bionetworks, ImmPort"
-Notes, 
-UsedIn,Genotyping_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+reagentName,The reagent name is an alternative to the Reagent ID.,,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,True,STRING,"Sage Bionetworks, ImmPort", ,Genotyping_Human

@@ -1,17 +1,2 @@
-,133
-Attribute,sampleIntroduction
-Description,"The sample introduction and delivery. From GC, from LC, direct infusion without chromatography, direct infusion using dedicated autosampler flow rate. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
-Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
-UsedIn,Metabolomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+sampleIntroduction,"The sample introduction and delivery. From GC, from LC, direct infusion without chromatography, direct infusion using dedicated autosampler flow rate. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry","A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ",Metabolomics

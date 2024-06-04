@@ -1,17 +1,2 @@
-,103
-Attribute,nucleicAcidSource
-Description,"Specifies the type of nucleic acid (DNA, RNA, Pooled, etc.) found in a sample."
-Valid Values,"bulk cell,bulk nuclei,mitochondria,Not applicable,Not collected,Not specified,single cell,single nucleus,sorted cells,sorted nuclei,Unknown"
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,sage.annotations-ngs.nucleicAcidSource-0.0.3
-module,biospecimen
-multivalue,False
-columnType,STRING
-Ontology,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.04d&ns=ncit&code=C171278&key=1146649015&b=1&n=1
-Notes, 
-UsedIn,"Biospecimen_human,Biospecimen_non_Human"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+nucleicAcidSource,"Specifies the type of nucleic acid (DNA, RNA, Pooled, etc.) found in a sample.","bulk cell,bulk nuclei,mitochondria,Not applicable,Not collected,Not specified,single cell,single nucleus,sorted cells,sorted nuclei,Unknown",,,True,ManifestColumn,,ManifestColumn,sage.annotations-ngs.nucleicAcidSource-0.0.3,biospecimen,False,STRING,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=23.04d&ns=ncit&code=C171278&key=1146649015&b=1&n=1, ,"Biospecimen_human,Biospecimen_non_Human"

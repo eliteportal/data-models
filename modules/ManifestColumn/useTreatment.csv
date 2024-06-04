@@ -1,17 +1,2 @@
-,177
-Attribute,useTreatment
-Description,Was a treatment applied to the sample?
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,BOOLEAN
-Ontology,"Sage Bionetworks, ImmPort"
-Notes, 
-UsedIn,Genotyping_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+useTreatment,Was a treatment applied to the sample?,,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,BOOLEAN,"Sage Bionetworks, ImmPort", ,Genotyping_Human

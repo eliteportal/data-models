@@ -1,17 +1,2 @@
-,75
-Attribute,isobaricLabelingReagent
-Description,"Reagent set used for isobaric labeling. Examples- iTRAQ113 TMT126Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,True
-columnType,STRING
-Ontology,Proteomics Data Commons
-Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
-UsedIn,Proteomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+isobaricLabelingReagent,"Reagent set used for isobaric labeling. Examples- iTRAQ113 TMT126Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,True,STRING,Proteomics Data Commons,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ",Proteomics

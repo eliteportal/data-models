@@ -32,13 +32,8 @@ jobs:
 
       - name: Join data model
         shell: bash
-        run: python scripts/join_data_model.py
-
-      - name: Convert .csv to .jsonld
-        shell: bash
-        run: |
-          schematic schema convert EL.data.model.csv
-
+        run: python data_model_creation/join_data_model.py
+        
       - uses: r-lib/actions/pr-fetch@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}

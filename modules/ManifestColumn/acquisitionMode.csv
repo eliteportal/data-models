@@ -1,17 +1,2 @@
-,3
-Attribute,acquisitionMode
-Description,"The specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated (full scan, MSn, SIM, MRM, etc.). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,https://www.ebi.ac.uk/ols/ontologies/ms/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMS_1003213
-Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
-UsedIn,Metabolomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+acquisitionMode,"The specific aspect of a mass spectrometer method by which mass ranges are selected and possibly dissociated (full scan, MSn, SIM, MRM, etc.). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,https://www.ebi.ac.uk/ols/ontologies/ms/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMS_1003213,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ",Metabolomics

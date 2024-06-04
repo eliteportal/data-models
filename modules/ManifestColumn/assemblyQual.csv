@@ -1,17 +1,2 @@
-,13
-Attribute,assemblyQual
-Description,"Assembly quality. The assembly quality category is based on sets of criteria outlined for each assembly quality category.High Quality- Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.Medium Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics.Low Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to, total assembly size, number of contigs, contig N50/L50, and maximum contig length. Example values - high-quality genome, medium-quality genome, low-quality genome"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,MIMS (Minimum information about a metagenome sequence.
-Notes, https://pubmed.ncbi.nlm.nih.gov/18479204/
-UsedIn,Metagenomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+assemblyQual,"Assembly quality. The assembly quality category is based on sets of criteria outlined for each assembly quality category.High Quality- Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.Medium Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics.Low Quality- Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to, total assembly size, number of contigs, contig N50/L50, and maximum contig length. Example values - high-quality genome, medium-quality genome, low-quality genome",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,MIMS (Minimum information about a metagenome sequence., https://pubmed.ncbi.nlm.nih.gov/18479204/,Metagenomics

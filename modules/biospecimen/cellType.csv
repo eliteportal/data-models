@@ -1,17 +1,2 @@
-,25
-Attribute,cellType
-Description,Indicate the cell type.
-Valid Values,"A549, arachnoid, astrocytes, B-lymphocytes, CD138+, CD8+ T-Cells, CNON, dopaminergic neurons, Embryonic stem cells, epithelial, epithelial-like, fibroblast, GABAergic neurons, glia, GLUtamatergic neurons, immune cell, iPSC, iPSC-derived astrocytes, iPSC-derived glia, iPSC-derived neuron, iPSC-derived neuronal progenitor cell, iPSC-derived telencephalic organoids, lymphoblast, lymphoblastoid cell line, macrophages, meningioma, microglia, monocytes, monocyte-derived microglia, NCX NES, NeuN-, NeuN+, neural progenitor cell, neuron, oligodendrocyte, peripheral blood mononuclear cell, polygonal, round, schwann, Schwann cell precusor, schwannoma, SH-SY5Y"
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,sage.annotations-experimentalData.cellType-0.0.9
-module,biospecimen
-multivalue,False
-columnType,STRING
-Ontology,"https://bioportal.bioontology.org/ontologies/CCF/?p=classes&conceptid=http%3A%2F%2Fpurl.org%2Fccf%2Fcell_type,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.org%2Fccf%2Fcell_type"
-Notes, 
-UsedIn,"Biospecimen_human,Biospecimen_non_Human"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+cellType,Indicate the cell type.,"A549, arachnoid, astrocytes, B-lymphocytes, CD138+, CD8+ T-Cells, CNON, dopaminergic neurons, Embryonic stem cells, epithelial, epithelial-like, fibroblast, GABAergic neurons, glia, GLUtamatergic neurons, immune cell, iPSC, iPSC-derived astrocytes, iPSC-derived glia, iPSC-derived neuron, iPSC-derived neuronal progenitor cell, iPSC-derived telencephalic organoids, lymphoblast, lymphoblastoid cell line, macrophages, meningioma, microglia, monocytes, monocyte-derived microglia, NCX NES, NeuN-, NeuN+, neural progenitor cell, neuron, oligodendrocyte, peripheral blood mononuclear cell, polygonal, round, schwann, Schwann cell precusor, schwannoma, SH-SY5Y",,,True,ManifestColumn,,ManifestColumn,sage.annotations-experimentalData.cellType-0.0.9,biospecimen,False,STRING,"https://bioportal.bioontology.org/ontologies/CCF/?p=classes&conceptid=http%3A%2F%2Fpurl.org%2Fccf%2Fcell_type,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.org%2Fccf%2Fcell_type", ,"Biospecimen_human,Biospecimen_non_Human"

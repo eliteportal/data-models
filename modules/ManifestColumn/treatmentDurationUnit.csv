@@ -1,17 +1,2 @@
-,168
-Attribute,treatmentDurationUnit
-Description,Unit of treatment duration.
-Valid Values,"d.p.c.,Days,Hours,Minutes,Months,Not applicable,Not collected,Not specified,Seconds,Unknown,Weeks,Years"
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,"Sage Bionetworks, ImmPort"
-Notes, 
-UsedIn,Genotyping_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+treatmentDurationUnit,Unit of treatment duration.,"d.p.c.,Days,Hours,Minutes,Months,Not applicable,Not collected,Not specified,Seconds,Unknown,Weeks,Years",,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"Sage Bionetworks, ImmPort", ,Genotyping_Human

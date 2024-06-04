@@ -1,17 +1,2 @@
-,30
-Attribute,conversionRatio
-Description,The ratio or % detailing how well the bisulfite conversion worked
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,bsSeq
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+conversionRatio,The ratio or % detailing how well the bisulfite conversion worked,,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,Sage Bionetworks, ,bsSeq

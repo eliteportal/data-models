@@ -1,17 +1,2 @@
-,54
-Attribute,experimentalFactor
-Description,"Variable aspects of an experiment design that can be used to describe an experiment or set of experiments in an increasingly detailed manner.This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). Example - 'time series design [EFO-0001779]'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,MIMS (Minimum information about a metagenome sequence.
-Notes, https://pubmed.ncbi.nlm.nih.gov/18479204/
-UsedIn,Metagenomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+experimentalFactor,"Variable aspects of an experiment design that can be used to describe an experiment or set of experiments in an increasingly detailed manner.This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). Example - 'time series design [EFO-0001779]'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,MIMS (Minimum information about a metagenome sequence., https://pubmed.ncbi.nlm.nih.gov/18479204/,Metagenomics
