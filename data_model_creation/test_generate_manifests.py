@@ -32,8 +32,6 @@ logger = add_logger(
     log_file_path=Path("tests", "logs", timestamp + "_manifest_generation.log"),
 )
 
-
-
 def manifest_generation_test(templates_df):
     """Make sure all templates are properly generated"""
     
@@ -98,11 +96,13 @@ if __name__ == "__main__":
     # if everything passes then remake DCA config
     if manifest_generation_results["generation_test"].all():
         proc = subprocess.Popen(
-            "python tests/update_dca_template_config.py", shell=True, cwd=ROOT_DIR
+            "python data_model_creation/update_dca_template_config.py",
+            shell=True,
+            cwd=ROOT_DIR,
         )
 
         print(proc.communicate())
-        
+
         if proc.returncode == 0:
             logger.info("PASS: DCA configuration template updated")
         else:
