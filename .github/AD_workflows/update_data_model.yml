@@ -43,7 +43,7 @@ jobs:
       - name: update term file if data model csv is changed
         if: contains(steps.changed-files.outputs.modified_files, 'EL.data.model.csv')
         run: |
-          python term_file_manager.py
+          python data_manager.py
 
       - name: Get changed term files
         id: changed-files-yaml
@@ -58,7 +58,7 @@ jobs:
       - name: update term page if the availablity of term file changed
         if: steps.changed-files-yaml.outputs.data_added_files_count != 0 && steps.changed-files-yaml.outputs.data_deleted_files_count != 0
         run: |
-          python term_page_manager.py
+          python page_manager.py
             
       - name: update template page if the availablity of term page changed
         if: steps.changed-files-yaml.outputs.page_modified_files_count != 0

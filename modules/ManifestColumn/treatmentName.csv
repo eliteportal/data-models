@@ -1,17 +1,2 @@
-,171
-Attribute,treatmentName
-Description,"Treatments refer to in vitro modifications of samples. Three treatment types are supported- agent amount, duration, and temperature.  The treatment name is an alternate identifier to the Treatment ID."
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,True
-columnType,STRING
-Ontology,"Sage Bionetworks, ImmPort"
-Notes, 
-UsedIn,Genotyping_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+treatmentName,"Treatments refer to in vitro modifications of samples. Three treatment types are supported- agent amount, duration, and temperature.  The treatment name is an alternate identifier to the Treatment ID.",,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,True,STRING,"Sage Bionetworks, ImmPort", ,Genotyping_Human

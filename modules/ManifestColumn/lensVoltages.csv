@@ -1,17 +1,2 @@
-,81
-Attribute,lensVoltages
-Description,"The skimmer/focusing lens voltages e.g., capillary voltage, etc."
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,NUMBER
-Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
-Notes, 
-UsedIn,Metabolomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+lensVoltages,"The skimmer/focusing lens voltages e.g., capillary voltage, etc.",,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,NUMBER,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry", ,Metabolomics

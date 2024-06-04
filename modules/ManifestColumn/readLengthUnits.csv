@@ -1,17 +1,2 @@
-,115
-Attribute,readLengthUnits
-Description,The units of measurement.
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+readLengthUnits,The units of measurement.,,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,Sage Bionetworks, ,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

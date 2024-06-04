@@ -1,17 +1,2 @@
-,218
-Attribute,experimentalBatchSize
-Description,
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,
-Parent,
-Validation Rules,
-Properties,
-Source,
-module,Unknown
-multivalue,
-columnType,
-Ontology,
-Notes,
-UsedIn,assay_metabolomics_template
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+experimentalBatchSize,,,,,,,,,,Unknown,,,,,assay_metabolomics_template

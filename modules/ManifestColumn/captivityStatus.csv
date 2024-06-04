@@ -1,17 +1,2 @@
-,24
-Attribute,captivityStatus
-Description,"The status of the individual with regard to captivity.note- Wild, captive, and stranded values are applicable, especially for marine mammals. Depending on life stage terminology for individual species, other values are possible. Please let the data curation team know."
-Valid Values,"Captive,Stranded,Wild"
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,"https://www.animalaudiograms.org/audiogram_metadata_scheme#:~:text=of%20the%20animal.-,captivity%20status,-The%20status%20of"
-Notes, 
-UsedIn,Individual_non_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+captivityStatus,"The status of the individual with regard to captivity.note- Wild, captive, and stranded values are applicable, especially for marine mammals. Depending on life stage terminology for individual species, other values are possible. Please let the data curation team know.","Captive,Stranded,Wild",,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"https://www.animalaudiograms.org/audiogram_metadata_scheme#:~:text=of%20the%20animal.-,captivity%20status,-The%20status%20of", ,Individual_non_Human

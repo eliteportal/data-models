@@ -1,17 +1,2 @@
-,15
-Attribute,associatedResource
-Description,"Relevant electronic resources. A related resource that is referenced, cited, or otherwise associated to the sequence. Example - 'http-//www.earthmicrobiome.org/'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,MIMS (Minimum information about a metagenome sequence.
-Notes, https://pubmed.ncbi.nlm.nih.gov/18479204/
-UsedIn,Metagenomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+associatedResource,"Relevant electronic resources. A related resource that is referenced, cited, or otherwise associated to the sequence. Example - 'http-//www.earthmicrobiome.org/'Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,MIMS (Minimum information about a metagenome sequence., https://pubmed.ncbi.nlm.nih.gov/18479204/,Metagenomics

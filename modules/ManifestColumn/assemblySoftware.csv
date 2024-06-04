@@ -1,17 +1,2 @@
-,14
-Attribute,assemblySoftware
-Description,"Tool(s) used for assembly, including version number and parameters. Example - 'metaSPAdes;3.11.0; kmer set 21,33,55,77,99,121, default parameters otherwise'. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,MIMS (Minimum information about a metagenome sequence.
-Notes, https://pubmed.ncbi.nlm.nih.gov/18479204/
-UsedIn,Metagenomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+assemblySoftware,"Tool(s) used for assembly, including version number and parameters. Example - 'metaSPAdes;3.11.0; kmer set 21,33,55,77,99,121, default parameters otherwise'. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,MIMS (Minimum information about a metagenome sequence., https://pubmed.ncbi.nlm.nih.gov/18479204/,Metagenomics

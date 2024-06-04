@@ -1,17 +1,2 @@
-,23
-Attribute,captivityDuration
-Description,"The duration of captivity in months for the individuals in captivity (formatted in months, ex. 72 months).note- Applicable only to animals with captivity status captive."
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,"https://www.animalaudiograms.org/audiogram_metadata_scheme#:~:text=species%20are%20possible.-,captivity%20duration,-The%20duration%20of"
-Notes, 
-UsedIn,Individual_non_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+captivityDuration,"The duration of captivity in months for the individuals in captivity (formatted in months, ex. 72 months).note- Applicable only to animals with captivity status captive.",,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"https://www.animalaudiograms.org/audiogram_metadata_scheme#:~:text=species%20are%20possible.-,captivity%20duration,-The%20duration%20of", ,Individual_non_Human

@@ -1,17 +1,2 @@
-,160
-Attribute,technologyPlatformVersion
-Description,"The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,True
-columnType,STRING
-Ontology,"DSLWG,Sage Bionetworks,http://purl.obolibrary.org/obo/NCIT_C45378"
-Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
-UsedIn,"Metabolomics,Metagenomics,Microbiome,Proteomics,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+technologyPlatformVersion,"The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,True,STRING,"DSLWG,Sage Bionetworks,http://purl.obolibrary.org/obo/NCIT_C45378","A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ","Metabolomics,Metagenomics,Microbiome,Proteomics,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

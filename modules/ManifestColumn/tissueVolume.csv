@@ -1,17 +1,2 @@
-,162
-Attribute,tissueVolume
-Description,The volume of the tissue sample. Measured in microliters.
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,"Biospecimen_human,Biospecimen_non_Human"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+tissueVolume,The volume of the tissue sample. Measured in microliters.,,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,Sage Bionetworks, ,"Biospecimen_human,Biospecimen_non_Human"

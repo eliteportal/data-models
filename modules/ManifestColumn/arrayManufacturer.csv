@@ -1,17 +1,2 @@
-,10
-Attribute,arrayManufacturer
-Description,"Manufacturer of the genotyping array used for the discovery stage. Separate multiple manufacturers by a semicolon (;). Example - Illumina, Affymetrix, Perlegen"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,True
-columnType,STRING
-Ontology,"Sage Bionetworks, EMBL-EBI"
-Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
-UsedIn,Genotyping_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+arrayManufacturer,"Manufacturer of the genotyping array used for the discovery stage. Separate multiple manufacturers by a semicolon (;). Example - Illumina, Affymetrix, Perlegen",,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,True,STRING,"Sage Bionetworks, EMBL-EBI","A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ",Genotyping_Human

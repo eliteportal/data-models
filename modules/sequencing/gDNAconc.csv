@@ -1,17 +1,2 @@
-,62
-Attribute,gDNAconc
-Description,gDNA Concentration in ng
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,sage.annotations-experimentalData.gDNAconc-0.0.3
-module,sequencing
-multivalue,False
-columnType,NUMBER
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,bsSeq
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+gDNAconc,gDNA Concentration in ng,,,,True,ManifestColumn,,ManifestColumn,sage.annotations-experimentalData.gDNAconc-0.0.3,sequencing,False,NUMBER,Sage Bionetworks, ,bsSeq

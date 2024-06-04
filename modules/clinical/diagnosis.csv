@@ -1,17 +1,2 @@
-,39
-Attribute,diagnosis
-Description,Indicate the disease or condition.
-Valid Values,"AD-DS, Affective Disorder, Alzheimer Disease, Alzheimer disease with psychosis, amyotrophic lateral sclerosis, anxiety, Autism Spectrum Disorder, Bipolar Disorder, Bladder Cancer, Brain Cancer, Breast Cancer, Cervical Cancer, Colon Cancer, control, corticobasal degeneration disorder, CS-DS, dementia, dystonia, essential tremor, Fibrocystic Breast Disease, frontotemporal dementia, gliosis, hypoxia, Juvenile Myelomonocytic Leukemia, Leukemia, Lewy body disease, Lung Cancer, Major Depressive Disorder, MCI-DS, mild cognitive impairment, multiple system atrophy, Neurofibromatosis 1, Neurofibromatosis 2, no cognitive impairment, Not Applicable, obesity, obsessive compulsive disorder, Ovary Cancer, Pancreatic Cancer, Parkinson's disease, pathological aging, progressive supranuclear palsy, Prostate Cancer, Schizophrenia, Skin Cancer, Substance Related Disorder, Tourette Syndrome, traumatic brain injury, type 2 diabetes mellitus, vascular dementia, Williams Syndrome"
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,sage.annotations-experimentalData.diagnosis-0.0.12
-module,clinical
-multivalue,True
-columnType,STRING
-Ontology,"https://www.ebi.ac.uk/ols/ontologies/mondo, https://www.ebi.ac.uk/ols/ontologies/maxo, https://www.ebi.ac.uk/ols/ontologies/hp"
-Notes,"HPO, MONDO, MAXO codes or labels (not listed for purposes of this RFC), Other, Unknown, Not collected, Not applicable, Not specified. "
-UsedIn,"Individual_Human,Phenotype_human"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+diagnosis,Indicate the disease or condition.,"AD-DS, Affective Disorder, Alzheimer Disease, Alzheimer disease with psychosis, amyotrophic lateral sclerosis, anxiety, Autism Spectrum Disorder, Bipolar Disorder, Bladder Cancer, Brain Cancer, Breast Cancer, Cervical Cancer, Colon Cancer, control, corticobasal degeneration disorder, CS-DS, dementia, dystonia, essential tremor, Fibrocystic Breast Disease, frontotemporal dementia, gliosis, hypoxia, Juvenile Myelomonocytic Leukemia, Leukemia, Lewy body disease, Lung Cancer, Major Depressive Disorder, MCI-DS, mild cognitive impairment, multiple system atrophy, Neurofibromatosis 1, Neurofibromatosis 2, no cognitive impairment, Not Applicable, obesity, obsessive compulsive disorder, Ovary Cancer, Pancreatic Cancer, Parkinson's disease, pathological aging, progressive supranuclear palsy, Prostate Cancer, Schizophrenia, Skin Cancer, Substance Related Disorder, Tourette Syndrome, traumatic brain injury, type 2 diabetes mellitus, vascular dementia, Williams Syndrome",,,False,ManifestColumn,,ManifestColumn,sage.annotations-experimentalData.diagnosis-0.0.12,clinical,True,STRING,"https://www.ebi.ac.uk/ols/ontologies/mondo, https://www.ebi.ac.uk/ols/ontologies/maxo, https://www.ebi.ac.uk/ols/ontologies/hp","HPO, MONDO, MAXO codes or labels (not listed for purposes of this RFC), Other, Unknown, Not collected, Not applicable, Not specified. ","Individual_Human,Phenotype_human"

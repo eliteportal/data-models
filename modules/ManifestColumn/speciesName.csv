@@ -1,17 +1,2 @@
-,147
-Attribute,speciesName
-Description,"The scientific name of the species (typically a taxonomic group, ex. ""Eremophila alpestris) the individual belongs to."""""""
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1045
-Notes,example: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=135430. 
-UsedIn,Individual_non_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+speciesName,"The scientific name of the species (typically a taxonomic group, ex. ""Eremophila alpestris) the individual belongs to.""""""",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,https://www.ebi.ac.uk/ols/ontologies/edam/terms?iri=http%3A%2F%2Fedamontology.org%2Fdata_1045,example: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=135430. ,Individual_non_Human

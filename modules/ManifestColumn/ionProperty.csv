@@ -1,17 +1,2 @@
-,74
-Attribute,ionProperty
-Description,Ion charge state (positive or negative-ion analysis)
-Valid Values,"Negative,Positive"
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,STRING
-Ontology,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry"
-Notes, 
-UsedIn,Metabolomics
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+ionProperty,Ion charge state (positive or negative-ion analysis),"Negative,Positive",,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"Sage Bionetworks, Proposed minimum metadata relative to mass spectrometry", ,Metabolomics

@@ -1,17 +1,2 @@
-,182
-Attribute,visitCode
-Description,"Indicate which longitudinal visit for the individual the data comes from, provided by the data contributor's data dictionary"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,NUMBER
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,Individual_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+visitCode,"Indicate which longitudinal visit for the individual the data comes from, provided by the data contributor's data dictionary",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,NUMBER,Sage Bionetworks, ,Individual_Human

@@ -1,17 +1,2 @@
-,93
-Attribute,measurementTechnique
-Description,"The name of the measurement technique describing the assay method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,True
-columnType,STRING
-Ontology,Sage Bionetworks
-Notes,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. "
-UsedIn,"Biospecimen_human,Genotyping_Human,Metabolomics,Metagenomics,Microbiome,Proteomics,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+measurementTechnique,"The name of the measurement technique describing the assay method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,True,STRING,Sage Bionetworks,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ","Biospecimen_human,Genotyping_Human,Metabolomics,Metagenomics,Microbiome,Proteomics,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"

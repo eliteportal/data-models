@@ -1,17 +1,2 @@
-,184
-Attribute,rnaBatchSize
-Description,The number of samples
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,False
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,NUMBER
-Ontology,Sage Bionetworks
-Notes, 
-UsedIn,scRNAseq
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+rnaBatchSize,The number of samples,,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,NUMBER,Sage Bionetworks, ,scRNAseq

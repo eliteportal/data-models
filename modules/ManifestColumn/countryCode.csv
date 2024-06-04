@@ -1,17 +1,2 @@
-,32
-Attribute,countryCode
-Description,"Indicate the geographic region for the individual (shown as ex. ""840"")"
-Valid Values,
-DependsOn,
-DependsOn Component,
-Required,True
-Parent,ManifestColumn
-Validation Rules,
-Properties,ManifestColumn
-Source,
-module,ManifestColumn
-multivalue,False
-columnType,INTEGER
-Ontology,https://wits.worldbank.org/countryprofile/metadata/en/country/all
-Notes, 
-UsedIn,Individual_Human
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+countryCode,"Indicate the geographic region for the individual (shown as ex. ""840"")",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,INTEGER,https://wits.worldbank.org/countryprofile/metadata/en/country/all, ,Individual_Human
