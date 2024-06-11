@@ -26,7 +26,7 @@ syn = sc.login()
 
 timestamp = datetime.now().strftime("%Y-%m-%d")
 
-ROOT_DIR_NAME = "ELITE-data-models"
+ROOT_DIR_NAME = "data-models"
 ROOT_DIR = get_root_dir(ROOT_DIR_NAME)
 
 logger_config_path = "_logs/logging.yaml"
