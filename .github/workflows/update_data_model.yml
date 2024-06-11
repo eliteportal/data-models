@@ -50,3 +50,9 @@ jobs:
       - uses: r-lib/actions/pr-push@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save model creation and conversion logs as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: creation-conversion-logs
+          path: _logs
