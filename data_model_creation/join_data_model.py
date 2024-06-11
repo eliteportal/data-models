@@ -13,10 +13,13 @@ import os
 
 cwd = Path(__file__)
 
-ROOT_DIR_NAME = "data-models" # this is the repo root dir; works in GH codespace but may need to be edited in other dev envs
+#ROOT_DIR_NAME = "data-models" # this is the repo root dir; works in GH codespace but may need to be edited in other dev envs
 JSONLD_NAME = "EL.data.model.jsonld"  # can do this in dev environment
 
-ROOT_DIR = utils.get_root_dir(ROOT_DIR_NAME)
+#ROOT_DIR = utils.get_root_dir(ROOT_DIR_NAME)
+
+#temporary fix: manually set ROOT_DIR variable to base of repo so github action works
+ROOT_DIR = "data-models"
 
 timestamp = datetime.now().strftime("%Y-%m-%d")
 
