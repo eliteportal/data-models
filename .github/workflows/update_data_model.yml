@@ -44,8 +44,8 @@ jobs:
         run: |
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add EL.data.model.jsonld
-          git commit -m "GitHub Action: convert *.model.csv to *.model.jsonld" || echo "No changes to commit"
+          git add . 
+          git commit -m "GitHub Action: join modules into csv and convert *.model.csv to *.model.jsonld" || echo "No changes to commit"
 
       - uses: r-lib/actions/pr-push@v2
         with:
