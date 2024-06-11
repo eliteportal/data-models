@@ -19,6 +19,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with: 
+          submodules: 'true'
       - uses: actions/setup-python@v4
         with:
           python-version: "3.9"
@@ -34,7 +36,9 @@ jobs:
 
       - name: Join data model
         shell: bash
-        run: bash data_model_creation/update_data_model.sh
+        run: |
+          pip install thefuzz  
+          data_model_creation/update_data_model.sh
         
       - uses: r-lib/actions/pr-fetch@v2
         with:
