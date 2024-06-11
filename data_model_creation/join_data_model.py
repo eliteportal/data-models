@@ -71,7 +71,7 @@ def join_data_model_partitions(partition_path):
 
 if __name__ == "__main__":
 
-    module_pattern = ROOT_DIR.resolve()._str + "/modules/**/*.csv"
+    module_pattern = str(ROOT_DIR.resolve()) + "/modules/**/*.csv"
 
     file_path = Path(ROOT_DIR, "EL.data.model.csv")
 
