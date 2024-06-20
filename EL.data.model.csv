@@ -144,21 +144,21 @@ vacuumPressureUnit,Unit of vacuum pressure value,"AFU,AI,AU/ml,bp g/dl,DK units/
 valueReported,The count or gene count for the transcript,,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,NUMBER,Sage Bionetworks, ,"RNAseq,Whole_Genome_Sequencing,scRNAseq"
 variantCount,The number of variants analysed in the discovery stage (after QC). Example - 52500,,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"Sage Bionetworks, EMBL-EBI","A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ",Genotyping_Human
 visitCode,"Indicate which longitudinal visit for the individual the data comes from, provided by the data contributor's data dictionary",,,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,NUMBER,Sage Bionetworks, ,Individual_Human
-analysisType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-assay,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-chromosome,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-consortium,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-dataSubtype,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-dataType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-fileFormat,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-grant,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-individualID,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-isModelSystem,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-isMultiSpecimen,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-metadataType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-resourceType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-specimenID,,,,,False,,,,,Unknown,False,,,,file_annotation_template
-study,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ analysisType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ assay,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ chromosome,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ consortium,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ dataSubtype,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ dataType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ fileFormat,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ grant,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ individualID,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ isModelSystem,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ isMultiSpecimen,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ metadataType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ resourceType,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ specimenID,,,,,False,,,,,Unknown,False,,,,file_annotation_template
+ study,,,,,False,,,,,Unknown,False,,,,file_annotation_template
 Component,,,,,False,,,,,Unknown,False,,,,"assay_RNAseq_template,assay_bsSeq_template,assay_metabolomics_template,assay_metagenomics_template,assay_microbiome_template,assay_phenotype_human_template,assay_proteomics_template,assay_scRNAseq_template,assay_whole_genome_sequencing_template,biospecimen_human_template,biospecimen_non_human_template,file_annotation_template,genotyping_human_template,individual_human_template,individual_non_human_template,study_folder_template"
 Filename,,,,,False,,,,,Unknown,False,,,,"assay_RNAseq_template,assay_bsSeq_template,assay_metabolomics_template,assay_metagenomics_template,assay_microbiome_template,assay_phenotype_human_template,assay_proteomics_template,assay_scRNAseq_template,assay_whole_genome_sequencing_template,biospecimen_human_template,biospecimen_non_human_template,file_annotation_template,genotyping_human_template,individual_human_template,individual_non_human_template"
 accessReqs,,,,,False,,,,,Unknown,False,,,,study_folder_template
@@ -218,7 +218,7 @@ libraryVersion,"Library Version- for example, rnaSeq 10x library version. Provid
 meanCoverage,Total number of bases covered by ATAC-seq reads/size of genome,,,,True,ManifestColumn,,ManifestColumn,sage.annotations-qc.meanCoverage-0.0.2,sequencing,False,NUMBER,Sage Bionetworks, ,bsSeq
 pcrCycles,Number of PCR cycles to amplify transposased DNA fragments,,,,True,ManifestColumn,,ManifestColumn,sage.annotations-experimentalData.pcrCycles-0.0.2,sequencing,False,NUMBER,Sage Bionetworks, ,bsSeq
 readLength,The length of the read.,,,,True,ManifestColumn,,ManifestColumn,sage.annotations-ngs.readLength-0.0.2,sequencing,False,NUMBER,Sage Bionetworks, ,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
-readStrandOrigin,The strand from which the read originates in a strand-specific protocol.,"Forward Reverse,forward reverse",,,True,ManifestColumn,,ManifestColumn,sage.annotations-ngs.readStrandOrigin-0.0.2,sequencing,False,STRING,Sage Bionetworks, ,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
+readStrandOrigin,The strand from which the read originates in a strand-specific protocol.,"forward, reverse",,,True,ManifestColumn,,ManifestColumn,sage.annotations-ngs.readStrandOrigin-0.0.2,sequencing,False,STRING,Sage Bionetworks, ,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
 runType,The type of run,"Not applicable,Not collected,Not specified,pairedEnd,singleEnd,singleEnd pairedEnd,Unknown",,,True,ManifestColumn,,ManifestColumn,sage.annotations-ngs.runType-0.0.2,sequencing,False,STRING,Sage Bionetworks, ,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
 totalReads,Total number of sequencing reads from a library.,,,,True,ManifestColumn,,ManifestColumn,sage.annotations-experimentalData.totalReads-0.0.2,sequencing,False,NUMBER,Sage Bionetworks, ,"Microbiome,RNAseq,Whole_Genome_Sequencing,bsSeq,scRNAseq"
 assay_RNAseq_template,Template for RNAseq,,"Filename,specimenID,sampleType,measurementTechnique,technologyPlatformVersion,platformLocation,referenceTranscriptID,repositoryName,transcriptType,resultUnit,valueReported,libraryPreparationMethod,libraryVersion,isStranded,readStrandOrigin,readLength,readLengthUnits,runType,totalReads,Component",,False,Component,,template,Sage Bionetworks,template,False,,Sage Bionetworks, ,
