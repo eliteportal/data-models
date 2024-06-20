@@ -17656,10 +17656,10 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:ForwardReverse"
+                    "@id": "bts:Forward"
                 },
                 {
-                    "@id": "bts:Forwardreverse"
+                    "@id": "bts:Reverse"
                 }
             ],
             "sms:displayName": "readStrandOrigin",
@@ -17667,10 +17667,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ForwardReverse",
+            "@id": "bts:Forward",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "ForwardReverse",
+            "rdfs:label": "Forward",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ReadStrandOrigin"
@@ -17679,15 +17679,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Forward Reverse",
+            "sms:displayName": "forward",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Forwardreverse",
+            "@id": "bts:Reverse",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Forwardreverse",
+            "rdfs:label": "Reverse",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ReadStrandOrigin"
@@ -17696,7 +17696,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "forward reverse",
+            "sms:displayName": "reverse",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
