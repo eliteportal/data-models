@@ -45,11 +45,6 @@
             "schema_name": "AssayMicrobiomeTemplate",
             "type": "file"
         },
-        /*{
-            "display_name": "assay_phenotype_human_template",
-            "schema_name": "AssayPhenotypeHumanTemplate",
-            "type": "file"
-        },*/
         {
             "display_name": "assay_proteomics_template",
             "schema_name": "AssayProteomicsTemplate",
