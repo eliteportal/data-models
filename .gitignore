@@ -15,6 +15,11 @@ _data/manifest_generation_results.txt
 **/great_expectations/
 data_model_creation/_logs/
 
+#schematic and synapse creds
+.synapseConfig
+.synapseCache/*
+*/schematic_service_account_creds.json
+
 # Allowed
 !**/old_models/*.csv
 !**/models/*.csv
