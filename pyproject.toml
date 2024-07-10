@@ -6,7 +6,7 @@ authors = ["Nicholas Lee <nicholas.lee@sagebase.org>"]
 readme = "README.md"
 packages = [
     { include = "data_model_creation" },
-    { include = "data-dictionary" }
+    { include = "processes", from = "data-dictionary"}
 ]
 
 [tool.poetry.dependencies]
