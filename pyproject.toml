@@ -4,10 +4,7 @@ version = "0.1.2"
 description = ""
 authors = ["Nicholas Lee <nicholas.lee@sagebase.org>"]
 readme = "README.md"
-packages = [
-    { include = "data_model_creation" },
-    { include = "processes", from = "data-dictionary"}
-]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.9.0,<3.11"
