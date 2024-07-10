@@ -24,12 +24,12 @@ jobs:
           python-version: '3.x'
           cache: 'pip'
     
-      - name: Install and configure Poetry
+      - name: Install Poetry
         uses: snok/install-poetry@v1
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          poetry install
 
       - name: Get changed files
         id: changed-files
