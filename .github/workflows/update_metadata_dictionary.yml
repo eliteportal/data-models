@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: update term files and pages
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0  
           ref: ${{ github.event.pull_request.head.ref }}
@@ -33,7 +33,7 @@ jobs:
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v44
 
       - name: update term file if data model csv is changed
         if: contains(steps.changed-files.outputs.modified_files, 'EL.data.model.csv')
@@ -42,7 +42,7 @@ jobs:
 
       - name: Get changed term files
         id: changed-files-yaml
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v44
         with:
           files_yaml: |
             data:
