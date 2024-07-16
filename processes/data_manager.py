@@ -30,7 +30,7 @@ from dotenv import dotenv_values
 from toolbox import utils
 
 
-root_dir_name = "data-dictionary"
+root_dir_name = "data-models"
 
 ROOT_DIR = utils.get_root_dir(root_dir_name)
 
