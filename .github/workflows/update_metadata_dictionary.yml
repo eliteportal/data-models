@@ -3,7 +3,7 @@
 name: update_metadata_dictionary
 
 on:
-  pull_request:
+  push:
     branches:
       - main
   workflow_dispatch:
@@ -30,36 +30,13 @@ jobs:
         run: |
           poetry install
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v44
-        with: 
-          since_last_remote_commit: true
-
-      - name: update term file if data model csv is changed
-        if: contains(steps.changed-files.outputs.modified_files, 'EL.data.model.csv')
+      - name: update _data csv term files
         run: |
-          python data_manager.py
+          python processes/data_manager.py
 
-      - name: Get changed term files
-        id: changed-files-yaml
-        uses: tj-actions/changed-files@v44
-        with:
-          files_yaml: |
-            data:
-              - _data/**.csv
-            page:
-              - docs/**/**.md
-
-      - name: update term page if the availablity of term file changed
-        if: steps.changed-files-yaml.outputs.data_added_files_count != 0 && steps.changed-files-yaml.outputs.data_deleted_files_count != 0
+      - name: update term pages
         run: |
-          python page_manager.py
-            
-      - name: update template page if the availablity of term page changed
-        if: steps.changed-files-yaml.outputs.page_modified_files_count != 0
-        run: |
-          python update_template_page.py
+          python processes/page_manager.py
       
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
