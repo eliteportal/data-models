@@ -1,0 +1,89 @@
+Key,Key Description,columnType,Source,Parent
+Amniotic Fluid,,STRING,,ManifestColumn
+Appendix,,STRING,,ManifestColumn
+B cell,,STRING,,ManifestColumn
+Basophils,,STRING,,ManifestColumn
+Bone,,STRING,,ManifestColumn
+Bone Marrow,,STRING,,ManifestColumn
+Brachial lymph node,,STRING,,ManifestColumn
+Breast Milk,,STRING,,ManifestColumn
+Bronchoalveolar Lavage Fluid,,STRING,,ManifestColumn
+Carbohydrate,,STRING,,ManifestColumn
+Cell culture supernatant,,STRING,,ManifestColumn
+Cerebrospinal Fluid,,STRING,,ManifestColumn
+Cervical lymph nodes,,STRING,,ManifestColumn
+Colon,,STRING,,ManifestColumn
+Colonic Lamina Propria,,STRING,,ManifestColumn
+Convalescent Plasma,,STRING,,ManifestColumn
+Cord blood,,STRING,,ManifestColumn
+DNA,,STRING,,ManifestColumn
+Dendritic cell,,STRING,,ManifestColumn
+Dermis,,STRING,,ManifestColumn
+Dried Blood Spot,,STRING,,ManifestColumn
+Endotracheal aspirate,,STRING,,ManifestColumn
+Epithelium,,STRING,,ManifestColumn
+Feces,,STRING,,ManifestColumn
+Fibroblast,,STRING,,ManifestColumn
+Gastric lamina propria,,STRING,,ManifestColumn
+Ileum,,STRING,,ManifestColumn
+Inguinal lymph node,,STRING,,ManifestColumn
+Jejunum,,STRING,,ManifestColumn
+Kidney,,STRING,,ManifestColumn
+Leukocytes,,STRING,,ManifestColumn
+Lipid,,STRING,,ManifestColumn
+Liver,,STRING,,ManifestColumn
+Lung,,STRING,,ManifestColumn
+Lung lymph node,,STRING,,ManifestColumn
+Lymph node,,STRING,,ManifestColumn
+Lymphocyte,,STRING,,ManifestColumn
+Macrophage,,STRING,,ManifestColumn
+Mesenteric lymph node,,STRING,,ManifestColumn
+Monocyte,,STRING,,ManifestColumn
+Mouse Ear,,STRING,,ManifestColumn
+NK cell,,STRING,,ManifestColumn
+Nasal Swab,,STRING,,ManifestColumn
+Nasal Swab or Nose Specimen,,STRING,,ManifestColumn
+Nasal lavage fluid,,STRING,,ManifestColumn
+Nasopharyngeal Swab Specimen,,STRING,,ManifestColumn
+Negative Control,,STRING,,ManifestColumn
+Neutrophil,,STRING,,ManifestColumn
+Not Specified,,STRING,,ManifestColumn
+Optic Nerve,,STRING,,ManifestColumn
+Organoids,,STRING,,ManifestColumn
+Oropharyngeal Swab Specimen,,STRING,,ManifestColumn
+Osteoblasts,,STRING,,ManifestColumn
+OtherSampleType,,STRING,,ManifestColumn
+PBL,,STRING,,ManifestColumn
+PBMC,,STRING,,ManifestColumn
+Pancreas,,STRING,,ManifestColumn
+Pancreatic Stellate Cells,,STRING,,ManifestColumn
+Placenta,,STRING,,ManifestColumn
+Plasma,,STRING,,ManifestColumn
+Pooled Sample,,STRING,,ManifestColumn
+Popliteal lymph node,,STRING,,ManifestColumn
+Positive Control,,STRING,,ManifestColumn
+Protein,,STRING,,ManifestColumn
+Rectal Swab Specimen,,STRING,,ManifestColumn
+Red Blood Cell,,STRING,,ManifestColumn
+Saliva,,STRING,,ManifestColumn
+Salivary Glands,,STRING,,ManifestColumn
+Serum,,STRING,,ManifestColumn
+Skin of body,,STRING,,ManifestColumn
+Small intestine,,STRING,,ManifestColumn
+Spleen,,STRING,,ManifestColumn
+Sputum,,STRING,,ManifestColumn
+Stomach,,STRING,,ManifestColumn
+Synovial fluid,,STRING,,ManifestColumn
+Synovial tissue,,STRING,,ManifestColumn
+T cell,,STRING,,ManifestColumn
+Thymus,,STRING,,ManifestColumn
+Tonsil,,STRING,,ManifestColumn
+Trachea,,STRING,,ManifestColumn
+Tumor Tissue,,STRING,,ManifestColumn
+Umbilical cord blood,,STRING,,ManifestColumn
+Urinary bladder,,STRING,,ManifestColumn
+Urine,,STRING,,ManifestColumn
+Vagina,,STRING,,ManifestColumn
+Whole blood,,STRING,,ManifestColumn
+brain,,STRING,,ManifestColumn
+cell line,,STRING,,ManifestColumn

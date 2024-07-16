@@ -1,0 +1,5 @@
+Key,Key Description,columnType,Source,Parent
+Not Specified,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn

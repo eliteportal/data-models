@@ -1,0 +1,21 @@
+Key,Key Description,columnType,Source,Parent
+blood,,STRING,,ManifestColumn
+ bone marrow,,STRING,,ManifestColumn
+ brain,,STRING,,ManifestColumn
+ breast,,STRING,,ManifestColumn
+ Bursa Of Fabricius,,STRING,,ManifestColumn
+ cerebrospinal fluid,,STRING,,ManifestColumn
+ colon,,STRING,,ManifestColumn
+ kidney,,STRING,,ManifestColumn
+ large intestine,,STRING,,ManifestColumn
+ liver,,STRING,,ManifestColumn
+ lung,,STRING,,ManifestColumn
+ lymph node,,STRING,,ManifestColumn
+ mammary gland,,STRING,,ManifestColumn
+ nerves,,STRING,,ManifestColumn
+ nose,,STRING,,ManifestColumn
+ ovary,,STRING,,ManifestColumn
+ pancreas,,STRING,,ManifestColumn
+ prostate,,STRING,,ManifestColumn
+ skin,,STRING,,ManifestColumn
+ spleen,,STRING,,ManifestColumn

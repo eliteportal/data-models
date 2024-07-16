@@ -1,0 +1,2 @@
+Key,Key Description,Valid Values,columnType,Parent,module
+isModelSystem,,"TRUE,FALSE",BOOLEAN,ManifestColumn,ADKP

@@ -1,0 +1,4 @@
+Key,Key Description,columnType,Source,Parent
+C,,STRING,,ManifestColumn
+F,,STRING,,ManifestColumn
+K,,STRING,,ManifestColumn

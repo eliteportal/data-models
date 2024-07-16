@@ -1,0 +1,6 @@
+Key,Key Description,columnType,Source,Parent
+No,,BOOLEAN,,ManifestColumn
+No,,BOOLEAN,,ManifestColumn
+Yes,,BOOLEAN,,ManifestColumn
+YesHasAssayControl,,BOOLEAN,,ManifestColumn
+YesHasAssayControl,,BOOLEAN,,ManifestColumn

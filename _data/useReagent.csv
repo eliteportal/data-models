@@ -1,0 +1,3 @@
+Key,Key Description,columnType,Source,Parent
+FALSE,,BOOLEAN,,ManifestColumn
+TRUE,,BOOLEAN,,ManifestColumn

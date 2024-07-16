@@ -1,0 +1,20 @@
+Key,Key Description,columnType,Source,Parent
+ArrayExpress,,STRING,,ManifestColumn
+Broad Single Cell Portal,,STRING,,ManifestColumn
+dbGAP,,STRING,,ManifestColumn
+ENA,,STRING,,ManifestColumn
+Ensembl,,STRING,,ManifestColumn
+FlowRepository,,STRING,,ManifestColumn
+GenBank,,STRING,,ManifestColumn
+GEO,,STRING,,ManifestColumn
+GISAID,,STRING,,ManifestColumn
+IEDB,,STRING,,ManifestColumn
+ImmPort,,STRING,,ManifestColumn
+MassIVE,,STRING,,ManifestColumn
+MetaboLights,,STRING,,ManifestColumn
+Metabolomics Workbench,,STRING,,ManifestColumn
+MGnify,,STRING,,ManifestColumn
+NCBI Gene,,STRING,,ManifestColumn
+PRIDE,,STRING,,ManifestColumn
+SRA,,STRING,,ManifestColumn
+UniProt,,STRING,,ManifestColumn

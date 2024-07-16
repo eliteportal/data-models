@@ -1,0 +1,26 @@
+Key,Key Description,columnType,Source,Parent
+2-iodobenzoate,,STRING,,ManifestColumn
+Arg-C,,STRING,,ManifestColumn
+Asp-N,,STRING,,ManifestColumn
+Asp-N_ambic,,STRING,,ManifestColumn
+Chymotrypsin,,STRING,,ManifestColumn
+CNBr,,STRING,,ManifestColumn
+Formic_acid,,STRING,,ManifestColumn
+Glutamyl endopeptidase,,STRING,,ManifestColumn
+Leukocyte elastase,,STRING,,ManifestColumn
+Lys-C,,STRING,,ManifestColumn
+Lys-C/P,,STRING,,ManifestColumn
+No cleavage,,STRING,,ManifestColumn
+NoEnzyme,,STRING,,ManifestColumn
+Not available,,STRING,,ManifestColumn
+Not collected,,STRING,,ManifestColumn
+Not specified,,STRING,,ManifestColumn
+PepsinA,,STRING,,ManifestColumn
+Proline endopeptidase,,STRING,,ManifestColumn
+TrypChymo,,STRING,,ManifestColumn
+Trypsin,,STRING,,ManifestColumn
+Trypsin/P,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn
+Unspecific cleavage,,STRING,,ManifestColumn
+V8-DE,,STRING,,ManifestColumn
+V8-E,,STRING,,ManifestColumn

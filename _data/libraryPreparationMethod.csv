@@ -1,0 +1,21 @@
+Key,Key Description,columnType,Source,Parent
+10x,,STRING,,ManifestColumn
+ Accel-NGS 2S Plus,,STRING,,ManifestColumn
+ Accel-NGS Methyl-Seq,,STRING,,ManifestColumn
+ CEL-seq,,STRING,,ManifestColumn
+ Drop-Seq,,STRING,,ManifestColumn
+ NEBNext,,STRING,,ManifestColumn
+ NexteraXT,,STRING,,ManifestColumn
+ Omni-ATAC,,STRING,,ManifestColumn
+ sac-seq,,STRING,,ManifestColumn
+ Smart-seq1,,STRING,,ManifestColumn
+ Smart-seq2,,STRING,,ManifestColumn
+ Smart-seq4,,STRING,,ManifestColumn
+ SMRTbell,,STRING,,ManifestColumn
+ TruSeq,,STRING,,ManifestColumn
+ Ultralow Methyl-Seq,,STRING,,ManifestColumn
+ Illumina DNA PCR-Free Prep Kit,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Not specified,,STRING,,ManifestColumn

@@ -1,0 +1,22 @@
+title: ELITE Metadata Dictionary
+projtect_name: ELITE
+description: Explore ELITE metadata terms by key, value, or descriptions.
+theme: just-the-docs
+logo: "assets/imgs/ELITE_logo.png"
+url: https://ELITE.github.io/data_models
+
+data_model: EL.data.model.csv
+
+aux_links:
+  Data Curator App: https://dca.app.sagebionetworks.org/
+  ELITE Portal: https://eliteportal.synapse.org/
+  Service Desk: https://sagebionetworks.jira.com/servicedesk/customer/portal/12
+
+callouts:
+  highlight:
+    color: yellow
+  warning:
+    title: WARNING
+    color: red
+  note:
+    color: purple

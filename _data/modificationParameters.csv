@@ -1,0 +1,26 @@
+Key,Key Description,Type,Source,Parent
+Fixedmodification,,STRING,,unspecified
+H2Oneutralloss,,STRING,,unspecified
+H3PO4neutralloss,,STRING,,unspecified
+NH3neutralloss,,STRING,,unspecified
+NotSpecified,,STRING,,unspecified
+Notapplicable,,STRING,,unspecified
+Notcollected,,STRING,,unspecified
+OtherModificationParametersModificationParameters,nan,STRING,nan,unspecified
+Unknown,nan,STRING,nan,unspecified
+Variablemodification,,STRING,,unspecified
+metaboliclabellingpurity,,STRING,,unspecified
+metaboliclabellingheavyNmainly15N,,STRING,,unspecified
+metaboliclabellingnaturalNmainly14N,,STRING,,unspecified
+modificationindex,,STRING,,unspecified
+modificationmotif,,STRING,,unspecified
+modificationpositionscore,,STRING,,unspecified
+modificationprobability,,STRING,,unspecified
+modificationrescoringfalselocalizationrate,,STRING,,unspecified
+modificationspecificitypeptideCterm,,STRING,,unspecified
+modificationspecificitypeptideNterm,,STRING,,unspecified
+modificationspecificityproteinCterm,,STRING,,unspecified
+modificationspecificityproteinNterm,,STRING,,unspecified
+modificationspecificityrule,,STRING,,unspecified
+neutralloss,,STRING,,unspecified
+toleranceontypes,,STRING,,unspecified

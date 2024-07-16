@@ -1,0 +1,1140 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.0.0-rc.4/css/tom-select.min.css" integrity="sha512-43fHB3GLgZfz8QXl1RPQ8O66oIgv3po9cJ5erMt1c4QISq9dYb195T3vr5ImnJPXuVroKcGBPXBFKETW8jrPNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.0.0-rc.4/js/tom-select.complete.js" integrity="sha512-jeF9CfnvzDiw9G9xiksVjxR2lib44Gnovvkv+3CgCG6NXCD4gqlA5nDAVW5WjpA+i+/zKsUWV5xNEbW1X/HH0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 800px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="manifestColumn">manifestColumn</option>
+                                
+                                    <option value="IsModelSystem">IsModelSystem</option>
+                                
+                                    <option value="DNAextraction">DNAextraction</option>
+                                
+                                    <option value="AcquisitionBatchID">AcquisitionBatchID</option>
+                                
+                                    <option value="AcquisitionBatchSize">AcquisitionBatchSize</option>
+                                
+                                    <option value="AcquisitionBatchSizeUnit">AcquisitionBatchSizeUnit</option>
+                                
+                                    <option value="AcquisitionMode">AcquisitionMode</option>
+                                
+                                    <option value="AcquisitionSoftware">AcquisitionSoftware</option>
+                                
+                                    <option value="AcquisitionSoftwareVersion">AcquisitionSoftwareVersion</option>
+                                
+                                    <option value="Adapters">Adapters</option>
+                                
+                                    <option value="AdjustedCovariates">AdjustedCovariates</option>
+                                
+                                    <option value="ArrayInformation">ArrayInformation</option>
+                                
+                                    <option value="ArrayManufacturer">ArrayManufacturer</option>
+                                
+                                    <option value="AssemblyName">AssemblyName</option>
+                                
+                                    <option value="AssemblyQual">AssemblyQual</option>
+                                
+                                    <option value="AssemblySoftware">AssemblySoftware</option>
+                                
+                                    <option value="AssociatedResource">AssociatedResource</option>
+                                
+                                    <option value="BackgroundTrait">BackgroundTrait</option>
+                                
+                                    <option value="BatchID">BatchID</option>
+                                
+                                    <option value="BatchLabel">BatchLabel</option>
+                                
+                                    <option value="CaptivityDuration">CaptivityDuration</option>
+                                
+                                    <option value="CaptivityStatus">CaptivityStatus</option>
+                                
+                                    <option value="CommonName">CommonName</option>
+                                
+                                    <option value="ConsentGroupID">ConsentGroupID</option>
+                                
+                                    <option value="ConversionRatio">ConversionRatio</option>
+                                
+                                    <option value="ConversionRatioUnits">ConversionRatioUnits</option>
+                                
+                                    <option value="CountryCode">CountryCode</option>
+                                
+                                    <option value="DataFile">DataFile</option>
+                                
+                                    <option value="DataModelVersion">DataModelVersion</option>
+                                
+                                    <option value="DataTypeAll">DataTypeAll</option>
+                                
+                                    <option value="DatabaseLibrary">DatabaseLibrary</option>
+                                
+                                    <option value="DatabaseName">DatabaseName</option>
+                                
+                                    <option value="DatabaseSource">DatabaseSource</option>
+                                
+                                    <option value="DatabaseVersion">DatabaseVersion</option>
+                                
+                                    <option value="DatabaseWeblink">DatabaseWeblink</option>
+                                
+                                    <option value="DiagnosisStatus">DiagnosisStatus</option>
+                                
+                                    <option value="DigestionMethod">DigestionMethod</option>
+                                
+                                    <option value="DigestionReagent">DigestionReagent</option>
+                                
+                                    <option value="DnaBatchID">DnaBatchID</option>
+                                
+                                    <option value="DnaBatchSize">DnaBatchSize</option>
+                                
+                                    <option value="DnaBatchSizeUnit">DnaBatchSizeUnit</option>
+                                
+                                    <option value="Enrichment">Enrichment</option>
+                                
+                                    <option value="EnrichmentMethod">EnrichmentMethod</option>
+                                
+                                    <option value="EnrichmentStrategy">EnrichmentStrategy</option>
+                                
+                                    <option value="EthnicGroupCode">EthnicGroupCode</option>
+                                
+                                    <option value="ExperimentType">ExperimentType</option>
+                                
+                                    <option value="ExperimentalBatchSizeUnit">ExperimentalBatchSizeUnit</option>
+                                
+                                    <option value="ExperimentalFactor">ExperimentalFactor</option>
+                                
+                                    <option value="ExtractionMethod">ExtractionMethod</option>
+                                
+                                    <option value="FieldCenterCode">FieldCenterCode</option>
+                                
+                                    <option value="FractionIdentifier">FractionIdentifier</option>
+                                
+                                    <option value="GasFlowTemperature">GasFlowTemperature</option>
+                                
+                                    <option value="GasFlowTemperatureUnit">GasFlowTemperatureUnit</option>
+                                
+                                    <option value="GenotypeTechnology">GenotypeTechnology</option>
+                                
+                                    <option value="HasAssayControl">HasAssayControl</option>
+                                
+                                    <option value="HasIonizationSource">HasIonizationSource</option>
+                                
+                                    <option value="Imputation">Imputation</option>
+                                
+                                    <option value="ImputationPanel">ImputationPanel</option>
+                                
+                                    <option value="ImputationSoftware">ImputationSoftware</option>
+                                
+                                    <option value="InstrumentModel">InstrumentModel</option>
+                                
+                                    <option value="IonProperty">IonProperty</option>
+                                
+                                    <option value="IsobaricLabelingReagent">IsobaricLabelingReagent</option>
+                                
+                                    <option value="LabelFreeQuantitation">LabelFreeQuantitation</option>
+                                
+                                    <option value="LabelQuantitation">LabelQuantitation</option>
+                                
+                                    <option value="LensVoltages">LensVoltages</option>
+                                
+                                    <option value="LensVoltagesUnit">LensVoltagesUnit</option>
+                                
+                                    <option value="LibLayout">LibLayout</option>
+                                
+                                    <option value="LibReadsSeqd">LibReadsSeqd</option>
+                                
+                                    <option value="LibSize">LibSize</option>
+                                
+                                    <option value="LibVector">LibVector</option>
+                                
+                                    <option value="LibraryBatchID">LibraryBatchID</option>
+                                
+                                    <option value="LifeStage">LifeStage</option>
+                                
+                                    <option value="MeasurementTechnique">MeasurementTechnique</option>
+                                
+                                    <option value="Mid">Mid</option>
+                                
+                                    <option value="ModificationParameters">ModificationParameters</option>
+                                
+                                    <option value="MsAnalyteType">MsAnalyteType</option>
+                                
+                                    <option value="MsAssayTechnique">MsAssayTechnique</option>
+                                
+                                    <option value="MsTarget">MsTarget</option>
+                                
+                                    <option value="NucleAcidExt">NucleAcidExt</option>
+                                
+                                    <option value="NumberContig">NumberContig</option>
+                                
+                                    <option value="NumberIndividuals">NumberIndividuals</option>
+                                
+                                    <option value="ProcessingBatchID">ProcessingBatchID</option>
+                                
+                                    <option value="Program">Program</option>
+                                
+                                    <option value="ProjectShortName">ProjectShortName</option>
+                                
+                                    <option value="QuantationStrategy">QuantationStrategy</option>
+                                
+                                    <option value="ReadLengthUnits">ReadLengthUnits</option>
+                                
+                                    <option value="ReadmeFile">ReadmeFile</option>
+                                
+                                    <option value="ReagentCatalogNumber">ReagentCatalogNumber</option>
+                                
+                                    <option value="ReagentContact">ReagentContact</option>
+                                
+                                    <option value="ReagentIDs">ReagentIDs</option>
+                                
+                                    <option value="ReagentLotNumber">ReagentLotNumber</option>
+                                
+                                    <option value="ReagentManufacturer">ReagentManufacturer</option>
+                                
+                                    <option value="ReagentName">ReagentName</option>
+                                
+                                    <option value="ReagentWeblink">ReagentWeblink</option>
+                                
+                                    <option value="ReferenceTranscriptID">ReferenceTranscriptID</option>
+                                
+                                    <option value="ReportedTrait">ReportedTrait</option>
+                                
+                                    <option value="RepositoryName">RepositoryName</option>
+                                
+                                    <option value="ResultUnit">ResultUnit</option>
+                                
+                                    <option value="RnaBatchID">RnaBatchID</option>
+                                
+                                    <option value="RnaBatchSize">RnaBatchSize</option>
+                                
+                                    <option value="RnaBatchSizeUnit">RnaBatchSizeUnit</option>
+                                
+                                    <option value="SampleBatchID">SampleBatchID</option>
+                                
+                                    <option value="SampleIntroduction">SampleIntroduction</option>
+                                
+                                    <option value="SamplePrepProtocol">SamplePrepProtocol</option>
+                                
+                                    <option value="SampleType">SampleType</option>
+                                
+                                    <option value="SeqMethod">SeqMethod</option>
+                                
+                                    <option value="SeqPlatform">SeqPlatform</option>
+                                
+                                    <option value="SequencingBatchID">SequencingBatchID</option>
+                                
+                                    <option value="SequencingBatchSize">SequencingBatchSize</option>
+                                
+                                    <option value="SequencingBatchSizeUnit">SequencingBatchSizeUnit</option>
+                                
+                                    <option value="Sop">Sop</option>
+                                
+                                    <option value="SourceMatID">SourceMatID</option>
+                                
+                                    <option value="SpeciesAge">SpeciesAge</option>
+                                
+                                    <option value="SpeciesGroup">SpeciesGroup</option>
+                                
+                                    <option value="SpeciesName">SpeciesName</option>
+                                
+                                    <option value="SpecimenAge">SpecimenAge</option>
+                                
+                                    <option value="SpecimenSource">SpecimenSource</option>
+                                
+                                    <option value="SpecimenType">SpecimenType</option>
+                                
+                                    <option value="Stage">Stage</option>
+                                
+                                    <option value="StatisticalModel">StatisticalModel</option>
+                                
+                                    <option value="StudyCode">StudyCode</option>
+                                
+                                    <option value="StudyKey">StudyKey</option>
+                                
+                                    <option value="SummaryFile">SummaryFile</option>
+                                
+                                    <option value="SummaryStatisticsAssembly">SummaryStatisticsAssembly</option>
+                                
+                                    <option value="TargetGene">TargetGene</option>
+                                
+                                    <option value="Taxon">Taxon</option>
+                                
+                                    <option value="TechnologyPlatformVersion">TechnologyPlatformVersion</option>
+                                
+                                    <option value="TissueVolume">TissueVolume</option>
+                                
+                                    <option value="TranscriptType">TranscriptType</option>
+                                
+                                    <option value="TreatmentAmountUnit">TreatmentAmountUnit</option>
+                                
+                                    <option value="TreatmentAmountValue">TreatmentAmountValue</option>
+                                
+                                    <option value="TreatmentDurationUnit">TreatmentDurationUnit</option>
+                                
+                                    <option value="TreatmentDurationValue">TreatmentDurationValue</option>
+                                
+                                    <option value="TreatmentIDs">TreatmentIDs</option>
+                                
+                                    <option value="TreatmentName">TreatmentName</option>
+                                
+                                    <option value="TreatmentTemperatureUnit">TreatmentTemperatureUnit</option>
+                                
+                                    <option value="TreatmentTemperatureValue">TreatmentTemperatureValue</option>
+                                
+                                    <option value="UseReadMeFile">UseReadMeFile</option>
+                                
+                                    <option value="UseReagent">UseReagent</option>
+                                
+                                    <option value="UseSummaryFile">UseSummaryFile</option>
+                                
+                                    <option value="UseTreatment">UseTreatment</option>
+                                
+                                    <option value="VacuumPressure">VacuumPressure</option>
+                                
+                                    <option value="VacuumPressureUnit">VacuumPressureUnit</option>
+                                
+                                    <option value="ValueReported">ValueReported</option>
+                                
+                                    <option value="VariantCount">VariantCount</option>
+                                
+                                    <option value="VisitCode">VisitCode</option>
+                                
+                                    <option value="BatchSize">BatchSize</option>
+                                
+                                    <option value="CellType">CellType</option>
+                                
+                                    <option value="FastingState">FastingState</option>
+                                
+                                    <option value="IsPostMortem">IsPostMortem</option>
+                                
+                                    <option value="NucleicAcidSource">NucleicAcidSource</option>
+                                
+                                    <option value="Organ">Organ</option>
+                                
+                                    <option value="SamplingAge">SamplingAge</option>
+                                
+                                    <option value="SpecimenID">SpecimenID</option>
+                                
+                                    <option value="TissueWeight">TissueWeight</option>
+                                
+                                    <option value="Diagnosis">Diagnosis</option>
+                                
+                                    <option value="Ethnicity">Ethnicity</option>
+                                
+                                    <option value="Race">Race</option>
+                                
+                                    <option value="Sex">Sex</option>
+                                
+                                    <option value="Assay">Assay</option>
+                                
+                                    <option value="ControlType">ControlType</option>
+                                
+                                    <option value="PlatformLocation">PlatformLocation</option>
+                                
+                                    <option value="Age">Age</option>
+                                
+                                    <option value="Cohort">Cohort</option>
+                                
+                                    <option value="IndividualID">IndividualID</option>
+                                
+                                    <option value="Species">Species</option>
+                                
+                                    <option value="SpectrometerFrequency">SpectrometerFrequency</option>
+                                
+                                    <option value="DirectionalBSseqLibrary">DirectionalBSseqLibrary</option>
+                                
+                                    <option value="GDNAconc">GDNAconc</option>
+                                
+                                    <option value="IsStranded">IsStranded</option>
+                                
+                                    <option value="LambdaDNAconc">LambdaDNAconc</option>
+                                
+                                    <option value="LibraryPrep">LibraryPrep</option>
+                                
+                                    <option value="LibraryPreparationMethod">LibraryPreparationMethod</option>
+                                
+                                    <option value="LibraryVersion">LibraryVersion</option>
+                                
+                                    <option value="MeanCoverage">MeanCoverage</option>
+                                
+                                    <option value="PcrCycles">PcrCycles</option>
+                                
+                                    <option value="ReadLength">ReadLength</option>
+                                
+                                    <option value="ReadStrandOrigin">ReadStrandOrigin</option>
+                                
+                                    <option value="RunType">RunType</option>
+                                
+                                    <option value="TotalReads">TotalReads</option>
+                                
+                                    <option value="Component">Component</option>
+                                
+                                    <option value="AssayRNAseqTemplate">AssayRNAseqTemplate</option>
+                                
+                                    <option value="AssayBsSeqTemplate">AssayBsSeqTemplate</option>
+                                
+                                    <option value="AssayMetabolomicsTemplate">AssayMetabolomicsTemplate</option>
+                                
+                                    <option value="AssayMetagenomicsTemplate">AssayMetagenomicsTemplate</option>
+                                
+                                    <option value="AssayMicrobiomeTemplate">AssayMicrobiomeTemplate</option>
+                                
+                                    <option value="AssayPhenotypeHumanTemplate">AssayPhenotypeHumanTemplate</option>
+                                
+                                    <option value="AssayProteomicsTemplate">AssayProteomicsTemplate</option>
+                                
+                                    <option value="AssayScRNAseqTemplate">AssayScRNAseqTemplate</option>
+                                
+                                    <option value="AssayWholeGenomeSequencingTemplate">AssayWholeGenomeSequencingTemplate</option>
+                                
+                                    <option value="BiospecimenHumanTemplate">BiospecimenHumanTemplate</option>
+                                
+                                    <option value="BiospecimenNonHumanTemplate">BiospecimenNonHumanTemplate</option>
+                                
+                                    <option value="FileAnnotationTemplate">FileAnnotationTemplate</option>
+                                
+                                    <option value="GenotypingHumanTemplate">GenotypingHumanTemplate</option>
+                                
+                                    <option value="IndividualHumanTemplate">IndividualHumanTemplate</option>
+                                
+                                    <option value="IndividualNonHumanTemplate">IndividualNonHumanTemplate</option>
+                                
+                                    <option value="StudyFolderTemplate">StudyFolderTemplate</option>
+                                
+                                    <option value="Thing">Thing</option>
+                                
+                                    <option value="Filename">Filename</option>
+                                
+                                    <option value="template">template</option>
+                                
+                                    <option value="AcquistionSoftwareVersion">AcquistionSoftwareVersion</option>
+                                
+                                    <option value="ExperimentalBatchSize">ExperimentalBatchSize</option>
+                                
+                                    <option value="BatchSizeUnit">BatchSizeUnit</option>
+                                
+                                    <option value="SampleBatchSize">SampleBatchSize</option>
+                                
+                                    <option value="SampleBatchSizeUnit">SampleBatchSizeUnit</option>
+                                
+                                    <option value="ProcessingBatchSize">ProcessingBatchSize</option>
+                                
+                                    <option value="ProcessingBatchSizeUnit">ProcessingBatchSizeUnit</option>
+                                
+                                    <option value="IsMultiSpecimen">IsMultiSpecimen</option>
+                                
+                                    <option value="FileFormat">FileFormat</option>
+                                
+                                    <option value="Consortium">Consortium</option>
+                                
+                                    <option value="Study">Study</option>
+                                
+                                    <option value="Grant">Grant</option>
+                                
+                                    <option value="ResourceType">ResourceType</option>
+                                
+                                    <option value="DataType">DataType</option>
+                                
+                                    <option value="DataSubtype">DataSubtype</option>
+                                
+                                    <option value="MetadataType">MetadataType</option>
+                                
+                                    <option value="AnalysisType">AnalysisType</option>
+                                
+                                    <option value="Chromosome">Chromosome</option>
+                                
+                                    <option value="StudyName">StudyName</option>
+                                
+                                    <option value="ProjectFullName">ProjectFullName</option>
+                                
+                                    <option value="StudyAbstract">StudyAbstract</option>
+                                
+                                    <option value="StudyDescription">StudyDescription</option>
+                                
+                                    <option value="StudyFocus">StudyFocus</option>
+                                
+                                    <option value="GrantNumber">GrantNumber</option>
+                                
+                                    <option value="StudyWiki">StudyWiki</option>
+                                
+                                    <option value="Acknowledgment">Acknowledgment</option>
+                                
+                                    <option value="Methods">Methods</option>
+                                
+                                    <option value="RelatedStudies">RelatedStudies</option>
+                                
+                                    <option value="StudyType">StudyType</option>
+                                
+                                    <option value="IsFeatured">IsFeatured</option>
+                                
+                                    <option value="AckContext">AckContext</option>
+                                
+                                    <option value="StudyMetadata">StudyMetadata</option>
+                                
+                                    <option value="AccessReqs">AccessReqs</option>
+                                
+                                    <option value="IsReleased">IsReleased</option>
+                                
+                                    <option value="NewsRelease">NewsRelease</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+              <div id="filter-menu" class="card-header">
+                <div class="row no-gutters">
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'item')"
+                            id="select-item"
+                        >
+                        <option value="">Select a network item</option>
+                        <option value="edge">edge</option>
+                        <option value="node">node</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="updateFilter(value, 'property')"
+                            id="select-property"
+                        >
+                        <option value="">Select a property...</option>
+                    </select>
+                  </div>
+                  <div class="col-3 pb-2">
+                    <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="select-value"
+                        >
+                        <option value="">Select value(s)...</option>
+                    </select>
+                  </div>
+                  <div class="col-1 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="highlightFilter(filter);">Filter</button>
+                  </div>
+                  <div class="col-2 pb-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="clearFilter(true)">Reset Selection</button>
+                  </div>
+                </div>
+              </div>
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+                  // explicitly using onItemAdd and this function as we need to save multiple values
+                  let updateValueFilter = function() {
+                      return function () {
+                      filter['value'].push(arguments[0])
+                      }
+                  }
+
+                  let valueControl = new TomSelect("#select-value",{
+                      maxItems: null,
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: updateValueFilter()
+                  });
+
+                  let addValues = function() {
+                      return function () {
+                          // clear the current value options and add the selected attribute values
+                          // tom-select handles duplicates
+                          let selectedProperty = arguments[0];
+                          valueControl.clear();
+                          valueControl.clearOptions();
+                          filter['value'] = []
+                          if (filter['item'] === 'node') {
+                              for (let each in allNodes) {
+                                  valueControl.addOption({
+                                      id:allNodes[each][selectedProperty],
+                                      title:allNodes[each][selectedProperty]
+                                  })
+                              }
+                          }
+                          else if (filter['item'] === 'edge') {
+                              for (let each in allEdges) {
+                                  valueControl.addOption({
+                                      id:allEdges[each][selectedProperty],
+                                      title:allEdges[each][selectedProperty]
+                                  })
+                              }
+                          }
+                      }
+                  };
+
+                  let propControl = new TomSelect("#select-property",{
+                      valueField: 'id',
+                      labelField: 'title',
+                      searchField: 'title',
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addValues()
+                  });
+
+                  let addProperties = function() {
+                      return function () {
+                          // loops through the selected network item and adds the attributes to dropdown
+                          // tom-select handles duplicates
+                          clearFilter(false)
+                          if (arguments[0] === 'edge') {
+                              for (let each in allEdges) {
+                                  if (allEdges.hasOwnProperty(each)) {
+                                      for (let eachProp in allEdges[each]) {
+                                          if (allEdges[each].hasOwnProperty(eachProp)) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                          else if (arguments[0] === 'node') {
+                              for (let each in allNodes) {
+                                  if (allNodes.hasOwnProperty(each)) {
+                                      for (let eachProp in allNodes[each]) {
+                                          if (allNodes[each].hasOwnProperty(eachProp)
+                                              && (eachProp !== 'hidden' && eachProp !== 'savedLabel'
+                                                  && eachProp !== 'hiddenLabel')) {
+                                              propControl.addOption({id: eachProp, title: eachProp})
+
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  };
+
+                  let itemControl = new TomSelect("#select-item",{
+                      create: false,
+                      sortField:{
+                          field: "text",
+                          direction: "asc"
+                      },
+                      onItemAdd: addProperties()
+                  });
+
+                  function clearFilter(reset) {
+                      // utility function to clear all the selected filter options
+                      // if reset is set to true, the existing filter will be removed
+                      // else, only the dropdown options are cleared
+                      propControl.clear();
+                      propControl.clearOptions();
+                      valueControl.clear();
+                      valueControl.clearOptions();
+                      filter = {
+                          item : '',
+                          property : '',
+                          value : []
+                      }
+                      if (reset) {
+                          itemControl.clear();
+                          filterHighlight({nodes: []})
+                      }
+                  }
+
+                  function updateFilter(value, key) {
+                      // key could be 'item' or 'property' and value is as selected in dropdown
+                      filter[key] = value
+                  }
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "manifestColumn", "label": "manifestColumn", "required": "false", "shape": "dot", "size": 10, "type": "rdfProperty"}, {"color": "#97c2fc", "id": "IsModelSystem", "label": "IsModelSystem", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["TRUE", "FALSE"]}, {"color": "#97c2fc", "id": "DNAextraction", "label": "DNAextraction", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AcquisitionBatchID", "label": "AcquisitionBatchID", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AcquisitionBatchSize", "label": "AcquisitionBatchSize", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AcquisitionBatchSizeUnit", "label": "AcquisitionBatchSizeUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AcquisitionMode", "label": "AcquisitionMode", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AcquisitionSoftware", "label": "AcquisitionSoftware", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AcquisitionSoftwareVersion", "label": "AcquisitionSoftwareVersion", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Adapters", "label": "Adapters", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AdjustedCovariates", "label": "AdjustedCovariates", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ArrayInformation", "label": "ArrayInformation", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ArrayManufacturer", "label": "ArrayManufacturer", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssemblyName", "label": "AssemblyName", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssemblyQual", "label": "AssemblyQual", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssemblySoftware", "label": "AssemblySoftware", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssociatedResource", "label": "AssociatedResource", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BackgroundTrait", "label": "BackgroundTrait", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BatchID", "label": "BatchID", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BatchLabel", "label": "BatchLabel", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "CaptivityDuration", "label": "CaptivityDuration", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "CaptivityStatus", "label": "CaptivityStatus", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Captive", "Stranded", "Wild"]}, {"color": "#97c2fc", "id": "CommonName", "label": "CommonName", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ConsentGroupID", "label": "ConsentGroupID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ConversionRatio", "label": "ConversionRatio", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ConversionRatioUnits", "label": "ConversionRatioUnits", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "CountryCode", "label": "CountryCode", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DataFile", "label": "DataFile", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DataModelVersion", "label": "DataModelVersion", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DataTypeAll", "label": "DataTypeAll", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DatabaseLibrary", "label": "DatabaseLibrary", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DatabaseName", "label": "DatabaseName", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DatabaseSource", "label": "DatabaseSource", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DatabaseVersion", "label": "DatabaseVersion", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DatabaseWeblink", "label": "DatabaseWeblink", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DiagnosisStatus", "label": "DiagnosisStatus", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["FALSE", "TRUE"]}, {"color": "#97c2fc", "id": "DigestionMethod", "label": "DigestionMethod", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DigestionReagent", "label": "DigestionReagent", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["2-iodobenzoate", "Arg-C", "Asp-N", "Asp-NAmbic", "Chymotrypsin", "CNBr", "FormicAcid", "Glutamylendopeptidase", "Leukocyteelastase", "Lys-C", "Lys-C/P", "Nocleavage", "NoEnzyme", "Notavailable", "Notcollected", "Notspecified", "PepsinA", "Prolineendopeptidase", "TrypChymo", "Trypsin", "Trypsin/P", "Unknown", "Unspecificcleavage", "V8-DE", "V8-E"]}, {"color": "#97c2fc", "id": "DnaBatchID", "label": "DnaBatchID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DnaBatchSize", "label": "DnaBatchSize", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DnaBatchSizeUnit", "label": "DnaBatchSizeUnit", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AFU", "AI", "AU/ml", "Bpg/dl", "DKunits/ml", "G/l", "Gm", "HAU", "IU", "Iu/l", "IU/ml", "KallikreinInactivatorUnitperMilliliter", "Kg", "L", "M", "Mg", "Mg/dl", "Mg/l", "Mg/ml", "Miu/ml", "Ml", "MM", "MOI", "Ng", "Ng/dl", "Ng/ml", "Ng/nl", "Ng/ul", "Nl", "NM", "Notspecified", "NPX", "Opticaldensity", "Other", "PFU", "PFUe", "Pg", "Pg/mgcreatinine", "Pg/ml", "Pg/nl", "Pg/ul", "Pl", "PM", "Pound", "TCID50", "Ug", "Ug/dl", "Ug/l", "Ug/ml", "Ug/ul", "Uiu/ml", "Ul", "UM", "Umol/l", "Units/ml"]}, {"color": "#97c2fc", "id": "Enrichment", "label": "Enrichment", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "EnrichmentMethod", "label": "EnrichmentMethod", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "EnrichmentStrategy", "label": "EnrichmentStrategy", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AcetylomeProteome", "Glycoproteome", "Lipidome", "Metabolome", "Notapplicable", "Notavailable", "Notcollected", "Notspecified", "Phosphoproteome", "Ubiquitylome", "Unknown"]}, {"color": "#97c2fc", "id": "EthnicGroupCode", "label": "EthnicGroupCode", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ExperimentType", "label": "ExperimentType", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ExperimentalBatchSizeUnit", "label": "ExperimentalBatchSizeUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ExperimentalFactor", "label": "ExperimentalFactor", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ExtractionMethod", "label": "ExtractionMethod", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "FieldCenterCode", "label": "FieldCenterCode", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "FractionIdentifier", "label": "FractionIdentifier", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "GasFlowTemperature", "label": "GasFlowTemperature", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "GasFlowTemperatureUnit", "label": "GasFlowTemperatureUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["C", "F", "K"]}, {"color": "#97c2fc", "id": "GenotypeTechnology", "label": "GenotypeTechnology", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "HasAssayControl", "label": "HasAssayControl", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "HasIonizationSource", "label": "HasIonizationSource", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["No", "Yes"]}, {"color": "#97c2fc", "id": "Imputation", "label": "Imputation", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ImputationPanel", "label": "ImputationPanel", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ImputationSoftware", "label": "ImputationSoftware", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "InstrumentModel", "label": "InstrumentModel", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IonProperty", "label": "IonProperty", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Negative", "Positive"]}, {"color": "#97c2fc", "id": "IsobaricLabelingReagent", "label": "IsobaricLabelingReagent", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LabelFreeQuantitation", "label": "LabelFreeQuantitation", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Label-freegenelevelquantitation", "Label-freepeptidelevelquantitation", "Label-freeproteingrouplevelquantitation", "Label-freeproteinlevelquantitation", "Label-freerawfeaturequantitation", "Notapplicable", "Notavailable", "Notcollected", "Notspecified", "Unknown"]}, {"color": "#97c2fc", "id": "LabelQuantitation", "label": "LabelQuantitation", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AminoxyTMT", "DiART", "DiLeu", "Glyco-TMT", "HydrazideTMT", "IodoTMT", "IPTL", "ITRAQ", "ITRAQH", "LabelFree", "Notavailable", "Notcollected", "Notspecified", "TMT", "Unknown"]}, {"color": "#97c2fc", "id": "LensVoltages", "label": "LensVoltages", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LensVoltagesUnit", "label": "LensVoltagesUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LibLayout", "label": "LibLayout", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LibReadsSeqd", "label": "LibReadsSeqd", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LibSize", "label": "LibSize", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LibVector", "label": "LibVector", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LibraryBatchID", "label": "LibraryBatchID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LifeStage", "label": "LifeStage", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Adult", "Juvenile", "Post-Juvenile"]}, {"color": "#97c2fc", "id": "MeasurementTechnique", "label": "MeasurementTechnique", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Mid", "label": "Mid", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ModificationParameters", "label": "ModificationParameters", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "MsAnalyteType", "label": "MsAnalyteType", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "MsAssayTechnique", "label": "MsAssayTechnique", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "MsTarget", "label": "MsTarget", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Notapplicable", "Notavailable", "Notcollected", "Notspecified", "Targeted", "Unknown", "Untargeted"]}, {"color": "#97c2fc", "id": "NucleAcidExt", "label": "NucleAcidExt", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "NumberContig", "label": "NumberContig", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "NumberIndividuals", "label": "NumberIndividuals", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ProcessingBatchID", "label": "ProcessingBatchID", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Program", "label": "Program", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["ELITE", "AD"]}, {"color": "#97c2fc", "id": "ProjectShortName", "label": "ProjectShortName", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["LC", "ILO", "LLFS", "LG"]}, {"color": "#97c2fc", "id": "QuantationStrategy", "label": "QuantationStrategy", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReadLengthUnits", "label": "ReadLengthUnits", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReadmeFile", "label": "ReadmeFile", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentCatalogNumber", "label": "ReagentCatalogNumber", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentContact", "label": "ReagentContact", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentIDs", "label": "ReagentIDs", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentLotNumber", "label": "ReagentLotNumber", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentManufacturer", "label": "ReagentManufacturer", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentName", "label": "ReagentName", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReagentWeblink", "label": "ReagentWeblink", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReferenceTranscriptID", "label": "ReferenceTranscriptID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReportedTrait", "label": "ReportedTrait", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "RepositoryName", "label": "RepositoryName", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["ArrayExpress", "BroadSingleCellPortal", "DbGAP", "ENA", "Ensembl", "FlowRepository", "GenBank", "GEO", "GISAID", "IEDB", "ImmPort", "MassIVE", "MetaboLights", "MetabolomicsWorkbench", "MGnify", "NCBIGene", "PRIDE", "SRA", "UniProt"]}, {"color": "#97c2fc", "id": "ResultUnit", "label": "ResultUnit", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["FPKM", "Notapplicable", "Notcollected", "Notspecified", "RPKM", "TPM", "Unknown"]}, {"color": "#97c2fc", "id": "RnaBatchID", "label": "RnaBatchID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "RnaBatchSize", "label": "RnaBatchSize", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "RnaBatchSizeUnit", "label": "RnaBatchSizeUnit", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AFU", "AI", "AU/ml", "Bpg/dl", "DKunits/ml", "G/l", "Gm", "HAU", "IU", "Iu/l", "IU/ml", "KallikreinInactivatorUnitperMilliliter", "Kg", "L", "M", "Mg", "Mg/dl", "Mg/l", "Mg/ml", "Miu/ml", "Ml", "MM", "MOI", "Ng", "Ng/dl", "Ng/ml", "Ng/nl", "Ng/ul", "Nl", "NM", "Notspecified", "NPX", "Opticaldensity", "Other", "PFU", "PFUe", "Pg", "Pg/mgcreatinine", "Pg/ml", "Pg/nl", "Pg/ul", "Pl", "PM", "Pound", "TCID50", "Ug", "Ug/dl", "Ug/l", "Ug/ml", "Ug/ul", "Uiu/ml", "Ul", "UM", "Umol/l", "Units/ml"]}, {"color": "#97c2fc", "id": "SampleBatchID", "label": "SampleBatchID", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SampleIntroduction", "label": "SampleIntroduction", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SamplePrepProtocol", "label": "SamplePrepProtocol", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SampleType", "label": "SampleType", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SeqMethod", "label": "SeqMethod", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SeqPlatform", "label": "SeqPlatform", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SequencingBatchID", "label": "SequencingBatchID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SequencingBatchSize", "label": "SequencingBatchSize", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SequencingBatchSizeUnit", "label": "SequencingBatchSizeUnit", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Sop", "label": "Sop", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SourceMatID", "label": "SourceMatID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SpeciesAge", "label": "SpeciesAge", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SpeciesGroup", "label": "SpeciesGroup", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Bird", "Human", "Mammal", "Notapplicable", "Notcollected", "Notspecified", "Other", "Primate", "Rodent", "Unknown"]}, {"color": "#97c2fc", "id": "SpeciesName", "label": "SpeciesName", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SpecimenAge", "label": "SpecimenAge", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SpecimenSource", "label": "SpecimenSource", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SpecimenType", "label": "SpecimenType", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Blood", "CerebrospinalFluid(CSF)", "Notapplicable", "Notcollected", "Notspecified", "Organoid", "Plasma", "Saliva", "Serum", "Sputum", "Stool", "Swabs", "Tissue", "Unknown", "Urine"]}, {"color": "#97c2fc", "id": "Stage", "label": "Stage", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Discovery", "Notapplicable", "Notcollected", "Notspecified", "Other", "Replication", "Unknown"]}, {"color": "#97c2fc", "id": "StatisticalModel", "label": "StatisticalModel", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyCode", "label": "StudyCode", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["ILO", "LC", "LG", "LLFS"]}, {"color": "#97c2fc", "id": "StudyKey", "label": "StudyKey", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SummaryFile", "label": "SummaryFile", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SummaryStatisticsAssembly", "label": "SummaryStatisticsAssembly", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TargetGene", "label": "TargetGene", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Taxon", "label": "Taxon", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TechnologyPlatformVersion", "label": "TechnologyPlatformVersion", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TissueVolume", "label": "TissueVolume", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TranscriptType", "label": "TranscriptType", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["LincRNA", "MRNA", "Notapplicable", "Notcollected", "Notspecified", "Other", "SnRNA", "Unknown"]}, {"color": "#97c2fc", "id": "TreatmentAmountUnit", "label": "TreatmentAmountUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AFU", "AI", "AU/ml", "DKunits/ml", "G/dl", "G/l", "Gm", "HAU", "IU", "Iu/l", "IU/ml", "KallikreinInactivatorUnitperMilliliter", "Kg", "L", "M", "Mg", "Mg/dl", "Mg/l", "Mg/ml", "Miu/ml", "Ml", "MM", "MOI", "Ng", "Ng/dl", "Ng/ml", "Ng/nl", "Ng/ul", "Nl", "NM", "Notspecified", "NPX", "Opticaldensity", "Other", "PFU", "PFUe", "Pg", "Pg/mgcreatinine", "Pg/ml", "Pg/nl", "Pg/ul", "Pl", "PM", "Pound", "TCID50", "Ug", "Ug/dl", "Ug/l", "Ug/ml", "Ug/ul", "Uiu/ml", "Ul", "UM", "Umol/l", "Units/ml"]}, {"color": "#97c2fc", "id": "TreatmentAmountValue", "label": "TreatmentAmountValue", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TreatmentDurationUnit", "label": "TreatmentDurationUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["D.p.c.", "Days", "Hours", "Minutes", "Months", "Notapplicable", "Notcollected", "Notspecified", "Seconds", "Unknown", "Weeks", "Years"]}, {"color": "#97c2fc", "id": "TreatmentDurationValue", "label": "TreatmentDurationValue", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TreatmentIDs", "label": "TreatmentIDs", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TreatmentName", "label": "TreatmentName", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TreatmentTemperatureUnit", "label": "TreatmentTemperatureUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["C", "F", "K", "Notspecified"]}, {"color": "#97c2fc", "id": "TreatmentTemperatureValue", "label": "TreatmentTemperatureValue", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "UseReadMeFile", "label": "UseReadMeFile", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "UseReagent", "label": "UseReagent", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["FALSE", "TRUE"]}, {"color": "#97c2fc", "id": "UseSummaryFile", "label": "UseSummaryFile", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "UseTreatment", "label": "UseTreatment", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "VacuumPressure", "label": "VacuumPressure", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "VacuumPressureUnit", "label": "VacuumPressureUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AFU", "AI", "AU/ml", "Bpg/dl", "DKunits/ml", "G/l", "Gm", "HAU", "IU", "Iu/l", "IU/ml", "KallikreinInactivatorUnitperMilliliter", "Kg", "L", "M", "Mg", "Mg/dl", "Mg/l", "Mg/ml", "Miu/ml", "Ml", "MM", "MOI", "Ng", "Ng/dl", "Ng/ml", "Ng/nl", "Ng/ul", "Nl", "NM", "Notspecified", "NPX", "Opticaldensity", "PFU", "PFUe", "Pg", "Pg/mgcreatinine", "Pg/ml", "Pg/nl", "Pg/ul", "Pl", "PM", "Pound", "TCID50", "Ug", "Ug/dl", "Ug/l", "Ug/ml", "Ug/ul", "Uiu/ml", "Ul", "UM", "Umol/l", "Units/ml"]}, {"color": "#97c2fc", "id": "ValueReported", "label": "ValueReported", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "VariantCount", "label": "VariantCount", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "VisitCode", "label": "VisitCode", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BatchSize", "label": "BatchSize", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "CellType", "label": "CellType", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["A549", "Arachnoid", "Astrocytes", "B-lymphocytes", "CD138+", "CD8+T-Cells", "CNON", "Dopaminergicneurons", "Embryonicstemcells", "Epithelial", "Epithelial-like", "Fibroblast", "GABAergicneurons", "Glia", "GLUtamatergicneurons", "Immunecell", "IPSC", "IPSC-derivedastrocytes", "IPSC-derivedglia", "IPSC-derivedneuron", "IPSC-derivedneuronalprogenitorcell", "IPSC-derivedtelencephalicorganoids", "Lymphoblast", "Lymphoblastoidcellline", "Macrophages", "Meningioma", "Microglia", "Monocytes", "Monocyte-derivedmicroglia", "NCXNES", "NeuN-", "NeuN+", "Neuralprogenitorcell", "Neuron", "Oligodendrocyte", "Peripheralbloodmononuclearcell", "Polygonal", "Round", "Schwann", "Schwanncellprecusor", "Schwannoma", "SH-SY5Y"]}, {"color": "#97c2fc", "id": "FastingState", "label": "FastingState", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["FALSE", "Notapplicable", "Notcollected", "Notspecified", "TRUE", "Unknown"]}, {"color": "#97c2fc", "id": "IsPostMortem", "label": "IsPostMortem", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["TRUE", "FALSE"]}, {"color": "#97c2fc", "id": "NucleicAcidSource", "label": "NucleicAcidSource", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Bulkcell", "Bulknuclei", "Mitochondria", "Notapplicable", "Notcollected", "Notspecified", "Singlecell", "Singlenucleus", "Sortedcells", "Sortednuclei", "Unknown"]}, {"color": "#97c2fc", "id": "Organ", "label": "Organ", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Blood", "Bonemarrow", "Brain", "Breast", "BursaOfFabricius", "Cerebrospinalfluid", "Colon", "Kidney", "Largeintestine", "Liver", "Lung", "Lymphnode", "Mammarygland", "Nerves", "Nose", "Ovary", "Pancreas", "Prostate", "Skin", "Spleen"]}, {"color": "#97c2fc", "id": "SamplingAge", "label": "SamplingAge", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SpecimenID", "label": "SpecimenID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "TissueWeight", "label": "TissueWeight", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Diagnosis", "label": "Diagnosis", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AD-DS", "AffectiveDisorder", "AlzheimerDisease", "Alzheimerdiseasewithpsychosis", "Amyotrophiclateralsclerosis", "Anxiety", "AutismSpectrumDisorder", "BipolarDisorder", "BladderCancer", "BrainCancer", "BreastCancer", "CervicalCancer", "ColonCancer", "Control", "Corticobasaldegenerationdisorder", "CS-DS", "Dementia", "Dystonia", "Essentialtremor", "FibrocysticBreastDisease", "Frontotemporaldementia", "Gliosis", "Hypoxia", "JuvenileMyelomonocyticLeukemia", "Leukemia", "Lewybodydisease", "LungCancer", "MajorDepressiveDisorder", "MCI-DS", "Mildcognitiveimpairment", "Multiplesystematrophy", "Neurofibromatosis1", "Neurofibromatosis2", "Nocognitiveimpairment", "NotApplicable", "Obesity", "Obsessivecompulsivedisorder", "OvaryCancer", "PancreaticCancer", "Parkinson\u0027sdisease", "Pathologicalaging", "Progressivesupranuclearpalsy", "ProstateCancer", "Schizophrenia", "SkinCancer", "SubstanceRelatedDisorder", "TouretteSyndrome", "Traumaticbraininjury", "Type2diabetesmellitus", "Vasculardementia", "WilliamsSyndrome"]}, {"color": "#97c2fc", "id": "Ethnicity", "label": "Ethnicity", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["HispanicorLatino", "NotHispanicorLatino", "Prefernottoanswer"]}, {"color": "#97c2fc", "id": "Race", "label": "Race", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AmericanIndianorAlaskaNative", "Asian", "BlackorAfricanAmerican", "Multiracial", "NativeHawaiianorPacificIslander", "Prefernottoanswer", "White"]}, {"color": "#97c2fc", "id": "Sex", "label": "Sex", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Female", "Male", "Notapplicable", "Notcollected", "Notspecified", "Other", "Unknown"]}, {"color": "#97c2fc", "id": "Assay", "label": "Assay", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["10xmultiome", "16SrRNAseq", "Activeavoidancelearningbehavior", "Anxiety-relatedbehavior", "ATACSeq", "AtomicForceMicroscopy", "Autoradiography", "BakerLipidomics", "BiocratesBileAcids", "Biocratesp180", "BiocratesQ500", "BisulfiteSeq", "BloodChemistryMeasurement", "BrightfieldMicroscopy", "CellViabilityAssay", "ChIPSeq", "CITESeq", "Contextualconditioningbehavior", "CUT\u0026Tag", "DIA", "DNAopticalmapping", "Electrochemiluminescence", "Elevatedplusmazetest", "ElevatedTmazeapparatusmethod", "ELISA", "ErrBisulfiteSeq", "ExomeSeq", "FIA-MSMS", "FitBark", "Frailtyassessment", "Genotyping", "HI-C", "HiChIPseq", "Highcontentscreen", "HPLC", "HPLC-MSMS", "Immunocytochemistry", "Immunofluorescence", "Immunohistochemistry", "Invivobioluminescence", "ISOSeq", "JumpingLibrary", "Kinestheticbehavior", "Labelfreemassspectrometry", "LaserSpeckleImaging", "LC-MS", "LC-MSMS", "LC-SRM", "LeidenOxylipins", "LentiMPRA", "LFP", "Liquidchromatography-electrochemicaldetection", "LncrnaSeq", "Locomotoractivationbehavior", "Long-readrnaSeq", "LTP", "MDMS-SL", "Memorybehavior", "Metabolon", "MethylationArray", "MIB/MS", "MicroRNAcounts", "MirnaArray", "MirnaSeq", "MRI", "MRNAcounts", "MudPIT", "M6A-rnaSeq", "NextGenerationTargetedSequencing", "NightingaleNMR", "NOMe-Seq", "Noveltyresponsebehavior", "Openfieldtest", "OxBS-Seq", "Pharmacodynamics", "Pharmacokinetics", "Photograph", "PolymeraseChainReaction", "PositronEmissionTomography", "Proximityextensionassay", "Questionnaire", "RaderLipidomics", "RealTimePCR", "Ribo-Seq", "Rotarodperformancetest", "RnaArray", "RnaSeq", "RPPA", "SandwichELISA", "Sangersequencing", "Scale", "ScATACSeq", "ScCGIseq", "ScirnaSeq", "ScrnaSeq", "ScwholeGenomeSeq", "SiMoA", "SnpArray", "SnATACSeq", "SnrnaSeq", "Spontaneousalternation", "STARRSeq", "TMTquantitation", "TractionForceMicroscopy", "UPLC-MSMS", "UPLC-ESI-QTOF-MS", "UCDavisGCTOF", "UCSDUntargetedMetabolomics", "VernierCaliper", "VonFreytest", "WesternBlot", "Wheelrunning", "Whole-cellpatchclamp", "WholeGenomeSeq", "WishartCatecholamines", "WishartHighValueMetabolites", "ZenoElectronicWalkway"]}, {"color": "#97c2fc", "id": "ControlType", "label": "ControlType", "required": "false", "shape": "dot", "size": 10, "type": "Class", "validValues": ["AIBLpool", "Bakerpool", "Blankinjection", "GIS", "GoldenWest", "NISTSRM1950", "Qcmix", "Replicate", "Studypool", "WaterplusBakerISTD"]}, {"color": "#97c2fc", "id": "PlatformLocation", "label": "PlatformLocation", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Age", "label": "Age", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Cohort", "label": "Cohort", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["ABC-DS", "ACT", "ADNI", "Banner", "BEB-Miller", "BLSA", "CHDWB", "CLINCOR", "DiCAD", "EHBS", "EmoryADRC", "Framingham", "HBTRC", "HPGP", "HUP", "LBP", "MARS", "MAYO", "MC", "MCJ", "MCR", "MSBB", "NYBB", "PittADRC", "RADC", "ROSMAP", "SMRI", "UKBiobank", "UPBB", "UPenn", "UWADRC", "BiggsInstituteBrainBank", "ColumbiaADRC", "EFIGA", "FBS", "HBCC", "MayoClinic", "UFL", "WHICAP"]}, {"color": "#97c2fc", "id": "IndividualID", "label": "IndividualID", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Species", "label": "Species", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Human", "Mouse"]}, {"color": "#97c2fc", "id": "SpectrometerFrequency", "label": "SpectrometerFrequency", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DirectionalBSseqLibrary", "label": "DirectionalBSseqLibrary", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["TRUE", "FALSE"]}, {"color": "#97c2fc", "id": "GDNAconc", "label": "GDNAconc", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IsStranded", "label": "IsStranded", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["FALSE", "TRUE"]}, {"color": "#97c2fc", "id": "LambdaDNAconc", "label": "LambdaDNAconc", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "LibraryPrep", "label": "LibraryPrep", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Amplicon", "CellHashing", "ChromiumSingleCell3\u0027", "DNALibraryConstruction", "EndItDNAEndRepairKit", "KapaHyperPrep", "LncRNAenrichment", "MethylSeq", "MiRNAenrichment", "Multiome", "MULTIseq", "PCRfree", "PolyAselection", "Proximityligation", "RRNAdepletion", "SnIsoSeq", "SPLITseq", "STARRSeq", "SureCell", "TotalRNA"]}, {"color": "#97c2fc", "id": "LibraryPreparationMethod", "label": "LibraryPreparationMethod", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["10x", "Accel-NGS2SPlus", "Accel-NGSMethyl-Seq", "CEL-seq", "Drop-Seq", "NEBNext", "NexteraXT", "Omni-ATAC", "Sac-seq", "Smart-seq1", "Smart-seq2", "Smart-seq4", "SMRTbell", "TruSeq", "UltralowMethyl-Seq", "IlluminaDNAPCR-FreePrepKit"]}, {"color": "#97c2fc", "id": "LibraryVersion", "label": "LibraryVersion", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "MeanCoverage", "label": "MeanCoverage", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "PcrCycles", "label": "PcrCycles", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReadLength", "label": "ReadLength", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ReadStrandOrigin", "label": "ReadStrandOrigin", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["ForwardReverse", "Forwardreverse"]}, {"color": "#97c2fc", "id": "RunType", "label": "RunType", "required": "true", "shape": "dot", "size": 10, "type": "Class", "validValues": ["Notapplicable", "Notcollected", "Notspecified", "PairedEnd", "SingleEnd", "SingleEndpairedEnd", "Unknown"]}, {"color": "#97c2fc", "id": "TotalReads", "label": "TotalReads", "required": "true", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Component", "label": "Component", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayRNAseqTemplate", "label": "AssayRNAseqTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayBsSeqTemplate", "label": "AssayBsSeqTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayMetabolomicsTemplate", "label": "AssayMetabolomicsTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayMetagenomicsTemplate", "label": "AssayMetagenomicsTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayMicrobiomeTemplate", "label": "AssayMicrobiomeTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayPhenotypeHumanTemplate", "label": "AssayPhenotypeHumanTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayProteomicsTemplate", "label": "AssayProteomicsTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayScRNAseqTemplate", "label": "AssayScRNAseqTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AssayWholeGenomeSequencingTemplate", "label": "AssayWholeGenomeSequencingTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BiospecimenHumanTemplate", "label": "BiospecimenHumanTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BiospecimenNonHumanTemplate", "label": "BiospecimenNonHumanTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "FileAnnotationTemplate", "label": "FileAnnotationTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "GenotypingHumanTemplate", "label": "GenotypingHumanTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IndividualHumanTemplate", "label": "IndividualHumanTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IndividualNonHumanTemplate", "label": "IndividualNonHumanTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyFolderTemplate", "label": "StudyFolderTemplate", "required": "false", "role": "Template", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Thing", "label": "Thing", "role": "Template", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Filename", "label": "Filename", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "template", "label": "template", "required": "false", "shape": "dot", "size": 10, "type": "rdfProperty"}, {"color": "#97c2fc", "id": "AcquistionSoftwareVersion", "label": "AcquistionSoftwareVersion", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ExperimentalBatchSize", "label": "ExperimentalBatchSize", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "BatchSizeUnit", "label": "BatchSizeUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SampleBatchSize", "label": "SampleBatchSize", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "SampleBatchSizeUnit", "label": "SampleBatchSizeUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ProcessingBatchSize", "label": "ProcessingBatchSize", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ProcessingBatchSizeUnit", "label": "ProcessingBatchSizeUnit", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IsMultiSpecimen", "label": "IsMultiSpecimen", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "FileFormat", "label": "FileFormat", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Consortium", "label": "Consortium", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Study", "label": "Study", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Grant", "label": "Grant", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ResourceType", "label": "ResourceType", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DataType", "label": "DataType", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "DataSubtype", "label": "DataSubtype", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "MetadataType", "label": "MetadataType", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AnalysisType", "label": "AnalysisType", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Chromosome", "label": "Chromosome", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyName", "label": "StudyName", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "ProjectFullName", "label": "ProjectFullName", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyAbstract", "label": "StudyAbstract", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyDescription", "label": "StudyDescription", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyFocus", "label": "StudyFocus", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "GrantNumber", "label": "GrantNumber", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyWiki", "label": "StudyWiki", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Acknowledgment", "label": "Acknowledgment", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "Methods", "label": "Methods", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "RelatedStudies", "label": "RelatedStudies", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyType", "label": "StudyType", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IsFeatured", "label": "IsFeatured", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AckContext", "label": "AckContext", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "StudyMetadata", "label": "StudyMetadata", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "AccessReqs", "label": "AccessReqs", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "IsReleased", "label": "IsReleased", "required": "false", "shape": "dot", "size": 10, "type": "Class"}, {"color": "#97c2fc", "id": "NewsRelease", "label": "NewsRelease", "required": "false", "shape": "dot", "size": 10, "type": "Class"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "manifestColumn", "relationship": "subClass", "to": "IsModelSystem", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DNAextraction", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AcquisitionBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AcquisitionBatchSize", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AcquisitionBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AcquisitionMode", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AcquisitionSoftware", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AcquisitionSoftwareVersion", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Adapters", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AdjustedCovariates", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ArrayInformation", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ArrayManufacturer", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AssemblyName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AssemblyQual", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AssemblySoftware", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "AssociatedResource", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "BackgroundTrait", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "BatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "BatchLabel", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "CaptivityDuration", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "CaptivityStatus", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "CommonName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ConsentGroupID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ConversionRatio", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ConversionRatioUnits", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "CountryCode", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DataFile", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DataModelVersion", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DataTypeAll", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DatabaseLibrary", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DatabaseName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DatabaseSource", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DatabaseVersion", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DatabaseWeblink", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DiagnosisStatus", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DigestionMethod", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DigestionReagent", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DnaBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DnaBatchSize", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DnaBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Enrichment", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "EnrichmentMethod", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "EnrichmentStrategy", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "EthnicGroupCode", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ExperimentType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ExperimentalBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ExperimentalFactor", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ExtractionMethod", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "FieldCenterCode", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "FractionIdentifier", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "GasFlowTemperature", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "GasFlowTemperatureUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "GenotypeTechnology", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "HasAssayControl", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "HasIonizationSource", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Imputation", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ImputationPanel", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ImputationSoftware", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "InstrumentModel", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "IonProperty", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "IsobaricLabelingReagent", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LabelFreeQuantitation", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LabelQuantitation", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LensVoltages", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LensVoltagesUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibLayout", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibReadsSeqd", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibSize", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibVector", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibraryBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LifeStage", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Mid", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ModificationParameters", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "MsAnalyteType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "MsAssayTechnique", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "MsTarget", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "NucleAcidExt", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "NumberContig", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "NumberIndividuals", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ProcessingBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Program", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ProjectShortName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "QuantationStrategy", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReadLengthUnits", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReadmeFile", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentCatalogNumber", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentContact", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentIDs", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentLotNumber", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentManufacturer", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReagentWeblink", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReferenceTranscriptID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReportedTrait", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "RepositoryName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ResultUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "RnaBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "RnaBatchSize", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "RnaBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SampleBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SampleIntroduction", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SamplePrepProtocol", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SeqMethod", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SeqPlatform", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SequencingBatchID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SequencingBatchSize", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SequencingBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Sop", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SourceMatID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpeciesAge", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpeciesGroup", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpeciesName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpecimenAge", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpecimenSource", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpecimenType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Stage", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "StatisticalModel", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "StudyCode", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "StudyKey", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SummaryFile", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SummaryStatisticsAssembly", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TargetGene", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Taxon", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TissueVolume", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TranscriptType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentAmountUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentAmountValue", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentDurationUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentDurationValue", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentIDs", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentName", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentTemperatureUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TreatmentTemperatureValue", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "UseReadMeFile", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "UseReagent", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "UseSummaryFile", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "UseTreatment", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "VacuumPressure", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "VacuumPressureUnit", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ValueReported", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "VariantCount", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "VisitCode", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "BatchSize", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "CellType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "FastingState", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "IsPostMortem", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "NucleicAcidSource", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Organ", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SamplingAge", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TissueWeight", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Diagnosis", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Ethnicity", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Race", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Sex", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Assay", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ControlType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Age", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Cohort", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "Species", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "SpectrometerFrequency", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "DirectionalBSseqLibrary", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "GDNAconc", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "IsStranded", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LambdaDNAconc", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibraryPrep", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibraryPreparationMethod", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "LibraryVersion", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "MeanCoverage", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "PcrCycles", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReadLength", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "ReadStrandOrigin", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "RunType", "width": 1}, {"arrows": "to", "from": "manifestColumn", "relationship": "validValue", "to": "TotalReads", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayRNAseqTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayBsSeqTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayMetabolomicsTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayMetagenomicsTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayMicrobiomeTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayPhenotypeHumanTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayProteomicsTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayScRNAseqTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "AssayWholeGenomeSequencingTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "BiospecimenHumanTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "BiospecimenNonHumanTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "FileAnnotationTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "GenotypingHumanTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "IndividualHumanTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "IndividualNonHumanTemplate", "width": 1}, {"arrows": "to", "from": "Component", "relationship": "subClass", "to": "StudyFolderTemplate", "width": 1}, {"arrows": "to", "from": "Component", "to": "Thing", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "ReferenceTranscriptID", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "RepositoryName", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "TranscriptType", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "ResultUnit", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "ValueReported", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "LibraryPreparationMethod", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "LibraryVersion", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "IsStranded", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "ReadStrandOrigin", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "ReadLength", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "ReadLengthUnits", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "RunType", "width": 1}, {"arrows": "to", "from": "AssayRNAseqTemplate", "relationship": "Dependency", "to": "TotalReads", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayRNAseqTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayBsSeqTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayMetabolomicsTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayMetagenomicsTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayMicrobiomeTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayPhenotypeHumanTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayProteomicsTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayScRNAseqTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "AssayWholeGenomeSequencingTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "BiospecimenHumanTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "BiospecimenNonHumanTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "FileAnnotationTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "GenotypingHumanTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "IndividualHumanTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "IndividualNonHumanTemplate", "width": 1}, {"arrows": "to", "from": "template", "relationship": "validValue", "to": "StudyFolderTemplate", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "ReferenceTranscriptID", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "DnaBatchID", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "DnaBatchSize", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "DnaBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "LibraryBatchID", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "LibraryPrep", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "LibraryPreparationMethod", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "LibraryVersion", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "SequencingBatchID", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "SequencingBatchSize", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "SequencingBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "IsStranded", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "ReadStrandOrigin", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "ReadLength", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "ReadLengthUnits", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "RunType", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "TotalReads", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "DirectionalBSseqLibrary", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "GDNAconc", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "LambdaDNAconc", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "PcrCycles", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "MeanCoverage", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "ConversionRatio", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "ConversionRatioUnits", "width": 1}, {"arrows": "to", "from": "AssayBsSeqTemplate", "relationship": "Dependency", "to": "EnrichmentMethod", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "InstrumentModel", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SamplePrepProtocol", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "DataFile", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "DatabaseSource", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "DatabaseWeblink", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "DatabaseName", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "MsTarget", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "MsAssayTechnique", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "MsAnalyteType", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SampleIntroduction", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ExtractionMethod", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "AcquisitionMode", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "AcquisitionSoftware", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "AcquistionSoftwareVersion", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SpectrometerFrequency", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "HasIonizationSource", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "IonProperty", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "VacuumPressure", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "VacuumPressureUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "LensVoltages", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "LensVoltagesUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "GasFlowTemperature", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "GasFlowTemperatureUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "HasAssayControl", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ControlType", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ExperimentalBatchSize", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ExperimentalBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "BatchSize", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "BatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "BatchID", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "BatchLabel", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SampleBatchID", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SampleBatchSize", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "SampleBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "AcquisitionBatchID", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "AcquisitionBatchSize", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "AcquisitionBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ProcessingBatchID", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ProcessingBatchSize", "width": 1}, {"arrows": "to", "from": "AssayMetabolomicsTemplate", "relationship": "Dependency", "to": "ProcessingBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "ExperimentType", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "InstrumentModel", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "SamplePrepProtocol", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DataFile", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DatabaseSource", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DatabaseWeblink", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DatabaseName", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DatabaseVersion", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DatabaseLibrary", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "LibraryPrep", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "LibSize", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "Mid", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "AssemblyName", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "NucleAcidExt", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "SourceMatID", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "LibReadsSeqd", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "NumberContig", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "LibLayout", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "AssemblyQual", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "LibVector", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "Adapters", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "AssemblySoftware", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "ExperimentalFactor", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "AssociatedResource", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "Sop", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "TargetGene", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "SeqMethod", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "SeqPlatform", "width": 1}, {"arrows": "to", "from": "AssayMetagenomicsTemplate", "relationship": "Dependency", "to": "DNAextraction", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "ExtractionMethod", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "LibraryBatchID", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "SequencingBatchID", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "SequencingBatchSize", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "SequencingBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "DnaBatchID", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "DnaBatchSize", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "DnaBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "LibraryPrep", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "LibraryPreparationMethod", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "LibraryVersion", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "IsStranded", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "ReadStrandOrigin", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "ReadLength", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "ReadLengthUnits", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "RunType", "width": 1}, {"arrows": "to", "from": "AssayMicrobiomeTemplate", "relationship": "Dependency", "to": "TotalReads", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Cohort", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "SpeciesGroup", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Sex", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Race", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Ethnicity", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "EthnicGroupCode", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Age", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "DiagnosisStatus", "width": 1}, {"arrows": "to", "from": "AssayPhenotypeHumanTemplate", "relationship": "Dependency", "to": "Diagnosis", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "ExperimentType", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "InstrumentModel", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "SamplePrepProtocol", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "DataFile", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "DatabaseSource", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "DatabaseWeblink", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "DatabaseName", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "ModificationParameters", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "QuantationStrategy", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "LabelQuantitation", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "LabelFreeQuantitation", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "IsobaricLabelingReagent", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "MsTarget", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "MsAssayTechnique", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "MsAnalyteType", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "DigestionMethod", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "DigestionReagent", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "FractionIdentifier", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "EnrichmentStrategy", "width": 1}, {"arrows": "to", "from": "AssayProteomicsTemplate", "relationship": "Dependency", "to": "Enrichment", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "ReferenceTranscriptID", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "RepositoryName", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "TranscriptType", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "ResultUnit", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "ValueReported", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "RnaBatchID", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "RnaBatchSize", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "RnaBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "LibraryBatchID", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "SequencingBatchID", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "SequencingBatchSize", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "SequencingBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "LibraryPrep", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "LibraryPreparationMethod", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "LibraryVersion", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "IsStranded", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "ReadStrandOrigin", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "ReadLength", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "ReadLengthUnits", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "RunType", "width": 1}, {"arrows": "to", "from": "AssayScRNAseqTemplate", "relationship": "Dependency", "to": "TotalReads", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "TechnologyPlatformVersion", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "PlatformLocation", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "ReferenceTranscriptID", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "RepositoryName", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "TranscriptType", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "ResultUnit", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "ValueReported", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "RnaBatchID", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "LibraryBatchID", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "SequencingBatchID", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "LibraryPrep", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "LibraryPreparationMethod", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "LibraryVersion", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "IsStranded", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "ReadStrandOrigin", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "ReadLength", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "ReadLengthUnits", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "RunType", "width": 1}, {"arrows": "to", "from": "AssayWholeGenomeSequencingTemplate", "relationship": "Dependency", "to": "TotalReads", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "SpecimenType", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "SpecimenAge", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "SamplingAge", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "Organ", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "TissueVolume", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "TissueWeight", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "SpecimenSource", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "NucleicAcidSource", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "CellType", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "FastingState", "width": 1}, {"arrows": "to", "from": "BiospecimenHumanTemplate", "relationship": "Dependency", "to": "IsPostMortem", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "SpecimenType", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "Assay", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "SpecimenAge", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "SamplingAge", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "Organ", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "TissueVolume", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "TissueWeight", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "SpecimenSource", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "NucleicAcidSource", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "CellType", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "FastingState", "width": 1}, {"arrows": "to", "from": "BiospecimenNonHumanTemplate", "relationship": "Dependency", "to": "IsPostMortem", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "IsMultiSpecimen", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "Assay", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "FileFormat", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "Consortium", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "Study", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "Grant", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "ResourceType", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "DataType", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "DataSubtype", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "MetadataType", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "AnalysisType", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "IsModelSystem", "width": 1}, {"arrows": "to", "from": "FileAnnotationTemplate", "relationship": "Dependency", "to": "Chromosome", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "SpecimenID", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "Stage", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "NumberIndividuals", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "SampleType", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "UseReagent", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentIDs", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentName", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentManufacturer", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentCatalogNumber", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentLotNumber", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentWeblink", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReagentContact", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "UseTreatment", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentIDs", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentName", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentAmountValue", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentAmountUnit", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentDurationValue", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentDurationUnit", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentTemperatureValue", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "TreatmentTemperatureUnit", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "MeasurementTechnique", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "GenotypeTechnology", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ArrayManufacturer", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ArrayInformation", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "Imputation", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ImputationPanel", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ImputationSoftware", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "VariantCount", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "StatisticalModel", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "AdjustedCovariates", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReportedTrait", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "BackgroundTrait", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "UseReadMeFile", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "ReadmeFile", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "UseSummaryFile", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "SummaryFile", "width": 1}, {"arrows": "to", "from": "GenotypingHumanTemplate", "relationship": "Dependency", "to": "SummaryStatisticsAssembly", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Cohort", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "StudyCode", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "FieldCenterCode", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "VisitCode", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "CountryCode", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "ConsentGroupID", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "SpeciesGroup", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Sex", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Race", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Ethnicity", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "EthnicGroupCode", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Age", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "DiagnosisStatus", "width": 1}, {"arrows": "to", "from": "IndividualHumanTemplate", "relationship": "Dependency", "to": "Diagnosis", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "Filename", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "IndividualID", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "Cohort", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "StudyCode", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "Taxon", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "SpeciesGroup", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "SpeciesName", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "CommonName", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "Sex", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "LifeStage", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "SpeciesAge", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "CaptivityStatus", "width": 1}, {"arrows": "to", "from": "IndividualNonHumanTemplate", "relationship": "Dependency", "to": "CaptivityDuration", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyKey", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyName", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "ProjectShortName", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "ProjectFullName", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "DataTypeAll", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "Species", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "SpecimenType", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyAbstract", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyDescription", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyFocus", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "Program", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "GrantNumber", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyWiki", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "Acknowledgment", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "Methods", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "RelatedStudies", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyType", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "IsModelSystem", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "IsFeatured", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "AckContext", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "StudyMetadata", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "AccessReqs", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "IsReleased", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "NewsRelease", "width": 1}, {"arrows": "to", "from": "StudyFolderTemplate", "relationship": "Dependency", "to": "MetadataType", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "DataModelVersion", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "AnalysisType", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Chromosome", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Consortium", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "DataSubtype", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "DataType", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "FileFormat", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Grant", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "IsMultiSpecimen", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "MetadataType", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "ResourceType", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Study", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Filename", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "AccessReqs", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "AckContext", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Acknowledgment", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "AcquistionSoftwareVersion", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "BatchSizeUnit", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "ExperimentalBatchSize", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "GrantNumber", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "IsFeatured", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "IsReleased", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "Methods", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "NewsRelease", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "ProcessingBatchSize", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "ProcessingBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "ProjectFullName", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "RelatedStudies", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "SampleBatchSize", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "SampleBatchSizeUnit", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyAbstract", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyDescription", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyFocus", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyMetadata", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyName", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyType", "width": 1}, {"arrows": "to", "from": "Thing", "relationship": "subClass", "to": "StudyWiki", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "repulsion": {
+            "centralGravity": 0.035,
+            "damping": 0.09,
+            "nodeDistance": 100,
+            "springConstant": 0.05,
+            "springLength": 200
+        },
+        "solver": "repulsion",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+                    network.on("click", neighbourhoodHighlight);
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

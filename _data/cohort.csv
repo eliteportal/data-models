@@ -1,0 +1,70 @@
+Key,Key Description,columnType,Source,Parent
+ABC-DS,,STRING,,ManifestColumn
+ ACT,,STRING,,ManifestColumn
+ ADNI,,STRING,,ManifestColumn
+ Banner,,STRING,,ManifestColumn
+ BEB-Miller,,STRING,,ManifestColumn
+ BLSA,,STRING,,ManifestColumn
+ CHDWB,,STRING,,ManifestColumn
+ CLINCOR,,STRING,,ManifestColumn
+ DiCAD,,STRING,,ManifestColumn
+ EHBS,,STRING,,ManifestColumn
+ Emory ADRC,,STRING,,ManifestColumn
+ Framingham,,STRING,,ManifestColumn
+ HBTRC,,STRING,,ManifestColumn
+ HPGP,,STRING,,ManifestColumn
+ HUP,,STRING,,ManifestColumn
+ LBP,,STRING,,ManifestColumn
+ MARS,,STRING,,ManifestColumn
+ MAYO,,STRING,,ManifestColumn
+ MC,,STRING,,ManifestColumn
+ MCJ,,STRING,,ManifestColumn
+ MCR,,STRING,,ManifestColumn
+ MSBB,,STRING,,ManifestColumn
+ NYBB,,STRING,,ManifestColumn
+ Pitt ADRC,,STRING,,ManifestColumn
+ RADC,,STRING,,ManifestColumn
+ ROSMAP,,STRING,,ManifestColumn
+ SMRI,,STRING,,ManifestColumn
+ UK Biobank,,STRING,,ManifestColumn
+ UPBB,,STRING,,ManifestColumn
+ UPenn,,STRING,,ManifestColumn
+ UW ADRC,,STRING,,ManifestColumn
+ABC-DS,,STRING,,ManifestColumn
+ACT,,STRING,,ManifestColumn
+ADNI,,STRING,,ManifestColumn
+Banner,,STRING,,ManifestColumn
+BEB-Miller,,STRING,,ManifestColumn
+Biggs Institute Brain Bank,,STRING,,ManifestColumn
+BLSA,,STRING,,ManifestColumn
+CHDWB,,STRING,,ManifestColumn
+CLINCOR,,STRING,,ManifestColumn
+Columbia ADRC,,STRING,,ManifestColumn
+DiCAD,,STRING,,ManifestColumn
+EFIGA,,STRING,,ManifestColumn
+EHBS,,STRING,,ManifestColumn
+Emory ADRC,,STRING,,ManifestColumn
+FBS,,STRING,,ManifestColumn
+Framingham,,STRING,,ManifestColumn
+HBCC,,STRING,,ManifestColumn
+HBTRC,,STRING,,ManifestColumn
+HPGP,,STRING,,ManifestColumn
+HUP,,STRING,,ManifestColumn
+LBP,,STRING,,ManifestColumn
+MARS,,STRING,,ManifestColumn
+Mayo Clinic,,STRING,,ManifestColumn
+MC,,STRING,,ManifestColumn
+MCJ,,STRING,,ManifestColumn
+MCR,,STRING,,ManifestColumn
+MSBB,,STRING,,ManifestColumn
+NYBB,,STRING,,ManifestColumn
+Pitt ADRC,,STRING,,ManifestColumn
+RADC,,STRING,,ManifestColumn
+ROSMAP,,STRING,,ManifestColumn
+SMRI,,STRING,,ManifestColumn
+UFL,,STRING,,ManifestColumn
+UK Biobank,,STRING,,ManifestColumn
+UPBB,,STRING,,ManifestColumn
+UPenn,,STRING,,ManifestColumn
+UW ADRC,,STRING,,ManifestColumn
+WHICAP,,STRING,,ManifestColumn

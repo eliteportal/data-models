@@ -1,0 +1,111 @@
+Key,Key Description,columnType,Source,Parent
+AI,,STRING,,ManifestColumn
+ AU/ml,,STRING,,ManifestColumn
+ DK units/ml,,STRING,,ManifestColumn
+ HAU,,STRING,,ManifestColumn
+ IU,,STRING,,ManifestColumn
+ IU/ml,,STRING,,ManifestColumn
+ Kallikrein Inactivator Unit per Milliliter,,STRING,,ManifestColumn
+ M,,STRING,,ManifestColumn
+ MOI,,STRING,,ManifestColumn
+ NPX,,STRING,,ManifestColumn
+ Not Specified,,STRING,,ManifestColumn
+ OtherSampleBatchSizeUnit,,STRING,,ManifestColumn
+ PFU,,STRING,,ManifestColumn
+ PFUe,,STRING,,ManifestColumn
+ Pound,,STRING,,ManifestColumn
+ TCID50,,STRING,,ManifestColumn
+ bpg/dl,,STRING,,ManifestColumn
+ g/l,,STRING,,ManifestColumn
+ gm,,STRING,,ManifestColumn
+ iu/l,,STRING,,ManifestColumn
+ kg,,STRING,,ManifestColumn
+ l,,STRING,,ManifestColumn
+ mM,,STRING,,ManifestColumn
+ mg,,STRING,,ManifestColumn
+ mg/dl,,STRING,,ManifestColumn
+ mg/l,,STRING,,ManifestColumn
+ mg/ml,,STRING,,ManifestColumn
+ miu/ml,,STRING,,ManifestColumn
+ ml,,STRING,,ManifestColumn
+ nM,,STRING,,ManifestColumn
+ ng,,STRING,,ManifestColumn
+ ng/dl,,STRING,,ManifestColumn
+ ng/ml,,STRING,,ManifestColumn
+ ng/nl,,STRING,,ManifestColumn
+ ng/ul,,STRING,,ManifestColumn
+ nl,,STRING,,ManifestColumn
+ optical density,,STRING,,ManifestColumn
+ pM,,STRING,,ManifestColumn
+ pg,,STRING,,ManifestColumn
+ pg/mg creatinine,,STRING,,ManifestColumn
+ pg/ml,,STRING,,ManifestColumn
+ pg/nl,,STRING,,ManifestColumn
+ pg/ul,,STRING,,ManifestColumn
+ pl,,STRING,,ManifestColumn
+ uM,,STRING,,ManifestColumn
+ ug,,STRING,,ManifestColumn
+ ug/dl,,STRING,,ManifestColumn
+ ug/l,,STRING,,ManifestColumn
+ ug/ml,,STRING,,ManifestColumn
+ ug/ul,,STRING,,ManifestColumn
+ uiu/ml,,STRING,,ManifestColumn
+ ul,,STRING,,ManifestColumn
+ umol/l,,STRING,,ManifestColumn
+ units/ml,,STRING,,ManifestColumn
+AFU,,STRING,,ManifestColumn
+AI,,STRING,,ManifestColumn
+AU/ml,,STRING,,ManifestColumn
+DK units/ml,,STRING,,ManifestColumn
+HAU,,STRING,,ManifestColumn
+IU,,STRING,,ManifestColumn
+IU/ml,,STRING,,ManifestColumn
+Kallikrein Inactivator Unit per Milliliter,,STRING,,ManifestColumn
+M,,STRING,,ManifestColumn
+MOI,,STRING,,ManifestColumn
+NPX,,STRING,,ManifestColumn
+Not Specified,,STRING,,ManifestColumn
+OtherSampleBatchSizeUnit ,,STRING,,ManifestColumn
+PFU,,STRING,,ManifestColumn
+PFUe,,STRING,,ManifestColumn
+Pound,,STRING,,ManifestColumn
+TCID50,,STRING,,ManifestColumn
+bp,,STRING,,ManifestColumn
+g/dl,,STRING,,ManifestColumn
+g/l,,STRING,,ManifestColumn
+gm,,STRING,,ManifestColumn
+iu/l,,STRING,,ManifestColumn
+kg,,STRING,,ManifestColumn
+l,,STRING,,ManifestColumn
+mM,,STRING,,ManifestColumn
+mg,,STRING,,ManifestColumn
+mg/dl,,STRING,,ManifestColumn
+mg/l,,STRING,,ManifestColumn
+mg/ml,,STRING,,ManifestColumn
+miu/ml,,STRING,,ManifestColumn
+ml,,STRING,,ManifestColumn
+nM,,STRING,,ManifestColumn
+ng,,STRING,,ManifestColumn
+ng/dl,,STRING,,ManifestColumn
+ng/ml,,STRING,,ManifestColumn
+ng/nl,,STRING,,ManifestColumn
+ng/ul,,STRING,,ManifestColumn
+nl,,STRING,,ManifestColumn
+optical density,,STRING,,ManifestColumn
+pM,,STRING,,ManifestColumn
+pg,,STRING,,ManifestColumn
+pg/mg creatinine,,STRING,,ManifestColumn
+pg/ml,,STRING,,ManifestColumn
+pg/nl,,STRING,,ManifestColumn
+pg/ul,,STRING,,ManifestColumn
+pl,,STRING,,ManifestColumn
+uM,,STRING,,ManifestColumn
+ug,,STRING,,ManifestColumn
+ug/dl,,STRING,,ManifestColumn
+ug/l,,STRING,,ManifestColumn
+ug/ml,,STRING,,ManifestColumn
+ug/ul,,STRING,,ManifestColumn
+uiu/ml,,STRING,,ManifestColumn
+ul,,STRING,,ManifestColumn
+umol/l,,STRING,,ManifestColumn
+units/ml,,STRING,,ManifestColumn

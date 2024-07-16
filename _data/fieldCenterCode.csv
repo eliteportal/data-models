@@ -1,0 +1,5 @@
+Key,Key Description,columnType,Source,Parent
+BU,,STRING,,ManifestColumn
+PT,,STRING,,ManifestColumn
+NY,,STRING,,ManifestColumn
+DK,,STRING,,ManifestColumn
