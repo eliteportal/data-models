@@ -32,13 +32,13 @@ jobs:
 
       - name: update _data csv term files
         run: |
-          python processes/data_manager.py
+          poetry run python processes/data_manager.py
 
       - name: update term pages
         run: |
-          python processes/page_manager.py
+          poetry run python processes/page_manager.py
       
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'Updated term files and term pages'
+          message: 'Updated dictionary term files and term pages'
