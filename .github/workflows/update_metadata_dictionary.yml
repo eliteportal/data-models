@@ -1,11 +1,14 @@
 # Updates the metadata dictionary that is @ https://eliteportal.github.io/data-dictionary/
 
+# July 2024: currently only runs on workflow dispatch (manual trigger); needs fixed
+
+
 name: update_metadata_dictionary
 
 on:
-  push:
-    branches:
-      - main
+  #push:
+  # branches:
+  #    - main
   workflow_dispatch:
 
 jobs:
