@@ -1,5 +1,10 @@
 # Change Log
 
+## 2024-07-17
+
+- Moved scripts that build the dictionary term pages and the Github Pages jekyll site infrastructure into the data-models repository
+- Updates to site pages will need to be done manually until the Github actions workflows are properly orchestrated
+
 ## 2024-05-30
 
 - Changed schema version in `dca-template-config.json` to format "vYY.MM.DD" for year.month.day e.g. "v24.05.30" to track changes with day they are made
