@@ -1,28 +1,74 @@
-# ELITE Data Model
+# ELITE Data Model and Metadata Dictionary
 
-- [ELITE Data Model](#elite-data-model)
-  - [Production data model](#production-data-model)
-  - [Editing data models](#editing-data-models)
-    - [Github branch procedure](#github-branch-procedure)
-    - [Editing attributes by module](#editing-attributes-by-module)
+As of 2024-07-17 this repo contains both the production data model used by the ELITE portal to submit and validate metadata through the Data Curator App; _and_ the data dictionary website which is based on the data model and provides definitions for all metadata templates and terms used in the data model. 
+
+There is a separate [data-dictionary](https://github.com/eliteportal/data-dictionary) repo which contains the same source code, and which can later be used to deploy the website when we are able to set up automation in that repository which successfully monitors this repository for changes. To simplify the process, for now we will use this data-models repo to manage both the data model and the dictionary.
+
+<!-- toc -->
+
+- [EL Metadata Dictionary Site](#el-metadata-dictionary-site)
+  * [Updating Metadata Dictionary Site -- interim processes](#updating-metadata-dictionary-site----interim-processes)
+    + [Building and previewing the site locally](#building-and-previewing-the-site-locally)
+- [EL Data Model](#el-data-model)
+  * [Editing data models - interim process](#editing-data-models---interim-process)
+    + [Editing attributes by module](#editing-attributes-by-module)
       - [Adding a new valid value to an existing manifest column](#adding-a-new-valid-value-to-an-existing-manifest-column)
       - [Adding a new column to a manifest template](#adding-a-new-column-to-a-manifest-template)
-    - [Notes on collaboratively editing csvs](#notes-on-collaboratively-editing-csvs)
-    - [Scraping Valid Values from Ontology](#scraping-valid-values-from-ontology)
-  - [Automations](#automations)
-    - [Updates to data model](#updates-to-data-model)
-    - [Updating the data dictionary](#updating-the-data-dictionary)
-    - [Adding a new template](#adding-a-new-template)
-  - [Developing in a codespace](#developing-in-a-codespace)
-  - [Legacy data models](#legacy-data-models)
-    - [Create Data Model Visualization Tree](#create-data-model-visualization-tree)
-  - [Developers](#developers)
-    - [Files](#files)
-    - [To setup environment](#to-setup-environment)
-      - [Submodules](#submodules)
-  - [Changes](#changes)
+    + [Notes on collaboratively editing csvs](#notes-on-collaboratively-editing-csvs)
+    + [Scraping Valid Values from Ontology](#scraping-valid-values-from-ontology)
+  * [Automations](#automations)
+    + [Updates to data model](#updates-to-data-model)
+    + [Updating the data dictionary](#updating-the-data-dictionary)
+    + [Adding a new template](#adding-a-new-template)
+  * [Developing in a codespace](#developing-in-a-codespace)
+    + [Create Data Model Visualization Tree](#create-data-model-visualization-tree)
+  * [Developers](#developers)
+    + [Files](#files)
+    + [To setup environment](#to-setup-environment)
+  * [Changes](#changes)
 
-## Production data model
+<!-- tocstop -->
+
+# EL Metadata Dictionary Site
+
+EL Metadata Dictionary is a [Jekyll](https://jekyllrb.com/) site utilizing [Just the Docs](https://just-the-docs.github.io/just-the-docs/) theme and is published on [GitHub Pages](https://pages.github.com/).
+
+- `index.md` is the home page
+- `_config.yml` can be used to tweak Jekyll settings, such as theme, title
+- `_layout/` contains html templates we use to generate the web pages for each data model term
+- `_data/` folder stores data for Jekyll to use when generating the site
+- files in `docs/` will be accessed by GitHub Actions workflow to build the site
+- two scripts in `processes/` can be run to generate updated files in `_data/` and `docs/` to publish changes in the data model to the dictionary site
+- `.env` contains the link to the data model that the dictionary site is based on
+- `Gemfile` is package dependencies for buildling the website
+- `pyproject.toml` and `poetry.lock` list the python and package dependencies for the scripts that update both the data model and the data dictionary site
+- You can add additional descriptions to home page or specific page by directly editing `index.md` or markdown files in `docs/`.
+
+## Updating Metadata Dictionary Site -- interim processes
+
+Interim process to update the metadata dictionary site after changes have been made to the data model:
+
+1. Make a new branch. Run `poetry install` and then `poetry shell` on the command line to install dependencies and open a virtual environment.
+
+2. From the main data-models directory, run `python proccesses/data_manager.py`. This should update some files within `_data/`
+
+3. Then run `python processes/page_manager.py`. This should update files within `docs/`. 
+
+4. Optional: you can run `python processes/create_network_graph.py` to create the schema visualization network graph. This is out of date and relatively unused, but it will be good to update and make more robust later.
+
+5. Optional: Preview the website locally by running `bundle exec jekyll serve`.
+
+6. Commit changes to your branch and open a PR. After review is passed and the changes are merged to main, a Github action will run via the `pages.yml` workflow to build and deploy the site to https://eliteportal.github.io/data-models/
+
+
+### Building and previewing the site locally
+
+1. Install Jekyll `gem install bundler jekyll`
+2. Install Bundler `bundle install`
+3. Run `bundle exec jekyll serve` to build your site and preview it at `http://localhost:4000`. The built site is stored in the directory `_site`.
+
+
+# EL Data Model
 
 **EL.data.model.\* ([csv](https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.csv) | [jsonld](https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld))**: this is the current, "live" version of the EL Portal data model. It is being used by both the staging and production versions of the multitenant Data Curator App.
 
@@ -150,7 +196,6 @@ Codespace secrets:
 Software packages installed
 
 - Poetry - [See installation guide here](https://python-poetry.org/docs/)
-- pyenv - [See guide here](https://github.com/pyenv/pyenv)
 
 ### Files
 
@@ -165,13 +210,6 @@ Software packages installed
 
 After cloning the repository, run the following command:
 ```poetry install```
-
-#### Submodules
-
-This repository includes three submodules
-
-1. `data-dictionary`
-   - For creating a site that displays the data model
 
 ## Changes
 
