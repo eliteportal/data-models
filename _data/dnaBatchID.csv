@@ -1,0 +1,6 @@
+Key,Key Description,Type,Source,Parent
+NotSpecified,,STRING,,unspecified
+Notapplicable,,STRING,,unspecified
+Notcollected,,STRING,,unspecified
+OtherDnaBatchID,nan,STRING,nan,unspecified
+Unknown,nan,STRING,nan,unspecified

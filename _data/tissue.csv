@@ -1,0 +1,90 @@
+Key,Key Description,columnType,Source,Parent
+amygdala,,STRING,,ManifestColumn
+ amygdaloid complex,,STRING,,ManifestColumn
+ anterior cingulate cortex,,STRING,,ManifestColumn
+ angular gyrus,,STRING,,ManifestColumn
+ blood,,STRING,,ManifestColumn
+ bone marrow,,STRING,,ManifestColumn
+ Buccal Mucosa,,STRING,,ManifestColumn
+ Buffy Coat,,STRING,,ManifestColumn
+ caudate nucleus,,STRING,,ManifestColumn
+ cecum derived fecal material,,STRING,,ManifestColumn
+ cerebellar cortex,,STRING,,ManifestColumn
+ cerebellum,,STRING,,ManifestColumn
+ cerebral cortex,,STRING,,ManifestColumn
+ cortical plate,,STRING,,ManifestColumn
+ dorsal anterior cingulate cortex,,STRING,,ManifestColumn
+ dorsal pallium,,STRING,,ManifestColumn
+ Dorsal Root Ganglion,,STRING,,ManifestColumn
+ dorsolateral prefrontal cortex,,STRING,,ManifestColumn
+ dorsomedial prefrontal cortex,,STRING,,ManifestColumn
+ embryonic tissue,,STRING,,ManifestColumn
+ entorhinal cortex,,STRING,,ManifestColumn
+ fecal material,,STRING,,ManifestColumn
+ forebrain,,STRING,,ManifestColumn
+ frontal cortex,,STRING,,ManifestColumn
+ frontal lobe,,STRING,,ManifestColumn
+ frontal pole,,STRING,,ManifestColumn
+ fusiform gyrus,,STRING,,ManifestColumn
+ hippocampus,,STRING,,ManifestColumn
+ head of caudate nucleus,,STRING,,ManifestColumn
+ inferior frontal gyrus,,STRING,,ManifestColumn
+ inferior temporal cortex,,STRING,,ManifestColumn
+ inferior temporal gyrus,,STRING,,ManifestColumn
+ inferolateral temporal cortex,,STRING,,ManifestColumn
+ insula,,STRING,,ManifestColumn
+ insular cortex,,STRING,,ManifestColumn
+ lateral entorhinal cortex,,STRING,,ManifestColumn
+ left cerebral hemisphere,,STRING,,ManifestColumn
+ liver,,STRING,,ManifestColumn
+ mammillary body,,STRING,,ManifestColumn
+ medial dorsal nucleus of thalamus,,STRING,,ManifestColumn
+ medial entorhinal cortex,,STRING,,ManifestColumn
+ medial frontal cortex,,STRING,,ManifestColumn
+ medial ganglionic eminence,,STRING,,ManifestColumn
+ medial orbital frontal cortex,,STRING,,ManifestColumn
+ medial prefrontal cortex,,STRING,,ManifestColumn
+ meninges,,STRING,,ManifestColumn
+ midbrain,,STRING,,ManifestColumn
+ middle frontal gyrus,,STRING,,ManifestColumn
+ middle temporal gyrus,,STRING,,ManifestColumn
+ nerve tissue,,STRING,,ManifestColumn
+ Not Applicable,,STRING,,ManifestColumn
+ nucleus accumbens,,STRING,,ManifestColumn
+ occipital lobe,,STRING,,ManifestColumn
+ occipital visual cortex,,STRING,,ManifestColumn
+ olfactory neuroepithelium,,STRING,,ManifestColumn
+ orbitofrontal cortex,,STRING,,ManifestColumn
+ parahippocampal gyrus,,STRING,,ManifestColumn
+ parietal cortex,,STRING,,ManifestColumn
+ parietal lobe,,STRING,,ManifestColumn
+ plasma,,STRING,,ManifestColumn
+ posterior cingulate cortex,,STRING,,ManifestColumn
+ posteroinferior parietal cortex,,STRING,,ManifestColumn
+ posterior inferior parietal cortex,,STRING,,ManifestColumn
+ posterior superior temporal cortex,,STRING,,ManifestColumn
+ precentral gyrus,,STRING,,ManifestColumn
+ prefrontal cortex,,STRING,,ManifestColumn
+ primary auditory cortex,,STRING,,ManifestColumn
+ primary motor cortex,,STRING,,ManifestColumn
+ primary somatosensory cortex,,STRING,,ManifestColumn
+ primary tumor,,STRING,,ManifestColumn
+ primary visual cortex,,STRING,,ManifestColumn
+ putamen,,STRING,,ManifestColumn
+ right cerebral hemisphere,,STRING,,ManifestColumn
+ serum,,STRING,,ManifestColumn
+ splenocyte,,STRING,,ManifestColumn
+ striatum,,STRING,,ManifestColumn
+ subgenual anterior cingulate cortex,,STRING,,ManifestColumn
+ subgenual cingulate cortex,,STRING,,ManifestColumn
+ superior parietal lobe,,STRING,,ManifestColumn
+ superior temporal gyrus,,STRING,,ManifestColumn
+ temporal cortex,,STRING,,ManifestColumn
+ temporal lobe,,STRING,,ManifestColumn
+ temporal pole,,STRING,,ManifestColumn
+ thalamus,,STRING,,ManifestColumn
+ unspecified,,STRING,,ManifestColumn
+ ventricular zone,,STRING,,ManifestColumn
+ ventrolateral prefrontal cortex,,STRING,,ManifestColumn
+ VZ/SVZ,,STRING,,ManifestColumn
+ whole brain,,STRING,,ManifestColumn

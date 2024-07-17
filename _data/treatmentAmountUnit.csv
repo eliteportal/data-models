@@ -1,0 +1,56 @@
+Key,Key Description,columnType,Source,Parent
+AFU,,NUMBER,,ManifestColumn
+AI,,NUMBER,,ManifestColumn
+AU/ml,,NUMBER,,ManifestColumn
+DK units/ml,,NUMBER,,ManifestColumn
+g/dl,,NUMBER,,ManifestColumn
+g/l,,NUMBER,,ManifestColumn
+gm,,NUMBER,,ManifestColumn
+HAU,,NUMBER,,ManifestColumn
+IU,,NUMBER,,ManifestColumn
+iu/l,,NUMBER,,ManifestColumn
+IU/ml,,NUMBER,,ManifestColumn
+Kallikrein Inactivator Unit per Milliliter,,NUMBER,,ManifestColumn
+kg,,NUMBER,,ManifestColumn
+l,,NUMBER,,ManifestColumn
+M,,NUMBER,,ManifestColumn
+mg,,NUMBER,,ManifestColumn
+mg/dl,,NUMBER,,ManifestColumn
+mg/l,,NUMBER,,ManifestColumn
+mg/ml,,NUMBER,,ManifestColumn
+miu/ml,,NUMBER,,ManifestColumn
+ml,,NUMBER,,ManifestColumn
+mM,,NUMBER,,ManifestColumn
+MOI,,NUMBER,,ManifestColumn
+ng,,NUMBER,,ManifestColumn
+ng/dl,,NUMBER,,ManifestColumn
+ng/ml,,NUMBER,,ManifestColumn
+ng/nl,,NUMBER,,ManifestColumn
+ng/ul,,NUMBER,,ManifestColumn
+nl,,NUMBER,,ManifestColumn
+nM,,NUMBER,,ManifestColumn
+Not specified,,NUMBER,,ManifestColumn
+NPX,,NUMBER,,ManifestColumn
+optical density,,NUMBER,,ManifestColumn
+other,,NUMBER,,ManifestColumn
+PFU,,NUMBER,,ManifestColumn
+PFUe,,NUMBER,,ManifestColumn
+pg,,NUMBER,,ManifestColumn
+pg/mg creatinine,,NUMBER,,ManifestColumn
+pg/ml,,NUMBER,,ManifestColumn
+pg/nl,,NUMBER,,ManifestColumn
+pg/ul,,NUMBER,,ManifestColumn
+pl,,NUMBER,,ManifestColumn
+pM,,NUMBER,,ManifestColumn
+Pound,,NUMBER,,ManifestColumn
+TCID50,,NUMBER,,ManifestColumn
+ug,,NUMBER,,ManifestColumn
+ug/dl,,NUMBER,,ManifestColumn
+ug/l,,NUMBER,,ManifestColumn
+ug/ml,,NUMBER,,ManifestColumn
+ug/ul,,NUMBER,,ManifestColumn
+uiu/ml,,NUMBER,,ManifestColumn
+ul,,NUMBER,,ManifestColumn
+uM,,NUMBER,,ManifestColumn
+umol/l,,NUMBER,,ManifestColumn
+units/ml,,NUMBER,,ManifestColumn

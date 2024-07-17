@@ -1,0 +1,52 @@
+Key,Key Description,columnType,Source,Parent
+AD-DS,,STRING,,ManifestColumn
+ Affective Disorder,,STRING,,ManifestColumn
+ Alzheimer Disease,,STRING,,ManifestColumn
+ Alzheimer disease with psychosis,,STRING,,ManifestColumn
+ amyotrophic lateral sclerosis,,STRING,,ManifestColumn
+ anxiety,,STRING,,ManifestColumn
+ Autism Spectrum Disorder,,STRING,,ManifestColumn
+ Bipolar Disorder,,STRING,,ManifestColumn
+ Bladder Cancer,,STRING,,ManifestColumn
+ Brain Cancer,,STRING,,ManifestColumn
+ Breast Cancer,,STRING,,ManifestColumn
+ Cervical Cancer,,STRING,,ManifestColumn
+ Colon Cancer,,STRING,,ManifestColumn
+ control,,STRING,,ManifestColumn
+ corticobasal degeneration disorder,,STRING,,ManifestColumn
+ CS-DS,,STRING,,ManifestColumn
+ dementia,,STRING,,ManifestColumn
+ dystonia,,STRING,,ManifestColumn
+ essential tremor,,STRING,,ManifestColumn
+ Fibrocystic Breast Disease,,STRING,,ManifestColumn
+ frontotemporal dementia,,STRING,,ManifestColumn
+ gliosis,,STRING,,ManifestColumn
+ hypoxia,,STRING,,ManifestColumn
+ Juvenile Myelomonocytic Leukemia,,STRING,,ManifestColumn
+ Leukemia,,STRING,,ManifestColumn
+ Lewy body disease,,STRING,,ManifestColumn
+ Lung Cancer,,STRING,,ManifestColumn
+ Major Depressive Disorder,,STRING,,ManifestColumn
+ MCI-DS,,STRING,,ManifestColumn
+ mild cognitive impairment,,STRING,,ManifestColumn
+ multiple system atrophy,,STRING,,ManifestColumn
+ Neurofibromatosis 1,,STRING,,ManifestColumn
+ Neurofibromatosis 2,,STRING,,ManifestColumn
+ no cognitive impairment,,STRING,,ManifestColumn
+ Not Applicable,,STRING,,ManifestColumn
+ obesity,,STRING,,ManifestColumn
+ obsessive compulsive disorder,,STRING,,ManifestColumn
+ Ovary Cancer,,STRING,,ManifestColumn
+ Pancreatic Cancer,,STRING,,ManifestColumn
+ Parkinson's disease,,STRING,,ManifestColumn
+ pathological aging,,STRING,,ManifestColumn
+ progressive supranuclear palsy,,STRING,,ManifestColumn
+ Prostate Cancer,,STRING,,ManifestColumn
+ Schizophrenia,,STRING,,ManifestColumn
+ Skin Cancer,,STRING,,ManifestColumn
+ Substance Related Disorder,,STRING,,ManifestColumn
+ Tourette Syndrome,,STRING,,ManifestColumn
+ traumatic brain injury,,STRING,,ManifestColumn
+ type 2 diabetes mellitus,,STRING,,ManifestColumn
+ vascular dementia,,STRING,,ManifestColumn
+ Williams Syndrome,,STRING,,ManifestColumn

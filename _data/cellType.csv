@@ -1,0 +1,43 @@
+Key,Key Description,columnType,Source,Parent
+A549,,STRING,,ManifestColumn
+ arachnoid,,STRING,,ManifestColumn
+ astrocytes,,STRING,,ManifestColumn
+ B-lymphocytes,,STRING,,ManifestColumn
+ CD138+,,STRING,,ManifestColumn
+ CD8+ T-Cells,,STRING,,ManifestColumn
+ CNON,,STRING,,ManifestColumn
+ dopaminergic neurons,,STRING,,ManifestColumn
+ Embryonic stem cells,,STRING,,ManifestColumn
+ epithelial,,STRING,,ManifestColumn
+ epithelial-like,,STRING,,ManifestColumn
+ fibroblast,,STRING,,ManifestColumn
+ GABAergic neurons,,STRING,,ManifestColumn
+ glia,,STRING,,ManifestColumn
+ GLUtamatergic neurons,,STRING,,ManifestColumn
+ immune cell,,STRING,,ManifestColumn
+ iPSC,,STRING,,ManifestColumn
+ iPSC-derived astrocytes,,STRING,,ManifestColumn
+ iPSC-derived glia,,STRING,,ManifestColumn
+ iPSC-derived neuron,,STRING,,ManifestColumn
+ iPSC-derived neuronal progenitor cell,,STRING,,ManifestColumn
+ iPSC-derived telencephalic organoids,,STRING,,ManifestColumn
+ lymphoblast,,STRING,,ManifestColumn
+ lymphoblastoid cell line,,STRING,,ManifestColumn
+ macrophages,,STRING,,ManifestColumn
+ meningioma,,STRING,,ManifestColumn
+ microglia,,STRING,,ManifestColumn
+ monocytes,,STRING,,ManifestColumn
+ monocyte-derived microglia,,STRING,,ManifestColumn
+ NCX NES,,STRING,,ManifestColumn
+ NeuN-,,STRING,,ManifestColumn
+ NeuN+,,STRING,,ManifestColumn
+ neural progenitor cell,,STRING,,ManifestColumn
+ neuron,,STRING,,ManifestColumn
+ oligodendrocyte,,STRING,,ManifestColumn
+ peripheral blood mononuclear cell,,STRING,,ManifestColumn
+ polygonal,,STRING,,ManifestColumn
+ round,,STRING,,ManifestColumn
+ schwann,,STRING,,ManifestColumn
+ Schwann cell precusor,,STRING,,ManifestColumn
+ schwannoma,,STRING,,ManifestColumn
+ SH-SY5Y,,STRING,,ManifestColumn

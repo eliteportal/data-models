@@ -1,9 +1,0 @@
-[submodule "schema_visualization_elite"]
-path = schema_visualization_elite
-url = https://github.com/eliteportal/schema_visualization_elite.git
-[submodule "data-dictionary"]
-	path = data-dictionary
-	url = https://github.com/eliteportal/data-dictionary.git
-[submodule "data-model-toolbox"]
-	path = data-model-toolbox
-	url = https://github.com/eliteportal/data-model-toolbox.git

@@ -1,0 +1,27 @@
+Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
+isModelSystem,,True,BOOLEAN,,Sage Bionetworks,ManifestColumn,"TRUE,FALSE"
+dataTypeAll,,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,
+program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
+projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG"
+specimenType,Type of biological material comprising the Specimen,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
+studyKey,,True,STRING,,Sage Bionetworks,ManifestColumn,
+Component,,False,,,,,
+accessReqs,,False,,,,,
+ackContext,,False,,,,,
+acknowledgment,,False,,,,,
+grantNumber,,False,,,,,
+isFeatured,,False,,,,,
+isReleased,,False,,,,,
+metadataType,,False,,,,,
+methods,,False,,,,,
+newsRelease,,False,,,,,
+projectFullName,,False,,,,,
+relatedStudies,,False,,,,,
+studyAbstract,,False,,,,,
+studyDescription,,False,,,,,
+studyFocus,,False,,,,,
+studyMetadata,,False,,,,,
+studyName,,False,,,,,
+studyType,,False,,,,,
+studyWiki,,False,,,,,
+species,The name of a species (typically a taxonomic group) of organism.,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"Human,Mouse"

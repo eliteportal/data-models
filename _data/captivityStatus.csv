@@ -1,0 +1,4 @@
+Key,Key Description,columnType,Source,Parent
+Captive,,STRING,,ManifestColumn
+Stranded,,STRING,,ManifestColumn
+Wild,,STRING,,ManifestColumn

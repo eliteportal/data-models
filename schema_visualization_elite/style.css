@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato");
+
+:root {
+  --gray-100: #fbfbfc;
+  --gray-300: #eaecee;
+  --schema-wrapper-height: 600px;
+  --attr-table-height: 400px;
+  --toggle-button-size: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato;
+  font-size: 13px;
+}
+
+#chart-placeholder {
+  overflow: hidden;
+  background-color: #f0f0f0;
+  position: relative;
+  border: 1px solid var(--gray-300);
+  width: 90%;
+  height: var(--schema-wrapper-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chart-placeholder span {
+  font-size: 24px;
+  color: #ccc;
+}
+
+#chart-placeholder button#toggle-attributes-table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20px, calc(var(--schema-wrapper-height) - 60px));
+  height: auto;
+  width: auto;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid var(--gray-300);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05), 0px 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 210%;
+}
+
+#chart-placeholder button#toggle-attributes-table:hover {
+  background-color: #f7f9fa;
+}
+
+#chart-placeholder.show-attributes-table button#toggle-attributes-table {
+  transform: translate(
+    20px,
+    calc(var(--schema-wrapper-height) - var(--attr-table-height) - 60px)
+  );
+}
+
+#chart-placeholder.show-attributes-table #attributes-table-wrapper {
+  display: flex;
+  transform: translateY(
+    calc(var(--schema-wrapper-height) - var(--attr-table-height))
+  );
+}
+
+#attributes-table-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(var(--schema-wrapper-height));
+  max-height: var(--attr-table-height);
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0 0 0 1px var(--gray-300);
+}
+
+#table-top {
+  z-index: 100;
+  background-color: var(--gray-100);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: inset 0 -1px var(--gray-300);
+}
+
+#table-top .left {
+  box-shadow: inset -1px 0px var(--gray-300);
+}
+
+#table-top .right {
+  box-shadow: inset 1px 0px var(--gray-300);
+}
+
+#table-top .left,
+#table-top .right {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-select {
+  border: 0;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.custom-button {
+  background: #fff;
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table thead {
+  background-color: var(--gray-100);
+}
+
+table th {
+  font-weight: 800;
+}
+
+table td {
+  background-color: white;
+}
+
+table .col-1 {
+  width: 500px;
+}
+
+table .col-2 {
+  width: 100px;
+}
+
+table .col-3 {
+  width: 250px;
+}
+
+table .col-4 {
+  width: 250px;
+}
+
+table .col-5 {
+  width: 250px;
+}
+
+table .col-6 {
+  width: 250px;
+}
+
+table td.truncated {
+  position: relative;
+  padding-right: calc(var(--toggle-button-size) + 10px);
+  /* 10px of padding between button and text */
+}
+
+table td.expanded {
+  white-space: initial;
+  word-wrap: break-word;
+}
+
+table td button.toggle-row {
+  display: none;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: var(--toggle-button-size);
+  height: var(--toggle-button-size);
+  background-color: red;
+  background: #fff;
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  float: right;
+}
+
+table td.truncated button.toggle-row {
+  display: block;
+}
+
+table td,
+table th {
+  vertical-align: top;
+  text-align: left;
+  font-weight: 400;
+  padding: 8px 20px;
+  box-shadow: inset 0px -1px var(--gray-300);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.read-more {
+  display: none;
+  font-size: 13px;
+  /* font-family: Lato; */
+  color: "black";
+}
+
+/* other */
+/* controlling the title of schema viz */
+
+/* controlling all the content, including titles */
+/* .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+} */
+
+#placeholder {
+  background-color: white;
+  height: 100vh;
+}
+
+#placeholder p {
+  color: black;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 23px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+body h1 {
+  padding: 10px;
+}
+
+/* controlling the select schema dropdown */
+.main {
+  display: block;
+  left: 0;
+  top: 0;
+  margin-top: 100px;
+  position: fixed;
+  text-align: left;
+  padding: 5px;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.bold {
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.legend {
+  font-family: serif;
+  font-size: 15px;
+}
+
+.bold_legend {
+  font-family: serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.node {
+  stroke-linecap: round;
+}
+
+.link {
+  fill: none;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url("searchicon.png");
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: flex;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: flex;
+}
+
+#csv-data {
+  margin-top: 20px; /* Add margin above the CSV data */
+}

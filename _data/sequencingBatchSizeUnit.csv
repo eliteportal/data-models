@@ -1,0 +1,56 @@
+Key,Key Description,columnType,Source,Parent
+AI,,,,ManifestColumn
+ AU/ml,,,,ManifestColumn
+ DK units/ml,,,,ManifestColumn
+ HAU,,,,ManifestColumn
+ IU,,,,ManifestColumn
+ IU/ml,,,,ManifestColumn
+ Kallikrein Inactivator Unit per Milliliter,,,,ManifestColumn
+ M,,,,ManifestColumn
+ MOI,,,,ManifestColumn
+ NPX,,,,ManifestColumn
+ Not Specified,,,,ManifestColumn
+ OtherSequencingBatchSizeUnit,,,,ManifestColumn
+ PFU,,,,ManifestColumn
+ PFUe,,,,ManifestColumn
+ Pound,,,,ManifestColumn
+ TCID50,,,,ManifestColumn
+ bpg/dl,,,,ManifestColumn
+ g/l,,,,ManifestColumn
+ gm,,,,ManifestColumn
+ iu/l,,,,ManifestColumn
+ kg,,,,ManifestColumn
+ l,,,,ManifestColumn
+ mM,,,,ManifestColumn
+ mg,,,,ManifestColumn
+ mg/dl,,,,ManifestColumn
+ mg/l,,,,ManifestColumn
+ mg/ml,,,,ManifestColumn
+ miu/ml,,,,ManifestColumn
+ ml,,,,ManifestColumn
+ nM,,,,ManifestColumn
+ ng,,,,ManifestColumn
+ ng/dl,,,,ManifestColumn
+ ng/ml,,,,ManifestColumn
+ ng/nl,,,,ManifestColumn
+ ng/ul,,,,ManifestColumn
+ nl,,,,ManifestColumn
+ optical density,,,,ManifestColumn
+ pM,,,,ManifestColumn
+ pg,,,,ManifestColumn
+ pg/mg creatinine,,,,ManifestColumn
+ pg/ml,,,,ManifestColumn
+ pg/nl,,,,ManifestColumn
+ pg/ul,,,,ManifestColumn
+ pl,,,,ManifestColumn
+ uM,,,,ManifestColumn
+ ug,,,,ManifestColumn
+ ug/dl,,,,ManifestColumn
+ ug/l,,,,ManifestColumn
+ ug/ml,,,,ManifestColumn
+ ug/ul,,,,ManifestColumn
+ uiu/ml,,,,ManifestColumn
+ ul,,,,ManifestColumn
+ umol/l,,,,ManifestColumn
+ units/ml,,,,ManifestColumn
+AFU,,,,ManifestColumn

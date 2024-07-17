@@ -1,0 +1,118 @@
+Key,Key Description,columnType,Source,Parent
+10x multiome,,STRING,,ManifestColumn
+ 16SrRNAseq,,STRING,,ManifestColumn
+ active avoidance learning behavior,,STRING,,ManifestColumn
+ anxiety-related behavior,,STRING,,ManifestColumn
+ ATACSeq,,STRING,,ManifestColumn
+ atomicForceMicroscopy,,STRING,,ManifestColumn
+ autoradiography,,STRING,,ManifestColumn
+ Baker Lipidomics,,STRING,,ManifestColumn
+ Biocrates Bile Acids,,STRING,,ManifestColumn
+ Biocrates p180,,STRING,,ManifestColumn
+ Biocrates Q500,,STRING,,ManifestColumn
+ bisulfiteSeq,,STRING,,ManifestColumn
+ Blood Chemistry Measurement,,STRING,,ManifestColumn
+ brightfieldMicroscopy,,STRING,,ManifestColumn
+ cellViabilityAssay,,STRING,,ManifestColumn
+ ChIPSeq,,STRING,,ManifestColumn
+ CITESeq,,STRING,,ManifestColumn
+ contextual conditioning behavior,,STRING,,ManifestColumn
+ CUT&Tag,,STRING,,ManifestColumn
+ DIA,,STRING,,ManifestColumn
+ DNA optical mapping,,STRING,,ManifestColumn
+ electrochemiluminescence,,STRING,,ManifestColumn
+ elevated plus maze test,,STRING,,ManifestColumn
+ elevated T maze apparatus method,,STRING,,ManifestColumn
+ ELISA,,STRING,,ManifestColumn
+ errBisulfiteSeq,,STRING,,ManifestColumn
+ exomeSeq,,STRING,,ManifestColumn
+ FIA-MSMS,,STRING,,ManifestColumn
+ FitBark,,STRING,,ManifestColumn
+ frailty assessment,,STRING,,ManifestColumn
+ Genotyping,,STRING,,ManifestColumn
+ HI-C,,STRING,,ManifestColumn
+ HiChIPseq,,STRING,,ManifestColumn
+ high content screen,,STRING,,ManifestColumn
+ HPLC,,STRING,,ManifestColumn
+ HPLC-MSMS,,STRING,,ManifestColumn
+ Immunocytochemistry,,STRING,,ManifestColumn
+ immunofluorescence,,STRING,,ManifestColumn
+ immunohistochemistry,,STRING,,ManifestColumn
+ in vivo bioluminescence,,STRING,,ManifestColumn
+ ISOSeq,,STRING,,ManifestColumn
+ jumpingLibrary,,STRING,,ManifestColumn
+ kinesthetic behavior,,STRING,,ManifestColumn
+ label free mass spectrometry,,STRING,,ManifestColumn
+ Laser Speckle Imaging,,STRING,,ManifestColumn
+ LC-MS,,STRING,,ManifestColumn
+ LC-MSMS,,STRING,,ManifestColumn
+ LC-SRM,,STRING,,ManifestColumn
+ Leiden Oxylipins,,STRING,,ManifestColumn
+ lentiMPRA,,STRING,,ManifestColumn
+ LFP,,STRING,,ManifestColumn
+ liquid chromatography-electrochemical detection,,STRING,,ManifestColumn
+ lncrnaSeq,,STRING,,ManifestColumn
+ locomotor activation behavior,,STRING,,ManifestColumn
+ long-read rnaSeq,,STRING,,ManifestColumn
+ LTP,,STRING,,ManifestColumn
+ MDMS-SL,,STRING,,ManifestColumn
+ memory behavior,,STRING,,ManifestColumn
+ Metabolon,,STRING,,ManifestColumn
+ methylationArray,,STRING,,ManifestColumn
+ MIB/MS,,STRING,,ManifestColumn
+ microRNAcounts,,STRING,,ManifestColumn
+ mirnaArray,,STRING,,ManifestColumn
+ mirnaSeq,,STRING,,ManifestColumn
+ MRI,,STRING,,ManifestColumn
+ mRNAcounts,,STRING,,ManifestColumn
+ MudPIT,,STRING,,ManifestColumn
+ m6A-rnaSeq,,STRING,,ManifestColumn
+ nextGenerationTargetedSequencing,,STRING,,ManifestColumn
+ Nightingale NMR,,STRING,,ManifestColumn
+ NOMe-Seq,,STRING,,ManifestColumn
+ novelty response behavior,,STRING,,ManifestColumn
+ open field test,,STRING,,ManifestColumn
+ oxBS-Seq,,STRING,,ManifestColumn
+ pharmacodynamics,,STRING,,ManifestColumn
+ pharmacokinetics,,STRING,,ManifestColumn
+ photograph,,STRING,,ManifestColumn
+ polymeraseChainReaction,,STRING,,ManifestColumn
+ Positron Emission Tomography,,STRING,,ManifestColumn
+ proximity extension assay,,STRING,,ManifestColumn
+ questionnaire,,STRING,,ManifestColumn
+ Rader Lipidomics,,STRING,,ManifestColumn
+ Real Time PCR,,STRING,,ManifestColumn
+ Ribo-Seq,,STRING,,ManifestColumn
+ rotarod performance test,,STRING,,ManifestColumn
+ rnaArray,,STRING,,ManifestColumn
+ rnaSeq,,STRING,,ManifestColumn
+ RPPA,,STRING,,ManifestColumn
+ sandwich ELISA,,STRING,,ManifestColumn
+ Sanger sequencing,,STRING,,ManifestColumn
+ scale,,STRING,,ManifestColumn
+ scATACSeq,,STRING,,ManifestColumn
+ scCGIseq,,STRING,,ManifestColumn
+ scirnaSeq,,STRING,,ManifestColumn
+ scrnaSeq,,STRING,,ManifestColumn
+ scwholeGenomeSeq,,STRING,,ManifestColumn
+ SiMoA,,STRING,,ManifestColumn
+ snpArray,,STRING,,ManifestColumn
+ snATACSeq,,STRING,,ManifestColumn
+ snrnaSeq,,STRING,,ManifestColumn
+ spontaneous alternation,,STRING,,ManifestColumn
+ STARRSeq,,STRING,,ManifestColumn
+ TMT quantitation,,STRING,,ManifestColumn
+ tractionForceMicroscopy,,STRING,,ManifestColumn
+ UPLC-MSMS,,STRING,,ManifestColumn
+ UPLC-ESI-QTOF-MS,,STRING,,ManifestColumn
+ UC Davis GCTOF,,STRING,,ManifestColumn
+ UCSD Untargeted Metabolomics,,STRING,,ManifestColumn
+ Vernier Caliper,,STRING,,ManifestColumn
+ von Frey test,,STRING,,ManifestColumn
+ westernBlot,,STRING,,ManifestColumn
+ wheel running,,STRING,,ManifestColumn
+ whole-cell patch clamp,,STRING,,ManifestColumn
+ wholeGenomeSeq,,STRING,,ManifestColumn
+ Wishart Catecholamines,,STRING,,ManifestColumn
+ Wishart High Value Metabolites,,STRING,,ManifestColumn
+ Zeno Electronic Walkway,,STRING,,ManifestColumn

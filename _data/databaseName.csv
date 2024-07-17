@@ -1,0 +1,10 @@
+Key,Key Description,columnType,Source,Parent
+HMDB,,STRING,,ManifestColumn
+ Metlin,,STRING,,ManifestColumn
+ NIST17,,STRING,,ManifestColumn
+ Not Specified,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+ OtherDatabaseName,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
+MassBank of North America (MoNA),,STRING,,ManifestColumn

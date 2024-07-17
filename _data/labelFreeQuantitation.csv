@@ -1,0 +1,11 @@
+Key,Key Description,columnType,Source,Parent
+Label-free gene level quantitation,,STRING,,ManifestColumn
+Label-free peptide level quantitation,,STRING,,ManifestColumn
+Label-free protein group level quantitation,,STRING,,ManifestColumn
+Label-free protein level quantitation,,STRING,,ManifestColumn
+Label-free raw feature quantitation,,STRING,,ManifestColumn
+Not applicable,,STRING,,ManifestColumn
+Not available,,STRING,,ManifestColumn
+Not collected,,STRING,,ManifestColumn
+Not specified,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn

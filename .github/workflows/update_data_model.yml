@@ -2,13 +2,15 @@
 # and push the updated ELITE.data.model.jsonld to feature branch
 # intended to be used after updating the individual modules
 
+# July 2024: currently only runs on workflow dispatch (manual trigger); needs fixed
+
 name: Update Data Model
 
 on:
-  pull_request:
-    branches: main
+  #pull_request:
+  # branches: main
     # runs on changes to module csvs
-    paths: 'modules/**'
+  # paths: 'modules/**'
   workflow_dispatch:
 jobs:
   CI:

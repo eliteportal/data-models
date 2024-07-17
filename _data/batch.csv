@@ -1,0 +1,2 @@
+Key,Key Description,Valid Values,columnType,Parent,module
+batchSize,The number of samples,,NUMBER,ManifestColumn,batch

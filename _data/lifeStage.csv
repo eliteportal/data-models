@@ -1,0 +1,4 @@
+Key,Key Description,columnType,Source,Parent
+Adult,,STRING,,ManifestColumn
+Juvenile,,STRING,,ManifestColumn
+Post-Juvenile,,STRING,,ManifestColumn

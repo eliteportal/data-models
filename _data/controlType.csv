@@ -1,0 +1,11 @@
+Key,Key Description,columnType,Source,Parent
+AIBL pool,,STRING,,ManifestColumn
+ Baker pool,,STRING,,ManifestColumn
+ blank injection,,STRING,,ManifestColumn
+ GIS,,STRING,,ManifestColumn
+ GoldenWest,,STRING,,ManifestColumn
+ NIST SRM 1950,,STRING,,ManifestColumn
+ qc mix,,STRING,,ManifestColumn
+ Replicate,,STRING,,ManifestColumn
+ study pool,,STRING,,ManifestColumn
+ water plus Baker ISTD,,STRING,,ManifestColumn

@@ -1,0 +1,27 @@
+Key,Key Description,columnType,Source,Parent
+Not collected,,,,ManifestColumn
+ Other,,,,ManifestColumn
+ Unknown,,,,ManifestColumn
+ alveolar capillary type 1 endothelial cell,,,,ManifestColumn
+ alveolar capillary type 2 endothelial cell,,,,ManifestColumn
+ blood vessel endothelial cell,,,,ManifestColumn
+ capillary endothelial cell,,,,ManifestColumn
+ endometrial microvascular endothelial cell,,,,ManifestColumn
+ endothelial cell of arteriole,,,,ManifestColumn
+ endothelial cell of artery,,,,ManifestColumn
+ endothelial cell of high endothelial venule,,,,ManifestColumn
+ endothelial cell of sinusoid,,,,ManifestColumn
+ endothelial cell of venule,,,,ManifestColumn
+ glomerular capillary endothelial cell,,,,ManifestColumn
+ kidney afferent arteriole endothelial cell,,,,ManifestColumn
+ kidney capillary endothelial cell,,,,ManifestColumn
+ kidney efferent arteriole endothelial cell,,,,ManifestColumn
+ peritubular capillary endothelial cell,,,,ManifestColumn
+ placental villus capillary endothelial cell,,,,ManifestColumn
+ pulmonary capillary endothelial cell,,,,ManifestColumn
+ vasa recta ascending limb cell,,,,ManifestColumn
+ vasa recta cell,,,,ManifestColumn
+ vasa recta descending limb cell,,,,ManifestColumn
+ vein endothelial cell,,,,ManifestColumn
+ vein endothelial cell of respiratory system,,,,ManifestColumn
+Not applicable,,,,ManifestColumn

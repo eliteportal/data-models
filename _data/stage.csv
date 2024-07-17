@@ -1,0 +1,8 @@
+Key,Key Description,columnType,Source,Parent
+Discovery,,STRING,,ManifestColumn
+Not applicable,,STRING,,ManifestColumn
+Not collected,,STRING,,ManifestColumn
+Not specified,,STRING,,ManifestColumn
+Other,,STRING,,ManifestColumn
+Replication,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn

@@ -1,0 +1,5 @@
+Key,Key Description,columnType,Source,Parent
+ILO,,STRING,,ManifestColumn
+LC,,STRING,,ManifestColumn
+LG,,STRING,,ManifestColumn
+LLFS,,STRING,,ManifestColumn
