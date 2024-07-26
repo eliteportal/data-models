@@ -41,3 +41,8 @@ A549,,STRING,,ManifestColumn
  Schwann cell precusor,,STRING,,ManifestColumn
  schwannoma,,STRING,,ManifestColumn
  SH-SY5Y,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+ Not specified,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
