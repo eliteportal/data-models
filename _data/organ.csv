@@ -19,3 +19,8 @@ blood,,STRING,,ManifestColumn
  prostate,,STRING,,ManifestColumn
  skin,,STRING,,ManifestColumn
  spleen,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+ Not specified,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
