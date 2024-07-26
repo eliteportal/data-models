@@ -48,6 +48,8 @@ EL Metadata Dictionary is a [Jekyll](https://jekyllrb.com/) site utilizing [Just
 
 Interim process to update the metadata dictionary site after changes have been made to the data model:
 
+:note: Note: do this in a SEPARATE PR after changes to the data model are merged to main. The scripts to do this reference the data model at the url in `processess/.env`, which is the main branch of this repo. It's not the most elegant right now but keeping the data model updates and the dictionary site updates as separate steps will make rolling back errors easier while we shore up this process.
+
 1. Make a new branch. Run `poetry install` and then `poetry shell` on the command line to install dependencies and open a virtual environment.
 
 2. From the main data-models directory, run `python proccesses/data_manager.py`. This should update some files within `_data/`
