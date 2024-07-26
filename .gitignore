@@ -20,6 +20,9 @@ data_model_creation/_logs/
 .synapseCache/*
 */schematic_service_account_creds.json
 
+# ignore local jekyll site builds
+_site/*
+
 # Allowed
 !**/old_models/*.csv
 !**/models/*.csv
