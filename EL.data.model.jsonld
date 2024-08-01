@@ -5875,21 +5875,18 @@
         {
             "@id": "bts:Replicate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
+            "rdfs:comment": "The identifying number or string for the biological sample in the context of an experiment where the intent is that biological or technical variation is measured. Provide a value OR use on of these values - Unknown Not collected Not applicable Not specified.",
             "rdfs:label": "Replicate",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:manifestColumn"
-                },
-                {
-                    "@id": "bts:ControlType"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Replicate",
-            "sms:required": "sms:false",
+            "sms:displayName": "replicate",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -15957,9 +15954,6 @@
                 },
                 {
                     "@id": "bts:Qcmix"
-                },
-                {
-                    "@id": "bts:Replicate"
                 },
                 {
                     "@id": "bts:Studypool"
