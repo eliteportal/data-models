@@ -1,2 +1,0 @@
-Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-batchSize,The number of samples,,,,False,ManifestColumn,,ManifestColumn,sage.annotations-experimentalData.batchSize-0.0.2,batch,False,NUMBER,Sage Bionetworks, ,Metabolomics
