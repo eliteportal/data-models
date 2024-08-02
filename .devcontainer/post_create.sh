@@ -7,4 +7,5 @@ poetry install
 poetry shell
 
 # write schematic gsheets creds to file for schematic to use
-echo $SCHEMATIC_SERVICE_ACCOUNT_CREDS > ./schematic_service_account_creds.json
+# TODO: figure out why this step hangs when run as part of PostCreateCommand but not otherwise
+# echo $SCHEMATIC_SERVICE_ACCOUNT_CREDS > ./schematic_service_account_creds.json
