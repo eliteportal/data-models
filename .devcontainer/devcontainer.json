@@ -3,6 +3,7 @@
   "features": {
     "ghcr.io/devcontainers-contrib/features/poetry:2": {}
   },
+  "postCreateCommand": "bash ./.devcontainer/post_create.sh",
   "customizations": {
     "vscode": {
       "extensions": [
