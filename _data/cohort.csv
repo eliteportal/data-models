@@ -6,11 +6,13 @@ ABC-DS,,STRING,,ManifestColumn
  BEB-Miller,,STRING,,ManifestColumn
  BLSA,,STRING,,ManifestColumn
  CHDWB,,STRING,,ManifestColumn
+CHS,,STRING,,ManifestColumn
  CLINCOR,,STRING,,ManifestColumn
  DiCAD,,STRING,,ManifestColumn
  EHBS,,STRING,,ManifestColumn
  Emory ADRC,,STRING,,ManifestColumn
  Framingham,,STRING,,ManifestColumn
+ HABC,,STRING,,ManifestColumn
  HBTRC,,STRING,,ManifestColumn
  HPGP,,STRING,,ManifestColumn
  HUP,,STRING,,ManifestColumn
@@ -21,11 +23,13 @@ ABC-DS,,STRING,,ManifestColumn
  MCJ,,STRING,,ManifestColumn
  MCR,,STRING,,ManifestColumn
  MSBB,,STRING,,ManifestColumn
+ MrOS,,STRING,,ManifestColumn
  NYBB,,STRING,,ManifestColumn
  Pitt ADRC,,STRING,,ManifestColumn
  RADC,,STRING,,ManifestColumn
  ROSMAP,,STRING,,ManifestColumn
  SMRI,,STRING,,ManifestColumn
+ SOF,,STRING,,ManifestColumn
  UK Biobank,,STRING,,ManifestColumn
  UPBB,,STRING,,ManifestColumn
  UPenn,,STRING,,ManifestColumn
