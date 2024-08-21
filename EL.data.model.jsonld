@@ -15955,6 +15955,9 @@
                     "@id": "bts:CHDWB"
                 },
                 {
+                    "@id": "bts:CHS"
+                },
+                {
                     "@id": "bts:CLINCOR"
                 },
                 {
@@ -15968,6 +15971,9 @@
                 },
                 {
                     "@id": "bts:Framingham"
+                },
+                {
+                    "@id": "bts:HABC"
                 },
                 {
                     "@id": "bts:HBTRC"
@@ -16000,6 +16006,9 @@
                     "@id": "bts:MSBB"
                 },
                 {
+                    "@id": "bts:MrOS"
+                },
+                {
                     "@id": "bts:NYBB"
                 },
                 {
@@ -16013,6 +16022,9 @@
                 },
                 {
                     "@id": "bts:SMRI"
+                },
+                {
+                    "@id": "bts:SOF"
                 },
                 {
                     "@id": "bts:UKBiobank"
@@ -16175,6 +16187,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:CHS",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CHS",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Cohort"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CHS",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:CLINCOR",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -16256,6 +16285,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Framingham",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HABC",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "HABC",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Cohort"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "HABC",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -16430,6 +16476,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:MrOS",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MrOS",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Cohort"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "MrOS",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:NYBB",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -16511,6 +16574,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "SMRI",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:SOF",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SOF",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Cohort"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "SOF",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
