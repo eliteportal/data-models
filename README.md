@@ -50,17 +50,29 @@ Interim process to update the metadata dictionary site after changes have been m
 
 :note: Note: do this in a SEPARATE PR after changes to the data model are merged to main. The scripts to do this reference the data model at the url in `processess/.env`, which is the main branch of this repo. It's not the most elegant right now but keeping the data model updates and the dictionary site updates as separate steps will make rolling back errors easier while we shore up this process.
 
-1. Make a new branch. Run `poetry install` and then `poetry shell` on the command line to install dependencies and open a virtual environment.
+### UPDATING DICTIONARY SITE IN A GITHUB CODESPACE:
 
-2. From the main data-models directory, run `python proccesses/data_manager.py`. This should update some files within `_data/`
+1. Start your codespace or build a new one. The codespace should build with a container image that includes the package manager `poetry`. You don't need to install poetry. It should also run the command `poetry install` after you launch it, which will tell poetry to install all the python libraries that are specified by this project (this will include schematic).
 
-3. Then run `python processes/page_manager.py`. This should update files within `docs/`. 
+2. Make a new branch. 
 
-4. Optional: you can run `python processes/create_network_graph.py` to create the schema visualization network graph. This is out of date and relatively unused, but it will be good to update and make more robust later.
+3. From the top-level data-models directory, run `poetry run python processes/data_manager.py`. This should update some files within `_data/`
 
-5. Optional: Preview the website locally by running `bundle exec jekyll serve`.
+4. Then run `poetry run python processes/page_manager.py`. This should update files within `docs/`. 
+
+5. Optional: you can run `poetry run python processes/create_network_graph.py` to create the schema visualization network graph. This is out of date and relatively unused, but it will be good to update and make more robust later.
 
 6. Commit changes to your branch and open a PR. After review is passed and the changes are merged to main, a Github action will run via the `pages.yml` workflow to build and deploy the site to https://eliteportal.github.io/data-models/
+
+### UPDATING DICTIONARY SITE LOCALLY: 
+
+1. Make sure you have the `poetry` dependency manager [installed](https://python-poetry.org/docs/#installing-with-the-official-installer) in your workspace. 
+
+Follow steps 2-5 from the section [above](#in-a-github-codespace)
+
+6. Optional: Preview the website locally by running `bundle exec jekyll serve`.
+
+7. Commit changes to your branch and open a PR. After review is passed and the changes are merged to main, a Github action will run via the `pages.yml` workflow to build and deploy the site to https://eliteportal.github.io/data-models/
 
 
 ### Building and previewing the site locally
@@ -80,16 +92,24 @@ Interim process to update the metadata dictionary site after changes have been m
 
 The main branch of this repo is protected, so you cannot push changes to main. To make changes to the data model:
 
-1. Create a new branch in this repo and give it an informative name. 
-2. On that branch, make and commit any changes. You can do this by cloning the repo locally or by [using a Github codespace](#developing-in-a-codespace). Please write informative commit messages in case we need to track down data model inconsistencies or introduced bugs.
-3. Make sure you have the `poetry` dependency manager [installed](https://python-poetry.org/docs/#installing-with-the-official-installer) in your workspace.
-4. Within the `data-models` repository, open a terminal and run `poetry install`. This will install the package versions listed in the `poetry.lock` file.
-5. Once everything has installed, run `poetry shell` from the terminal. This will start a virtual environment running the correct version of all needed packages.
-6. Still in the main directory, run `python data_model_creation/join_data_model.py` from the terminal. This will run a python script that joins all the module csvs, does a few data frame quality checks, and uses `schematic schema convert` to create the updated json-ld data model.
-7. If the script succeeds, double check the version control history of your json-ld data model and make sure the changes you expected have been made! Save and commit all changes, then push your local branch to the remote.
-8. [Optional]: to generate a test manifest, run `schematic manifest -c path/to/config.yml get -dt RelevantDataType -s` from the terminal. This will generate a json schema, a manifest csv, and a link to a google sheet version of the manifest. DO NOT put any real data in the google sheet manifest! This is just an integration test to see if the manifest columns and drop downs look as expected. Don't commit the json schema and the manifest csv generated during this step to your branch -- these are ephemeral and should be deleted. 
-9. Open a pull request and request review from someone else on the EL DCC team. The Github Action that runs when you open a PR will currently fail -- you can ignore this. EL DCC team will perform manual checks before merging changes.
-10. After the PR is merged, delete your branch.
+### EDITING DATA MODEL IN A GITHUB CODESPACE:
+
+1. Start your codespace or build a new one. The codespace should build with a container image that includes the package manager `poetry`. You don't need to install poetry. It should also run the command `poetry install` after you launch it, which will tell poetry to install all the python libraries that are specified by this project (this will include schematic).
+2. Make a new branch. On that branch, make and commit any changes. Please write informative commit messages in case we need to track down data model inconsistencies or introduced bugs.
+3. Still in the top-level directory, run `poetry run python data_model_creation/join_data_model.py` from the terminal. This will run a python script that joins all the module csvs, does a few data frame quality checks, and uses `schematic schema convert` to create the updated json-ld data model.
+4. If the script succeeds, double check the version control history of your json-ld data model and make sure the changes you expected have been made! Save and commit all changes, then push your local branch to the remote.
+5. Open a pull request and request review from someone else on the EL DCC team. The Github Action that runs when you open a PR will currently fail -- you can ignore this. EL DCC team will perform manual checks before merging changes.
+6. After the PR is merged, delete your branch.
+
+### EDITING DATA MODEL LOCALLY:
+
+1. Start your codespace or build a new one. The codespace should build with a container image that includes the package manager `poetry`. You don't need to install poetry. It should also run the command `poetry install` after you launch it, which will tell poetry to install all the python libraries that are specified by this project (this will include schematic).
+
+Follow steps 2-4 [above](#editing-data-model-in-a-github-codespace)
+
+5. [Optional]: to generate a test manifest, run `poetry run schematic manifest -c path/to/config.yml get -dt RelevantDataType -s` from the terminal. This will generate a json schema, a manifest csv, and a link to a google sheet version of the manifest. DO NOT put any real data in the google sheet manifest! This is just an integration test to see if the manifest columns and drop downs look as expected. Don't commit the json schema and the manifest csv generated during this step to your branch -- these are ephemeral and should be deleted. 
+6. Open a pull request and request review from someone else on the EL DCC team. The Github Action that runs when you open a PR will currently fail -- you can ignore this. EL DCC team will perform manual checks before merging changes.
+7. After the PR is merged, delete your branch.
 
 ### Editing attributes by module
 
