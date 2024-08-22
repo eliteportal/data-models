@@ -1,14 +1,13 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "features": {
     "ghcr.io/devcontainers-contrib/features/poetry:2": {}
   },
-  "postCreateCommand": "bash ./.devcontainer/post_create.sh",
+  "postCreateCommand": "poetry install",
   "customizations": {
     "vscode": {
       "extensions": [
 		    "mechatroner.rainbow-csv",
-		    "GrapeCity.gc-excelviewer",
 		    "ms-python.python"
       ]
     }
