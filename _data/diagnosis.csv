@@ -25,6 +25,7 @@ AD-DS,,STRING,,ManifestColumn
  Juvenile Myelomonocytic Leukemia,,STRING,,ManifestColumn
  Leukemia,,STRING,,ManifestColumn
  Lewy body disease,,STRING,,ManifestColumn
+ Longevity,,STRING,,ManifestColumn
  Lung Cancer,,STRING,,ManifestColumn
  Major Depressive Disorder,,STRING,,ManifestColumn
  MCI-DS,,STRING,,ManifestColumn
