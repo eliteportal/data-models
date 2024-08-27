@@ -1,4 +1,4 @@
 Key,Key Description,Valid Values,columnType,Parent,module
-ethnicity,Ethnicity of individual,"Hispanic or Latino,Not Hispanic or Latino,Prefer not to answer",STRING,ManifestColumn,demographics
+ethnicity,Ethnicity of individual,"Hispanic or Latino,Not Hispanic or Latino,Prefer not to answer,Not Applicable",STRING,ManifestColumn,demographics
 race,Race of individual,"American Indian or Alaska Native,Asian,Black or African American,Multiracial,Native Hawaiian or Pacific Islander,Prefer not to answer,White",STRING,ManifestColumn,demographics
 sex,The biological sex of the individual,"Female,Male,Not applicable,Not collected,Not specified,Other,Unknown",STRING,ManifestColumn,demographics

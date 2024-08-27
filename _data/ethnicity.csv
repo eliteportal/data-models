@@ -2,3 +2,4 @@ Key,Key Description,columnType,Source,Parent
 Hispanic or Latino,,STRING,,ManifestColumn
 Not Hispanic or Latino,,STRING,,ManifestColumn
 Prefer not to answer,,STRING,,ManifestColumn
+Not Applicable,,STRING,,ManifestColumn
