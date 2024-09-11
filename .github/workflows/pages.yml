@@ -1,7 +1,7 @@
 # Builds and deploys the ELITE metadata dictionary as a Jekyll site to GitHub Pages
 
-# Preceding: dictionary docs and materials are updated by the update_metadata_dictionary.yml
-# Postceding: check the updated site at https://eliteportal.github.io/data-models/
+# This action should automatically run after: dictionary docs and materials are updated by update_metadata_dictionary.yml workflow
+# After this action completes: check the updated site at https://eliteportal.github.io/data-models/
 
 name: Deploy Jekyll site to Pages
 

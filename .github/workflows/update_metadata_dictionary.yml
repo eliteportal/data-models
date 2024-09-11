@@ -1,6 +1,7 @@
-# Workflow that updates the metadata dictionary materials in _site and _data after changes to the data model
-# Preceding: This should run after PR with changes to the data model is merged into main (update_data_model.yml)
-# Postceding: After this runs, the Github Pages deployment workflow should run (pages.yml)
+# Workflow that updates the metadata dictionary materials in docs/ and _data/ after changes to the data model
+
+# This action should automatically run after: a PR with changes to the data model is merged into main (update_data_model.yml)
+# This action should run before: the Github Pages deployment workflow is run to publish changes to the dictionary site (pages.yml)
 
 
 name: Update Metadata Dictionary

@@ -1,7 +1,9 @@
-# This workflow is used to convert changed EL.data.model.csv to EL.data.model.jsonld
-# It will run any time a PR is opened that includes changes to the 'modules/' directory
-# Before this: manually or programmatically editing the module csvs and opening a PR
-# After this: merging the PR to main will update the dictionary site files (update_metadata_dictionary.yml)
+# This workflow is used to combine all the data model attributes in the "modules" subdirectory into one csv,
+# and then convert the csv to the json-ld data model.
+
+# This action should automatically run after: manually or programmatically editing the module csvs and opening a PR
+# This action should run before: merging the PR to main and updating the dictionary site files (update_metadata_dictionary.yml),
+# or updating the dca-template-config file if template was added, removed, or renamed (create-template-config.yml)
 
 name: Update Data Model
 
