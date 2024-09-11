@@ -3,7 +3,7 @@
 # Postceding: After this runs, the Github Pages deployment workflow should run (pages.yml)
 
 
-name: update_metadata_dictionary
+name: Update Metadata Dictionary
 
 on:
   push:
