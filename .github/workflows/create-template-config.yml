@@ -62,7 +62,7 @@ jobs:
         uses: sage-bionetworks/dca-template-config-action@main
         env:
           data_model: ${{ inputs.data_model }}
-          file: $FILE
+          file: ${{ inputs.file }}
           include_schemas: ${{ inputs.include_schemas }}
           exclude_schemas: ${{ inputs.exclude_schemas }}
           data_model_labels: ${{inputs.data_model_labels}}
