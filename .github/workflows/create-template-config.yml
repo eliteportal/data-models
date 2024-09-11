@@ -27,9 +27,15 @@ on:
       data_model:
         description: URL to a jsonld data model file
         required: true
-      # file:
-      #   description: File name path to save the template config
-      #   required: true
+        default: https://raw.githubusercontent.com/eliteportal/data-models/reinstate-workflows/EL.data.model.jsonld
+      file:
+        description: File name path to save the template config
+        required: true
+        default: dca-template-config.json
+      data_model_labels:
+        description: How schematic reads data model labels. Default 'class_label'. Can also be 'display_label'.
+        required: true
+        default: class_label
       include_schemas:
         description: Space-separated string of schemas to include in output. Must be empty if using exclude_schemas.
         required: false
@@ -59,12 +65,13 @@ jobs:
           file: $FILE
           include_schemas: ${{ inputs.include_schemas }}
           exclude_schemas: ${{ inputs.exclude_schemas }}
+          data_model_labels: $${{inputs.data_model_labels}}
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: 'data_curator_config/schemas/dca_template_config.schema.json'
-          INPUT_JSONS: $FILE
+          INPUT_JSONS: ${{ inputs.file }}
       
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
@@ -74,4 +81,4 @@ jobs:
           delete-branch: true
           branch-suffix: timestamp
           add-paths: |
-            $FILE
+            ${{ inputs.file }}
