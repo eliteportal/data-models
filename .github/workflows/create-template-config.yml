@@ -64,7 +64,7 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: 'data_curator_config/schemas/dca_template_config.schema.json'
-          INPUT_JSONS: ${{ inputs.file }}
+          INPUT_JSONS: $FILE
       
       - name: Open PR
         uses: peter-evans/create-pull-request@v5
@@ -74,4 +74,4 @@ jobs:
           delete-branch: true
           branch-suffix: timestamp
           add-paths: |
-            ${{ inputs.file }}
+            $FILE
