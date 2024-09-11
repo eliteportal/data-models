@@ -65,7 +65,7 @@ jobs:
           file: $FILE
           include_schemas: ${{ inputs.include_schemas }}
           exclude_schemas: ${{ inputs.exclude_schemas }}
-          data_model_labels: $${{inputs.data_model_labels}}
+          data_model_labels: ${{inputs.data_model_labels}}
         
       - name: Validate Config File
         uses: docker://orrosenblatt/validate-json-action:latest
