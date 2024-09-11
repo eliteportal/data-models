@@ -1,18 +1,18 @@
-# Updates the metadata dictionary that is @ https://eliteportal.github.io/data-dictionary/
-
-# July 2024: currently only runs on workflow dispatch (manual trigger); needs fixed
+# Workflow that updates the metadata dictionary materials in _site and _data after changes to the data model
+# Preceding: This should run after PR with changes to the data model is merged into main (update_data_model.yml)
+# Postceding: After this runs, the Github Pages deployment workflow should run (pages.yml)
 
 
 name: update_metadata_dictionary
 
 on:
-  #push:
-  # branches:
-  #    - main
+  push:
+   branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  changed_files:
+  dictionary:
     runs-on: ubuntu-latest
     name: update term files and pages
     steps:
@@ -44,4 +44,5 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'Updated dictionary term files and term pages'
+          message: 'Github Action: Updated dictionary term files and term pages'
+          default_author: github_actions
