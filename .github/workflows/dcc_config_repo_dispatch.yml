@@ -11,12 +11,12 @@ name: dcc_config_repo_dispatch
 # Can specify other branches or triggers for this workflow
 # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - closed # requires if_merged job below to run only during a merged PR
+  # push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   types:
+  #     - closed # requires if_merged job below to run only during a merged PR
   workflow_dispatch:
 
 # Edit these variables for your data model
