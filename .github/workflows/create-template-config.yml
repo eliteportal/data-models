@@ -27,15 +27,15 @@ on:
       data_model:
         description: URL to a jsonld data model file
         required: true
-        default: https://raw.githubusercontent.com/eliteportal/data-models/reinstate-workflows/EL.data.model.jsonld
+        default: 'https://raw.githubusercontent.com/eliteportal/data-models/reinstate-workflows/EL.data.model.jsonld'
       file:
         description: File name path to save the template config
         required: true
-        default: dca-template-config.json
+        default: 'dca-template-config.json'
       data_model_labels:
         description: How schematic reads data model labels. Default 'class_label'. Can also be 'display_label'.
         required: true
-        default: class_label
+        default: 'class_label'
       include_schemas:
         description: Space-separated string of schemas to include in output. Must be empty if using exclude_schemas.
         required: false
