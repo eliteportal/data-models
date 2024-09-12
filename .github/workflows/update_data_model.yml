@@ -1,54 +1,51 @@
-# This workflow is used to convert changed EL.data.model.csv to EL.data.model.jsonld
-# and push the updated ELITE.data.model.jsonld to feature branch
-# intended to be used after updating the individual modules
+# This workflow is used to combine all the data model attributes in the "modules" subdirectory into one csv,
+# and then convert the csv to the json-ld data model.
 
-# July 2024: currently only runs on workflow dispatch (manual trigger); needs fixed
+# This action should automatically run after: manually or programmatically editing the module csvs and opening a PR
+# This action should run before: merging the PR to main and updating the dictionary site files (update_metadata_dictionary.yml),
+# or updating the dca-template-config file if template was added, removed, or renamed (create-template-config.yml)
 
 name: Update Data Model
 
 on:
-  #pull_request:
-  # branches: main
+  pull_request:
+   branches: main
     # runs on changes to module csvs
-  # paths: 'modules/**'
+   paths: 'modules/**'
+
   workflow_dispatch:
+
 jobs:
   CI:
-    name: schema-convert
+    name: update-data-model
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: "3.9"
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  
 
-      - name: Install Schematic
-        shell: bash
-        run: |
-          pip3 install poetry
-          git clone --single-branch --branch main https://github.com/Sage-Bionetworks/schematic.git
-          cd schematic
-          poetry build
-          pip3 install dist/schematicpy-*-py3-none-any.whl
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+  
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
 
-      - name: Join data model
-        shell: bash
-        run: bash data_model_creation/update_data_model.sh
-        
-      - uses: r-lib/actions/pr-fetch@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Install dependencies
+      run: |
+        poetry install
 
-      - name: Commit the changes
-        run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add EL.data.model.jsonld
-          git commit -m "GitHub Action: convert *.model.csv to *.model.jsonld" || echo "No changes to commit"
-
-      - uses: r-lib/actions/pr-push@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Join data model and convert to json-ld
+      run: |
+        poetry run python data_model_creation/join_data_model.py
+    
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        message: 'Github Action: Joined modules and converted to json-ld data model'
