@@ -115,6 +115,9 @@
                     "@id": "bts:DNAextraction"
                 },
                 {
+                    "@id": "bts:TMTType"
+                },
+                {
                     "@id": "bts:AcquisitionBatchID"
                 },
                 {
@@ -160,10 +163,19 @@
                     "@id": "bts:BackgroundTrait"
                 },
                 {
+                    "@id": "bts:Batch"
+                },
+                {
+                    "@id": "bts:BatchChannel"
+                },
+                {
                     "@id": "bts:BatchID"
                 },
                 {
                     "@id": "bts:BatchLabel"
+                },
+                {
+                    "@id": "bts:BatchSize"
                 },
                 {
                     "@id": "bts:CaptivityDuration"
@@ -259,6 +271,9 @@
                     "@id": "bts:FractionIdentifier"
                 },
                 {
+                    "@id": "bts:Fragmentation"
+                },
+                {
                     "@id": "bts:GasFlowTemperature"
                 },
                 {
@@ -287,6 +302,9 @@
                 },
                 {
                     "@id": "bts:IonProperty"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
                 },
                 {
                     "@id": "bts:IsobaricLabelingReagent"
@@ -340,6 +358,9 @@
                     "@id": "bts:MsTarget"
                 },
                 {
+                    "@id": "bts:MulticonsensusStudyFileID"
+                },
+                {
                     "@id": "bts:NucleAcidExt"
                 },
                 {
@@ -347,6 +368,9 @@
                 },
                 {
                     "@id": "bts:NumberIndividuals"
+                },
+                {
+                    "@id": "bts:Pool"
                 },
                 {
                     "@id": "bts:ProcessingBatchID"
@@ -391,10 +415,16 @@
                     "@id": "bts:ReferenceTranscriptID"
                 },
                 {
+                    "@id": "bts:Replicate"
+                },
+                {
                     "@id": "bts:ReportedTrait"
                 },
                 {
                     "@id": "bts:RepositoryName"
+                },
+                {
+                    "@id": "bts:Resolution"
                 },
                 {
                     "@id": "bts:ResultUnit"
@@ -544,9 +574,6 @@
                     "@id": "bts:VisitCode"
                 },
                 {
-                    "@id": "bts:BatchSize"
-                },
-                {
                     "@id": "bts:CellType"
                 },
                 {
@@ -670,6 +697,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "DNAextraction",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TMTType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Specifies how TMT reporter ions are quantified.Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "TMTType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "TMTType",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -929,6 +973,40 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Batch",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The batch number or identifying string. The single TMT pool (injection) the sample was included in. Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "Batch",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "batch",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BatchChannel",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TMT channel the sample is labeled with. Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "BatchChannel",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "batchChannel",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:BatchID",
             "@type": "rdfs:Class",
             "rdfs:comment": "ID used to identify a batch, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse",
@@ -959,6 +1037,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "batchLabel",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:BatchSize",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The number of samples",
+            "rdfs:label": "BatchSize",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "batchSize",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -1095,7 +1190,7 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:SpecimenType"
+                    "@id": "bts:IsMultiSpecimen"
                 },
                 {
                     "@id": "bts:TranscriptType"
@@ -1117,6 +1212,9 @@
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:SpecimenType"
                 },
                 {
                     "@id": "bts:DirectionalBSseqLibrary"
@@ -1178,9 +1276,6 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:SpecimenType"
-                },
-                {
                     "@id": "bts:TranscriptType"
                 },
                 {
@@ -1203,6 +1298,9 @@
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:SpecimenType"
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
@@ -1270,9 +1368,6 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:SpecimenType"
-                },
-                {
                     "@id": "bts:TranscriptType"
                 },
                 {
@@ -1295,6 +1390,9 @@
                 },
                 {
                     "@id": "bts:DirectionalBSseqLibrary"
+                },
+                {
+                    "@id": "bts:SpecimenType"
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
@@ -1451,10 +1549,10 @@
                     "@id": "bts:NucleicAcidSource"
                 },
                 {
-                    "@id": "bts:SpecimenType"
+                    "@id": "bts:LabelQuantitation"
                 },
                 {
-                    "@id": "bts:LabelQuantitation"
+                    "@id": "bts:SpecimenType"
                 },
                 {
                     "@id": "bts:LibraryPreparationMethod"
@@ -4138,6 +4236,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Fragmentation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Specifies the mode by which MS2 and MS3 ions are generated.Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "Fragmentation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "fragmentation",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:GasFlowTemperature",
             "@type": "rdfs:Class",
             "rdfs:comment": "e.g., nebulization gas, cone gas, etc.Unit of measure-C, F, K, Not specified",
@@ -4459,6 +4574,68 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Positive",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:IsMultiSpecimen",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Whether or not the file contains more than one specimen.Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "IsMultiSpecimen",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:True"
+                },
+                {
+                    "@id": "bts:False"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                }
+            ],
+            "sms:displayName": "isMultiSpecimen",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:True",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "True",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "True",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:False",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "False",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "False",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -5237,6 +5414,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:MulticonsensusStudyFileID",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "F-number assigned by Termo Proteome Discoverer software to different batches (plexes) of RAW (direct Thermo mass spectrometer output) files (F01, F02, etc.).Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "MulticonsensusStudyFileID",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "multiconsensusStudyFileID",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:NucleAcidExt",
             "@type": "rdfs:Class",
             "rdfs:comment": "Nucleic acid extraction. A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample. (example, https-//mobio.com/media/wysiwyg/pdfs/protocols/12888.pdf). Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
@@ -5284,6 +5478,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "numberIndividuals",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pool",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The identifying number or string representing a mix of specimens from multiple individuals. Provide a value OR provide one of these values - Unknown Not collected Not applicabl Not specified",
+            "rdfs:label": "Pool",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "pool",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -5658,6 +5869,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "referenceTranscriptID",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Replicate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The identifying number or string for the biological sample in the context of an experiment where the intent is that biological or technical variation is measured. Provide a value OR use on of these values - Unknown Not collected Not applicable Not specified.",
+            "rdfs:label": "Replicate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "replicate",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -6075,6 +6303,23 @@
             },
             "sms:displayName": "UniProt",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Resolution",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Minimum nominal mass-over-charge (m/z) difference detectable.Provide a value OR provide one of these values - Unknown Not collected Not applicable Not specified",
+            "rdfs:label": "Resolution",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "resolution",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -6799,6 +7044,12 @@
                     "@id": "bts:CerebrospinalFluid(CSF)"
                 },
                 {
+                    "@id": "bts:QC"
+                },
+                {
+                    "@id": "bts:Control"
+                },
+                {
                     "@id": "bts:Notapplicable"
                 },
                 {
@@ -6879,6 +7130,43 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Cerebrospinal Fluid (CSF)",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:QC",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "QC",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpecimenType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "QC",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Control",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Control",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:Diagnosis"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "control",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -8937,23 +9225,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "studyWiki",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:BatchSize",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The number of samples",
-            "rdfs:label": "BatchSize",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:manifestColumn"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "batchSize",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -12369,23 +12640,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Control",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Control",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Diagnosis"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "control",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:Corticobasaldegenerationdisorder",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -15728,9 +15982,6 @@
                     "@id": "bts:Qcmix"
                 },
                 {
-                    "@id": "bts:Replicate"
-                },
-                {
                     "@id": "bts:Studypool"
                 },
                 {
@@ -15857,23 +16108,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "qc mix",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Replicate",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Replicate",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:ControlType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Replicate",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -18097,6 +18331,9 @@
                     "@id": "bts:AssayRNAseqTemplate"
                 },
                 {
+                    "@id": "bts:AssayTMTproteomicsTemplate"
+                },
+                {
                     "@id": "bts:AssayBsSeqTemplate"
                 },
                 {
@@ -18147,6 +18384,79 @@
             },
             "sms:displayName": "template",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayTMTproteomicsTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for TMT proteomics",
+            "rdfs:label": "AssayTMTproteomicsTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_TMTproteomics_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:SpecimenID"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SampleType"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:InstrumentModel"
+                },
+                {
+                    "@id": "bts:Pool"
+                },
+                {
+                    "@id": "bts:Replicate"
+                },
+                {
+                    "@id": "bts:Batch"
+                },
+                {
+                    "@id": "bts:BatchChannel"
+                },
+                {
+                    "@id": "bts:TMTType"
+                },
+                {
+                    "@id": "bts:Fragmentation"
+                },
+                {
+                    "@id": "bts:Resolution"
+                },
+                {
+                    "@id": "bts:MulticonsensusStudyFileID"
+                },
+                {
+                    "@id": "bts:Component"
+                }
+            ],
             "sms:validationRules": []
         },
         {
@@ -19199,23 +19509,6 @@
                     "@id": "bts:Component"
                 }
             ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:IsMultiSpecimen",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "IsMultiSpecimen",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "isMultiSpecimen",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
