@@ -1,0 +1,15 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/poetry:2": {}
+  },
+  "postCreateCommand": "poetry install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+		    "mechatroner.rainbow-csv",
+		    "ms-python.python"
+      ]
+    }
+  }
+}

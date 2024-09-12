@@ -6,22 +6,25 @@ There is a separate [data-dictionary](https://github.com/eliteportal/data-dictio
 
 <!-- toc -->
 
-- [EL Metadata Dictionary Site](#el-metadata-dictionary-site)
-  * [Updating Metadata Dictionary Site -- interim processes](#updating-metadata-dictionary-site----interim-processes)
-    + [Building and previewing the site locally](#building-and-previewing-the-site-locally)
 - [EL Data Model](#el-data-model)
-  * [Editing data models - interim process](#editing-data-models---interim-process)
+  * [Editing the data model](#editing-the-data-model)
     + [Editing attributes by module](#editing-attributes-by-module)
       - [Adding a new valid value to an existing manifest column](#adding-a-new-valid-value-to-an-existing-manifest-column)
       - [Adding a new column to a manifest template](#adding-a-new-column-to-a-manifest-template)
     + [Notes on collaboratively editing csvs](#notes-on-collaboratively-editing-csvs)
-    + [Scraping Valid Values from Ontology](#scraping-valid-values-from-ontology)
-  * [Automations](#automations)
-    + [Updates to data model](#updates-to-data-model)
-    + [Updating the data dictionary](#updating-the-data-dictionary)
     + [Adding a new template](#adding-a-new-template)
-  * [Developing in a codespace](#developing-in-a-codespace)
-    + [Create Data Model Visualization Tree](#create-data-model-visualization-tree)
+- [EL Metadata Dictionary Site](#el-metadata-dictionary-site)
+  * [Updating Metadata Dictionary Site via Github Action](#updating-metadata-dictionary-site-via-github-action)
+- [Other things you can do in this repository](#other-things-you-can-do-in-this-repository)
+  * [Making changes WITHOUT Github Actions (locally or in a codespace):](#making-changes-without-github-actions-locally-or-in-a-codespace)
+    + [editing data model in a github codespace](#editing-data-model-in-a-github-codespace)
+    + [editing data model locally](#editing-data-model-locally)
+    + [updating dictionary site in a github codespace](#updating-dictionary-site-in-a-github-codespace)
+    + [updating dictionary site locally](#updating-dictionary-site-locally)
+  * [Building and previewing the jekyll site locally](#building-and-previewing-the-jekyll-site-locally)
+  * [Scraping Valid Values from Ontology](#scraping-valid-values-from-ontology)
+  * [DCA config repo dispatch](#dca-config-repo-dispatch)
+  * [Create Data Model Visualization Tree](#create-data-model-visualization-tree)
   * [Developers](#developers)
     + [Files](#files)
     + [To setup environment](#to-setup-environment)
@@ -29,67 +32,13 @@ There is a separate [data-dictionary](https://github.com/eliteportal/data-dictio
 
 <!-- tocstop -->
 
-# EL Metadata Dictionary Site
-
-EL Metadata Dictionary is a [Jekyll](https://jekyllrb.com/) site utilizing [Just the Docs](https://just-the-docs.github.io/just-the-docs/) theme and is published on [GitHub Pages](https://pages.github.com/).
-
-- `index.md` is the home page
-- `_config.yml` can be used to tweak Jekyll settings, such as theme, title
-- `_layout/` contains html templates we use to generate the web pages for each data model term
-- `_data/` folder stores data for Jekyll to use when generating the site
-- files in `docs/` will be accessed by GitHub Actions workflow to build the site
-- two scripts in `processes/` can be run to generate updated files in `_data/` and `docs/` to publish changes in the data model to the dictionary site
-- `.env` contains the link to the data model that the dictionary site is based on
-- `Gemfile` is package dependencies for buildling the website
-- `pyproject.toml` and `poetry.lock` list the python and package dependencies for the scripts that update both the data model and the data dictionary site
-- You can add additional descriptions to home page or specific page by directly editing `index.md` or markdown files in `docs/`.
-
-## Updating Metadata Dictionary Site -- interim processes
-
-Interim process to update the metadata dictionary site after changes have been made to the data model:
-
-:note: Note: do this in a SEPARATE PR after changes to the data model are merged to main. The scripts to do this reference the data model at the url in `processess/.env`, which is the main branch of this repo. It's not the most elegant right now but keeping the data model updates and the dictionary site updates as separate steps will make rolling back errors easier while we shore up this process.
-
-1. Make a new branch. Run `poetry install` and then `poetry shell` on the command line to install dependencies and open a virtual environment.
-
-2. From the main data-models directory, run `python proccesses/data_manager.py`. This should update some files within `_data/`
-
-3. Then run `python processes/page_manager.py`. This should update files within `docs/`. 
-
-4. Optional: you can run `python processes/create_network_graph.py` to create the schema visualization network graph. This is out of date and relatively unused, but it will be good to update and make more robust later.
-
-5. Optional: Preview the website locally by running `bundle exec jekyll serve`.
-
-6. Commit changes to your branch and open a PR. After review is passed and the changes are merged to main, a Github action will run via the `pages.yml` workflow to build and deploy the site to https://eliteportal.github.io/data-models/
-
-
-### Building and previewing the site locally
-
-1. Install Jekyll `gem install bundler jekyll`
-2. Install Bundler `bundle install`
-3. Run `bundle exec jekyll serve` to build your site and preview it at `http://localhost:4000`. The built site is stored in the directory `_site`.
-
-
 # EL Data Model
 
 **EL.data.model.\* ([csv](https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.csv) | [jsonld](https://raw.githubusercontent.com/eliteportal/data-models/main/EL.data.model.jsonld))**: this is the current, "live" version of the EL Portal data model. It is being used by both the staging and production versions of the multitenant Data Curator App.
 
-## Editing data models - interim process
+## Editing the data model
 
-🚧 The Github action that automatically compiles the module csvs and converts to a json-ld is not working as expected as of June 2024. For now, please use the following procedure to manually compile attribute modules and convert the updated data model to a json-ld:
-
-The main branch of this repo is protected, so you cannot push changes to main. To make changes to the data model:
-
-1. Create a new branch in this repo and give it an informative name. 
-2. On that branch, make and commit any changes. You can do this by cloning the repo locally or by [using a Github codespace](#developing-in-a-codespace). Please write informative commit messages in case we need to track down data model inconsistencies or introduced bugs.
-3. Make sure you have the `poetry` dependency manager [installed](https://python-poetry.org/docs/#installing-with-the-official-installer) in your workspace.
-4. Within the `data-models` repository, open a terminal and run `poetry install`. This will install the package versions listed in the `poetry.lock` file.
-5. Once everything has installed, run `poetry shell` from the terminal. This will start a virtual environment running the correct version of all needed packages.
-6. Still in the main directory, run `python data_model_creation/join_data_model.py` from the terminal. This will run a python script that joins all the module csvs, does a few data frame quality checks, and uses `schematic schema convert` to create the updated json-ld data model.
-7. If the script succeeds, double check the version control history of your json-ld data model and make sure the changes you expected have been made! Save and commit all changes, then push your local branch to the remote.
-8. [Optional]: to generate a test manifest, run `schematic manifest -c path/to/config.yml get -dt RelevantDataType -s` from the terminal. This will generate a json schema, a manifest csv, and a link to a google sheet version of the manifest. DO NOT put any real data in the google sheet manifest! This is just an integration test to see if the manifest columns and drop downs look as expected. Don't commit the json schema and the manifest csv generated during this step to your branch -- these are ephemeral and should be deleted. 
-9. Open a pull request and request review from someone else on the EL DCC team. The Github Action that runs when you open a PR will currently fail -- you can ignore this. EL DCC team will perform manual checks before merging changes.
-10. After the PR is merged, delete your branch.
+The main branch of this repo is protected, so you cannot push changes to main. To edit the data model, create a new branch of this repository and make changes to the attribute csv files in the `modules/` subdirectory. Once you have made your changes, open a pull request. This will trigger a Github Action that automatically joins the attributes from the module csv, converts the csv data model to the json-ld format, and commits the changes to your PR. Please **do not** make changes to `EL.data.model.csv` or `EL.data.model.jsonld` by hand! 
 
 ### Editing attributes by module
 
@@ -136,57 +85,99 @@ A persistent issue is that manually editing csvs is challening. Some columns in 
 - Cloning the repo, making a branch, and opening csvs locally in Excel or another spreadsheet program 🖥️ : probably the best UI experience, but involves a few extra steps with git.
 - Using a [Github codespace](#developing-in-a-codespace) to launch VSCode in the browser, and editing with the pre-installed RainbowCSV extension 🌈 : Still difficult to edit csvs as plain text, but the color formatting and ability to use a soft word wrap makes it much easier to distinguish columns. [RainbowCSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) lets you designate "sticky" rows and columns for easier scrolling, and also has a nice "CSVLint" function that will check for formatting errors after you make changes.
 
-We are exploring better solutions to this problem -- if you have ideas, tell us!
+### Adding a new template
 
-### Scraping Valid Values from Ontology
+If you add a new template manifest (e.g. for a new assay type), remove an existing manifest, or rename a manifest, you need to update the `dca-template-config.yml` file that DCA uses to populate the menu contributors will use to select their template. To do this, you must **manually trigger** the Github Action `create-template-config.yml`. This will re-create the DCA template config file and open a new PR with the changes. Review and merge the PR to complete the template config update. You can use the default input values provided when you manually trigger this workflow.
+
+# EL Metadata Dictionary Site
+
+The Metadata Dictionary site is at: https://eliteportal.github.io/data-models/. 
+
+EL Metadata Dictionary is a [Jekyll](https://jekyllrb.com/) site utilizing [Just the Docs](https://just-the-docs.github.io/just-the-docs/) theme and is published on [GitHub Pages](https://pages.github.com/).
+
+- `index.md` is the home page
+- `_config.yml` can be used to tweak Jekyll settings, such as theme, title
+- `_layout/` contains html templates we use to generate the web pages for each data model term
+- `_data/` folder stores data for Jekyll to use when generating the site
+- files in `docs/` will be accessed by GitHub Actions workflow to build the site
+- two scripts in `processes/` can be run to generate updated files in `_data/` and `docs/` to publish changes in the data model to the dictionary site
+- `.env` contains the link to the data model that the dictionary site is based on
+- `Gemfile` is package dependencies for buildling the website
+- `pyproject.toml` and `poetry.lock` list the python and package dependencies for the scripts that update both the data model and the data dictionary site
+- You can add additional descriptions to home page or specific page by directly editing `index.md` or markdown files in `docs/`.
+
+## Updating Metadata Dictionary Site via Github Action
+
+1. The dictionary site materials should be updated after you make changes to the data model ([see](#editing-the-data-model)). Once a PR with changes is reviewed and merged into main, the Github Action in `update_metadata_dictionary.yml` should automatically start. This action will update the files in `_data/` and `docs/` that are used to populate the dictionary website. 
+
+2. Once any changes are detected in the `_data/` or `docs/` folders on the main branch, another Github action called `pages.yml` will run to update the deployment to the Github pages website. Verify that the dictionary site looks as expected at https://eliteportal.github.io/data-models/. 
+
+# Other things you can do in this repository
+
+## Making changes WITHOUT Github Actions (locally or in a codespace):
+
+### editing data model in a github codespace
+
+1. Start your codespace or build a new one. The codespace should build with a container image that includes the package manager `poetry`. You don't need to install poetry. It should also run the command `poetry install` after you launch it, which will tell poetry to install all the python libraries that are specified by this project (this will include schematic).
+2. Make a new branch. On that branch, make and commit any changes. Please write informative commit messages in case we need to track down data model inconsistencies or introduced bugs.
+3. Still in the top-level directory, run `poetry run python data_model_creation/join_data_model.py` from the terminal. This will run a python script that joins all the module csvs, does a few data frame quality checks, and uses `schematic schema convert` to create the updated json-ld data model.
+4. If the script succeeds, double check the version control history of your json-ld data model and make sure the changes you expected have been made! Save and commit all changes, then push your local branch to the remote.
+5. Open a pull request and request review from someone else on the EL DCC team. The Github Action that runs when you open a PR will currently fail -- you can ignore this. EL DCC team will perform manual checks before merging changes.
+6. After the PR is merged, delete your branch.
+
+### editing data model locally
+
+1. Start your codespace or build a new one. The codespace should build with a container image that includes the package manager `poetry`. You don't need to install poetry. It should also run the command `poetry install` after you launch it, which will tell poetry to install all the python libraries that are specified by this project (this will include schematic).
+
+Follow steps 2-4 [above](#editing-data-model-in-a-github-codespace)
+
+5. [Optional]: to generate a test manifest, run `poetry run schematic manifest -c path/to/config.yml get -dt RelevantDataType -s` from the terminal. This will generate a json schema, a manifest csv, and a link to a google sheet version of the manifest. DO NOT put any real data in the google sheet manifest! This is just an integration test to see if the manifest columns and drop downs look as expected. Don't commit the json schema and the manifest csv generated during this step to your branch -- these are ephemeral and should be deleted. 
+6. Open a pull request and request review from someone else on the EL DCC team. The Github Action that runs when you open a PR will currently fail -- you can ignore this. EL DCC team will perform manual checks before merging changes.
+7. After the PR is merged, delete your branch.
+
+### updating dictionary site in a github codespace
+
+1. Start your codespace or build a new one. The codespace should build with a container image that includes the package manager `poetry`. You don't need to install poetry. It should also run the command `poetry install` after you launch it, which will tell poetry to install all the python libraries that are specified by this project (this will include schematic).
+
+2. Make a new branch. 
+
+3. From the top-level data-models directory, run `poetry run python processes/data_manager.py`. This should update some files within `_data/`
+
+4. Then run `poetry run python processes/page_manager.py`. This should update files within `docs/`. 
+
+5. Optional: you can run `poetry run python processes/create_network_graph.py` to create the schema visualization network graph. This is out of date and relatively unused, but it will be good to update and make more robust later.
+
+6. Commit changes to your branch and open a PR. After review is passed and the changes are merged to main, a Github action will run via the `pages.yml` workflow to build and deploy the site to https://eliteportal.github.io/data-models/
+
+### updating dictionary site locally
+
+1. Make sure you have the `poetry` dependency manager [installed](https://python-poetry.org/docs/#installing-with-the-official-installer) in your workspace. 
+
+Follow steps 2-5 from the section [above](#in-a-github-codespace)
+
+6. Optional: Preview the website locally by running `bundle exec jekyll serve`.
+
+7. Commit changes to your branch and open a PR. After review is passed and the changes are merged to main, a Github action will run via the `pages.yml` workflow to build and deploy the site to https://eliteportal.github.io/data-models/
+
+## Building and previewing the jekyll site locally
+
+1. Install Jekyll `gem install bundler jekyll`
+2. Install Bundler `bundle install`
+3. Run `bundle exec jekyll serve` to build your site and preview it at `http://localhost:4000`. The built site is stored in the directory `_site`.
+
+## Scraping Valid Values from Ontology
 
 ❓status unknown
 
 Use `scraping_valid_values.py` to pull in values from EBI OLS sources. 
 
-## Automations 
+## DCA config repo dispatch
 
-🚧 currently broken! Also the documentation here is from the AD data model, I don't think it's accurate for the EL repo.
- 
-When you open a PR that includes any changes to files in the `modules/` directory, a Github Action will automatically run before merging is allowed. This action:
+❓status unknown
 
-### Updates to data model
+`dcc_config_repo_dispatch.yml` -- Not sure what this is for, still investigating its use. Authorization is failing.
 
-1. Runs the `assemble_csv_data_model.py` script to concatenate the modular attribute csvs into one data frame, sort alphabetically by `Parent` and then `Attribute`, and write the combined dataframe to `EL.data.model.csv`. The action then commits the changes to the master data model csv.
-2. Installs `schematic` from the develop branch and runs `schema convert` on the newly-concatenated data model csv to generate a new version of the jsonld file `EL.data.model.jsonld`. The action also commits the changes to the jsonld.
-
-If this automated workflow fails, then the data model may be invalid and further investigation is needed.
-
-### Updating the data dictionary
-
-🚧 currently broken!
-
-1. Runs `update-data-dictionary.yaml` in order to reflect information found in the dictionary for contributors
-
-
-### Adding a new template
-
-❓ status unknown
-
-Recreates DCA template config
-
-❓ status unkown
-
-- Run the github action `create-template-config.yml` when adding new templates
-
-## Developing in a codespace
-
-:warning: If you are working in a Github Codespace, do NOT commit any Synapse credentials to the repository and do NOT use any real human data when testing data model function. This is not a secure environment!
-
-If you want to make changes to the data model and test them out by generating manifests with `schematic`, you can use the devcontainer in this repo with a Github Codespace. This will open a container in a remote instance of VSCode and install the latest version of schematic.
-
-Codespace secrets:
-
-- SYNAPSE_PAT: scoped to view and download permissions on the sysbio-dcc-tasks-01 Synapse service account
-- SERVICE_ACCOUNT_CREDS: these are creds for using the Google sheets api with schematic
-
-
-### Create Data Model Visualization Tree
+## Create Data Model Visualization Tree
 
 [Schematic API](https://schematic.api.sagebionetworks.org/v1/ui/)
 [Visualization Repository](https://github.com/Sage-Bionetworks/schema_visualization)

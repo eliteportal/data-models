@@ -25,6 +25,8 @@ sphinx-rtd-theme = "^2.0.0"
 markdown = "^3.6"
 python-frontmatter = "^1.1.0"
 mdutils = "^1.6.0"
+jupyterlab = "^4.2.5"
+flask-cors = "^5.0.0"
 
 [tool.poetry.group.dictionary.dependencies]
 jinja2 = "^3.1.2"
