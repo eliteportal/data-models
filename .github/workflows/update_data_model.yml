@@ -23,9 +23,21 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-    - uses: actions/checkout@v4
+  
+    # if this is running on a PR, checkout the branch from head repo (not detatched)  
+    # see https://github.com/EndBug/add-and-commit/issues/405?tab=readme-ov-file#working-with-prs
+    - name: checkout if PR
+      if: ${{ github.event_name == 'pull_request' }}
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0  
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    - name: checkout if not PR
+      if: ${{ github.event_name != 'pull_request' }}
+      uses: actions/checkout@v4
+      with:
+          fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
