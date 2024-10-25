@@ -6909,6 +6909,9 @@
                     "@id": "bts:SpecimenType"
                 },
                 {
+                    "@id": "bts:Organ"
+                },
+                {
                     "@id": "bts:Tissue"
                 }
             ],
@@ -7290,6 +7293,18 @@
                 },
                 {
                     "@id": "bts:Wholebrain"
+                },
+                {
+                    "@id": "bts:Gonadalfat"
+                },
+                {
+                    "@id": "bts:Inguinalfat"
+                },
+                {
+                    "@id": "bts:Kidney"
+                },
+                {
+                    "@id": "bts:Gastrocnemiusmuscle"
                 }
             ],
             "sms:displayName": "tissue",
@@ -10152,6 +10167,18 @@
                 },
                 {
                     "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Plasma"
+                },
+                {
+                    "@id": "bts:Gonadalfat"
+                },
+                {
+                    "@id": "bts:Inguinalfat"
+                },
+                {
+                    "@id": "bts:Gastrocnemiusmuscle"
                 }
             ],
             "sms:displayName": "organ",
@@ -10271,6 +10298,9 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
                 }
             ],
             "schema:isPartOf": {
@@ -10484,6 +10514,66 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "spleen",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Gonadalfat",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Gonadalfat",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "gonadal fat",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Inguinalfat",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Inguinalfat",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "inguinal fat",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Gastrocnemiusmuscle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Gastrocnemiusmuscle",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "gastrocnemius muscle",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
