@@ -24,3 +24,7 @@ blood,,STRING,,ManifestColumn
  Not applicable,,STRING,,ManifestColumn
  Other,,STRING,,ManifestColumn
  Unknown,,STRING,,ManifestColumn
+ plasma,,STRING,,ManifestColumn
+ gonadal fat,,STRING,,ManifestColumn
+ inguinal fat,,STRING,,ManifestColumn
+ gastrocnemius muscle,,STRING,,ManifestColumn

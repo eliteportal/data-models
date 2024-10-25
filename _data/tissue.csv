@@ -88,3 +88,9 @@ amygdala,,STRING,,ManifestColumn
  ventrolateral prefrontal cortex,,STRING,,ManifestColumn
  VZ/SVZ,,STRING,,ManifestColumn
  whole brain,,STRING,,ManifestColumn
+ gonadal fat,,STRING,,ManifestColumn
+ inguinal fat,,STRING,,ManifestColumn
+ kidney,,STRING,,ManifestColumn
+ plasma,,STRING,,ManifestColumn
+ liver,,STRING,,ManifestColumn
+ gastrocnemius muscle,,STRING,,ManifestColumn
