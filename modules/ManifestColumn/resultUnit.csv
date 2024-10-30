@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-resultUnit,The unit for the result value,"FPKM,Not applicable,Not collected,Not specified,RPKM,TPM,Unknown",,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,Sage Bionetworks, ,"RNAseq,Whole_Genome_Sequencing,scRNAseq"
+resultUnit,The unit for the result value,"FPKM,raw count, Not applicable,Not collected,Not specified,RPKM,TPM,Unknown",,,True,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,Sage Bionetworks, ,"RNAseq,Whole_Genome_Sequencing,scRNAseq"

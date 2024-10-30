@@ -1047,12 +1047,15 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:CaptivityStatus"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Stranded",
+            "sms:displayName": "stranded",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -1086,19 +1089,16 @@
                     "@id": "bts:RunType"
                 },
                 {
-                    "@id": "bts:ResultUnit"
-                },
-                {
                     "@id": "bts:Stage"
                 },
                 {
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:SpecimenType"
+                    "@id": "bts:ResultUnit"
                 },
                 {
-                    "@id": "bts:TranscriptType"
+                    "@id": "bts:SpecimenType"
                 },
                 {
                     "@id": "bts:Sex"
@@ -1111,6 +1111,9 @@
                 },
                 {
                     "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:TranscriptType"
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
@@ -1169,28 +1172,22 @@
                     "@id": "bts:MsTarget"
                 },
                 {
-                    "@id": "bts:ResultUnit"
-                },
-                {
                     "@id": "bts:Stage"
                 },
                 {
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:SpecimenType"
+                    "@id": "bts:ResultUnit"
                 },
                 {
-                    "@id": "bts:TranscriptType"
+                    "@id": "bts:SpecimenType"
                 },
                 {
                     "@id": "bts:Sex"
                 },
                 {
                     "@id": "bts:DirectionalBSseqLibrary"
-                },
-                {
-                    "@id": "bts:ReadStrandOrigin"
                 },
                 {
                     "@id": "bts:CaptivityStatus"
@@ -1202,7 +1199,13 @@
                     "@id": "bts:SpeciesGroup"
                 },
                 {
+                    "@id": "bts:TranscriptType"
+                },
+                {
                     "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
@@ -1258,9 +1261,6 @@
                     "@id": "bts:MsTarget"
                 },
                 {
-                    "@id": "bts:ResultUnit"
-                },
-                {
                     "@id": "bts:Stage"
                 },
                 {
@@ -1270,16 +1270,13 @@
                     "@id": "bts:FastingState"
                 },
                 {
+                    "@id": "bts:ResultUnit"
+                },
+                {
                     "@id": "bts:SpecimenType"
                 },
                 {
-                    "@id": "bts:TranscriptType"
-                },
-                {
                     "@id": "bts:Sex"
-                },
-                {
-                    "@id": "bts:ReadStrandOrigin"
                 },
                 {
                     "@id": "bts:CaptivityStatus"
@@ -1291,10 +1288,16 @@
                     "@id": "bts:SpeciesGroup"
                 },
                 {
+                    "@id": "bts:TranscriptType"
+                },
+                {
                     "@id": "bts:NucleicAcidSource"
                 },
                 {
                     "@id": "bts:DirectionalBSseqLibrary"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
@@ -1356,9 +1359,6 @@
                     "@id": "bts:Stage"
                 },
                 {
-                    "@id": "bts:TranscriptType"
-                },
-                {
                     "@id": "bts:Sex"
                 },
                 {
@@ -1369,6 +1369,9 @@
                 },
                 {
                     "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:TranscriptType"
                 },
                 {
                     "@id": "bts:Organ"
@@ -1415,9 +1418,6 @@
                     "@id": "bts:FastingState"
                 },
                 {
-                    "@id": "bts:ResultUnit"
-                },
-                {
                     "@id": "bts:Stage"
                 },
                 {
@@ -1431,6 +1431,9 @@
                 },
                 {
                     "@id": "bts:LifeStage"
+                },
+                {
+                    "@id": "bts:ResultUnit"
                 },
                 {
                     "@id": "bts:TranscriptType"
@@ -5714,6 +5717,9 @@
                     "@id": "bts:GenBank"
                 },
                 {
+                    "@id": "bts:GENCODEv38GRCh38"
+                },
+                {
                     "@id": "bts:GEO"
                 },
                 {
@@ -5870,6 +5876,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "GenBank",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GENCODEv38GRCh38",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GENCODEv38GRCh38",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:RepositoryName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GENCODEv38 GRCh38",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -6095,6 +6118,9 @@
                     "@id": "bts:FPKM"
                 },
                 {
+                    "@id": "bts:Rawcount"
+                },
+                {
                     "@id": "bts:Notapplicable"
                 },
                 {
@@ -6131,6 +6157,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "FPKM",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Rawcount",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Rawcount",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ResultUnit"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "raw count",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -7590,6 +7633,9 @@
                     "@id": "bts:MRNA"
                 },
                 {
+                    "@id": "bts:TotalRNAminusrRNA"
+                },
+                {
                     "@id": "bts:Notapplicable"
                 },
                 {
@@ -7643,6 +7689,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "mRNA",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:TotalRNAminusrRNA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "TotalRNAminusrRNA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:TranscriptType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "total RNA minus rRNA",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -17563,6 +17626,9 @@
                     "@id": "bts:IlluminaDNAPCR-FreePrepKit"
                 },
                 {
+                    "@id": "bts:QiagenPreAnalytiXPAXgeneBloodmiRNAKit"
+                },
+                {
                     "@id": "bts:Unknown"
                 },
                 {
@@ -17852,6 +17918,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:QiagenPreAnalytiXPAXgeneBloodmiRNAKit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "QiagenPreAnalytiXPAXgeneBloodmiRNAKit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Qiagen PreAnalytiX PAXgene Blood miRNA Kit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:LibraryVersion",
             "@type": "rdfs:Class",
             "rdfs:comment": "Library Version- for example, rnaSeq 10x library version. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",
@@ -17940,6 +18023,12 @@
                     "@id": "bts:Reverse"
                 },
                 {
+                    "@id": "bts:Stranded"
+                },
+                {
+                    "@id": "bts:Unstranded"
+                },
+                {
                     "@id": "bts:Unknown"
                 },
                 {
@@ -17987,6 +18076,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "reverse",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Unstranded",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Unstranded",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ReadStrandOrigin"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "unstranded",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
