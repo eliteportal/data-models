@@ -15,6 +15,7 @@ Key,Key Description,columnType,Source,Parent
  TruSeq,,STRING,,ManifestColumn
  Ultralow Methyl-Seq,,STRING,,ManifestColumn
  Illumina DNA PCR-Free Prep Kit,,STRING,,ManifestColumn
+ Qiagen PreAnalytiX PAXgene Blood miRNA Kit,,STRING,,ManifestColumn
  Unknown,,STRING,,ManifestColumn
  Not collected,,STRING,,ManifestColumn
  Not applicable,,STRING,,ManifestColumn

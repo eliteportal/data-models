@@ -6,7 +6,8 @@ ENA,,STRING,,ManifestColumn
 Ensembl,,STRING,,ManifestColumn
 FlowRepository,,STRING,,ManifestColumn
 GenBank,,STRING,,ManifestColumn
-GEO,,STRING,,ManifestColumn
+GENCODEv38 GRCh38,,STRING,,ManifestColumn
+ GEO,,STRING,,ManifestColumn
 GISAID,,STRING,,ManifestColumn
 IEDB,,STRING,,ManifestColumn
 ImmPort,,STRING,,ManifestColumn
