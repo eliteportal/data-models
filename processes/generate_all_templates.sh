@@ -53,6 +53,9 @@ echo "✓ Set up $DATA_MODEL for test"
 # Setup logs
 mkdir -p $LOG_DIR
 
+# Setup schema dir
+mkdir -p $JSON_DIR
+
 for i in ${!TEMPLATES[@]}
 do
   echo ">>>>>>> Generating ${TEMPLATES[$i]}"
