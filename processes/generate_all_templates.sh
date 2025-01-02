@@ -67,6 +67,6 @@ echo "Moving manifest json schemas to $JSON_DIR"
 mv *.schema.json $JSON_DIR
 
 echo "Cleaning up test directory"
-rm -f $CREDS $TEST_CONFIG $DATA_MODEL *.manifest.csv
+rm -f $CREDS $TEST_CONFIG $DATA_MODEL $SCHEMATIC_CONFIG *.manifest.csv
 
 echo "✓ Done!"
