@@ -33,10 +33,12 @@ jobs:
         run: |
           pip install poetry
 
-      - name: Install dependencies
-        shell: bash
+      - name: Set up Poetry
         run: |
+          python -m venv .venv
+          source .venv/bin/activate
           poetry install
+          poetry shell
 
       - name: Generate all manifests
         working-directory: processes
