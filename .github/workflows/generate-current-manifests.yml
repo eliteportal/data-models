@@ -29,20 +29,18 @@ jobs:
           python-version: '3.10'
           cache: 'pip'
 
-      - name: Install poetry
+      - name: Install Poetry
         run: |
-          pip install poetry
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.local/bin:$PATH"
 
-      - name: Set up Poetry
+      - name: Install dependencies
         run: |
-          python -m venv .venv
-          source .venv/bin/activate
           poetry install
-          poetry shell
 
       - name: Generate all manifests
         working-directory: processes
-        run: ./generate_all_templates.sh
+        run: poetry run ./generate_all_templates.sh
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
