@@ -6,7 +6,7 @@ name: Store Current Manifests
 
 on:
   push:
-    branches: schematic-228-template-workflow
+    branches: main
 
   workflow_dispatch:
 concurrency:
@@ -68,8 +68,9 @@ jobs:
           labels: |
             automated pr
             manifest update
-          draft: true
-          delete-branch: false
+          reviewers: $$ {github.actor }}
+          draft: false
+          delete-branch: true
 
       #- name: Upload all manifests
       #  working-directory: elite-data/manifest-templates
