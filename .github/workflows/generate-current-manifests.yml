@@ -34,6 +34,7 @@ jobs:
           pip install poetry
 
       - name: Install dependencies
+        shell: bash
         run: |
           poetry install
 
