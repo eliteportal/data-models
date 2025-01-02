@@ -15,7 +15,7 @@ DATA_MODEL=EL.data.model.jsonld
 EXCEL_DIR=../elite-data/manifest-templates
 JSON_DIR=../elite-data/current-manifest-schemas
 LOG_DIR=../elite-data/logs
-SLEEP_THROTTLE=30 # API rate-limiting, need to better figure out dynamically based on # of templates
+SLEEP_THROTTLE=45 # API rate-limiting, need to better figure out dynamically based on # of templates
 
 # copy schematic-config.yml into tests/ 
 cp $SCHEMATIC_CONFIG_PATH $SCHEMATIC_CONFIG
