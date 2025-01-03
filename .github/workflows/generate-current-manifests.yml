@@ -62,4 +62,4 @@ jobs:
 
       #- name: Upload all manifests
       #  working-directory: elite-data/manifest-templates
-      #  run: poetry run ../processes/upload_templates.sh
+      #  run: poetry run ../../processes/upload_templates.sh
