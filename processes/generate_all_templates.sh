@@ -1,6 +1,5 @@
 #!/bin/bash
 # generate GoogleSheets templates
-# if using locally run with ./generate_all_manifests.sh from tests directory
 
 set -e
 
