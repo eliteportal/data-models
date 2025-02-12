@@ -9,7 +9,7 @@ title: assay bsSeq template
 {: .note-title } 
 >assay bsSeq template
 >
->Template for bsSeq [[Source]](Sage Bionetworks)
+>Template for bsSeq [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayBsSeqTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
