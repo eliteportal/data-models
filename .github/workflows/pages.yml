@@ -9,6 +9,7 @@ on:
   push:
     branches: 
       - "main"
+      - "DPE-1229-fix-workflows"
     paths:
       - "docs/**"
       - "_data/**"
