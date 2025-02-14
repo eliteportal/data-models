@@ -9,7 +9,7 @@ title: study folder template
 {: .note-title } 
 >study folder template
 >
->Annotations for study folders [[Source]](Sage Bionetworks)
+>Annotations for study folders [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_StudyFolderTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

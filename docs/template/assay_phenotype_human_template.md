@@ -9,7 +9,7 @@ title: assay phenotype human template
 {: .note-title } 
 >assay phenotype human template
 >
->Template for Phenotype_human [[Source]](Sage Bionetworks)
+>Template for Phenotype_human [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayPhenotypeHumanTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
