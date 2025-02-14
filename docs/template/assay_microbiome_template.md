@@ -9,7 +9,7 @@ title: assay microbiome template
 {: .note-title } 
 >assay microbiome template
 >
->Template for Microbiome [[Source]](Sage Bionetworks)
+>Template for Microbiome [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayMicrobiomeTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
