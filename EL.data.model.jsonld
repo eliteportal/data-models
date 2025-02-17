@@ -601,6 +601,21 @@
                     "@id": "bts:Cohort"
                 },
                 {
+                    "@id": "bts:HasADLs"
+                },
+                {
+                    "@id": "bts:HasCASI"
+                },
+                {
+                    "@id": "bts:HasCDR"
+                },
+                {
+                    "@id": "bts:HasMMSE"
+                },
+                {
+                    "@id": "bts:HasMoCA"
+                },
+                {
                     "@id": "bts:IndividualID"
                 },
                 {
@@ -4312,6 +4327,21 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:HasIonizationSource"
+                },
+                {
+                    "@id": "bts:HasADLs"
+                },
+                {
+                    "@id": "bts:HasCASI"
+                },
+                {
+                    "@id": "bts:HasCDR"
+                },
+                {
+                    "@id": "bts:HasMMSE"
+                },
+                {
+                    "@id": "bts:HasMoCA"
                 }
             ],
             "schema:isPartOf": {
@@ -4327,6 +4357,21 @@
             "rdfs:comment": "TBD",
             "rdfs:label": "Yes",
             "rdfs:subClassOf": [
+                {
+                    "@id": "bts:HasADLs"
+                },
+                {
+                    "@id": "bts:HasCASI"
+                },
+                {
+                    "@id": "bts:HasCDR"
+                },
+                {
+                    "@id": "bts:HasMMSE"
+                },
+                {
+                    "@id": "bts:HasMoCA"
+                },
                 {
                     "@id": "bts:HasIonizationSource"
                 }
@@ -16978,6 +17023,131 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:HasADLs",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The datafile and/or individualID includes cognitive variables and/or scores from the Activities of daily living (ADLs)",
+            "rdfs:label": "HasADLs",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Yes"
+                },
+                {
+                    "@id": "bts:No"
+                }
+            ],
+            "sms:displayName": "hasADLs",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HasCASI",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The datafile and/or individualID includes cognitive variables and/or scores from the Cognitive Abilities Screening Instrument (CASI)",
+            "rdfs:label": "HasCASI",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Yes"
+                },
+                {
+                    "@id": "bts:No"
+                }
+            ],
+            "sms:displayName": "hasCASI",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HasCDR",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The datafile and/or individualID includes cognitive variables and/or scores from the The Clinical Dementia Rating (CDR)",
+            "rdfs:label": "HasCDR",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Yes"
+                },
+                {
+                    "@id": "bts:No"
+                }
+            ],
+            "sms:displayName": "hasCDR",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HasMMSE",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The datafile and/or individualID includes cognitive variables and/or scores from the Mini-Mental State Examination (MMSE)",
+            "rdfs:label": "HasMMSE",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Yes"
+                },
+                {
+                    "@id": "bts:No"
+                }
+            ],
+            "sms:displayName": "hasMMSE",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:HasMoCA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The datafile and/or individualID includes cognitive variables and/or scores from the Montreal Cognitive Assessment (MoCA)",
+            "rdfs:label": "HasMoCA",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Yes"
+                },
+                {
+                    "@id": "bts:No"
+                }
+            ],
+            "sms:displayName": "hasMoCA",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:IndividualID",
             "@type": "rdfs:Class",
             "rdfs:comment": "Identifying string linked to the individual or animal being studied, provided by the data contributor",
@@ -19769,6 +19939,21 @@
                 },
                 {
                     "@id": "bts:Diagnosis"
+                },
+                {
+                    "@id": "bts:HasMoCA"
+                },
+                {
+                    "@id": "bts:HasCASI"
+                },
+                {
+                    "@id": "bts:HasCDR"
+                },
+                {
+                    "@id": "bts:HasMMSE"
+                },
+                {
+                    "@id": "bts:HasADLs"
                 },
                 {
                     "@id": "bts:Component"
