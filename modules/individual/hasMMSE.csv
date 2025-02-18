@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+hasMMSE,"The datafile and/or individualID includes cognitive variables and/or scores from the Mini-Mental State Examination (MMSE)","Yes, No",,,False,ManifestColumn,,ManifestColumn,,individual,False,STRING,Sage Bionetworks,"A data contributor should be able to write in a name OR provide one of these values: Unknown Not collected, Not applicable, Not specified. ","Individual_Human,Phenotype_human"
