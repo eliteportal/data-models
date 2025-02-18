@@ -59,7 +59,7 @@ mkdir -p $JSON_DIR
 for i in ${!TEMPLATES[@]}
 do
   echo ">>>>>>> Generating ${TEMPLATES[$i]}"
-  schematic manifest --config "$SCHEMATIC_CONFIG" get -dt "${TEMPLATES[$i]}asdfasd" -p "$DATA_MODEL" -oxlsx "$EXCEL_DIR/EL_template_${TEMPLATES[$i]}.xlsx" | tee $LOG_DIR/${TEMPLATES[$i]%.*}_log 
+  schematic manifest --config "$SCHEMATIC_CONFIG" get -dt "${TEMPLATES[$i]}" -p "$DATA_MODEL" -oxlsx "$EXCEL_DIR/EL_template_${TEMPLATES[$i]}.xlsx" | tee $LOG_DIR/${TEMPLATES[$i]%.*}_log 
   sleep $SLEEP_THROTTLE
 done
 
