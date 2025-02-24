@@ -9,7 +9,7 @@ title: file annotation template
 {: .note-title } 
 >file annotation template
 >
->Base annotations for files in synapse [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_FileAnnotationTemplate.xlsx)
+>Base annotations for files in synapse [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

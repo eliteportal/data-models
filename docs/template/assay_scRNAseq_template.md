@@ -9,7 +9,7 @@ title: assay scRNAseq template
 {: .note-title } 
 >assay scRNAseq template
 >
->Template for scRNAseq [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayScRNAseqTemplate.xlsx)
+>Template for scRNAseq [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

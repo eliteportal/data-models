@@ -190,6 +190,11 @@ controlType,"Control samples suitable for normalization and batch correction.Pos
 platformLocation,"The name of the laboratory, facility, vendor, company, or location where the data generation platform was located, provided by the data contributor. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",STRING,sage.annotations-experimentalData.platformLocation-0.0.2,experimentalData
 age,"Age of the individual (age in years of the individual at first recorded study event (enrollment, visit, observation, sample collection, survey completion, etc.)",STRING,,individual
 cohort,Name of the cohort the individual belongs to,STRING,"http://purl.obolibrary.org/obo/NCIT_C61512,http://purl.obolibrary.org/obo/STATO_0000203",individual
+hasADLs,The datafile and/or individualID includes cognitive variables and/or scores from the Activities of daily living (ADLs),STRING,,individual
+hasCASI,The datafile and/or individualID includes cognitive variables and/or scores from the Cognitive Abilities Screening Instrument (CASI),STRING,,individual
+hasCDR,The datafile and/or individualID includes cognitive variables and/or scores from the The Clinical Dementia Rating (CDR),STRING,,individual
+hasMMSE,The datafile and/or individualID includes cognitive variables and/or scores from the Mini-Mental State Examination (MMSE),STRING,,individual
+hasMoCA,The datafile and/or individualID includes cognitive variables and/or scores from the Montreal Cognitive Assessment (MoCA),STRING,,individual
 individualID,"Identifying string linked to the individual or animal being studied, provided by the data contributor",STRING,sage.annotations-experimentalData.individualID-0.0.2,individual
 species,The name of a species (typically a taxonomic group) of organism.,STRING_LIST,Sage Bionetworks,individual
 spectrometerFrequency,The frequency at which a spectrometer causes hydrogen atoms to resonate (in MHz),NUMBER,sage.annotations-experimentalData.spectrometerFrequency-0.0.2,mass spectrometry

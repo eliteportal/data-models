@@ -9,7 +9,7 @@ title: individual human template
 {: .note-title } 
 >individual human template
 >
->Template for Individual_Human [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_IndividualHumanTemplate.xlsx)
+>Template for Individual_Human [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

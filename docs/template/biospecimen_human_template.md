@@ -9,7 +9,7 @@ title: biospecimen human template
 {: .note-title } 
 >biospecimen human template
 >
->Template for Biospecimen_human [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_BiospecimenHumanTemplate.xlsx)
+>Template for Biospecimen_human [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

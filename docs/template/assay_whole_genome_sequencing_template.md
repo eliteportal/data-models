@@ -9,7 +9,7 @@ title: assay whole genome sequencing template
 {: .note-title } 
 >assay whole genome sequencing template
 >
->Template for Whole_Genome_Sequencing [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayWholeGenomeSequencingTemplate.xlsx)
+>Template for Whole_Genome_Sequencing [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

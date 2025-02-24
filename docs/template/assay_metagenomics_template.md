@@ -9,7 +9,7 @@ title: assay metagenomics template
 {: .note-title } 
 >assay metagenomics template
 >
->Template for Metagenomics [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayMetagenomicsTemplate.xlsx)
+>Template for Metagenomics [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
