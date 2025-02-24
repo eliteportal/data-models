@@ -9,7 +9,7 @@ title: assay metabolomics template
 {: .note-title } 
 >assay metabolomics template
 >
->Template for Metabolomics [[Download]](htps://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayMetabolomicsTemplate.xlsx)
+>Template for Metabolomics [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayMetabolomicsTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
