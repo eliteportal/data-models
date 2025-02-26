@@ -78,7 +78,7 @@ def get_info(data_model: pd.DataFrame, term: str, column: str = "Attribute") -> 
     return results[0]
 
 
-def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
+def create_template_page(term: str, term_dict: dict, schema_names_frame: pd.DataFrame) -> frontmatter.Post:
     """
     Creates a new markdown page for a specific template within the website's documentation.
 
@@ -109,7 +109,7 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
     post.metadata["title"] = re.sub("_", r" ", term).strip()
     post.metadata["parent"] = term_dict["module"]
 
-    template_url = get_template_download_link(term)
+    template_url = get_template_download_link(term=term, schema_names_frame=schema_names_frame)
 
     # Inject term information into template content
     content_prefix = (
@@ -130,18 +130,39 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
 
     # return post
 
-def get_template_download_link(term: str) -> str:
+def get_manifest_schemas_name_frame(template_config_path: str = "dca-template-config.json") -> pd.DataFrame:
+    """
+    Loads the manifest schemas from a JSON configuration file into a pandas DataFrame.
+
+    Args:
+        template_config_path: The path to the JSON configuration file (str).
+
+    Returns:
+        A pandas DataFrame containing the manifest schemas.
+    """
+
+    with open(template_config_path, "r") as f:
+        json_template_configdata = json.load(f)
+
+    return pd.DataFrame.from_dict(json_template_configdata["manifest_schemas"])
+
+def get_template_download_link(term: str, schema_names_frame: pd.DataFrame) -> str:
+    """
+    Constructs the download URL for a specific template based on its schema name.
+    Args:
+        term: The name of the template (str).
+        schema_names_frame: A pandas DataFrame containing the schema names and display names.
+    Returns:
+        The download URL for the template (str).
+    """
     base_url = "https://github.com/eliteportal/data-models/raw/refs/heads/"
     templates_path = "main/elite-data/manifest-templates/"
     template_prefix = "EL_template_"
 
-    with open("dca-template-config.json", "r") as f:
-        json_template_configdata = json.load(f)
+    # Get the schema name corresponding to the term display name
+    schema_name = schema_names_frame.loc[schema_names_frame["display_name"]==term, "schema_name"].values[0]
 
-    manifest_schemas = pd.DataFrame.from_dict(json_template_configdata["manifest_schemas"])
-
-    schema_name = manifest_schemas.loc[manifest_schemas["display_name"]==term, "schema_name"].values[0]
-
+    # Build the url to directly trigger a download of the template
     download_url = base_url + templates_path + template_prefix + schema_name + ".xlsx"
 
     return download_url
@@ -337,6 +358,8 @@ if __name__ == "__main__":
     for module in modules:
         create_module_page(module)
 
+    schema_names_frame = get_manifest_schemas_name_frame()
+
     # Creating template pages
     print('---- Creating Template pages ----')
     templates = list(
@@ -345,7 +368,7 @@ if __name__ == "__main__":
     for template in templates:
         # term_attr = re.sub("_", " ", template)
         term_info = get_info(data_model, template, column="Attribute")
-        create_template_page(template, term_dict=term_info)
+        create_template_page(template, term_dict=term_info,schema_names_frame=schema_names_frame)
 
     # create attribute pages
     print("---- Creating attribute pages ----")
