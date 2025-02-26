@@ -28,6 +28,7 @@ import pandas as pd
 from mdutils import fileutils
 from dotenv import dotenv_values
 from glob import glob
+import json
 
 from toolbox import utils
 
@@ -108,6 +109,8 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
     post.metadata["title"] = re.sub("_", r" ", term).strip()
     post.metadata["parent"] = term_dict["module"]
 
+    template_url = get_template_download_link(term)
+
     # Inject term information into template content
     content_prefix = (
         "{% assign mydata=site.data."
@@ -115,7 +118,7 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
         + " %} \n{: .note-title } \n"
         + f">{post.metadata['title']}\n"
         + ">\n"
-        + f">{term_dict['Description']} [[Source]]({term_dict['Source']})\n"
+        + f">{term_dict['Description']} [[Download]]({template_url})\n"
     )
     post.content = content_prefix + post.content
 
@@ -127,6 +130,21 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
 
     # return post
 
+def get_template_download_link(term: str) -> str:
+    base_url = "https://github.com/eliteportal/data-models/raw/refs/heads/"
+    templates_path = "main/elite-data/manifest-templates/"
+    template_prefix = "EL_template_"
+
+    with open("dca-template-config.json", "r") as f:
+        json_template_configdata = json.load(f)
+
+    manifest_schemas = pd.DataFrame.from_dict(json_template_configdata["manifest_schemas"])
+
+    schema_name = manifest_schemas.loc[manifest_schemas["display_name"]==term, "schema_name"].values[0]
+
+    download_url = base_url + templates_path + template_prefix + schema_name + ".xlsx"
+
+    return download_url
 
 def create_table_page(term: str, term_dict: dict) -> fileutils.MarkDownFile:
     """
