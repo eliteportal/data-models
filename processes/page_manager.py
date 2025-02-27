@@ -159,9 +159,11 @@ def get_manifest_schemas_name_dict(template_config_path: Optional[str] = "dca-te
 def get_template_download_link(term: str, schema_names_dict: dict[str, list[str]]) -> str:
     """
     Constructs the download URL for a specific template based on its schema name.
+
     Args:
         term: The name of the template (str).
         schema_names_dict: A dictionary containing the schema names and display names {display_name: [schema_name]}.
+    
     Returns:
         The download URL for the template (str).
     """
