@@ -9,7 +9,7 @@ title: assay proteomics template
 {: .note-title } 
 >assay proteomics template
 >
->Template for Proteomics [[Source]](Sage Bionetworks)
+>Template for Proteomics [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayProteomicsTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

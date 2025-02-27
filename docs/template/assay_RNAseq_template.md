@@ -9,7 +9,7 @@ title: assay RNAseq template
 {: .note-title } 
 >assay RNAseq template
 >
->Template for RNAseq [[Source]](Sage Bionetworks)
+>Template for RNAseq [[Download]](https://github.com/eliteportal/data-models/raw/refs/heads/main/elite-data/manifest-templates/EL_template_AssayRNAseqTemplate.xlsx)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
