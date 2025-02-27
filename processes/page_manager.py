@@ -22,12 +22,14 @@ This Python script provides functions to generate documentation pages for a data
 import os
 import re
 import sys
+import json
 from pathlib import Path
 import frontmatter
 import pandas as pd
 from mdutils import fileutils
 from dotenv import dotenv_values
 from glob import glob
+from typing import Optional
 
 from toolbox import utils
 
@@ -77,7 +79,7 @@ def get_info(data_model: pd.DataFrame, term: str, column: str = "Attribute") -> 
     return results[0]
 
 
-def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
+def create_template_page(term: str, term_dict: dict, schema_names_dict: dict[str, list[str]]) -> frontmatter.Post:
     """
     Creates a new markdown page for a specific template within the website's documentation.
 
@@ -86,6 +88,7 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
         term_dict: A dictionary containing information about the template, including:
             'Description' (str): The description of the template.
             'Source' (str): The source of the template information. (URL or reference)
+        schema_names_dict: A dictionary containing the schema names and display names {display_name: [schema_name]}.
 
     Returns:
         A `frontmatter.Post` object representing the created template page metadata.
@@ -108,6 +111,8 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
     post.metadata["title"] = re.sub("_", r" ", term).strip()
     post.metadata["parent"] = term_dict["module"]
 
+    template_url = get_template_download_link(term=term, schema_names_dict=schema_names_dict)
+
     # Inject term information into template content
     content_prefix = (
         "{% assign mydata=site.data."
@@ -115,7 +120,7 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
         + " %} \n{: .note-title } \n"
         + f">{post.metadata['title']}\n"
         + ">\n"
-        + f">{term_dict['Description']} [[Source]]({term_dict['Source']})\n"
+        + f">{term_dict['Description']} [[Download]]({template_url})\n"
     )
     post.content = content_prefix + post.content
 
@@ -127,6 +132,49 @@ def create_template_page(term: str, term_dict: dict) -> frontmatter.Post:
 
     # return post
 
+def get_manifest_schemas_name_dict(template_config_path: Optional[str] = "dca-template-config.json") -> dict[str, list[str]]:
+    """
+    Loads the manifest schemas from a JSON configuration file into a pandas DataFrame.
+
+    Args:
+        template_config_path: The path to the JSON configuration file (str).
+
+    Returns:
+        A dictionary containing the schema names and display names {display_name: [schema_name]}.
+    """
+    # The config contains a dictionary of the displaynames and schema names of the components that are in production use, 
+    # some from the schema are excluded
+    with open(template_config_path, "r") as f:
+        json_template_configdata = json.load(f)
+    
+    # Process the dataframe to remove unneeded information and to be stored as a dictionary 
+    # to remove need for more complex df indexing when used later
+    schema_names_frame = pd.DataFrame.from_dict(json_template_configdata["manifest_schemas"])
+    schema_names_frame.drop('type',axis=1,inplace=True)
+    schema_names_frame = schema_names_frame.set_index('display_name').T
+
+
+    return schema_names_frame.to_dict(orient='list')
+
+def get_template_download_link(term: str, schema_names_dict: dict[str, list[str]]) -> str:
+    """
+    Constructs the download URL for a specific template based on its schema name.
+
+    Args:
+        term: The name of the template (str).
+        schema_names_dict: A dictionary containing the schema names and display names {display_name: [schema_name]}.
+    
+    Returns:
+        The download URL for the template (str).
+    """
+    base_url = "https://github.com/eliteportal/data-models/raw/refs/heads/"
+    templates_path = "main/elite-data/manifest-templates/"
+    template_prefix = "EL_template_"
+
+    # Build the url to directly trigger a download of the template
+    download_url = base_url + templates_path + template_prefix + schema_names_dict[term][0] + ".xlsx"
+
+    return download_url
 
 def create_table_page(term: str, term_dict: dict) -> fileutils.MarkDownFile:
     """
@@ -319,15 +367,21 @@ if __name__ == "__main__":
     for module in modules:
         create_module_page(module)
 
+    schema_names_dict = get_manifest_schemas_name_dict()
+
     # Creating template pages
     print('---- Creating Template pages ----')
     templates = list(
         data_model[data_model["Parent"] == "Component"]["Attribute"].unique()
     )
+
+    # assay_phenotype_human_template is currently unused so remove from list to avoid attempting to generate template for it
+    templates.remove('assay_phenotype_human_template')
+
     for template in templates:
         # term_attr = re.sub("_", " ", template)
         term_info = get_info(data_model, template, column="Attribute")
-        create_template_page(template, term_dict=term_info)
+        create_template_page(template, term_dict=term_info,schema_names_dict=schema_names_dict)
 
     # create attribute pages
     print("---- Creating attribute pages ----")
