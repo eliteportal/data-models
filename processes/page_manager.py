@@ -141,14 +141,18 @@ def get_manifest_schemas_name_dict(template_config_path: str = "dca-template-con
     Returns:
         A dictionary containing the schema names and display names {display_name: [schema_name]}.
     """
-
+    # The config contains a dictionary of the displaynames and schema names of the components that are in production use, 
+    # some from the schema are excluded
     with open(template_config_path, "r") as f:
         json_template_configdata = json.load(f)
     
+    # Process the dataframe to remove unneeded information and to be stored as a dictionary 
+    # to remove need for more complex df indexing when used later
     schema_names_frame = pd.DataFrame.from_dict(json_template_configdata["manifest_schemas"])
     schema_names_frame.drop('type',axis=1,inplace=True)
     schema_names_frame = schema_names_frame.set_index('display_name').T
 
+    
     return schema_names_frame.to_dict(orient='list')
 
 def get_template_download_link(term: str, schema_names_dict: dict[str, list[str]]) -> str:
