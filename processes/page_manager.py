@@ -29,6 +29,7 @@ from mdutils import fileutils
 from dotenv import dotenv_values
 from glob import glob
 import json
+from typing import Optional
 
 from toolbox import utils
 
@@ -131,7 +132,7 @@ def create_template_page(term: str, term_dict: dict, schema_names_dict: dict[str
 
     # return post
 
-def get_manifest_schemas_name_dict(template_config_path: str = "dca-template-config.json") -> dict[str, list[str]]:
+def get_manifest_schemas_name_dict(template_config_path: Optional[str] = "dca-template-config.json") -> dict[str, list[str]]:
     """
     Loads the manifest schemas from a JSON configuration file into a pandas DataFrame.
 
@@ -152,7 +153,7 @@ def get_manifest_schemas_name_dict(template_config_path: str = "dca-template-con
     schema_names_frame.drop('type',axis=1,inplace=True)
     schema_names_frame = schema_names_frame.set_index('display_name').T
 
-    
+
     return schema_names_frame.to_dict(orient='list')
 
 def get_template_download_link(term: str, schema_names_dict: dict[str, list[str]]) -> str:
