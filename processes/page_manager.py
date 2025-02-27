@@ -22,13 +22,13 @@ This Python script provides functions to generate documentation pages for a data
 import os
 import re
 import sys
+import json
 from pathlib import Path
 import frontmatter
 import pandas as pd
 from mdutils import fileutils
 from dotenv import dotenv_values
 from glob import glob
-import json
 from typing import Optional
 
 from toolbox import utils
