@@ -365,6 +365,10 @@ if __name__ == "__main__":
     templates = list(
         data_model[data_model["Parent"] == "Component"]["Attribute"].unique()
     )
+
+    # assay_phenotype_human_template is currently unused so remove from list to avoide attempting to generate template for it
+    templates.remove('assay_phenotype_human_template')
+    
     for template in templates:
         # term_attr = re.sub("_", " ", template)
         term_info = get_info(data_model, template, column="Attribute")
