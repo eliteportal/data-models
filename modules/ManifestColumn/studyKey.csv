@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-studyKey,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
+studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,False,STRING,Sage Bionetworks,,study_folder_template
