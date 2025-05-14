@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: Unknown
-title: grantNumber
+parent: ADKP
+title: ModelSystemType
 ---
 
-{% assign mydata=site.data.grantNumber %} 
+{% assign mydata=site.data.ModelSystemType %} 
 {: .note-title } 
->grantNumber
+>ModelSystemType
 >
->Grant number including activity code institute code and serial number (e.g. U01MH103392) [[Source]](Sage Bionetworks)
+>Type of model system [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,0 +1,4 @@
+Key,Key Description,columnType,Source,Parent
+ELITE,,STRING_LIST,,ManifestColumn
+ ELITE CDCP,,STRING_LIST,,ManifestColumn
+ Not assigned,,STRING_LIST,,ManifestColumn

@@ -1,0 +1,8 @@
+Key,Key Description,columnType,Source,Parent
+animal,,BOOLEAN,,ManifestColumn
+ cerebral organoid,,BOOLEAN,,ManifestColumn
+ immortalized cell line,,BOOLEAN,,ManifestColumn
+ iPSC,,BOOLEAN,,ManifestColumn
+ organoid,,BOOLEAN,,ManifestColumn
+ primary cell culture,,BOOLEAN,,ManifestColumn
+ Not assigned,,BOOLEAN,,ManifestColumn

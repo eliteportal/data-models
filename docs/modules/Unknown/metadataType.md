@@ -9,7 +9,7 @@ title: metadataType
 {: .note-title } 
 >metadataType
 >
->nan [[Source]](nan)
+>For files of dataSubtype: metadata, a description of the type of metadata in the file [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

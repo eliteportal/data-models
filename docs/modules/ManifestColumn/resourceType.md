@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: Unknown
-title: grantNumber
+parent: ManifestColumn
+title: resourceType
 ---
 
-{% assign mydata=site.data.grantNumber %} 
+{% assign mydata=site.data.resourceType %} 
 {: .note-title } 
->grantNumber
+>resourceType
 >
->Grant number including activity code institute code and serial number (e.g. U01MH103392) [[Source]](Sage Bionetworks)
+>The type of resource being stored and annotated [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
