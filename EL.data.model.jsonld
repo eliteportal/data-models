@@ -171,6 +171,9 @@
                     "@id": "bts:Species"
                 },
                 {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
                     "@id": "bts:ProjectShortName"
                 },
                 {
@@ -786,6 +789,9 @@
                 },
                 {
                     "@id": "bts:TotalReads"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
                 }
             ],
             "schema:isPartOf": {
@@ -19029,12 +19035,15 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "true",
+            "sms:displayName": "True",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -21465,6 +21474,9 @@
                     "@id": "bts:AnalysisType"
                 },
                 {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
                     "@id": "bts:ModelSystemType"
                 },
                 {
@@ -21488,6 +21500,34 @@
             },
             "sms:displayName": "grant",
             "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:IsModelSystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Boolean flag indicating whether or not a file has data from a model system",
+            "rdfs:label": "IsModelSystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:True"
+                },
+                {
+                    "@id": "bts:False"
+                },
+                {
+                    "@id": "bts:Notassigned"
+                }
+            ],
+            "sms:displayName": "isModelSystem",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -21870,19 +21910,19 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:IsModelSystem",
+            "@id": "bts:False",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "IsModelSystem",
+            "rdfs:label": "False",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:IsModelSystem"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "isModelSystem",
+            "sms:displayName": "False",
             "sms:required": "sms:false",
             "sms:validationRules": []
         }
