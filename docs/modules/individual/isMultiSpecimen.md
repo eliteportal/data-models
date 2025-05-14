@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: Unknown
-title: grantNumber
+parent: individual
+title: isMultiSpecimen
 ---
 
-{% assign mydata=site.data.grantNumber %} 
+{% assign mydata=site.data.isMultiSpecimen %} 
 {: .note-title } 
->grantNumber
+>isMultiSpecimen
 >
->Grant number including activity code institute code and serial number (e.g. U01MH103392) [[Source]](Sage Bionetworks)
+>Boolean flag indicating whether or not a file has data for multiple specimens [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

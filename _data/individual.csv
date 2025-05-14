@@ -7,4 +7,5 @@ hasCDR,The datafile and/or individualID includes cognitive variables and/or scor
 hasMMSE,The datafile and/or individualID includes cognitive variables and/or scores from the Mini-Mental State Examination (MMSE),"Yes, No",STRING,ManifestColumn,individual
 hasMoCA,The datafile and/or individualID includes cognitive variables and/or scores from the Montreal Cognitive Assessment (MoCA),"Yes, No",STRING,ManifestColumn,individual
 individualID,"Identifying string linked to the individual or animal being studied, provided by the data contributor",,STRING,ManifestColumn,individual
-species,The name of a species (typically a taxonomic group) of organism.,"Human,Mouse",STRING_LIST,ManifestColumn,individual
+isMultiSpecimen,Boolean flag indicating whether or not a file has data for multiple specimens,"true,fasle,Not assigned",STRING_LIST,ManifestColumn,individual
+species,The name of a species (typically a taxonomic group) of organism.,"Human,Non Human,Not assigned",STRING_LIST,ManifestColumn,individual

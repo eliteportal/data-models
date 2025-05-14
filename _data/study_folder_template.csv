@@ -1,18 +1,17 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
-isModelSystem,,True,BOOLEAN,,Sage Bionetworks,ManifestColumn,"TRUE,FALSE"
 dataTypeAll,,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,
 program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
-projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG"
+projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG, Not assigned"
 specimenType,Type of biological material comprising the Specimen,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
-studyKey,,True,STRING,,Sage Bionetworks,ManifestColumn,
+studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),True,STRING,,Sage Bionetworks,ManifestColumn,
 Component,,False,,,,,
 accessReqs,,False,,,,,
 ackContext,,False,,,,,
 acknowledgment,,False,,,,,
-grantNumber,,False,,,,,
+grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned"
 isFeatured,,False,,,,,
 isReleased,,False,,,,,
-metadataType,,False,,,,,
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",False,STRING_LIST,,Sage Bionetworks,ManifestColumn,"individual,biospecimen,assay,Not Assigned"
 methods,,False,,,,,
 newsRelease,,False,,,,,
 projectFullName,,False,,,,,
@@ -24,4 +23,4 @@ studyMetadata,,False,,,,,
 studyName,,False,,,,,
 studyType,,False,,,,,
 studyWiki,,False,,,,,
-species,The name of a species (typically a taxonomic group) of organism.,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"Human,Mouse"
+species,The name of a species (typically a taxonomic group) of organism.,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"Human,Non Human,Not assigned"

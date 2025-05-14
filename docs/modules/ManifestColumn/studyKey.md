@@ -9,7 +9,7 @@ title: studyKey
 {: .note-title } 
 >studyKey
 >
->nan [[Source]](Sage Bionetworks)
+>The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA) [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

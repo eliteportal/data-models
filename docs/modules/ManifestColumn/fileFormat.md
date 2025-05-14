@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: Unknown
-title: grantNumber
+parent: ManifestColumn
+title: fileFormat
 ---
 
-{% assign mydata=site.data.grantNumber %} 
+{% assign mydata=site.data.fileFormat %} 
 {: .note-title } 
->grantNumber
+>fileFormat
 >
->Grant number including activity code institute code and serial number (e.g. U01MH103392) [[Source]](Sage Bionetworks)
+>Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,2 +1,2 @@
 Key,Key Description,Valid Values,columnType,Parent,module
-isModelSystem,,"TRUE,FALSE",BOOLEAN,ManifestColumn,ADKP
+ModelSystemType,Type of model system,"animal, cerebral organoid, immortalized cell line, iPSC, organoid, primary cell culture, Not assigned",BOOLEAN,ManifestColumn,ADKP

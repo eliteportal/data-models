@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: Unknown
-title: grantNumber
+parent: demographics
+title: familyStudyParticipant
 ---
 
-{% assign mydata=site.data.grantNumber %} 
+{% assign mydata=site.data.familyStudyParticipant %} 
 {: .note-title } 
->grantNumber
+>familyStudyParticipant
 >
->Grant number including activity code institute code and serial number (e.g. U01MH103392) [[Source]](Sage Bionetworks)
+>Indicates whether or not a file has data from a human participant involved in a family study (ex. LLFS) [[Source]](sage.annotations-demographics.ethnicityfamilyStudyParticipant-0.0.2)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

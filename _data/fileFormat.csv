@@ -1,0 +1,46 @@
+Key,Key Description,columnType,Source,Parent
+FASTQ,,STRING_LIST,,ManifestColumn
+ FASTA,,STRING_LIST,,ManifestColumn
+ SAM,,STRING_LIST,,ManifestColumn
+ BAM,,STRING_LIST,,ManifestColumn
+ CRAM,,STRING_LIST,,ManifestColumn
+ VCF,,STRING_LIST,,ManifestColumn
+ BCF,,STRING_LIST,,ManifestColumn
+ GTF,,STRING_LIST,,ManifestColumn
+ GFF,,STRING_LIST,,ManifestColumn
+ GFF3,,STRING_LIST,,ManifestColumn
+ BED,,STRING_LIST,,ManifestColumn
+ BigBed,,STRING_LIST,,ManifestColumn
+ WIG,,STRING_LIST,,ManifestColumn
+ BigWig,,STRING_LIST,,ManifestColumn
+ CSV,,STRING_LIST,,ManifestColumn
+ TSV,,STRING_LIST,,ManifestColumn
+ MTX,,STRING_LIST,,ManifestColumn
+ H5AD,,STRING_LIST,,ManifestColumn
+ LOOM,,STRING_LIST,,ManifestColumn
+ RDS,,STRING_LIST,,ManifestColumn
+PED,,STRING_LIST,,ManifestColumn
+ MAP,,STRING_LIST,,ManifestColumn
+ BED_PLINK,,STRING_LIST,,ManifestColumn
+ TPED,,STRING_LIST,,ManifestColumn
+ TFAM,,STRING_LIST,,ManifestColumn
+ BEDGRAPH,,STRING_LIST,,ManifestColumn
+ NARROWPEAK,,STRING_LIST,,ManifestColumn
+ BROADPEAK,,STRING_LIST,,ManifestColumn
+ TAGALIGN,,STRING_LIST,,ManifestColumn
+ OME-TIFF,,STRING_LIST,,ManifestColumn
+ ND2,,STRING_LIST,,ManifestColumn
+ CZI,,STRING_LIST,,ManifestColumn
+ LSM,,STRING_LIST,,ManifestColumn
+ H5,,STRING_LIST,,ManifestColumn
+ HDF5,,STRING_LIST,,ManifestColumn
+ PARQUET,,STRING_LIST,,ManifestColumn
+ PDB,,STRING_LIST,,ManifestColumn
+ MMCIF,,STRING_LIST,,ManifestColumn
+ JSON,,STRING_LIST,,ManifestColumn
+ YAML,,STRING_LIST,,ManifestColumn
+ XML,,STRING_LIST,,ManifestColumn
+ TXT,,STRING_LIST,,ManifestColumn
+ XLSX,,STRING_LIST,,ManifestColumn
+ CSV,,STRING_LIST,,ManifestColumn
+ Not assigned,,STRING_LIST,,ManifestColumn
