@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-ModelSystemType,Type of model system,"animal, cerebral organoid, immortalized cell line, iPSC, organoid, primary cell culture, Not assigned",,,False,ManifestColumn,,ManifestColumn,Sage Bionetworks,ADKP,False,BOOLEAN,Sage Bionetworks,,study_folder_template
+isModelSystem,"Boolean flag indicating whether or not a file has data from a model system","True, False, Not assigned",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,,False,BOOLEAN,Sage Bionetworks,,"study_folder_template, file_annotation_template"
