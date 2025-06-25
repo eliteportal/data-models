@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+entity,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,analysisResultsData,False,STRING_LIST,Sage Bionetworks,,analysis_results_metadata_template
