@@ -2625,6 +2625,9 @@
                     "@id": "bts:LibraryPrep"
                 },
                 {
+                    "@id": "bts:RepositoryName"
+                },
+                {
                     "@id": "bts:CellType"
                 },
                 {
@@ -2714,6 +2717,9 @@
                     "@id": "bts:LibraryPrep"
                 },
                 {
+                    "@id": "bts:RepositoryName"
+                },
+                {
                     "@id": "bts:CellType"
                 },
                 {
@@ -2797,13 +2803,16 @@
                     "@id": "bts:DigestionReagent"
                 },
                 {
-                    "@id": "bts:LibraryPreparationMethod"
-                },
-                {
                     "@id": "bts:Organ"
                 },
                 {
+                    "@id": "bts:LibraryPreparationMethod"
+                },
+                {
                     "@id": "bts:LibraryPrep"
+                },
+                {
+                    "@id": "bts:RepositoryName"
                 },
                 {
                     "@id": "bts:DnaBatchSizeUnit"
@@ -2854,6 +2863,9 @@
                 },
                 {
                     "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:RepositoryName"
                 },
                 {
                     "@id": "bts:Organ"
@@ -2949,6 +2961,9 @@
                 },
                 {
                     "@id": "bts:DigestionReagent"
+                },
+                {
+                    "@id": "bts:RepositoryName"
                 },
                 {
                     "@id": "bts:Organ"
@@ -8376,7 +8391,25 @@
                     "@id": "bts:SRA"
                 },
                 {
+                    "@id": "bts:Synapse"
+                },
+                {
                     "@id": "bts:UniProt"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notspecified"
                 }
             ],
             "sms:displayName": "repositoryName",
@@ -8703,6 +8736,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "SRA",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Synapse",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Synapse",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:RepositoryName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Synapse",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -20375,6 +20425,9 @@
                     "@id": "bts:QiagenPreAnalytiXPAXgeneBloodmiRNAKit"
                 },
                 {
+                    "@id": "bts:QiagenRneasyExtractionKit"
+                },
+                {
                     "@id": "bts:Unknown"
                 },
                 {
@@ -20677,6 +20730,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Qiagen PreAnalytiX PAXgene Blood miRNA Kit",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:QiagenRneasyExtractionKit",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "QiagenRneasyExtractionKit",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Qiagen Rneasy Extraction Kit",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
