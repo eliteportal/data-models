@@ -161,7 +161,7 @@ experimentalBatchSize,,,,,False,,,,,Unknown,False,,,,assay_metabolomics_template
 grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,Unknown,True,STRING_LIST,Sage Bionetworks,,study_folder_template
 isFeatured,,,,,False,,,,,Unknown,False,,,,study_folder_template
 isReleased,,,,,False,,,,,Unknown,False,,,,study_folder_template
-metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,Not Assigned",,,False,ManifestColumn,,ManifestColumn,Sage Bionetworks,Unknown,True,STRING_LIST,Sage Bionetworks,,"study_folder_template, file_annotation_template"
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,supplementary files,Not Assigned",,,False,ManifestColumn,,ManifestColumn,Sage Bionetworks,Unknown,True,STRING_LIST,Sage Bionetworks,,"study_folder_template, file_annotation_template"
 methods,,,,,False,,,,,Unknown,False,,,,study_folder_template
 newsRelease,,,,,False,,,,,Unknown,False,,,,study_folder_template
 processingBatchSize,,,,,False,,,,,Unknown,False,,,,assay_metabolomics_template
