@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,Not Assigned",,,False,ManifestColumn,,ManifestColumn,Sage Bionetworks,Unknown,True,STRING_LIST,Sage Bionetworks,,"study_folder_template, file_annotation_template"
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,supplementary files,Not Assigned",,,False,ManifestColumn,,ManifestColumn,Sage Bionetworks,Unknown,True,STRING_LIST,Sage Bionetworks,,"study_folder_template, file_annotation_template"
