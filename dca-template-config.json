@@ -74,6 +74,16 @@
             "display_name": "file_annotation_template",
             "schema_name": "FileAnnotationTemplate",
             "type": "file"
+        },
+        {
+            "display_name": "file_annotation_template",
+            "schema_name": "FileAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "analysis_results_metadata_template",
+            "schema_name": "AnalysisResultsMetadataTemplate",
+            "type": "file"
         }
     ],
     "service_version": "v23.1.1",
