@@ -1,0 +1,4 @@
+Key,Key Description,columnType,Source,Parent
+True,,BOOLEAN,,ManifestColumn
+ False,,BOOLEAN,,ManifestColumn
+ Not assigned,,BOOLEAN,,ManifestColumn

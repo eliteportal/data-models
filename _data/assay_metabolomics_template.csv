@@ -33,7 +33,7 @@ technologyPlatformVersion,"The specific version (application, manufacturer, mode
 vacuumPressure,The recorded vacuum pressure value,False,NUMBER,,,ManifestColumn,
 vacuumPressureUnit,Unit of vacuum pressure value,False,STRING,,,ManifestColumn,"AFU,AI,AU/ml,bp g/dl,DK units/ml,g/l,gm,HAU,IU,iu/l,IU/ml,Kallikrein Inactivator Unit per Milliliter,kg,l,M,mg,mg/dl,mg/l,mg/ml,miu/ml,ml,mM,MOI,ng,ng/dl,ng/ml,ng/nl,ng/ul,nl,nM,Not specified,NPX,optical density,PFU,PFUe,pg,pg/mg creatinine,pg/ml,pg/nl,pg/ul,pl,pM,Pound,TCID50,ug,ug/dl,ug/l,ug/ml,ug/ul,uiu/ml,ul,uM,umol/l,units/ml"
 Component,,False,,,,,
-Filename,,False,,,,,
+Filename,,False,STRING,,,,
 acquistionSoftwareVersion,,False,,,,,
 batchSizeUnit,,False,,,,,
 experimentalBatchSize,,False,,,,,

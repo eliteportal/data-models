@@ -9,6 +9,6 @@ speciesName,"The scientific name of the species (typically a taxonomic group, ex
 studyCode,"Unique identifier for the study, assigned by the DCC",True,STRING,,,ManifestColumn,"ILO,LC,LG,LLFS"
 taxon,"Taxonomic identifier. The National Center for Biotechnology Information taxon ID (formatted as, ex. ""txid9989"")",True,STRING,,,ManifestColumn,
 Component,,False,,,,,
-Filename,,False,,,,,
+Filename,,False,STRING,,,,
 sex,The biological sex of the individual,True,STRING,,sage.annotations-experimentalData.sex-0.0.2,ManifestColumn,"Female,Male,Not applicable,Not collected,Not specified,Other,Unknown"
 individualID,"Identifying string linked to the individual or animal being studied, provided by the data contributor",True,STRING,,sage.annotations-experimentalData.individualID-0.0.2,ManifestColumn,

@@ -1,15 +1,17 @@
 ---
 datatable: true
+has_children: true
 layout: page
-parent: ADKP
-title: isModelSystem
+nav_order: 5
+parent: modules
+title: ' template'
 ---
 
-{% assign mydata=site.data.isModelSystem %} 
+{% assign mydata=site.data._template %} 
 {: .note-title } 
->isModelSystem
+> template
 >
->Boolean flag indicating whether or not a file has data from a model system [[Source]](Sage Bionetworks)
+>module in the data model
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

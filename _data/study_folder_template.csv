@@ -1,4 +1,5 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
+isModelSystem,Boolean flag indicating whether or not a file has data from a model system,True,BOOLEAN,,Sage Bionetworks,ManifestColumn,"True, False, Not assigned"
 dataTypeAll,,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,
 program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
 projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG, Not assigned"
@@ -11,7 +12,7 @@ acknowledgment,,False,,,,,
 grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned"
 isFeatured,,False,,,,,
 isReleased,,False,,,,,
-metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",False,STRING_LIST,,Sage Bionetworks,ManifestColumn,"individual,biospecimen,assay,Not Assigned"
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",False,STRING_LIST,,Sage Bionetworks,ManifestColumn,"individual,biospecimen,assay,supplementary files,Not Assigned"
 methods,,False,,,,,
 newsRelease,,False,,,,,
 projectFullName,,False,,,,,

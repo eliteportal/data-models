@@ -5,7 +5,7 @@ specimenSource,Indicate the biological area of the specimen,True,STRING,,,Manife
 specimenType,Type of biological material comprising the Specimen,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
 tissueVolume,The volume of the tissue sample. Measured in microliters.,True,STRING,,,ManifestColumn,
 Component,,False,,,,,
-Filename,,False,,,,,
+Filename,,False,STRING,,,,
 cellType,Indicate the cell type.,True,STRING,,sage.annotations-experimentalData.cellType-0.0.9,ManifestColumn,"A549, arachnoid, astrocytes, B-lymphocytes, CD138+, CD8+ T-Cells, CNON, dopaminergic neurons, Embryonic stem cells, epithelial, epithelial-like, fibroblast, GABAergic neurons, glia, GLUtamatergic neurons, immune cell, iPSC, iPSC-derived astrocytes, iPSC-derived glia, iPSC-derived neuron, iPSC-derived neuronal progenitor cell, iPSC-derived telencephalic organoids, lymphoblast, lymphoblastoid cell line, macrophages, meningioma, microglia, monocytes, monocyte-derived microglia, NCX NES, NeuN-, NeuN+, neural progenitor cell, neuron, oligodendrocyte, peripheral blood mononuclear cell, polygonal, round, schwann, Schwann cell precusor, schwannoma, SH-SY5Y, Not collected, Not specified, Not applicable, Other, Unknown"
 fastingState,Was individual fasting when the sample was taken (true/false)?,True,STRING,,sage.annotations-experimentalData.fastingState-0.0.2,ManifestColumn,"FALSE,Not applicable,Not collected,Not specified,TRUE,Unknown"
 isPostMortem,Was the sample taken after death (true/false)?,True,STRING,,sage.annotations-experimentalData.isPostMortem-0.0.2,ManifestColumn,"TRUE, FALSE"

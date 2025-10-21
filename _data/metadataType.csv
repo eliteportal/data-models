@@ -2,4 +2,5 @@ Key,Key Description,columnType,Source,Parent
 individual,,STRING_LIST,,ManifestColumn
 biospecimen,,STRING_LIST,,ManifestColumn
 assay,,STRING_LIST,,ManifestColumn
+supplementary files,,STRING_LIST,,ManifestColumn
 Not Assigned,,STRING_LIST,,ManifestColumn

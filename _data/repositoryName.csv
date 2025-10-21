@@ -18,4 +18,10 @@ MGnify,,STRING,,ManifestColumn
 NCBI Gene,,STRING,,ManifestColumn
 PRIDE,,STRING,,ManifestColumn
 SRA,,STRING,,ManifestColumn
+Synapse,,STRING,,ManifestColumn
 UniProt,,STRING,,ManifestColumn
+Other,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn
+Not collected,,STRING,,ManifestColumn
+Not applicable,,STRING,,ManifestColumn
+Not specified,,STRING,,ManifestColumn

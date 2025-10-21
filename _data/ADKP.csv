@@ -1,2 +1,3 @@
 Key,Key Description,Valid Values,columnType,Parent,module
 ModelSystemType,Type of model system,"animal, cerebral organoid, immortalized cell line, iPSC, organoid, primary cell culture, Not assigned",BOOLEAN,ManifestColumn,ADKP
+isModelSystem,Boolean flag indicating whether or not a file has data from a model system,"True, False, Not assigned",BOOLEAN,ManifestColumn,ADKP
