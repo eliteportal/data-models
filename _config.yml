@@ -8,7 +8,6 @@ url: https://ELITE.github.io/data_models
 data_model: EL.data.model.csv
 
 aux_links:
-  Data Curator App: https://dca.app.sagebionetworks.org/
   ELITE Portal: https://eliteportal.synapse.org/
   Service Desk: https://sagebionetworks.jira.com/servicedesk/customer/portal/12
 
