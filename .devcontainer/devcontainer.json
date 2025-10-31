@@ -1,7 +1,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "features": {
-    "ghcr.io/devcontainers-contrib/features/poetry:2": {}
+    "ghcr.io/devcontainers-extra/features/poetry:2": {}
   },
   "postCreateCommand": "poetry install",
   "customizations": {
