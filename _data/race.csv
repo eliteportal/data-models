@@ -1,8 +1,13 @@
 Key,Key Description,columnType,Source,Parent
 American Indian or Alaska Native,,STRING,,ManifestColumn
+Ashkenazi Jewish,,STRING,,ManifestColumn
 Asian,,STRING,,ManifestColumn
 Black or African American,,STRING,,ManifestColumn
 Multiracial,,STRING,,ManifestColumn
 Native Hawaiian or Pacific Islander,,STRING,,ManifestColumn
+Not collected,,STRING,,ManifestColumn
+Not applicable,,STRING,,ManifestColumn
+Other race,,STRING,,ManifestColumn
 Prefer not to answer,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn
 White,,STRING,,ManifestColumn

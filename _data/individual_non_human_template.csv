@@ -6,7 +6,7 @@ lifeStage,The life stage of the individual.note- Other values are possible depen
 speciesAge,"Age of individual (formatted in months, ex. ""72 months"").note- Uncertainty about the age might require recording age by specifying a lower and upper estimate in months for the age of the animal.",True,STRING,,,ManifestColumn,
 speciesGroup,The taxonomic ranking including both species and subspecies the individual belongs to.,True,STRING,,,ManifestColumn,"Bird,Human,Mammal,Not applicable,Not collected,Not specified,Other,Primate,Rodent,Unknown"
 speciesName,"The scientific name of the species (typically a taxonomic group, ex. ""Eremophila alpestris) the individual belongs to.""""""",True,STRING,,,ManifestColumn,
-studyCode,"Unique identifier for the study, assigned by the DCC",True,STRING,,,ManifestColumn,"ILO,LC,LG,LLFS"
+studyCode,"Unique identifier for the study, assigned by the DCC",True,STRING,,,ManifestColumn,"CDCP,ILO,LC,LG,LLFS,Other"
 taxon,"Taxonomic identifier. The National Center for Biotechnology Information taxon ID (formatted as, ex. ""txid9989"")",True,STRING,,,ManifestColumn,
 Component,,False,,,,,
 Filename,,False,STRING,,,,

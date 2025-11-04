@@ -12,6 +12,7 @@ Lys-C,,STRING,,ManifestColumn
 Lys-C/P,,STRING,,ManifestColumn
 No cleavage,,STRING,,ManifestColumn
 NoEnzyme,,STRING,,ManifestColumn
+Not applicable,,STRING,,ManifestColumn
 Not available,,STRING,,ManifestColumn
 Not collected,,STRING,,ManifestColumn
 Not specified,,STRING,,ManifestColumn
