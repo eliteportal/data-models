@@ -2648,6 +2648,9 @@
                     "@id": "bts:SpecimenType"
                 },
                 {
+                    "@id": "bts:Ethnicity"
+                },
+                {
                     "@id": "bts:Sex"
                 },
                 {
@@ -2669,6 +2672,9 @@
                     "@id": "bts:EnrichmentStrategy"
                 },
                 {
+                    "@id": "bts:Cohort"
+                },
+                {
                     "@id": "bts:DirectionalBSseqLibrary"
                 },
                 {
@@ -2678,7 +2684,13 @@
                     "@id": "bts:TreatmentDurationUnit"
                 },
                 {
+                    "@id": "bts:Race"
+                },
+                {
                     "@id": "bts:ReadStrandOrigin"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
                 },
                 {
                     "@id": "bts:LibraryPreparationMethod"
@@ -2734,6 +2746,9 @@
                     "@id": "bts:SpecimenType"
                 },
                 {
+                    "@id": "bts:Ethnicity"
+                },
+                {
                     "@id": "bts:Sex"
                 },
                 {
@@ -2755,6 +2770,9 @@
                     "@id": "bts:NucleicAcidSource"
                 },
                 {
+                    "@id": "bts:Cohort"
+                },
+                {
                     "@id": "bts:ReadStrandOrigin"
                 },
                 {
@@ -2762,6 +2780,9 @@
                 },
                 {
                     "@id": "bts:TreatmentDurationUnit"
+                },
+                {
+                    "@id": "bts:Race"
                 },
                 {
                     "@id": "bts:LabelFreeQuantitation"
@@ -2850,6 +2871,9 @@
                     "@id": "bts:DirectionalBSseqLibrary"
                 },
                 {
+                    "@id": "bts:Cohort"
+                },
+                {
                     "@id": "bts:ReadStrandOrigin"
                 },
                 {
@@ -2915,6 +2939,9 @@
                     "@id": "bts:Stage"
                 },
                 {
+                    "@id": "bts:StudyCode"
+                },
+                {
                     "@id": "bts:Sex"
                 },
                 {
@@ -2928,6 +2955,9 @@
                 },
                 {
                     "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:Cohort"
                 },
                 {
                     "@id": "bts:RepositoryName"
@@ -2980,6 +3010,9 @@
                     "@id": "bts:Stage"
                 },
                 {
+                    "@id": "bts:Ethnicity"
+                },
+                {
                     "@id": "bts:Sex"
                 },
                 {
@@ -3011,6 +3044,12 @@
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:Race"
+                },
+                {
+                    "@id": "bts:Cohort"
                 },
                 {
                     "@id": "bts:SpecimenType"
@@ -3602,6 +3641,9 @@
                 },
                 {
                     "@id": "bts:NoEnzyme"
+                },
+                {
+                    "@id": "bts:Notapplicable"
                 },
                 {
                     "@id": "bts:Notavailable"
@@ -8127,10 +8169,10 @@
             "rdfs:label": "ILO",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:StudyCode"
+                    "@id": "bts:ProjectShortName"
                 },
                 {
-                    "@id": "bts:ProjectShortName"
+                    "@id": "bts:StudyCode"
                 }
             ],
             "schema:isPartOf": {
@@ -8167,10 +8209,10 @@
             "rdfs:label": "LG",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:StudyCode"
+                    "@id": "bts:ProjectShortName"
                 },
                 {
-                    "@id": "bts:ProjectShortName"
+                    "@id": "bts:StudyCode"
                 }
             ],
             "schema:isPartOf": {
@@ -10303,6 +10345,9 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:CDCP"
+                },
+                {
                     "@id": "bts:ILO"
                 },
                 {
@@ -10313,10 +10358,30 @@
                 },
                 {
                     "@id": "bts:LLFS"
+                },
+                {
+                    "@id": "bts:Other"
                 }
             ],
             "sms:displayName": "studyCode",
             "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:CDCP",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "CDCP",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:StudyCode"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "CDCP",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -14525,9 +14590,6 @@
             "rdfs:label": "NotApplicable",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Ethnicity"
-                },
-                {
                     "@id": "bts:Diagnosis"
                 },
                 {
@@ -16233,10 +16295,19 @@
                     "@id": "bts:NotHispanicorLatino"
                 },
                 {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Otherethnicity"
+                },
+                {
                     "@id": "bts:Prefernottoanswer"
                 },
                 {
-                    "@id": "bts:NotApplicable"
+                    "@id": "bts:Unknown"
                 }
             ],
             "sms:displayName": "ethnicity",
@@ -16274,6 +16345,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Not Hispanic or Latino",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Otherethnicity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Otherethnicity",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Ethnicity"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Other ethnicity",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -16343,6 +16431,9 @@
                     "@id": "bts:AmericanIndianorAlaskaNative"
                 },
                 {
+                    "@id": "bts:AshkenaziJewish"
+                },
+                {
                     "@id": "bts:Asian"
                 },
                 {
@@ -16355,7 +16446,19 @@
                     "@id": "bts:NativeHawaiianorPacificIslander"
                 },
                 {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Otherrace"
+                },
+                {
                     "@id": "bts:Prefernottoanswer"
+                },
+                {
+                    "@id": "bts:Unknown"
                 },
                 {
                     "@id": "bts:White"
@@ -16379,6 +16482,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "American Indian or Alaska Native",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AshkenaziJewish",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "AshkenaziJewish",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Race"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ashkenazi Jewish",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -16447,6 +16567,23 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Native Hawaiian or Pacific Islander",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Otherrace",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Otherrace",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Race"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Other race",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -18801,133 +18938,46 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:ABC-DS"
+                    "@id": "bts:ArivaleScientificWellnessStudy(SWS)"
                 },
                 {
-                    "@id": "bts:ACT"
+                    "@id": "bts:CardiovascularHealthStudy(CHS)"
                 },
                 {
-                    "@id": "bts:ADNI"
+                    "@id": "bts:Centenarian"
                 },
                 {
-                    "@id": "bts:Banner"
+                    "@id": "bts:DenmarkFamily"
                 },
                 {
-                    "@id": "bts:BEB-Miller"
+                    "@id": "bts:Notapplicable"
                 },
                 {
-                    "@id": "bts:BLSA"
+                    "@id": "bts:Notcollected"
                 },
                 {
-                    "@id": "bts:CHDWB"
+                    "@id": "bts:Notspecified"
                 },
                 {
-                    "@id": "bts:CHS"
+                    "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:CLINCOR"
+                    "@id": "bts:StudyofOsteoporoticFractures(SOF)"
                 },
                 {
-                    "@id": "bts:DiCAD"
+                    "@id": "bts:SuperAgersFamilyStudy"
                 },
                 {
-                    "@id": "bts:EHBS"
+                    "@id": "bts:TheHealthAgingandBodyCompositionStuday(HealthABC)"
                 },
                 {
-                    "@id": "bts:EmoryADRC"
+                    "@id": "bts:TheOsteoporoticFracturesinMen(MrOS)Study"
                 },
                 {
-                    "@id": "bts:Framingham"
+                    "@id": "bts:Unknown"
                 },
                 {
-                    "@id": "bts:HABC"
-                },
-                {
-                    "@id": "bts:HBTRC"
-                },
-                {
-                    "@id": "bts:HPGP"
-                },
-                {
-                    "@id": "bts:HUP"
-                },
-                {
-                    "@id": "bts:LBP"
-                },
-                {
-                    "@id": "bts:MARS"
-                },
-                {
-                    "@id": "bts:MAYO"
-                },
-                {
-                    "@id": "bts:MC"
-                },
-                {
-                    "@id": "bts:MCJ"
-                },
-                {
-                    "@id": "bts:MCR"
-                },
-                {
-                    "@id": "bts:MSBB"
-                },
-                {
-                    "@id": "bts:MrOS"
-                },
-                {
-                    "@id": "bts:NYBB"
-                },
-                {
-                    "@id": "bts:PittADRC"
-                },
-                {
-                    "@id": "bts:RADC"
-                },
-                {
-                    "@id": "bts:ROSMAP"
-                },
-                {
-                    "@id": "bts:SMRI"
-                },
-                {
-                    "@id": "bts:SOF"
-                },
-                {
-                    "@id": "bts:UKBiobank"
-                },
-                {
-                    "@id": "bts:UPBB"
-                },
-                {
-                    "@id": "bts:UPenn"
-                },
-                {
-                    "@id": "bts:UWADRC"
-                },
-                {
-                    "@id": "bts:BiggsInstituteBrainBank"
-                },
-                {
-                    "@id": "bts:ColumbiaADRC"
-                },
-                {
-                    "@id": "bts:EFIGA"
-                },
-                {
-                    "@id": "bts:FBS"
-                },
-                {
-                    "@id": "bts:HBCC"
-                },
-                {
-                    "@id": "bts:MayoClinic"
-                },
-                {
-                    "@id": "bts:UFL"
-                },
-                {
-                    "@id": "bts:WHICAP"
+                    "@id": "bts:USFamily"
                 }
             ],
             "sms:displayName": "cohort",
@@ -18935,10 +18985,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ABC-DS",
+            "@id": "bts:ArivaleScientificWellnessStudy(SWS)",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "ABC-DS",
+            "rdfs:label": "ArivaleScientificWellnessStudy(SWS)",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -18947,15 +18997,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "ABC-DS",
+            "sms:displayName": "Arivale Scientific Wellness Study (SWS)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ACT",
+            "@id": "bts:CardiovascularHealthStudy(CHS)",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "ACT",
+            "rdfs:label": "CardiovascularHealthStudy(CHS)",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -18964,15 +19014,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "ACT",
+            "sms:displayName": "Cardiovascular Health Study (CHS)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:ADNI",
+            "@id": "bts:Centenarian",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "ADNI",
+            "rdfs:label": "Centenarian",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -18981,15 +19031,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "ADNI",
+            "sms:displayName": "Centenarian",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Banner",
+            "@id": "bts:DenmarkFamily",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Banner",
+            "rdfs:label": "DenmarkFamily",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -18998,15 +19048,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Banner",
+            "sms:displayName": "Denmark Family",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:BEB-Miller",
+            "@id": "bts:StudyofOsteoporoticFractures(SOF)",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "BEB-Miller",
+            "rdfs:label": "StudyofOsteoporoticFractures(SOF)",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -19015,15 +19065,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "BEB-Miller",
+            "sms:displayName": "Study of Osteoporotic Fractures (SOF)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:BLSA",
+            "@id": "bts:SuperAgersFamilyStudy",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "BLSA",
+            "rdfs:label": "SuperAgersFamilyStudy",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -19032,15 +19082,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "BLSA",
+            "sms:displayName": "SuperAgers Family Study",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CHDWB",
+            "@id": "bts:TheHealthAgingandBodyCompositionStuday(HealthABC)",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "CHDWB",
+            "rdfs:label": "TheHealthAgingandBodyCompositionStuday(HealthABC)",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -19049,15 +19099,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "CHDWB",
+            "sms:displayName": "The Health Aging and Body Composition Studay (HealthABC)",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CHS",
+            "@id": "bts:TheOsteoporoticFracturesinMen(MrOS)Study",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "CHS",
+            "rdfs:label": "TheOsteoporoticFracturesinMen(MrOS)Study",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -19066,15 +19116,15 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "CHS",
+            "sms:displayName": "The Osteoporotic Fractures in Men (MrOS) Study",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
-            "@id": "bts:CLINCOR",
+            "@id": "bts:USFamily",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "CLINCOR",
+            "rdfs:label": "USFamily",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Cohort"
@@ -19083,585 +19133,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "CLINCOR",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DiCAD",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "DiCAD",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "DiCAD",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:EHBS",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "EHBS",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "EHBS",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:EmoryADRC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "EmoryADRC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Emory ADRC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Framingham",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Framingham",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Framingham",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HABC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HABC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "HABC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HBTRC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HBTRC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "HBTRC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HPGP",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HPGP",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "HPGP",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HUP",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HUP",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "HUP",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:LBP",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LBP",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "LBP",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MARS",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MARS",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MARS",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MAYO",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MAYO",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MAYO",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MCJ",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MCJ",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MCJ",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MCR",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MCR",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MCR",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MSBB",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MSBB",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MSBB",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MrOS",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MrOS",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MrOS",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:NYBB",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "NYBB",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "NYBB",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:PittADRC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "PittADRC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Pitt ADRC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:RADC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "RADC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "RADC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ROSMAP",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ROSMAP",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "ROSMAP",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SMRI",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SMRI",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "SMRI",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SOF",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SOF",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "SOF",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UKBiobank",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UKBiobank",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "UK Biobank",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UPBB",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UPBB",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "UPBB",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UPenn",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UPenn",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "UPenn",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UWADRC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UWADRC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "UW ADRC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:BiggsInstituteBrainBank",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "BiggsInstituteBrainBank",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Biggs Institute Brain Bank",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:ColumbiaADRC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "ColumbiaADRC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Columbia ADRC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:EFIGA",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "EFIGA",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "EFIGA",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:FBS",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "FBS",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "FBS",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:HBCC",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "HBCC",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "HBCC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:MayoClinic",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MayoClinic",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Mayo Clinic",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:UFL",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "UFL",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "UFL",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:WHICAP",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "WHICAP",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Cohort"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "WHICAP",
+            "sms:displayName": "US Family",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
