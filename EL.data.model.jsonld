@@ -2633,9 +2633,6 @@
                     "@id": "bts:RunType"
                 },
                 {
-                    "@id": "bts:SpeciesName"
-                },
-                {
                     "@id": "bts:Stage"
                 },
                 {
@@ -2732,9 +2729,6 @@
                 },
                 {
                     "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:Stage"
@@ -2836,9 +2830,6 @@
                 },
                 {
                     "@id": "bts:MsTarget"
-                },
-                {
-                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:Stage"
@@ -2999,9 +2990,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DirectionalBSseqLibrary"
-                },
-                {
-                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:ReadStrandOrigin"
@@ -9688,44 +9676,8 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Multi-species"
-                },
-                {
-                    "@id": "bts:Notapplicable"
-                },
-                {
-                    "@id": "bts:Notcollected"
-                },
-                {
-                    "@id": "bts:Notspecified"
-                },
-                {
-                    "@id": "bts:Unknown"
-                }
-            ],
             "sms:displayName": "speciesName",
             "sms:required": "sms:true",
-            "sms:validationRules": [
-                "allowOther"
-            ]
-        },
-        {
-            "@id": "bts:Multi-species",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Multi-species",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:SpeciesName"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Multi-species",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
