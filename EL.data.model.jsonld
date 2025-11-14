@@ -1321,9 +1321,6 @@
                     "@id": "bts:IsMultiSpecimen"
                 },
                 {
-                    "@id": "bts:Species"
-                },
-                {
                     "@id": "bts:ProjectShortName"
                 },
                 {
@@ -2660,9 +2657,6 @@
                     "@id": "bts:LifeStage"
                 },
                 {
-                    "@id": "bts:SpeciesGroup"
-                },
-                {
                     "@id": "bts:TranscriptType"
                 },
                 {
@@ -2679,6 +2673,9 @@
                 },
                 {
                     "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
                 },
                 {
                     "@id": "bts:TreatmentDurationUnit"
@@ -2761,9 +2758,6 @@
                     "@id": "bts:LifeStage"
                 },
                 {
-                    "@id": "bts:SpeciesGroup"
-                },
-                {
                     "@id": "bts:TranscriptType"
                 },
                 {
@@ -2777,6 +2771,9 @@
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
                 },
                 {
                     "@id": "bts:TreatmentDurationUnit"
@@ -2859,9 +2856,6 @@
                     "@id": "bts:LifeStage"
                 },
                 {
-                    "@id": "bts:SpeciesGroup"
-                },
-                {
                     "@id": "bts:TranscriptType"
                 },
                 {
@@ -2878,6 +2872,9 @@
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
                 },
                 {
                     "@id": "bts:TreatmentDurationUnit"
@@ -2949,9 +2946,6 @@
                 },
                 {
                     "@id": "bts:LifeStage"
-                },
-                {
-                    "@id": "bts:SpeciesGroup"
                 },
                 {
                     "@id": "bts:TranscriptType"
@@ -9533,10 +9527,16 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:Amphibian"
+                },
+                {
                     "@id": "bts:Bird"
                 },
                 {
-                    "@id": "bts:Human"
+                    "@id": "bts:Fish"
+                },
+                {
+                    "@id": "bts:Invertebrate"
                 },
                 {
                     "@id": "bts:Mammal"
@@ -9551,13 +9551,7 @@
                     "@id": "bts:Notspecified"
                 },
                 {
-                    "@id": "bts:Other"
-                },
-                {
-                    "@id": "bts:Primate"
-                },
-                {
-                    "@id": "bts:Rodent"
+                    "@id": "bts:Reptile"
                 },
                 {
                     "@id": "bts:Unknown"
@@ -9565,6 +9559,23 @@
             ],
             "sms:displayName": "speciesGroup",
             "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Amphibian",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Amphibian",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesGroup"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Amphibian",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -9585,14 +9596,11 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Human",
+            "@id": "bts:Fish",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Human",
+            "rdfs:label": "Fish",
             "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Species"
-                },
                 {
                     "@id": "bts:SpeciesGroup"
                 }
@@ -9600,7 +9608,24 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Human",
+            "sms:displayName": "Fish",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Invertebrate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Invertebrate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesGroup"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Invertebrate",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -9622,10 +9647,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Primate",
+            "@id": "bts:Reptile",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Primate",
+            "rdfs:label": "Reptile",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:SpeciesGroup"
@@ -9634,24 +9659,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Primate",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Rodent",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Rodent",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:SpeciesGroup"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Rodent",
+            "sms:displayName": "Reptile",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -19339,13 +19347,16 @@
             },
             "schema:rangeIncludes": [
                 {
+                    "@id": "bts:Cross-SpeciesAvian"
+                },
+                {
+                    "@id": "bts:Cross-SpeciesMammalian"
+                },
+                {
                     "@id": "bts:Human"
                 },
                 {
-                    "@id": "bts:NonHuman"
-                },
-                {
-                    "@id": "bts:Notassigned"
+                    "@id": "bts:Mouse"
                 }
             ],
             "sms:displayName": "species",
@@ -19353,10 +19364,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NonHuman",
+            "@id": "bts:Cross-SpeciesAvian",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "NonHuman",
+            "rdfs:label": "Cross-SpeciesAvian",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Species"
@@ -19365,7 +19376,58 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Non Human",
+            "sms:displayName": "Cross-Species Avian",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cross-SpeciesMammalian",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cross-SpeciesMammalian",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Species"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cross-Species Mammalian",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Human",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Human",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Species"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Human",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Mouse",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Mouse",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Species"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mouse",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
