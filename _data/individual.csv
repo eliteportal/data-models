@@ -8,4 +8,4 @@ hasMMSE,The datafile and/or individualID includes cognitive variables and/or sco
 hasMoCA,The datafile and/or individualID includes cognitive variables and/or scores from the Montreal Cognitive Assessment (MoCA),"Yes, No",STRING,ManifestColumn,individual
 individualID,"Identifying string linked to the individual or animal being studied, provided by the data contributor",,STRING,ManifestColumn,individual
 isMultiSpecimen,Boolean flag indicating whether or not a file has data for multiple specimens,"true,fasle,Not assigned",STRING_LIST,ManifestColumn,individual
-species,The name of a species (typically a taxonomic group) of organism.,"Human,Non Human,Not assigned",STRING_LIST,ManifestColumn,individual
+species,The name of a species (typically a taxonomic group) of organism.,"Cross-Species Avian,Cross-Species Mammalian,Human,Mouse",STRING_LIST,ManifestColumn,individual

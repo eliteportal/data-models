@@ -24,4 +24,4 @@ studyMetadata,,False,,,,,
 studyName,,False,,,,,
 studyType,,False,,,,,
 studyWiki,,False,,,,,
-species,The name of a species (typically a taxonomic group) of organism.,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"Human,Non Human,Not assigned"
+species,The name of a species (typically a taxonomic group) of organism.,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"Cross-Species Avian,Cross-Species Mammalian,Human,Mouse"

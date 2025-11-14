@@ -4,7 +4,7 @@ countryCode,"Indicate the geographic region for the individual (shown as ex. ""8
 diagnosisStatus,"Whether the individual has been diagnosed with a condition or disease (physical and/or cognitive), \True"" indicates the individual has been diagnosed""",True,STRING,,,ManifestColumn,"FALSE,TRUE"
 ethnicGroupCode,"A coded value specifying the self-declared ethnic origination independent of racial origination, provided by the data contributor's data dictionary",False,STRING,,,ManifestColumn,
 fieldCenterCode,Name of the field center,True,STRING,,,ManifestColumn,
-speciesGroup,The taxonomic ranking including both species and subspecies the individual belongs to.,True,STRING,,,ManifestColumn,"Bird,Human,Mammal,Not applicable,Not collected,Not specified,Other,Primate,Rodent,Unknown"
+speciesGroup,The taxonomic ranking including both species and subspecies the individual belongs to.,True,STRING,,,ManifestColumn,"Amphibian,Bird,Fish,Invertebrate,Mammal,Not applicable,Not collected,Not specified,Reptile,Unknown"
 studyCode,"Unique identifier for the study, assigned by the DCC",True,STRING,,,ManifestColumn,"CDCP,ILO,LC,LG,LLFS,Other"
 visitCode,"Indicate which longitudinal visit for the individual the data comes from, provided by the data contributor's data dictionary",True,NUMBER,,,ManifestColumn,
 Component,,False,,,,,

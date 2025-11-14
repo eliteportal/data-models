@@ -1,4 +1,5 @@
 Key,Key Description,columnType,Source,Parent
+Cross-Species Avian,,STRING_LIST,,ManifestColumn
+Cross-Species Mammalian,,STRING_LIST,,ManifestColumn
 Human,,STRING_LIST,,ManifestColumn
-Non Human,,STRING_LIST,,ManifestColumn
-Not assigned,,STRING_LIST,,ManifestColumn
+Mouse,,STRING_LIST,,ManifestColumn
