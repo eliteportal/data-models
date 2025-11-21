@@ -241,6 +241,65 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Clinical"
+                },
+                {
+                    "@id": "bts:DrugScreen"
+                },
+                {
+                    "@id": "bts:Electrophysiology"
+                },
+                {
+                    "@id": "bts:Epigenetics"
+                },
+                {
+                    "@id": "bts:GeneExpression"
+                },
+                {
+                    "@id": "bts:GenomeAssembly"
+                },
+                {
+                    "@id": "bts:GenomicVariants"
+                },
+                {
+                    "@id": "bts:Imaging"
+                },
+                {
+                    "@id": "bts:Lipidomics"
+                },
+                {
+                    "@id": "bts:Metabolomics"
+                },
+                {
+                    "@id": "bts:Metagenomics"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notspecified"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Phenotype"
+                },
+                {
+                    "@id": "bts:Proteomics"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:WearableData"
+                }
+            ],
             "sms:displayName": "dataTypeAll",
             "sms:required": "sms:true",
             "sms:validationRules": []
@@ -1450,6 +1509,9 @@
                 },
                 {
                     "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:DataType"
                 },
                 {
                     "@id": "bts:DataTypeAll"
@@ -2687,6 +2749,12 @@
                     "@id": "bts:ReadStrandOrigin"
                 },
                 {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                },
+                {
                     "@id": "bts:DigestionReagent"
                 },
                 {
@@ -2706,6 +2774,9 @@
                 },
                 {
                     "@id": "bts:DnaBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:Assay"
@@ -2788,6 +2859,12 @@
                     "@id": "bts:LabelQuantitation"
                 },
                 {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                },
+                {
                     "@id": "bts:DigestionReagent"
                 },
                 {
@@ -2807,6 +2884,9 @@
                 },
                 {
                     "@id": "bts:DnaBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:Assay"
@@ -2886,6 +2966,12 @@
                     "@id": "bts:LabelQuantitation"
                 },
                 {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                },
+                {
                     "@id": "bts:DigestionReagent"
                 },
                 {
@@ -2914,6 +3000,9 @@
                 },
                 {
                     "@id": "bts:CellType"
+                },
+                {
+                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:Assay"
@@ -2954,6 +3043,12 @@
                     "@id": "bts:Cohort"
                 },
                 {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                },
+                {
                     "@id": "bts:RepositoryName"
                 },
                 {
@@ -2970,6 +3065,9 @@
                 },
                 {
                     "@id": "bts:CellType"
+                },
+                {
+                    "@id": "bts:SpeciesName"
                 },
                 {
                     "@id": "bts:Assay"
@@ -3052,6 +3150,12 @@
                     "@id": "bts:LabelQuantitation"
                 },
                 {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                },
+                {
                     "@id": "bts:LibraryPreparationMethod"
                 },
                 {
@@ -3074,6 +3178,9 @@
                 },
                 {
                     "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:SpeciesName"
                 }
             ],
             "schema:isPartOf": {
@@ -3389,6 +3496,362 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "metadata",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DataType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DataType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:manifestColumn"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Clinical"
+                },
+                {
+                    "@id": "bts:DrugScreen"
+                },
+                {
+                    "@id": "bts:Electrophysiology"
+                },
+                {
+                    "@id": "bts:Epigenetics"
+                },
+                {
+                    "@id": "bts:GeneExpression"
+                },
+                {
+                    "@id": "bts:GenomeAssembly"
+                },
+                {
+                    "@id": "bts:GenomicVariants"
+                },
+                {
+                    "@id": "bts:Imaging"
+                },
+                {
+                    "@id": "bts:Lipidomics"
+                },
+                {
+                    "@id": "bts:Metabolomics"
+                },
+                {
+                    "@id": "bts:Metagenomics"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notspecified"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Phenotype"
+                },
+                {
+                    "@id": "bts:Proteomics"
+                },
+                {
+                    "@id": "bts:Unknown"
+                },
+                {
+                    "@id": "bts:WearableData"
+                }
+            ],
+            "sms:displayName": "dataType",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Clinical",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Clinical",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "clinical",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DrugScreen",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "DrugScreen",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "drugScreen",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Electrophysiology",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Electrophysiology",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "electrophysiology",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Epigenetics",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Epigenetics",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "epigenetics",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GeneExpression",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GeneExpression",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "geneExpression",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GenomeAssembly",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GenomeAssembly",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "genomeAssembly",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GenomicVariants",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GenomicVariants",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "genomicVariants",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Imaging",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Imaging",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "imaging",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Lipidomics",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Lipidomics",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "lipidomics",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Metabolomics",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Metabolomics",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "metabolomics",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Metagenomics",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Metagenomics",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "metagenomics",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Phenotype",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Phenotype",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "phenotype",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Proteomics",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Proteomics",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "proteomics",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:WearableData",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "WearableData",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataTypeAll"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "wearableData",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -9676,8 +10139,2725 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Acomyscahirinus"
+                },
+                {
+                    "@id": "bts:Acomysrussatus"
+                },
+                {
+                    "@id": "bts:Accipitercooperii"
+                },
+                {
+                    "@id": "bts:Actitismacularius"
+                },
+                {
+                    "@id": "bts:Aixsponsa"
+                },
+                {
+                    "@id": "bts:Anasacuta"
+                },
+                {
+                    "@id": "bts:Anascarolinensis"
+                },
+                {
+                    "@id": "bts:Anasplatyrhynchos"
+                },
+                {
+                    "@id": "bts:Antigonecanadensis"
+                },
+                {
+                    "@id": "bts:Archilochuscolubris"
+                },
+                {
+                    "@id": "bts:Artibeusjamaicensis"
+                },
+                {
+                    "@id": "bts:Baeolophusbicolor"
+                },
+                {
+                    "@id": "bts:Balaenamysticetus"
+                },
+                {
+                    "@id": "bts:Blarinabrevicauda"
+                },
+                {
+                    "@id": "bts:Bombycillacedrorum"
+                },
+                {
+                    "@id": "bts:Bonasaumbellus"
+                },
+                {
+                    "@id": "bts:Bostaurus"
+                },
+                {
+                    "@id": "bts:Brantacanadensis"
+                },
+                {
+                    "@id": "bts:Bubovirginianus"
+                },
+                {
+                    "@id": "bts:Buteojamaicensis"
+                },
+                {
+                    "@id": "bts:Buteolineatus"
+                },
+                {
+                    "@id": "bts:Canislatrans"
+                },
+                {
+                    "@id": "bts:Cardinaliscardinalis"
+                },
+                {
+                    "@id": "bts:Castorcanadensis"
+                },
+                {
+                    "@id": "bts:Caviaporcellus"
+                },
+                {
+                    "@id": "bts:Charadriusvociferus"
+                },
+                {
+                    "@id": "bts:Chinchillalanigera"
+                },
+                {
+                    "@id": "bts:Columbalivia"
+                },
+                {
+                    "@id": "bts:Condyluracristata"
+                },
+                {
+                    "@id": "bts:Corvusbrachyrhynchos"
+                },
+                {
+                    "@id": "bts:Cricetomysansorgei"
+                },
+                {
+                    "@id": "bts:Cricetulusbarabensis"
+                },
+                {
+                    "@id": "bts:Cricetulusgriseus"
+                },
+                {
+                    "@id": "bts:Cryptomysdamarensis"
+                },
+                {
+                    "@id": "bts:Cuniculuspaca"
+                },
+                {
+                    "@id": "bts:Cyanocittacristata"
+                },
+                {
+                    "@id": "bts:Cygnusolor"
+                },
+                {
+                    "@id": "bts:Dryobatespubescens"
+                },
+                {
+                    "@id": "bts:Dumetellacarolinensis"
+                },
+                {
+                    "@id": "bts:Ellobiuslutescens"
+                },
+                {
+                    "@id": "bts:Ellobiustalpinus"
+                },
+                {
+                    "@id": "bts:Eonycterisspelaea"
+                },
+                {
+                    "@id": "bts:Eptesicusfuscus"
+                },
+                {
+                    "@id": "bts:Equuscaballus"
+                },
+                {
+                    "@id": "bts:Eremophilaalpestris"
+                },
+                {
+                    "@id": "bts:Fukomysdamarensis"
+                },
+                {
+                    "@id": "bts:Haemorhousmexicanus"
+                },
+                {
+                    "@id": "bts:Heterocephalusglaber"
+                },
+                {
+                    "@id": "bts:Hirundorustica"
+                },
+                {
+                    "@id": "bts:Homosapiens"
+                },
+                {
+                    "@id": "bts:Hydrochoerushydrochaeris"
+                },
+                {
+                    "@id": "bts:Hydroprognecaspia"
+                },
+                {
+                    "@id": "bts:Hylocichlamustelina"
+                },
+                {
+                    "@id": "bts:Icteriavirens"
+                },
+                {
+                    "@id": "bts:Larusargentatus"
+                },
+                {
+                    "@id": "bts:Larusdelawarensis"
+                },
+                {
+                    "@id": "bts:Macacafascicularis"
+                },
+                {
+                    "@id": "bts:Macacamulatta"
+                },
+                {
+                    "@id": "bts:Marecastrepera"
+                },
+                {
+                    "@id": "bts:Marmotamonax"
+                },
+                {
+                    "@id": "bts:Melanerpescarolinus"
+                },
+                {
+                    "@id": "bts:Meleagrisgallopavo"
+                },
+                {
+                    "@id": "bts:Melospizamelodia"
+                },
+                {
+                    "@id": "bts:Merionesunguiculatus"
+                },
+                {
+                    "@id": "bts:Mesocricetusauratus"
+                },
+                {
+                    "@id": "bts:Microtuspennsylvanicus"
+                },
+                {
+                    "@id": "bts:Mimuspolyglottos"
+                },
+                {
+                    "@id": "bts:Molothrusater"
+                },
+                {
+                    "@id": "bts:Multi-species"
+                },
+                {
+                    "@id": "bts:Musmusculus"
+                },
+                {
+                    "@id": "bts:Myocastorcoypus"
+                },
+                {
+                    "@id": "bts:Myotislucifugus"
+                },
+                {
+                    "@id": "bts:Nannospalaxgalili"
+                },
+                {
+                    "@id": "bts:Neosciuruscarolinensis"
+                },
+                {
+                    "@id": "bts:Neotomacinerea"
+                },
+                {
+                    "@id": "bts:Neotomafloridana"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Notprovided"
+                },
+                {
+                    "@id": "bts:Notspecified"
+                },
+                {
+                    "@id": "bts:Octodondegus"
+                },
+                {
+                    "@id": "bts:Odocoileusvirginianus"
+                },
+                {
+                    "@id": "bts:Ondatrazibethicus"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Pantroglodytes"
+                },
+                {
+                    "@id": "bts:Papioanubis"
+                },
+                {
+                    "@id": "bts:Passerdomesticus"
+                },
+                {
+                    "@id": "bts:Passerinacaerulea"
+                },
+                {
+                    "@id": "bts:Passerinacyanea"
+                },
+                {
+                    "@id": "bts:Peromyscusgossypinus"
+                },
+                {
+                    "@id": "bts:Peromyscusleucopus"
+                },
+                {
+                    "@id": "bts:Peromyscusmaniculatus"
+                },
+                {
+                    "@id": "bts:Phalacrocoraxauritus"
+                },
+                {
+                    "@id": "bts:Phasianuscolchicus"
+                },
+                {
+                    "@id": "bts:Picoidesvillosus"
+                },
+                {
+                    "@id": "bts:Pipiloerythrophthalmus"
+                },
+                {
+                    "@id": "bts:Poecilecarolinensis"
+                },
+                {
+                    "@id": "bts:Quiscalusquiscula"
+                },
+                {
+                    "@id": "bts:Rattusnorvegicus"
+                },
+                {
+                    "@id": "bts:Rattusrattus"
+                },
+                {
+                    "@id": "bts:Reguluscalendula"
+                },
+                {
+                    "@id": "bts:Saimiriboliviensis"
+                },
+                {
+                    "@id": "bts:Sayornisphoebe"
+                },
+                {
+                    "@id": "bts:Scalopusaquaticus"
+                },
+                {
+                    "@id": "bts:Sciuruscarolinensis"
+                },
+                {
+                    "@id": "bts:Sciurusniger"
+                },
+                {
+                    "@id": "bts:Sciurusvulgaris"
+                },
+                {
+                    "@id": "bts:Scolopaxminor"
+                },
+                {
+                    "@id": "bts:Setophagacitrina"
+                },
+                {
+                    "@id": "bts:Setophagacoronata"
+                },
+                {
+                    "@id": "bts:Setophagadominica"
+                },
+                {
+                    "@id": "bts:Setophagapetechia"
+                },
+                {
+                    "@id": "bts:Setophagapinus"
+                },
+                {
+                    "@id": "bts:Sialiasialis"
+                },
+                {
+                    "@id": "bts:Sigmodonhispidus"
+                },
+                {
+                    "@id": "bts:Sittacarolinensis"
+                },
+                {
+                    "@id": "bts:Spatulaclypeata"
+                },
+                {
+                    "@id": "bts:Spinustristis"
+                },
+                {
+                    "@id": "bts:Spizellapasserina"
+                },
+                {
+                    "@id": "bts:Spizellapusilla"
+                },
+                {
+                    "@id": "bts:Spizelloidesarborea"
+                },
+                {
+                    "@id": "bts:Struthiocamelus"
+                },
+                {
+                    "@id": "bts:Sturnusvulgaris"
+                },
+                {
+                    "@id": "bts:Susscrofa"
+                },
+                {
+                    "@id": "bts:Sylvilagusfloridanus"
+                },
+                {
+                    "@id": "bts:Tachycinetabicolor"
+                },
+                {
+                    "@id": "bts:Tamiasstriatus"
+                },
+                {
+                    "@id": "bts:Tamiasciurushudsonicus"
+                },
+                {
+                    "@id": "bts:Thryothorusludovicianus"
+                },
+                {
+                    "@id": "bts:Toxostomarufum"
+                },
+                {
+                    "@id": "bts:Troglodytesaedon"
+                },
+                {
+                    "@id": "bts:Turdusmigratorius"
+                },
+                {
+                    "@id": "bts:Tursiopstruncatus"
+                },
+                {
+                    "@id": "bts:Vicugnapacos"
+                },
+                {
+                    "@id": "bts:Vireogriseus"
+                },
+                {
+                    "@id": "bts:Vireoolivaceus"
+                },
+                {
+                    "@id": "bts:Zalophuscalifornianus"
+                },
+                {
+                    "@id": "bts:Zenaidamacroura"
+                },
+                {
+                    "@id": "bts:Zonotrichiaalbicollis"
+                },
+                {
+                    "@id": "bts:Unknown"
+                }
+            ],
             "sms:displayName": "speciesName",
             "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Acomyscahirinus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Acomyscahirinus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Acomys cahirinus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Acomysrussatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Acomysrussatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Acomys russatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Accipitercooperii",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Accipitercooperii",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Accipiter cooperii",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Actitismacularius",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Actitismacularius",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Actitis macularius",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Aixsponsa",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Aixsponsa",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Aix sponsa",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Anasacuta",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Anasacuta",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Anas acuta",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Anascarolinensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Anascarolinensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Anas carolinensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Anasplatyrhynchos",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Anasplatyrhynchos",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Anas platyrhynchos",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Antigonecanadensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Antigonecanadensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Antigone canadensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Archilochuscolubris",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Archilochuscolubris",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Archilochus colubris",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Artibeusjamaicensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Artibeusjamaicensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Artibeus jamaicensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Baeolophusbicolor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Baeolophusbicolor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Baeolophus bicolor",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Balaenamysticetus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Balaenamysticetus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Balaena mysticetus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Blarinabrevicauda",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Blarinabrevicauda",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Blarina brevicauda",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Bombycillacedrorum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Bombycillacedrorum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bombycilla cedrorum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Bonasaumbellus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Bonasaumbellus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bonasa umbellus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Bostaurus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Bostaurus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bos taurus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Brantacanadensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Brantacanadensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Branta canadensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Bubovirginianus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Bubovirginianus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Bubo virginianus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Buteojamaicensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Buteojamaicensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Buteo jamaicensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Buteolineatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Buteolineatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Buteo lineatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Canislatrans",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Canislatrans",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Canis latrans",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cardinaliscardinalis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cardinaliscardinalis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cardinalis cardinalis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Castorcanadensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Castorcanadensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Castor canadensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Caviaporcellus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Caviaporcellus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cavia porcellus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Charadriusvociferus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Charadriusvociferus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Charadrius vociferus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Chinchillalanigera",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Chinchillalanigera",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Chinchilla lanigera",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Columbalivia",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Columbalivia",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Columba livia",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Condyluracristata",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Condyluracristata",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Condylura cristata",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Corvusbrachyrhynchos",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Corvusbrachyrhynchos",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Corvus brachyrhynchos",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cricetomysansorgei",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cricetomysansorgei",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cricetomys ansorgei",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cricetulusbarabensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cricetulusbarabensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cricetulus barabensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cricetulusgriseus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cricetulusgriseus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cricetulus griseus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cryptomysdamarensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cryptomysdamarensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cryptomys damarensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cuniculuspaca",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cuniculuspaca",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cuniculus paca",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cyanocittacristata",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cyanocittacristata",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cyanocitta cristata",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Cygnusolor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Cygnusolor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Cygnus olor",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Dryobatespubescens",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Dryobatespubescens",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Dryobates pubescens",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Dumetellacarolinensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Dumetellacarolinensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Dumetella carolinensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ellobiuslutescens",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ellobiuslutescens",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ellobius lutescens",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ellobiustalpinus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ellobiustalpinus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ellobius talpinus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Eonycterisspelaea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Eonycterisspelaea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Eonycteris spelaea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Eptesicusfuscus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Eptesicusfuscus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Eptesicus fuscus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Equuscaballus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Equuscaballus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Equus caballus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Eremophilaalpestris",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Eremophilaalpestris",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Eremophila alpestris",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Fukomysdamarensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Fukomysdamarensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Fukomys damarensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Haemorhousmexicanus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Haemorhousmexicanus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Haemorhous mexicanus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Heterocephalusglaber",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Heterocephalusglaber",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Heterocephalus glaber",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Hirundorustica",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Hirundorustica",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hirundo rustica",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Homosapiens",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Homosapiens",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Homo sapiens",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Hydrochoerushydrochaeris",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Hydrochoerushydrochaeris",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hydrochoerus hydrochaeris",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Hydroprognecaspia",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Hydroprognecaspia",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hydroprogne caspia",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Hylocichlamustelina",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Hylocichlamustelina",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Hylocichla mustelina",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Icteriavirens",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Icteriavirens",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Icteria virens",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Larusargentatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Larusargentatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Larus argentatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Larusdelawarensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Larusdelawarensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Larus delawarensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Macacafascicularis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Macacafascicularis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Macaca fascicularis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Macacamulatta",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Macacamulatta",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Macaca mulatta",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Marecastrepera",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Marecastrepera",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mareca strepera",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Marmotamonax",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Marmotamonax",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Marmota monax",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Melanerpescarolinus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Melanerpescarolinus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Melanerpes carolinus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Meleagrisgallopavo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Meleagrisgallopavo",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Meleagris gallopavo",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Melospizamelodia",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Melospizamelodia",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Melospiza melodia",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Merionesunguiculatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Merionesunguiculatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Meriones unguiculatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Mesocricetusauratus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Mesocricetusauratus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mesocricetus auratus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Microtuspennsylvanicus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Microtuspennsylvanicus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Microtus pennsylvanicus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Mimuspolyglottos",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Mimuspolyglottos",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mimus polyglottos",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Molothrusater",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Molothrusater",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Molothrus ater",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Multi-species",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Multi-species",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Multi-species",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Musmusculus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Musmusculus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Mus musculus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Myocastorcoypus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Myocastorcoypus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Myocastor coypus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Myotislucifugus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Myotislucifugus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Myotis lucifugus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Nannospalaxgalili",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Nannospalaxgalili",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Nannospalax galili",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Neosciuruscarolinensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Neosciuruscarolinensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Neosciurus carolinensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Neotomacinerea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Neotomacinerea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Neotoma cinerea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Neotomafloridana",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Neotomafloridana",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Neotoma floridana",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Notprovided",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Notprovided",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Not provided",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Octodondegus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Octodondegus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Octodon degus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Odocoileusvirginianus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Odocoileusvirginianus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Odocoileus virginianus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Ondatrazibethicus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Ondatrazibethicus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Ondatra zibethicus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pantroglodytes",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Pantroglodytes",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pan troglodytes",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Papioanubis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Papioanubis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Papio anubis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Passerdomesticus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Passerdomesticus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Passer domesticus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Passerinacaerulea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Passerinacaerulea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Passerina caerulea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Passerinacyanea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Passerinacyanea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Passerina cyanea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Peromyscusgossypinus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Peromyscusgossypinus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Peromyscus gossypinus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Peromyscusleucopus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Peromyscusleucopus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Peromyscus leucopus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Peromyscusmaniculatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Peromyscusmaniculatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Peromyscus maniculatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Phalacrocoraxauritus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Phalacrocoraxauritus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Phalacrocorax auritus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Phasianuscolchicus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Phasianuscolchicus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Phasianus colchicus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Picoidesvillosus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Picoidesvillosus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Picoides villosus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Pipiloerythrophthalmus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Pipiloerythrophthalmus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Pipilo erythrophthalmus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Poecilecarolinensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Poecilecarolinensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Poecile carolinensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Quiscalusquiscula",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Quiscalusquiscula",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Quiscalus quiscula",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Rattusnorvegicus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Rattusnorvegicus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Rattus norvegicus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Rattusrattus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Rattusrattus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Rattus rattus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Reguluscalendula",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Reguluscalendula",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Regulus calendula",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Saimiriboliviensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Saimiriboliviensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Saimiri boliviensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sayornisphoebe",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sayornisphoebe",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sayornis phoebe",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Scalopusaquaticus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Scalopusaquaticus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Scalopus aquaticus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sciuruscarolinensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sciuruscarolinensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sciurus carolinensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sciurusniger",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sciurusniger",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sciurus niger",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sciurusvulgaris",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sciurusvulgaris",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sciurus vulgaris",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Scolopaxminor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Scolopaxminor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Scolopax minor",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Setophagacitrina",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Setophagacitrina",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Setophaga citrina",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Setophagacoronata",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Setophagacoronata",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Setophaga coronata",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Setophagadominica",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Setophagadominica",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Setophaga dominica",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Setophagapetechia",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Setophagapetechia",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Setophaga petechia",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Setophagapinus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Setophagapinus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Setophaga pinus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sialiasialis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sialiasialis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sialia sialis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sigmodonhispidus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sigmodonhispidus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sigmodon hispidus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sittacarolinensis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sittacarolinensis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sitta carolinensis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Spatulaclypeata",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Spatulaclypeata",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spatula clypeata",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Spinustristis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Spinustristis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spinus tristis",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Spizellapasserina",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Spizellapasserina",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spizella passerina",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Spizellapusilla",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Spizellapusilla",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spizella pusilla",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Spizelloidesarborea",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Spizelloidesarborea",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Spizelloides arborea",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Struthiocamelus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Struthiocamelus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Struthio camelus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sturnusvulgaris",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sturnusvulgaris",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sturnus vulgaris",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Susscrofa",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Susscrofa",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sus scrofa",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Sylvilagusfloridanus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Sylvilagusfloridanus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Sylvilagus floridanus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tachycinetabicolor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tachycinetabicolor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tachycineta bicolor",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tamiasstriatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tamiasstriatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tamias striatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tamiasciurushudsonicus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tamiasciurushudsonicus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tamiasciurus hudsonicus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Thryothorusludovicianus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Thryothorusludovicianus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Thryothorus ludovicianus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Toxostomarufum",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Toxostomarufum",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Toxostoma rufum",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Troglodytesaedon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Troglodytesaedon",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Troglodytes aedon",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Turdusmigratorius",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Turdusmigratorius",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Turdus migratorius",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Tursiopstruncatus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Tursiopstruncatus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Tursiops truncatus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Vicugnapacos",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Vicugnapacos",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vicugna pacos",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Vireogriseus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Vireogriseus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vireo griseus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Vireoolivaceus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Vireoolivaceus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Vireo olivaceus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Zalophuscalifornianus",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Zalophuscalifornianus",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Zalophus californianus",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Zenaidamacroura",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Zenaidamacroura",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Zenaida macroura",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Zonotrichiaalbicollis",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Zonotrichiaalbicollis",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpeciesName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Zonotrichia albicollis",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -21715,7 +24895,10 @@
                     "@id": "bts:IsMultiSpecimen"
                 },
                 {
-                    "@id": "bts:Species"
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
                 },
                 {
                     "@id": "bts:FamilyStudyParticipant"
@@ -21742,7 +24925,7 @@
                     "@id": "bts:ResourceType"
                 },
                 {
-                    "@id": "bts:DataTypeAll"
+                    "@id": "bts:DataType"
                 },
                 {
                     "@id": "bts:DataSubtype"

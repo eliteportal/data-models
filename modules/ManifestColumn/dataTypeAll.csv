@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-dataTypeAll,,,,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
+dataTypeAll,,"clinical,drugScreen,electrophysiology,epigenetics,geneExpression,genomeAssembly,genomicVariants,imaging,lipidomics,metabolomics,metagenomics,Not applicable,Not collected,Not specified,Other,phenotype,proteomics,Unknown,wearableData",,,True,ManifestColumn,,ManifestColumn,Sage Bionetworks,ManifestColumn,True,STRING_LIST,Sage Bionetworks,,study_folder_template
