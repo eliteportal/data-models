@@ -1,6 +1,6 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
 isModelSystem,Boolean flag indicating whether or not a file has data from a model system,True,BOOLEAN,,Sage Bionetworks,ManifestColumn,"True, False, Not assigned"
-dataTypeAll,,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,
+dataTypeAll,,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"clinical,drugScreen,electrophysiology,epigenetics,geneExpression,genomeAssembly,genomicVariants,imaging,lipidomics,metabolomics,metagenomics,Not applicable,Not collected,Not specified,Other,phenotype,proteomics,Unknown,wearableData"
 program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
 projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG, Not assigned"
 specimenType,Type of biological material comprising the Specimen,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
