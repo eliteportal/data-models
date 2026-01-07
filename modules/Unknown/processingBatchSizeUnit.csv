@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-processingBatchSizeUnit,,,,,,,,,,Unknown,,,,,assay_metabolomics_template
+processingBatchSizeUnit,,,,,,,,,,Unknown,,STRING,,,assay_metabolomics_template
