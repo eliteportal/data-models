@@ -1,4 +1,4 @@
 Key,Key Description,columnType,Source,Parent
-true,,STRING_LIST,,ManifestColumn
-fasle,,STRING_LIST,,ManifestColumn
-Not assigned,,STRING_LIST,,ManifestColumn
+true,,STRING,,ManifestColumn
+fasle,,STRING,,ManifestColumn
+Not assigned,,STRING,,ManifestColumn

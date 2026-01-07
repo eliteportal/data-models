@@ -1,27 +1,27 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
 isModelSystem,Boolean flag indicating whether or not a file has data from a model system,True,BOOLEAN,,Sage Bionetworks,ManifestColumn,"True, False, Not assigned"
-dataTypeAll,,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"clinical,drugScreen,electrophysiology,epigenetics,geneExpression,genomeAssembly,genomicVariants,imaging,lipidomics,metabolomics,metagenomics,Not applicable,Not collected,Not specified,Other,phenotype,proteomics,Unknown,wearableData"
+dataTypeAll,,True,STRING,,Sage Bionetworks,ManifestColumn,"clinical,drugScreen,electrophysiology,epigenetics,geneExpression,genomeAssembly,genomicVariants,imaging,lipidomics,metabolomics,metagenomics,Not applicable,Not collected,Not specified,Other,phenotype,proteomics,Unknown,wearableData"
 program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
 projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG, Not assigned"
 specimenType,Type of biological material comprising the Specimen,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
 studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),True,STRING,,Sage Bionetworks,ManifestColumn,
-Component,,False,,,,,
-accessReqs,,False,,,,,
-ackContext,,False,,,,,
-acknowledgment,,False,,,,,
-grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned"
-isFeatured,,False,,,,,
-isReleased,,False,,,,,
-metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",False,STRING_LIST,,Sage Bionetworks,ManifestColumn,"individual,biospecimen,assay,supplementary files,Not Assigned"
-methods,,False,,,,,
-newsRelease,,False,,,,,
-projectFullName,,False,,,,,
-relatedStudies,,False,,,,,
-studyAbstract,,False,,,,,
-studyDescription,,False,,,,,
-studyFocus,,False,,,,,
-studyMetadata,,False,,,,,
-studyName,,False,,,,,
-studyType,,False,,,,,
-studyWiki,,False,,,,,
-species,The name of a species (typically a taxonomic group) of organism.,True,STRING_LIST,,Sage Bionetworks,ManifestColumn,"Cross-Species Avian,Cross-Species Mammalian,Human,Mouse"
+Component,,False,STRING,,,,
+accessReqs,,False,STRING,,,,
+ackContext,,False,STRING,,,,
+acknowledgment,,False,STRING,,,,
+grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),True,STRING,,Sage Bionetworks,ManifestColumn,"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned"
+isFeatured,,False,BOOLEAN,,,,
+isReleased,,False,BOOLEAN,,,,
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",False,STRING,,Sage Bionetworks,ManifestColumn,"individual,biospecimen,assay,supplementary files,Not Assigned"
+methods,,False,STRING,,,,
+newsRelease,,False,STRING,,,,
+projectFullName,,False,STRING,,,,
+relatedStudies,,False,STRING,,,,
+studyAbstract,,False,STRING,,,,
+studyDescription,,False,STRING,,,,
+studyFocus,,False,STRING,,,,
+studyMetadata,,False,STRING,,,,
+studyName,,False,STRING,,,,
+studyType,,False,STRING,,,,
+studyWiki,,False,STRING,,,,
+species,The name of a species (typically a taxonomic group) of organism.,True,STRING,,Sage Bionetworks,ManifestColumn,"Cross-Species Avian,Cross-Species Mammalian,Human,Mouse"

@@ -1,7 +1,7 @@
 Key,Key Description,columnType,Source,Parent
-raw,,STRING_LIST,,ManifestColumn
-processed,,STRING_LIST,,ManifestColumn
-results,,STRING_LIST,,ManifestColumn
-normalized,,STRING_LIST,,ManifestColumn
-metadata,,STRING_LIST,,ManifestColumn
- Not assigned,,STRING_LIST,,ManifestColumn
+raw,,STRING,,ManifestColumn
+processed,,STRING,,ManifestColumn
+results,,STRING,,ManifestColumn
+normalized,,STRING,,ManifestColumn
+metadata,,STRING,,ManifestColumn
+ Not assigned,,STRING,,ManifestColumn

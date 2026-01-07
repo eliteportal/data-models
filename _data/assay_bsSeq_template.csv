@@ -14,7 +14,7 @@ sequencingBatchID,"Sequencing batch identifier, provided by the data contributor
 sequencingBatchSize,The number of samples. Provide a value or Unknown Not collected Not applicable Not specified,True,STRING,,,ManifestColumn,
 sequencingBatchSizeUnit,The unit of measurement for number of samples in a batch. Provide a value or Unknown Not collected Not applicable Not specified,True,STRING,,,ManifestColumn,
 technologyPlatformVersion,"The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,
-Component,,False,,,,,
+Component,,False,STRING,,,,
 Filename,,False,STRING,,,,
 specimenID,"Identifying string linked to a particular sample or specimen, provide by the data contributor",True,STRING,,sage.annotations-experimentalData.specimenID-0.0.2,ManifestColumn,
 platformLocation,"The name of the laboratory, facility, vendor, company, or location where the data generation platform was located, provided by the data contributor. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,sage.annotations-experimentalData.platformLocation-0.0.2,ManifestColumn,

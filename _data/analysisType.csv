@@ -1,13 +1,13 @@
 Key,Key Description,columnType,Source,Parent
-ANOVA,,STRING_LIST,,ManifestColumn
-batch effect correction,,STRING_LIST,,ManifestColumn
-clustering,,STRING_LIST,,ManifestColumn
-data normalization,,STRING_LIST,,ManifestColumn
-de-novo assembly,,STRING_LIST,,ManifestColumn
-dose response study,,STRING_LIST,,ManifestColumn
-enrichment analysis,,STRING_LIST,,ManifestColumn
-genome-wide association,,STRING_LIST,,ManifestColumn
-mendelian randomization analysis,,STRING_LIST,,ManifestColumn
-network analysis,,STRING_LIST,,ManifestColumn
-polygenic risk scores,,STRING_LIST,,ManifestColumn
- Not assigned,,STRING_LIST,,ManifestColumn
+ANOVA,,STRING,,ManifestColumn
+batch effect correction,,STRING,,ManifestColumn
+clustering,,STRING,,ManifestColumn
+data normalization,,STRING,,ManifestColumn
+de-novo assembly,,STRING,,ManifestColumn
+dose response study,,STRING,,ManifestColumn
+enrichment analysis,,STRING,,ManifestColumn
+genome-wide association,,STRING,,ManifestColumn
+mendelian randomization analysis,,STRING,,ManifestColumn
+network analysis,,STRING,,ManifestColumn
+polygenic risk scores,,STRING,,ManifestColumn
+ Not assigned,,STRING,,ManifestColumn

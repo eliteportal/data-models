@@ -30,7 +30,7 @@ sop,"Relevant standard operating procedures. Standard operating procedures used 
 sourceMatID,"Source material identifiers. A unique identifier assigned to a material sample (as defined by http-//rs.tdwg.org/dwc/terms/materialSampleID and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing.The identifier can refer to the original material collected or any derived sub-samples. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,
 targetGene,"Targeted gene or locus name for marker gene studies. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,
 technologyPlatformVersion,"The specific version (application, manufacturer, model, lab, etc.) of a technology that is used to carry out a laboratory or computational experiment. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,
-Component,,False,,,,,
+Component,,False,STRING,,,,
 Filename,,False,STRING,,,,
 specimenID,"Identifying string linked to a particular sample or specimen, provide by the data contributor",True,STRING,,sage.annotations-experimentalData.specimenID-0.0.2,ManifestColumn,
 platformLocation,"The name of the laboratory, facility, vendor, company, or location where the data generation platform was located, provided by the data contributor. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,sage.annotations-experimentalData.platformLocation-0.0.2,ManifestColumn,

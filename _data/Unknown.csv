@@ -1,28 +1,28 @@
 Key,Key Description,Valid Values,columnType,Parent,module
-Component,,,,,Unknown
+Component,,,STRING,,Unknown
 Filename,,,STRING,,Unknown
-accessReqs,,,,,Unknown
-ackContext,,,,,Unknown
-acknowledgment,,,,,Unknown
-acquistionSoftwareVersion,,,,,Unknown
-batchSizeUnit,,,,,Unknown
-experimentalBatchSize,,,,,Unknown
-grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned",STRING_LIST,ManifestColumn,Unknown
-isFeatured,,,,,Unknown
-isReleased,,,,,Unknown
-metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,supplementary files,Not Assigned",STRING_LIST,ManifestColumn,Unknown
-methods,,,,,Unknown
-newsRelease,,,,,Unknown
-processingBatchSize,,,,,Unknown
-processingBatchSizeUnit,,,,,Unknown
-projectFullName,,,,,Unknown
-relatedStudies,,,,,Unknown
-sampleBatchSize,,,,,Unknown
-sampleBatchSizeUnit,,,,,Unknown
-studyAbstract,,,,,Unknown
-studyDescription,,,,,Unknown
-studyFocus,,,,,Unknown
-studyMetadata,,,,,Unknown
-studyName,,,,,Unknown
-studyType,,,,,Unknown
-studyWiki,,,,,Unknown
+accessReqs,,,STRING,,Unknown
+ackContext,,,STRING,,Unknown
+acknowledgment,,,STRING,,Unknown
+acquistionSoftwareVersion,,,STRING,,Unknown
+batchSizeUnit,,,STRING,,Unknown
+experimentalBatchSize,,,INTEGER,,Unknown
+grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned",STRING,ManifestColumn,Unknown
+isFeatured,,,BOOLEAN,,Unknown
+isReleased,,,BOOLEAN,,Unknown
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,supplementary files,Not Assigned",STRING,ManifestColumn,Unknown
+methods,,,STRING,,Unknown
+newsRelease,,,STRING,,Unknown
+processingBatchSize,,,INTEGER,,Unknown
+processingBatchSizeUnit,,,STRING,,Unknown
+projectFullName,,,STRING,,Unknown
+relatedStudies,,,STRING,,Unknown
+sampleBatchSize,,,INTEGER,,Unknown
+sampleBatchSizeUnit,,,STRING,,Unknown
+studyAbstract,,,STRING,,Unknown
+studyDescription,,,STRING,,Unknown
+studyFocus,,,STRING,,Unknown
+studyMetadata,,,STRING,,Unknown
+studyName,,,STRING,,Unknown
+studyType,,,STRING,,Unknown
+studyWiki,,,STRING,,Unknown

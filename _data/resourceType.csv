@@ -1,7 +1,7 @@
 Key,Key Description,columnType,Source,Parent
-experimentalData,,STRING_LIST,,ManifestColumn
-metadata,,STRING_LIST,,ManifestColumn
-tool,,STRING_LIST,,ManifestColumn
-analysis,,STRING_LIST,,ManifestColumn
-computationalNotebook,,STRING_LIST,,ManifestColumn
- Not assigned,,STRING_LIST,,ManifestColumn
+experimentalData,,STRING,,ManifestColumn
+metadata,,STRING,,ManifestColumn
+tool,,STRING,,ManifestColumn
+analysis,,STRING,,ManifestColumn
+computationalNotebook,,STRING,,ManifestColumn
+ Not assigned,,STRING,,ManifestColumn

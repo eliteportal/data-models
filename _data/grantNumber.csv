@@ -1,10 +1,10 @@
 Key,Key Description,columnType,Source,Parent
-U19AG063893,,STRING_LIST,,ManifestColumn
-U24AG051129,,STRING_LIST,,ManifestColumn
-U19AG023122,,STRING_LIST,,ManifestColumn
-UH2AG064706,,STRING_LIST,,ManifestColumn
-UH3AG064706,,STRING_LIST,,ManifestColumn
-UH2AG064704,,STRING_LIST,,ManifestColumn
-UH3AG064704,,STRING_LIST,,ManifestColumn
-R01AG061844,,STRING_LIST,,ManifestColumn
- Not assigned,,STRING_LIST,,ManifestColumn
+U19AG063893,,STRING,,ManifestColumn
+U24AG051129,,STRING,,ManifestColumn
+U19AG023122,,STRING,,ManifestColumn
+UH2AG064706,,STRING,,ManifestColumn
+UH3AG064706,,STRING,,ManifestColumn
+UH2AG064704,,STRING,,ManifestColumn
+UH3AG064704,,STRING,,ManifestColumn
+R01AG061844,,STRING,,ManifestColumn
+ Not assigned,,STRING,,ManifestColumn

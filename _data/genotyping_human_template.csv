@@ -36,6 +36,6 @@ useReagent,Was a reagent applied to the sample?,True,BOOLEAN,,,ManifestColumn,"F
 useSummaryFile,Was a summary statitics file uploded to Synapse?,True,STRING,,,ManifestColumn,
 useTreatment,Was a treatment applied to the sample?,True,BOOLEAN,,,ManifestColumn,
 variantCount,The number of variants analysed in the discovery stage (after QC). Example - 52500,True,STRING,,,ManifestColumn,
-Component,,False,,,,,
+Component,,False,STRING,,,,
 Filename,,False,STRING,,,,
 specimenID,"Identifying string linked to a particular sample or specimen, provide by the data contributor",True,STRING,,sage.annotations-experimentalData.specimenID-0.0.2,ManifestColumn,
