@@ -294,7 +294,7 @@
                     "@id": "bts:Proteomics"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:WearableData"
@@ -736,7 +736,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "assay",
@@ -1194,6 +1194,9 @@
                     "@id": "bts:BiospecimenNonHumanTemplate"
                 },
                 {
+                    "@id": "bts:ComputationalToolsTemplate"
+                },
+                {
                     "@id": "bts:FileAnnotationTemplate"
                 },
                 {
@@ -1386,10 +1389,10 @@
                     "@id": "bts:DataSubtype"
                 },
                 {
-                    "@id": "bts:ResourceType"
+                    "@id": "bts:ModelSystemType"
                 },
                 {
-                    "@id": "bts:ModelSystemType"
+                    "@id": "bts:ResourceType"
                 },
                 {
                     "@id": "bts:GrantNumber"
@@ -2621,7 +2624,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "captivityStatus",
@@ -3081,106 +3084,31 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:Unknown",
-            "@type": "rdfs:Class",
+            "@id": "bts:unknown",
+            "@type": "rdf:Property",
             "rdfs:comment": "TBD",
-            "rdfs:label": "Unknown",
-            "rdfs:subClassOf": [
+            "rdfs:label": "unknown",
+            "schema:domainIncludes": [
                 {
-                    "@id": "bts:DirectionalBSseqLibrary"
+                    "@id": "bts:Contributor"
                 },
                 {
-                    "@id": "bts:ReadStrandOrigin"
+                    "@id": "bts:DisplayName"
                 },
                 {
-                    "@id": "bts:MsTarget"
+                    "@id": "bts:Documentation"
                 },
                 {
-                    "@id": "bts:FastingState"
+                    "@id": "bts:Grants"
                 },
                 {
-                    "@id": "bts:Stage"
+                    "@id": "bts:Institution"
                 },
                 {
-                    "@id": "bts:Ethnicity"
+                    "@id": "bts:Project"
                 },
                 {
-                    "@id": "bts:Sex"
-                },
-                {
-                    "@id": "bts:RunType"
-                },
-                {
-                    "@id": "bts:CaptivityStatus"
-                },
-                {
-                    "@id": "bts:LifeStage"
-                },
-                {
-                    "@id": "bts:ResultUnit"
-                },
-                {
-                    "@id": "bts:TranscriptType"
-                },
-                {
-                    "@id": "bts:LabelFreeQuantitation"
-                },
-                {
-                    "@id": "bts:SpeciesGroup"
-                },
-                {
-                    "@id": "bts:TreatmentDurationUnit"
-                },
-                {
-                    "@id": "bts:EnrichmentStrategy"
-                },
-                {
-                    "@id": "bts:NucleicAcidSource"
-                },
-                {
-                    "@id": "bts:Race"
-                },
-                {
-                    "@id": "bts:Cohort"
-                },
-                {
-                    "@id": "bts:SpecimenType"
-                },
-                {
-                    "@id": "bts:LabelQuantitation"
-                },
-                {
-                    "@id": "bts:DataType"
-                },
-                {
-                    "@id": "bts:DataTypeAll"
-                },
-                {
-                    "@id": "bts:LibraryPreparationMethod"
-                },
-                {
-                    "@id": "bts:LibraryPrep"
-                },
-                {
-                    "@id": "bts:DigestionReagent"
-                },
-                {
-                    "@id": "bts:RepositoryName"
-                },
-                {
-                    "@id": "bts:Organ"
-                },
-                {
-                    "@id": "bts:CellType"
-                },
-                {
-                    "@id": "bts:DnaBatchSizeUnit"
-                },
-                {
-                    "@id": "bts:Assay"
-                },
-                {
-                    "@id": "bts:SpeciesName"
+                    "@id": "bts:Summary"
                 }
             ],
             "schema:isPartOf": {
@@ -3565,7 +3493,7 @@
                     "@id": "bts:Proteomics"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:WearableData"
@@ -4127,7 +4055,7 @@
                     "@id": "bts:Trypsin/P"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Unspecificcleavage"
@@ -4743,7 +4671,7 @@
                     "@id": "bts:Units/ml"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Notcollected"
@@ -6210,7 +6138,7 @@
                     "@id": "bts:Ubiquitylome"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "enrichmentStrategy",
@@ -7740,7 +7668,7 @@
                     "@id": "bts:Notspecified"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "labelFreeQuantitation",
@@ -7889,7 +7817,7 @@
                     "@id": "bts:TMT"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "labelQuantitation",
@@ -8238,7 +8166,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "lifeStage",
@@ -8411,7 +8339,7 @@
                     "@id": "bts:Targeted"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Untargeted"
@@ -8964,7 +8892,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Notcollected"
@@ -9367,6 +9295,9 @@
                     "@id": "bts:ComputationalNotebook"
                 },
                 {
+                    "@id": "bts:SoftwareTool"
+                },
+                {
                     "@id": "bts:Notassigned"
                 }
             ],
@@ -9443,6 +9374,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:SoftwareTool",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SoftwareTool",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:ResourceType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "softwareTool",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:ResultUnit",
             "@type": "rdfs:Class",
             "rdfs:comment": "The unit for the result value",
@@ -9478,7 +9426,7 @@
                     "@id": "bts:TPM"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "resultUnit",
@@ -10017,7 +9965,7 @@
                     "@id": "bts:Reptile"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "speciesGroup",
@@ -10558,7 +10506,7 @@
                     "@id": "bts:Zonotrichiaalbicollis"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "speciesName",
@@ -12948,7 +12896,7 @@
                     "@id": "bts:Tissue"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Urine"
@@ -13460,7 +13408,7 @@
                     "@id": "bts:Replication"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "stage",
@@ -13730,7 +13678,7 @@
                     "@id": "bts:SnRNA"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "transcriptType",
@@ -14065,7 +14013,7 @@
                     "@id": "bts:Seconds"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Weeks"
@@ -14741,6 +14689,57 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Contributor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Contributor",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "contributor",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:DisplayName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Canonical tool name provided by the tool developer or service provider",
+            "rdfs:label": "DisplayName",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "displayName",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Documentation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Documentation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "documentation",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:ExperimentalBatchSize",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -14936,6 +14935,40 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "R01AG061844",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Grants",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Grant number associated with the tool's development. Multiple values permitted, comma separated.",
+            "rdfs:label": "Grants",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "grants",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Institution",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Institution",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "institution",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -15147,6 +15180,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Project",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The ELITE project short name associated with the tool",
+            "rdfs:label": "Project",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "project",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:ProjectFullName",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -15334,6 +15384,23 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:Summary",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Textual description of the tool",
+            "rdfs:label": "Summary",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "summary",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:BatchSize",
             "@type": "rdfs:Class",
             "rdfs:comment": "The number of samples",
@@ -15503,7 +15570,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "cellType",
@@ -16237,7 +16304,7 @@
                     "@id": "bts:TRUE"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "fastingState",
@@ -16314,7 +16381,7 @@
                     "@id": "bts:Sortednuclei"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "nucleicAcidSource",
@@ -16527,7 +16594,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Plasma"
@@ -19463,6 +19530,760 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:SoftwareType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "SoftwareType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "softwareType",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:computationaltools",
+            "@type": "rdf:Property",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "computationaltools",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bts:SoftwareType"
+                },
+                {
+                    "@id": "bts:ToolAccessibility"
+                },
+                {
+                    "@id": "bts:ToolCmd"
+                },
+                {
+                    "@id": "bts:ToolComputeRequirements"
+                },
+                {
+                    "@id": "bts:ToolCost"
+                },
+                {
+                    "@id": "bts:ToolDateLastModified"
+                },
+                {
+                    "@id": "bts:ToolDocumentationNote"
+                },
+                {
+                    "@id": "bts:ToolDocumentationType"
+                },
+                {
+                    "@id": "bts:ToolDocumentationUrl"
+                },
+                {
+                    "@id": "bts:ToolDoi"
+                },
+                {
+                    "@id": "bts:ToolDownloadNote"
+                },
+                {
+                    "@id": "bts:ToolDownloadType"
+                },
+                {
+                    "@id": "bts:ToolDownloadUrl"
+                },
+                {
+                    "@id": "bts:ToolDownloadVersion"
+                },
+                {
+                    "@id": "bts:ToolEntityName"
+                },
+                {
+                    "@id": "bts:ToolEntityRole"
+                },
+                {
+                    "@id": "bts:ToolEntityType"
+                },
+                {
+                    "@id": "bts:ToolFunctionNote"
+                },
+                {
+                    "@id": "bts:ToolHomepage"
+                },
+                {
+                    "@id": "bts:ToolInputData"
+                },
+                {
+                    "@id": "bts:ToolInputFormat"
+                },
+                {
+                    "@id": "bts:ToolLanguage"
+                },
+                {
+                    "@id": "bts:ToolLicense"
+                },
+                {
+                    "@id": "bts:ToolLinkNote"
+                },
+                {
+                    "@id": "bts:ToolLinkType"
+                },
+                {
+                    "@id": "bts:ToolLinkUrl"
+                },
+                {
+                    "@id": "bts:ToolOperatingSystem"
+                },
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:ToolOutputData"
+                },
+                {
+                    "@id": "bts:ToolOutputFormat"
+                },
+                {
+                    "@id": "bts:ToolPackageDependencies"
+                },
+                {
+                    "@id": "bts:ToolPackageDependenciesPresent"
+                },
+                {
+                    "@id": "bts:ToolPubmedId"
+                },
+                {
+                    "@id": "bts:ToolReleaseDate"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                },
+                {
+                    "@id": "bts:ToolType"
+                },
+                {
+                    "@id": "bts:ToolVersion"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "computational tools",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolAccessibility",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Whether there are non-monetary restrictions on accessing an online service",
+            "rdfs:label": "ToolAccessibility",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolAccessibility",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolCmd",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Relevant command, command-line fragment, or option for executing this function/running the tool in this mode",
+            "rdfs:label": "ToolCmd",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolCmd",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolComputeRequirements",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime)",
+            "rdfs:label": "ToolComputeRequirements",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolComputeRequirements",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolCost",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Monetary cost of acquiring the software",
+            "rdfs:label": "ToolCost",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolCost",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDateLastModified",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The date indicating when the tool's entry was most recently modified or updated, providing a timestamp of the latest changes made to the tool's information",
+            "rdfs:label": "ToolDateLastModified",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDateLastModified",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDocumentationNote",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Comment about the documentation",
+            "rdfs:label": "ToolDocumentationNote",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDocumentationNote",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDocumentationType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Type of documentation that is linked to. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolDocumentationType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDocumentationType",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDocumentationUrl",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Link to documentation on the web for the tool",
+            "rdfs:label": "ToolDocumentationUrl",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDocumentationUrl",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDoi",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The Digital Object Identifier (DOI) associated with the computational tool",
+            "rdfs:label": "ToolDoi",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDoi",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDownloadNote",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Comment about the download",
+            "rdfs:label": "ToolDownloadNote",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDownloadNote",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDownloadType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The type of data, information, or system that is obtained when the link is resolved",
+            "rdfs:label": "ToolDownloadType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDownloadType",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDownloadUrl",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Link to download (or repo providing a download) for the software",
+            "rdfs:label": "ToolDownloadUrl",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDownloadUrl",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolDownloadVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Version information (typically a version number) of the software applicable to this download",
+            "rdfs:label": "ToolDownloadVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolDownloadVersion",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolEntityName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Name of the entities that may be credited",
+            "rdfs:label": "ToolEntityName",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolEntityName",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolEntityRole",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Role performed by entity that is credited e.g. Developer",
+            "rdfs:label": "ToolEntityRole",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolEntityRole",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolEntityType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Types of entities that may be credited e.g. Person",
+            "rdfs:label": "ToolEntityType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolEntityType",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolFunctionNote",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Concise comment about this function, if not apparent from the software description and EDAM annotations",
+            "rdfs:label": "ToolFunctionNote",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolFunctionNote",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolHomepage",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Homepage of the software, or some URL that best serves this purpose",
+            "rdfs:label": "ToolHomepage",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolHomepage",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolInputData",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Type of primary input data. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolInputData",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolInputData",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolInputFormat",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Allowed format(s) of the input data. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolInputFormat",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolInputFormat",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolLanguage",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Name of programming language the software source code was written in. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolLanguage",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolLanguage",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolLicense",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Software or data usage license. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolLicense",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolLicense",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolLinkNote",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Comment about the link",
+            "rdfs:label": "ToolLinkNote",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolLinkNote",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolLinkType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The type of data, information or system that is obtained when the link is resolved. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolLinkType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolLinkType",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolLinkUrl",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A link of some relevance to the software (URL)",
+            "rdfs:label": "ToolLinkUrl",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolLinkUrl",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolOperatingSystem",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The operating system supported by a downloadable software package. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolOperatingSystem",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolOperatingSystem",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolOperation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The basic operation(s) performed by this software function. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolOperation",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolOperation",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolOutputData",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Type of primary output data. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolOutputData",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolOutputData",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolOutputFormat",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Allowed format(s) of the output data. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolOutputFormat",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolOutputFormat",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolPackageDependencies",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Specifies the software libraries, frameworks, or other components that a tool or package relies on for its proper functioning. This attribute helps users understand the prerequisites needed for installation and usage of the tool within a given computational environment",
+            "rdfs:label": "ToolPackageDependencies",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolPackageDependencies",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolPackageDependenciesPresent",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Indicates whether the required package dependencies for tool are present",
+            "rdfs:label": "ToolPackageDependenciesPresent",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolPackageDependenciesPresent",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolPubmedId",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The pubMed identifer associated with the development of the tool",
+            "rdfs:label": "ToolPubmedId",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolPubmedId",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolReleaseDate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The release date of a product or product model. This can be used to distinguish the exact variant of a product",
+            "rdfs:label": "ToolReleaseDate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolReleaseDate",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolTopic",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "General scientific domain the software serves, or other general category. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolTopic",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolTopic",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A type of application software: a discrete software entity can have more than one type. Multiple values permitted, comma separated",
+            "rdfs:label": "ToolType",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolType",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ToolVersion",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Version information (typically a version number) of the software applicable to this entry",
+            "rdfs:label": "ToolVersion",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "toolVersion",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:Ethnicity",
             "@type": "rdfs:Class",
             "rdfs:comment": "Ethnicity of individual",
@@ -19495,7 +20316,7 @@
                     "@id": "bts:Prefernottoanswer"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "ethnicity",
@@ -19646,7 +20467,7 @@
                     "@id": "bts:Prefernottoanswer"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:White"
@@ -19825,7 +20646,7 @@
                     "@id": "bts:Other"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "sex",
@@ -22162,7 +22983,7 @@
                     "@id": "bts:TheOsteoporoticFracturesinMen(MrOS)Study"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:USFamily"
@@ -22649,7 +23470,7 @@
                     "@id": "bts:FALSE"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Notcollected"
@@ -22799,7 +23620,7 @@
                     "@id": "bts:TotalRNA"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Notcollected"
@@ -23207,7 +24028,7 @@
                     "@id": "bts:QiagenRneasyExtractionKit"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Notcollected"
@@ -23624,7 +24445,7 @@
                     "@id": "bts:Unstranded"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 },
                 {
                     "@id": "bts:Notcollected"
@@ -23724,7 +24545,7 @@
                     "@id": "bts:SingleEndpairedEnd"
                 },
                 {
-                    "@id": "bts:Unknown"
+                    "@id": "bts:unknown"
                 }
             ],
             "sms:displayName": "runType",
@@ -24862,6 +25683,166 @@
                 },
                 {
                     "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:ComputationalToolsTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Annotations for computational tools on the ELITE Portal",
+            "rdfs:label": "ComputationalToolsTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "computational_tools_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:DisplayName"
+                },
+                {
+                    "@id": "bts:Program"
+                },
+                {
+                    "@id": "bts:Institution"
+                },
+                {
+                    "@id": "bts:ToolType"
+                },
+                {
+                    "@id": "bts:SoftwareType"
+                },
+                {
+                    "@id": "bts:Grants"
+                },
+                {
+                    "@id": "bts:Contributor"
+                },
+                {
+                    "@id": "bts:Summary"
+                },
+                {
+                    "@id": "bts:Documentation"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:IsFeatured"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:ToolAccessibility"
+                },
+                {
+                    "@id": "bts:ToolCmd"
+                },
+                {
+                    "@id": "bts:ToolComputeRequirements"
+                },
+                {
+                    "@id": "bts:ToolCost"
+                },
+                {
+                    "@id": "bts:ToolDateLastModified"
+                },
+                {
+                    "@id": "bts:ToolDocumentationNote"
+                },
+                {
+                    "@id": "bts:ToolDocumentationType"
+                },
+                {
+                    "@id": "bts:ToolDocumentationUrl"
+                },
+                {
+                    "@id": "bts:ToolDownloadNote"
+                },
+                {
+                    "@id": "bts:ToolDownloadType"
+                },
+                {
+                    "@id": "bts:ToolDownloadUrl"
+                },
+                {
+                    "@id": "bts:ToolDownloadVersion"
+                },
+                {
+                    "@id": "bts:ToolEntityName"
+                },
+                {
+                    "@id": "bts:ToolEntityRole"
+                },
+                {
+                    "@id": "bts:ToolEntityType"
+                },
+                {
+                    "@id": "bts:ToolFunctionNote"
+                },
+                {
+                    "@id": "bts:ToolHomepage"
+                },
+                {
+                    "@id": "bts:ToolInputData"
+                },
+                {
+                    "@id": "bts:ToolInputFormat"
+                },
+                {
+                    "@id": "bts:ToolLanguage"
+                },
+                {
+                    "@id": "bts:ToolLicense"
+                },
+                {
+                    "@id": "bts:ToolLinkNote"
+                },
+                {
+                    "@id": "bts:ToolLinkType"
+                },
+                {
+                    "@id": "bts:ToolLinkUrl"
+                },
+                {
+                    "@id": "bts:ToolOperatingSystem"
+                },
+                {
+                    "@id": "bts:ToolOperation"
+                },
+                {
+                    "@id": "bts:ToolOutputData"
+                },
+                {
+                    "@id": "bts:ToolOutputFormat"
+                },
+                {
+                    "@id": "bts:ToolPackageDependencies"
+                },
+                {
+                    "@id": "bts:ToolPackageDependenciesPresent"
+                },
+                {
+                    "@id": "bts:ToolPubmedId"
+                },
+                {
+                    "@id": "bts:ToolReleaseDate"
+                },
+                {
+                    "@id": "bts:ToolTopic"
+                },
+                {
+                    "@id": "bts:ToolVersion"
+                },
+                {
+                    "@id": "bts:ToolDoi"
                 }
             ],
             "sms:validationRules": []
