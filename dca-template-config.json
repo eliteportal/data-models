@@ -84,6 +84,11 @@
             "display_name": "analysis_results_metadata_template",
             "schema_name": "AnalysisResultsMetadataTemplate",
             "type": "file"
+        },
+        {
+            "display_name": "computational_tools_template",
+            "schema_name": "ComputationalToolsTemplate",
+            "type": "file"
         }
     ],
     "service_version": "v23.1.1",
