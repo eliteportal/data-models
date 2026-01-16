@@ -1,0 +1,344 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ELITE Study Schema",
+  "description": "JSON Schema generated from the 'study_schema' sheet in 'ELITE study schema.xlsx'.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Component": {
+      "description": "Category of metadata level (e.g., study level, file level, etc.); provide the same one for all items/rows.",
+      "type": "string",
+      "enum": [
+        "study",
+        "file"
+      ]
+    },
+    "studyProjectIdentifier": {
+      "description": "The Synapse Project identifier (synID) with which this Study is related.",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "studyKey": {
+      "description": "The short acronym for a project the study is associated with.",
+      "type": "string",
+      "enum": [
+        "LC",
+        "LG",
+        "ILO",
+        "LLFS"
+      ]
+    },
+    "studyName": {
+      "description": "Name of the study",
+      "type": "string"
+    },
+    "studyDescription": {
+      "description": "The synID of the wiki that contains the study description.\nDescription of the study, including the types of experimental assays, model systems, types of analysis, description of cohort, associated vulnerable populations, special categories of data, rare diseases, etc. \nMaps to DUOplus2.",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "studyFocus": {
+      "description": "The focus of the study.",
+      "type": "string",
+      "enum": [
+        "Longevity"
+      ]
+    },
+    "studyAbstract": {
+      "description": "The short study description/abstract used to describe the study that is visible on the Portal study card.",
+      "type": "string"
+    },
+    "studyMetadata": {
+      "description": "The wiki from the ELITE Portal - backend that describes study metadata; syn27229419/wiki/623142",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "grantNumber": {
+      "description": "Grant number including activity code, institute code, and serial number (e.g. U01MH103392)",
+      "type": "string"
+    },
+    "consortium": {
+      "description": "Name of the consortium (ex., ELITE)",
+      "type": "string",
+      "enum": [
+        "ELITE",
+        "ELITE CDCP"
+      ]
+    },
+    "project": {
+      "description": "Short name of the associated project (ex., LLFS)",
+      "type": "string",
+      "enum": [
+        "LC",
+        "LG",
+        "ILO",
+        "ILO BU",
+        "ILO TGEN",
+        "NECS APOE",
+        "LLFS"
+      ]
+    },
+    "program": {
+      "description": "Name of the program (ex., ELITE)",
+      "type": "string",
+      "enum": [
+        "ELITE",
+        "ELITE CDCP"
+      ]
+    },
+    "methods": {
+      "description": "The synID of the wiki that contains the method's description.",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "isModelSystem": {
+      "description": "Indicates if the study contains model system data.",
+      "type": "boolean"
+    },
+    "specimenType": {
+      "description": "Type of biological material comprising the specimen.",
+      "type": "string",
+      "enum": [
+        "blood",
+        "Cerebrospinal Fluid (CSF)",
+        "Not applicable",
+        "Not collected",
+        "Not specified",
+        "organoid",
+        "plasma",
+        "saliva",
+        "serum",
+        "sputum",
+        "stool",
+        "swabs",
+        "tissue",
+        "Unknown",
+        "urine"
+      ]
+    },
+    "dataTypeAll": {
+      "description": "Types of input/output data in bioinformatics pipelines",
+      "type": "string",
+      "enum": [
+        "clinical",
+        "drugScreen",
+        "electrophysiology",
+        "epigenetics",
+        "geneExpression",
+        "genomeAssembly",
+        "genomicVariants",
+        "imaging",
+        "lipidomics",
+        "metabolomics",
+        "metagenomics",
+        "Not applicable",
+        "Not collected",
+        "Not specified",
+        "Other",
+        "phenotype",
+        "proteomics",
+        "Unknown",
+        "wearableData"
+      ]
+    },
+    "metadataType": {
+      "description": "For files of dataSubtype: metadata, a description of the type of metadata in the file.",
+      "type": "string",
+      "enum": [
+        "study",
+        "individual",
+        "biospecimen",
+        "assay",
+        "file annotation",
+        "supplementary file"
+      ]
+    },
+    "dataStatus": {
+      "description": "Indicates whether a study is pending data release (Not available) or is released (Available)",
+      "type": "boolean"
+    },
+    "dataRestriction": {
+      "description": "Indicates restriction level of files/folders.",
+      "type": "boolean"
+    },
+    "isFeatured": {
+      "description": "Indicates if the study is a featured study on the ELITE Portal",
+      "type": "boolean"
+    },
+    "isReleased": {
+      "description": "Boolean flag indicating whether a study is surfaced publicly in the ELITE Portal",
+      "type": "boolean"
+    },
+    "ackContext": {
+      "description": "The wiki from the ELITE Portal - backedn that describes acknowledgment",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "acknowledgment": {
+      "description": "The wiki from the ELITE Portal - backend that describes the specific acknowledgment statement for the particular study",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "relatedStudies": {
+      "description": "The synIDs of related studies",
+      "type": "string",
+      "pattern": "^syn\\d+$"
+    },
+    "dataRelease": {
+      "description": "The news/data release number (ex., 25.4)",
+      "type": "string"
+    },
+    "accessReqs": {
+      "description": "The Access Requirement id(s) associated with this object. Provide multiple values as a comma-separated list.",
+      "type": "string"
+    },
+    "clinicalCareUse": {
+      "description": "Indicates that the data it is applied to is allowed for use in clinical use and care.",
+      "type": "boolean"
+    },
+    "collaborationRequired": {
+      "description": "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).",
+      "type": "boolean"
+    },
+    "diseaseSpecificResearch": {
+      "description": "This data use permission indicates that use is allowed provided it is related to the specified disease.",
+      "type": "boolean"
+    },
+    "ethicsApprovalRequired": {
+      "description": "This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.",
+      "type": "boolean"
+    },
+    "generalResearchUse": {
+      "description": "This data use permission indicates that use is allowed for general research use for any research purpose.",
+      "type": "boolean"
+    },
+    "geneticStudiesOnly": {
+      "description": "This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)",
+      "type": "boolean"
+    },
+    "geographicalRestriction": {
+      "description": "This data use modifier indicates that use is limited to within a specific geographic region.",
+      "type": "boolean"
+    },
+    "healthOrMedicalOrBiomedicalResearch": {
+      "description": "This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.",
+      "type": "boolean"
+    },
+    "institutionSpecificRestriction": {
+      "description": "This data use modifier indicates that use is limited to use within an approved institution.",
+      "type": "boolean"
+    },
+    "noGeneralMethodsResearch": {
+      "description": "This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms).",
+      "type": "boolean"
+    },
+    "noRestriction": {
+      "description": "This data use permission indicates there is no restriction on use.",
+      "type": "boolean"
+    },
+    "notForProfitNonCommericalUse": {
+      "description": "This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.",
+      "type": "boolean"
+    },
+    "nonCommericalUse": {
+      "description": "This data use modifier indicates that use of the data is limited to not-for-profit use.",
+      "type": "boolean"
+    },
+    "notForProfitOrganizationUseOnly": {
+      "description": "This data use modifier indicates that use of the data is limited to not-for-profit organisations.",
+      "type": "boolean"
+    },
+    "populationOriginsOrAncestryResearchOnly": {
+      "description": "This data use permission indicates that use of the data is limited to the study of population origins or ancestry.",
+      "type": "boolean"
+    },
+    "populationOriginsOrAncestryResearchProhibited": {
+      "description": "This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.",
+      "type": "boolean"
+    },
+    "projectSpecificRestriction": {
+      "description": "This data use modifier indicates that use is limited to use within an approved project.",
+      "type": "boolean"
+    },
+    "publicationMoratorium": {
+      "description": "This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.",
+      "type": "boolean"
+    },
+    "publicationRequired": {
+      "description": "This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.",
+      "type": "boolean"
+    },
+    "researchSpecificRestrictions": {
+      "description": "This data use modifier indicates that use is limited to studies of a certain research type.",
+      "type": "boolean"
+    },
+    "returnToDatabaseOrResource": {
+      "description": "This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.",
+      "type": "boolean"
+    },
+    "timeLimitOnUse": {
+      "description": "This data use modifier indicates that use is approved for a specific number of months.",
+      "type": "boolean"
+    },
+    "userSpecificRestriction": {
+      "description": "This data use modifier indicates that use is limited to use by approved users.",
+      "type": "boolean"
+    },
+    "sourceGeography": {
+      "description": "The geographical source of the data associated with the access requirement. Equivalent to DUOPlus1.",
+      "type": "string"
+    },
+    "populationType": {
+      "description": "The population studied in the research associated with the access requirement. Equivalent to DUOPlus2",
+      "type": "string"
+    },
+    "deidentificationType": {
+      "description": "The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.",
+      "type": "string"
+    },
+    "dataPermission": {
+      "description": "The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.",
+      "type": "string"
+    },
+    "dataTier": {
+      "description": "The tier of data access associated with the access requirement. Equivalent to DUOPlus5.",
+      "type": "string"
+    },
+    "license": {
+      "description": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
+      "type": "string"
+    },
+    "attribution": {
+      "description": "The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Component",
+    "accessReqs",
+    "ackContext",
+    "acknowledgment",
+    "consortium",
+    "dataRelease",
+    "dataRestriction",
+    "dataStatus",
+    "dataTypeAll",
+    "grantNumber",
+    "isFeatured",
+    "isModelSystem",
+    "isReleased",
+    "metadataType",
+    "methods",
+    "program",
+    "project",
+    "relatedStudies",
+    "specimenType",
+    "studyAbstract",
+    "studyDescription",
+    "studyFocus",
+    "studyKey",
+    "studyMetadata",
+    "studyName",
+    "studyProjectIdentifier"
+  ]
+}
