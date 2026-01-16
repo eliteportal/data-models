@@ -6,8 +6,13 @@ ackContext,,,STRING,,Unknown
 acknowledgment,,,STRING,,Unknown
 acquistionSoftwareVersion,,,STRING,,Unknown
 batchSizeUnit,,,STRING,,Unknown
+contributor,,,STRING,,Unknown
+displayName,Canonical tool name provided by the tool developer or service provider,,STRING,,Unknown
+documentation,,,STRING,,Unknown
 experimentalBatchSize,,,INTEGER,,Unknown
 grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned",STRING,ManifestColumn,Unknown
+grants,"Grant number associated with the tool's development. Multiple values permitted, comma separated.",,STRING,,Unknown
+institution,,,STRING,,Unknown
 isFeatured,,,BOOLEAN,,Unknown
 isReleased,,,BOOLEAN,,Unknown
 metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file","individual,biospecimen,assay,supplementary files,Not Assigned",STRING,ManifestColumn,Unknown
@@ -15,6 +20,7 @@ methods,,,STRING,,Unknown
 newsRelease,,,STRING,,Unknown
 processingBatchSize,,,INTEGER,,Unknown
 processingBatchSizeUnit,,,STRING,,Unknown
+project,The ELITE project short name associated with the tool,,STRING,,Unknown
 projectFullName,,,STRING,,Unknown
 relatedStudies,,,STRING,,Unknown
 sampleBatchSize,,,INTEGER,,Unknown
@@ -26,3 +32,4 @@ studyMetadata,,,STRING,,Unknown
 studyName,,,STRING,,Unknown
 studyType,,,STRING,,Unknown
 studyWiki,,,STRING,,Unknown
+summary,Textual description of the tool,,STRING,,Unknown

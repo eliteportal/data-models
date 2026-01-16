@@ -10,6 +10,7 @@ assay_scRNAseq_template,Template for scRNAseq,,,Component,template
 assay_whole_genome_sequencing_template,Template for Whole_Genome_Sequencing,,,Component,template
 biospecimen_human_template,Template for Biospecimen_human,,,Component,template
 biospecimen_non_human_template,Template for Biospecimen_non_Human,,,Component,template
+computational_tools_template,Annotations for computational tools on the ELITE Portal,,,Component,template
 file_annotation_template,Base annotations for files in synapse,,,Component,template
 genotyping_human_template,Template for Genotyping_Human,,,Component,template
 individual_human_template,Template for Individual_Human,,,Component,template

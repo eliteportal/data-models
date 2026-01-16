@@ -159,8 +159,13 @@ ackContext,,STRING,,Unknown
 acknowledgment,,STRING,,Unknown
 acquistionSoftwareVersion,,STRING,,Unknown
 batchSizeUnit,,STRING,,Unknown
+contributor,,STRING,Sage Bionetworks,Unknown
+displayName,Canonical tool name provided by the tool developer or service provider,STRING,Sage Bionetworks,Unknown
+documentation,,STRING,Sage Bionetworks,Unknown
 experimentalBatchSize,,INTEGER,,Unknown
 grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),STRING,Sage Bionetworks,Unknown
+grants,"Grant number associated with the tool's development. Multiple values permitted, comma separated.",STRING,Sage Bionetworks,Unknown
+institution,,STRING,Sage Bionetworks,Unknown
 isFeatured,,BOOLEAN,,Unknown
 isReleased,,BOOLEAN,,Unknown
 metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",STRING,Sage Bionetworks,Unknown
@@ -168,6 +173,7 @@ methods,,STRING,,Unknown
 newsRelease,,STRING,,Unknown
 processingBatchSize,,INTEGER,,Unknown
 processingBatchSizeUnit,,STRING,,Unknown
+project,The ELITE project short name associated with the tool,STRING,Sage Bionetworks,Unknown
 projectFullName,,STRING,,Unknown
 relatedStudies,,STRING,,Unknown
 sampleBatchSize,,INTEGER,,Unknown
@@ -179,6 +185,7 @@ studyMetadata,,STRING,,Unknown
 studyName,,STRING,,Unknown
 studyType,,STRING,,Unknown
 studyWiki,,STRING,,Unknown
+summary,Textual description of the tool,STRING,Sage Bionetworks,Unknown
 batchSize,The number of samples,NUMBER,sage.annotations-experimentalData.batchSize-0.0.2,batch
 cellType,Indicate the cell type.,STRING,sage.annotations-experimentalData.cellType-0.0.9,biospecimen
 fastingState,Was individual fasting when the sample was taken (true/false)?,STRING,sage.annotations-experimentalData.fastingState-0.0.2,biospecimen
@@ -190,6 +197,43 @@ specimenID,"Identifying string linked to a particular sample or specimen, provid
 tissue,Indicate the tissue the specimen is from,STRING,sage.annotations-experimentalData.tissue-0.0.11,biospecimen
 tissueWeight,The mass of the tissue specimen. Measured in mg.,STRING,sage.annotations-experimentalData.tissueWeight-0.0.2,biospecimen
 diagnosis,Indicate the disease or condition.,STRING,sage.annotations-experimentalData.diagnosis-0.0.12,clinical
+softwareType,,STRING,Sage Bionetworks,computational tools
+toolAccessibility,Whether there are non-monetary restrictions on accessing an online service,STRING,biotoolsschema,computational tools
+toolCmd,"Relevant command, command-line fragment, or option for executing this function/running the tool in this mode",STRING,biotoolsschema,computational tools
+toolComputeRequirements,"Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime)",STRING,schema.org,computational tools
+toolCost,Monetary cost of acquiring the software,STRING,biotoolsschema,computational tools
+toolDateLastModified,"The date indicating when the tool's entry was most recently modified or updated, providing a timestamp of the latest changes made to the tool's information",STRING,schema.org,computational tools
+toolDocumentationNote,Comment about the documentation,STRING,biotoolsschema,computational tools
+toolDocumentationType,"Type of documentation that is linked to. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolDocumentationUrl,Link to documentation on the web for the tool,STRING,biotoolsschema,computational tools
+toolDoi,The Digital Object Identifier (DOI) associated with the computational tool,STRING,Sage Bionetworks,computational tools
+toolDownloadNote,Comment about the download,STRING,biotoolsschema,computational tools
+toolDownloadType,"The type of data, information, or system that is obtained when the link is resolved",STRING,biotoolsschema,computational tools
+toolDownloadUrl,Link to download (or repo providing a download) for the software,STRING,biotoolsschema,computational tools
+toolDownloadVersion,Version information (typically a version number) of the software applicable to this download,STRING,biotoolsschema,computational tools
+toolEntityName,Name of the entities that may be credited,STRING,biotoolsschema,computational tools
+toolEntityRole,Role performed by entity that is credited e.g. Developer,STRING,biotoolsschema,computational tools
+toolEntityType,Types of entities that may be credited e.g. Person,STRING,biotoolsschema,computational tools
+toolFunctionNote,"Concise comment about this function, if not apparent from the software description and EDAM annotations",STRING,biotoolsschema,computational tools
+toolHomepage,"Homepage of the software, or some URL that best serves this purpose",STRING,biotoolsschema,computational tools
+toolInputData,"Type of primary input data. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolInputFormat,"Allowed format(s) of the input data. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolLanguage,"Name of programming language the software source code was written in. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolLicense,"Software or data usage license. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolLinkNote,Comment about the link,STRING,biotoolsschema,computational tools
+toolLinkType,"The type of data, information or system that is obtained when the link is resolved. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolLinkUrl,A link of some relevance to the software (URL),STRING,biotoolsschema,computational tools
+toolOperatingSystem,"The operating system supported by a downloadable software package. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolOperation,"The basic operation(s) performed by this software function. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolOutputData,"Type of primary output data. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolOutputFormat,"Allowed format(s) of the output data. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolPackageDependencies,"Specifies the software libraries, frameworks, or other components that a tool or package relies on for its proper functioning. This attribute helps users understand the prerequisites needed for installation and usage of the tool within a given computational environment",STRING,CWL,computational tools
+toolPackageDependenciesPresent,Indicates whether the required package dependencies for tool are present,BOOLEAN,CWL,computational tools
+toolPubmedId,The pubMed identifer associated with the development of the tool,STRING,Sage Bionetworks,computational tools
+toolReleaseDate,The release date of a product or product model. This can be used to distinguish the exact variant of a product,STRING,schema.org,computational tools
+toolTopic,"General scientific domain the software serves, or other general category. Multiple values permitted, comma separated",STRING,biotoolsschema,computational tools
+toolType,"A type of application software: a discrete software entity can have more than one type. Multiple values permitted, comma separated",STRING,Sage Bionetworks,computational tools
+toolVersion,Version information (typically a version number) of the software applicable to this entry,STRING,biotoolsschema,computational tools
 ethnicity,Ethnicity of individual,STRING,sage.annotations-demographics.ethnicity-0.0.2,demographics
 familyStudyParticipant,Indicates whether or not a file has data from a human participant involved in a family study (ex. LLFS),STRING,sage.annotations-demographics.ethnicityfamilyStudyParticipant-0.0.2,demographics
 race,Race of individual,STRING,sage.annotations-demographics.race-0.0.2,demographics
@@ -232,6 +276,7 @@ assay_scRNAseq_template,Template for scRNAseq,,Sage Bionetworks,template
 assay_whole_genome_sequencing_template,Template for Whole_Genome_Sequencing,,Sage Bionetworks,template
 biospecimen_human_template,Template for Biospecimen_human,,Sage Bionetworks,template
 biospecimen_non_human_template,Template for Biospecimen_non_Human,,Sage Bionetworks,template
+computational_tools_template,Annotations for computational tools on the ELITE Portal,,Sage Bionetworks,template
 file_annotation_template,Base annotations for files in synapse,,Sage Bionetworks,template
 genotyping_human_template,Template for Genotyping_Human,,Sage Bionetworks,template
 individual_human_template,Template for Individual_Human,,Sage Bionetworks,template

@@ -4,4 +4,5 @@ metadata,,STRING,,ManifestColumn
 tool,,STRING,,ManifestColumn
 analysis,,STRING,,ManifestColumn
 computationalNotebook,,STRING,,ManifestColumn
- Not assigned,,STRING,,ManifestColumn
+softwareTool,,STRING,,ManifestColumn
+Not assigned,,STRING,,ManifestColumn
