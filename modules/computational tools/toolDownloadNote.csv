@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-isFeatured,,,,,,,,,,Unknown,,BOOLEAN,,,"study_folder_template,computational_tools_template"
+toolDownloadNote,"Comment about the download",,,,FALSE,,,computational tools,biotoolsschema,computational tools,,STRING,biotoolsschema,,computational_tools_template

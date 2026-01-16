@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+toolOutputFormat,"Allowed format(s) of the output data. Multiple values permitted, comma separated",,,,TRUE,,,computational tools,biotoolsschema,computational tools,,STRING,biotoolsschema,,computational_tools_template
