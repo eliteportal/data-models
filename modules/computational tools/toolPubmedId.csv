@@ -1,2 +1,2 @@
-Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-toolPubmedId,"The pubMed identifer associated with the development of the tool",,,,FALSE,,,computational tools,Sage Bionetworks,computational tools,,STRING,Sage Bionetworks,,computational_tools_template
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Pattern,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+toolPubmedId,"The pubMed identifer associated with the development of the tool",,,,FALSE,,,^[0-9]+$,computational tools,Sage Bionetworks,computational tools,,STRING,Sage Bionetworks,,computational_tools_template

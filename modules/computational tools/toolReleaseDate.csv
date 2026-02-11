@@ -1,2 +1,2 @@
-Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-toolReleaseDate,"The release date of a product or product model. This can be used to distinguish the exact variant of a product",,,,TRUE,,,computational tools,schema.org,computational tools,,STRING,schema.org,,computational_tools_template
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Format,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+toolReleaseDate,"The release date of a product or product model. This can be used to distinguish the exact variant of a product",,,,TRUE,,,date,computational tools,schema.org,computational tools,,STRING,schema.org,,computational_tools_template
