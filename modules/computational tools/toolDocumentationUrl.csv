@@ -1,2 +1,2 @@
-Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Format,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-toolDocumentationUrl,"Link to documentation on the web for the tool",,,,FALSE,,,uri,computational tools,biotoolsschema,computational tools,,STRING,biotoolsschema,,computational_tools_template
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+toolDocumentationUrl,"Link to documentation on the web for the tool",,,,FALSE,,,computational tools,biotoolsschema,computational tools,,STRING,biotoolsschema,,computational_tools_template
