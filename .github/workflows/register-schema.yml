@@ -18,7 +18,7 @@
 #   9. Comment PR               - posts the report as a comment on the pull request
 #
 # Required secrets:
-#   TOKEN - Synapse Personal Access Token with permissions to register schemas
+#   SYNAPSE_TOKEN_DPE - Synapse Personal Access Token with permissions to register schemas
 
 name: Generate and Register JSON Schemas
 
@@ -100,14 +100,14 @@ jobs:
         with:
           org-name: ${{ steps.resolve-org.outputs.org-name }}
           schema-dir: ${{ steps.generate.outputs.schemas }}
-          synapse-auth-token: ${{ secrets.TOKEN }}
+          synapse-auth-token: ${{ secrets.SYNAPSE_TOKEN_DPE }}
           version: ${{ github.event.release.tag_name }}
           fix-schema-name: true
 
       - name: Format Schema Report
         id: format
         env:
-          SYNAPSE_AUTH_TOKEN: ${{ secrets.TOKEN }}
+          SYNAPSE_AUTH_TOKEN: ${{ secrets.SYNAPSE_TOKEN_DPE }}
         run: |
           pip install synapseclient -q
           python - <<'PYTHON'
