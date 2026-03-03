@@ -8847,7 +8847,10 @@
                     "@id": "bts:GenBank"
                 },
                 {
-                    "@id": "bts:GENCODEv38GRCh38"
+                    "@id": "bts:GENCODEv38"
+                },
+                {
+                    "@id": "bts:GRCh38"
                 },
                 {
                     "@id": "bts:GEO"
@@ -9028,10 +9031,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:GENCODEv38GRCh38",
+            "@id": "bts:GENCODEv38",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
-            "rdfs:label": "GENCODEv38GRCh38",
+            "rdfs:label": "GENCODEv38",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:RepositoryName"
@@ -9040,7 +9043,24 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "GENCODEv38 GRCh38",
+            "sms:displayName": "GENCODEv38",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:GRCh38",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "GRCh38",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:RepositoryName"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "GRCh38",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
