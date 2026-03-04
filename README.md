@@ -13,6 +13,7 @@ There is a separate [data-dictionary](https://github.com/eliteportal/data-dictio
       - [Adding a new column to a manifest template](#adding-a-new-column-to-a-manifest-template)
     + [Notes on collaboratively editing csvs](#notes-on-collaboratively-editing-csvs)
     + [Adding a new template](#adding-a-new-template)
+  * [JSON Schema Registration](#json-schema-registration)
 - [EL Metadata Dictionary Site](#el-metadata-dictionary-site)
   * [Updating Metadata Dictionary Site via Github Action](#updating-metadata-dictionary-site-via-github-action)
 - [Other things you can do in this repository](#other-things-you-can-do-in-this-repository)
@@ -88,6 +89,18 @@ A persistent issue is that manually editing csvs is challening. Some columns in 
 ### Adding a new template
 
 If you add a new template manifest (e.g. for a new assay type), remove an existing manifest, or rename a manifest, you need to update the `dca-template-config.yml` file that DCA uses to populate the menu contributors will use to select their template. To do this, you must **manually trigger** the Github Action `create-template-config.yml`. This will re-create the DCA template config file and open a new PR with the changes. Review and merge the PR to complete the template config update. You can use the default input values provided when you manually trigger this workflow.
+
+## JSON Schema Registration
+
+Schemas are registered to a Synapse organization automatically by the `Generate and Register JSON Schemas` GitHub Action. The target organization and versioning behavior depend on the trigger:
+
+| Trigger | Organization | Version |
+|---|---|---|
+| Pull request | `test.elite` | None (auto-assigned) |
+| Pre-release published | `test.elite` | Tag name (e.g. `1.1.0`) |
+| Release published | `sage.schemas.elite` | Tag name (e.g. `1.1.0`) |
+
+When a PR triggers registration, no semantic version is provided. Synapse assigns each registered schema an internal `version_id`, so **schemas from different PRs do not overwrite each other** — each registration produces a distinct entry in the schema registry.
 
 # EL Metadata Dictionary Site
 

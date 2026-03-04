@@ -1,6 +1,15 @@
 # CI/CD Documentation
 
 - [Register Schema Workflow](#register-schema-workflow)
+  - [Purpose](#purpose)
+  - [Triggers](#triggers)
+  - [Steps](#steps)
+  - [Synapse Organizations](#synapse-organizations)
+  - [Versioning](#versioning)
+  - [Release Guide](#release-guide)
+  - [Required Secrets](#required-secrets)
+  - [Outputs](#outputs)
+  - [Diagrams](#diagrams)
 - [GitHub App Usage in Workflows](#github-app-usage-in-workflows)
 
 ---
@@ -37,6 +46,16 @@ This workflow handles schema registration across two Synapse organizations:
 |----------|---------|
 | `test.elite` | Staging: used for PR previews and pre-release validation |
 | `sage.schemas.elite` | Production: used for official versioned releases |
+
+### Versioning
+
+| Trigger | Semantic Version |
+|---------|-----------------|
+| Pull request | None (auto-assigned by Synapse) |
+| Pre-release published | Release tag (e.g. `1.1.0`) |
+| Release released | Release tag (e.g. `1.1.0`) |
+
+When a PR triggers registration, no semantic version is provided. Synapse assigns each registered schema an internal `version_id`, so **schemas from different PRs do not overwrite each other** — each registration produces a distinct entry in the schema registry.
 
 ### Release Guide
 
