@@ -61,15 +61,21 @@ jobs:
           data-model-labels: "display_label"
           output-directory: "test-schemas"
 
-      - name: Debug paths
+      - name: Debug schema file locations
         run: |
-          echo "schemas output: ${{ steps.generate.outputs.schemas }}"
-          find /github/workspace -name "*.json" -type f 2>/dev/null | head -20
+          echo "=== schemas output: ${{ steps.generate.outputs.schemas }} ==="
+          echo "--- JSON files in workspace ---"
+          find /github/workspace -name "*.json" -type f 2>/dev/null || echo "(none)"
+          echo "--- JSON files anywhere on filesystem (outside /proc /sys) ---"
+          find / -name "*.json" -type f \
+            -not -path "/proc/*" \
+            -not -path "/sys/*" \
+            2>/dev/null || echo "(none)"
 
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
-          ls -la ${{ steps.generate.outputs.schemas }}/
+          ls -la ${{ steps.generate.outputs.schemas }}
 
       - name: Check schemas were generated
         if: steps.generate.outputs.schemas-json == '[]'
