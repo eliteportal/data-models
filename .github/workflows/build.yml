@@ -61,21 +61,23 @@ jobs:
           data-model-labels: "display_label"
           output-directory: "test-schemas"
 
-      - name: Debug schema file locations
+      # The generate action is a Docker container action and outputs paths using the
+      # Docker-internal workspace mount (/github/workspace/...). Subsequent run: steps
+      # execute on the host runner where that mount path does not exist — the workspace
+      # is at $GITHUB_WORKSPACE (/home/runner/work/...) instead. This step rewrites the
+      # path so host-level steps can access the generated files. Docker-to-Docker steps
+      # (e.g. register-jsonschema) should continue to use steps.generate.outputs.schemas.
+      - name: Resolve schema directory path
+        id: resolve-schema-dir
         run: |
-          echo "=== schemas output: ${{ steps.generate.outputs.schemas }} ==="
-          echo "--- JSON files in workspace ---"
-          find /github/workspace -name "*.json" -type f 2>/dev/null || echo "(none)"
-          echo "--- JSON files anywhere on filesystem (outside /proc /sys) ---"
-          find / -name "*.json" -type f \
-            -not -path "/proc/*" \
-            -not -path "/sys/*" \
-            2>/dev/null || echo "(none)"
+          SCHEMA_DIR="${{ steps.generate.outputs.schemas }}"
+          SCHEMA_DIR="${SCHEMA_DIR/\/github\/workspace/$GITHUB_WORKSPACE}"
+          echo "path=$SCHEMA_DIR" >> $GITHUB_OUTPUT
 
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
-          ls -la ${{ steps.generate.outputs.schemas }}
+          ls -la "${{ steps.resolve-schema-dir.outputs.path }}"
 
       - name: Check schemas were generated
         if: steps.generate.outputs.schemas-json == '[]'
@@ -87,7 +89,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: json-schemas
-          path: "${{ steps.generate.outputs.schemas }}/**/*.json"
+          path: "${{ steps.resolve-schema-dir.outputs.path }}/**/*.json"
           
       - name: Resolve schema organization
         id: resolve-org
