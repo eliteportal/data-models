@@ -61,6 +61,11 @@ jobs:
           data-model-labels: "display_label"
           output-directory: "test-schemas"
 
+      - name: Debug paths
+        run: |
+          echo "schemas output: ${{ steps.generate.outputs.schemas }}"
+          find /github/workspace -name "*.json" -type f 2>/dev/null | head -20
+
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
