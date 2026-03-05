@@ -7,15 +7,15 @@
 #   - Full release published                                      → registers to production org
 #
 # Steps:
-#   1. Clear schemas directory  - removes pre-existing schemas to prevent stale files from being registered
-#   2. Generate JSON Schemas    - converts EL.data.model.csv into JSON schema files
-#   3. List generated schemas   - logs generated schema files for visibility
-#   4. Check schemas generated  - fails early if no schemas were produced
-#   5. Upload schemas           - saves generated schemas as a workflow artifact
-#   6. Resolve schema org       - selects test or production Synapse org based on trigger
-#   7. Register schemas         - registers schemas in the resolved Synapse org
-#   8. Format Schema Report     - builds a markdown summary of generated/registered schemas
-#   9. Comment PR               - posts the report as a comment on the pull request
+#   1. Generate JSON Schemas       - converts EL.data.model.csv into JSON schema files
+#   2. Resolve schema directory    - translates the Docker output path to the host runner path
+#   3. List generated schemas      - logs generated schema files for visibility
+#   4. Check schemas generated     - fails early if no schemas were produced
+#   5. Upload schemas              - saves generated schemas as a workflow artifact
+#   6. Resolve schema org          - selects test or production Synapse org based on trigger
+#   7. Register schemas            - registers schemas in the resolved Synapse org
+#   8. Format Schema Report        - builds a markdown summary of generated/registered schemas
+#   9. Comment PR                  - posts the report as a comment on the pull request
 #
 # Required secrets:
 #   TOKEN - Synapse Personal Access Token with permissions to register schemas
