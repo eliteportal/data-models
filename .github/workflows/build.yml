@@ -52,21 +52,19 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v6
-      # temporary hack to ensure clean directory before generating new schemas, since the generator doesn't currently delete old files
-      - name: Clear schemas directory
-        run: rm -rf ./schemas && mkdir -p ./schemas
 
       - name: Generate JSON Schemas
         id: generate
-        uses: Sage-Bionetworks-Actions/generate-jsonschema@main
+        uses: Sage-Bionetworks-Actions/generate-jsonschema@0.1.0
         with:
           data-model-source: ./EL.data.model.csv
           data-model-labels: "display_label"
+          output-dir: "test-schemas"
 
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
-          ls -la ./schemas/
+          ls -la ./test-schemas/
 
       - name: Check schemas were generated
         if: steps.generate.outputs.schemas-json == '[]'
@@ -78,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: json-schemas
-          path: "**/*.json"
+          path: "test-schemas/**/*.json"
           
       - name: Resolve schema organization
         id: resolve-org
@@ -99,7 +97,7 @@ jobs:
         uses: Sage-Bionetworks-Actions/register-jsonschema@0.1.0
         with:
           org-name: ${{ steps.resolve-org.outputs.org-name }}
-          schema-dir: ${{ steps.generate.outputs.schemas }}
+          schema-dir: ${{ steps.generate.outputs.output-dir }}
           synapse-auth-token: ${{ secrets.TOKEN }}
           version: ${{ github.event.release.tag_name }}
           fix-schema-name: true
