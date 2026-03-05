@@ -98,7 +98,7 @@ jobs:
         uses: Sage-Bionetworks-Actions/register-jsonschema@0.1.0
         with:
           org-name: ${{ steps.resolve-org.outputs.org-name }}
-          schema-dir: /github/workspace/${{ env.SCHEMA_OUTPUT_DIR }}
+          schema-dir: ${{ steps.generate.outputs.schemas }}
           synapse-auth-token: ${{ secrets.TOKEN }}
           version: ${{ github.event.release.tag_name }}
           fix-schema-name: true
