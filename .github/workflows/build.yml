@@ -64,7 +64,7 @@ jobs:
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
-          ls -la ./${{ steps.generate.outputs.output-directory }}/
+          ls -la ${{ steps.generate.outputs.output-directory }}/
 
       - name: Check schemas were generated
         if: steps.generate.outputs.schemas-json == '[]'
@@ -97,7 +97,7 @@ jobs:
         uses: Sage-Bionetworks-Actions/register-jsonschema@0.1.0
         with:
           org-name: ${{ steps.resolve-org.outputs.org-name }}
-          schema-dir: ${{ steps.generate.outputs.output-dir }}
+          schema-dir: ${{ steps.generate.outputs.output-directory }}
           synapse-auth-token: ${{ secrets.TOKEN }}
           version: ${{ github.event.release.tag_name }}
           fix-schema-name: true
