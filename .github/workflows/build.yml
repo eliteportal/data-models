@@ -61,16 +61,16 @@ jobs:
           data-model-labels: "display_label"
           output-directory: "test-schemas"
 
-      # The generate action is a Docker container action and outputs paths using the
-      # Docker-internal workspace mount (/github/workspace/...). Subsequent run: steps
-      # execute on the host runner where that mount path does not exist — the workspace
-      # is at $GITHUB_WORKSPACE (/home/runner/work/...) instead. This step rewrites the
-      # path so host-level steps can access the generated files. Docker-to-Docker steps
-      # (e.g. register-jsonschema) should continue to use steps.generate.outputs.schemas.
+      # The generate action runs in Docker, where the workspace is mounted at /github/workspace.
+      # It outputs the schema path as /github/workspace/<custom dir> but that path only exists inside
+      # the Docker container. Outside of Docker, the same directory
+      # is accessible at $GITHUB_WORKSPACE/<custom dir> on the host runner. This step translates the
+      # path so the following shell steps can find the generated files.
       - name: Resolve schema directory path
         id: resolve-schema-dir
         run: |
           SCHEMA_DIR="${{ steps.generate.outputs.schemas }}"
+
           SCHEMA_DIR="${SCHEMA_DIR/\/github\/workspace/$GITHUB_WORKSPACE}"
           echo "path=$SCHEMA_DIR" >> $GITHUB_OUTPUT
 
