@@ -64,7 +64,7 @@ jobs:
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
-          ls -la ./test-schemas/
+          ls -la ./${{ steps.generate.outputs.output-dir }}/
 
       - name: Check schemas were generated
         if: steps.generate.outputs.schemas-json == '[]'
@@ -76,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: json-schemas
-          path: "test-schemas/**/*.json"
+          path: "${{ steps.generate.outputs.output-dir }}/**/*.json"
           
       - name: Resolve schema organization
         id: resolve-org
