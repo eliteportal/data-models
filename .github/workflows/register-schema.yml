@@ -7,15 +7,14 @@
 #   - Full release published                                      → registers to production org
 #
 # Steps:
-#   1. Generate JSON Schemas       - converts EL.data.model.csv into JSON schema files
-#   2. Resolve schema directory    - translates the Docker output path to the host runner path
-#   3. List generated schemas      - logs generated schema files for visibility
-#   4. Check schemas generated     - fails early if no schemas were produced
-#   5. Upload schemas              - saves generated schemas as a workflow artifact
-#   6. Resolve schema org          - selects test or production Synapse org based on trigger
-#   7. Register schemas            - registers schemas in the resolved Synapse org
-#   8. Format Schema Report        - builds a markdown summary of generated/registered schemas
-#   9. Comment PR                  - posts the report as a comment on the pull request
+#   1. Generate JSON Schemas    - converts EL.data.model.csv into JSON schema files
+#   2. List generated schemas   - logs generated schema files for visibility
+#   3. Check schemas generated  - fails early if no schemas were produced
+#   4. Upload schemas           - saves generated schemas as a workflow artifact
+#   5. Resolve schema org       - selects test or production Synapse org based on trigger
+#   6. Register schemas         - registers schemas in the resolved Synapse org
+#   7. Format Schema Report     - builds a markdown summary of generated/registered schemas
+#   8. Comment PR               - posts the report as a comment on the pull request
 #
 # Required secrets:
 #   SYNAPSE_TOKEN_DPE - Synapse Personal Access Token with permissions to register schemas
@@ -50,6 +49,8 @@ jobs:
     permissions:
       pull-requests: write
       contents: read
+    env:
+      SCHEMA_OUTPUT_DIR: generated-schemas
     steps:
       - uses: actions/checkout@v6
 
@@ -59,24 +60,12 @@ jobs:
         with:
           data-model-source: ./EL.data.model.csv
           data-model-labels: "display_label"
-          output-directory: "generated-schemas"
-
-      # The generate action runs in Docker, where the workspace is mounted at /github/workspace.
-      # It outputs the schema path as /github/workspace/<custom dir> but that path only exists inside
-      # the Docker container. Outside of Docker, the same directory
-      # is accessible at $GITHUB_WORKSPACE/<custom dir> on the host runner. This step translates the
-      # path so the following shell steps can find the generated files.
-      - name: Resolve schema directory path
-        id: resolve-schema-dir
-        run: |
-          SCHEMA_DIR="${{ steps.generate.outputs.schemas }}"
-          SCHEMA_DIR="${SCHEMA_DIR/\/github\/workspace/$GITHUB_WORKSPACE}"
-          echo "path=$SCHEMA_DIR" >> $GITHUB_OUTPUT
+          output-directory: ${{ env.SCHEMA_OUTPUT_DIR }}
 
       - name: List generated schemas
         run: |
           echo "Generated schemas:"
-          ls -la "${{ steps.resolve-schema-dir.outputs.path }}"
+          ls -la "${{ github.workspace }}/${{ env.SCHEMA_OUTPUT_DIR }}"
 
       - name: Check schemas were generated
         if: steps.generate.outputs.schemas-json == '[]'
@@ -88,7 +77,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: json-schemas
-          path: "${{ steps.resolve-schema-dir.outputs.path }}/**/*.json"
+          path: "${{ github.workspace }}/${{ env.SCHEMA_OUTPUT_DIR }}/**/*.json"
           
       - name: Resolve schema organization
         id: resolve-org
