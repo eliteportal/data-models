@@ -58,7 +58,7 @@ jobs:
 
       - name: Generate JSON Schemas
         id: generate
-        uses: Sage-Bionetworks-Actions/generate-jsonschema@main
+        uses: Sage-Bionetworks-Actions/generate-jsonschema@0.1.0
         with:
           data-model-source: ./EL.data.model.csv
           data-model-labels: "display_label"
