@@ -61,7 +61,7 @@ jobs:
 
       - name: Join data model
         run: |
-          poetry run python data_model_creation/join_data_model.py
+          python data_model_creation/join_data_model.py
 
       - name: Generate JSON Schemas
         id: generate
