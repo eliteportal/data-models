@@ -78,3 +78,28 @@ if __name__ == "__main__":
     dm = join_data_model_partitions(module_pattern)
 
     dm.to_csv(file_path, index=False)
+
+    # regenerate JSON-LD
+    command = """schematic schema convert EL.data.model.csv"""
+
+    logger.info(command)
+
+    proc = subprocess.Popen(
+        command,
+        cwd=ROOT_DIR,
+        shell=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+
+    stdout, stderr = proc.communicate()
+
+    if proc.returncode == 0:
+        test_result = True
+        logger.info("PASSED")
+
+    else:
+        test_result = False
+        logger.debug("FAILED")
+        logger.debug(command)
