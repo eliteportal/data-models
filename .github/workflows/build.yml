@@ -54,6 +54,24 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.local/bin:$PATH"
+
+      - name: Install dependencies
+        run: |
+          poetry install
+
+      - name: Join data model and convert to json-ld
+        run: |
+          python data_model_creation/join_data_model.py
+
       - name: Generate JSON Schemas
         id: generate
         uses: Sage-Bionetworks-Actions/generate-jsonschema@0.1.0
