@@ -48,7 +48,7 @@ jobs:
     if: github.triggering_actor != 'commit-to-main-bot-adkp[bot]'
     permissions:
       pull-requests: write
-      contents: read
+      contents: write
     env:
       SCHEMA_OUTPUT_DIR: generated-schemas
     steps:
@@ -70,6 +70,15 @@ jobs:
 
       - name: Join module CSVs
         run: python data_model_creation/join_csvs.py
+
+      - name: Commit CSV changes
+        if: github.event_name == 'pull_request'
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          add: 'EL.data.model.csv'
+          message: 'Github Action: assembled EL.data.model.csv from modules'
+          push: true
 
       - name: Generate JSON Schemas
         id: generate
