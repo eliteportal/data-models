@@ -57,4 +57,5 @@ if __name__ == "__main__":
         test_result = False
         logger.debug("FAILED")
         logger.debug(command)
+        logger.debug(stderr)
 
