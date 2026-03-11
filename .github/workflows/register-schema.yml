@@ -7,7 +7,7 @@
 #   - Full release published                                      → registers to production org
 #
 # Steps:
-#   1. Join data model          - assembles modules/ into EL.data.model.csv via join_data_model.py
+#   1. Join data model          - assembles modules/ into EL.data.model.csv via data_model_creation/join_csvs.py
 #   2. Generate JSON Schemas    - converts EL.data.model.csv into JSON schema files
 #   3. List generated schemas   - logs generated schema files for visibility
 #   4. Check schemas generated  - fails early if no schemas were produced
