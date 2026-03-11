@@ -59,15 +59,7 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-
-      - name: Install dependencies
-        run: |
-          poetry install
-
-      - name: Join data model and convert to json-ld
+      - name: Join data model
         run: |
           poetry run python data_model_creation/join_data_model.py
 
