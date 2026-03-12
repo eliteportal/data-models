@@ -45,7 +45,6 @@ concurrency:
 jobs:
   generate-and-register-schemas:
     runs-on: ubuntu-latest
-    if: github.triggering_actor != 'commit-to-main-bot-adkp[bot]'
     permissions:
       pull-requests: write
       contents: read
@@ -58,6 +57,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+
 
       - name: Install dependencies
         run: pip3 install "pandas>=1.3.1" "pyyaml>=6.0.1"
