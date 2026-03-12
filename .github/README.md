@@ -36,10 +36,11 @@ This workflow handles schema registration across two Synapse organizations:
 3. **Generate JSON Schemas** — converts `EL.data.model.csv` into JSON schema files using [`generate-jsonschema`](https://github.com/Sage-Bionetworks-Actions/generate-jsonschema)
 4. **Check schemas were generated** — exits with an error if no schemas were produced
 5. **Upload schemas as artifacts** — saves generated `.json` schemas as a downloadable workflow artifact
-6. **Resolve schema organization** — selects `test.elite` or `sage.schemas.elite` based on the trigger event action
-7. **Register schemas in Synapse** — registers schemas in the resolved org via [`register-jsonschema`](https://github.com/Sage-Bionetworks-Actions/register-jsonschema); uses the release tag as the semantic version when available
-8. **Format Schema Report** — builds a markdown summary listing all generated schemas and their properties; includes Synapse links when a release tag is present
-9. **Comment PR with Schema Summary** — posts the report as a PR comment (pull request events only); also writes the report to the workflow run summary
+6. **Create release assets** — attaches the generated JSON schema files to the GitHub release (pre-release and full release)
+7. **Resolve schema organization** — selects `test.elite` or `sage.schemas.elite` based on the trigger event action
+8. **Register schemas in Synapse** — registers schemas in the resolved org via [`register-jsonschema`](https://github.com/Sage-Bionetworks-Actions/register-jsonschema); uses the release tag as the semantic version when available
+9. **Format Schema Report** — builds a markdown summary listing all generated schemas and their properties; includes Synapse links when a release tag is present
+10. **Comment PR with Schema Summary** — posts the report as a PR comment and writes the report to the workflow run summary
 
 ### Synapse Organizations
 | Org Name | Purpose |
@@ -67,13 +68,13 @@ The recommended release process uses a two-step GitHub release flow to validate 
 3. Check **"Set as a pre-release"**.
 4. Click **Publish release** — this triggers `release.published` and registers schemas to `test.elite`.
 5. Inspect the workflow summary or PR comment for the schema report.
-6. Verify schemas appear in `test.elite` on Synapse.
+6. Verify schemas appear in `test.elite` on Synapse and that the `.json` files are listed under the release assets.
 
 #### Step 2 — Promote to Full Release (registers to `sage.schemas.elite`)
 1. Once validated, return to the pre-release on GitHub.
 2. Edit the release and uncheck **"Set as a pre-release"** (or click **"Promote to full release"**).
 3. Click **Update release** — this triggers `release.released` and registers schemas to `sage.schemas.elite`.
-4. Verify schemas appear in `sage.schemas.elite` on Synapse with the correct semantic version.
+4. Verify schemas appear in `sage.schemas.elite` on Synapse with the correct semantic version and that the `.json` files are listed under the release assets.
 
 > **Note:**
 > - Only the `release.released` action writes to the production org. Accidental pre-release publishes will only affect `test.elite`.
@@ -92,6 +93,7 @@ The recommended release process uses a two-step GitHub release flow to validate 
 
 ### Outputs
 - JSON schema artifacts uploaded per workflow run
+- JSON schema files attached to the GitHub release (Pre-release and full-release)
 - Schemas registered in the resolved Synapse organization (versioned when triggered by a release)
 - Markdown summary report posted as a PR comment (PR events) and written to the workflow run summary (all events)
 
@@ -108,7 +110,7 @@ flowchart TD
     B -- "PR to main (with changes in modules/)" --> D["Checkout"]
     B -- "release: published pre-release" --> D
     B -- "release: released full release" --> D
-    D --> E["Join module CSVs → EL.data.model.csv\nvia join_csvs.py"]
+    D --> E["Join module CSVs"]
     E --> COMMIT{"event == pull_request?"}
     COMMIT -- Yes --> COMMITSTEP["Commit EL.data.model.csv to branch"]
     COMMIT -- No --> G
@@ -116,7 +118,10 @@ flowchart TD
     G --> F{"schemas-json == empty?"}
     F -- Yes — no schemas generated --> FAIL(["Error — exit 1"])
     F -- No --> H["Upload schemas as workflow artifact"]
-    H --> I{"event.action == released?"}
+    H --> RA{"event == release?"}
+    RA -- Yes --> RASTEP["Attach schemas as GitHub release assets"]
+    RASTEP --> I{"event.action == released?"}
+    RA -- No — PR --> I
     I -- Yes — full release --> J["org = sage.schemas.elite 🚀"]
     I -- "No — PR or pre-release" --> K["org = test.elite 🧪 "]
     J --> L["Register schemas in org"]
