@@ -13,10 +13,11 @@
 #   4. List generated schemas   - logs generated schema files for visibility
 #   5. Check schemas generated  - fails early if no schemas were produced
 #   6. Upload schemas           - saves generated schemas as a workflow artifact
-#   7. Resolve schema org       - selects test or production Synapse org based on trigger
-#   8. Register schemas         - registers schemas in the resolved Synapse org
-#   9. Format Schema Report     - builds a markdown summary of generated/registered schemas
-#  10. Comment PR               - posts the report as a comment on the pull request
+#   7. Create release assets    - attaches JSON schema files to the GitHub release (release events only)
+#   8. Resolve schema org       - selects test or production Synapse org based on trigger
+#   9. Register schemas         - registers schemas in the resolved Synapse org
+#  10. Format Schema Report     - builds a markdown summary of generated/registered schemas
+#  11. Comment PR               - posts the report as a comment on the pull request
 #
 # Required secrets:
 #   SYNAPSE_TOKEN_DPE - Synapse Personal Access Token with permissions to register schemas
@@ -95,15 +96,21 @@ jobs:
           echo "::error::No schemas were generated. Stopping workflow."
           exit 1
 
+      - name: Resolve schemas path on runner
+        id: resolve-schemas-path
+        env:
+          SCHEMAS: ${{ steps.generate.outputs.schemas }}
+        run: echo "path=${SCHEMAS/\/github\/workspace/$GITHUB_WORKSPACE}" >> $GITHUB_OUTPUT
+
       - name: Upload schemas as artifacts
         uses: actions/upload-artifact@v6
         with:
           name: json-schemas
-          path: "${{ github.workspace }}/${{ env.SCHEMA_OUTPUT_DIR }}/**/*.json"
+          path: "${{ steps.resolve-schemas-path.outputs.path }}"
 
       - name: Create release assets
         uses: softprops/action-gh-release@v2
-        if: github.event.action == 'released'
+        if: github.event_name == 'release'
         with:
           files: ${{ steps.resolve-schemas-path.outputs.path }}/**/*.json
           
