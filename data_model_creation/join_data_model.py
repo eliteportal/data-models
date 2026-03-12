@@ -1,15 +1,10 @@
-""" Join the data model modules """
+""" Join the data model modules and convert to JSON-LD """
 
-from glob import glob
 from pathlib import Path
 import subprocess
-import logging.config
 from datetime import datetime
-import re
-import yaml
-import pandas as pd
 from utils import utils
-import os
+from join_csvs import join_data_model_partitions
 
 cwd = Path(__file__)
 
@@ -28,50 +23,9 @@ logger = utils.add_logger(
 )
 
 
-def join_data_model_partitions(partition_path):
-    """Join the partitions back together to form the data model used in DCA
-
-    Args:
-        partition_path (str): directory containing the partitions as CSVs
-
-    Returns:
-        object: pandas dataframe
-    """
-    modules = glob(partition_path)
-
-    print(modules)
-
-    data_model = (
-        pd.concat([pd.read_csv(m) for m in modules])
-        .sort_values(by=["module", "Attribute"])
-        .reset_index(drop=True)
-        .fillna("")
-    )
-
-    print("Data model shape BEFORE cleaning: ", data_model.shape)
-    logger.debug(data_model[data_model.duplicated(keep=False)])
-    data_model.drop_duplicates(subset=["Attribute"], inplace=True)
-
-    # unnamed columns in csvs
-    drop_cols = [
-        s
-        for s in data_model.columns
-        if bool(re.search("unnamed", s, flags=re.IGNORECASE))
-    ]
-
-    data_model = data_model.drop(columns=drop_cols)
-    data_model["Required"] = data_model["Required"].fillna(False).astype(bool)
-    data_model["multivalue"] = data_model["multivalue"].fillna(False).astype(bool)
-    data_model.reset_index(drop=True, inplace=True)
-
-    print("Data model shape AFTER cleaning: ", data_model.shape)
-
-    return data_model
-
-
 if __name__ == "__main__":
 
-    module_pattern = ROOT_DIR.resolve()._str + "/modules/**/*.csv"
+    module_pattern = str(ROOT_DIR.resolve()) + "/modules/**/*.csv"
 
     file_path = Path(ROOT_DIR, "EL.data.model.csv")
 
@@ -103,3 +57,5 @@ if __name__ == "__main__":
         test_result = False
         logger.debug("FAILED")
         logger.debug(command)
+        logger.debug(stderr)
+
