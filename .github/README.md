@@ -93,7 +93,7 @@ The recommended release process uses a two-step GitHub release flow to validate 
 
 ### Outputs
 - JSON schema artifacts uploaded per workflow run
-- JSON schema files attached to the GitHub release (full release only)
+- JSON schema files attached to the GitHub release (Pre-release and full-release)
 - Schemas registered in the resolved Synapse organization (versioned when triggered by a release)
 - Markdown summary report posted as a PR comment (PR events) and written to the workflow run summary (all events)
 
@@ -110,7 +110,7 @@ flowchart TD
     B -- "PR to main (with changes in modules/)" --> D["Checkout"]
     B -- "release: published pre-release" --> D
     B -- "release: released full release" --> D
-    D --> E["Join module CSVs → EL.data.model.csv\nvia join_csvs.py"]
+    D --> E["Join module CSVs"]
     E --> COMMIT{"event == pull_request?"}
     COMMIT -- Yes --> COMMITSTEP["Commit EL.data.model.csv to branch"]
     COMMIT -- No --> G
