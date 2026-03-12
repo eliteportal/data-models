@@ -53,6 +53,8 @@ jobs:
       SCHEMA_OUTPUT_DIR: generated-schemas
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
