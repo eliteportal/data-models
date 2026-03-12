@@ -64,7 +64,6 @@ jobs:
       - name: Install dependencies
         run: pip3 install "pandas>=1.3.1" "pyyaml>=6.0.1"
 
-
       - name: Join module CSVs
         run: python data_model_creation/join_csvs.py
 
@@ -96,11 +95,17 @@ jobs:
           echo "::error::No schemas were generated. Stopping workflow."
           exit 1
 
+      - name: Resolve schemas path on runner
+        id: resolve-schemas-path
+        env:
+          SCHEMAS: ${{ steps.generate.outputs.schemas }}
+        run: echo "path=${SCHEMAS/\/github\/workspace/$GITHUB_WORKSPACE}" >> $GITHUB_OUTPUT
+
       - name: Upload schemas as artifacts
         uses: actions/upload-artifact@v6
         with:
           name: json-schemas
-          path: "${{ github.workspace }}/${{ env.SCHEMA_OUTPUT_DIR }}/**/*.json"
+          path: "${{ steps.resolve-schemas-path.outputs.path }}"
 
       - name: Create release assets
         uses: softprops/action-gh-release@v2
