@@ -54,7 +54,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: ${{ github.head_ref }}
+          # github.head_ref is only set for pull_request events; release events need the tag
+          ref: ${{ github.head_ref || github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -214,6 +215,42 @@ jobs:
           if github_step_summary:
               with open(github_step_summary, 'a') as f:
                   f.write(report)
+          PYTHON
+
+      - name: Create recordsets
+        env:
+          SYNAPSE_AUTH_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          python - <<'PYTHON'
+          import os 
+          import tempfile
+          from synapseclient import Synapse
+          from synapseclient.models import Folder, RecordSet
+          from synapseclient.extensions.curator.record_based_metadata_task import extract_schema_properties_from_web
+          
+          syn = Synapse()
+          syn.login()
+          project_id = "syn74318331"  # Replace with your project ID
+
+          json_schema_uris = r'''${{ steps.register.outputs.uris }}'''
+          
+          for schema_uri in json_schema_uris..splitlines():
+              org_name = r'''${{ steps.resolve-org.outputs.org-name }}'''
+              data_type = schema_uri.removeprefix(f"{org_name}-").split("-")[0]
+              template_df = extract_schema_properties_from_web(syn, schema_uri)
+              with tempfile.NamedTemporaryFile(delete=False, suffix=".csv") as tmp:
+                  template_df.to_csv(tmp.name, index=False)
+
+                  folder = Folder(name=f"{data_type}", parent_id=project_id).store()
+                  
+                  # Create the RecordSet, using an empty upsert_keys for now
+                  record_set = RecordSet(
+                      name="Template",
+                      description=f"Template for {data_type}",
+                      parent_id=folder.id,
+                      path=tmp.name,
+                      upsert_keys=[""]
+                  ).store(synapse_client=syn)
           PYTHON
 
       - name: Comment PR with Schema Summary
