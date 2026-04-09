@@ -1,8 +1,8 @@
 Key,Key Description,columnType,Source,Parent
-human,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
- wild,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
- captive,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
- not applicable,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
- not collected,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
- other,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
- unknown,,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,
+human,,STRING,,ManifestColumn
+ wild,,STRING,,ManifestColumn
+ captive,,STRING,,ManifestColumn
+ not applicable,,STRING,,ManifestColumn
+ not collected,,STRING,,ManifestColumn
+ other,,STRING,,ManifestColumn
+ unknown,,STRING,,ManifestColumn
