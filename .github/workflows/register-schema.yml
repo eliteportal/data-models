@@ -26,9 +26,6 @@
 name: Generate and Register JSON Schemas
 
 on:
-  push:  # temporary: triggers on any branch push for testing
-    branches:
-      - "*"
   pull_request:
     types:
       - opened
