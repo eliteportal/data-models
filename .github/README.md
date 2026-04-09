@@ -39,8 +39,9 @@ This workflow handles schema registration across two Synapse organizations:
 6. **Create release assets** — attaches the generated JSON schema files to the GitHub release (pre-release and full release)
 7. **Resolve schema organization** — selects `test.elite` or `sage.schemas.elite` based on the trigger event action
 8. **Register schemas in Synapse** — registers schemas in the resolved org via [`register-jsonschema`](https://github.com/Sage-Bionetworks-Actions/register-jsonschema); uses the release tag as the semantic version when available
-9. **Format Schema Report** — builds a markdown summary listing all generated schemas and their properties; includes Synapse links when a release tag is present
-10. **Comment PR with Schema Summary** — posts the report as a PR comment and writes the report to the workflow run summary
+9. **Create recordsets and bind schema** — for each registered schema, creates a sub-folder and RecordSet template inside the `SYNAPSE_FOLDER_ID` Synapse folder, populated with the schema's properties, then binds the JSON schema to the RecordSet; versioned releases create a new sub-folder per version (e.g. `individual_human_template_1.0.0`), PR runs create or overwrite an unversioned sub-folder
+10. **Format Schema Report** — builds a markdown summary listing all generated schemas and their properties; includes Synapse links when a release tag is present
+11. **Comment PR with Schema Summary** — posts the report as a PR comment and writes the report to the workflow run summary
 
 ### Synapse Organizations
 | Org Name | Purpose |
@@ -95,6 +96,7 @@ The recommended release process uses a two-step GitHub release flow to validate 
 - JSON schema artifacts uploaded per workflow run
 - JSON schema files attached to the GitHub release (Pre-release and full-release)
 - Schemas registered in the resolved Synapse organization (versioned when triggered by a release)
+- Synapse RecordSet templates created for each registered schema (versioned folder per release, unversioned folder for PRs)
 - Markdown summary report posted as a PR comment (PR events) and written to the workflow run summary (all events)
 
 ### Diagrams
@@ -126,7 +128,8 @@ flowchart TD
     I -- "No — PR or pre-release" --> K["org = test.elite 🧪 "]
     J --> L["Register schemas in org"]
     K --> L
-    L --> M["Create summary report"]
+    L --> RS["Create Synapse RecordSet templates"]
+    RS --> M["Create summary report"]
     M --> N{"release_tag present?"}
     N -- Yes — release --> O["For each schema: link to versioned URL + properties table"]
     N -- No — PR --> P["For each schema: schema name + properties table"]
