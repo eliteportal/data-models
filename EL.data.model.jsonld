@@ -2069,12 +2069,15 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "False",
+            "sms:displayName": "false",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -23326,7 +23329,7 @@
                     "@id": "bts:True"
                 },
                 {
-                    "@id": "bts:Fasle"
+                    "@id": "bts:False"
                 },
                 {
                     "@id": "bts:Notassigned"
@@ -23334,23 +23337,6 @@
             ],
             "sms:displayName": "isMultiSpecimen",
             "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Fasle",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Fasle",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:IsMultiSpecimen"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "fasle",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -24562,9 +24548,6 @@
                     "@id": "bts:SingleEnd"
                 },
                 {
-                    "@id": "bts:SingleEndpairedEnd"
-                },
-                {
                     "@id": "bts:unknown"
                 }
             ],
@@ -24603,23 +24586,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "singleEnd",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:SingleEndpairedEnd",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "SingleEndpairedEnd",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:RunType"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "singleEnd pairedEnd",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },

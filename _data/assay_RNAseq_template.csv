@@ -17,5 +17,5 @@ libraryPreparationMethod,"Method by which library was prepared. Provide a value 
 libraryVersion,"Library Version- for example, rnaSeq 10x library version. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,sage.annotations-ngs.libraryVersion-0.0.2,ManifestColumn,
 readLength,The length of the read. Provide a value or Unknown Not collected Not applicable Not specified ,True,STRING,,sage.annotations-ngs.readLength-0.0.2,ManifestColumn,
 readStrandOrigin,The strand from which the read originates in a strand-specific protocol.,True,STRING,,sage.annotations-ngs.readStrandOrigin-0.0.2,ManifestColumn,"forward, reverse, stranded, unstranded, Unknown, Not collected, Not specified, Not applicable"
-runType,The type of run,True,STRING,,sage.annotations-ngs.runType-0.0.2,ManifestColumn,"Not applicable,Not collected,Not specified,pairedEnd,singleEnd,singleEnd pairedEnd,Unknown"
+runType,The type of run,True,STRING,,sage.annotations-ngs.runType-0.0.2,ManifestColumn,"Not applicable,Not collected,Not specified,pairedEnd,singleEnd,Unknown"
 totalReads,Total number of sequencing reads from a library.,True,STRING,,sage.annotations-experimentalData.totalReads-0.0.2,ManifestColumn,

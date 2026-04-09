@@ -1,0 +1,2 @@
+Key,Key Description,Valid Values,columnType,Parent,module
+specimenSource,Indicate the biological area of the specimen,"human, wild, captive, not applicable, not collected, other, unknown",https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,False
