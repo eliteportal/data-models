@@ -1784,9 +1784,6 @@
                     "@id": "bts:SpecimenAge"
                 },
                 {
-                    "@id": "bts:SpecimenSource"
-                },
-                {
                     "@id": "bts:SpecimenType"
                 },
                 {
@@ -2642,12 +2639,15 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:CaptivityStatus"
+                },
+                {
+                    "@id": "bts:SpecimenSource"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Captive",
+            "sms:displayName": "captive",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -2678,13 +2678,16 @@
             "rdfs:label": "Wild",
             "rdfs:subClassOf": [
                 {
+                    "@id": "bts:SpecimenSource"
+                },
+                {
                     "@id": "bts:CaptivityStatus"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Wild",
+            "sms:displayName": "wild",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -2729,6 +2732,9 @@
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:SpecimenSource"
                 },
                 {
                     "@id": "bts:EnrichmentStrategy"
@@ -2791,7 +2797,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Not applicable",
+            "sms:displayName": "not applicable",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -2839,6 +2845,9 @@
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
+                },
+                {
+                    "@id": "bts:SpecimenSource"
                 },
                 {
                     "@id": "bts:Cohort"
@@ -2901,7 +2910,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "Not collected",
+            "sms:displayName": "not collected",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -3035,6 +3044,9 @@
                 },
                 {
                     "@id": "bts:Sex"
+                },
+                {
+                    "@id": "bts:SpecimenSource"
                 },
                 {
                     "@id": "bts:CaptivityStatus"
@@ -12861,8 +12873,70 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:Human"
+                },
+                {
+                    "@id": "bts:Wild"
+                },
+                {
+                    "@id": "bts:Captive"
+                },
+                {
+                    "@id": "bts:Notapplicable"
+                },
+                {
+                    "@id": "bts:Notcollected"
+                },
+                {
+                    "@id": "bts:Other"
+                },
+                {
+                    "@id": "bts:Unknown"
+                }
+            ],
             "sms:displayName": "specimenSource",
             "sms:required": "sms:true",
+            "sms:validationRules": [
+                "ManifestColumn"
+            ]
+        },
+        {
+            "@id": "bts:Human",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Human",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpecimenSource"
+                },
+                {
+                    "@id": "bts:Species"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "Human",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Unknown",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Unknown",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:SpecimenSource"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "unknown",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -23401,23 +23475,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "Cross-Species Mammalian",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Human",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Human",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Species"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "Human",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },

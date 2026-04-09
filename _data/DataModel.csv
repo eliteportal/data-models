@@ -1,5 +1,4 @@
 Key,Key Description,columnType,Source,module
-specimenSource,Indicate the biological area of the specimen,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,ManifestColumn,False
 analysis_results_metadata_template,Template for analysis and results,,Sage Bionetworks, template
 ModelSystemType,Type of model system,BOOLEAN,Sage Bionetworks,ADKP
 isModelSystem,Boolean flag indicating whether or not a file has data from a model system,BOOLEAN,Sage Bionetworks,ADKP
@@ -123,6 +122,7 @@ speciesAge,"Age of individual (formatted in months, ex. ""72 months"").note- Unc
 speciesGroup,The taxonomic ranking including both species and subspecies the individual belongs to.,STRING,,ManifestColumn
 speciesName,"The scientific name of the species (typically a taxonomic group, ex. ""Eremophila alpestris) the individual belongs to.""""""",STRING,,ManifestColumn
 specimenAge,"The subject's age at the time of specimen extraction is the individual's age (since birth) at the time a given specimen was extracted. Measured as age in years. Other, Unknown, Not collected, Not applicable",STRING,,ManifestColumn
+specimenSource,Indicate the biological area of the specimen,STRING,,ManifestColumn
 specimenType,Type of biological material comprising the Specimen,STRING,,ManifestColumn
 stage,Stage of the experimental design.,STRING,,ManifestColumn
 statisticalModel,"A brief description of the statistical model used to determine association significance. It is important to distinguish studies that would otherwise appear identical (e.g., the same trait analyzed using additive, dominant, and recessive models). Example - additive model",STRING,,ManifestColumn
