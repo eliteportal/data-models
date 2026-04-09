@@ -39,7 +39,7 @@ This workflow handles schema registration across two Synapse organizations:
 6. **Create release assets** — attaches the generated JSON schema files to the GitHub release (pre-release and full release)
 7. **Resolve schema organization** — selects `test.elite` or `sage.schemas.elite` based on the trigger event action
 8. **Register schemas in Synapse** — registers schemas in the resolved org via [`register-jsonschema`](https://github.com/Sage-Bionetworks-Actions/register-jsonschema); uses the release tag as the semantic version when available
-9. **Create recordsets** — for each registered schema, creates a Synapse RecordSet template populated with the schema's properties; versioned releases create a new folder per version (e.g. `individual_human_template_1.0.0`), PR runs create or overwrite an unversioned folder
+9. **Create recordsets and bind schema** — for each registered schema, creates a sub-folder and RecordSet template inside the `SYNAPSE_FOLDER_ID` Synapse folder, populated with the schema's properties, then binds the JSON schema to the RecordSet; versioned releases create a new sub-folder per version (e.g. `individual_human_template_1.0.0`), PR runs create or overwrite an unversioned sub-folder
 10. **Format Schema Report** — builds a markdown summary listing all generated schemas and their properties; includes Synapse links when a release tag is present
 11. **Comment PR with Schema Summary** — posts the report as a PR comment and writes the report to the workflow run summary
 
