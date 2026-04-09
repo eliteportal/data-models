@@ -1,7 +1,7 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
+specimenSource,Indicate the biological area of the specimen,True,https://www.ebi.ac.uk/ols/ontologies/ccf/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FUBERON_0004537&lang=en&viewMode=PreferredRoots&siblings=false,,ManifestColumn,,"human, wild, captive, not applicable, not collected, other, unknown"
 measurementTechnique,"The name of the measurement technique describing the assay method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,
 specimenAge,"The subject's age at the time of specimen extraction is the individual's age (since birth) at the time a given specimen was extracted. Measured as age in years. Other, Unknown, Not collected, Not applicable",True,STRING,,,ManifestColumn,
-specimenSource,Indicate the biological area of the specimen,True,STRING,,,ManifestColumn,
 specimenType,Type of biological material comprising the Specimen,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
 tissueVolume,The volume of the tissue sample. Measured in microliters.,True,STRING,,,ManifestColumn,
 Component,,False,STRING,,,,
