@@ -10,5 +10,5 @@ meanCoverage,Total number of bases covered by ATAC-seq reads/size of genome. Pro
 pcrCycles,Number of PCR cycles to amplify transposased DNA fragments. Provide a value or Unknown Not collected Not applicable Not specified ,,STRING,ManifestColumn,sequencing
 readLength,The length of the read. Provide a value or Unknown Not collected Not applicable Not specified ,,STRING,ManifestColumn,sequencing
 readStrandOrigin,The strand from which the read originates in a strand-specific protocol.,"forward, reverse, stranded, unstranded, Unknown, Not collected, Not specified, Not applicable",STRING,ManifestColumn,sequencing
-runType,The type of run,"Not applicable,Not collected,Not specified,pairedEnd,singleEnd,singleEnd pairedEnd,Unknown",STRING,ManifestColumn,sequencing
+runType,The type of run,"Not applicable,Not collected,Not specified,pairedEnd,singleEnd,Unknown",STRING,ManifestColumn,sequencing
 totalReads,Total number of sequencing reads from a library.,,STRING,ManifestColumn,sequencing
