@@ -76,7 +76,7 @@ jobs:
         with:
           default_author: github_actions
           add: 'EL.data.model.csv'
-          message: 'Github Action: assembled EL.data.model.csv from modules'
+          message: 'Github Action: assembled EL.data.model.csv from modules [skip ci]'
           push: true
 
       - name: Generate JSON Schemas
