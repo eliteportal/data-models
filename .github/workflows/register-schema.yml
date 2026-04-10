@@ -121,7 +121,7 @@ jobs:
           # published (full release) → production org
           # published (pre-release) → test org
           # pull_request → test org
-          if [[ "${{ github.event.release.prerelease }}" != "true" ]]; then
+          if [[ "${{ github.event_name }}" == "release" && "${{ github.event.release.prerelease }}" != "true" ]]; then
             echo "org-name=sage.schemas.elite" >> $GITHUB_OUTPUT
             echo "🚀 Production: deploying to sage.schemas.elite"
           else
