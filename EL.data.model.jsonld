@@ -15066,7 +15066,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "institution",
-            "sms:required": "sms:false",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -19918,7 +19918,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "toolDoi",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -20020,7 +20020,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "toolEntityRole",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -20037,7 +20037,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "toolEntityType",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -20292,7 +20292,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "toolPackageDependenciesPresent",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -20326,7 +20326,7 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "toolReleaseDate",
-            "sms:required": "sms:true",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
