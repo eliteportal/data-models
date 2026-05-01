@@ -12942,7 +12942,7 @@
         {
             "@id": "bts:SpecimenType",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Type of biological material comprising the Specimen",
+            "rdfs:comment": "Type of biological material sample taken from a biological entity for research purposes",
             "rdfs:label": "SpecimenType",
             "rdfs:subClassOf": [
                 {
@@ -13157,7 +13157,7 @@
         {
             "@id": "bts:Tissue",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Indicate the tissue the specimen is from",
+            "rdfs:comment": "Indicate the tissue the specimen is from. A tissue is a multicellular anatomical structure that consists of many cells of one or a few types arranged in an extracellular matrix.",
             "rdfs:label": "Tissue",
             "rdfs:subClassOf": [
                 {
@@ -16607,7 +16607,7 @@
         {
             "@id": "bts:Organ",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Indicate the organ the specimen is from",
+            "rdfs:comment": "Indicate the organ the specimen is from. An organ is a unique macroscopic (gross) anatomic structure that performs specific functions. It is composed of various tissues.",
             "rdfs:label": "Organ",
             "rdfs:subClassOf": [
                 {
@@ -25637,9 +25637,6 @@
                     "@id": "bts:TissueWeight"
                 },
                 {
-                    "@id": "bts:SpecimenSource"
-                },
-                {
                     "@id": "bts:NucleicAcidSource"
                 },
                 {
@@ -25708,9 +25705,6 @@
                 },
                 {
                     "@id": "bts:TissueWeight"
-                },
-                {
-                    "@id": "bts:SpecimenSource"
                 },
                 {
                     "@id": "bts:NucleicAcidSource"
