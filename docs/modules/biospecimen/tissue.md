@@ -9,7 +9,7 @@ title: tissue
 {: .note-title } 
 >tissue
 >
->Indicate the tissue the specimen is from [[Source]](sage.annotations-experimentalData.tissue-0.0.11)
+>Indicate the tissue the specimen is from. A tissue is a multicellular anatomical structure that consists of many cells of one or a few types arranged in an extracellular matrix. [[Source]](sage.annotations-experimentalData.tissue-0.0.11)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
