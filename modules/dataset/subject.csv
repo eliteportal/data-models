@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-subject,Applicable subject term(s) for dataset cataloging; use the Library of Congress Subject Headings (LCSH) scheme.,,,,FALSE,,,dataset,SageBionetworks,dataset,FALSE,ARRAY,Sage Bionetworks,,dataset_template
+subject,Applicable subject term(s) for dataset cataloging; use the Library of Congress Subject Headings (LCSH) scheme.,,,,FALSE,,,dataset,SageBionetworks,dataset,FALSE,STRING,Sage Bionetworks,,dataset_template

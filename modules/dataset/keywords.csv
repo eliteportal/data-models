@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-keywords,Typically between 1 to 5 informative terms or phrases that help users find the dataset.,,,,TRUE,,,dataset,SageBionetworks,dataset,FALSE,ARRAY,Sage Bionetworks,,dataset_template
+keywords,Typically between 1 to 5 informative terms or phrases that help users find the dataset.,,,,TRUE,,,dataset,SageBionetworks,dataset,FALSE,STRING,Sage Bionetworks,,dataset_template
