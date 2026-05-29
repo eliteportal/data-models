@@ -89,6 +89,11 @@
             "display_name": "computational_tools_template",
             "schema_name": "ComputationalToolsTemplate",
             "type": "file"
+        },
+        {
+            "display_name": "dataset_template",
+            "schema_name": "datasetTemplate",
+            "type": "file"
         }
     ],
     "service_version": "v23.1.1",
