@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: keywords
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.keywords %} 
 {: .note-title } 
->dataType
+>keywords
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Typically between 1 to 5 informative terms or phrases that help users find the dataset. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

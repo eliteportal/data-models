@@ -1,0 +1,7 @@
+Key,Key Description,columnType,Source,Parent
+Bisulfite sequencing; Clinical data; Genome-wide association study; High-performance liquid chromatography tandem mass spectrometry; Liquid chromatography mass spectrometry; Liquid chromatography tandem mass spectrometry; Mass spectrometry; Metabolomics; MetaX-processed metabolomics data; Proximity extension assay; RNA sequencing; Single-cell RNA sequencing; Shotgun metagenomic sequencing; Single nucleotide polymorphism array; Tandem Mass Tag proteomics; Whole-genome sequencing,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Not specified,,STRING,,ManifestColumn

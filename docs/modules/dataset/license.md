@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: license
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.license %} 
 {: .note-title } 
->dataType
+>license
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>License attached to the data. If indicates UNKNOWN or RESTRICTED-USE. Data may not be used without further contact for terms. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

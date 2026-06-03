@@ -1,6 +1,6 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
 specimenAge,"The subject's age at the time of specimen extraction is the individual's age (since birth) at the time a given specimen was extracted. Measured as age in years. Other, Unknown, Not collected, Not applicable",True,STRING,,,ManifestColumn,
-specimenType,Type of biological material sample taken from a biological entity for research purposes,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
+specimenType,Type of biological material sample taken from a biological entity for research purposes,True,STRING,,,ManifestColumn,"blood, brain, buffy coat, cell line, cells, nervous system, organoid, plasma, saliva, serum, skin, stool, tissue, urine, Not applicable, Not collected, Not specified, Other, Unknown"
 tissueVolume,The volume of the tissue sample. Measured in microliters.,True,STRING,,,ManifestColumn,
 Component,,False,STRING,,,,
 Filename,,False,STRING,,,,

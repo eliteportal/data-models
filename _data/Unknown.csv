@@ -20,7 +20,7 @@ methods,,,STRING,,Unknown
 newsRelease,,,STRING,,Unknown
 processingBatchSize,,,INTEGER,,Unknown
 processingBatchSizeUnit,,,STRING,,Unknown
-project,The ELITE project short name associated with the tool,,STRING,,Unknown
+project,The ELITE project short name associated with the tool,"ILO BU, ILO TGEN, LC, LG, LLFS, NECS APOE, Not assigned",STRING,,Unknown
 projectFullName,,,STRING,,Unknown
 relatedStudies,,,STRING,,Unknown
 sampleBatchSize,,,INTEGER,,Unknown

@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: conditionsOfAccess
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.conditionsOfAccess %} 
 {: .note-title } 
->dataType
+>conditionsOfAccess
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Additional requirements a user may need outside of Data Use Modifiers. This could include additional registration updating profile information joining a Synapse Team or using specific authentication methods like 2FA or RAS. Omit property if not applicable/unknown. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

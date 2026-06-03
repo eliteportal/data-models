@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: individualCount
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.individualCount %} 
 {: .note-title } 
->dataType
+>individualCount
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Number of unique individuals included in the dataset (whether as individual-level or as aggregate data). Omit if not applicable/unknown. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

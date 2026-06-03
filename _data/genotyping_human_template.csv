@@ -7,7 +7,7 @@ genotypeTechnology,"Method(s) used to genotype variants in the discovery stage. 
 imputation,Were SNPs imputed for the discovery GWAS?,True,STRING,,,ManifestColumn,
 imputationPanel,Panel used for imputation. Example - 1000 Genomes Phase 3,False,STRING,,,ManifestColumn,
 imputationSoftware,Imputation software. Example - IMPUTE,False,STRING,,,ManifestColumn,
-measurementTechnique,"The name of the measurement technique describing the assay method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,
+measurementTechnique,"The name of the measurement technique describing the assay method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,,ManifestColumn,"Bisulfite sequencing; Clinical data; Genome-wide association study; High-performance liquid chromatography tandem mass spectrometry; Liquid chromatography mass spectrometry; Liquid chromatography tandem mass spectrometry; Mass spectrometry; Metabolomics; MetaX-processed metabolomics data; Proximity extension assay; RNA sequencing; Single-cell RNA sequencing; Shotgun metagenomic sequencing; Single nucleotide polymorphism array; Tandem Mass Tag proteomics; Whole-genome sequencing, Unknown, Other, Not collected, Not applicable, Not specified"
 numberIndividuals,Number of individuals in a group. Example - 2000,True,INTEGER,,,ManifestColumn,
 readmeFile,The name of any readme file uploaded to Synapse. Example - example.tsv,False,STRING,,,ManifestColumn,
 reagentCatalogNumber,"If the assay reagent is a commercial product, enter the vendor's catalog identifier. If the reagent is a custom preparation enter 'NA'.",False,STRING,,,ManifestColumn,

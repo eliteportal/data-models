@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: subject
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.subject %} 
 {: .note-title } 
->dataType
+>subject
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Applicable subject term(s) for dataset cataloging; use the Library of Congress Subject Headings (LCSH) scheme. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

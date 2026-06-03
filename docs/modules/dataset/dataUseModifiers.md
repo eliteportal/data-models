@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: dataUseModifiers
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.dataUseModifiers %} 
 {: .note-title } 
->dataType
+>dataUseModifiers
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>List of data use ontology (DUO) terms that are true for dataset which describes the allowable scope and terms for data use. Most datasets allow "General Research Use" unless otherwise specified. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -3,7 +3,7 @@ isModelSystem,Boolean flag indicating whether or not a file has data from a mode
 dataTypeAll,,True,STRING,,Sage Bionetworks,ManifestColumn,"clinical,drugScreen,electrophysiology,epigenetics,geneExpression,genomeAssembly,genomicVariants,imaging,lipidomics,metabolomics,metagenomics,Not applicable,Not collected,Not specified,Other,phenotype,proteomics,Unknown,wearableData"
 program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
 projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG, Not assigned"
-specimenType,Type of biological material sample taken from a biological entity for research purposes,True,STRING,,,ManifestColumn,"blood,Cerebrospinal Fluid (CSF),Not applicable,Not collected,Not specified,organoid,plasma,saliva,serum,sputum,stool,swabs,tissue,Unknown,urine"
+specimenType,Type of biological material sample taken from a biological entity for research purposes,True,STRING,,,ManifestColumn,"blood, brain, buffy coat, cell line, cells, nervous system, organoid, plasma, saliva, serum, skin, stool, tissue, urine, Not applicable, Not collected, Not specified, Other, Unknown"
 studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),True,STRING,,Sage Bionetworks,ManifestColumn,
 Component,,False,STRING,,,,
 accessReqs,,False,STRING,,,,

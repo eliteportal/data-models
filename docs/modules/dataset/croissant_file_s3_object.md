@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: croissant_file_s3_object
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.croissant_file_s3_object %} 
 {: .note-title } 
->dataType
+>croissant_file_s3_object
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Link to croissant file for dataset. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

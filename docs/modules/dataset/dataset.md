@@ -1,15 +1,17 @@
 ---
 datatable: true
+has_children: true
 layout: page
-parent: ManifestColumn
-title: dataType
+nav_order: 5
+parent: modules
+title: dataset
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.dataset %} 
 {: .note-title } 
->dataType
+>dataset
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>module in the data model
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

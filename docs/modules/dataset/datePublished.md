@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: datePublished
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.datePublished %} 
 {: .note-title } 
->dataType
+>datePublished
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Date the dataset was published or made available on Synapse formatted as YYYY-MM-DD. Maps to schema.org datePublished. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,0 +1,8 @@
+Key,Key Description,columnType,Source,Parent
+ILO BU,,STRING,,
+ ILO TGEN,,STRING,,
+ LC,,STRING,,
+ LG,,STRING,,
+ LLFS,,STRING,,
+ NECS APOE,,STRING,,
+ Not assigned,,STRING,,

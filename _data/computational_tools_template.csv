@@ -7,7 +7,7 @@ documentation,,True,STRING,,Sage Bionetworks,,
 grants,"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,STRING,,Sage Bionetworks,,
 institution,,True,STRING,,Sage Bionetworks,,
 isFeatured,,False,BOOLEAN,,,,
-project,The ELITE project short name associated with the tool,True,STRING,,Sage Bionetworks,,
+project,The ELITE project short name associated with the tool,True,STRING,,Sage Bionetworks,,"ILO BU, ILO TGEN, LC, LG, LLFS, NECS APOE, Not assigned"
 summary,Textual description of the tool,True,STRING,,Sage Bionetworks,,
 softwareType,,True,STRING,,Sage Bionetworks,,
 toolAccessibility,Whether there are non-monetary restrictions on accessing an online service,False,STRING,,biotoolsschema,,

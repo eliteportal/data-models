@@ -1,15 +1,15 @@
 ---
 datatable: true
 layout: page
-parent: ManifestColumn
-title: dataType
+parent: dataset
+title: countryOfOrigin
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.countryOfOrigin %} 
 {: .note-title } 
->dataType
+>countryOfOrigin
 >
->The category or format of data generated or collected in an experiment, describing the kind of information the dataset contains (for example, genomics, imaging, proteomics, or behavioral data). [[Source]](Sage Bionetworks)
+>Origin of individuals from which data were generated. Omit if not applicable/unknown. [[Source]](SageBionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
