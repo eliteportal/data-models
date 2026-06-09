@@ -1,20 +1,20 @@
 Key,Key Description,columnType,Source,Parent
-blood,,STRING,,ManifestColumn
- brain,,STRING,,ManifestColumn
- buffy coat,,STRING,,ManifestColumn
- cell line,,STRING,,ManifestColumn
- cells,,STRING,,ManifestColumn
- nervous system,,STRING,,ManifestColumn
- organoid,,STRING,,ManifestColumn
- plasma,,STRING,,ManifestColumn
- saliva,,STRING,,ManifestColumn
- serum,,STRING,,ManifestColumn
- skin,,STRING,,ManifestColumn
- stool,,STRING,,ManifestColumn
- tissue,,STRING,,ManifestColumn
- urine,,STRING,,ManifestColumn
- Not applicable,,STRING,,ManifestColumn
- Not collected,,STRING,,ManifestColumn
- Not specified,,STRING,,ManifestColumn
- Other,,STRING,,ManifestColumn
- Unknown,,STRING,,ManifestColumn
+blood,,STRING_LIST,,ManifestColumn
+ brain,,STRING_LIST,,ManifestColumn
+ buffy coat,,STRING_LIST,,ManifestColumn
+ cell line,,STRING_LIST,,ManifestColumn
+ cells,,STRING_LIST,,ManifestColumn
+ nervous system,,STRING_LIST,,ManifestColumn
+ organoid,,STRING_LIST,,ManifestColumn
+ plasma,,STRING_LIST,,ManifestColumn
+ saliva,,STRING_LIST,,ManifestColumn
+ serum,,STRING_LIST,,ManifestColumn
+ skin,,STRING_LIST,,ManifestColumn
+ stool,,STRING_LIST,,ManifestColumn
+ tissue,,STRING_LIST,,ManifestColumn
+ urine,,STRING_LIST,,ManifestColumn
+ Not applicable,,STRING_LIST,,ManifestColumn
+ Not collected,,STRING_LIST,,ManifestColumn
+ Not specified,,STRING_LIST,,ManifestColumn
+ Other,,STRING_LIST,,ManifestColumn
+ Unknown,,STRING_LIST,,ManifestColumn
