@@ -279,14 +279,23 @@ readLength,The length of the read. Provide a value or Unknown Not collected Not 
 readStrandOrigin,The strand from which the read originates in a strand-specific protocol.,STRING,sage.annotations-ngs.readStrandOrigin-0.0.2,sequencing
 runType,The type of run,STRING,sage.annotations-ngs.runType-0.0.2,sequencing
 totalReads,Total number of sequencing reads from a library.,STRING,sage.annotations-experimentalData.totalReads-0.0.2,sequencing
+assay_RNAseq_annotation_template,Template for file-based RNAseq,,Sage Bionetworks,template
 assay_RNAseq_template,Template for RNAseq,,Sage Bionetworks,template
+assay_bsSeq_annotation_template,Template for file-based bsSeq annotations,,Sage Bionetworks,template
 assay_bsSeq_template,Template for bsSeq,,Sage Bionetworks,template
+assay_genotyping_annotation_template,Template for file-based Genotyping annotations,,Sage Bionetworks,template
+assay_metabolomics_annotation_template,Template for file-based Metabolomics annotations,,Sage Bionetworks,template
 assay_metabolomics_template,Template for Metabolomics,,Sage Bionetworks,template
+assay_metagenomics_annotation_template,Template for file-based Metagenomics annotations,,Sage Bionetworks,template
 assay_metagenomics_template,Template for Metagenomics,,Sage Bionetworks,template
+assay_microbiome_annotation_template,Template for file-based Microbiome annotations,,Sage Bionetworks,template
 assay_microbiome_template,Template for Microbiome,,Sage Bionetworks,template
 assay_phenotype_human_template,Template for Phenotype_human,,Sage Bionetworks,template
+assay_proteomics_annotation_template,Template for file-based Proteomics annotations,,Sage Bionetworks,template
 assay_proteomics_template,Template for Proteomics,,Sage Bionetworks,template
+assay_scRNAseq_annotation_template,Template for file-based scRNAseq annotations,,Sage Bionetworks,template
 assay_scRNAseq_template,Template for scRNAseq,,Sage Bionetworks,template
+assay_whole_genome_sequencing_annotation_template,Template for file-based Whole Genome Sequencing annotations,,Sage Bionetworks,template
 assay_whole_genome_sequencing_template,Template for Whole_Genome_Sequencing,,Sage Bionetworks,template
 biospecimen_human_template,Template for Biospecimen_human,,Sage Bionetworks,template
 biospecimen_non_human_template,Template for Biospecimen_non_Human,,Sage Bionetworks,template
