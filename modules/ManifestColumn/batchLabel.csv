@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-batchLabel,Used to supply batch label information with any string value,,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,http://purl.obolibrary.org/obo/MS_4000088, ,Metabolomics
+batchLabel,Used to supply batch label information with any string value,,,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,http://purl.obolibrary.org/obo/MS_4000088, ,"Metabolomics,assay_metabolomics_annotation_template"

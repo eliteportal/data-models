@@ -1161,16 +1161,34 @@
                     "@id": "bts:AnalysisResultsMetadataTemplate"
                 },
                 {
+                    "@id": "bts:AssayRNAseqAnnotationTemplate"
+                },
+                {
                     "@id": "bts:AssayRNAseqTemplate"
+                },
+                {
+                    "@id": "bts:AssayBsSeqAnnotationTemplate"
                 },
                 {
                     "@id": "bts:AssayBsSeqTemplate"
                 },
                 {
+                    "@id": "bts:AssayGenotypingAnnotationTemplate"
+                },
+                {
+                    "@id": "bts:AssayMetabolomicsAnnotationTemplate"
+                },
+                {
                     "@id": "bts:AssayMetabolomicsTemplate"
                 },
                 {
+                    "@id": "bts:AssayMetagenomicsAnnotationTemplate"
+                },
+                {
                     "@id": "bts:AssayMetagenomicsTemplate"
+                },
+                {
+                    "@id": "bts:AssayMicrobiomeAnnotationTemplate"
                 },
                 {
                     "@id": "bts:AssayMicrobiomeTemplate"
@@ -1179,10 +1197,19 @@
                     "@id": "bts:AssayPhenotypeHumanTemplate"
                 },
                 {
+                    "@id": "bts:AssayProteomicsAnnotationTemplate"
+                },
+                {
                     "@id": "bts:AssayProteomicsTemplate"
                 },
                 {
+                    "@id": "bts:AssayScRNAseqAnnotationTemplate"
+                },
+                {
                     "@id": "bts:AssayScRNAseqTemplate"
+                },
+                {
+                    "@id": "bts:AssayWholeGenomeSequencingAnnotationTemplate"
                 },
                 {
                     "@id": "bts:AssayWholeGenomeSequencingTemplate"
@@ -26897,6 +26924,153 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:AssayRNAseqAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based RNAseq",
+            "rdfs:label": "AssayRNAseqAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_RNAseq_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:ReferenceTranscriptID"
+                },
+                {
+                    "@id": "bts:RepositoryName"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:ValueReported"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:LibraryVersion"
+                },
+                {
+                    "@id": "bts:IsStranded"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
+                },
+                {
+                    "@id": "bts:ReadLength"
+                },
+                {
+                    "@id": "bts:ReadLengthUnits"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:TotalReads"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:Grant",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "Grant",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "grant",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AssayRNAseqTemplate",
             "@type": "rdfs:Class",
             "rdfs:comment": "Template for RNAseq",
@@ -26971,6 +27145,172 @@
                 },
                 {
                     "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayBsSeqAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based bsSeq annotations",
+            "rdfs:label": "AssayBsSeqAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_bsSeq_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:ReferenceTranscriptID"
+                },
+                {
+                    "@id": "bts:DnaBatchID"
+                },
+                {
+                    "@id": "bts:DnaBatchSize"
+                },
+                {
+                    "@id": "bts:DnaBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:LibraryBatchID"
+                },
+                {
+                    "@id": "bts:LibraryPrep"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:LibraryVersion"
+                },
+                {
+                    "@id": "bts:SequencingBatchID"
+                },
+                {
+                    "@id": "bts:SequencingBatchSize"
+                },
+                {
+                    "@id": "bts:SequencingBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:IsStranded"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
+                },
+                {
+                    "@id": "bts:ReadLength"
+                },
+                {
+                    "@id": "bts:ReadLengthUnits"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:TotalReads"
+                },
+                {
+                    "@id": "bts:DirectionalBSseqLibrary"
+                },
+                {
+                    "@id": "bts:GDNAconc"
+                },
+                {
+                    "@id": "bts:LambdaDNAconc"
+                },
+                {
+                    "@id": "bts:PcrCycles"
+                },
+                {
+                    "@id": "bts:MeanCoverage"
+                },
+                {
+                    "@id": "bts:ConversionRatio"
+                },
+                {
+                    "@id": "bts:ConversionRatioUnits"
+                },
+                {
+                    "@id": "bts:EnrichmentMethod"
                 }
             ],
             "sms:validationRules": []
@@ -27086,6 +27426,407 @@
                 },
                 {
                     "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayGenotypingAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based Genotyping annotations",
+            "rdfs:label": "AssayGenotypingAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_genotyping_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:Stage"
+                },
+                {
+                    "@id": "bts:NumberIndividuals"
+                },
+                {
+                    "@id": "bts:UseReagent"
+                },
+                {
+                    "@id": "bts:ReagentIDs"
+                },
+                {
+                    "@id": "bts:ReagentName"
+                },
+                {
+                    "@id": "bts:ReagentManufacturer"
+                },
+                {
+                    "@id": "bts:ReagentCatalogNumber"
+                },
+                {
+                    "@id": "bts:ReagentLotNumber"
+                },
+                {
+                    "@id": "bts:ReagentWeblink"
+                },
+                {
+                    "@id": "bts:ReagentContact"
+                },
+                {
+                    "@id": "bts:UseTreatment"
+                },
+                {
+                    "@id": "bts:TreatmentIDs"
+                },
+                {
+                    "@id": "bts:TreatmentName"
+                },
+                {
+                    "@id": "bts:TreatmentAmountValue"
+                },
+                {
+                    "@id": "bts:TreatmentAmountUnit"
+                },
+                {
+                    "@id": "bts:TreatmentDurationValue"
+                },
+                {
+                    "@id": "bts:TreatmentDurationUnit"
+                },
+                {
+                    "@id": "bts:TreatmentTemperatureValue"
+                },
+                {
+                    "@id": "bts:TreatmentTemperatureUnit"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:GenotypeTechnology"
+                },
+                {
+                    "@id": "bts:ArrayManufacturer"
+                },
+                {
+                    "@id": "bts:ArrayInformation"
+                },
+                {
+                    "@id": "bts:Imputation"
+                },
+                {
+                    "@id": "bts:ImputationPanel"
+                },
+                {
+                    "@id": "bts:ImputationSoftware"
+                },
+                {
+                    "@id": "bts:VariantCount"
+                },
+                {
+                    "@id": "bts:StatisticalModel"
+                },
+                {
+                    "@id": "bts:AdjustedCovariates"
+                },
+                {
+                    "@id": "bts:ReportedTrait"
+                },
+                {
+                    "@id": "bts:BackgroundTrait"
+                },
+                {
+                    "@id": "bts:UseReadMeFile"
+                },
+                {
+                    "@id": "bts:ReadmeFile"
+                },
+                {
+                    "@id": "bts:UseSummaryFile"
+                },
+                {
+                    "@id": "bts:SummaryFile"
+                },
+                {
+                    "@id": "bts:SummaryStatisticsAssembly"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayMetabolomicsAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based Metabolomics annotations",
+            "rdfs:label": "AssayMetabolomicsAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_metabolomics_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:InstrumentModel"
+                },
+                {
+                    "@id": "bts:SamplePrepProtocol"
+                },
+                {
+                    "@id": "bts:DataFile"
+                },
+                {
+                    "@id": "bts:DatabaseSource"
+                },
+                {
+                    "@id": "bts:DatabaseWeblink"
+                },
+                {
+                    "@id": "bts:DatabaseName"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:MsAssayTechnique"
+                },
+                {
+                    "@id": "bts:MsAnalyteType"
+                },
+                {
+                    "@id": "bts:SampleIntroduction"
+                },
+                {
+                    "@id": "bts:ExtractionMethod"
+                },
+                {
+                    "@id": "bts:AcquisitionMode"
+                },
+                {
+                    "@id": "bts:AcquisitionSoftware"
+                },
+                {
+                    "@id": "bts:AcquistionSoftwareVersion"
+                },
+                {
+                    "@id": "bts:SpectrometerFrequency"
+                },
+                {
+                    "@id": "bts:HasIonizationSource"
+                },
+                {
+                    "@id": "bts:IonProperty"
+                },
+                {
+                    "@id": "bts:VacuumPressure"
+                },
+                {
+                    "@id": "bts:VacuumPressureUnit"
+                },
+                {
+                    "@id": "bts:LensVoltages"
+                },
+                {
+                    "@id": "bts:LensVoltagesUnit"
+                },
+                {
+                    "@id": "bts:GasFlowTemperature"
+                },
+                {
+                    "@id": "bts:GasFlowTemperatureUnit"
+                },
+                {
+                    "@id": "bts:HasAssayControl"
+                },
+                {
+                    "@id": "bts:ControlType"
+                },
+                {
+                    "@id": "bts:ExperimentalBatchSize"
+                },
+                {
+                    "@id": "bts:ExperimentalBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:BatchSize"
+                },
+                {
+                    "@id": "bts:BatchSizeUnit"
+                },
+                {
+                    "@id": "bts:BatchID"
+                },
+                {
+                    "@id": "bts:BatchLabel"
+                },
+                {
+                    "@id": "bts:SampleBatchID"
+                },
+                {
+                    "@id": "bts:SampleBatchSize"
+                },
+                {
+                    "@id": "bts:SampleBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:AcquisitionBatchID"
+                },
+                {
+                    "@id": "bts:AcquisitionBatchSize"
+                },
+                {
+                    "@id": "bts:AcquisitionBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:ProcessingBatchID"
+                },
+                {
+                    "@id": "bts:ProcessingBatchSize"
+                },
+                {
+                    "@id": "bts:ProcessingBatchSizeUnit"
                 }
             ],
             "sms:validationRules": []
@@ -27251,6 +27992,184 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:AssayMetagenomicsAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based Metagenomics annotations",
+            "rdfs:label": "AssayMetagenomicsAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_metagenomics_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:ExperimentType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:InstrumentModel"
+                },
+                {
+                    "@id": "bts:SamplePrepProtocol"
+                },
+                {
+                    "@id": "bts:DataFile"
+                },
+                {
+                    "@id": "bts:DatabaseSource"
+                },
+                {
+                    "@id": "bts:DatabaseWeblink"
+                },
+                {
+                    "@id": "bts:DatabaseName"
+                },
+                {
+                    "@id": "bts:DatabaseVersion"
+                },
+                {
+                    "@id": "bts:DatabaseLibrary"
+                },
+                {
+                    "@id": "bts:LibraryPrep"
+                },
+                {
+                    "@id": "bts:LibSize"
+                },
+                {
+                    "@id": "bts:Mid"
+                },
+                {
+                    "@id": "bts:AssemblyName"
+                },
+                {
+                    "@id": "bts:NucleAcidExt"
+                },
+                {
+                    "@id": "bts:SourceMatID"
+                },
+                {
+                    "@id": "bts:LibReadsSeqd"
+                },
+                {
+                    "@id": "bts:NumberContig"
+                },
+                {
+                    "@id": "bts:LibLayout"
+                },
+                {
+                    "@id": "bts:AssemblyQual"
+                },
+                {
+                    "@id": "bts:LibVector"
+                },
+                {
+                    "@id": "bts:Adapters"
+                },
+                {
+                    "@id": "bts:AssemblySoftware"
+                },
+                {
+                    "@id": "bts:ExperimentalFactor"
+                },
+                {
+                    "@id": "bts:AssociatedResource"
+                },
+                {
+                    "@id": "bts:Sop"
+                },
+                {
+                    "@id": "bts:TargetGene"
+                },
+                {
+                    "@id": "bts:SeqMethod"
+                },
+                {
+                    "@id": "bts:SeqPlatform"
+                },
+                {
+                    "@id": "bts:DNAextraction"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AssayMetagenomicsTemplate",
             "@type": "rdfs:Class",
             "rdfs:comment": "Template for Metagenomics",
@@ -27373,6 +28292,148 @@
                 },
                 {
                     "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayMicrobiomeAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based Microbiome annotations",
+            "rdfs:label": "AssayMicrobiomeAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_microbiome_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:ExtractionMethod"
+                },
+                {
+                    "@id": "bts:LibraryBatchID"
+                },
+                {
+                    "@id": "bts:SequencingBatchID"
+                },
+                {
+                    "@id": "bts:SequencingBatchSize"
+                },
+                {
+                    "@id": "bts:SequencingBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:DnaBatchID"
+                },
+                {
+                    "@id": "bts:DnaBatchSize"
+                },
+                {
+                    "@id": "bts:DnaBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:LibraryPrep"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:LibraryVersion"
+                },
+                {
+                    "@id": "bts:IsStranded"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
+                },
+                {
+                    "@id": "bts:ReadLength"
+                },
+                {
+                    "@id": "bts:ReadLengthUnits"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:TotalReads"
                 }
             ],
             "sms:validationRules": []
@@ -27524,6 +28585,157 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:AssayProteomicsAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based Proteomics annotations",
+            "rdfs:label": "AssayProteomicsAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_proteomics_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:ExperimentType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:InstrumentModel"
+                },
+                {
+                    "@id": "bts:SamplePrepProtocol"
+                },
+                {
+                    "@id": "bts:DataFile"
+                },
+                {
+                    "@id": "bts:DatabaseSource"
+                },
+                {
+                    "@id": "bts:DatabaseWeblink"
+                },
+                {
+                    "@id": "bts:DatabaseName"
+                },
+                {
+                    "@id": "bts:ModificationParameters"
+                },
+                {
+                    "@id": "bts:QuantationStrategy"
+                },
+                {
+                    "@id": "bts:LabelQuantitation"
+                },
+                {
+                    "@id": "bts:LabelFreeQuantitation"
+                },
+                {
+                    "@id": "bts:IsobaricLabelingReagent"
+                },
+                {
+                    "@id": "bts:MsTarget"
+                },
+                {
+                    "@id": "bts:MsAssayTechnique"
+                },
+                {
+                    "@id": "bts:MsAnalyteType"
+                },
+                {
+                    "@id": "bts:DigestionMethod"
+                },
+                {
+                    "@id": "bts:DigestionReagent"
+                },
+                {
+                    "@id": "bts:FractionIdentifier"
+                },
+                {
+                    "@id": "bts:EnrichmentStrategy"
+                },
+                {
+                    "@id": "bts:Enrichment"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:AssayProteomicsTemplate",
             "@type": "rdfs:Class",
             "rdfs:comment": "Template for Proteomics",
@@ -27619,6 +28831,160 @@
                 },
                 {
                     "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayScRNAseqAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based scRNAseq annotations",
+            "rdfs:label": "AssayScRNAseqAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_scRNAseq_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:ReferenceTranscriptID"
+                },
+                {
+                    "@id": "bts:RepositoryName"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:ValueReported"
+                },
+                {
+                    "@id": "bts:RnaBatchID"
+                },
+                {
+                    "@id": "bts:RnaBatchSize"
+                },
+                {
+                    "@id": "bts:RnaBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:LibraryBatchID"
+                },
+                {
+                    "@id": "bts:SequencingBatchID"
+                },
+                {
+                    "@id": "bts:SequencingBatchSize"
+                },
+                {
+                    "@id": "bts:SequencingBatchSizeUnit"
+                },
+                {
+                    "@id": "bts:LibraryPrep"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:LibraryVersion"
+                },
+                {
+                    "@id": "bts:IsStranded"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
+                },
+                {
+                    "@id": "bts:ReadLength"
+                },
+                {
+                    "@id": "bts:ReadLengthUnits"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:TotalReads"
                 }
             ],
             "sms:validationRules": []
@@ -27722,6 +29088,148 @@
                 },
                 {
                     "@id": "bts:Component"
+                }
+            ],
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:AssayWholeGenomeSequencingAnnotationTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Template for file-based Whole Genome Sequencing annotations",
+            "rdfs:label": "AssayWholeGenomeSequencingAnnotationTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Component"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "assay_whole_genome_sequencing_annotation_template",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:IsMultiSpecimen"
+                },
+                {
+                    "@id": "bts:SpeciesName"
+                },
+                {
+                    "@id": "bts:SpeciesGroup"
+                },
+                {
+                    "@id": "bts:FamilyStudyParticipant"
+                },
+                {
+                    "@id": "bts:Assay"
+                },
+                {
+                    "@id": "bts:FileFormat"
+                },
+                {
+                    "@id": "bts:Consortium"
+                },
+                {
+                    "@id": "bts:Project"
+                },
+                {
+                    "@id": "bts:StudyKey"
+                },
+                {
+                    "@id": "bts:Grant"
+                },
+                {
+                    "@id": "bts:ResourceType"
+                },
+                {
+                    "@id": "bts:DataType"
+                },
+                {
+                    "@id": "bts:DataSubtype"
+                },
+                {
+                    "@id": "bts:MetadataType"
+                },
+                {
+                    "@id": "bts:AnalysisType"
+                },
+                {
+                    "@id": "bts:IsModelSystem"
+                },
+                {
+                    "@id": "bts:ModelSystemType"
+                },
+                {
+                    "@id": "bts:Organ"
+                },
+                {
+                    "@id": "bts:Tissue"
+                },
+                {
+                    "@id": "bts:SpecimenType"
+                },
+                {
+                    "@id": "bts:MeasurementTechnique"
+                },
+                {
+                    "@id": "bts:TechnologyPlatformVersion"
+                },
+                {
+                    "@id": "bts:PlatformLocation"
+                },
+                {
+                    "@id": "bts:ReferenceTranscriptID"
+                },
+                {
+                    "@id": "bts:RepositoryName"
+                },
+                {
+                    "@id": "bts:TranscriptType"
+                },
+                {
+                    "@id": "bts:ResultUnit"
+                },
+                {
+                    "@id": "bts:ValueReported"
+                },
+                {
+                    "@id": "bts:RnaBatchID"
+                },
+                {
+                    "@id": "bts:LibraryBatchID"
+                },
+                {
+                    "@id": "bts:SequencingBatchID"
+                },
+                {
+                    "@id": "bts:LibraryPrep"
+                },
+                {
+                    "@id": "bts:LibraryPreparationMethod"
+                },
+                {
+                    "@id": "bts:LibraryVersion"
+                },
+                {
+                    "@id": "bts:IsStranded"
+                },
+                {
+                    "@id": "bts:ReadStrandOrigin"
+                },
+                {
+                    "@id": "bts:ReadLength"
+                },
+                {
+                    "@id": "bts:ReadLengthUnits"
+                },
+                {
+                    "@id": "bts:RunType"
+                },
+                {
+                    "@id": "bts:TotalReads"
                 }
             ],
             "sms:validationRules": []
@@ -28259,12 +29767,6 @@
                     "@id": "bts:Filename"
                 },
                 {
-                    "@id": "bts:IndividualID"
-                },
-                {
-                    "@id": "bts:SpecimenID"
-                },
-                {
                     "@id": "bts:IsMultiSpecimen"
                 },
                 {
@@ -28319,23 +29821,6 @@
                     "@id": "bts:Component"
                 }
             ],
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:Grant",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "Grant",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "grant",
-            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
