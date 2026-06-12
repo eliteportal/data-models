@@ -94,6 +94,51 @@
             "display_name": "dataset_template",
             "schema_name": "datasetTemplate",
             "type": "file"
+        },
+        {
+            "display_name": "assay_RNAseq_annotation_template",
+            "schema_name": "AssayRNAseqAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_bsSeq_annotation_template",
+            "schema_name": "AssayBsSeqAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_metabolomics_annotation_template",
+            "schema_name": "AssayMetabolomicsAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_metagenomics_annotation_template",
+            "schema_name": "AssayMetagenomicsAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_microbiome_annotation_template",
+            "schema_name": "AssayMicrobiomeAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_proteomics_annotation_template",
+            "schema_name": "AssayProteomicsAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_scRNAseq_annotation_template",
+            "schema_name": "AssayScRNAseqAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_whole_genome_sequencing_annotation_template",
+            "schema_name": "AssayWholeGenomeSequencingAnnotationTemplate",
+            "type": "file"
+        },
+        {
+            "display_name": "assay_genotyping_annotation_template",
+            "schema_name": "AssayGenotypingAnnotationTemplate",
+            "type": "file"
         }
     ],
     "service_version": "v23.1.1",
