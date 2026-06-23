@@ -139,6 +139,11 @@
             "display_name": "assay_genotyping_annotation_template",
             "schema_name": "AssayGenotypingAnnotationTemplate",
             "type": "file"
+        },
+        {
+            "display_name": "DUO_template",
+            "schema_name": "DUOTemplate",
+            "type": "file"
         }
     ],
     "service_version": "v23.1.1",
