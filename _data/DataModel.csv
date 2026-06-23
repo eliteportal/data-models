@@ -2,6 +2,53 @@ Key,Key Description,columnType,Source,module
 analysis_results_metadata_template,Template for analysis and results,,Sage Bionetworks, template
 ModelSystemType,Type of model system,BOOLEAN,Sage Bionetworks,ADKP
 isModelSystem,Boolean flag indicating whether or not a file has data from a model system,BOOLEAN,Sage Bionetworks,ADKP
+CC,This data use modifier indicates that the data is allowed for use in clinical use and care.,STRING,,DUO
+COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,STRING,,DUO
+DSR,This data use permission indicates that use is allowed provided it is related to the specified disease.,STRING,,DUO
+DUOPlus1,Source geography is relevant to governance decisions.,STRING,,DUO
+DUOPlus2,Study population is relevant to governance decisions.,STRING,,DUO
+DUOPlus3,Data deidentification is relevant to governance decisions.,STRING,,DUO
+DUOPlus4,A data permission designation is associated with the Study.,STRING,,DUO
+DUOPlus5,A data tier designation is associated with the Study.,STRING,,DUO
+DUOPlus6,A license is associated with the Study.,STRING,,DUO
+DUOPlus7,Attribution conditions are associated with this Study.,STRING,,DUO
+GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,STRING,,DUO
+GSO,This data use modifier indicates that use is limited to genetic studies only.,STRING,,DUO
+GSR,This data use modifier indicates that use is limited to within a specific geographic region.,STRING,,DUO
+HMB,This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.,STRING,,DUO
+IRB,This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.,STRING,,DUO
+IST,This data use modifier indicates that use is limited to use within an approved institution.,STRING,,DUO
+MOR,This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.,STRING,,DUO
+NCU,This data use modifier indicates that use of the data is limited to not-for-profit use.,STRING,,DUO
+NMDS,This data use modifier indicates that use does not allow methods development research.,STRING,,DUO
+NPOA,"This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.",STRING,,DUO
+NPU,This data use modifier indicates that use of the data is limited to not-for-profit organisations.,STRING,,DUO
+NPUNCU,"This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.",STRING,,DUO
+NRES,This data use permission indicates there is no restriction on use.,STRING,,DUO
+POA,This data use permission indicates that use of the data is limited to the study of population origins or ancestry.,STRING,,DUO
+PS,This data use modifier indicates that use is limited to use within an approved project.,STRING,,DUO
+PUB,This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.,STRING,,DUO
+RST,This data use modifier indicates that use is limited to studies of a certain research type.,STRING,,DUO
+RTN,This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.,STRING,,DUO
+TSM,This data use modifier indicates that use is approved for a specific number of months.,STRING,,DUO
+USE,This data use modifier indicates that use is limited to use by approved users.,STRING,,DUO
+attribution,The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7.,STRING,,DUO
+collaborationRequired,"If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list.",STRING,,DUO
+dataPermission,The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.,STRING_LIST,,DUO
+dataRelease,"The news/data release number (ex., 25.4)",STRING,,DUO
+dataTier,The tier of data access associated with the access requirement. Equivalent to DUOPlus5.,STRING_LIST,,DUO
+dataUseModifiers,"A list of data use modifiers that apply to the access requirement. Examples include GRU, IRB, etc.",STRING_LIST,,DUO
+deidentificationType,The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.,STRING_LIST,,DUO
+diseaseSpecificResearch,The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list.,STRING_LIST,,DUO
+geographicalRestriction,The specific geographic region(s) to which use is limited by the access requirement.,STRING_LIST,,DUO
+institutionSpecificRestriction,Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list.,STRING_LIST,,DUO
+populationType,The population studied in the research associated with the access requirement. Equivalent to DUOPlus2.,STRING,,DUO
+publicationMoratorium,End date of the publication moratorium associated with the access requirement.,STRING,,DUO
+researchSpecificRestrictions,Research-specific restrictions associated with the access requirement.,STRING,,DUO
+sourceGeography,The geographical source of the data associated with the access requirement. Equivalent to DUOPlus1.,STRING_LIST,,DUO
+studyProjectIdentifier,The Synapse Project identifier (synID) with which this Study is related.,STRING_LIST,,DUO
+timeLimitOnUse,Time limit on the use of the data associated with the access requirement.,NUMBER,,DUO
+userSpecificRestriction,The user-specific restrictions associated with the access requirement.,STRING,,DUO
 DNAextraction,"DNA extraction kit method. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",STRING,,ManifestColumn
 acquisitionBatchID,"Acquisition batch identifier, provided by the data contributor to Sage Bionetworks. The batch identifier(s) must be stored in a data dictionary .csv file uploaded to Synapse",STRING,,ManifestColumn
 acquisitionBatchSize,The number of samples,STRING,,ManifestColumn
@@ -160,6 +207,7 @@ acknowledgment,,STRING,,Unknown
 acquistionSoftwareVersion,,STRING,,Unknown
 batchSizeUnit,,STRING,,Unknown
 contributor,,STRING,Sage Bionetworks,Unknown
+dataStatus,Indicates whether a study is pending data release (Not available) or is released (Available).,STRING,,Unknown
 displayName,Canonical tool name provided by the tool developer or service provider,STRING,Sage Bionetworks,Unknown
 documentation,,STRING,Sage Bionetworks,Unknown
 experimentalBatchSize,,INTEGER,,Unknown
@@ -241,7 +289,6 @@ countryOfOrigin,Origin of individuals from which data were generated. Omit if no
 creator,"Main researchers involved in producing the data in priority order. Usually matches the project PI(s) and data lead(s) responsible for conception and initial content creation. For tools this is the manufacturer or developer of the instrument. Expects properly formatted name of the organization or person (e.g. NF-OSI"" or ""Robert Allaway"") not an id. See https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/creator/.""",STRING_LIST,SageBionetworks,dataset
 croissant_file_s3_object,Link to croissant file for dataset.,STRING,SageBionetworks,dataset
 dataRestriction,Indicates the restriction level of files/folders.,STRING,SageBionetworks,dataset
-dataUseModifiers,"List of data use ontology (DUO) terms that are true for dataset which describes the allowable scope and terms for data use. Most datasets allow ""General Research Use"" unless otherwise specified.",STRING_LIST,SageBionetworks,dataset
 datasetType,"The classification of a dataset based on its role, scope, or purpose within a study.",STRING,SageBionetworks,dataset
 datePublished,Date the dataset was published or made available on Synapse formatted as YYYY-MM-DD. Maps to schema.org datePublished.,STRING,SageBionetworks,dataset
 individualCount,Number of unique individuals included in the dataset (whether as individual-level or as aggregate data). Omit if not applicable/unknown.,INTEGER,SageBionetworks,dataset
@@ -279,6 +326,7 @@ readLength,The length of the read. Provide a value or Unknown Not collected Not 
 readStrandOrigin,The strand from which the read originates in a strand-specific protocol.,STRING,sage.annotations-ngs.readStrandOrigin-0.0.2,sequencing
 runType,The type of run,STRING,sage.annotations-ngs.runType-0.0.2,sequencing
 totalReads,Total number of sequencing reads from a library.,STRING,sage.annotations-experimentalData.totalReads-0.0.2,sequencing
+DUO_template, Template for annotating folders with DUO terms,,Sage Bionetworks,template
 assay_RNAseq_annotation_template,Template for file-based RNAseq,,Sage Bionetworks,template
 assay_RNAseq_template,Template for RNAseq,,Sage Bionetworks,template
 assay_bsSeq_annotation_template,Template for file-based bsSeq annotations,,Sage Bionetworks,template

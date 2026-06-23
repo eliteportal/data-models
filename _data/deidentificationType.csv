@@ -1,0 +1,7 @@
+Key,Key Description,columnType,Source,Parent
+HIPPA_LDS,,STRING_LIST,,
+ SafeHarbor,,STRING_LIST,,
+ ExpertDetermination,,STRING_LIST,,
+ Pseudonymized,,STRING_LIST,,
+ Anonymized,,STRING_LIST,,
+ Other,,STRING_LIST,,

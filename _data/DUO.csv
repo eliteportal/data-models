@@ -1,0 +1,48 @@
+Key,Key Description,Valid Values,columnType,Parent,module
+CC,This data use modifier indicates that the data is allowed for use in clinical use and care.,,STRING,,DUO
+COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,,STRING,,DUO
+DSR,This data use permission indicates that use is allowed provided it is related to the specified disease.,,STRING,,DUO
+DUOPlus1,Source geography is relevant to governance decisions.,,STRING,,DUO
+DUOPlus2,Study population is relevant to governance decisions.,,STRING,,DUO
+DUOPlus3,Data deidentification is relevant to governance decisions.,,STRING,,DUO
+DUOPlus4,A data permission designation is associated with the Study.,,STRING,,DUO
+DUOPlus5,A data tier designation is associated with the Study.,,STRING,,DUO
+DUOPlus6,A license is associated with the Study.,,STRING,,DUO
+DUOPlus7,Attribution conditions are associated with this Study.,,STRING,,DUO
+GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,,STRING,,DUO
+GSO,This data use modifier indicates that use is limited to genetic studies only.,,STRING,,DUO
+GSR,This data use modifier indicates that use is limited to within a specific geographic region.,,STRING,,DUO
+HMB,This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.,,STRING,,DUO
+IRB,This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.,,STRING,,DUO
+IST,This data use modifier indicates that use is limited to use within an approved institution.,,STRING,,DUO
+MOR,This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.,,STRING,,DUO
+NCU,This data use modifier indicates that use of the data is limited to not-for-profit use.,,STRING,,DUO
+NMDS,This data use modifier indicates that use does not allow methods development research.,,STRING,,DUO
+NPOA,"This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.",,STRING,,DUO
+NPU,This data use modifier indicates that use of the data is limited to not-for-profit organisations.,,STRING,,DUO
+NPUNCU,"This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.",,STRING,,DUO
+NRES,This data use permission indicates there is no restriction on use.,,STRING,,DUO
+POA,This data use permission indicates that use of the data is limited to the study of population origins or ancestry.,,STRING,,DUO
+PS,This data use modifier indicates that use is limited to use within an approved project.,,STRING,,DUO
+PUB,This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.,,STRING,,DUO
+RST,This data use modifier indicates that use is limited to studies of a certain research type.,,STRING,,DUO
+RTN,This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.,,STRING,,DUO
+TSM,This data use modifier indicates that use is approved for a specific number of months.,,STRING,,DUO
+USE,This data use modifier indicates that use is limited to use by approved users.,,STRING,,DUO
+attribution,The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7.,,STRING,,DUO
+collaborationRequired,"If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list.",,STRING,,DUO
+dataPermission,The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.,"Agreement, Attestation, Award, Other",STRING_LIST,,DUO
+dataRelease,"The news/data release number (ex., 25.4)",,STRING,,DUO
+dataTier,The tier of data access associated with the access requirement. Equivalent to DUOPlus5.,"Anonymous, Open, Controlled, Private",STRING_LIST,,DUO
+dataUseModifiers,"A list of data use modifiers that apply to the access requirement. Examples include GRU, IRB, etc.","IRB, HMB, PUB, USE, NPOA, COL, NCU, NPUNCU, RST, TSM, NRES, NPU, POA, MOR, GSO, RTN, CC, NMDS, IST, GSR, DSR, GRU, PS, DUOPlus1, DUOPlus2, DUOPlus3, DUOPlus4, DUOPlus5, DUOPlus6, DUOPlus7",STRING_LIST,,DUO
+deidentificationType,The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.,"HIPPA_LDS, SafeHarbor, ExpertDetermination, Pseudonymized, Anonymized, Other",STRING_LIST,,DUO
+diseaseSpecificResearch,The type(s) of disease research allowed by this access requirement. Provide the MONDO ID in format MONDO:id. Provide multiple values as a comma-separated list.,,STRING_LIST,,DUO
+geographicalRestriction,The specific geographic region(s) to which use is limited by the access requirement.,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",STRING_LIST,,DUO
+institutionSpecificRestriction,Institutions with specific restrictions associated with the access requirement. Provide the institution ROR ID in format ROR:id. Provide multiple entries as a comma-separated list.,,STRING_LIST,,DUO
+populationType,The population studied in the research associated with the access requirement. Equivalent to DUOPlus2.,,STRING,,DUO
+publicationMoratorium,End date of the publication moratorium associated with the access requirement.,,STRING,,DUO
+researchSpecificRestrictions,Research-specific restrictions associated with the access requirement.,,STRING,,DUO
+sourceGeography,The geographical source of the data associated with the access requirement. Equivalent to DUOPlus1.,"AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, YE, YT, ZA, ZM, ZW",STRING_LIST,,DUO
+studyProjectIdentifier,The Synapse Project identifier (synID) with which this Study is related.,,STRING_LIST,,DUO
+timeLimitOnUse,Time limit on the use of the data associated with the access requirement.,,NUMBER,,DUO
+userSpecificRestriction,The user-specific restrictions associated with the access requirement.,,STRING,,DUO

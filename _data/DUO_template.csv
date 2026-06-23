@@ -1,5 +1,4 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
-isModelSystem,Boolean flag indicating whether or not a file has data from a model system,True,BOOLEAN,,Sage Bionetworks,ManifestColumn,"True, False, Not assigned"
 CC,This data use modifier indicates that the data is allowed for use in clinical use and care.,False,STRING,,,,
 COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,False,STRING,collaborationRequired,,,
 DSR,This data use permission indicates that use is allowed provided it is related to the specified disease.,False,STRING,diseaseSpecificResearch,,,
@@ -33,7 +32,6 @@ USE,This data use modifier indicates that use is limited to use by approved user
 attribution,The attribution statement for the data associated with the access requirement. Equivalent to DUOPlus7.,False,STRING,,,,
 collaborationRequired,"If collaboration is required for the access requirement, provide the PI email address. Provide multiple as a comma-separated list.",False,STRING,,,,
 dataPermission,The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.,False,STRING_LIST,,,,"Agreement, Attestation, Award, Other"
-dataRelease,"The news/data release number (ex., 25.4)",True,STRING,,,,
 dataTier,The tier of data access associated with the access requirement. Equivalent to DUOPlus5.,False,STRING_LIST,,,,"Anonymous, Open, Controlled, Private"
 dataUseModifiers,"A list of data use modifiers that apply to the access requirement. Examples include GRU, IRB, etc.",False,STRING_LIST,,,,"IRB, HMB, PUB, USE, NPOA, COL, NCU, NPUNCU, RST, TSM, NRES, NPU, POA, MOR, GSO, RTN, CC, NMDS, IST, GSR, DSR, GRU, PS, DUOPlus1, DUOPlus2, DUOPlus3, DUOPlus4, DUOPlus5, DUOPlus6, DUOPlus7"
 deidentificationType,The type of de-identification applied to the data associated with the access requirement. Equivalent to DUOPlus3.,False,STRING_LIST,,,,"HIPPA_LDS, SafeHarbor, ExpertDetermination, Pseudonymized, Anonymized, Other"
@@ -47,29 +45,3 @@ sourceGeography,The geographical source of the data associated with the access r
 studyProjectIdentifier,The Synapse Project identifier (synID) with which this Study is related.,True,STRING_LIST,,,,
 timeLimitOnUse,Time limit on the use of the data associated with the access requirement.,False,NUMBER,,,,
 userSpecificRestriction,The user-specific restrictions associated with the access requirement.,False,STRING,,,,
-dataTypeAll,,True,STRING,,Sage Bionetworks,ManifestColumn,"clinical,drugScreen,electrophysiology,epigenetics,geneExpression,genomeAssembly,genomicVariants,imaging,lipidomics,metabolomics,metagenomics,Not applicable,Not collected,Not specified,Other,phenotype,proteomics,Unknown,wearableData"
-program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
-projectShortName,,True,STRING,,Sage Bionetworks,ManifestColumn,"LC,ILO,LLFS,LG, Not assigned"
-specimenType,Type of biological material sample taken from a biological entity for research purposes,True,STRING_LIST,,,ManifestColumn,"blood, brain, buffy coat, cell line, cells, nervous system, organoid, plasma, saliva, serum, skin, stool, tissue, urine, Not applicable, Not collected, Not specified, Other, Unknown"
-studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),True,STRING,,Sage Bionetworks,ManifestColumn,
-Component,,False,STRING,,,,
-accessReqs,,False,STRING,,,,
-ackContext,,False,STRING,,,,
-acknowledgment,,False,STRING,,,,
-dataStatus,Indicates whether a study is pending data release (Not available) or is released (Available).,True,STRING,,,,"Not Available, Available"
-grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),True,STRING,,Sage Bionetworks,ManifestColumn,"U19AG063893,U24AG051129,U19AG023122,UH2AG064706,UH3AG064706,UH2AG064704,UH3AG064704,R01AG061844, Not assigned"
-isFeatured,,False,BOOLEAN,,,,
-isReleased,,False,BOOLEAN,,,,
-metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file",False,STRING,,Sage Bionetworks,ManifestColumn,"individual,biospecimen,assay,supplementary files,Not Assigned"
-methods,,False,STRING,,,,
-newsRelease,,False,STRING,,,,
-projectFullName,,False,STRING,,,,
-relatedStudies,,False,STRING,,,,
-studyAbstract,,False,STRING,,,,
-studyDescription,,False,STRING,,,,
-studyFocus,,False,STRING,,,,
-studyMetadata,,False,STRING,,,,
-studyName,,False,STRING,,,,
-studyType,,False,STRING,,,,
-studyWiki,,False,STRING,,,,
-species,The name of a species (typically a taxonomic group) of organism.,True,STRING,,Sage Bionetworks,ManifestColumn,"Cross-Species Avian,Cross-Species Mammalian,Human,Mouse"

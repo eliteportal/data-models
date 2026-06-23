@@ -1,4 +1,5 @@
 Key,Key Description,Valid Values,columnType,Parent,module
+DUO_template, Template for annotating folders with DUO terms,,,Component,template
 assay_RNAseq_annotation_template,Template for file-based RNAseq,,,Component,template
 assay_RNAseq_template,Template for RNAseq,,,Component,template
 assay_bsSeq_annotation_template,Template for file-based bsSeq annotations,,,Component,template
