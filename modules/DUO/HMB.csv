@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+HMB,This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.,,,,FALSE,,,DUO:0000006,,DUO,,STRING,,,"DUO_template, study_folder_template"

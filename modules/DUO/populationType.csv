@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+populationType,The population studied in the research associated with the access requirement. Equivalent to DUOPlus2.,,,,FALSE,,,,,DUO,,STRING,,,"DUO_template, study_folder_template"

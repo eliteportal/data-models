@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+dataPermission,The permissions associated with the data under the access requirement. Equivalent to DUOPlus4.,"Agreement, Attestation, Award, Other",,,FALSE,,,,,DUO,TRUE,STRING_LIST,,,"DUO_template, study_folder_template"

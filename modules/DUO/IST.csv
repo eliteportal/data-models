@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+IST,This data use modifier indicates that use is limited to use within an approved institution.,,institutionSpecificRestriction,,FALSE,,,DUO:0000028,,DUO,,STRING,,,"DUO_template, study_folder_template"

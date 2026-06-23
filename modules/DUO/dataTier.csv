@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+dataTier,The tier of data access associated with the access requirement. Equivalent to DUOPlus5.,"Anonymous, Open, Controlled, Private",,,FALSE,,,,,DUO,TRUE,STRING_LIST,,,"DUO_template, study_folder_template"

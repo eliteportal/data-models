@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+RTN,This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.,,,,FALSE,,,DUO:0000029,,DUO,,STRING,,,"DUO_template, study_folder_template"

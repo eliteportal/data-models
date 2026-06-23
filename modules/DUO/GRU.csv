@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+GRU,This data use permission indicates that use is allowed for general research use for any research purpose.,,,,FALSE,,,DUO:0000042,,DUO,,STRING,,,"DUO_template, study_folder_template"

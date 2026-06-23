@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+DUOPlus7,Attribution conditions are associated with this Study.,,attribution,,FALSE,,,,,DUO,,STRING,,,"DUO_template, study_folder_template"

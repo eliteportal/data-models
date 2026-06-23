@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,,collaborationRequired,,FALSE,,,DUO:0000020,,DUO,,STRING,,,"DUO_template, study_folder_template"
