@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+POA,This data use permission indicates that use of the data is limited to the study of population origins or ancestry.,,,,FALSE,,,DUO:0000011,,DUO,,STRING,,,"DUO_template, study_folder_template"
