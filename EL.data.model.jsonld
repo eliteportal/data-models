@@ -142,7 +142,7 @@
         {
             "@id": "bts:EntityID",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
+            "rdfs:comment": "Synapse ID of the entity",
             "rdfs:label": "EntityID",
             "rdfs:subClassOf": [
                 {
@@ -34780,6 +34780,9 @@
                     "@id": "bts:Filename"
                 },
                 {
+                    "@id": "bts:EntityID"
+                },
+                {
                     "@id": "bts:SpecimenID"
                 },
                 {
@@ -35023,6 +35026,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:EntityID"
                 },
                 {
                     "@id": "bts:SpecimenID"
@@ -35541,6 +35547,9 @@
                     "@id": "bts:Filename"
                 },
                 {
+                    "@id": "bts:EntityID"
+                },
+                {
                     "@id": "bts:SpecimenID"
                 },
                 {
@@ -35879,6 +35888,9 @@
                     "@id": "bts:Filename"
                 },
                 {
+                    "@id": "bts:EntityID"
+                },
+                {
                     "@id": "bts:SpecimenID"
                 },
                 {
@@ -36148,6 +36160,9 @@
                     "@id": "bts:Filename"
                 },
                 {
+                    "@id": "bts:EntityID"
+                },
+                {
                     "@id": "bts:SpecimenID"
                 },
                 {
@@ -36237,6 +36252,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:EntityID"
                 },
                 {
                     "@id": "bts:IndividualID"
@@ -36443,6 +36461,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:EntityID"
                 },
                 {
                     "@id": "bts:SpecimenID"
@@ -36699,6 +36720,9 @@
                     "@id": "bts:Filename"
                 },
                 {
+                    "@id": "bts:EntityID"
+                },
+                {
                     "@id": "bts:SpecimenID"
                 },
                 {
@@ -36942,6 +36966,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:EntityID"
                 },
                 {
                     "@id": "bts:SpecimenID"
@@ -37457,6 +37484,9 @@
                     "@id": "bts:Filename"
                 },
                 {
+                    "@id": "bts:EntityID"
+                },
+                {
                     "@id": "bts:IsMultiSpecimen"
                 },
                 {
@@ -37531,6 +37561,9 @@
             "sms:requiresDependency": [
                 {
                     "@id": "bts:Filename"
+                },
+                {
+                    "@id": "bts:EntityID"
                 },
                 {
                     "@id": "bts:SpecimenID"
