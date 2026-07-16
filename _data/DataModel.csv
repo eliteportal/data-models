@@ -210,6 +210,7 @@ contributor,,STRING,Sage Bionetworks,Unknown
 dataStatus,Indicates whether a study is pending data release (Not available) or is released (Available).,STRING,,Unknown
 displayName,Canonical tool name provided by the tool developer or service provider,STRING,Sage Bionetworks,Unknown
 documentation,,STRING,Sage Bionetworks,Unknown
+entityID,Synapse ID of the entity,STRING,Sage Bionetworks,Unknown
 experimentalBatchSize,,INTEGER,,Unknown
 grantNumber,Grant number including activity code institute code and serial number (e.g. U01MH103392),STRING,Sage Bionetworks,Unknown
 grants,"Grant number associated with the tool's development. Multiple values permitted, comma separated.",STRING,Sage Bionetworks,Unknown

@@ -17,6 +17,7 @@ transcriptType,The type of transcript reported,True,STRING,,,ManifestColumn,"lin
 valueReported,The count or gene count for the transcript,True,STRING,,,ManifestColumn,
 Component,,False,STRING,,,,
 Filename,,False,STRING,,,,
+entityID,Synapse ID of the entity,False,STRING,,Sage Bionetworks,,
 specimenID,"Identifying string linked to a particular sample or specimen, provide by the data contributor",True,STRING,,sage.annotations-experimentalData.specimenID-0.0.2,ManifestColumn,
 platformLocation,"The name of the laboratory, facility, vendor, company, or location where the data generation platform was located, provided by the data contributor. Provide a value OR provide one of these values - Unknown Not collected, Not applicable, Not specified",True,STRING,,sage.annotations-experimentalData.platformLocation-0.0.2,ManifestColumn,
 isStranded,Whether or not the library is stranded.,True,BOOLEAN,,sage.annotations-ngs.isStranded-0.0.2,ManifestColumn,"FALSE,TRUE"
