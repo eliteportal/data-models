@@ -1,112 +1,470 @@
 Key,Key Description,columnType,Source,Parent
-Acomys cahirinus,,STRING,,ManifestColumn
- Acomys russatus,,STRING,,ManifestColumn
+Abramis brama,,STRING,,ManifestColumn
+ Acanthisitta chloris,,STRING,,ManifestColumn
  Accipiter cooperii,,STRING,,ManifestColumn
+ Accipiter gentilis,,STRING,,ManifestColumn
+ Accipiter nisus,,STRING,,ManifestColumn
+ Acipenser naccarii,,STRING,,ManifestColumn
+ Acipenser ruthenus,,STRING,,ManifestColumn
+ Acomys cahirinus,,STRING,,ManifestColumn
+ Acomys russatus,,STRING,,ManifestColumn
+ Acridotheres tristis,,STRING,,ManifestColumn
  Actitis macularius,,STRING,,ManifestColumn
+ Aegithalos caudatus,,STRING,,ManifestColumn
  Aix sponsa,,STRING,,ManifestColumn
+ Alca torda,,STRING,,ManifestColumn
+ Alligator mississippiensis,,STRING,,ManifestColumn
+ Alopochen aegyptiaca,,STRING,,ManifestColumn
+ Alosa sapidissima,,STRING,,ManifestColumn
+ Amblyraja radiata,,STRING,,ManifestColumn
+ Ammodramus caudacutus,,STRING,,ManifestColumn
+ Ammodytes marinus,,STRING,,ManifestColumn
+ Ammospiza nelsoni,,STRING,,ManifestColumn
+ Anabas testudineus,,STRING,,ManifestColumn
+ Anableps anableps,,STRING,,ManifestColumn
  Anas acuta,,STRING,,ManifestColumn
  Anas carolinensis,,STRING,,ManifestColumn
+ Anas crecca,,STRING,,ManifestColumn
  Anas platyrhynchos,,STRING,,ManifestColumn
+ Anguilla anguilla,,STRING,,ManifestColumn
+ Anser albifrons,,STRING,,ManifestColumn
+ Anser anser,,STRING,,ManifestColumn
+ Anser brachyrhynchus,,STRING,,ManifestColumn
+ Anser erythropus,,STRING,,ManifestColumn
+ Anser fabalis,,STRING,,ManifestColumn
+ Antennarius maculatus,,STRING,,ManifestColumn
  Antigone canadensis,,STRING,,ManifestColumn
+ Aplidium turbinatum,,STRING,,ManifestColumn
+ Aplochiton taeniatus,,STRING,,ManifestColumn
+ Apodemus sylvaticus,,STRING,,ManifestColumn
+ Apus apus,,STRING,,ManifestColumn
+ Aquila chrysaetos,,STRING,,ManifestColumn
+ Ara ararauna,,STRING,,ManifestColumn
  Archilochus colubris,,STRING,,ManifestColumn
+ Archocentrus centrarchus,,STRING,,ManifestColumn
+ Argentina silus,,STRING,,ManifestColumn
+ Artibeus intermedius,,STRING,,ManifestColumn
  Artibeus jamaicensis,,STRING,,ManifestColumn
+ Artibeus lituratus,,STRING,,ManifestColumn
+ Arvicanthis niloticus,,STRING,,ManifestColumn
+ Arvicola amphibius,,STRING,,ManifestColumn
+ Ascaphus truei,,STRING,,ManifestColumn
+ Ascidia mentula,,STRING,,ManifestColumn
+ Ascidiella aspersa,,STRING,,ManifestColumn
+ Astatotilapia calliptera,,STRING,,ManifestColumn
+ Asterias rubens,,STRING,,ManifestColumn
+ Athene noctua,,STRING,,ManifestColumn
+ Aythya ferina,,STRING,,ManifestColumn
+ Aythya fuligula,,STRING,,ManifestColumn
+ Aythya marila,,STRING,,ManifestColumn
  Baeolophus bicolor,,STRING,,ManifestColumn
  Balaena mysticetus,,STRING,,ManifestColumn
+ Balaenoptera acutorostrata,,STRING,,ManifestColumn
+ Balaenoptera borealis,,STRING,,ManifestColumn
+ Balaenoptera musculus,,STRING,,ManifestColumn
+ Balaenoptera physalus,,STRING,,ManifestColumn
+ Balearica regulorum,,STRING,,ManifestColumn
+ Barbatula barbatula,,STRING,,ManifestColumn
+ Barbus barbus,,STRING,,ManifestColumn
+ Bathysaurus mollis,,STRING,,ManifestColumn
+ Benthalbella elongata,,STRING,,ManifestColumn
  Blarina brevicauda,,STRING,,ManifestColumn
+ Blennius ocellaris,,STRING,,ManifestColumn
+ Bombina bombina,,STRING,,ManifestColumn
+ Bombina variegata,,STRING,,ManifestColumn
  Bombycilla cedrorum,,STRING,,ManifestColumn
  Bonasa umbellus,,STRING,,ManifestColumn
+ Borostomias antarcticus,,STRING,,ManifestColumn
  Bos taurus,,STRING,,ManifestColumn
+ Branchiostoma lanceolatum,,STRING,,ManifestColumn
  Branta canadensis,,STRING,,ManifestColumn
+ Branta leucopsis,,STRING,,ManifestColumn
  Bubo virginianus,,STRING,,ManifestColumn
+ Bucephala clangula,,STRING,,ManifestColumn
+ Bucorvus abyssinicus,,STRING,,ManifestColumn
+ Bufo bufo,,STRING,,ManifestColumn
+ Buglossidium luteum,,STRING,,ManifestColumn
+ Buteo buteo,,STRING,,ManifestColumn
  Buteo jamaicensis,,STRING,,ManifestColumn
  Buteo lineatus,,STRING,,ManifestColumn
+ Callithrix jacchus,,STRING,,ManifestColumn
+ Calonectris borealis,,STRING,,ManifestColumn
+ Calypte anna,,STRING,,ManifestColumn
  Canis latrans,,STRING,,ManifestColumn
+ Canis lupus,,STRING,,ManifestColumn
+ Caprimulgus europaeus,,STRING,,ManifestColumn
+ Carassius carassius,,STRING,,ManifestColumn
+ Carcharodon carcharias,,STRING,,ManifestColumn
  Cardinalis cardinalis,,STRING,,ManifestColumn
+ Caretta caretta,,STRING,,ManifestColumn
+ Cariama cristata,,STRING,,ManifestColumn
+ Carollia sowelli,,STRING,,ManifestColumn
  Castor canadensis,,STRING,,ManifestColumn
+ Catharus ustulatus,,STRING,,ManifestColumn
  Cavia porcellus,,STRING,,ManifestColumn
+ Cepola macrophthalma,,STRING,,ManifestColumn
+ Cervus elaphus,,STRING,,ManifestColumn
+ Cetorhinus maximus,,STRING,,ManifestColumn
+ Chanos chanos,,STRING,,ManifestColumn
  Charadrius vociferus,,STRING,,ManifestColumn
+ Chelidonichthys cuculus,,STRING,,ManifestColumn
+ Chelidonichthys lucerna,,STRING,,ManifestColumn
+ Chelmon rostratus,,STRING,,ManifestColumn
+ Chelon labrosus,,STRING,,ManifestColumn
+ Chelonia mydas,,STRING,,ManifestColumn
  Chinchilla lanigera,,STRING,,ManifestColumn
+ Chionoecetes opilio,,STRING,,ManifestColumn
+ Chionomys nivalis,,STRING,,ManifestColumn
+ Chiroxiphia lanceolata,,STRING,,ManifestColumn
+ Choloepus didactylus,,STRING,,ManifestColumn
+ Chroicocephalus ridibundus,,STRING,,ManifestColumn
+ Ciconia maguari,,STRING,,ManifestColumn
+ Ciliata mustela,,STRING,,ManifestColumn
+ Cinclus cinclus,,STRING,,ManifestColumn
+ Clangula hyemalis,,STRING,,ManifestColumn
+ Clavelina lepadiformis,,STRING,,ManifestColumn
+ Colius striatus,,STRING,,ManifestColumn
+ Coloeus monedula,,STRING,,ManifestColumn
  Columba livia,,STRING,,ManifestColumn
+ Columba palumbus,,STRING,,ManifestColumn
  Condylura cristata,,STRING,,ManifestColumn
+ Conger conger,,STRING,,ManifestColumn
+ Copsychus sechellarum,,STRING,,ManifestColumn
+ Coregonus lavaretus,,STRING,,ManifestColumn
+ Corella eumyota,,STRING,,ManifestColumn
  Corvus brachyrhynchos,,STRING,,ManifestColumn
+ Corvus hawaiiensis,,STRING,,ManifestColumn
+ Corvus moneduloides,,STRING,,ManifestColumn
+ Cottoperca gobio,,STRING,,ManifestColumn
  Cricetomys ansorgei,,STRING,,ManifestColumn
  Cricetulus barabensis,,STRING,,ManifestColumn
  Cricetulus griseus,,STRING,,ManifestColumn
  Cryptomys damarensis,,STRING,,ManifestColumn
+ Cuculus canorus,,STRING,,ManifestColumn
  Cuniculus paca,,STRING,,ManifestColumn
+ Cyanistes caeruleus,,STRING,,ManifestColumn
  Cyanocitta cristata,,STRING,,ManifestColumn
+ Cyclopterus lumpus,,STRING,,ManifestColumn
+ Cygnus columbianus,,STRING,,ManifestColumn
+ Cygnus cygnus,,STRING,,ManifestColumn
  Cygnus olor,,STRING,,ManifestColumn
+ Cynocephalus volans,,STRING,,ManifestColumn
+ Danio rerio,,STRING,,ManifestColumn
+ Dasypus novemcinctus,,STRING,,ManifestColumn
+ Delphinus delphis,,STRING,,ManifestColumn
+ Dendrocygna viduata,,STRING,,ManifestColumn
+ Dendropsophus ebraccatus,,STRING,,ManifestColumn
+ Denticeps clupeoides,,STRING,,ManifestColumn
+ Dermanura phaeotis,,STRING,,ManifestColumn
+ Dermochelys coriacea,,STRING,,ManifestColumn
+ Diceros bicornis,,STRING,,ManifestColumn
+ Diplecogaster bimaculata,,STRING,,ManifestColumn
+ Discoglossus pictus,,STRING,,ManifestColumn
+ Dromiciops gliroides,,STRING,,ManifestColumn
  Dryobates pubescens,,STRING,,ManifestColumn
  Dumetella carolinensis,,STRING,,ManifestColumn
+ Echeneis naucrates,,STRING,,ManifestColumn
+ Echiichthys vipera,,STRING,,ManifestColumn
+ Electrona antarctica,,STRING,,ManifestColumn
+ Electrona carlsbergi,,STRING,,ManifestColumn
+ Electrona subaspera,,STRING,,ManifestColumn
+ Electrophorus electricus,,STRING,,ManifestColumn
+ Elephas maximus,,STRING,,ManifestColumn
  Ellobius lutescens,,STRING,,ManifestColumn
  Ellobius talpinus,,STRING,,ManifestColumn
+ Emys orbicularis,,STRING,,ManifestColumn
  Eonycteris spelaea,,STRING,,ManifestColumn
+ Eptesicus chiriquinus,,STRING,,ManifestColumn
+ Eptesicus furinalis,,STRING,,ManifestColumn
  Eptesicus fuscus,,STRING,,ManifestColumn
+ Eptesicus nilssonii,,STRING,,ManifestColumn
  Equus caballus,,STRING,,ManifestColumn
  Eremophila alpestris,,STRING,,ManifestColumn
+ Erethizon dorsatum,,STRING,,ManifestColumn
+ Eretmochelys imbricata,,STRING,,ManifestColumn
+ Erinaceus europaeus,,STRING,,ManifestColumn
+ Erithacus rubecula,,STRING,,ManifestColumn
+ Erpetoichthys calabaricus,,STRING,,ManifestColumn
+ Erythrolamprus reginae,,STRING,,ManifestColumn
+ Eschrichtius robustus,,STRING,,ManifestColumn
+ Esox lucius,,STRING,,ManifestColumn
+ Eubalaena glacialis,,STRING,,ManifestColumn
+ Euleptes europaea,,STRING,,ManifestColumn
+ Eutrigla gurnardus,,STRING,,ManifestColumn
+ Falco biarmicus,,STRING,,ManifestColumn
+ Falco cherrug,,STRING,,ManifestColumn
+ Falco naumanni,,STRING,,ManifestColumn
+ Falco peregrinus,,STRING,,ManifestColumn
+ Falco punctatus,,STRING,,ManifestColumn
+ Falco rusticolus,,STRING,,ManifestColumn
+ Falco tinnunculus,,STRING,,ManifestColumn
+ Ficedula hypoleuca,,STRING,,ManifestColumn
+ Fringilla coelebs,,STRING,,ManifestColumn
  Fukomys damarensis,,STRING,,ManifestColumn
+ Fulica atra,,STRING,,ManifestColumn
+ Fundulus diaphanus,,STRING,,ManifestColumn
+ Gadus morhua,,STRING,,ManifestColumn
+ Gaidropsarus vulgaris,,STRING,,ManifestColumn
+ Gallinula chloropus,,STRING,,ManifestColumn
+ Gallus gallus,,STRING,,ManifestColumn
+ Gardnerycteris keenani,,STRING,,ManifestColumn
+ Gasterosteus aculeatus,,STRING,,ManifestColumn
+ Gastrophryne carolinensis,,STRING,,ManifestColumn
+ Gavia stellata,,STRING,,ManifestColumn
+ Geothlypis trichas,,STRING,,ManifestColumn
+ Geotrypetes seraphini,,STRING,,ManifestColumn
+ Globicephala melas,,STRING,,ManifestColumn
+ Glossophaga mutica,,STRING,,ManifestColumn
+ Gobio gobio,,STRING,,ManifestColumn
+ Gobius niger,,STRING,,ManifestColumn
+ Gopherus evgoodei,,STRING,,ManifestColumn
+ Gopherus flavomarginatus,,STRING,,ManifestColumn
+ Gouania willdenowi,,STRING,,ManifestColumn
+ Grampus griseus,,STRING,,ManifestColumn
+ Grus americana,,STRING,,ManifestColumn
+ Grus grus,,STRING,,ManifestColumn
+ Gulosus aristotelis,,STRING,,ManifestColumn
+ Gymnoscopelus braueri,,STRING,,ManifestColumn
+ Gymnoscopelus microlampas,,STRING,,ManifestColumn
+ Gypaetus barbatus,,STRING,,ManifestColumn
+ Haematopus ostralegus,,STRING,,ManifestColumn
  Haemorhous mexicanus,,STRING,,ManifestColumn
+ Haliaeetus albicilla,,STRING,,ManifestColumn
+ Halichoerus grypus,,STRING,,ManifestColumn
+ Harpagifer antarcticus,,STRING,,ManifestColumn
+ Harpia harpyja,,STRING,,ManifestColumn
+ Hemiprocne comata,,STRING,,ManifestColumn
+ Hemiscyllium ocellatum,,STRING,,ManifestColumn
  Heterocephalus glaber,,STRING,,ManifestColumn
+ Heterohyrax brucei,,STRING,,ManifestColumn
+ Hippoglossus hippoglossus,,STRING,,ManifestColumn
+ Hipposideros larvatus,,STRING,,ManifestColumn
  Hirundo rustica,,STRING,,ManifestColumn
  Homo sapiens,,STRING,,ManifestColumn
+ Hoplias malabaricus,,STRING,,ManifestColumn
  Hydrochoerus hydrochaeris,,STRING,,ManifestColumn
  Hydroprogne caspia,,STRING,,ManifestColumn
  Hylocichla mustelina,,STRING,,ManifestColumn
+ Hypanus sabinus,,STRING,,ManifestColumn
+ Hyperolius riggenbachi,,STRING,,ManifestColumn
+ Hyperoodon ampullatus,,STRING,,ManifestColumn
+ Hyperoplus immaculatus,,STRING,,ManifestColumn
+ Hypomesus transpacificus,,STRING,,ManifestColumn
+ Ia io,,STRING,,ManifestColumn
  Icteria virens,,STRING,,ManifestColumn
+ Jaculus jaculus,,STRING,,ManifestColumn
+ Labrus bergylta,,STRING,,ManifestColumn
+ Labrus mixtus,,STRING,,ManifestColumn
+ Lacerta agilis,,STRING,,ManifestColumn
+ Lagenorhynchus acutus,,STRING,,ManifestColumn
+ Lagenorhynchus albirostris,,STRING,,ManifestColumn
+ Lampanyctus macdonaldi,,STRING,,ManifestColumn
+ Lampetra fluviatilis,,STRING,,ManifestColumn
  Larus argentatus,,STRING,,ManifestColumn
+ Larus canus,,STRING,,ManifestColumn
  Larus delawarensis,,STRING,,ManifestColumn
+ Larus fuscus,,STRING,,ManifestColumn
+ Larus glaucescens,,STRING,,ManifestColumn
+ Larus marinus,,STRING,,ManifestColumn
+ Larus michahellis,,STRING,,ManifestColumn
+ Larus occidentalis,,STRING,,ManifestColumn
+ Lathamus discolor,,STRING,,ManifestColumn
+ Lemur catta,,STRING,,ManifestColumn
+ Lepidochelys kempii,,STRING,,ManifestColumn
+ Leptodactylus fuscus,,STRING,,ManifestColumn
+ Leuciscus leuciscus,,STRING,,ManifestColumn
+ Liasis olivaceus,,STRING,,ManifestColumn
+ Limanda limanda,,STRING,,ManifestColumn
+ Lipophrys pholis,,STRING,,ManifestColumn
+ Lissotriton helveticus,,STRING,,ManifestColumn
+ Lissotriton vulgaris,,STRING,,ManifestColumn
+ Lophostoma evotis,,STRING,,ManifestColumn
+ Lutra lutra,,STRING,,ManifestColumn
+ Lynx canadensis,,STRING,,ManifestColumn
  Macaca fascicularis,,STRING,,ManifestColumn
  Macaca mulatta,,STRING,,ManifestColumn
+ Macropus eugenii,,STRING,,ManifestColumn
+ Malaclemys terrapin,,STRING,,ManifestColumn
+ Malacosteus niger,,STRING,,ManifestColumn
+ Manis pentadactyla,,STRING,,ManifestColumn
  Mareca strepera,,STRING,,ManifestColumn
  Marmota monax,,STRING,,ManifestColumn
+ Martes martes,,STRING,,ManifestColumn
+ Mastacembelus armatus,,STRING,,ManifestColumn
+ Megalops cyprinoides,,STRING,,ManifestColumn
  Melanerpes carolinus,,STRING,,ManifestColumn
+ Melanostigma gelatinosum,,STRING,,ManifestColumn
+ Melanotaenia boesemani,,STRING,,ManifestColumn
  Meleagris gallopavo,,STRING,,ManifestColumn
+ Meles meles,,STRING,,ManifestColumn
+ Melopsittacus undulatus,,STRING,,ManifestColumn
+ Melospiza georgiana,,STRING,,ManifestColumn
  Melospiza melodia,,STRING,,ManifestColumn
+ Mergellus albellus,,STRING,,ManifestColumn
+ Mergus serrator,,STRING,,ManifestColumn
  Meriones unguiculatus,,STRING,,ManifestColumn
+ Merops nubicus,,STRING,,ManifestColumn
  Mesocricetus auratus,,STRING,,ManifestColumn
+ Mesoplodon bidens,,STRING,,ManifestColumn
+ Mesoplodon densirostris,,STRING,,ManifestColumn
+ Mesoplodon mirus,,STRING,,ManifestColumn
+ Microcaecilia unicolor,,STRING,,ManifestColumn
+ Microchirus variegatus,,STRING,,ManifestColumn
+ Micromesistius poutassou,,STRING,,ManifestColumn
+ Micromys minutus,,STRING,,ManifestColumn
+ Micronycteris microtis,,STRING,,ManifestColumn
+ Microstomus kitt,,STRING,,ManifestColumn
  Microtus pennsylvanicus,,STRING,,ManifestColumn
+ Milvus milvus,,STRING,,ManifestColumn
  Mimus polyglottos,,STRING,,ManifestColumn
+ Miniopterus schreibersii,,STRING,,ManifestColumn
+ Molossus alvarezi,,STRING,,ManifestColumn
+ Molossus molossus,,STRING,,ManifestColumn
+ Molossus nigricans,,STRING,,ManifestColumn
  Molothrus ater,,STRING,,ManifestColumn
+ Monodelphis domestica,,STRING,,ManifestColumn
  Multi-species,,STRING,,ManifestColumn
+ Muntiacus reevesi,,STRING,,ManifestColumn
  Mus musculus,,STRING,,ManifestColumn
+ Muscardinus avellanarius,,STRING,,ManifestColumn
+ Mustela erminea,,STRING,,ManifestColumn
+ Mustela nivalis,,STRING,,ManifestColumn
+ Mustelus asterias,,STRING,,ManifestColumn
  Myocastor coypus,,STRING,,ManifestColumn
+ Myodes glareolus,,STRING,,ManifestColumn
+ Myotis daubentonii,,STRING,,ManifestColumn
+ Myotis emarginatus,,STRING,,ManifestColumn
  Myotis lucifugus,,STRING,,ManifestColumn
+ Myotis myotis,,STRING,,ManifestColumn
+ Myotis mystacinus,,STRING,,ManifestColumn
+ Myotis nattereri,,STRING,,ManifestColumn
+ Myotis nesopolus,,STRING,,ManifestColumn
+ Myotis pilosatibialis,,STRING,,ManifestColumn
+ Myotis tricolor,,STRING,,ManifestColumn
+ Myripristis murdjan,,STRING,,ManifestColumn
+ Myxine glutinosa,,STRING,,ManifestColumn
+ Nannobrachium achirus,,STRING,,ManifestColumn
  Nannospalax galili,,STRING,,ManifestColumn
+ Nansenia antarctica,,STRING,,ManifestColumn
+ Natrix helvetica,,STRING,,ManifestColumn
+ Neoarius graeffei,,STRING,,ManifestColumn
+ Neofelis nebulosa,,STRING,,ManifestColumn
  Neosciurus carolinensis,,STRING,,ManifestColumn
  Neotoma cinerea,,STRING,,ManifestColumn
  Neotoma floridana,,STRING,,ManifestColumn
+ Neovison vison,,STRING,,ManifestColumn
+ Nesoenas mayeri,,STRING,,ManifestColumn
+ Netta rufina,,STRING,,ManifestColumn
+ Nomonyx dominicus,,STRING,,ManifestColumn
  Not applicable,,STRING,,ManifestColumn
  Not collected,,STRING,,ManifestColumn
  Not provided,,STRING,,ManifestColumn
  Not specified,,STRING,,ManifestColumn
+ Notolabrus celidotus,,STRING,,ManifestColumn
+ Notolepis coatsi,,STRING,,ManifestColumn
+ Notothenia rossii,,STRING,,ManifestColumn
+ Numenius arquata,,STRING,,ManifestColumn
+ Nyctalus leisleri,,STRING,,ManifestColumn
+ Nyctibius grandis,,STRING,,ManifestColumn
+ Nycticebus coucang,,STRING,,ManifestColumn
  Octodon degus,,STRING,,ManifestColumn
  Odocoileus virginianus,,STRING,,ManifestColumn
  Ondatra zibethicus,,STRING,,ManifestColumn
+ Ornithorhynchus anatinus,,STRING,,ManifestColumn
+ Oryctolagus cuniculus,,STRING,,ManifestColumn
+ Osmerus eperlanus,,STRING,,ManifestColumn
+ Osmerus mordax,,STRING,,ManifestColumn
  Other,,STRING,,ManifestColumn
+ Otis tarda,,STRING,,ManifestColumn
+ Pagrus pagrus,,STRING,,ManifestColumn
  Pan troglodytes,,STRING,,ManifestColumn
+ Pangasianodon hypophthalmus,,STRING,,ManifestColumn
  Papio anubis,,STRING,,ManifestColumn
+ Parambassis ranga,,STRING,,ManifestColumn
  Passer domesticus,,STRING,,ManifestColumn
+ Passerculus sandwichensis,,STRING,,ManifestColumn
  Passerina caerulea,,STRING,,ManifestColumn
  Passerina cyanea,,STRING,,ManifestColumn
+ Pelecanus crispus,,STRING,,ManifestColumn
+ Pelophylax lessonae,,STRING,,ManifestColumn
+ Periophthalmus magnuspinnatus,,STRING,,ManifestColumn
  Peromyscus gossypinus,,STRING,,ManifestColumn
  Peromyscus leucopus,,STRING,,ManifestColumn
  Peromyscus maniculatus,,STRING,,ManifestColumn
+ Petromyzon marinus,,STRING,,ManifestColumn
+ Phaethon aethereus,,STRING,,ManifestColumn
  Phalacrocorax auritus,,STRING,,ManifestColumn
+ Phalacrocorax carbo,,STRING,,ManifestColumn
  Phasianus colchicus,,STRING,,ManifestColumn
+ Phocoena phocoena,,STRING,,ManifestColumn
+ Phocoena sinus,,STRING,,ManifestColumn
+ Phoenicopterus ruber,,STRING,,ManifestColumn
+ Pholidichthys leucotaenia,,STRING,,ManifestColumn
+ Pholis gunnellus,,STRING,,ManifestColumn
+ Phoxinus phoxinus,,STRING,,ManifestColumn
+ Phyllostomus discolor,,STRING,,ManifestColumn
  Picoides villosus,,STRING,,ManifestColumn
  Pipilo erythrophthalmus,,STRING,,ManifestColumn
+ Pipistrellus kuhlii,,STRING,,ManifestColumn
+ Pipistrellus nathusii,,STRING,,ManifestColumn
+ Pipistrellus pipistrellus,,STRING,,ManifestColumn
+ Pipistrellus pygmaeus,,STRING,,ManifestColumn
+ Platalea leucorodia,,STRING,,ManifestColumn
+ Platichthys flesus,,STRING,,ManifestColumn
+ Platyrrhinus helleri,,STRING,,ManifestColumn
+ Plecotus auritus,,STRING,,ManifestColumn
+ Pleuronectes platessa,,STRING,,ManifestColumn
+ Pluvialis apricaria,,STRING,,ManifestColumn
+ Podarcis bocagei,,STRING,,ManifestColumn
+ Podarcis cretensis,,STRING,,ManifestColumn
+ Podarcis filfolensis,,STRING,,ManifestColumn
+ Podarcis gaigeae,,STRING,,ManifestColumn
+ Podarcis liolepis,,STRING,,ManifestColumn
+ Podarcis melisellensis,,STRING,,ManifestColumn
+ Podarcis muralis,,STRING,,ManifestColumn
+ Podarcis pityusensis,,STRING,,ManifestColumn
+ Podarcis raffonei,,STRING,,ManifestColumn
+ Podarcis siculus,,STRING,,ManifestColumn
+ Podarcis tiliguerta,,STRING,,ManifestColumn
+ Podarcis vaucheri,,STRING,,ManifestColumn
+ Podargus strigoides,,STRING,,ManifestColumn
  Poecile carolinensis,,STRING,,ManifestColumn
+ Pogoniulus pusillus,,STRING,,ManifestColumn
+ Pollachius pollachius,,STRING,,ManifestColumn
+ Porphyrio hochstetteri,,STRING,,ManifestColumn
+ Potamotrygon marinae,,STRING,,ManifestColumn
+ Pristis pectinata,,STRING,,ManifestColumn
+ Pseudophryne corroboree,,STRING,,ManifestColumn
+ Pseudorca crassidens,,STRING,,ManifestColumn
+ Pterocles gutturalis,,STRING,,ManifestColumn
+ Pygocentrus nattereri,,STRING,,ManifestColumn
  Quiscalus quiscula,,STRING,,ManifestColumn
+ Rana temporaria,,STRING,,ManifestColumn
  Rattus norvegicus,,STRING,,ManifestColumn
  Rattus rattus,,STRING,,ManifestColumn
  Regulus calendula,,STRING,,ManifestColumn
+ Rhea pennata,,STRING,,ManifestColumn
+ Rhinatrema bivittatum,,STRING,,ManifestColumn
+ Rhineura floridana,,STRING,,ManifestColumn
+ Rhinolophus ferrumequinum,,STRING,,ManifestColumn
+ Rhynochetos jubatus,,STRING,,ManifestColumn
+ Rissa tridactyla,,STRING,,ManifestColumn
+ Rousettus aegyptiacus,,STRING,,ManifestColumn
  Saimiri boliviensis,,STRING,,ManifestColumn
+ Salarias fasciatus,,STRING,,ManifestColumn
+ Salmo trutta,,STRING,,ManifestColumn
  Sayornis phoebe,,STRING,,ManifestColumn
  Scalopus aquaticus,,STRING,,ManifestColumn
+ Scardinius erythrophthalmus,,STRING,,ManifestColumn
+ Scatophagus argus,,STRING,,ManifestColumn
  Sciurus carolinensis,,STRING,,ManifestColumn
  Sciurus niger,,STRING,,ManifestColumn
  Sciurus vulgaris,,STRING,,ManifestColumn
+ Scleropages formosus,,STRING,,ManifestColumn
  Scolopax minor,,STRING,,ManifestColumn
+ Scomber japonicus,,STRING,,ManifestColumn
+ Scyliorhinus canicula,,STRING,,ManifestColumn
+ Sebastes umbrosus,,STRING,,ManifestColumn
  Setophaga citrina,,STRING,,ManifestColumn
  Setophaga coronata,,STRING,,ManifestColumn
  Setophaga dominica,,STRING,,ManifestColumn
@@ -115,27 +473,62 @@ Acomys cahirinus,,STRING,,ManifestColumn
  Sialia sialis,,STRING,,ManifestColumn
  Sigmodon hispidus,,STRING,,ManifestColumn
  Sitta carolinensis,,STRING,,ManifestColumn
+ Sorex araneus,,STRING,,ManifestColumn
+ Sparus aurata,,STRING,,ManifestColumn
  Spatula clypeata,,STRING,,ManifestColumn
+ Spea bombifrons,,STRING,,ManifestColumn
+ Sphaeramia orbicularis,,STRING,,ManifestColumn
+ Spheniscus humboldti,,STRING,,ManifestColumn
  Spinus tristis,,STRING,,ManifestColumn
+ Spirinchus thaleichthys,,STRING,,ManifestColumn
  Spizella passerina,,STRING,,ManifestColumn
  Spizella pusilla,,STRING,,ManifestColumn
  Spizelloides arborea,,STRING,,ManifestColumn
+ Sterna hirundo,,STRING,,ManifestColumn
+ Streptopelia turtur,,STRING,,ManifestColumn
+ Strigops habroptilus,,STRING,,ManifestColumn
+ Strix aluco,,STRING,,ManifestColumn
  Struthio camelus,,STRING,,ManifestColumn
  Sturnus vulgaris,,STRING,,ManifestColumn
+ Suncus etruscus,,STRING,,ManifestColumn
  Sus scrofa,,STRING,,ManifestColumn
+ Sylvia atricapilla,,STRING,,ManifestColumn
+ Sylvia borin,,STRING,,ManifestColumn
  Sylvilagus floridanus,,STRING,,ManifestColumn
+ Syngnathus acus,,STRING,,ManifestColumn
  Tachycineta bicolor,,STRING,,ManifestColumn
+ Tachyglossus aculeatus,,STRING,,ManifestColumn
+ Taeniopygia guttata,,STRING,,ManifestColumn
+ Takifugu rubripes,,STRING,,ManifestColumn
+ Tamandua tetradactyla,,STRING,,ManifestColumn
  Tamias striatus,,STRING,,ManifestColumn
  Tamiasciurus hudsonicus,,STRING,,ManifestColumn
+ Tauraco erythrolophus,,STRING,,ManifestColumn
+ Taurulus bubalis,,STRING,,ManifestColumn
+ Tautogolabrus adspersus,,STRING,,ManifestColumn
+ Thalassophryne amazonica,,STRING,,ManifestColumn
+ Thamnophis elegans,,STRING,,ManifestColumn
+ Theristicus caerulescens,,STRING,,ManifestColumn
  Thryothorus ludovicianus,,STRING,,ManifestColumn
+ Thunnus albacares,,STRING,,ManifestColumn
+ Thunnus maccoyii,,STRING,,ManifestColumn
  Toxostoma rufum,,STRING,,ManifestColumn
+ Toxotes jaculatrix,,STRING,,ManifestColumn
+ Trachurus trachurus,,STRING,,ManifestColumn
+ Trichosurus vulpecula,,STRING,,ManifestColumn
  Troglodytes aedon,,STRING,,ManifestColumn
+ Trogon surrucura,,STRING,,ManifestColumn
  Turdus migratorius,,STRING,,ManifestColumn
  Tursiops truncatus,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
+ Vespertilio murinus,,STRING,,ManifestColumn
  Vicugna pacos,,STRING,,ManifestColumn
+ Vidua chalybeata,,STRING,,ManifestColumn
+ Vipera latastei,,STRING,,ManifestColumn
  Vireo griseus,,STRING,,ManifestColumn
  Vireo olivaceus,,STRING,,ManifestColumn
+ Xenentodon cancila,,STRING,,ManifestColumn
  Zalophus californianus,,STRING,,ManifestColumn
  Zenaida macroura,,STRING,,ManifestColumn
+ Zeus faber,,STRING,,ManifestColumn
  Zonotrichia albicollis,,STRING,,ManifestColumn
- Unknown,,STRING,,ManifestColumn

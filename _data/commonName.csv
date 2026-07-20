@@ -1,4 +1,532 @@
-Key,Key Description,Type,Source,Parent
-Not applicable,,STRING,,unspecified
-Not collected,,STRING,,unspecified
-Unknown,,STRING,,unspecified
+Key,Key Description,columnType,Source,Parent
+abyssinian ground hornbill,,STRING,,ManifestColumn
+ adriatic sturgeon,,STRING,,ManifestColumn
+ aeolian wall lizard,,STRING,,ManifestColumn
+ african grass rat,,STRING,,ManifestColumn
+ alpaca,,STRING,,ManifestColumn
+ alvarez's mastiff bat,,STRING,,ManifestColumn
+ amazonian toadfish,,STRING,,ManifestColumn
+ american alligator,,STRING,,ManifestColumn
+ american beaver,,STRING,,ManifestColumn
+ american crow,,STRING,,ManifestColumn
+ american flamingo,,STRING,,ManifestColumn
+ american goldfinch,,STRING,,ManifestColumn
+ american mink,,STRING,,ManifestColumn
+ american red squirrel,,STRING,,ManifestColumn
+ american robin,,STRING,,ManifestColumn
+ american shad,,STRING,,ManifestColumn
+ american tree sparrow,,STRING,,ManifestColumn
+ american woodcock,,STRING,,ManifestColumn
+ anna's hummingbird,,STRING,,ManifestColumn
+ antarctic jonasfish,,STRING,,ManifestColumn
+ antarctic lanternfish,,STRING,,ManifestColumn
+ antarctic spiny plunderfish,,STRING,,ManifestColumn
+ argentine brown bat,,STRING,,ManifestColumn
+ asian arowana,,STRING,,ManifestColumn
+ asian elephant,,STRING,,ManifestColumn
+ atlantic cod,,STRING,,ManifestColumn
+ atlantic hagfish,,STRING,,ManifestColumn
+ atlantic halibut,,STRING,,ManifestColumn
+ atlantic horse mackerel,,STRING,,ManifestColumn
+ atlantic stingray,,STRING,,ManifestColumn
+ atlantic white-sided dolphin,,STRING,,ManifestColumn
+ ballan wrasse,,STRING,,ManifestColumn
+ banded archerfish,,STRING,,ManifestColumn
+ banded killifish,,STRING,,ManifestColumn
+ bank vole,,STRING,,ManifestColumn
+ barbel,,STRING,,ManifestColumn
+ barn swallow,,STRING,,ManifestColumn
+ barnacle goose,,STRING,,ManifestColumn
+ barred grass snake,,STRING,,ManifestColumn
+ basking shark,,STRING,,ManifestColumn
+ bearded vulture,,STRING,,ManifestColumn
+ big brown bat,,STRING,,ManifestColumn
+ black goby,,STRING,,ManifestColumn
+ black mastiff bat,,STRING,,ManifestColumn
+ black rat,,STRING,,ManifestColumn
+ black rhinoceros,,STRING,,ManifestColumn
+ black-headed gull,,STRING,,ManifestColumn
+ black-legged kittiwake,,STRING,,ManifestColumn
+ blainville's beaked whale,,STRING,,ManifestColumn
+ blue catfish,,STRING,,ManifestColumn
+ blue grosbeak,,STRING,,ManifestColumn
+ blue jay,,STRING,,ManifestColumn
+ blue whale,,STRING,,ManifestColumn
+ blue whiting,,STRING,,ManifestColumn
+ blue-and-yellow macaw,,STRING,,ManifestColumn
+ blunt-snouted clingfish,,STRING,,ManifestColumn
+ bocage's wall lizard,,STRING,,ManifestColumn
+ boeseman's rainbowfish,,STRING,,ManifestColumn
+ bolivian squirrel monkey,,STRING,,ManifestColumn
+ bolson tortoise,,STRING,,ManifestColumn
+ bowhead whale,,STRING,,ManifestColumn
+ brauer's lanternfish,,STRING,,ManifestColumn
+ brown long-eared bat,,STRING,,ManifestColumn
+ brown rat,,STRING,,ManifestColumn
+ brown thrasher,,STRING,,ManifestColumn
+ brown trout,,STRING,,ManifestColumn
+ brown-headed cowbird,,STRING,,ManifestColumn
+ budgerigar,,STRING,,ManifestColumn
+ bushy-tailed woodrat,,STRING,,ManifestColumn
+ butterfly blenny,,STRING,,ManifestColumn
+ cairo spiny mouse,,STRING,,ManifestColumn
+ california sea lion,,STRING,,ManifestColumn
+ canada goose,,STRING,,ManifestColumn
+ canada lynx,,STRING,,ManifestColumn
+ cape hairy bat,,STRING,,ManifestColumn
+ capybara,,STRING,,ManifestColumn
+ carolina chickadee,,STRING,,ManifestColumn
+ carolina wren,,STRING,,ManifestColumn
+ caspian tern,,STRING,,ManifestColumn
+ catalonian wall lizard,,STRING,,ManifestColumn
+ cattle,,STRING,,ManifestColumn
+ cave nectar bat,,STRING,,ManifestColumn
+ cedar waxwing,,STRING,,ManifestColumn
+ channel bull blenny,,STRING,,ManifestColumn
+ chimpanzee,,STRING,,ManifestColumn
+ chinese hamster,,STRING,,ManifestColumn
+ chinese pangolin,,STRING,,ManifestColumn
+ chipping sparrow,,STRING,,ManifestColumn
+ chiriquinan serotine,,STRING,,ManifestColumn
+ chub mackerel,,STRING,,ManifestColumn
+ climbing perch,,STRING,,ManifestColumn
+ clouded leopard,,STRING,,ManifestColumn
+ coastal tailed frog,,STRING,,ManifestColumn
+ common big-eared bat,,STRING,,ManifestColumn
+ common bottlenose dolphin,,STRING,,ManifestColumn
+ common bream,,STRING,,ManifestColumn
+ common brushtail possum,,STRING,,ManifestColumn
+ common buzzard,,STRING,,ManifestColumn
+ common chaffinch,,STRING,,ManifestColumn
+ common crane,,STRING,,ManifestColumn
+ common cuckoo,,STRING,,ManifestColumn
+ common dab,,STRING,,ManifestColumn
+ common dace,,STRING,,ManifestColumn
+ common degu,,STRING,,ManifestColumn
+ common dolphin,,STRING,,ManifestColumn
+ common frog,,STRING,,ManifestColumn
+ common goldeneye,,STRING,,ManifestColumn
+ common grackle,,STRING,,ManifestColumn
+ common gull,,STRING,,ManifestColumn
+ common kestrel,,STRING,,ManifestColumn
+ common marmoset,,STRING,,ManifestColumn
+ common minke whale,,STRING,,ManifestColumn
+ common moorhen,,STRING,,ManifestColumn
+ common myna,,STRING,,ManifestColumn
+ common ostrich,,STRING,,ManifestColumn
+ common pipistrelle,,STRING,,ManifestColumn
+ common pochard,,STRING,,ManifestColumn
+ common rudd,,STRING,,ManifestColumn
+ common shrew,,STRING,,ManifestColumn
+ common starfish,,STRING,,ManifestColumn
+ common starling,,STRING,,ManifestColumn
+ common swift,,STRING,,ManifestColumn
+ common tern,,STRING,,ManifestColumn
+ common toad,,STRING,,ManifestColumn
+ common wall lizard,,STRING,,ManifestColumn
+ common whitefish,,STRING,,ManifestColumn
+ common wood pigeon,,STRING,,ManifestColumn
+ common yellowthroat,,STRING,,ManifestColumn
+ convict blenny,,STRING,,ManifestColumn
+ Cooper's hawk,,STRING,,ManifestColumn
+ copperband butterflyfish,,STRING,,ManifestColumn
+ corbin's sand eel,,STRING,,ManifestColumn
+ cory's shearwater,,STRING,,ManifestColumn
+ cotton mouse,,STRING,,ManifestColumn
+ coyote,,STRING,,ManifestColumn
+ coypu,,STRING,,ManifestColumn
+ crab-eating macaque,,STRING,,ManifestColumn
+ cretan wall lizard,,STRING,,ManifestColumn
+ crucian carp,,STRING,,ManifestColumn
+ cuckoo wrasse,,STRING,,ManifestColumn
+ cunner,,STRING,,ManifestColumn
+ curacao myotis,,STRING,,ManifestColumn
+ dalmatian pelican,,STRING,,ManifestColumn
+ dalmatian wall lizard,,STRING,,ManifestColumn
+ damaraland mole-rat,,STRING,,ManifestColumn
+ daubenton's bat,,STRING,,ManifestColumn
+ davis's round-eared bat,,STRING,,ManifestColumn
+ delta smelt,,STRING,,ManifestColumn
+ denticle herring,,STRING,,ManifestColumn
+ diamondback terrapin,,STRING,,ManifestColumn
+ double-crested cormorant,,STRING,,ManifestColumn
+ downy woodpecker,,STRING,,ManifestColumn
+ eastern bluebird,,STRING,,ManifestColumn
+ eastern chipmunk,,STRING,,ManifestColumn
+ eastern cottontail,,STRING,,ManifestColumn
+ eastern gray squirrel,,STRING,,ManifestColumn
+ eastern happy,,STRING,,ManifestColumn
+ eastern mole,,STRING,,ManifestColumn
+ eastern narrow-mouthed toad,,STRING,,ManifestColumn
+ eastern phoebe,,STRING,,ManifestColumn
+ eastern towhee,,STRING,,ManifestColumn
+ eastern woodrat,,STRING,,ManifestColumn
+ egyptian fruit bat,,STRING,,ManifestColumn
+ egyptian goose,,STRING,,ManifestColumn
+ electric eel,,STRING,,ManifestColumn
+ electron subantarctic lanternfish,,STRING,,ManifestColumn
+ epaulette shark,,STRING,,ManifestColumn
+ etruscan shrew,,STRING,,ManifestColumn
+ eurasian blackcap,,STRING,,ManifestColumn
+ eurasian blue tit,,STRING,,ManifestColumn
+ eurasian coot,,STRING,,ManifestColumn
+ eurasian curlew,,STRING,,ManifestColumn
+ eurasian minnow,,STRING,,ManifestColumn
+ eurasian otter,,STRING,,ManifestColumn
+ eurasian oystercatcher,,STRING,,ManifestColumn
+ eurasian red squirrel,,STRING,,ManifestColumn
+ eurasian sparrowhawk,,STRING,,ManifestColumn
+ eurasian spoonbill,,STRING,,ManifestColumn
+ eurasian teal,,STRING,,ManifestColumn
+ european badger,,STRING,,ManifestColumn
+ european conger,,STRING,,ManifestColumn
+ european eel,,STRING,,ManifestColumn
+ european fire-bellied toad,,STRING,,ManifestColumn
+ european flounder,,STRING,,ManifestColumn
+ european golden plover,,STRING,,ManifestColumn
+ european hedgehog,,STRING,,ManifestColumn
+ european herring gull,,STRING,,ManifestColumn
+ european lancelet,,STRING,,ManifestColumn
+ european leaf-toed gecko,,STRING,,ManifestColumn
+ european nightjar,,STRING,,ManifestColumn
+ european pied flycatcher,,STRING,,ManifestColumn
+ european pine marten,,STRING,,ManifestColumn
+ european plaice,,STRING,,ManifestColumn
+ european pond turtle,,STRING,,ManifestColumn
+ european rabbit,,STRING,,ManifestColumn
+ european river lamprey,,STRING,,ManifestColumn
+ european robin,,STRING,,ManifestColumn
+ european sea squirt,,STRING,,ManifestColumn
+ european shag,,STRING,,ManifestColumn
+ european smelt,,STRING,,ManifestColumn
+ european snow vole,,STRING,,ManifestColumn
+ european turtle dove,,STRING,,ManifestColumn
+ european water vole,,STRING,,ManifestColumn
+ false killer whale,,STRING,,ManifestColumn
+ field sparrow,,STRING,,ManifestColumn
+ fin whale,,STRING,,ManifestColumn
+ fivebeard rockling,,STRING,,ManifestColumn
+ flier cichlid,,STRING,,ManifestColumn
+ florida worm lizard,,STRING,,ManifestColumn
+ fox squirrel,,STRING,,ManifestColumn
+ french guiana freshwater stingray,,STRING,,ManifestColumn
+ freshwater garfish,,STRING,,ManifestColumn
+ gaboon caecilian,,STRING,,ManifestColumn
+ gadwall,,STRING,,ManifestColumn
+ galili blind mole-rat,,STRING,,ManifestColumn
+ garden warbler,,STRING,,ManifestColumn
+ gelatinous eelpout,,STRING,,ManifestColumn
+ geoffroy's bat,,STRING,,ManifestColumn
+ giant-fin mudskipper,,STRING,,ManifestColumn
+ gilthead seabream,,STRING,,ManifestColumn
+ glaucous-winged gull,,STRING,,ManifestColumn
+ golden eagle,,STRING,,ManifestColumn
+ golden hamster,,STRING,,ManifestColumn
+ golden spiny mouse,,STRING,,ManifestColumn
+ goode's thornscrub tortoise,,STRING,,ManifestColumn
+ gray catbird,,STRING,,ManifestColumn
+ gray short-tailed opossum,,STRING,,ManifestColumn
+ gray whale,,STRING,,ManifestColumn
+ gray wolf,,STRING,,ManifestColumn
+ great black-backed gull,,STRING,,ManifestColumn
+ great bustard,,STRING,,ManifestColumn
+ great cormorant,,STRING,,ManifestColumn
+ great evening bat,,STRING,,ManifestColumn
+ great fruit-eating bat,,STRING,,ManifestColumn
+ great horned owl,,STRING,,ManifestColumn
+ great potoo,,STRING,,ManifestColumn
+ great white shark,,STRING,,ManifestColumn
+ greater argentine,,STRING,,ManifestColumn
+ greater horseshoe bat,,STRING,,ManifestColumn
+ greater mouse-eared bat,,STRING,,ManifestColumn
+ greater pipefish,,STRING,,ManifestColumn
+ greater scaup,,STRING,,ManifestColumn
+ greater white-fronted goose,,STRING,,ManifestColumn
+ green sea turtle,,STRING,,ManifestColumn
+ green-winged teal,,STRING,,ManifestColumn
+ grey crowned crane,,STRING,,ManifestColumn
+ grey gurnard,,STRING,,ManifestColumn
+ grey seal,,STRING,,ManifestColumn
+ greylag goose,,STRING,,ManifestColumn
+ groundhog,,STRING,,ManifestColumn
+ gudgeon,,STRING,,ManifestColumn
+ guinea pig,,STRING,,ManifestColumn
+ gyrfalcon,,STRING,,ManifestColumn
+ hairy woodpecker,,STRING,,ManifestColumn
+ hairy-legged myotis,,STRING,,ManifestColumn
+ hairy-nosed bat,,STRING,,ManifestColumn
+ harbour porpoise,,STRING,,ManifestColumn
+ harpy eagle,,STRING,,ManifestColumn
+ harvest mouse,,STRING,,ManifestColumn
+ hawaiian crow,,STRING,,ManifestColumn
+ hawksbill sea turtle,,STRING,,ManifestColumn
+ hazel dormouse,,STRING,,ManifestColumn
+ heller's broad-nosed bat,,STRING,,ManifestColumn
+ highfin lizardfish,,STRING,,ManifestColumn
+ hispid cotton rat,,STRING,,ManifestColumn
+ honeycomb rockfish,,STRING,,ManifestColumn
+ hooded warbler,,STRING,,ManifestColumn
+ horned lark,,STRING,,ManifestColumn
+ horse,,STRING,,ManifestColumn
+ hourglass treefrog,,STRING,,ManifestColumn
+ house finch,,STRING,,ManifestColumn
+ house mouse,,STRING,,ManifestColumn
+ house sparrow,,STRING,,ManifestColumn
+ house wren,,STRING,,ManifestColumn
+ human,,STRING,,ManifestColumn
+ humboldt penguin,,STRING,,ManifestColumn
+ ibiza wall lizard,,STRING,,ManifestColumn
+ indian glassy fish,,STRING,,ManifestColumn
+ indigo bunting,,STRING,,ManifestColumn
+ indo-pacific tarpon,,STRING,,ManifestColumn
+ intermediate fruit-eating bat,,STRING,,ManifestColumn
+ intermediate roundleaf bat,,STRING,,ManifestColumn
+ italian wall lizard,,STRING,,ManifestColumn
+ jamaican fruit bat,,STRING,,ManifestColumn
+ japanese pufferfish,,STRING,,ManifestColumn
+ jewelled blenny,,STRING,,ManifestColumn
+ john dory,,STRING,,ManifestColumn
+ kagu,,STRING,,ManifestColumn
+ kakapo,,STRING,,ManifestColumn
+ kemp's ridley sea turtle,,STRING,,ManifestColumn
+ killdeer,,STRING,,ManifestColumn
+ kuhl's pipistrelle,,STRING,,ManifestColumn
+ lance-tailed manakin,,STRING,,ManifestColumn
+ lanner falcon,,STRING,,ManifestColumn
+ lanternfish,,STRING,,ManifestColumn
+ large-eye snaggletooth,,STRING,,ManifestColumn
+ largescale foureyes,,STRING,,ManifestColumn
+ lataste's viper,,STRING,,ManifestColumn
+ least weasel,,STRING,,ManifestColumn
+ leatherback sea turtle,,STRING,,ManifestColumn
+ leisler's bat,,STRING,,ManifestColumn
+ lemon sole,,STRING,,ManifestColumn
+ lesser black-backed gull,,STRING,,ManifestColumn
+ lesser egyptian jerboa,,STRING,,ManifestColumn
+ lesser kestrel,,STRING,,ManifestColumn
+ lesser rhea,,STRING,,ManifestColumn
+ lesser sand eel,,STRING,,ManifestColumn
+ lesser weever,,STRING,,ManifestColumn
+ lesser white-fronted goose,,STRING,,ManifestColumn
+ light-bulb sea squirt,,STRING,,ManifestColumn
+ linnaeus's two-toed sloth,,STRING,,ManifestColumn
+ little brown bat,,STRING,,ManifestColumn
+ little owl,,STRING,,ManifestColumn
+ live sharksucker,,STRING,,ManifestColumn
+ loggerhead sea turtle,,STRING,,ManifestColumn
+ long-finned pilot whale,,STRING,,ManifestColumn
+ long-tailed chinchilla,,STRING,,ManifestColumn
+ long-tailed duck,,STRING,,ManifestColumn
+ long-tailed tit,,STRING,,ManifestColumn
+ longfin smelt,,STRING,,ManifestColumn
+ longspined bullhead,,STRING,,ManifestColumn
+ lowland paca,,STRING,,ManifestColumn
+ lumpfish,,STRING,,ManifestColumn
+ maguari stork,,STRING,,ManifestColumn
+ mallard,,STRING,,ManifestColumn
+ maltese wall lizard,,STRING,,ManifestColumn
+ marbled rockcod,,STRING,,ManifestColumn
+ masked duck,,STRING,,ManifestColumn
+ mauritius kestrel,,STRING,,ManifestColumn
+ meadow vole,,STRING,,ManifestColumn
+ merriam's long-tongued bat,,STRING,,ManifestColumn
+ milkfish,,STRING,,ManifestColumn
+ minispotted lanternsfish,,STRING,,ManifestColumn
+ mongolian gerbil,,STRING,,ManifestColumn
+ monito del monte,,STRING,,ManifestColumn
+ mourning dove,,STRING,,ManifestColumn
+ Multi-species,,STRING,,ManifestColumn
+ muskrat,,STRING,,ManifestColumn
+ mute swan,,STRING,,ManifestColumn
+ naked mole-rat,,STRING,,ManifestColumn
+ nathusius's pipistrelle,,STRING,,ManifestColumn
+ natterer's bat,,STRING,,ManifestColumn
+ nelson's sparrow,,STRING,,ManifestColumn
+ new caledonian crow,,STRING,,ManifestColumn
+ nine-banded armadillo,,STRING,,ManifestColumn
+ north american deermouse,,STRING,,ManifestColumn
+ north american porcupine,,STRING,,ManifestColumn
+ north atlantic right whale,,STRING,,ManifestColumn
+ northern bat,,STRING,,ManifestColumn
+ northern bottlenose whale,,STRING,,ManifestColumn
+ northern cardinal,,STRING,,ManifestColumn
+ northern carmine bee-eater,,STRING,,ManifestColumn
+ northern goshawk,,STRING,,ManifestColumn
+ northern mockingbird,,STRING,,ManifestColumn
+ northern mole vole,,STRING,,ManifestColumn
+ northern pike,,STRING,,ManifestColumn
+ northern pintail,,STRING,,ManifestColumn
+ northern short-tailed shrew,,STRING,,ManifestColumn
+ northern shoveler,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
+ Not collected,,STRING,,ManifestColumn
+ Not provided,,STRING,,ManifestColumn
+ Not specified,,STRING,,ManifestColumn
+ olive baboon,,STRING,,ManifestColumn
+ olive python,,STRING,,ManifestColumn
+ orange-tipped sea squirt,,STRING,,ManifestColumn
+ orbiculate cardinalfish,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ painted frog,,STRING,,ManifestColumn
+ pale spear-nosed bat,,STRING,,ManifestColumn
+ pallas's mastiff bat,,STRING,,ManifestColumn
+ palmate newt,,STRING,,ManifestColumn
+ parti-coloured bat,,STRING,,ManifestColumn
+ pearleye,,STRING,,ManifestColumn
+ pencil smelt,,STRING,,ManifestColumn
+ peregrine falcon,,STRING,,ManifestColumn
+ philippine flying lemur,,STRING,,ManifestColumn
+ pine warbler,,STRING,,ManifestColumn
+ pinecone soldierfish,,STRING,,ManifestColumn
+ pink pigeon,,STRING,,ManifestColumn
+ pink-footed goose,,STRING,,ManifestColumn
+ plains spadefoot toad,,STRING,,ManifestColumn
+ platypus,,STRING,,ManifestColumn
+ plumbeous ibis,,STRING,,ManifestColumn
+ pollack,,STRING,,ManifestColumn
+ pool frog,,STRING,,ManifestColumn
+ pygmy fruit-eating bat,,STRING,,ManifestColumn
+ rainbow smelt,,STRING,,ManifestColumn
+ rakery beaconlamp,,STRING,,ManifestColumn
+ razorbill,,STRING,,ManifestColumn
+ red bandfish,,STRING,,ManifestColumn
+ red deer,,STRING,,ManifestColumn
+ red gurnard,,STRING,,ManifestColumn
+ red junglefowl,,STRING,,ManifestColumn
+ red kite,,STRING,,ManifestColumn
+ red porgy,,STRING,,ManifestColumn
+ red-bellied piranha,,STRING,,ManifestColumn
+ red-bellied woodpecker,,STRING,,ManifestColumn
+ red-billed tropicbird,,STRING,,ManifestColumn
+ red-breasted merganser,,STRING,,ManifestColumn
+ red-crested pochard,,STRING,,ManifestColumn
+ red-crested turaco,,STRING,,ManifestColumn
+ red-eyed vireo,,STRING,,ManifestColumn
+ red-fronted tinkerbird,,STRING,,ManifestColumn
+ red-legged seriema,,STRING,,ManifestColumn
+ red-shouldered hawk,,STRING,,ManifestColumn
+ red-tailed hawk,,STRING,,ManifestColumn
+ red-throated loon,,STRING,,ManifestColumn
+ reedfish,,STRING,,ManifestColumn
+ reeves's muntjac,,STRING,,ManifestColumn
+ rhesus macaque,,STRING,,ManifestColumn
+ rifleman,,STRING,,ManifestColumn
+ riggenbach's reed frog,,STRING,,ManifestColumn
+ ring-billed gull,,STRING,,ManifestColumn
+ ring-necked pheasant,,STRING,,ManifestColumn
+ ring-tailed lemur,,STRING,,ManifestColumn
+ risso's dolphin,,STRING,,ManifestColumn
+ rock gunnel,,STRING,,ManifestColumn
+ rock pigeon,,STRING,,ManifestColumn
+ rough lanternfish,,STRING,,ManifestColumn
+ royal ground snake,,STRING,,ManifestColumn
+ ruby-crowned kinglet,,STRING,,ManifestColumn
+ ruby-throated hummingbird,,STRING,,ManifestColumn
+ ruffed grouse,,STRING,,ManifestColumn
+ rufous frog,,STRING,,ManifestColumn
+ saker falcon,,STRING,,ManifestColumn
+ saltmarsh sparrow,,STRING,,ManifestColumn
+ sand lizard,,STRING,,ManifestColumn
+ sandhill crane,,STRING,,ManifestColumn
+ savannah sparrow,,STRING,,ManifestColumn
+ schreibers's bent-winged bat,,STRING,,ManifestColumn
+ sea lamprey,,STRING,,ManifestColumn
+ sei whale,,STRING,,ManifestColumn
+ seychelles magpie-robin,,STRING,,ManifestColumn
+ shanny,,STRING,,ManifestColumn
+ short-beaked echidna,,STRING,,ManifestColumn
+ skyros wall lizard,,STRING,,ManifestColumn
+ small-spotted catshark,,STRING,,ManifestColumn
+ smalltooth sawfish,,STRING,,ManifestColumn
+ smew,,STRING,,ManifestColumn
+ smooth newt,,STRING,,ManifestColumn
+ snow crab,,STRING,,ManifestColumn
+ solenette,,STRING,,ManifestColumn
+ song sparrow,,STRING,,ManifestColumn
+ soprano pipistrelle,,STRING,,ManifestColumn
+ south island takahe,,STRING,,ManifestColumn
+ southern bluefin tuna,,STRING,,ManifestColumn
+ southern corroboree frog,,STRING,,ManifestColumn
+ southern giant pouched rat,,STRING,,ManifestColumn
+ southern tamandua,,STRING,,ManifestColumn
+ sowell's short-tailed bat,,STRING,,ManifestColumn
+ sowerby's beaked whale,,STRING,,ManifestColumn
+ speckled mousebird,,STRING,,ManifestColumn
+ spotted sandpiper,,STRING,,ManifestColumn
+ spotted scat,,STRING,,ManifestColumn
+ spotty,,STRING,,ManifestColumn
+ star-nosed mole,,STRING,,ManifestColumn
+ starry smooth-hound,,STRING,,ManifestColumn
+ sterlet,,STRING,,ManifestColumn
+ stoat,,STRING,,ManifestColumn
+ stone loach,,STRING,,ManifestColumn
+ stoplight loosejaw,,STRING,,ManifestColumn
+ striped aplochiton,,STRING,,ManifestColumn
+ striped catfish,,STRING,,ManifestColumn
+ striped dwarf hamster,,STRING,,ManifestColumn
+ sunda slow loris,,STRING,,ManifestColumn
+ surucua trogon,,STRING,,ManifestColumn
+ swainson's thrush,,STRING,,ManifestColumn
+ swamp sparrow,,STRING,,ManifestColumn
+ swift parrot,,STRING,,ManifestColumn
+ taiga bean goose,,STRING,,ManifestColumn
+ tammar wallaby,,STRING,,ManifestColumn
+ tawny frogmouth,,STRING,,ManifestColumn
+ tawny owl,,STRING,,ManifestColumn
+ thickback sole,,STRING,,ManifestColumn
+ thicklip grey mullet,,STRING,,ManifestColumn
+ thorny skate,,STRING,,ManifestColumn
+ three-bearded rockling,,STRING,,ManifestColumn
+ three-spined stickleback,,STRING,,ManifestColumn
+ tiny cayenne caecilian,,STRING,,ManifestColumn
+ trahira,,STRING,,ManifestColumn
+ transcaucasian mole vole,,STRING,,ManifestColumn
+ tree swallow,,STRING,,ManifestColumn
+ true's beaked whale,,STRING,,ManifestColumn
+ trumpet flake-ascidian,,STRING,,ManifestColumn
+ tub gurnard,,STRING,,ManifestColumn
+ tufted duck,,STRING,,ManifestColumn
+ tufted titmouse,,STRING,,ManifestColumn
+ tundra swan,,STRING,,ManifestColumn
+ tunicate,,STRING,,ManifestColumn
+ two-lined caecilian,,STRING,,ManifestColumn
+ two-spotted clingfish,,STRING,,ManifestColumn
+ tyrrhenian wall lizard,,STRING,,ManifestColumn
+ Unknown,,STRING,,ManifestColumn
+ vaquita,,STRING,,ManifestColumn
+ vaucher's wall lizard,,STRING,,ManifestColumn
+ village indigobird,,STRING,,ManifestColumn
+ warty frogfish,,STRING,,ManifestColumn
+ western gull,,STRING,,ManifestColumn
+ western jackdaw,,STRING,,ManifestColumn
+ western terrestrial garter snake,,STRING,,ManifestColumn
+ whiskered bat,,STRING,,ManifestColumn
+ whiskered treeswift,,STRING,,ManifestColumn
+ white-beaked dolphin,,STRING,,ManifestColumn
+ white-breasted nuthatch,,STRING,,ManifestColumn
+ white-eyed vireo,,STRING,,ManifestColumn
+ white-faced whistling duck,,STRING,,ManifestColumn
+ white-footed mouse,,STRING,,ManifestColumn
+ white-tailed deer,,STRING,,ManifestColumn
+ white-tailed eagle,,STRING,,ManifestColumn
+ white-throated dipper,,STRING,,ManifestColumn
+ white-throated sparrow,,STRING,,ManifestColumn
+ whooper swan,,STRING,,ManifestColumn
+ whooping crane,,STRING,,ManifestColumn
+ wild boar,,STRING,,ManifestColumn
+ wild turkey,,STRING,,ManifestColumn
+ wood duck,,STRING,,ManifestColumn
+ wood mouse,,STRING,,ManifestColumn
+ wood thrush,,STRING,,ManifestColumn
+ yellow warbler,,STRING,,ManifestColumn
+ yellow-bellied toad,,STRING,,ManifestColumn
+ yellow-breasted chat,,STRING,,ManifestColumn
+ yellow-legged gull,,STRING,,ManifestColumn
+ yellow-rumped warbler,,STRING,,ManifestColumn
+ yellow-spotted rock hyrax,,STRING,,ManifestColumn
+ yellow-throated sandgrouse,,STRING,,ManifestColumn
+ yellow-throated warbler,,STRING,,ManifestColumn
+ yellowfin tuna,,STRING,,ManifestColumn
+ zebra finch,,STRING,,ManifestColumn
+ zebrafish,,STRING,,ManifestColumn
+ zig-zag eel,,STRING,,ManifestColumn
