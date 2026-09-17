@@ -3235,16 +3235,16 @@
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
-                    "@id": "bts:License"
+                    "@id": "bts:DataLicense"
                 }
             ],
             "sms:validationRules": []
         },
         {
-            "@id": "bts:License",
+            "@id": "bts:DataLicense",
             "@type": "rdfs:Class",
-            "rdfs:comment": "License attached to the data. If indicates UNKNOWN or RESTRICTED-USE. Data may not be used without further contact for terms.",
-            "rdfs:label": "License",
+            "rdfs:comment": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
+            "rdfs:label": "DataLicense",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:Thing"
@@ -3255,146 +3255,41 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bts:CCBY-NC"
+                    "@id": "bts:Apache2.0"
                 },
                 {
-                    "@id": "bts:CCBY-NC4.0"
+                    "@id": "bts:BSD3Clause"
                 },
                 {
-                    "@id": "bts:CCBY-NC3.0"
+                    "@id": "bts:CC0"
                 },
                 {
-                    "@id": "bts:CCBY-NC2.5"
+                    "@id": "bts:CCBY"
                 },
                 {
-                    "@id": "bts:CCBY-NC2.0"
+                    "@id": "bts:CCBYNC"
                 },
                 {
-                    "@id": "bts:CCBY-NC1.0"
+                    "@id": "bts:CCBYNCND"
                 },
                 {
-                    "@id": "bts:CCBY-NC-ND"
+                    "@id": "bts:CCBYNCSA"
                 },
                 {
-                    "@id": "bts:CCBY-NC-ND4.0"
+                    "@id": "bts:CCBYND"
                 },
                 {
-                    "@id": "bts:CCBY-NC-ND3.0"
+                    "@id": "bts:CCBYSA"
                 },
                 {
-                    "@id": "bts:CCBY-NC-ND2.5"
+                    "@id": "bts:GPL3.0"
                 },
                 {
-                    "@id": "bts:CCBY-NC-ND2.0"
-                },
-                {
-                    "@id": "bts:CCBY-NC-ND1.0"
-                },
-                {
-                    "@id": "bts:CCBY-NC-SA"
-                },
-                {
-                    "@id": "bts:CCBY-NC-SA4.0"
-                },
-                {
-                    "@id": "bts:CCBY-NC-SA3.0"
-                },
-                {
-                    "@id": "bts:CCBY-NC-SA2.5"
-                },
-                {
-                    "@id": "bts:CCBY-NC-SA2.0"
-                },
-                {
-                    "@id": "bts:CCBY-NC-SA1.0"
-                },
-                {
-                    "@id": "bts:CCBY-ND"
-                },
-                {
-                    "@id": "bts:CCBY-ND4.0"
-                },
-                {
-                    "@id": "bts:CCBY-ND3.0"
-                },
-                {
-                    "@id": "bts:CCBY-ND2.5"
-                },
-                {
-                    "@id": "bts:CCBY-ND2.0"
-                },
-                {
-                    "@id": "bts:CCBY-ND1.0"
-                },
-                {
-                    "@id": "bts:CCBY-SA"
-                },
-                {
-                    "@id": "bts:CCBY-SA4.0"
-                },
-                {
-                    "@id": "bts:CCBY-SA3.0"
-                },
-                {
-                    "@id": "bts:CCBY-SA2.5"
-                },
-                {
-                    "@id": "bts:CCBY-SA2.0"
-                },
-                {
-                    "@id": "bts:CCBY-SA1.0"
-                },
-                {
-                    "@id": "bts:CC-0"
-                },
-                {
-                    "@id": "bts:CC01.0"
-                },
-                {
-                    "@id": "bts:CC-BY"
-                },
-                {
-                    "@id": "bts:CC-BY4.0"
-                },
-                {
-                    "@id": "bts:CC-BY3.0"
-                },
-                {
-                    "@id": "bts:CC-BY2.5"
-                },
-                {
-                    "@id": "bts:CC-BY2.0"
-                },
-                {
-                    "@id": "bts:CC-BY1.0"
-                },
-                {
-                    "@id": "bts:ODC-BY"
-                },
-                {
-                    "@id": "bts:ODC-BY1.0"
-                },
-                {
-                    "@id": "bts:ODC-ODbL"
-                },
-                {
-                    "@id": "bts:ODC-ODbL1.0"
-                },
-                {
-                    "@id": "bts:ODC-PDDL"
-                },
-                {
-                    "@id": "bts:ODC-PDDL1.0"
-                },
-                {
-                    "@id": "bts:PublicDomain"
-                },
-                {
-                    "@id": "bts:UNKNOWN"
+                    "@id": "bts:MIT"
                 }
             ],
-            "sms:displayName": "license",
-            "sms:required": "sms:true",
+            "sms:displayName": "dataLicense",
+            "sms:required": "sms:false",
             "sms:validationRules": []
         },
         {
@@ -4518,58 +4413,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "DUO:0000026",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:DataLicense",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "The license under which the data associated with the access requirement is shared. Equivalent to DUOPlus6.",
-            "rdfs:label": "DataLicense",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Thing"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:Apache2.0"
-                },
-                {
-                    "@id": "bts:BSD3Clause"
-                },
-                {
-                    "@id": "bts:CC0"
-                },
-                {
-                    "@id": "bts:CCBY"
-                },
-                {
-                    "@id": "bts:CCBYNC"
-                },
-                {
-                    "@id": "bts:CCBYNCND"
-                },
-                {
-                    "@id": "bts:CCBYNCSA"
-                },
-                {
-                    "@id": "bts:CCBYND"
-                },
-                {
-                    "@id": "bts:CCBYSA"
-                },
-                {
-                    "@id": "bts:GPL3.0"
-                },
-                {
-                    "@id": "bts:MIT"
-                }
-            ],
-            "sms:displayName": "dataLicense",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -47759,6 +47602,163 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "keywords",
+            "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:License",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "License attached to the data. If indicates UNKNOWN or RESTRICTED-USE. Data may not be used without further contact for terms.",
+            "rdfs:label": "License",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bts:CCBY-NC"
+                },
+                {
+                    "@id": "bts:CCBY-NC4.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC3.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC2.5"
+                },
+                {
+                    "@id": "bts:CCBY-NC2.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC1.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-ND"
+                },
+                {
+                    "@id": "bts:CCBY-NC-ND4.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-ND3.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-ND2.5"
+                },
+                {
+                    "@id": "bts:CCBY-NC-ND2.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-ND1.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-SA"
+                },
+                {
+                    "@id": "bts:CCBY-NC-SA4.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-SA3.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-SA2.5"
+                },
+                {
+                    "@id": "bts:CCBY-NC-SA2.0"
+                },
+                {
+                    "@id": "bts:CCBY-NC-SA1.0"
+                },
+                {
+                    "@id": "bts:CCBY-ND"
+                },
+                {
+                    "@id": "bts:CCBY-ND4.0"
+                },
+                {
+                    "@id": "bts:CCBY-ND3.0"
+                },
+                {
+                    "@id": "bts:CCBY-ND2.5"
+                },
+                {
+                    "@id": "bts:CCBY-ND2.0"
+                },
+                {
+                    "@id": "bts:CCBY-ND1.0"
+                },
+                {
+                    "@id": "bts:CCBY-SA"
+                },
+                {
+                    "@id": "bts:CCBY-SA4.0"
+                },
+                {
+                    "@id": "bts:CCBY-SA3.0"
+                },
+                {
+                    "@id": "bts:CCBY-SA2.5"
+                },
+                {
+                    "@id": "bts:CCBY-SA2.0"
+                },
+                {
+                    "@id": "bts:CCBY-SA1.0"
+                },
+                {
+                    "@id": "bts:CC-0"
+                },
+                {
+                    "@id": "bts:CC01.0"
+                },
+                {
+                    "@id": "bts:CC-BY"
+                },
+                {
+                    "@id": "bts:CC-BY4.0"
+                },
+                {
+                    "@id": "bts:CC-BY3.0"
+                },
+                {
+                    "@id": "bts:CC-BY2.5"
+                },
+                {
+                    "@id": "bts:CC-BY2.0"
+                },
+                {
+                    "@id": "bts:CC-BY1.0"
+                },
+                {
+                    "@id": "bts:ODC-BY"
+                },
+                {
+                    "@id": "bts:ODC-BY1.0"
+                },
+                {
+                    "@id": "bts:ODC-ODbL"
+                },
+                {
+                    "@id": "bts:ODC-ODbL1.0"
+                },
+                {
+                    "@id": "bts:ODC-PDDL"
+                },
+                {
+                    "@id": "bts:ODC-PDDL1.0"
+                },
+                {
+                    "@id": "bts:PublicDomain"
+                },
+                {
+                    "@id": "bts:UNKNOWN"
+                }
+            ],
+            "sms:displayName": "license",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
