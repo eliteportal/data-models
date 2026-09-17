@@ -6,7 +6,7 @@ ackContext,,,STRING,,Unknown
 acknowledgment,,,STRING,,Unknown
 acquistionSoftwareVersion,,,STRING,,Unknown
 batchSizeUnit,,,STRING,,Unknown
-contributor,,,STRING,,Unknown
+contributor,,,STRING_LIST,,Unknown
 dataStatus,Indicates whether a study is pending data release (Not available) or is released (Available).,"Not Available, Available",STRING,,Unknown
 displayName,Canonical tool name provided by the tool developer or service provider,,STRING,,Unknown
 documentation,,,STRING,,Unknown

@@ -1,7 +1,7 @@
 Attribute,Description,Required,columnType,DependsOn,Source,Parent,Valid Values
 program,,True,STRING,,Sage Bionetworks,ManifestColumn,"ELITE,AD"
 resourceType,The type of resource being stored and annotated,True,STRING,,Sage Bionetworks,ManifestColumn,"experimentalData,metadata,tool,analysis,computationalNotebook,softwareTool,Not assigned"
-contributor,,True,STRING,,Sage Bionetworks,,
+contributor,,True,STRING_LIST,,Sage Bionetworks,,
 displayName,Canonical tool name provided by the tool developer or service provider,True,STRING,,Sage Bionetworks,,
 documentation,,True,STRING,,Sage Bionetworks,,
 grants,"Grant number associated with the tool's development. Multiple values permitted, comma separated.",True,STRING,,Sage Bionetworks,,
