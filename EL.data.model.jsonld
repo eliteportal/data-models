@@ -4670,9 +4670,6 @@
                     "@id": "bts:DeidentificationType"
                 },
                 {
-                    "@id": "bts:StudyCode"
-                },
-                {
                     "@id": "bts:Sex"
                 },
                 {
@@ -7852,9 +7849,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ProjectShortName"
-                },
-                {
-                    "@id": "bts:StudyCode"
                 },
                 {
                     "@id": "bts:Project"
@@ -27505,9 +27499,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ProjectShortName"
-                },
-                {
-                    "@id": "bts:StudyCode"
                 }
             ],
             "schema:isPartOf": {
@@ -27525,9 +27516,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ProjectShortName"
-                },
-                {
-                    "@id": "bts:StudyCode"
                 },
                 {
                     "@id": "bts:Project"
@@ -27548,9 +27536,6 @@
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:ProjectShortName"
-                },
-                {
-                    "@id": "bts:StudyCode"
                 },
                 {
                     "@id": "bts:Project"
@@ -40382,7 +40367,7 @@
         {
             "@id": "bts:StudyCode",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Unique identifier for the study, assigned by the DCC",
+            "rdfs:comment": "Deprecated attribute - see studyKey",
             "rdfs:label": "StudyCode",
             "rdfs:subClassOf": [
                 {
@@ -40392,44 +40377,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bts:CDCP"
-                },
-                {
-                    "@id": "bts:ILO"
-                },
-                {
-                    "@id": "bts:LC"
-                },
-                {
-                    "@id": "bts:LG"
-                },
-                {
-                    "@id": "bts:LLFS"
-                },
-                {
-                    "@id": "bts:Other"
-                }
-            ],
             "sms:displayName": "studyCode",
-            "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:CDCP",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "CDCP",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:StudyCode"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "CDCP",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
@@ -55950,7 +55898,7 @@
                     "@id": "bts:Cohort"
                 },
                 {
-                    "@id": "bts:StudyCode"
+                    "@id": "bts:StudyKey"
                 },
                 {
                     "@id": "bts:FieldCenterCode"
@@ -56032,7 +55980,7 @@
                     "@id": "bts:IndividualID"
                 },
                 {
-                    "@id": "bts:StudyCode"
+                    "@id": "bts:StudyKey"
                 },
                 {
                     "@id": "bts:Taxon"
