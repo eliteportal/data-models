@@ -5,7 +5,7 @@ diagnosisStatus,"Whether the individual has been diagnosed with a condition or d
 ethnicGroupCode,"A coded value specifying the self-declared ethnic origination independent of racial origination, provided by the data contributor's data dictionary",False,STRING,,,ManifestColumn,
 fieldCenterCode,Name of the field center,True,STRING,,,ManifestColumn,
 speciesGroup,The taxonomic ranking including both species and subspecies the individual belongs to.,True,STRING,,,ManifestColumn,"Amphibian,Bird,Fish,Invertebrate,Mammal,Not applicable,Not collected,Not specified,Reptile,Unknown"
-studyCode,"Unique identifier for the study, assigned by the DCC",True,STRING,,,ManifestColumn,"CDCP,ILO,LC,LG,LLFS,Other"
+studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),True,STRING,,Sage Bionetworks,ManifestColumn,
 visitCode,"Indicate which longitudinal visit for the individual the data comes from, provided by the data contributor's data dictionary",True,NUMBER,,,ManifestColumn,
 Component,,False,STRING,,,,
 Filename,,False,STRING,,,,

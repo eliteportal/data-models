@@ -159,7 +159,7 @@ specimenSource,Indicate the biological area of the specimen,STRING,,ManifestColu
 specimenType,Type of biological material sample taken from a biological entity for research purposes,STRING_LIST,,ManifestColumn
 stage,Stage of the experimental design.,STRING,,ManifestColumn
 statisticalModel,"A brief description of the statistical model used to determine association significance. It is important to distinguish studies that would otherwise appear identical (e.g., the same trait analyzed using additive, dominant, and recessive models). Example - additive model",STRING,,ManifestColumn
-studyCode,"Unique identifier for the study, assigned by the DCC",STRING,,ManifestColumn
+studyCode,Deprecated attribute - see studyKey,STRING,,ManifestColumn
 studyKey,The short acronym for a study name in a URL-friendly format (ex. LLFS_Metabolomics OR ELPSCRNA),STRING,Sage Bionetworks,ManifestColumn
 summaryFile,The name of any summary statistics file uploaded to Synapse. Example - example.tsv,STRING,,ManifestColumn
 summaryStatisticsAssembly,Genome assembly for the summary statistics. Example - GRCh38,STRING,,ManifestColumn
