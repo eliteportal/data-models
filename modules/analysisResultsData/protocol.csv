@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+protocol,A resolvable URL or Synapse ID for the instructions or protocol used to perform the analysis.,,,,FALSE,ManifestColumn,,ManifestColumn,https://w3id.org/reproduceme#Protocol, analysisResults,FALSE,STRING,REPRODUCE-ME,,analysis_results_metadata_template
