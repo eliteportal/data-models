@@ -9,7 +9,7 @@ title: isModelSystem
 {: .note-title } 
 >isModelSystem
 >
->nan [[Source]](Sage Bionetworks)
+>Boolean flag indicating whether or not a file has data from a model system [[Source]](Sage Bionetworks)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

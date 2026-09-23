@@ -1,5 +1,5 @@
 Key,Key Description,Valid Values,columnType,Parent,module
-ethnicity,Ethnicity of individual,"Hispanic or Latino,Not Hispanic or Latino,Prefer not to answer,Not Applicable",STRING,ManifestColumn,demographics
+ethnicity,Ethnicity of individual,"Hispanic or Latino,Not Hispanic or Latino,Not applicable,Not collected,Other ethnicity,Prefer not to answer,Unknown",STRING,ManifestColumn,demographics
 familyStudyParticipant,Indicates whether or not a file has data from a human participant involved in a family study (ex. LLFS),"Yes, No, Not Assigned",STRING,ManifestColumn,demographics
-race,Race of individual,"American Indian or Alaska Native,Asian,Black or African American,Multiracial,Native Hawaiian or Pacific Islander,Prefer not to answer,White",STRING,ManifestColumn,demographics
+race,Race of individual,"American Indian or Alaska Native,Ashkenazi Jewish,Asian,Black or African American,Multiracial,Native Hawaiian or Pacific Islander,Not collected,Not applicable,Other race,Prefer not to answer,Unknown,White",STRING,ManifestColumn,demographics
 sex,The biological sex of the individual,"Female,Male,Not applicable,Not collected,Not specified,Other,Unknown",STRING,ManifestColumn,demographics

@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+datasetType,"The classification of a dataset based on its role, scope, or purpose within a study.","experimental, publication",,,TRUE,,,dataset,SageBionetworks,dataset,FALSE,STRING,Sage Bionetworks,,dataset_template

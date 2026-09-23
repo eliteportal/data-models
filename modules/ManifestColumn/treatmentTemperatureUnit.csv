@@ -1,2 +1,2 @@
 Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
-treatmentTemperatureUnit,Unit of treatment temperature.,"C,F,K,Not specified",,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"Sage Bionetworks, ImmPort", ,Genotyping_Human
+treatmentTemperatureUnit,Unit of treatment temperature.,"C,F,K,Not specified",,,False,ManifestColumn,,ManifestColumn,,ManifestColumn,False,STRING,"Sage Bionetworks, ImmPort", ,"Genotyping_Human,assay_genotyping_annotation_template"

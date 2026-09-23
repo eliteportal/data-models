@@ -1,0 +1,4 @@
+Key,Key Description,columnType,Source,Parent
+Controlled,,STRING,,
+ Registered,,STRING,,
+ Open,,STRING,,

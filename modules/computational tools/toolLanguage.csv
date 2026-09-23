@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+toolLanguage,"Name of programming language the software source code was written in. Multiple values permitted, comma separated",,,,FALSE,,,computational tools,biotoolsschema,computational tools,,STRING,biotoolsschema,,computational_tools_template

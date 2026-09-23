@@ -1,0 +1,20 @@
+Key,Key Description,columnType,Source,Parent
+clinical,,STRING_LIST,,ManifestColumn
+drugScreen,,STRING_LIST,,ManifestColumn
+electrophysiology,,STRING_LIST,,ManifestColumn
+epigenetics,,STRING_LIST,,ManifestColumn
+geneExpression,,STRING_LIST,,ManifestColumn
+genomeAssembly,,STRING_LIST,,ManifestColumn
+genomicVariants,,STRING_LIST,,ManifestColumn
+imaging,,STRING_LIST,,ManifestColumn
+lipidomics,,STRING_LIST,,ManifestColumn
+metabolomics,,STRING_LIST,,ManifestColumn
+metagenomics,,STRING_LIST,,ManifestColumn
+Not applicable,,STRING_LIST,,ManifestColumn
+Not collected,,STRING_LIST,,ManifestColumn
+Not specified,,STRING_LIST,,ManifestColumn
+Other,,STRING_LIST,,ManifestColumn
+phenotype,,STRING_LIST,,ManifestColumn
+proteomics,,STRING_LIST,,ManifestColumn
+Unknown,,STRING_LIST,,ManifestColumn
+wearableData,,STRING_LIST,,ManifestColumn

@@ -9,7 +9,7 @@ title: specimenType
 {: .note-title } 
 >specimenType
 >
->Type of biological material comprising the Specimen [[Source]](nan)
+>Type of biological material sample taken from a biological entity for research purposes [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

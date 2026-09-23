@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+summary,"Textual description of the tool",,,,TRUE,,,Unknown,Sage Bionetworks,Unknown,FALSE,STRING,Sage Bionetworks,,computational_tools_template

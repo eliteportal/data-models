@@ -1,0 +1,5 @@
+Key,Key Description,columnType,Source,Parent
+Anonymous,,STRING_LIST,,
+ Open,,STRING_LIST,,
+ Controlled,,STRING_LIST,,
+ Private,,STRING_LIST,,

@@ -9,7 +9,7 @@ title: organ
 {: .note-title } 
 >organ
 >
->Indicate the organ the specimen is from [[Source]](sage.annotations-experimentalData.organ-0.0.4)
+>Indicate the organ the specimen is from. An organ is a unique macroscopic (gross) anatomic structure that performs specific functions. It is composed of various tissues. [[Source]](sage.annotations-experimentalData.organ-0.0.4)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

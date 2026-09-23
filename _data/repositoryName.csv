@@ -6,8 +6,9 @@ ENA,,STRING,,ManifestColumn
 Ensembl,,STRING,,ManifestColumn
 FlowRepository,,STRING,,ManifestColumn
 GenBank,,STRING,,ManifestColumn
-GENCODEv38 GRCh38,,STRING,,ManifestColumn
- GEO,,STRING,,ManifestColumn
+GENCODEv38,,STRING,,ManifestColumn
+GRCh38,,STRING,,ManifestColumn
+GEO,,STRING,,ManifestColumn
 GISAID,,STRING,,ManifestColumn
 IEDB,,STRING,,ManifestColumn
 ImmPort,,STRING,,ManifestColumn
@@ -18,4 +19,10 @@ MGnify,,STRING,,ManifestColumn
 NCBI Gene,,STRING,,ManifestColumn
 PRIDE,,STRING,,ManifestColumn
 SRA,,STRING,,ManifestColumn
+Synapse,,STRING,,ManifestColumn
 UniProt,,STRING,,ManifestColumn
+Other,,STRING,,ManifestColumn
+Unknown,,STRING,,ManifestColumn
+Not collected,,STRING,,ManifestColumn
+Not applicable,,STRING,,ManifestColumn
+Not specified,,STRING,,ManifestColumn
