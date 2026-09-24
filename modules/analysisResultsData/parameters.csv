@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+parameters,A resolvable URL or Synapse ID for the parameters used to configure the analysis.,,,,FALSE,ManifestColumn,,ManifestColumn,https://w3id.org/reproduceme#Parameter, analysisResults,FALSE,STRING,REPRODUCE-ME,,analysis_results_metadata_template
