@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+entityType,The type of entity that is the subject of the analysis or result.,"experimental material, file, image, result, analysis, collection, instrument, plan, setting, Other, Not applicable",,,FALSE,ManifestColumn,,ManifestColumn,https://www.w3.org/TR/prov-o/,analysisResults,FALSE,STRING,PROV-O,Renamed from entity because the controlled values describe entity types.,analysis_results_metadata_template

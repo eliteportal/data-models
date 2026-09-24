@@ -1,0 +1,2 @@
+Attribute,Description,Valid Values,DependsOn,DependsOn Component,Required,Parent,Validation Rules,Properties,Source,module,multivalue,columnType,Ontology,Notes,UsedIn
+script,A resolvable URL or Synapse ID for a script used to perform the analysis.,,,,FALSE,ManifestColumn,,ManifestColumn,https://w3id.org/reproduceme#Script,analysisResults,FALSE,STRING,REPRODUCE-ME,,analysis_results_metadata_template
