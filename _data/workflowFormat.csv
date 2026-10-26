@@ -1,0 +1,16 @@
+Key,Key Description,columnType,Source,Parent
+CWL,,STRING,,ManifestColumn
+ gxformat2,,STRING,,ManifestColumn
+ KNIME datatable format,,STRING,,ManifestColumn
+ MATLAB script,,STRING,,ManifestColumn
+ Perl script,,STRING,,ManifestColumn
+ Python script,,STRING,,ManifestColumn
+ R Markdown,,STRING,,ManifestColumn
+ R script,,STRING,,ManifestColumn
+ Taverna workflow format,,STRING,,ManifestColumn
+ Quarto,,STRING,,ManifestColumn
+ Snakemake,,STRING,,ManifestColumn
+ Nextflow,,STRING,,ManifestColumn
+ Bash script,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn

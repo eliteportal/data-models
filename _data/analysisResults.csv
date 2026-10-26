@@ -1,0 +1,12 @@
+Key,Key Description,Valid Values,columnType,Parent,module
+hasAlgorithm,Whether an algorithm resource is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasEnvironment,Whether computational-environment information is supplied.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasLibrary,Whether a software-library or package resource is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasNotebook,Whether a computational notebook is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasOperatingSystem,Whether operating-system information is supplied.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasParameters,Whether analysis parameters are supplied.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasProgrammingLanguage,Whether programming-language information is supplied.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasProtocol,Whether a protocol resource is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasScript,Whether a script resource is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasSettings,Whether settings information is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults
+hasSoftware,Whether software information is supplied for the analysis.,"FALSE, TRUE",BOOLEAN,ManifestColumn,analysisResults

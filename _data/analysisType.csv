@@ -1,13 +1,26 @@
 Key,Key Description,columnType,Source,Parent
 ANOVA,,STRING,,ManifestColumn
-batch effect correction,,STRING,,ManifestColumn
-clustering,,STRING,,ManifestColumn
-data normalization,,STRING,,ManifestColumn
-de-novo assembly,,STRING,,ManifestColumn
-dose response study,,STRING,,ManifestColumn
-enrichment analysis,,STRING,,ManifestColumn
-genome-wide association,,STRING,,ManifestColumn
-mendelian randomization analysis,,STRING,,ManifestColumn
-network analysis,,STRING,,ManifestColumn
-polygenic risk scores,,STRING,,ManifestColumn
+ batch effect correction,,STRING,,ManifestColumn
+ clustering,,STRING,,ManifestColumn
+ data normalization,,STRING,,ManifestColumn
+ de-novo assembly,,STRING,,ManifestColumn
+ dose response study,,STRING,,ManifestColumn
+ enrichment analysis,,STRING,,ManifestColumn
+ genome-wide association,,STRING,,ManifestColumn
+ mendelian randomization analysis,,STRING,,ManifestColumn
+ network analysis,,STRING,,ManifestColumn
+ polygenic risk scores,,STRING,,ManifestColumn
  Not assigned,,STRING,,ManifestColumn
+ expression analysis,,STRING,,ManifestColumn
+ genetic variation analysis,,STRING,,ManifestColumn
+ image analysis,,STRING,,ManifestColumn
+ pathway analysis,,STRING,,ManifestColumn
+ phylogenetic analysis,,STRING,,ManifestColumn
+ protein function analysis,,STRING,,ManifestColumn
+ sequence analysis,,STRING,,ManifestColumn
+ spectral analysis,,STRING,,ManifestColumn
+ structure analysis,,STRING,,ManifestColumn
+ text mining,,STRING,,ManifestColumn
+ transmembrane protein analysis,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn

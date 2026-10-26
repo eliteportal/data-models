@@ -1,0 +1,63 @@
+Key,Key Description,columnType,Source,Parent
+Alignment format,,STRING,,ManifestColumn
+ Annotated text format,,STRING,,ManifestColumn
+ Article format,,STRING,,ManifestColumn
+ Bibliographic reference format,,STRING,,ManifestColumn
+ Biodiversity data format,,STRING,,ManifestColumn
+ Biological pathway or network format,,STRING,,ManifestColumn
+ Biological pathway or network report format,,STRING,,ManifestColumn
+ Chemical data format,,STRING,,ManifestColumn
+ Data index format,,STRING,,ManifestColumn
+ Database hits (sequence) format,,STRING,,ManifestColumn
+ Dirichlet distribution format,,STRING,,ManifestColumn
+ Document format,,STRING,,ManifestColumn
+ Enzyme kinetics report format,,STRING,,ManifestColumn
+ Experiment annotation format,,STRING,,ManifestColumn
+ FF parameter format,,STRING,,ManifestColumn
+ Gene annotation format,,STRING,,ManifestColumn
+ Gene expression report format,,STRING,,ManifestColumn
+ Graph format,,STRING,,ManifestColumn
+ HMM emission and transition counts format,,STRING,,ManifestColumn
+ Image format,,STRING,,ManifestColumn
+ Individual genetic data format,,STRING,,ManifestColumn
+ Linked data format,,STRING,,ManifestColumn
+ Map format,,STRING,,ManifestColumn
+ Mass spectrometry data format,,STRING,,ManifestColumn
+ Matrix format,,STRING,,ManifestColumn
+ NLP format,,STRING,,ManifestColumn
+ NMR data format,,STRING,,ManifestColumn
+ Nucleic acid features (primers) format,,STRING,,ManifestColumn
+ Nucleic acid features (restriction sites) format,,STRING,,ManifestColumn
+ Ontology format,,STRING,,ManifestColumn
+ Phylogenetic character data format,,STRING,,ManifestColumn
+ Phylogenetic tree format,,STRING,,ManifestColumn
+ Phylogenetic tree report (tree distances) format,,STRING,,ManifestColumn
+ Protein domain classification format,,STRING,,ManifestColumn
+ Protein family report format,,STRING,,ManifestColumn
+ Protein interaction format,,STRING,,ManifestColumn
+ Protein report format,,STRING,,ManifestColumn
+ Protein secondary structure format,,STRING,,ManifestColumn
+ Protein structure report (quality evaluation) format,,STRING,,ManifestColumn
+ Query language,,STRING,,ManifestColumn
+ Raw microarray data format,,STRING,,ManifestColumn
+ Raw sequence data format,,STRING,,ManifestColumn
+ RNA annotation format,,STRING,,ManifestColumn
+ RNA secondary structure format,,STRING,,ManifestColumn
+ Sequence assembly format,,STRING,,ManifestColumn
+ Sequence cluster format,,STRING,,ManifestColumn
+ Sequence distance matrix format,,STRING,,ManifestColumn
+ Sequence feature annotation format,,STRING,,ManifestColumn
+ Sequence features (repeats) format,,STRING,,ManifestColumn
+ Sequence motif format,,STRING,,ManifestColumn
+ Sequence profile format,,STRING,,ManifestColumn
+ Sequence quality report format (text),,STRING,,ManifestColumn
+ Sequence range format,,STRING,,ManifestColumn
+ Sequence record format,,STRING,,ManifestColumn
+ Sequence variation annotation format,,STRING,,ManifestColumn
+ Sequence-profile alignment format,,STRING,,ManifestColumn
+ Tertiary structure format,,STRING,,ManifestColumn
+ Text mining report format,,STRING,,ManifestColumn
+ Topology format,,STRING,,ManifestColumn
+ Trajectory format,,STRING,,ManifestColumn
+ Workflow format,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn

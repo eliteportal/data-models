@@ -1,0 +1,12 @@
+Key,Key Description,columnType,Source,Parent
+Final Result,,STRING,,ManifestColumn
+ Intermediate Result,,STRING,,ManifestColumn
+ Negative Result,,STRING,,ManifestColumn
+ Positive Result,,STRING,,ManifestColumn
+ Available,,STRING,,ManifestColumn
+ Not available,,STRING,,ManifestColumn
+ Tabular,,STRING,,ManifestColumn
+ Graphical,,STRING,,ManifestColumn
+ Descriptive/summary statistics,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn

@@ -1,5 +1,20 @@
 Key,Key Description,columnType,Source,module
-analysis_results_metadata_template,Template for analysis and results,,Sage Bionetworks, template
+algorithm,A resolvable URL or Synapse ID for the algorithm or set of rules used by the analysis.,STRING,https://w3id.org/reproduceme#Algorithm, analysisResults
+dataFormat,The semantic format category of the represented data.,STRING,http://edamontology.org/, analysisResults
+entityType,The type of entity that is the subject of the analysis or result.,STRING,https://www.w3.org/TR/prov-o/, analysisResults
+environment,A resolvable URL or Synapse ID for instructions or a definition used to create the computational environment.,STRING,https://w3id.org/reproduceme#EnvironmentSetup, analysisResults
+experimentalDesign,The design of an experiment intended to test a hypothesis or describe empirical data obtained under defined conditions.,STRING,http://edamontology.org/, analysisResults
+library,"A resolvable URL, Synapse ID, or name and version of a software library used by the analysis.",STRING,https://w3id.org/reproduceme#Library, analysisResults
+notebook,A resolvable URL or Synapse ID for a computational notebook used by the analysis.,STRING,https://w3id.org/reproduceme#Notebook, analysisResults
+operatingSystem,The name and version of the operating system used to run the analysis.,STRING,https://w3id.org/reproduceme#OperatingSystem, analysisResults
+parameters,A resolvable URL or Synapse ID for the parameters used to configure the analysis.,STRING,https://w3id.org/reproduceme#Parameter, analysisResults
+programmingLanguage,The name and version of the programming language used to implement or run the analysis.,STRING,https://w3id.org/reproduceme#ProgrammingLanguage, analysisResults
+protocol,A resolvable URL or Synapse ID for the instructions or protocol used to perform the analysis.,STRING,https://w3id.org/reproduceme#Protocol, analysisResults
+resultType,The category or presentation type of the reported result.,STRING,http://edamontology.org/, analysisResults
+script,A resolvable URL or Synapse ID for a script used to perform the analysis.,STRING,https://w3id.org/reproduceme#Script, analysisResults
+settings,A resolvable URL or Synapse ID for the settings under which the analysis was performed.,STRING,https://w3id.org/reproduceme#Setting, analysisResults
+software,The name and version of software used to perform the analysis.,STRING,https://w3id.org/reproduceme#Software, analysisResults
+workflowFormat,The format or workflow language used to represent the computational workflow.,STRING,http://edamontology.org/format_2032, analysisResults
 ModelSystemType,Type of model system,BOOLEAN,Sage Bionetworks,ADKP
 isModelSystem,Boolean flag indicating whether or not a file has data from a model system,BOOLEAN,Sage Bionetworks,ADKP
 COL,This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s).,STRING,,DUO
@@ -221,6 +236,17 @@ studyName,,STRING,,Unknown
 studyType,,STRING,,Unknown
 studyWiki,,STRING,,Unknown
 summary,Textual description of the tool,STRING,Sage Bionetworks,Unknown
+hasAlgorithm,Whether an algorithm resource is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
+hasEnvironment,Whether computational-environment information is supplied.,BOOLEAN,Sage Bionetworks,analysisResults
+hasLibrary,Whether a software-library or package resource is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
+hasNotebook,Whether a computational notebook is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
+hasOperatingSystem,Whether operating-system information is supplied.,BOOLEAN,Sage Bionetworks,analysisResults
+hasParameters,Whether analysis parameters are supplied.,BOOLEAN,Sage Bionetworks,analysisResults
+hasProgrammingLanguage,Whether programming-language information is supplied.,BOOLEAN,Sage Bionetworks,analysisResults
+hasProtocol,Whether a protocol resource is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
+hasScript,Whether a script resource is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
+hasSettings,Whether settings information is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
+hasSoftware,Whether software information is supplied for the analysis.,BOOLEAN,Sage Bionetworks,analysisResults
 batchSize,The number of samples,NUMBER,sage.annotations-experimentalData.batchSize-0.0.2,batch
 cellType,Indicate the cell type.,STRING,sage.annotations-experimentalData.cellType-0.0.9,biospecimen
 fastingState,Was individual fasting when the sample was taken (true/false)?,STRING,sage.annotations-experimentalData.fastingState-0.0.2,biospecimen
@@ -314,6 +340,7 @@ readStrandOrigin,The strand from which the read originates in a strand-specific 
 runType,The type of run,STRING,sage.annotations-ngs.runType-0.0.2,sequencing
 totalReads,Total number of sequencing reads from a library.,STRING,sage.annotations-experimentalData.totalReads-0.0.2,sequencing
 DUO_template, Template for annotating folders with DUO terms,,Sage Bionetworks,template
+analysis_results_metadata_template,Template for analysis and results,,Sage Bionetworks,template
 assay_RNAseq_annotation_template,Template for file-based RNAseq,,Sage Bionetworks,template
 assay_RNAseq_template,Template for RNAseq,,Sage Bionetworks,template
 assay_bsSeq_annotation_template,Template for file-based bsSeq annotations,,Sage Bionetworks,template

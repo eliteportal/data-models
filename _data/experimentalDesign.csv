@@ -1,0 +1,7 @@
+Key,Key Description,columnType,Source,Parent
+Animal study,,STRING,,ManifestColumn
+ GWAS study,,STRING,,ManifestColumn
+ Preclinical study,,STRING,,ManifestColumn
+ Clinical study,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn

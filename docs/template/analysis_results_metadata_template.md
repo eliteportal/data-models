@@ -1,7 +1,7 @@
 ---
 datatable: true
 layout: page
-parent: ' template'
+parent: template
 title: analysis results metadata template
 ---
 

@@ -1,0 +1,12 @@
+Key,Key Description,columnType,Source,Parent
+experimental material,,STRING,,ManifestColumn
+ file,,STRING,,ManifestColumn
+ image,,STRING,,ManifestColumn
+ result,,STRING,,ManifestColumn
+ analysis,,STRING,,ManifestColumn
+ collection,,STRING,,ManifestColumn
+ instrument,,STRING,,ManifestColumn
+ plan,,STRING,,ManifestColumn
+ setting,,STRING,,ManifestColumn
+ Other,,STRING,,ManifestColumn
+ Not applicable,,STRING,,ManifestColumn
