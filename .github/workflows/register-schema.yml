@@ -92,7 +92,7 @@ jobs:
 
       - name: Generate JSON Schemas
         id: generate
-        uses: Sage-Bionetworks-Actions/generate-jsonschema@1e66e3bbaa1aad5f188b164cb7420e4c6925c043 #0.1.0
+        uses: Sage-Bionetworks-Actions/generate-jsonschema@0c40852d12ff24cfb918bc8ca82d54d1f8a4ae51 # v1.0.0
         with:
           data-model-source: ./EL.data.model.csv
           data-model-labels: "display_label"
@@ -143,7 +143,7 @@ jobs:
 
       - name: Register schemas in Synapse
         id: register
-        uses: Sage-Bionetworks-Actions/register-jsonschema@3cced2dc63cd92a0a65f23895c1142bbd329a4c5 # 0.1.0
+        uses: Sage-Bionetworks-Actions/register-jsonschema@5f30493e302cccdad51e3771d30c8ff1d1914461 # v1.0.0
         with:
           org-name: ${{ steps.resolve-org.outputs.org-name }}
           schema-dir: ${{ steps.generate.outputs.schemas }}
