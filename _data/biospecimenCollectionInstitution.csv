@@ -1,0 +1,50 @@
+Key,Key Description,columnType,Source,Parent
+Albert Einstein College of Medicine,,STRING_LIST,,ManifestColumn
+American Museum of Natural History,,STRING_LIST,,ManifestColumn
+Boston University,,STRING_LIST,,ManifestColumn
+Brigham and Women's Hospital,,STRING_LIST,,ManifestColumn
+California Pacific Medical Center Research Institute,,STRING_LIST,,ManifestColumn
+Centre for Genomic Regulation,,STRING_LIST,,ManifestColumn
+Columbia University,,STRING_LIST,,ManifestColumn
+Duke University,,STRING_LIST,,ManifestColumn
+Harvard University,,STRING_LIST,,ManifestColumn
+Illumina,,STRING_LIST,,ManifestColumn
+Institute for Systems Biology,,STRING_LIST,,ManifestColumn
+Johns Hopkins University,,STRING_LIST,,ManifestColumn
+Louisiana State University,,STRING_LIST,,ManifestColumn
+Max Planck Institute of Molecular Cell Biology and Genetics,,STRING_LIST,,ManifestColumn
+Metabolon,,STRING_LIST,,ManifestColumn
+National Heart Lung and Blood Institute,,STRING_LIST,,ManifestColumn
+National Human Genome Research Institute,,STRING_LIST,,ManifestColumn
+National Institute on Aging,,STRING_LIST,,ManifestColumn
+Natural History Museum London,,STRING_LIST,,ManifestColumn
+Nucleome Informatics,,STRING_LIST,,ManifestColumn
+Providence Health and Services,,STRING_LIST,,ManifestColumn
+Rockefeller University,,STRING_LIST,,ManifestColumn
+San Diego Zoo Wildlife Alliance,,STRING_LIST,,ManifestColumn
+Scripps Research,,STRING_LIST,,ManifestColumn
+Senckenberg Society for Nature Research,,STRING_LIST,,ManifestColumn
+Smithsonian Institution,,STRING_LIST,,ManifestColumn
+Translational Genomics Research Institute,,STRING_LIST,,ManifestColumn
+Tufts Medical Center,,STRING_LIST,,ManifestColumn
+Tufts University,,STRING_LIST,,ManifestColumn
+Universitat Pompeu Fabra,,STRING_LIST,,ManifestColumn
+University of California Davis,,STRING_LIST,,ManifestColumn
+University of California Riverside,,STRING_LIST,,ManifestColumn
+University of California San Francisco,,STRING_LIST,,ManifestColumn
+University of Cambridge,,STRING_LIST,,ManifestColumn
+University of Copenhagen,,STRING_LIST,,ManifestColumn
+University of Michigan,,STRING_LIST,,ManifestColumn
+University of Minnesota,,STRING_LIST,,ManifestColumn
+University of Pittsburgh,,STRING_LIST,,ManifestColumn
+University of Rochester,,STRING_LIST,,ManifestColumn
+University of Southern Denmark,,STRING_LIST,,ManifestColumn
+University of Vermont,,STRING_LIST,,ManifestColumn
+University of Washington,,STRING_LIST,,ManifestColumn
+Wake Forest University,,STRING_LIST,,ManifestColumn
+Washington University in St. Louis,,STRING_LIST,,ManifestColumn
+Wellcome Sanger Institute,,STRING_LIST,,ManifestColumn
+Not applicable,,STRING_LIST,,ManifestColumn
+Not specified,,STRING_LIST,,ManifestColumn
+Other,,STRING_LIST,,ManifestColumn
+Unknown,,STRING_LIST,,ManifestColumn
